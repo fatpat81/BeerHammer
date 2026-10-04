@@ -1,0 +1,52 @@
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy root workspace files
+COPY package.json package-lock.json* turbo.json ./
+COPY packages/types/package.json ./packages/types/package.json
+COPY packages/db-client/package.json ./packages/db-client/package.json
+COPY packages/rules-engine-11e/package.json ./packages/rules-engine-11e/package.json
+COPY apps/api/package.json ./apps/api/package.json
+
+# Install dependencies
+RUN npm ci --ignore-scripts
+
+# Copy source code
+COPY packages/types/ ./packages/types/
+COPY packages/db-client/ ./packages/db-client/
+COPY packages/rules-engine-11e/ ./packages/rules-engine-11e/
+COPY apps/api/ ./apps/api/
+COPY tsconfig.json ./
+
+# Generate Prisma client & build
+RUN npx prisma generate --schema=packages/db-client/prisma/schema.prisma
+RUN npm run build --workspace=packages/types
+RUN npm run build --workspace=packages/rules-engine-11e
+RUN npm run build --workspace=apps/api
+
+# ── Production Stage ─────────────────────────────────────────────────────────
+FROM node:20-alpine AS runner
+
+WORKDIR /app
+
+# Install Sharp native dependencies
+RUN apk add --no-cache vips-dev
+
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/packages/types/dist ./packages/types/dist
+COPY --from=builder /app/packages/types/package.json ./packages/types/package.json
+COPY --from=builder /app/packages/db-client/dist ./packages/db-client/dist
+COPY --from=builder /app/packages/db-client/package.json ./packages/db-client/package.json
+COPY --from=builder /app/packages/rules-engine-11e/dist ./packages/rules-engine-11e/dist
+COPY --from=builder /app/packages/rules-engine-11e/package.json ./packages/rules-engine-11e/package.json
+COPY --from=builder /app/apps/api/dist ./apps/api/dist
+COPY --from=builder /app/apps/api/package.json ./apps/api/package.json
+COPY --from=builder /app/package.json ./package.json
+
+ENV NODE_ENV=production
+ENV PORT=4000
+
+EXPOSE 4000
+
+CMD ["node", "apps/api/dist/index.js"]

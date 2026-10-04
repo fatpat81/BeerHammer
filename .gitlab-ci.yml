@@ -1,0 +1,65 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — GitLab CI/CD Pipeline
+# Complete pipeline for automated testing, Turborepo builds, and Docker container publishing
+# ─────────────────────────────────────────────────────────────────────────────
+
+stages:
+  - test
+  - build-images
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  TURBO_TELEMETRY_DISABLED: "1"
+
+default:
+  interruptible: true
+
+# ── 1. Test & Monorepo Build Validation ───────────────────────────────────────
+test:
+  image: node:20-alpine
+  stage: test
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .npm/
+      - .turbo/
+  before_script:
+    - apk add --no-cache git
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npx prisma generate --schema=packages/db-client/prisma/schema.prisma
+    - npx turbo run test build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# ── 2. Build & Publish Web Frontend Container ─────────────────────────────────
+build-web:
+  stage: build-images
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+  script:
+    - docker build -f Dockerfile.web -t "$CI_REGISTRY_IMAGE/web:latest" -t "$CI_REGISTRY_IMAGE/web:$CI_COMMIT_SHA" .
+    - docker push "$CI_REGISTRY_IMAGE/web:latest"
+    - docker push "$CI_REGISTRY_IMAGE/web:$CI_COMMIT_SHA"
+
+# ── 3. Build & Publish Express API Container ──────────────────────────────────
+build-api:
+  stage: build-images
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+  script:
+    - docker build -f Dockerfile.api -t "$CI_REGISTRY_IMAGE/api:latest" -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
+    - docker push "$CI_REGISTRY_IMAGE/api:latest"
+    - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"

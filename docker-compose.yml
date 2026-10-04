@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Full Stack Local Development Composition (§4.8)
+# Orchestrates Postgres, Express API, Next.js Web Frontend, and MinIO S3 Storage
+# ─────────────────────────────────────────────────────────────────────────────
+
+version: '3.8'
+
+services:
+  # ── PostgreSQL Database ───────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: forceorg-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: forceorg_dev
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./packages/db-client/prisma/rls-policies.sql:/docker-entrypoint-initdb.d/01-rls-policies.sql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d forceorg_dev']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── MinIO Local S3-Compatible Storage ─────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    container_name: forceorg-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadminpassword
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - minio_data:/data
+
+  # ── Express API Service ───────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: forceorg-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: development
+      PORT: 4000
+      DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      DIRECT_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      CORS_ORIGIN: http://localhost:3000
+      AWS_REGION: us-east-1
+      AWS_ENDPOINT: http://minio:9000
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadminpassword
+      S3_BUCKET_NAME: forceorg-miniatures
+      PUBLIC_CDN_BASE_URL: http://localhost:9000/forceorg-miniatures
+    ports:
+      - '4000:4000'
+
+  # ── Next.js Web Frontend ──────────────────────────────────────────────────
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: forceorg-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api
+      NEXT_PUBLIC_SUPABASE_URL: http://localhost:54321
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.local-dev-token
+    ports:
+      - '3000:3000'
+
+volumes:
+  postgres_data:
+  minio_data:

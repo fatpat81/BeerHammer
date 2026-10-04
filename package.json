@@ -1,0 +1,30 @@
+{
+  "name": "forceorg-40k",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloud-native Warhammer 40,000 11th Edition army builder & tabletop console",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "test:e2e": "npm run test:e2e --workspace=@forceorg/web",
+    "db:generate": "npm run generate --prefix packages/db-client",
+    "db:migrate": "npm run migrate --prefix packages/db-client",
+    "db:seed": "npm run seed --prefix packages/db-client",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "npm@10.8.0"
+}
