@@ -1,0 +1,41 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Scheduled Wahapedia 11th Edition ETL (§2.2)
+# Daily data ingestion and rules diff worker
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Scheduled Wahapedia 11th Edition ETL
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 02:00 AM UTC
+  workflow_dispatch:       # Manual override for engineering
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate Prisma Client
+        run: npx prisma generate --schema=packages/db-client/prisma/schema.prisma
+
+      - name: Build Workspace Dependencies
+        run: |
+          npm run build --workspace=packages/types
+          npm run build --workspace=packages/db-client
+          npm run build --workspace=packages/rules-engine-11e
+
+      - name: Execute Daily Scrape & Diff
+        run: npm run worker:sync --prefix apps/sync-worker
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}

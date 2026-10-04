@@ -1,0 +1,27 @@
+{
+  "name": "ForceOrg-40k",
+  "short_name": "ForceOrg",
+  "description": "Warhammer 40K 11th Edition Army Builder & Tabletop Console",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#030508",
+  "theme_color": "#0B3056",
+  "categories": ["games", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

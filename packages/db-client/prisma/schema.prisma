@@ -1,0 +1,310 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// ForceOrg-40k — Master Prisma Schema
+// Warhammer 40,000 11th Edition Data Model
+// ─────────────────────────────────────────────────────────────────────────────
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+// ── Enums ────────────────────────────────────────────────────────────────────
+
+enum BattlefieldRole {
+  CHARACTER
+  BATTLELINE
+  INFANTRY
+  MOUNTED
+  MONSTER
+  VEHICLE
+  DEDICATED_TRANSPORT
+  FORTIFICATION
+  ALLIED_UNIT
+}
+
+enum WargearRuleType {
+  REPLACE
+  ADD_ON
+  SQUAD_SYNC
+  PAIR_LINK
+}
+
+enum TargetRole {
+  SERGEANT
+  TROOPER
+  CHASSIS
+  ANY
+}
+
+enum AbilitySource {
+  BODYGUARD
+  LEADER
+  ENHANCEMENT
+  DETACHMENT
+  CORE
+}
+
+enum BattlePhase {
+  COMMAND
+  MOVEMENT
+  SHOOTING
+  CHARGE
+  FIGHT
+  ANY
+}
+
+enum StratagemCategory {
+  CORE
+  DETACHMENT
+}
+
+// ── User & Identity ─────────────────────────────────────────────────────────
+
+model UserProfile {
+  id                  String            @id @db.Uuid
+  callsign            String            @db.VarChar(60)
+  defaultFactionTheme String            @default("ultramarines") @map("default_faction_theme") @db.VarChar(50)
+  createdAt           DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  armies              UserArmy[]
+  unitMedia           UserUnitMedia[]
+  colorSchemes        UserColorScheme[]
+
+  @@map("user_profiles")
+}
+
+model UserColorScheme {
+  id             String      @id @default(uuid()) @db.Uuid
+  userId         String      @map("user_id") @db.Uuid
+  factionKey     String      @map("faction_key") @db.VarChar(50)
+  subfactionName String?     @map("subfaction_name") @db.VarChar(100)
+  isCanon        Boolean     @default(false) @map("is_canon")
+  palette        Json
+  createdAt      DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user           UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, factionKey])
+  @@map("user_color_schemes")
+}
+
+// ── Paint Reference ──────────────────────────────────────────────────────────
+
+model PaintSwatch {
+  id        String   @id @default(uuid()) @db.Uuid
+  brand     String   @db.VarChar(50)
+  paintName String   @map("paint_name") @db.VarChar(100)
+  paintType String   @map("paint_type") @db.VarChar(30)
+  hexCode   String   @map("hex_code") @db.Char(7)
+  finish    String   @default("Matte") @db.VarChar(20)
+
+  @@index([brand, paintType])
+  @@map("paint_swatches")
+}
+
+// ── 11th Edition Datasheets ──────────────────────────────────────────────────
+
+model Datasheet {
+  id                   String                 @id @default(uuid()) @db.Uuid
+  factionId            String                 @map("faction_id") @db.VarChar(50)
+  name                 String                 @db.VarChar(120)
+  battlefieldRole      BattlefieldRole        @map("battlefield_role")
+  basePoints           Int                    @map("base_points")
+  detachmentPointsCost Int                    @default(0) @map("detachment_points_cost")
+  unitComposition      Json                   @map("unit_composition")
+  stats                Json
+  keywords             String[]
+  chapterLock          String?                @map("chapter_lock") @db.VarChar(50)
+  isAlliedEligible     Boolean                @default(false) @map("is_allied_eligible")
+  alliedFactionGroup   String?                @map("allied_faction_group") @db.VarChar(50)
+  canonicalImageUrl    String                 @default("/assets/models/default_placeholder.webp") @map("canonical_image_url")
+  canonicalThumbUrl    String                 @default("/assets/models/default_placeholder_thumb.webp") @map("canonical_thumb_url")
+  createdAt            DateTime               @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  wargearRules         WargearRule[]
+  weapons              DatasheetWeapon[]
+  abilities            Ability[]
+  leaderFor            LeaderCompatibility[]  @relation("LeaderToBodyguard")
+  bodyguardsFor        LeaderCompatibility[]  @relation("BodyguardToLeader")
+
+  @@index([factionId, battlefieldRole])
+  @@index([chapterLock])
+  @@map("datasheets_11e")
+}
+
+// ── Leader Attachment Compatibility ──────────────────────────────────────────
+
+model LeaderCompatibility {
+  id                   String    @id @default(uuid()) @db.Uuid
+  leaderDatasheetId    String    @map("leader_datasheet_id") @db.Uuid
+  bodyguardDatasheetId String    @map("bodyguard_datasheet_id") @db.Uuid
+
+  leader               Datasheet @relation("LeaderToBodyguard", fields: [leaderDatasheetId], references: [id], onDelete: Cascade)
+  bodyguard            Datasheet @relation("BodyguardToLeader", fields: [bodyguardDatasheetId], references: [id], onDelete: Cascade)
+
+  @@unique([leaderDatasheetId, bodyguardDatasheetId])
+  @@index([leaderDatasheetId])
+  @@index([bodyguardDatasheetId])
+  @@map("leader_compatibility_11e")
+}
+
+// ── Wargear Rules (AST Source) ───────────────────────────────────────────────
+
+model WargearRule {
+  id            String          @id @default(uuid()) @db.Uuid
+  datasheetId   String          @map("datasheet_id") @db.Uuid
+  ruleType      WargearRuleType @map("rule_type")
+  appliesToRole TargetRole      @map("applies_to_role")
+  rawText       String?         @map("raw_text") @db.Text
+  conditionTree Json            @map("condition_tree")
+  createdAt     DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  datasheet     Datasheet       @relation(fields: [datasheetId], references: [id], onDelete: Cascade)
+
+  @@index([datasheetId, ruleType])
+  @@map("wargear_rules_11e")
+}
+
+// ── Weapons Registry ─────────────────────────────────────────────────────────
+
+model Weapon {
+  id               String            @id @default(uuid()) @db.Uuid
+  slug             String            @unique @db.VarChar(120)
+  name             String            @db.VarChar(120)
+  type             String            @db.VarChar(20)
+  range            String            @db.VarChar(20)
+  attacks          String            @db.VarChar(20)
+  skill            String            @db.VarChar(10)
+  strength         Int
+  armorPenetration Int               @map("armor_penetration")
+  damage           String            @db.VarChar(20)
+  firingMode       String?           @map("firing_mode") @db.VarChar(40)
+  keywords         String[]
+
+  datasheets       DatasheetWeapon[]
+
+  @@index([slug])
+  @@map("weapons_11e")
+}
+
+model DatasheetWeapon {
+  id          String    @id @default(uuid()) @db.Uuid
+  datasheetId String    @map("datasheet_id") @db.Uuid
+  weaponId    String    @map("weapon_id") @db.Uuid
+  isDefault   Boolean   @default(true) @map("is_default")
+
+  datasheet   Datasheet @relation(fields: [datasheetId], references: [id], onDelete: Cascade)
+  weapon      Weapon    @relation(fields: [weaponId], references: [id], onDelete: Cascade)
+
+  @@unique([datasheetId, weaponId])
+  @@index([datasheetId])
+  @@map("datasheet_weapons_11e")
+}
+
+// ── Abilities ────────────────────────────────────────────────────────────────
+
+model Ability {
+  id          String        @id @default(uuid()) @db.Uuid
+  datasheetId String?       @map("datasheet_id") @db.Uuid
+  name        String        @db.VarChar(120)
+  source      AbilitySource
+  phase       BattlePhase?
+  description String        @db.Text
+
+  datasheet   Datasheet?    @relation(fields: [datasheetId], references: [id], onDelete: Cascade)
+
+  @@index([datasheetId])
+  @@map("abilities_11e")
+}
+
+// ── Stratagems ───────────────────────────────────────────────────────────────
+
+model Stratagem {
+  id               String            @id @default(uuid()) @db.Uuid
+  name             String            @db.VarChar(120)
+  category         StratagemCategory
+  detachmentId     String?           @map("detachment_id") @db.VarChar(100)
+  factionId        String?           @map("faction_id") @db.VarChar(50)
+  cpCost           Int               @map("cp_cost")
+  phase            BattlePhase
+  description      String            @db.Text
+  requiredKeywords String[]          @map("required_keywords")
+
+  @@index([category, phase])
+  @@index([detachmentId])
+  @@index([factionId])
+  @@map("stratagems_11e")
+}
+
+// ── User Armies & Rosters ────────────────────────────────────────────────────
+
+model UserArmy {
+  id                     String          @id @default(uuid()) @db.Uuid
+  userId                 String          @map("user_id") @db.Uuid
+  name                   String          @db.VarChar(120)
+  factionId              String          @map("faction_id") @db.VarChar(50)
+  rulesetVersionId       String          @map("ruleset_version_id") @db.VarChar(60)
+  detachmentPrimary      String          @map("detachment_primary") @db.VarChar(100)
+  detachmentSecondary    String?         @map("detachment_secondary") @db.VarChar(100)
+  pointsLimit            Int             @default(2000) @map("points_limit")
+  detachmentPointsLimit  Int             @default(3) @map("detachment_points_limit")
+  factionThemeOverride   String?         @map("faction_theme_override") @db.VarChar(50)
+  rosterPayload          Json            @map("roster_payload")
+  createdAt              DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt              DateTime        @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user                   UserProfile     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  unitMedia              UserUnitMedia[]
+
+  @@index([userId])
+  @@index([rulesetVersionId])
+  @@map("user_armies")
+}
+
+// ── User Miniature Media ─────────────────────────────────────────────────────
+
+model UserUnitMedia {
+  id               String      @id @default(uuid()) @db.Uuid
+  userId           String      @map("user_id") @db.Uuid
+  rosterId         String      @map("roster_id") @db.Uuid
+  unitInstanceId   String      @map("unit_instance_id") @db.VarChar(64)
+  imageUrl         String      @map("image_url") @db.Text
+  thumbnailUrl     String      @map("thumbnail_url") @db.Text
+  storageKeyPrefix String      @map("storage_key_prefix") @db.VarChar(255)
+  createdAt        DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt        DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user             UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  roster           UserArmy    @relation(fields: [rosterId], references: [id], onDelete: Cascade)
+
+  @@unique([rosterId, unitInstanceId])
+  @@index([rosterId])
+  @@index([userId])
+  @@map("user_unit_media")
+}
+
+// ── Sync Metadata (ETL Tracking) ─────────────────────────────────────────────
+
+model SyncMetadata {
+  id               String    @id @default(uuid()) @db.Uuid
+  endpoint         String    @db.VarChar(255)
+  lastModified     String?   @map("last_modified") @db.VarChar(100)
+  etag             String?   @db.VarChar(100)
+  contentHash      String    @map("content_hash") @db.VarChar(64)
+  rulesetVersionId String    @map("ruleset_version_id") @db.VarChar(60)
+  status           String    @db.VarChar(30)
+  recordCount      Int       @default(0) @map("record_count")
+  errorMessage     String?   @map("error_message") @db.Text
+  syncedAt         DateTime  @default(now()) @map("synced_at") @db.Timestamptz(6)
+
+  @@index([endpoint, syncedAt])
+  @@map("sync_metadata")
+}

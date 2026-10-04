@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3056" />
+      <stop offset="50%" stop-color="#071d36" />
+      <stop offset="100%" stop-color="#030508" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e6a8" />
+      <stop offset="50%" stop-color="#c89d3c" />
+      <stop offset="100%" stop-color="#8a681c" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c89d3c" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Shield -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="220" fill="url(#glowGrad)" />
+
+  <!-- Outer Imperial Border -->
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-dasharray="16 8" />
+  <rect x="36" y="36" width="440" height="440" rx="70" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Central ForceOrg-40k Imperial Crest -->
+  <g transform="translate(256, 256) scale(1.4)">
+    <!-- Aquila Wing Left -->
+    <path d="M-10,-20 L-40,-50 L-90,-50 L-60,-25 L-95,-20 L-65,0 L-90,15 L-55,20 L-80,40 L-45,30 L-20,45 L-10,25 Z" fill="url(#goldGrad)" opacity="0.95" />
+    <!-- Aquila Wing Right -->
+    <path d="M10,-20 L40,-50 L90,-50 L60,-25 L95,-20 L65,0 L90,15 L55,20 L80,40 L45,30 L20,45 L10,25 Z" fill="url(#goldGrad)" opacity="0.95" />
+    
+    <!-- Central Iron Halo Skull / Tactical Core -->
+    <circle cx="0" cy="-5" r="28" fill="#071d36" stroke="url(#goldGrad)" stroke-width="4" />
+    <!-- Tactical Reticle Pips -->
+    <line x1="-38" y1="-5" x2="38" y2="-5" stroke="url(#goldGrad)" stroke-width="3" />
+    <line x1="0" y1="-43" x2="0" y2="33" stroke="url(#goldGrad)" stroke-width="3" />
+    <circle cx="0" cy="-5" r="14" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+    <circle cx="0" cy="-5" r="4" fill="url(#goldGrad)" />
+
+    <!-- Cross Swords / Chapter Crest -->
+    <path d="M-5,40 L0,70 L5,40 L0,45 Z" fill="url(#goldGrad)" />
+    <polygon points="-15,48 15,48 12,52 -12,52" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Typography: FORCEORG -->
+  <text x="256" y="440" text-anchor="middle" font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-size="34" font-weight="900" fill="url(#goldGrad)" letter-spacing="8">FORCEORG</text>
+  <text x="256" y="468" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#94a3b8" letter-spacing="4">11TH EDITION CONSOLE</text>
+</svg>

@@ -1,0 +1,135 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+ * ForceOrg-40k — Global Design Tokens
+ * Dawn of War 4-Channel heraldry mapped to CSS custom properties
+ * ───────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;900&display=swap');
+
+:root {
+  /* ── Dawn of War 4-Channel Defaults (Ultramarines) ───────────────────────── */
+  --c-primary: #0B3056;
+  --c-secondary: #071D36;
+  --c-trim: #C89D3C;
+  --c-detail: #DC2626;
+  --c-glow: #38BDF8;
+
+  /* ── Surface System ──────────────────────────────────────────────────────── */
+  --surface-void: #030508;
+  --surface-base: #080C14;
+  --surface-card: #0F141C;
+  --surface-elevated: #161D2A;
+  --surface-header: linear-gradient(135deg, var(--c-primary) 0%, var(--c-secondary) 100%);
+  --surface-border: #1E293B;
+
+  /* ── Text ─────────────────────────────────────────────────────────────────── */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-accent: var(--c-trim);
+
+  /* ── Typography ──────────────────────────────────────────────────────────── */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Orbitron', 'Inter', monospace;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* ── Radii ───────────────────────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 12px rgba(56, 189, 248, 0.2);
+
+  /* ── Animation ───────────────────────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  /* ── Z-Index Scale ───────────────────────────────────────────────────────── */
+  --z-base: 1;
+  --z-card: 10;
+  --z-sticky: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-toast: 1100;
+
+  /* ── Watermark ───────────────────────────────────────────────────────────── */
+  --badge-watermark-opacity: 0.06;
+
+  /* ── Touch Targets ───────────────────────────────────────────────────────── */
+  --touch-min: 48px;
+}
+
+/* ── Base Reset ────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--surface-void);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100dvh;
+}
+
+/* ── Utility Classes ───────────────────────────────────────────────────────── */
+
+.text-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.glass-panel {
+  background: rgba(15, 20, 28, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.glow-border {
+  border: 1px solid var(--c-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.trim-border {
+  border: 1.5px solid var(--c-trim);
+}
+
+/* ── Responsive Breakpoints ────────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  :root { --layout-mode: 'mobile'; }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  :root { --layout-mode: 'tablet'; }
+}
+@media (min-width: 1280px) {
+  :root { --layout-mode: 'desktop'; }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@forceorg/sync-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "worker:sync": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@forceorg/db-client": "*",
+    "@forceorg/rules-engine-11e": "*",
+    "@forceorg/types": "*",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
