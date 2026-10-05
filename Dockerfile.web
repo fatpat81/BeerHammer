@@ -3,9 +3,12 @@
 # Multi-stage production build for Next.js App Router frontend
 # ─────────────────────────────────────────────────────────────────────────────
 
-FROM node:20-alpine AS builder
+FROM node:20-bookworm-slim AS builder
 
 WORKDIR /app
+
+# Prisma needs openssl to detect the correct query engine on slim images
+RUN apt-get update -qq && apt-get install -y --no-install-recommends openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Copy root workspace configuration
 COPY package.json package-lock.json* turbo.json ./
@@ -40,7 +43,7 @@ RUN npm run build --workspace=@forceorg/rules-engine-11e
 RUN npm run build --workspace=@forceorg/web
 
 # ── Production Stage ─────────────────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:20-bookworm-slim AS runner
 
 WORKDIR /app
 
