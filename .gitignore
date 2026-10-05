@@ -41,3 +41,6 @@ yarn-error.log*
 # Playwright
 apps/web/playwright-report/
 apps/web/test-results/
+
+# Hermes local verification state
+.hermes/
