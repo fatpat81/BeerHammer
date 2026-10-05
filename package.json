@@ -17,7 +17,8 @@
     "db:generate": "npm run generate --prefix packages/db-client",
     "db:migrate": "npm run migrate --prefix packages/db-client",
     "db:seed": "npm run seed --prefix packages/db-client",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "postinstall": "prisma generate --schema=packages/db-client/prisma/schema.prisma"
   },
   "devDependencies": {
     "turbo": "^2.1.0",
