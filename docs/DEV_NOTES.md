@@ -6,6 +6,23 @@
 
 ---
 
+## 0. Prefer containers? Use the shared dev environment
+
+Everything below also works inside the **shared containerized dev
+environment** — same toolchain for every contributor, Docker is the only
+host requirement (no Node needed):
+
+```bash
+./scripts/dev.sh up        # db + s3 + web (hot reload) + api (hot reload)
+./scripts/dev.sh verify    # lint + build + unit tests in the container
+```
+
+See **`docs/DEV_ENVIRONMENT.md`** for the full guide (port overrides,
+E2E in the container, troubleshooting). The rest of this document covers
+the host-native flow and the UI click-through path.
+
+---
+
 ## 1. Prerequisites on this machine (already satisfied)
 
 | Requirement | This machine | Notes |

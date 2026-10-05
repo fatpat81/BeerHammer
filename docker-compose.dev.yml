@@ -1,0 +1,137 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Shared Containerized Development Environment
+# Everyone develops against the SAME toolchain (Node 20, pinned deps) and the
+# SAME backing services, regardless of host OS or installed Node version.
+#
+# Quick start (from repo root, Docker is the only host requirement):
+#   ./scripts/dev.sh up        # db + s3 + web (hot reload) + api (hot reload)
+#   ./scripts/dev.sh verify    # lint + build + unit tests in the container
+#
+# Web and API bind-mount the repo, so edits on the host hot-reload inside.
+#
+# Host port overrides (if a default is taken on your machine):
+#   WEB_PORT=13000 API_PORT=14000 ./scripts/dev.sh up
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: forceorg-dev
+
+x-dev-image: &dev-image
+  image: forceorg-dev:latest
+  build:
+    context: .
+    dockerfile: Dockerfile.dev
+
+x-dev-common: &dev-common
+  <<: *dev-image
+  env_file: .env.dev            # optional; created by scripts/dev.sh when absent
+  environment:
+    DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+    DIRECT_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+    CORS_ORIGIN: http://localhost:${WEB_PORT:-3000}
+    NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-4000}/api
+    NEXT_TELEMETRY_DISABLED: "1"
+  volumes:
+    - .:/app                       # live source (host edits -> container hot reload)
+    - dev_node_modules:/app/node_modules        # container-owned deps, never shadowed by host
+    - dev_web_next:/app/apps/web/.next         # container-owned build cache
+    - dev_turbo_cache:/app/.turbo
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: forceorg-dev-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: forceorg_dev
+    ports:
+      - '5432:5432'
+    volumes:
+      - dev_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d forceorg_dev']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  s3:
+    image: chrislusf/seaweedfs:latest
+    container_name: forceorg-dev-s3
+    command: server -dir=/data -s3 -s3.port=9000
+    ports:
+      - '9000:9000'
+      - '9333:9333'
+    volumes:
+      - dev_s3_data:/data
+
+  # One-shot: waits for postgres, applies migrations + seed, then idles so
+  # its logs remain available. Safe to re-run on every 'up'.
+  db-init:
+    <<: *dev-common
+    container_name: forceorg-dev-db-init
+    command: ['bash', '/app/scripts/dev-container.sh', 'db']
+    restart: 'no'
+
+  web:
+    <<: *dev-common
+    container_name: forceorg-dev-web
+    command: ['bash', '/app/scripts/dev-container.sh', 'web']
+    ports:
+      - '${WEB_PORT:-3000}:3000'
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    <<: *dev-common
+    container_name: forceorg-dev-api
+    command: ['bash', '/app/scripts/dev-container.sh', 'api']
+    ports:
+      - '${API_PORT:-4000}:4000'
+    environment:
+      DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      DIRECT_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      CORS_ORIGIN: http://localhost:${WEB_PORT:-3000}
+      PORT: "4000"
+      AWS_REGION: us-east-1
+      AWS_ENDPOINT: http://s3:9000
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadminpassword
+      S3_BUCKET_NAME: forceorg-miniatures
+      PUBLIC_CDN_BASE_URL: http://localhost:9000/forceorg-miniatures
+      NEXT_TELEMETRY_DISABLED: "1"
+
+  # Toolchain one-shots: ./scripts/dev.sh (verify|test|e2e|e2e-install|shell)
+  toolchain:
+    <<: *dev-image
+    profiles: ['tools']
+    container_name: forceorg-dev-tools
+    environment:
+      DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      DIRECT_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-4000}/api
+      NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
+      PLAYWRIGHT_BROWSERS_PATH: /pw-browsers
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - .:/app
+      - dev_node_modules:/app/node_modules
+      - dev_web_next:/app/apps/web/.next
+      - dev_turbo_cache:/app/.turbo
+      - dev_pw_browsers:/pw-browsers
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  dev_postgres_data:
+  dev_s3_data:
+  dev_node_modules:
+  dev_web_next:
+  dev_turbo_cache:
+  dev_pw_browsers:
