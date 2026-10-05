@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "postinstall": "npm run db:generate",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
