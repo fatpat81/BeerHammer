@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "dev": "tsx src/index.ts",
     "worker:sync": "tsx src/index.ts",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "worker:watch": "tsx src/index.ts"
   },
   "dependencies": {
     "@forceorg/db-client": "*",
