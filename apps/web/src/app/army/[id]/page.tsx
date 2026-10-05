@@ -199,26 +199,58 @@ export default function TabletopConsolePage() {
       return DEMO_FALLBACK_UNITS;
     }
 
-    return payloadUnits.map((pu, i) => {
-      const ds = datasheets.find(d => d.id === pu.catalogUnit.id || d.name === pu.catalogUnit.name);
+// Roster units persisted by lib/api.ts in guest/offline mode carry only
+// datasheetId/datasheetName/modelCount; RosterBuilder produces the richer
+// catalogUnit shape. Both must render here.
+type OfflineRosterUnit = {
+  instanceId: string;
+  datasheetId?: string;
+  datasheetName?: string;
+  modelCount?: number;
+  wargearSelections?: unknown[];
+  pointsCost: number;
+  catalogUnit?: RosterUnit['catalogUnit'];
+};
+
+type NormalizedCatalogUnit = RosterUnit['catalogUnit'] & {
+  modelComposition: { name: string; count: number }[];
+};
+
+    return payloadUnits.map((puRaw, i) => {
+      const pu = puRaw as unknown as OfflineRosterUnit;
+      // Roster units persisted in guest/offline mode (lib/api.ts) carry only
+      // datasheetId/datasheetName on the unit; the richer catalogUnit shape is
+      // produced by RosterBuilder. Normalize so both render without crashing.
+      const catalogUnit: NormalizedCatalogUnit = pu.catalogUnit ?? {
+        id: pu.datasheetId ?? `ds_${i}`,
+        name: pu.datasheetName ?? 'Unknown Unit',
+        factionId: army?.factionId ?? 'adeptus_astartes',
+        battlefieldRole: 'INFANTRY',
+        basePoints: pu.pointsCost ?? 0,
+        dpCost: 0,
+        keywords: [],
+        wargearRulesRaw: '',
+        modelComposition: [{ name: pu.datasheetName ?? 'Model', count: pu.modelCount ?? 1 }],
+      };
+      const ds = datasheets.find(d => d.id === catalogUnit.id || d.name === catalogUnit.name);
       const dsStats = ds?.stats as any;
 
-      const models: ModelHealth[] = pu.catalogUnit.modelComposition.flatMap((mc, mIdx) =>
+      const models: ModelHealth[] = (catalogUnit.modelComposition || []).flatMap((mc, mIdx) =>
         Array.from({ length: mc.count }).map((_, cIdx) => ({
           id: `m_${pu.instanceId}_${mIdx}_${cIdx}`,
           modelName: mc.name,
           isLeader: mc.name.toLowerCase().includes('sergeant') || mc.name.toLowerCase().includes('captain') || mc.name.toLowerCase().includes('leader'),
-          maxWounds: (dsStats?.toughness || 4) > 5 ? 3 : 2,
-          currentWounds: (dsStats?.toughness || 4) > 5 ? 3 : 2,
+          maxWounds: (dsStats?.wounds || dsStats?.toughness || 4) > 5 ? 3 : 2,
+          currentWounds: (dsStats?.wounds || dsStats?.toughness || 4) > 5 ? 3 : 2,
         }))
       );
 
       return {
         instanceId: pu.instanceId,
-        name: pu.catalogUnit.name,
-        role: pu.catalogUnit.battlefieldRole,
+        name: catalogUnit.name,
+        role: catalogUnit.battlefieldRole,
         points: pu.pointsCost,
-        keywords: pu.catalogUnit.keywords || [],
+        keywords: catalogUnit.keywords || [],
         stats: {
           movement: dsStats?.movement || '6"',
           bodyguardToughness: dsStats?.toughness || 4,
@@ -227,7 +259,7 @@ export default function TabletopConsolePage() {
           leadership: dsStats?.leadership || '6+',
           objectiveControl: dsStats?.objectiveControl || 1,
         },
-        models: models.length > 0 ? models : [{ id: `m_${i}`, modelName: pu.catalogUnit.name, isLeader: true, maxWounds: 4, currentWounds: 4 }],
+        models: models.length > 0 ? models : [{ id: `m_${i}`, modelName: catalogUnit.name, isLeader: true, maxWounds: 4, currentWounds: 4 }],
         weapons: (ds as any)?.weapons?.map((w: any) => ({
           id: w.weapon?.id || `w_${i}`,
           name: w.weapon?.name || 'Default Weapon',
