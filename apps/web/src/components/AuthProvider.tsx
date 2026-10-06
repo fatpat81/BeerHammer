@@ -1,6 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ForceOrg-40k — Authentication Provider
-// Wraps Supabase Auth in a React context for the entire app
+// ForceOrg-40k — Auth Provider
+// Guest-first auth: callsign sessions with local persistence.
+// The app is self-hosted; remote persistence is the instance's own API.
 // ─────────────────────────────────────────────────────────────────────────────
 
 'use client';
