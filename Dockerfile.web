@@ -30,8 +30,6 @@ COPY apps/web/ ./apps/web/
 COPY tsconfig.json ./
 
 # Provide build-time fallback env variables for SSG prerendering
-ENV NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
-ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=placeholder-anon-key
 ENV NEXT_PUBLIC_API_URL=http://localhost:4000/api
 ENV NEXT_TELEMETRY_DISABLED=1
 
