@@ -12,6 +12,10 @@ coverage/
 *.tsbuildinfo
 *.zip
 
+# Generated catalog extraction output (regen: node scripts/extract-factions.js)
+# The pinned input snapshot data/bsdata IS tracked for deterministic dev/test.
+data/factions/
+
 # Environment
 .env
 .env.local

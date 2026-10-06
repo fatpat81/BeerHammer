@@ -79,6 +79,28 @@ auth tokens against a server still using the placeholders.
 | `DATABASE_URL` / `DIRECT_URL` | Target PostgreSQL (required — the worker writes rules data) |
 | `ALERT_WEBHOOK_URL` | Optional webhook for sync failure alerts |
 
+### Catalog data: pinned snapshot (dev/test) vs live source (release)
+
+The repository carries a **pinned snapshot** of the upstream
+[BSData/wh40k-11e](https://github.com/BSData/wh40k-11e) catalog in
+`data/bsdata/` (~47 MB). This is a development and test asset:
+
+- **Deterministic dev/test**: `scripts/extract-factions.js` converts the
+  pinned snapshot into the per-faction JSONs used by the web app
+  (`node scripts/extract-factions.js`; output lands in
+  `apps/web/public/data/` and the gitignored `data/factions/`). Tests and
+  local development run against a fixed catalog regardless of upstream
+  changes. Refresh the pin deliberately, as a reviewed commit.
+- **Release images carry no catalog data**: `.dockerignore` excludes
+  `data/bsdata/`, `data/factions/`, and `apps/web/public/data/` from every
+  image build (~53 MB lighter contexts; nothing in any image reads them).
+  A deployed instance gets its rules data through the **live path**: the
+  sync-worker ETL (scheduled via compose `tools` profile or the GitHub
+  workflow) writes to PostgreSQL, and clients read via the API
+  (`/api/datasheets`, `/api/stratagems`, `/api/weapons`).
+- When adding catalog-data fixtures to tests, read them from the pinned
+  `data/bsdata/` snapshot so results stay reproducible.
+
 ## 3. Full stack on a host
 
 Three supported paths, all Docker-based:
