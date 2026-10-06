@@ -1,0 +1,93 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Production (pull-based) Deployment Composition
+#
+# Final hosting state: a host needs only Docker. Pull the published images
+# from GHCR and bring the stack up — no source checkout, no build step.
+#
+#   export FORCEORG_TAG=latest          # or pin a specific commit sha
+#   docker compose -f docker-compose.prod.yml pull
+#   docker compose -f docker-compose.prod.yml up -d
+#
+# Set real values before exposing beyond localhost: JWT_SECRET, database
+# and storage credentials, CORS_ORIGIN (see docs/DEPLOYMENT.md §2).
+# Empty-string defaults below keep localhost-only bring-up frictionless;
+# every service still boots, but do NOT run exposed that way.
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: forceorg-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgrespassword}
+      POSTGRES_DB: ${POSTGRES_DB:-forceorg_dev}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-forceorg_dev}']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  s3:
+    image: chrislusf/seaweedfs:3.80
+    container_name: forceorg-s3
+    restart: unless-stopped
+    command: server -dir=/data -s3 -s3.port=9000
+    volumes:
+      - s3_data:/data
+
+  api:
+    image: ghcr.io/fatpat81/beerhammer/forceorg-api:${FORCEORG_TAG:-latest}
+    container_name: forceorg-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # Self-migrating image: entrypoint applies pending Prisma migrations.
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgrespassword}@postgres:5432/${POSTGRES_DB:-forceorg_dev}?schema=public
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET - self-hosted write auth depends on it}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      AWS_ENDPOINT: http://s3:9000
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME:-forceorg-miniatures}
+      PUBLIC_CDN_BASE_URL: ${PUBLIC_CDN_BASE_URL:-}
+    ports:
+      - '${API_PORT:-4000}:4000'
+
+  web:
+    image: ghcr.io/fatpat81/beerhammer/forceorg-web:${FORCEORG_TAG:-latest}
+    container_name: forceorg-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api}
+    ports:
+      - '${WEB_PORT:-3000}:3000'
+
+  # One-shot ETL pass; not started by default:
+  #   docker compose -f docker-compose.prod.yml run --rm sync-worker
+  sync-worker:
+    image: ghcr.io/fatpat81/beerhammer/forceorg-sync-worker:${FORCEORG_TAG:-latest}
+    profiles: ['tools']
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgrespassword}@postgres:5432/${POSTGRES_DB:-forceorg_dev}?schema=public
+      DIRECT_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-forceorg_dev}?schema=public
+      ALERT_WEBHOOK_URL: ${ALERT_WEBHOOK_URL:-}
+
+volumes:
+  postgres_data:
+  s3_data:

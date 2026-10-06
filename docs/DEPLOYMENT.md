@@ -73,6 +73,32 @@ variable is for:
 
 ## 3. Full stack on a host
 
+Two supported paths — **pull prebuilt images** (final hosting state; needs
+only Docker on the host) or build from source (development/troubleshooting).
+
+### 3.1 Pull prebuilt images (recommended for hosting)
+
+```bash
+export FORCEORG_TAG=latest        # or pin: a specific commit sha for rollback
+export JWT_SECRET=<your-secret>   # required — write-endpoint auth; no default
+docker compose -f docker-compose.prod.yml pull
+docker compose -f docker-compose.prod.yml up -d
+```
+
+Images come from GHCR (`ghcr.io/fatpat81/beerhammer/forceorg-{api,web,sync-worker}`),
+published on every push to `main`. `JWT_SECRET` has no default by design —
+compose refuses to bring the stack up without it. Postgres and S3 run as
+local containers alongside; the API image self-migrates the database on
+boot. Update = re-pull + `up -d`; rollback = `FORCEORG_TAG=<previous sha>`.
+
+Run a Wahapedia ETL pass on the same stack:
+
+```bash
+docker compose -f docker-compose.prod.yml run --rm sync-worker
+```
+
+### 3.2 Build from source (development)
+
 ```bash
 docker compose up -d --build
 ```
