@@ -73,15 +73,35 @@ second instance or any static host works without touching the API.
 
 ---
 
-## Full production stack with Docker Compose
+## Test environment & full stack
 
 The complete self-hosted environment — Next.js web app, Express API,
 PostgreSQL 16, and S3-compatible object storage (SeaweedFS) for miniature
-photos — runs on one host:
+photos — runs as containers on one host.
+
+**Spin up the test environment from published images (zero config):**
+
+```bash
+docker compose -f docker-compose.prod.yml pull
+docker compose -f docker-compose.prod.yml up -d
+```
+
+Placeholder credentials apply by default (`JWT_SECRET=please-change-me`,
+`postgres/postgrespassword`) — fine for test environments, **not** for any
+real deployment (see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) §2 for the
+test-vs-production credential boundary). The API image self-migrates a
+fresh database on boot; nothing to configure.
+
+**Or build everything from source:**
 
 ```bash
 docker compose up --build -d
 ```
+
+**For day-to-day development** (hot reload, one-command verify/E2E), use the
+containerized dev workbench instead — see
+[`docs/DEV_ENVIRONMENT.md`](docs/DEV_ENVIRONMENT.md):
+`./scripts/dev.sh up` → verify → e2e.
 
 | Service | Port | Description |
 | :--- | :--- | :--- |

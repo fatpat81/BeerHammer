@@ -81,23 +81,47 @@ auth tokens against a server still using the placeholders.
 
 ## 3. Full stack on a host
 
-Two supported paths — **pull prebuilt images** (final hosting state; needs
-only Docker on the host) or build from source (development/troubleshooting).
+Three supported paths, all Docker-based:
 
-### 3.1 Pull prebuilt images (recommended for hosting)
+| Path | Use case | Guide |
+|---|---|---|
+| Pull prebuilt images | **Test environment / final hosting** — zero config, zero checkout | §3.1 below |
+| Containerized dev workbench | Day-to-day development with hot reload | [`DEV_ENVIRONMENT.md`](DEV_ENVIRONMENT.md) |
+| Build from source | Compose troubleshooting, image development | §3.2 below |
+
+### 3.1 Test environment & hosting — pull prebuilt images
+
+The entire stack runs from published images with **zero configuration** —
+unset variables fall back to public placeholder credentials
+(`JWT_SECRET=please-change-me`, `postgres/postgrespassword`), so this boots
+anywhere Docker runs, including CI:
 
 ```bash
-export FORCEORG_TAG=latest        # or pin: a specific commit sha for rollback
-export JWT_SECRET=<your-secret>   # required — write-endpoint auth; no default
+git clone https://github.com/fatpat81/BeerHammer.git   # only for the compose file
+cd BeerHammer
+docker compose -f docker-compose.prod.yml pull
+docker compose -f docker-compose.prod.yml up -d
+```
+
+Checks: `curl http://localhost:4000/api/health` → `{"success":true,...}`,
+`http://localhost:3000` loads the login gate. The API image self-migrates a
+fresh database on boot (14 tables); no manual migration step.
+
+For a **real deployment** — anything reachable beyond localhost — set real
+credentials first (see §2); the placeholders are public in this repository,
+which means anyone can mint valid auth tokens against a server still using
+them.
+
+```bash
+export FORCEORG_TAG=latest        # or pin a specific commit sha for rollback
+export JWT_SECRET=<your-secret>
 docker compose -f docker-compose.prod.yml pull
 docker compose -f docker-compose.prod.yml up -d
 ```
 
 Images come from GHCR (`ghcr.io/fatpat81/beerhammer/forceorg-{api,web,sync-worker}`),
-published on every push to `main`. `JWT_SECRET` has no default by design —
-compose refuses to bring the stack up without it. Postgres and S3 run as
-local containers alongside; the API image self-migrates the database on
-boot. Update = re-pull + `up -d`; rollback = `FORCEORG_TAG=<previous sha>`.
+published on every push to `main`. Update = re-pull + `up -d`; rollback =
+`FORCEORG_TAG=<previous sha>`.
 
 Run a Wahapedia ETL pass on the same stack:
 
