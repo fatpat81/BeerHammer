@@ -42,6 +42,14 @@ External systems integrate against the API on your host — see
 Copy [`.env.example`](../.env.example) and fill in real values. What each
 variable is for:
 
+**Test vs production credentials.** Unset variables in
+`docker-compose.prod.yml` fall back to **placeholder values that are public
+in this repository** (`JWT_SECRET=please-change-me`, `postgres/postgrespassword`).
+That is deliberate: test environments and CI boot with zero configuration.
+For any real deployment — anything reachable beyond localhost — you MUST
+override them, because everyone who can read this repo can mint valid
+auth tokens against a server still using the placeholders.
+
 ### API server (`apps/api/.env`)
 
 | Variable | Description | Default in compose |
@@ -51,7 +59,7 @@ variable is for:
 | `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public` |
 | `DIRECT_URL` | Connection string used by `prisma migrate` | same as above |
 | `CORS_ORIGIN` | Origin browsers may call the API from | `http://localhost:3000` |
-| `JWT_SECRET` | HS256 secret for write-endpoint auth tokens; external systems present tokens signed with this same secret | none — **set your own** |
+| `JWT_SECRET` | HS256 secret for write-endpoint auth tokens; external systems present tokens signed with this same secret | `please-change-me` — **public placeholder; override for any real deployment** |
 | `S3_ENDPOINT` / `AWS_ENDPOINT` | S3-compatible storage endpoint (local SeaweedFS by default) | `http://s3:9000` |
 | `S3_BUCKET` / `S3_BUCKET_NAME` | Bucket for miniature photo variants | `forceorg-miniatures` |
 | `S3_REGION` / `AWS_REGION` | Storage region (any value for local stores) | `us-east-1` |

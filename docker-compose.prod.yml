@@ -10,8 +10,12 @@
 #
 # Set real values before exposing beyond localhost: JWT_SECRET, database
 # and storage credentials, CORS_ORIGIN (see docs/DEPLOYMENT.md §2).
-# Empty-string defaults below keep localhost-only bring-up frictionless;
-# every service still boots, but do NOT run exposed that way.
+#
+# TEST-FRIENDLY DEFAULTS: unset variables fall back to placeholder
+# credentials (JWT_SECRET=please-change-me, postgres/postgrespassword) so a
+# local or CI test environment boots with zero configuration. These values
+# are PUBLIC in this repository — they are for test environments only and
+# MUST be overridden before any real deployment or network exposure.
 # ─────────────────────────────────────────────────────────────────────────────
 
 services:
@@ -51,7 +55,9 @@ services:
       NODE_ENV: production
       PORT: 4000
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgrespassword}@postgres:5432/${POSTGRES_DB:-forceorg_dev}?schema=public
-      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET - self-hosted write auth depends on it}
+      # Placeholder default is PUBLIC (test environments only) — override
+      # JWT_SECRET for any real deployment; see docs/DEPLOYMENT.md §2.
+      JWT_SECRET: ${JWT_SECRET:-please-change-me}
       CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
       AWS_REGION: ${AWS_REGION:-us-east-1}
       AWS_ENDPOINT: http://s3:9000
