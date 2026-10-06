@@ -17,11 +17,6 @@ coverage/
 .env.local
 .env.*.local
 
-# Supabase CLI
-supabase/.temp/
-supabase/.branches/
-supabase/functions/.env
-
 # IDE
 .vscode/
 .idea/
@@ -42,3 +37,10 @@ packages/db-client/prisma/*.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Playwright
+apps/web/playwright-report/
+apps/web/test-results/
+
+# Hermes local verification state
+.hermes/

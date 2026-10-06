@@ -1,6 +1,9 @@
-FROM node:20-alpine AS builder
+FROM node:20-bookworm-slim AS builder
 
 WORKDIR /app
+
+# Prisma needs openssl to detect the correct query engine on slim images
+RUN apt-get update -qq && apt-get install -y --no-install-recommends openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Copy root workspace files
 COPY package.json package-lock.json* turbo.json ./
@@ -22,22 +25,25 @@ COPY tsconfig.json ./
 # Generate Prisma client & build
 RUN npx prisma generate --schema=packages/db-client/prisma/schema.prisma
 RUN npm run build --workspace=packages/types
+RUN npm run build --workspace=packages/db-client
 RUN npm run build --workspace=packages/rules-engine-11e
 RUN npm run build --workspace=apps/api
 
 # ── Production Stage ─────────────────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:20-bookworm-slim AS runner
 
 WORKDIR /app
 
 # Install Sharp native dependencies
-RUN apk add --no-cache vips-dev
+RUN apt-get update -qq && apt-get install -y --no-install-recommends libvips42 && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/packages/types/dist ./packages/types/dist
 COPY --from=builder /app/packages/types/package.json ./packages/types/package.json
 COPY --from=builder /app/packages/db-client/dist ./packages/db-client/dist
 COPY --from=builder /app/packages/db-client/package.json ./packages/db-client/package.json
+# Prisma schema + migrations for `prisma migrate deploy` at container start
+COPY --from=builder /app/packages/db-client/prisma ./packages/db-client/prisma
 COPY --from=builder /app/packages/rules-engine-11e/dist ./packages/rules-engine-11e/dist
 COPY --from=builder /app/packages/rules-engine-11e/package.json ./packages/rules-engine-11e/package.json
 COPY --from=builder /app/apps/api/dist ./apps/api/dist

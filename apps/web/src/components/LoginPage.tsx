@@ -1,6 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // ForceOrg-40k — Login Page Component
-// Supabase email + Google OAuth authentication UI
+// Callsign guest login; rosters persist locally (and via the self-hosted API
+// when reachable).
 // ─────────────────────────────────────────────────────────────────────────────
 
 'use client';

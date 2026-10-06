@@ -1,5 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ForceOrg-40k — Supabase Client (Browser)
+// ForceOrg-40k — Legacy Auth Client (in-browser local persistence)
+// Retrieves a session token for the API when available; the app degrades to
+// guest/local-persistence mode when no session exists.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { createBrowserClient } from '@supabase/ssr';

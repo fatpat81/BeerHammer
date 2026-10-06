@@ -1,0 +1,42 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Shared Development Container Image
+# One image for every developer: pinned Node 20 (Debian bookworm), pinned
+# dependencies from package-lock.json, Prisma client pre-generated.
+# Source code is NOT baked in — it is bind-mounted by docker-compose.dev.yml
+# so hot reload works and the image only rebuilds when manifests change.
+# ─────────────────────────────────────────────────────────────────────────────
+
+FROM node:20-bookworm-slim
+
+# openssl: Prisma engine detection; the rest: Chromium runtime libraries so
+# Playwright's headless browser can run E2E inside this same image
+# (matches `playwright install --with-deps` requirements on bookworm).
+RUN apt-get update -qq \
+    && apt-get install -y --no-install-recommends \
+       openssl ca-certificates \
+       libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
+       libcups2 libdbus-1-3 libdrm2 libxkbcommon0 libxcomposite1 \
+       libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 \
+       libcairo2 libasound2 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Dependency layer — copy only manifests (+ prisma assets used by the
+# postinstall `prisma generate` hook), so Docker caches the expensive
+# `npm ci` until one of these files changes.
+COPY package.json package-lock.json .npmrc turbo.json tsconfig.json ./
+COPY apps/api/package.json        apps/api/package.json
+COPY apps/sync-worker/package.json apps/sync-worker/package.json
+COPY apps/web/package.json        apps/web/package.json
+COPY packages/types/package.json  packages/types/package.json
+COPY packages/db-client/package.json packages/db-client/package.json
+COPY packages/rules-engine-11e/package.json packages/rules-engine-11e/package.json
+COPY packages/ui-theme/package.json packages/ui-theme/package.json
+COPY packages/db-client/prisma    packages/db-client/prisma
+
+RUN npm ci --include=dev --no-audit --no-fund \
+    # stamp so the runtime entry script can skip reinstalling when the
+    # lockfile has not changed (the node_modules volume is initialized
+    # from this image layer on first use)
+    && sha256sum package-lock.json > node_modules/.deps-stamp

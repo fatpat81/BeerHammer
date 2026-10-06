@@ -1,164 +1,165 @@
-# ForceOrg-40k — Production Deployment & Operations Guide
+# ForceOrg-40k — Deployment & Operations Guide
 
-## 1. System Architecture Overview
+ForceOrg-40k is an army builder and tabletop console for **Warhammer 40,000
+11th Edition**, built to be **self-hosted**: every component — web app, API,
+PostgreSQL database, and object storage for miniature photos — runs as a
+container on infrastructure you control. There is no dependency on a managed
+backend, hosted database, or third-party storage service.
 
-ForceOrg-40k is an enterprise-grade cloud-native army builder and tabletop console tailored for **Warhammer 40,000 11th Edition**.
+## 1. Architecture
 
 ```
-┌────────────────────────────────────────────────────────┐
-│               Client Tier (PWA / Web)                  │
-│   Next.js 14 (App Router) + IndexedDB Offline Cache    │
-│   Routes: / · /login · /army/[id] · /army/[id]/edit    │
-│           /catalog · /changelog                        │
-└───────────┬────────────────────────────────┬───────────┘
-            │ HTTPS / WebSocket              │ S3 / R2 CDN
-            ▼                                ▼
-┌────────────────────────┐      ┌────────────────────────┐
-│     API Gateway        │      │    Miniature Media     │
-│   Express + Helmet +   │      │ Cloudflare R2 / AWS S3 │
-│  express-rate-limit    │      │ Sharp WebP Processing  │
-└───────────┬────────────┘      └────────────────────────┘
-            │
-            ├────────────────────────────────┐
-            ▼                                ▼
-┌────────────────────────┐      ┌────────────────────────┐
-│  Rules Engine (11e)    │      │  Wahapedia ETL Sync    │
-│ Wargear AST, Rule of 3,│      │ Daily 02:00 UTC Cron   │
-│ Detachment Quota Audit │      │ Checksum Delta Tracker │
-└───────────┬────────────┘      └───────────┬────────────┘
-            │                               │
-            └───────────────┬───────────────┘
+                    ┌─────────────────────────┐
+                    │   Client (web browser)  │
+                    │  Next.js 14 App Router  │
+                    └───────┬─────────────────┘
+                            │  HTTP (localStorage persistence when offline)
                             ▼
-               ┌────────────────────────┐
-               │ PostgreSQL 16 + Prisma │
-               │ Row-Level Security     │
-               └────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│                     Your host (Docker)                        │
+│                                                               │
+│  ┌───────────────┐   ┌──────────────┐   ┌──────────────────┐  │
+│  │ web   :3000   │   │ api   :4000  │   │ S3   :9000       │  │
+│  │ Next.js 14    │──▶│ Express +    │──▶│ SeaweedFS        │  │
+│  │               │   │ Helmet +     │   │ (miniature       │  │
+│  │               │   │ rate limit   │   │  photo variants) │  │
+│  └───────────────┘   └──────┬───────┘   └──────────────────┘  │
+│                             │                                 │
+│                      ┌──────▼───────┐                         │
+│                      │ postgres:16  │                         │
+│                      │ Prisma       │                         │
+│                      └──────────────┘                         │
+│                                                               │
+│  sync-worker (optional, scheduled Wahapedia ETL → postgres)   │
+└───────────────────────────────────────────────────────────────┘
 ```
 
----
+External systems integrate against the API on your host — see
+[`docs/API.md`](API.md) and [`docs/OPENAPI.yaml`](OPENAPI.yaml).
 
-## 2. Environment Configuration
+## 2. Environment variables
 
-Copy `.env.example` to `.env` in both the workspace root and individual application packages:
+Copy [`.env.example`](../.env.example) and fill in real values. What each
+variable is for:
 
-### API Server (`apps/api/.env`)
+### API server (`apps/api/.env`)
 
-| Variable | Description | Example Value |
+| Variable | Description | Default in compose |
 |---|---|---|
 | `PORT` | API listen port | `4000` |
 | `NODE_ENV` | Runtime environment | `production` |
-| `DATABASE_URL` | Pooled connection string | `postgresql://user:pass@db.example.com:5432/forceorg?schema=public` |
-| `DIRECT_URL` | Direct connection string for Prisma migrations | `postgresql://user:pass@db.example.com:5432/forceorg?schema=public` |
-| `CORS_ORIGIN` | Allowed web origin for CORS | `https://forceorg.app` |
-| `JWT_SECRET` | Supabase JWT Secret for token verification | `your-supabase-jwt-secret` |
-| `AWS_REGION` | S3 / R2 storage region | `auto` |
-| `AWS_ENDPOINT` | Custom S3 / R2 endpoint URL | `https://<account-id>.r2.cloudflarestorage.com` |
-| `AWS_ACCESS_KEY_ID` | Storage access key | `your-s3-access-key` |
-| `AWS_SECRET_ACCESS_KEY` | Storage secret key | `your-s3-secret-key` |
-| `S3_BUCKET_NAME` | Miniature uploads bucket | `forceorg-miniatures` |
-| `PUBLIC_CDN_BASE_URL` | Public CDN base URL for served images | `https://cdn.forceorg.app` |
+| `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public` |
+| `DIRECT_URL` | Connection string used by `prisma migrate` | same as above |
+| `CORS_ORIGIN` | Origin browsers may call the API from | `http://localhost:3000` |
+| `JWT_SECRET` | HS256 secret for write-endpoint auth tokens; external systems present tokens signed with this same secret | none — **set your own** |
+| `S3_ENDPOINT` / `AWS_ENDPOINT` | S3-compatible storage endpoint (local SeaweedFS by default) | `http://s3:9000` |
+| `S3_BUCKET` / `S3_BUCKET_NAME` | Bucket for miniature photo variants | `forceorg-miniatures` |
+| `S3_REGION` / `AWS_REGION` | Storage region (any value for local stores) | `us-east-1` |
+| `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` | Storage credentials | compose dev values |
+| `PUBLIC_CDN_BASE_URL` | Base URL under which stored images are served | `http://localhost:9000/forceorg-miniatures` |
 
-### Web Application (`apps/web/.env.local`)
+### Web app (`apps/web/.env.local`, build time)
 
-| Variable | Description | Example Value |
+| Variable | Description | Default |
 |---|---|---|
-| `NEXT_PUBLIC_API_URL` | Public Express API endpoint | `https://api.forceorg.app/api` |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase Project URL | `https://<ref>.supabase.co` |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase public anonymous key | `eyJhbGciOi...` |
+| `NEXT_PUBLIC_API_URL` | API base the browser calls | `http://localhost:4000/api` |
 
----
+### Sync worker
 
-## 3. Local Full-Stack Development with Docker Compose
+| Variable | Description |
+|---|---|
+| `DATABASE_URL` / `DIRECT_URL` | Target PostgreSQL (required — the worker writes rules data) |
+| `ALERT_WEBHOOK_URL` | Optional webhook for sync failure alerts |
 
-To boot up the complete full-stack environment locally (including PostgreSQL 16, MinIO local S3 storage, Express API, and Next.js Web):
+## 3. Full stack on a host
 
 ```bash
-# 1. Start all infrastructure and application services
-docker compose up -d
-
-# 2. View running containers
-docker compose ps
-
-# 3. Apply Prisma migrations and seed reference datasheets
-npx prisma migrate deploy --schema=packages/db-client/prisma/schema.prisma
-npx tsx packages/db-client/prisma/seed.ts
-
-# 4. Access applications:
-#    Next.js Web:       http://localhost:3000
-#    Express API:       http://localhost:4000/api/health
-#    MinIO Console:     http://localhost:9001
+docker compose up -d --build
 ```
 
----
+Compose starts PostgreSQL 16, SeaweedFS (S3), the API (which applies pending
+Prisma migrations before booting), and the web app:
 
-## 4. Production Container Deployment
+| Service | Where | Check |
+|---|---|---|
+| Web | `http://localhost:3000` | login gate loads |
+| API | `http://localhost:4000/api/health` | `{"success":true,...}` |
+| Postgres | `localhost:5432` (`postgres`/`postgrespassword`, db `forceorg_dev`) | 13 tables after auto-migration |
+| S3 | `http://localhost:9000` (S3), `:9333` (master UI) | HTTP 200 |
 
-### Building Multi-Stage Docker Images
-
-Both the API and Web services feature multi-stage production Dockerfiles:
+The database starts empty; the seed script inserts reference datasheets,
+stratagems, abilities, and paint swatches:
 
 ```bash
-# Build Express API container
-docker build -t forceorg-api:latest -f Dockerfile.api .
+npx prisma migrate deploy --schema=packages/db-client/prisma/schema.prisma
+npx tsx packages/db-client/prisma/seed.ts
+```
 
-# Build Next.js Web container
+Point `NEXT_PUBLIC_API_URL` and `CORS_ORIGIN` at your real host/port when
+serving beyond localhost.
+
+### Production hardening (single-app images)
+
+```bash
+docker build -t forceorg-api:latest -f Dockerfile.api .
 docker build -t forceorg-web:latest -f Dockerfile.web .
 ```
 
-### Running Containers in Production
+When you run the containers outside compose, pass the environment above via
+`--env-file`. At minimum change `JWT_SECRET` and the database/storage
+credentials from their defaults.
 
-```bash
-# Run API Container
-docker run -d \
-  --name forceorg-api \
-  -p 4000:4000 \
-  --env-file apps/api/.env \
-  forceorg-api:latest
+### Exposing the API to external systems
 
-# Run Web Container
-docker run -d \
-  --name forceorg-web \
-  -p 3000:3000 \
-  --env-file apps/web/.env.production \
-  forceorg-web:latest
-```
+- The API is the only integration surface; read endpoints are public, write
+  endpoints need a JWT signed with your `JWT_SECRET` (minting examples in
+  [`docs/API.md`](API.md)).
+- Put the API behind a reverse proxy with TLS when serving other machines,
+  and restrict `CORS_ORIGIN` to the origins that should call it from a
+  browser.
+- Direct PostgreSQL/S3 ports do not need to leave the host; publish only
+  what your consumers need (typically just the API).
 
----
+### Data & backups
 
-## 5. Automated CI/CD Pipelines
+- `postgres_data` volume — the database (`docker compose down` keeps it,
+  `down -v` wipes it).
+- `s3_data` volume — uploaded miniature photo variants.
+- Back up by dumping both: `docker compose exec postgres pg_dump ...` plus a
+  copy of the `s3_data` volume.
 
-### 5.1 GitLab CI/CD (`.gitlab-ci.yml`)
-When hosted on GitLab, the repository uses [`.gitlab-ci.yml`](file:///.gitlab-ci.yml):
-1. **Validation & Test**: Runs in a Node 20 runner with `.turbo` and `.npm` caching across branches and merge requests.
-2. **Container Registry Publishing**: Automatically builds [`Dockerfile.web`](file:///Dockerfile.web) and [`Dockerfile.api`](file:///Dockerfile.api) and pushes to your project's GitLab Container Registry:
-   - `$CI_REGISTRY_IMAGE/web:latest`
-   - `$CI_REGISTRY_IMAGE/api:latest`
+## 4. Maintenance operations
 
-### 5.2 GitHub Actions (`.github/workflows/`)
-When hosted on GitHub, workflows are located in `.github/workflows/`:
-1. **Production Deployment (`deploy.yml`)**:
-   - Triggers on push to `main` and pull requests.
-   - Runs code quality checks (`npm run lint`), unit test suite, and builds all 7 workspace packages.
-   - Publishes versioned and latest Docker images to GitHub Container Registry (`ghcr.io`).
+| Task | Command |
+|---|---|
+| Deploy pending schema migrations | `npx prisma migrate deploy --schema=packages/db-client/prisma/schema.prisma` |
+| Re-seed reference data | `npx tsx packages/db-client/prisma/seed.ts` (idempotent — skips existing rows) |
+| Run Wahapedia sync manually | `npm run worker:sync --workspace @forceorg/sync-worker` (needs `DATABASE_URL`) |
+| Check API health | `curl http://localhost:4000/api/health` |
 
-2. **Playwright End-to-End Tests (`e2e.yml`)**:
-   - Executes headless browser test suites validating authentication, force creation, live console mode, rules audit, and datasheet browsing.
+The repo's GitHub Actions run lint, unit tests, and Playwright E2E on push;
+the deploy workflow also publishes versioned images to the GitHub Container
+Registry (`ghcr.io/fatpat81/beerhammer/*`) for pinning deployments.
 
-3. **Wahapedia ETL Daily Sync (`wahapedia-sync.yml`)**:
-   - Executes daily at 02:00 AM UTC.
-   - Uses HTTP 304 conditional request headers (`If-None-Match`) and content hashes to ingest ruleset changes without redundant database operations.
+## 5. Tabletop & offline notes
 
----
+These are browser features of the web frontend, worth knowing during
+deployment:
 
-## 6. Tabletop Offline & Tournament PWA Operations
+- **Screen Wake Lock**: the "Awake" toggle on `/army/[id]` keeps screens on
+  during matches (`navigator.wakeLock`).
+- **Haptic feedback**: wound-tracker pulses via `navigator.vibrate` —
+  mobile browsers only; desktops silently skip it.
+- **Offline tolerance**: if the API is unreachable or the user is a guest,
+  the app persists rosters in `localStorage` (per-callsign). A service
+  worker (`public/sw.js`) and web app manifest are shipped, but the app does
+  not currently register the service worker — treat localStorage as the
+  offline persistence layer.
 
-- **Screen Wake Lock API**: Activated via the "Awake" toggle in `/army/[id]` to prevent screens from timing out during tabletop matches.
-- **Service Worker & IndexedDB Caching**: `sw.js` caches catalog datasheets, stratagems, weapon profiles, and army lists. In venue conditions with intermittent Wi-Fi, the console seamlessly reads from IndexedDB.
-- **Haptic Feedback**: The wound tracker triggers tactile pulses (`navigator.vibrate`) upon wound adjustments and model destruction.
+## 6. Monitoring
 
----
-
-## 7. Health & Monitoring
-
-- **API Health Check**: `GET /api/health` returns JSON indicating service version and timestamp.
-- **Rules Compliance Audit**: `POST /api/rosters/:id/audit` checks for points shifts and detachment quota adherence against the latest ruleset.
+- **API health check**: `GET /api/health` — status, version, timestamp.
+- **Rules audit**: `POST /api/rosters/:id/audit` — validates points shifts,
+  detachment quotas, loadouts, and Rule of Three against the current
+  ruleset.
+- **Sync status**: `GET /api/changelog` — recent Wahapedia ETL records.

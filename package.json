@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "postinstall": "npm run db:generate",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=@forceorg/web --filter=@forceorg/api",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:coverage": "turbo run test:coverage",
@@ -18,7 +17,9 @@
     "db:generate": "npm run generate --prefix packages/db-client",
     "db:migrate": "npm run migrate --prefix packages/db-client",
     "db:seed": "npm run seed --prefix packages/db-client",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "postinstall": "prisma generate --schema=packages/db-client/prisma/schema.prisma",
+    "dev:s3-migrate": "turbo run dev --filter=@forceorg/sync-worker"
   },
   "devDependencies": {
     "turbo": "^2.1.0",

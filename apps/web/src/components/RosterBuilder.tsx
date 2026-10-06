@@ -539,7 +539,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
             border: '1px dashed var(--surface-border)',
             borderRadius: 'var(--radius-lg, 8px)',
           }}>
-            No units added. Click <strong>"+ Add Unit"</strong> to begin building your roster.
+            No units added. Click <strong>&quot;+ Add Unit&quot;</strong> to begin building your roster.
           </div>
         ) : (
           rosterUnits.map(unit => {

@@ -10,17 +10,27 @@ import {
   GetObjectCommand,
 } from '@aws-sdk/client-s3';
 
+// Accept both the S3_* names documented in .env.example and the AWS_*
+// names used by docker-compose.yml, so either configuration works.
+const env = (name: string): string | undefined => process.env[name] || undefined;
+
+const S3_ENDPOINT = env('S3_ENDPOINT') ?? env('AWS_ENDPOINT');
+const S3_REGION = env('S3_REGION') ?? env('AWS_REGION') ?? 'auto';
+const S3_ACCESS_KEY_ID = env('S3_ACCESS_KEY_ID') ?? env('AWS_ACCESS_KEY_ID') ?? '';
+const S3_SECRET_ACCESS_KEY = env('S3_SECRET_ACCESS_KEY') ?? env('AWS_SECRET_ACCESS_KEY') ?? '';
+const BUCKET = env('S3_BUCKET') ?? env('S3_BUCKET_NAME') ?? 'forceorg-media';
+const CDN_BASE = env('CDN_BASE_URL') ?? env('PUBLIC_CDN_BASE_URL') ?? '';
+
 const s3Client = new S3Client({
-  region: process.env.S3_REGION || 'auto',
-  endpoint: process.env.S3_ENDPOINT || 'https://s3.amazonaws.com',
+  region: S3_REGION,
+  endpoint: S3_ENDPOINT || 'https://s3.amazonaws.com',
+  // MinIO and other self-hosted S3 stores use path-style addressing.
+  forcePathStyle: Boolean(S3_ENDPOINT),
   credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
-    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
+    accessKeyId: S3_ACCESS_KEY_ID,
+    secretAccessKey: S3_SECRET_ACCESS_KEY,
   },
 });
-
-const BUCKET = process.env.S3_BUCKET || 'forceorg-media';
-const CDN_BASE = process.env.CDN_BASE_URL || '';
 
 export interface UploadResult {
   key: string;
@@ -46,7 +56,17 @@ export async function uploadImage(
     })
   );
 
-  const url = CDN_BASE ? `${CDN_BASE}/${key}` : `https://${BUCKET}.s3.amazonaws.com/${key}`;
+  // Custom CDN endpoint wins; otherwise derive a URL from the configured
+  // endpoint (correct for MinIO/path-style stores) and finally fall back to
+  // the AWS-style virtual-hosted URL.
+  let url: string;
+  if (CDN_BASE) {
+    url = `${CDN_BASE.replace(/\/+$/, '')}/${key}`;
+  } else if (S3_ENDPOINT) {
+    url = `${S3_ENDPOINT.replace(/\/+$/, '')}/${BUCKET}/${key}`;
+  } else {
+    url = `https://${BUCKET}.s3.amazonaws.com/${key}`;
+  }
 
   return {
     key,

@@ -1,0 +1,658 @@
+openapi: 3.1.0
+info:
+  title: ForceOrg-40k API
+  version: 1.0.0
+  description: |
+    REST API for the self-hosted ForceOrg-40k server (Warhammer 40,000 11th
+    Edition army builder & tabletop console).
+
+    The API is the integration surface for external systems. All backing
+    services (PostgreSQL, S3-compatible object storage) run on the same host
+    as the API — there is no shared or managed backend.
+
+    * Read endpoints are public.
+    * Write endpoints require `Authorization: Bearer <JWT>` (HS256, signed
+      with the instance's `JWT_SECRET`).
+    * Rate limit: 300 requests / 15 min / IP across all `/api` routes (429).
+servers:
+  - url: http://localhost:4000/api
+    description: Local self-hosted instance (docker compose)
+  - url: http://{host}:{port}/api
+    description: Any self-hosted instance
+    variables:
+      host:
+        default: localhost
+      port:
+        default: '4000'
+tags:
+  - name: Health
+  - name: Catalog
+    description: Public read-only rules data (datasheets, weapons, stratagems, changelog)
+  - name: Rosters
+    description: Authenticated roster management (scoped to the JWT `sub`)
+  - name: Media
+    description: Authenticated miniature photo uploads (Sharp pipeline → local S3-compatible storage)
+  - name: Audit
+security:
+  - bearerAuth: []
+
+paths:
+  /health:
+    get:
+      tags: [Health]
+      summary: Service liveness probe
+      security: []
+      responses:
+        '200':
+          description: Service status
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          status: { type: string, example: operational }
+                          version: { type: string, example: 1.0.0 }
+                          timestamp: { type: string, format: date-time }
+
+  /datasheets:
+    get:
+      tags: [Catalog]
+      summary: List datasheets (paginated)
+      security: []
+      parameters:
+        - in: query
+          name: factionId
+          schema: { type: string }
+          description: Filter by faction (e.g. `adeptus_astartes`)
+        - in: query
+          name: role
+          schema: { $ref: '#/components/schemas/BattlefieldRole' }
+          description: Filter by battlefield role
+        - in: query
+          name: page
+          schema: { type: integer, default: 1 }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50 }
+      responses:
+        '200':
+          description: Datasheet page
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: '#/components/schemas/Datasheet' }
+                      meta:
+                        type: object
+                        properties:
+                          page: { type: integer }
+                          totalPages: { type: integer }
+                          totalCount: { type: integer }
+
+  /datasheets/{id}:
+    get:
+      tags: [Catalog]
+      summary: Single datasheet with full relations
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IdParam'
+      responses:
+        '200':
+          description: Datasheet detail
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data: { $ref: '#/components/schemas/Datasheet' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /stratagems:
+    get:
+      tags: [Catalog]
+      summary: List stratagems with filters
+      security: []
+      parameters:
+        - in: query
+          name: phase
+          schema:
+            type: string
+            enum: [COMMAND, MOVEMENT, SHOOTING, CHARGE, FIGHT, ANY]
+        - in: query
+          name: category
+          schema:
+            type: string
+            enum: [CORE, DETACHMENT]
+        - in: query
+          name: detachmentId
+          schema: { type: string }
+      responses:
+        '200':
+          description: Stratagem list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: '#/components/schemas/Stratagem' }
+
+  /weapons:
+    get:
+      tags: [Catalog]
+      summary: Full weapon registry
+      security: []
+      responses:
+        '200':
+          description: Weapon list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: '#/components/schemas/WeaponProfile' }
+
+  /changelog:
+    get:
+      tags: [Catalog]
+      summary: Balance changes and Wahapedia ETL sync status
+      security: []
+      responses:
+        '200':
+          description: Changelog feed
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data: { $ref: '#/components/schemas/ChangelogData' }
+
+  /rosters:
+    get:
+      tags: [Rosters]
+      summary: List the caller's rosters (newest first)
+      responses:
+        '200':
+          description: Roster list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: '#/components/schemas/UserArmy' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+    post:
+      tags: [Rosters]
+      summary: Create a roster
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, factionId, detachmentPrimary]
+              properties:
+                name: { type: string }
+                factionId: { type: string }
+                detachmentPrimary: { type: string }
+                detachmentSecondary: { type: string, nullable: true }
+                pointsLimit: { type: integer, default: 2000 }
+                detachmentPointsLimit: { type: integer, default: 3 }
+                factionThemeOverride: { type: string, nullable: true }
+                rosterPayload: { $ref: '#/components/schemas/RosterPayload' }
+      responses:
+        '201':
+          description: Created roster
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data: { $ref: '#/components/schemas/UserArmy' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /rosters/{id}:
+    get:
+      tags: [Rosters]
+      summary: Get one roster (with unit media)
+      parameters:
+        - $ref: '#/components/parameters/IdParam'
+      responses:
+        '200':
+          description: Roster detail
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/UserArmy'
+                          - type: object
+                            properties:
+                              unitMedia:
+                                type: array
+                                items: { $ref: '#/components/schemas/UserUnitMedia' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+    put:
+      tags: [Rosters]
+      summary: Update roster metadata / payload (partial — omitted fields keep current values)
+      parameters:
+        - $ref: '#/components/parameters/IdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string }
+                detachmentPrimary: { type: string }
+                detachmentSecondary: { type: string, nullable: true }
+                pointsLimit: { type: integer }
+                factionThemeOverride: { type: string, nullable: true }
+                rosterPayload: { $ref: '#/components/schemas/RosterPayload' }
+      responses:
+        '200':
+          description: Updated roster
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data: { $ref: '#/components/schemas/UserArmy' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+    delete:
+      tags: [Rosters]
+      summary: Delete a roster (media cascades)
+      parameters:
+        - $ref: '#/components/parameters/IdParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          deleted: { type: boolean }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /rosters/{id}/audit:
+    post:
+      tags: [Audit]
+      summary: Run a rules-compliance audit (points shifts, quotas, Rule of Three)
+      parameters:
+        - $ref: '#/components/parameters/IdParam'
+      responses:
+        '200':
+          description: Audit result
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data: { $ref: '#/components/schemas/AuditResult' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /rosters/{rosterId}/units/{unitInstanceId}/media:
+    post:
+      tags: [Media]
+      summary: Upload a miniature photo (Sharp pipeline → local S3 storage)
+      description: |
+        `multipart/form-data` with one file field (any name; the web app
+        sends `miniature_photo`). Accepted types: jpeg/png/webp/heic/heif.
+        Max 10 MB. Also available via the legacy alias
+        `POST /media/upload` (rosterId & unitInstanceId as form fields).
+      parameters:
+        - $ref: '#/components/parameters/RosterIdParam'
+        - $ref: '#/components/parameters/UnitInstanceIdParam'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                miniature_photo:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Media record with processed variants
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          media: { $ref: '#/components/schemas/UserUnitMedia' }
+                          processing:
+                            type: object
+                            properties:
+                              cardImage: { $ref: '#/components/schemas/ProcessedImage' }
+                              thumbnail: { $ref: '#/components/schemas/ProcessedImage' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+    delete:
+      tags: [Media]
+      summary: Delete a unit's stored photo variants
+      description: Also available via `DELETE /media/{id}` using the media record id.
+      parameters:
+        - $ref: '#/components/parameters/RosterIdParam'
+        - $ref: '#/components/parameters/UnitInstanceIdParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/ApiSuccess'
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          deleted: { type: boolean }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    IdParam:
+      in: path
+      name: id
+      required: true
+      schema: { type: string }
+    RosterIdParam:
+      in: path
+      name: rosterId
+      required: true
+      schema: { type: string }
+    UnitInstanceIdParam:
+      in: path
+      name: unitInstanceId
+      required: true
+      schema: { type: string }
+
+  responses:
+    Unauthorized:
+      description: Missing or invalid bearer token
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ApiError' }
+    NotFound:
+      description: Unknown route/resource, or a resource owned by another user
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ApiError' }
+    BadRequest:
+      description: Malformed parameters or missing file
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ApiError' }
+
+  schemas:
+    ApiSuccess:
+      type: object
+      required: [success, data]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data: {}
+        meta: { type: object }
+
+    ApiError:
+      type: object
+      required: [success, error]
+      properties:
+        success:
+          type: boolean
+          enum: [false]
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code:
+              type: string
+              enum:
+                - UNAUTHORIZED
+                - TOKEN_INVALID
+                - NOT_FOUND
+                - INVALID_PARAMS
+                - NO_FILE
+                - RATE_LIMIT_EXCEEDED
+                - DB_ERROR
+                - UPLOAD_ERROR
+                - AUDIT_ERROR
+                - DELETE_ERROR
+                - INTERNAL_ERROR
+            message: { type: string }
+
+    BattlefieldRole:
+      type: string
+      enum: [CHARACTER, BATTLELINE, INFANTRY, MOUNTED, MONSTER, VEHICLE, DEDICATED_TRANSPORT, FORTIFICATION, ALLIED_UNIT]
+
+    ProcessedImage:
+      type: object
+      properties:
+        width: { type: integer }
+        height: { type: integer }
+        sizeBytes: { type: integer }
+
+    Datasheet:
+      type: object
+      description: Prisma `Datasheet` row with relations; shapes are mirrored from packages/types.
+      properties:
+        id: { type: string }
+        factionId: { type: string }
+        name: { type: string }
+        battlefieldRole: { $ref: '#/components/schemas/BattlefieldRole' }
+        basePoints: { type: integer }
+        detachmentPointsCost: { type: integer }
+        keywords: { type: array, items: { type: string } }
+        weapons:
+          type: array
+          items:
+            type: object
+            properties:
+              isDefault: { type: boolean }
+              weapon: { $ref: '#/components/schemas/WeaponProfile' }
+        abilities:
+          type: array
+          items:
+            type: object
+            properties:
+              name: { type: string }
+              source: { type: string }
+              phase: { type: string, nullable: true }
+              description: { type: string }
+
+    WeaponProfile:
+      type: object
+      properties:
+        id: { type: string }
+        slug: { type: string }
+        name: { type: string }
+        type: { type: string }
+        range: { type: string }
+        attacks: { type: string }
+        skill: { type: string }
+        strength: { type: integer }
+        armorPenetration: { type: integer }
+        damage: { type: string }
+        keywords: { type: array, items: { type: string } }
+
+    Stratagem:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        category: { type: string, enum: [CORE, DETACHMENT] }
+        detachmentId: { type: string, nullable: true }
+        factionId: { type: string, nullable: true }
+        cpCost: { type: integer }
+        phase:
+          type: string
+          enum: [COMMAND, MOVEMENT, SHOOTING, CHARGE, FIGHT, ANY]
+        description: { type: string }
+        requiredKeywords: { type: array, items: { type: string } }
+
+    ChangelogData:
+      type: object
+      properties:
+        currentRulesetVersion: { type: string }
+        lastSyncedAt: { type: string, format: date-time }
+        syncStatus: { type: string, enum: [SYNCHRONIZED, PENDING, OFFLINE] }
+        totalChanges: { type: integer }
+        recentChanges:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              category:
+                type: string
+                enum: [POINTS_CUT, POINTS_HIKE, KEYWORD_UPDATE, NEW_DATASHEET, ERRATA]
+              factionId: { type: string }
+              factionName: { type: string }
+              targetName: { type: string }
+              previousValue: { type: string }
+              currentValue: { type: string }
+              effectiveDate: { type: string }
+              summary: { type: string }
+        syncRecords:
+          type: array
+          items:
+            type: object
+            properties:
+              endpoint: { type: string }
+              status: { type: string }
+              recordCount: { type: integer }
+              syncedAt: { type: string, format: date-time }
+
+    RosterPayload:
+      type: object
+      description: Client-defined unit selection stored on the roster.
+      properties:
+        units:
+          type: array
+          items:
+            type: object
+            required: [instanceId, datasheetId, datasheetName, modelCount, pointsCost]
+            properties:
+              instanceId: { type: string }
+              datasheetId: { type: string }
+              datasheetName: { type: string }
+              modelCount: { type: integer }
+              wargearSelections: { type: array, items: {} }
+              pointsCost: { type: integer }
+        totalPoints: { type: integer }
+        detachmentPointsUsed: { type: integer }
+
+    UserArmy:
+      type: object
+      description: Prisma `UserArmy` row.
+      properties:
+        id: { type: string }
+        userId: { type: string }
+        name: { type: string }
+        factionId: { type: string }
+        rulesetVersionId: { type: string }
+        detachmentPrimary: { type: string }
+        detachmentSecondary: { type: string, nullable: true }
+        pointsLimit: { type: integer }
+        detachmentPointsLimit: { type: integer }
+        factionThemeOverride: { type: string, nullable: true }
+        rosterPayload: { $ref: '#/components/schemas/RosterPayload' }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+
+    UserUnitMedia:
+      type: object
+      description: Prisma `UserUnitMedia` row.
+      properties:
+        id: { type: string }
+        userId: { type: string }
+        rosterId: { type: string }
+        unitInstanceId: { type: string }
+        imageUrl: { type: string }
+        thumbnailUrl: { type: string }
+        storageKeyPrefix: { type: string }
+
+    AuditResult:
+      type: object
+      properties:
+        rosterId: { type: string }
+        rulesetVersionCompared: { type: string }
+        isCompliant: { type: boolean }
+        auditedAt: { type: string, format: date-time }
+        discrepancies:
+          type: array
+          items:
+            type: object
+            properties:
+              unitInstanceId: { type: string }
+              unitName: { type: string }
+              severity: { type: string, enum: [RED, AMBER] }
+              category:
+                type: string
+                enum: [POINTS_SHIFT, INVALID_LOADOUT, DP_VIOLATION]
+              message: { type: string }
+              oldValue: { type: string }
+              newValue: { type: string }

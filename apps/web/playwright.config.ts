@@ -12,7 +12,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:3456',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -27,9 +27,14 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run start',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
+    command: 'npx next start -p 3456',
+    url: 'http://localhost:3456',
+    // Never adopt an unrelated process that happens to hold the port: the
+    // suite must always exercise a server built from the current tree.
+    reuseExistingServer: false,
     timeout: 120 * 1000,
+    env: {
+      NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api',
+    },
   },
 });
