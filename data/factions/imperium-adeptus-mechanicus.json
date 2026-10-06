@@ -1,0 +1,4004 @@
+{
+  "id": "imperium-adeptus-mechanicus",
+  "name": "Adeptus Mechanicus",
+  "sourceFile": "Imperium - Adeptus Mechanicus.json",
+  "totalDatasheets": 41,
+  "detachments": [
+    {
+      "name": "Detachment",
+      "id": "c82f-1b42-946-9c9a",
+      "rules": []
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "7662-5fde-16f1-5267",
+      "name": "Archaeopter Fusilave",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 160,
+      "stats": {
+        "movement": "-",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Archaeopter Fusilave",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ARCHAEOPTER FUSILAVE",
+        "VEHICLE",
+        "AIRCRAFT",
+        "FLY",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII"
+      ],
+      "abilities": [
+        {
+          "name": "Bomb Rack",
+          "description": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound."
+        },
+        {
+          "name": "Chaff Launcher",
+          "description": "The bearer has the Smoke keyword."
+        },
+        {
+          "name": "Command Uplink",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "d54e-1007-26b5-6a79",
+      "name": "Archaeopter Stratoraptor",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 185,
+      "stats": {
+        "movement": "-",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Archaeopter Stratoraptor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ARCHAEOPTER STRATORAPTOR",
+        "SKITARII",
+        "VEHICLE",
+        "AIRCRAFT",
+        "FLY",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Strafing Run",
+          "description": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll."
+        },
+        {
+          "name": "Chaff Launcher",
+          "description": "The bearer has the Smoke keyword.�"
+        },
+        {
+          "name": "Command Uplink",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Cognis heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy phosphor blaster",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Twin cognis lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Sustained hits 1",
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "295-769-8893-2bb0",
+      "name": "Archaeopter Transvector",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 145,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Archaeopter Transvector",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ARCHAEOPTER TRANSVECTOR",
+        "FACTION: ADEPTUS MECHANICUS",
+        "VEHICLE",
+        "FLY",
+        "IMPERIUM",
+        "SKITARII",
+        "TRANSPORT"
+      ],
+      "abilities": [
+        {
+          "name": "Aerial Deployment",
+          "description": "In your first Movement phase, this unit can make an ingress move."
+        },
+        {
+          "name": "Chaff Launcher",
+          "description": "The bearer has the Smoke keyword.�"
+        },
+        {
+          "name": "Command Uplink",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "1f1e-2989-4762-cf88",
+      "name": "Belisarius Cawl",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 220,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 8,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 10,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Belisarius Cawl",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "BELISARIUS CAWL",
+        "EPIC HERO",
+        "MONSTER",
+        "CHARACTER",
+        "TECH-PRIEST",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "CULT MECHANICUS",
+        "MOBILE"
+      ],
+      "abilities": [
+        {
+          "name": "Canticles of the Omnissiah",
+          "description": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n\nInvocation of Machine Vengeance (Aura): At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ^^**Adeptus Mechanicus^^** unit makes an attack that targets your Machine Vengeance target, you can re‑roll the Hit roll.\n\nMantra of Discipline:  This model has the ^^**Battleline**^^ keyword and has the following ability:\n**Binharic Courage (Aura)**: While a friendly ^^**Adeptus Mechanicus**^^ unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test.’\n\nShroudpsalm (Aura): While a friendly **^^Adeptus Mechanicus**^^ unit is within 6\" of this model, that unit has the Stealth ability."
+        },
+        {
+          "name": "Mechanicus Bodyguard",
+          "description": "While this model is within 3\" of one or more other friendly ^^**Adeptus Mechanicus**^^ units, this model has the Lone Operative ability."
+        },
+        {
+          "name": "Self-repair Mechanisms",
+          "description": "At the start of your Command phase, this model regains up to D3 lost wounds."
+        },
+        {
+          "name": "Supreme Commander",
+          "description": "If this model is in your army, it must be your **^^Warlord^^**."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Solar atomiser",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Arc Scourge",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Cawl's Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Mechadendrite hive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fd5a-f7a3-833c-85b",
+      "name": "Corpuscarii Electro-Priests",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 60,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "7+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Corpuscarii Electro-Priests",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ELECTRO-PRIESTS",
+        "CORPUSCARII",
+        "IMPERIUM",
+        "INFANTRY",
+        "FACTION: ADEPTUS MECHANICUS",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Electro-shock",
+          "description": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is shocked. While a unit is shocked, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Electrostatic gauntlets",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Electrostatic gauntlets",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "841-f339-8086-efe2",
+      "name": "Fulgurite Electro-Priests",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 65,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "7+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Fulgurite Electro-Priests",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ELECTRO-PRIESTS",
+        "FULGURITE",
+        "INFANTRY",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Electro-Infusion",
+          "description": "While a ^^**Character^^** model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Electroleech stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bd6c-8683-8bc4-962d",
+      "name": "Kastelan Robots",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 150,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 9,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kastelan Robot",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "KASTELAN ROBOTS",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "VEHICLE",
+        "WALKER",
+        "LEGIO CYBERNETICA"
+      ],
+      "abilities": [
+        {
+          "name": "Robotic Bodyguard",
+          "description": "While a ^^**Cybernetica Datasmith^^** model is leading this unit, that model has the Feel No Pain 4+ ability."
+        },
+        {
+          "name": "Repulsor Grid",
+          "description": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin Kastelan phosphor blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Kastelan phosphor blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Incendine combustor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Heavy phosphor blaster",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "-"
+          ]
+        },
+        {
+          "name": "Twin Kastelan fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Kastelan fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "-"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a46f-848-b87d-4484",
+      "name": "Kataphron Breachers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 140,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kataphron Breachers",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "BREACHERS",
+        "KATAPHRON",
+        "INFANTRY",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Breaching Command",
+          "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. While this unit is within 6” of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, you can re-roll the Hit roll instead."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "7bee-a476-2167-76e7",
+      "name": "Kataphron Destroyers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 100,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 6,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kataphron Destroyers",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "DESTROYERS",
+        "KATAPHRON",
+        "INFANTRY",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Sentinel Directive",
+          "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "ea05-4db7-9ee6-7a87",
+      "name": "Onager Dunecrawler",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 150,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 10,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Onager Dunecrawler",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ONAGER DUNECRAWLER",
+        "IMPERIUM",
+        "VEHICLE",
+        "WALKER",
+        "SKITARII",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SMOKE"
+      ],
+      "abilities": [
+        {
+          "name": "Emanatus Forcefield (Aura)",
+          "description": "While a friendly ^^**Adeptus Mechanicus Battleline^^** model is wholly within 6\" of this model, that ^^**Battleline^^** model has a 4+ invulnerable save against ranged attacks."
+        },
+        {
+          "name": "Damaged: 1-4 wounds remaining",
+          "description": "While this mdel has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Scuttling Walker",
+          "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly ^^**Monster^^** and ^^**Vehicle^^** models and sections of terrain features that are 4\" or less in height."
+        },
+        {
+          "name": "Broad spectrum data-tether",
+          "description": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Cognis heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Eradication beamer - dissipated",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3D3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Eradication beamer - focused",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3D3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Daedalus missile launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        },
+        {
+          "name": "Icarus array",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Fly 4+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Cognis heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Neutron laser",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "D6+2",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Twin Onager heavy phosphor blaster",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "12",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Dunecrawler legs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "b31e-5003-5b63-a305",
+      "name": "Pteraxii Skystalkers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Pteraxii Skystalkers",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Pteraxii Skystalker Alpha",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SKYSTALKERS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "FLY",
+        "JUMP PACK",
+        "GRENADES",
+        "SKITARII",
+        "PTERAXII",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Ride the Thermals",
+          "description": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to 6\".\n- Make a Normal move of up to 12\", provided every model in this unit ends that move wholly within 6\" of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units.\n\nIn either case, if it does, until the end of the turn, this unit is not eligible to declare a charge."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "958-a256-360-8620",
+      "name": "Pteraxii Sterylizors",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Pteraxii Sterylizors",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Pteraxii Skystalker Alpha",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "STERYLIZORS",
+        "IMPERIUM",
+        "INFANTRY",
+        "FLY",
+        "JUMP PACK",
+        "SKITARII",
+        "FACTION: ADEPTUS MECHANICUS",
+        "PTERAXII",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Searing Conflagaration",
+          "description": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, each time such an attack targets such a unit, you can re-roll the Wound roll instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor torch",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Pteraxii talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Pteraxii talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "5797-adb8-930-e832",
+      "name": "Serberys Raiders",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "MOUNTED",
+      "basePoints": 60,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Serberys Raiders",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SERBERYS RAIDERS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "MOUNTED",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Tactica Obliqua",
+          "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units."
+        },
+        {
+          "name": "Enhanced data-tether",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "name": "Stealth-screened Cybercanids",
+          "description": "This unit has Lone Operative 15\"."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Cavalry sabre & clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cavalry sabre & clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cavalry sabre & clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "e775-4fe1-832b-95ca",
+      "name": "Serberys Sulphurhounds",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "MOUNTED",
+      "basePoints": 55,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Serberys Sulphurhounds",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SERBERYS SULPHURHOUNDS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "MOUNTED",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Line-breakers",
+          "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units. For each 4+, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Phosphor pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor blast carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores cover"
+          ]
+        },
+        {
+          "name": "Phosphor pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Cavalry arc maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "9b4-26b2-9e6d-a62d",
+      "name": "Sicarian Infiltrators",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sicarian Infiltrators",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "INFANTRY",
+        "SICARIAN",
+        "INFILTRATORS",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Neurostatic Interference (Aura)",
+          "description": "While an enemy unit is within 6\" of this unit, each time a Battle-shock or Leadership test is taken for that unit, subtract 1 from that test. While this unit is within 6\" of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, subtract 2 from that test instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8863-9784-8377-aa7a",
+      "name": "Sicarian Ruststalkers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sicarian Ruststalkers",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "RUSTSTALKERS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "SKITARII",
+        "SICARIAN"
+      ],
+      "abilities": [
+        {
+          "name": "Optimised Gait",
+          "description": "Add 1 to Advance and Charge rolls made for this unit. While this unit is within 6\" of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, add 2 to Advance and Charge rolls made for this unit instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Transonic razor & chordclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic blades & chordclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic razor & chordclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b897-e4c6-fcb6-6538",
+      "name": "Skitarii Marshal",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 35,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Skitarii Marshal",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MARSHAL",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "CHARACTER",
+        "INFANTRY"
+      ],
+      "abilities": [
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: HASTARII EXTERMINATORS, HASTARII FUSILIERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
+          "name": "Control Edict",
+          "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Servo-skull Uplink",
+          "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Skitarii^^** unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Control stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "de59-f65c-181a-8509",
+      "name": "Skitarii Rangers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "BATTLELINE",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Skitarii Rangers",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "RANGERS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "SKITARII",
+        "BATTLELINE",
+        "RECON AUGURY"
+      ],
+      "abilities": [
+        {
+          "name": "Objective Scouted",
+          "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        },
+        {
+          "name": "Enhanced data-tether",
+          "description": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver -  supercharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Alpha combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "ba33-c21-bddc-ab0",
+      "name": "Skitarii Vanguard",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "BATTLELINE",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Skitarii Vanguard",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VANGUARD",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "SKITARII",
+        "BATTLELINE"
+      ],
+      "abilities": [
+        {
+          "name": "Rad-saturation (Aura)",
+          "description": "While an enemy unit (excluding ^^**Vehicle^^** units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
+        },
+        {
+          "name": "Enhanced data-tether",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver -  supercharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Alpha combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3fcc-b6a1-399b-1a29",
+      "name": "Skorpius Disintegrator",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 160,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 10,
+        "save": "2+",
+        "wounds": 12,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Skorpius Disintegrator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SKORPIUS DISINTEGRATOR",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "VEHICLE",
+        "SMOKE",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Broad spectrum data-tether",
+          "description": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "name": "Blistering Salvoes",
+          "description": "Each time this model makes an attack with a belleros energy cannon that targets an ^^**Infantry^^** unit, add 1 to the Hit roll. Each time this model makes an attack with a ferrumite cannon that targets a ^^**Monster^^** or ^^**Vehicle^^** unit, add 1 to the Hit roll."
+        },
+        {
+          "name": "Damaged: 1-4 wounds remaining",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Cognis heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Disruptor missile launcher",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Belleros energy cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Ferrumite cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "2b9c-3982-701d-f8fd",
+      "name": "Skorpius Dunerider",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 75,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Skorpius Dunerider",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SKORPIUS DUNERIDER",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "VEHICLE",
+        "DEDICATED TRANSPORT",
+        "TRANSPORT",
+        "SKITARII",
+        "SMOKE",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Broad spectrum data-tether",
+          "description": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "name": "Fire Support",
+          "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport^^** this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "3053-c0c1-aedd-b211",
+      "name": "Sydonian Dragoons with taser lances",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 60,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sydonian Dragoons (Radium Jezzail)",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "VEHICLE",
+        "WALKER",
+        "SYDONIAN",
+        "DRAGOONS WITH TASER LANCES",
+        "SMOKE"
+      ],
+      "abilities": [
+        {
+          "name": "Dynamic Efficiency",
+          "description": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back, and you can re-roll Desperate Escape tests taken for models in this unit."
+        },
+        {
+          "name": "Broad Spectrum Data-tether",
+          "description": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Taser lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Walker 2+",
+            "Lance",
+            "Sustained Hits 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6424-ed86-9e15-3e14",
+      "name": "Tech-Priest Dominus",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tech-Priest Dominus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "DOMINUS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "CHARACTER",
+        "INFANTRY",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
+          "name": "Lord of the Machine Cult",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the ^^**Electro-Priests^^** keyword, models in that unit have the Feel No Pain 4+ ability instead"
+        },
+        {
+          "name": "Data-spike",
+          "description": "At the start of the Fight phase, you can select one enemy ^^**Vehicle^^** unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Macrostubber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Eradication ray - dissipated",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Eradication ray - focused",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Volkite blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "c0e0-4d86-96d2-ec86",
+      "name": "Tech-Priest Enginseer",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 55,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tech-Priest Enginseer",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "ENGINSEER",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "CHARACTER",
+        "INFANTRY",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Enginseer",
+          "description": "While this model is within 3\" of one or more friendly ^^**Adeptus Mechanicus Vehicle^^** units, unless it is leading a unit, this model has the Lone Operative ability."
+        },
+        {
+          "name": "Omnissiah's Blessing",
+          "description": "In your Command phase, select one friendly Adeptus Mechanicus model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a Vehicle model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase"
+        },
+        {
+          "name": "Vengeance for the Omnissiah",
+          "description": "If a friendly ^^**Adeptus Mechanicus Vehicle^^** model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SKITARII RANGERS, SKITARII VANGUARD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Servo arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "2d9b-610a-dc4d-15ae",
+      "name": "Tech-Priest Manipulus",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tech-Priest Manipulus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MANIPULUS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "CHARACTER",
+        "INFANTRY",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
+          "name": "Galvanic Field",
+          "description": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability."
+        },
+        {
+          "name": "Defend the Divine Work",
+          "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the  end of the phase, all models in this model’s unit have a 4+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Magnarail lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Transonic cannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Omnissian staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "fa82-61cc-aa85-e94c",
+      "name": "Technoarcheologist",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 45,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Technoarcheologist",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TECHNOARCHEOLOGIST",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "CHARACTER",
+        "INFANTRY",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Seekers of Divine Arcana",
+          "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+        },
+        {
+          "name": "Cogitative Instincts",
+          "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of this model."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Servo-arc claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d59d-ef1-9ef8-4f44",
+      "name": "Cybernetica Datasmith",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 20,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cybernetica Datasmith",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CYBERNETICA DATASMITH",
+        "TECH-PRIEST",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "LEGIO CYBERNETICA",
+        "VEHICLE"
+      ],
+      "abilities": [
+        {
+          "name": "Support",
+          "description": "This model must be attached to the following unit: KASTELAN ROBOTS"
+        },
+        {
+          "name": "Battle Protocols",
+          "description": "At the start of the battle, if this model is leading a ^^**Kastelan Robots^^** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a ^^**Kastelan Robots^^** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by ^^**Kastelan Robot^^** models in that unit.\n- Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by ^^**Kastelan Robot^^** models in that unit.\n- Aegis Protocol: Add 1 to the Toughness characteristic of ^^**Kastelan Robot^^** models in that unit."
+        },
+        {
+          "name": "Data-severed",
+          "description": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "705b-2635-fcab-48f9",
+      "name": "Secutarii Hoplites [Legends]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 65,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "invulnerableSave": "4+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Secutarii Hoplites",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SECUTARII HOPLITES",
+        "INFANTRY",
+        "IMPERIUM",
+        "SKITARII",
+        "FACTION: ADEPTUS MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Titan Guard",
+          "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase. When oing so, if there are one or more friendly ^^**Adeptus Titanicus^^** units on the battlefield, you can re-roll the subsequent charge roll."
+        },
+        {
+          "name": "Secutarii",
+          "description": "If a model from your army with the Leader ability can be attached to a ^^**Skitarii Vanguard^^** unit, it can be attached to this unit instead."
+        },
+        {
+          "name": "Enhanced data-tether",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Arc lance",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Alpha close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Arc lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Arc lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Lance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7774-a50b-cb1e-8372",
+      "name": "Secutarii Peltasts [Legends]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 50,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "invulnerableSave": "6+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Secutarii Peltasts",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SECUTARII PELTASTS",
+        "SKITARII",
+        "IMPERIUM"
+      ],
+      "abilities": [
+        {
+          "name": "Blind Barrage",
+          "description": "In your Shooting phase, after this unit has shot, select one enemy Infantry unit hit by one or more of those attacks. Until the start of your next turn, while this unit is on the  battlefield, that enemy unit is blinded. While a unit is blinded, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Secutarii",
+          "description": "If a model from your army with the Leader ability can be attached to a ^^**Skitarii Vanguard^^** unit, it can be attached to this unit instead."
+        },
+        {
+          "name": "Enhanced data-tether",
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Galvanic caster - flechette",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - hammershot",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - flechette",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - hammershot",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - flechette",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - hammershot",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - flechette",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Galvanic caster - hammershot",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Alpha close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3639-75ba-cab2-c159",
+      "name": "Terrax-Pattern Termite [Legends]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 200,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 14,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Terrax-pattern Termite",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "IMPERIUM",
+        "TRANSPORT",
+        "DEDICATED TRANSPORT",
+        "TERRAX-PATTERN TERMITE",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Damaged: 1-5 wounds remaining",
+          "description": "While this mdel has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Termite Assault",
+          "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models."
+        },
+        {
+          "name": "Deadly Demise",
+          "description": "D3"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Terrax melta cutter",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Combi bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Twin volkite charger",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Termite drill",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -2,
+          "damage": "D3+3",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a896-3e21-1319-c86",
+      "name": "X-101 [Legends]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 40,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "wounds": 3,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "X-101",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "IMPERIUM",
+        "CHARACTER",
+        "EPIC HERO",
+        "X-101",
+        "CULT MECHANICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Mindlock",
+          "description": "While a ^^**Tech-Priest^^** model is leading this model’s unit, improve the Ballistic Skill and Weapon Skill characteristics of this model’s weapons by 1."
+        },
+        {
+          "name": "Bound Creation",
+          "description": "While a ^^**Tech-Priest^^** model is leading this model’s unit, that ^^**Tech-Priest^^** model has the Feel No Pain 5+ ability."
+        },
+        {
+          "name": "Servitor Bodyguard",
+          "description": "At the start of the Declare Battle Formations step, this model can join one other unit from your army that is being led by a ^^**Tech-Priest Infantry^^** model. If it does, until the end of the battle, this model counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Grav-gun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Hydraulic Claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "52e7-9347-3f16-9eec",
+      "name": "Sydonian Skatros",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 45,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sydonian Skatros",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "IMPERIUM",
+        "SKITARII",
+        "SYDONIAN",
+        "FACTION: ADEPTUS MECHANICUS",
+        "CHARACTER",
+        "SKATROS"
+      ],
+      "abilities": [
+        {
+          "name": "Dread Snipers",
+          "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+        },
+        {
+          "name": "Sydonian Sentinel",
+          "description": "This model cannot be your ^^**Warlord^^**."
+        },
+        {
+          "name": "Achillan Eye",
+          "description": "Each time this model makes an attack with a radium jezzail that targets an Infantry unit, you can re-roll the Wound roll. Each time this model makes an attack with a Skatros transuranic arquebus that targets a Monster or Vehicle unit, you can re-roll the Wound roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Radium Jezzail",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision",
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Skatros transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Heavy",
+            "Precision",
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Sydonian Feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "d99a-6563-8c08-23c",
+      "name": "Sydonian Dragoons with radium jezzails",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 55,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sydonian Dragoons",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "SKITARII",
+        "VEHICLE",
+        "WALKER",
+        "SYDONIAN",
+        "DRAGOONS WITH RADIUM JEZZAILS",
+        "SMOKE"
+      ],
+      "abilities": [
+        {
+          "name": "Focused Hunters",
+          "description": "At the start of the battle, select one unit from your opponent’s army. Until the end of the battle, each time a model in this unit makes an attack that targets that unit, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Broad Spectrum Data-tether",
+          "description": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Radium jezzail",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Heavy",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2183-5b38-1726-2a11",
+      "name": "Servitors [Legends]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 50,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 1,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Servitors",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "IMPERIUM",
+        "CULT MECHANICUS",
+        "SERVITORS"
+      ],
+      "abilities": [
+        {
+          "name": "Mindlock",
+          "description": "While a TECH-PRIEST model is leading this unit, improve the Ballistic Skill and Weapon Skill characteristics of ranged and melee weapons equipped by SERVITOR models in this unit by 1."
+        },
+        {
+          "name": "Servitor Retinue",
+          "description": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a TECH-PRIEST ENGINSEER model (a unit cannot have more than one SERVITORS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "6+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "6+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - Standard",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "6+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - supercharge",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "6+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Heavy",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Servitor's servo arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "a523-606f-b05c-851e",
+      "name": "Servitor Battleclade",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 1,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Combat Servitor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Servitor Underseer",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "IMPERIUM",
+        "CULT MECHANICUS",
+        "SERVITOR BATTLECLADE"
+      ],
+      "abilities": [
+        {
+          "name": "Network Override",
+          "description": "While this unit contains one or more ^^**Tech-Priest^^** models, this unit is: \n- Eligible to perform an Action in a turn in which it Advanced. \n- Eligible to shoot in a turn in which it started an Action."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a ^^**Character^^** unit from your army with the Leader ability can be attached to a ^^**Kataphron Breachers^^** unit, it can be attached to this unit instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Heavy arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-VEHICLE 4+",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Incendine igniter",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Phosphor blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Dataspikes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "18e0-96d4-7d85-2b3b",
+      "name": "Magos [Crucible]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Magos",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "IMPERIUM",
+        "CULT MECHANICUS",
+        "MAGOS",
+        "TECH-PRIEST",
+        "CRUCIBLE"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ^^**Electro-Priests, Kataphrons, Skitarii Rangers, Skitarii Vanguard**^^"
+        },
+        {
+          "name": "Technoarcane Zealotry",
+          "description": "While this model's unit is in range of one or more objective markers, improve this model's Leadership characteristic by 1."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "7d17-4620-8dbf-4ef6",
+      "name": "Cohort Commander [Crucible]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 45,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cohort Commander",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "IMPERIUM",
+        "CRUCIBLE",
+        "SKITARII",
+        "MARSHAL",
+        "COHORT COMMANDER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ^^**Skitarii Rangers, Skitarii Vanguard**^^"
+        },
+        {
+          "name": "Prioritisation Protocol",
+          "description": "Melee weapons equipped by this model have [^^Precision^^]."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "6b3e-11ad-7a9d-ca5d",
+      "name": "Ironstrider Alpha [Crucible]",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ironstrider Alpha",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "CRUCIBLE",
+        "SKITARII",
+        "VEHICLE",
+        "WALKER",
+        "SMOKE",
+        "IRONSTRIDER ALPHA"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ^^**Ironstrider Ballistarii, Sydonian Dragoons with Taser Lances, Sydonian Dragoons with Radium Jezzails**^^"
+        },
+        {
+          "name": "Vector of the Omnissiah's Wrath",
+          "description": "Ranged weapons equipped by this model have [^^Ignores Cover^^]."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "7135-8430-eb02-ded4",
+      "name": "Thulia Ghuld",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 180,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 8,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 10,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Thulia Ghuld",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "MONSTER",
+        "CHARACTER",
+        "TECH-PRIEST",
+        "FACTION: ADEPTUS MECHANICUS",
+        "IMPERIUM",
+        "CULT MECHANICUS",
+        "THULIA GHULD",
+        "MOBILE"
+      ],
+      "abilities": [
+        {
+          "name": "Icon of War",
+          "description": "**Fanatical Devotion:** You can select one friendly **^^Skitarii^^** or **^^Thulia Ghuld^^** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n\n**Adaptive Tactics:** You can select one friendly **^^Skitarii^^** or **^^Thulia Ghuld^^** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n\n**The Fires of Mars:** You can select one friendly **^^Skitarii^^** or **^^Thulia Ghuld^^** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit."
+        },
+        {
+          "name": "Mechanicus Bodyguard",
+          "description": "While this model is within 3\" of one or more other friendly ^^**Adeptus Mechanicus**^^ units, this model has the Lone Operative ability."
+        },
+        {
+          "name": "Secutor of Olympus",
+          "description": "At the start of your Shooting phase, select one enemy **^^Vehicle^^** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds."
+        },
+        {
+          "name": "Supreme Commander",
+          "description": "If this model is in your army, it must be your **^^Warlord^^**."
+        },
+        {
+          "name": "Rod of the War Forge",
+          "description": "In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Jericho-class conversion resonator - shockwave",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6+2",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Jericho-class conversion resonator - titanic impact",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Rod of the War Forge - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rod of the War Forge - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "52d3-71a9-f755-d6aa",
+      "name": "Hastarii Exterminators",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 100,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Hastarii Exterminator Alpha",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Hastarii Exterminators",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "SKITARII",
+        "HASTARII",
+        "EXTERMINATORS"
+      ],
+      "abilities": [
+        {
+          "name": "Attached Unit",
+          "description": "If a **^^Character^^** unit from your army can be attached to a **^^Skitarii Rangers^^** unit, it can be attached to this unit instead"
+        },
+        {
+          "name": "Broad‑spectrum Targeting Augurs",
+          "description": "Each time a model in this unit makes an attack with an eradication caster that targets a unit (excluding **^^Monster^^** and **^^Vehicle^^** units), that attack has the **[SUSTAINED HITS 1]** ability."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "d653-1ac3-d944-224f",
+      "name": "Hastarii Fusiliers",
+      "factionId": "imperium-adeptus-mechanicus",
+      "factionName": "Adeptus Mechanicus",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 105,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Hastarii Fusilier Alpha",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Hastarii Fusilier",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "FACTION: ADEPTUS MECHANICUS",
+        "INFANTRY",
+        "SKITARII",
+        "HASTARII",
+        "FUSILIERS"
+      ],
+      "abilities": [
+        {
+          "name": "Attached Unit",
+          "description": "If a **^^Character^^** unit from your army can be attached to a **^^Skitarii Rangers^^** unit, it can be attached to this unit instead"
+        },
+        {
+          "name": "Monocular Targeting Helms",
+          "description": "Each time a model in this unit makes an attack with a neutron fusil against a **^^Monster^^** or **^^Vehicle^^** unit, that attack has the **[IGNORES COVER]** ability."
+        }
+      ],
+      "weapons": []
+    }
+  ]
+}

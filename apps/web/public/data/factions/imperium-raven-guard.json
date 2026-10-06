@@ -1,0 +1,255 @@
+{
+  "id": "imperium-raven-guard",
+  "name": "Adeptus Astartes - Raven Guard",
+  "sourceFile": "Imperium - Raven Guard.json",
+  "totalDatasheets": 2,
+  "detachments": [],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "339f-9776-243d-69a6",
+      "name": "Kayvaan Shrike",
+      "factionId": "imperium-raven-guard",
+      "factionName": "Adeptus Astartes - Raven Guard",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kayvaan Shrike",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "IMPERIUM",
+        "FLY",
+        "JUMP PACK",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: RAVEN GUARD",
+        "CHAPTER MASTER",
+        "KAYVAAN SHRIKE",
+        "PHOBOS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Trifold Path of Shadow",
+          "description": "While this model is leading a unit, models  in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\"."
+        },
+        {
+          "name": "Echo of the Ravenspire",
+          "description": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSORS WITH JUMP PACKS\n■ VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        },
+        {
+          "name": "Inspiring Commander",
+          "description": "If you include this model in your army, until the end of the battle, non-Character models in Assault\nIntercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Blackout",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "The Raven's Talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision",
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cbb9-15e9-16ae-6597",
+      "name": "Aethon Shaan",
+      "factionId": "imperium-raven-guard",
+      "factionName": "Adeptus Astartes - Raven Guard",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Aethon Shaan",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "FLY",
+        "JUMP PACK",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: RAVEN GUARD",
+        "TACTICUS",
+        "CHAPTER MASTER",
+        "AETHON SHAAN",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Chapter Master of the Raven Guard",
+          "description": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan\nShrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it\nreplaces its Chapter Master keyword with Captain."
+        },
+        {
+          "name": "Master of Shadows",
+          "description": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible)."
+        },
+        {
+          "name": "Blackwing Mantle",
+          "description": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP,\neven if you have already used that Stratagem on a different unit this phase."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Claws of Severax",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2",
+            "Twin-linked"
+          ]
+        }
+      ]
+    }
+  ]
+}

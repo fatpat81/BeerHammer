@@ -1,0 +1,262 @@
+{
+  "id": "imperium-white-scars",
+  "name": "Adeptus Astartes - White Scars",
+  "sourceFile": "Imperium - White Scars.json",
+  "totalDatasheets": 2,
+  "detachments": [],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "63f3-6aeb-c9ed-abfc",
+      "name": "Kor'sarro Khan",
+      "factionId": "imperium-white-scars",
+      "factionName": "Adeptus Astartes - White Scars",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 55,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kor'sarro Khan",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "CAPTAIN",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: WHITE SCARS",
+        "KOR'SARRO KHAN",
+        "TACTICUS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "For the Khan!",
+          "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "name": "Trophy Taker",
+          "description": "Each time this model destroys an enemy Character model, you gain 1CP"
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
+        },
+        {
+          "name": "Inspiring Commander",
+          "description": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Moonfang",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d72d-b930-9849-924e",
+      "name": "Suboden Khan",
+      "factionId": "imperium-white-scars",
+      "factionName": "Adeptus Astartes - White Scars",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 90,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 8,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Suboden Khan",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MOUNTED",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "GRENADES",
+        "CAPTAIN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: WHITE SCARS",
+        "SUBODEN KHAN",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Spear of Chogoris",
+          "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead."
+        },
+        {
+          "name": "Skilled Riders",
+          "description": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: BIKE SQUAD, COMPANY VETERANS ON BIKES, OUTRIDER SQUAD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Onslaught Gatling Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Stormtooth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Anti-monster 4+",
+            "Anti-vehicle 4+"
+          ]
+        },
+        {
+          "name": "Power Sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    }
+  ]
+}

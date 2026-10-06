@@ -1,0 +1,1462 @@
+{
+  "id": "imperium-ultramarines",
+  "name": "Adeptus Astartes - Ultramarines",
+  "sourceFile": "Imperium - Ultramarines.json",
+  "totalDatasheets": 16,
+  "detachments": [],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "2ae8-40ec-ba34-dfe5",
+      "name": "Captain Sicarius",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Captain Sicarius",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "CAPTAIN",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "SICARIUS"
+      ],
+      "abilities": [
+        {
+          "name": "Lead From the Front",
+          "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability and ranged weapons equipped by models in that unit have the [ASSAULT] ability."
+        },
+        {
+          "name": "Knight Champion of Macragge",
+          "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Artisan Plasma Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Talassarian Tempest Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b180-3cac-9124-b818",
+      "name": "Chaplain Cassius [Legends]",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "5+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Chaplain Cassius",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "CHAPLAIN CASSIUS",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Catechism of Death",
+          "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+          "name": "Inspired Retribution",
+          "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Command Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad\n■ Tyrannic War Veterans\n■ Vanguard Veteran Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Infernus",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Artificer Crozius",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3ef1-1647-cd7b-a40b",
+      "name": "Chief Librarian Tigurius",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Chief Librarian Tigurius",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "IMPERIUM",
+        "PSYKER",
+        "CHIEF LIBRARIAN TIGURIUS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Hood of Hellfire",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "name": "Master of Prescience (Psychic)",
+          "description": "▪ This unit has Stealth.\n▪ Melee attacks that target this unit have ‑1 to hit rolls.\n▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, DEVASTATOR SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Storm of the Emperor’s Wrath - Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Storm of the Emperor’s Wrath - Focused Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Rod of Tigurius",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5380-5757-2c46-31cc",
+      "name": "Marneus Calgar",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 200,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 6,
+        "save": "2+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Marneus Calgar",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Victrix Honour Guard",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "INFANTRY"
+      ],
+      "abilities": [
+        {
+          "name": "Inspiring Leader",
+          "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+        },
+        {
+          "name": "Master Tactician",
+          "description": "At the start of your Command phase, if this unit’s Marneus Calgar model is your WARLORD and is on the battlefield, you gain 1CP."
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "description": "While this unit contains one or more Victrix Honour Guard models, this unit’s Marneus Calgar model has the Feel No Pain 4+ ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This unit can be attached to the following units:\n\n■ Aggressor Squad\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Eradicator Squad\n■ Heavy Intercessor Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Gauntlets of Ultramar",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Gauntlets of Ultramar",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Victrix Power Sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4aea-b1cc-6c69-1c44",
+      "name": "Roboute Guilliman",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 355,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 10,
+        "leadership": "5+",
+        "objectiveControl": 4
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Roboute Guilliman",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "IMPERIUM",
+        "PRIMARCH",
+        "ROBOUTE GUILLIMAN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "MONSTER",
+        "MOBILE"
+      ],
+      "abilities": [
+        {
+          "name": "Author of the Codex",
+          "description": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.’\n\nPrimarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit.\n\nMaster of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one.\n\nSupreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        },
+        {
+          "name": "Ultramarines Bodyguard",
+          "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability"
+        },
+        {
+          "name": "Armour of Fate",
+          "description": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining."
+        },
+        {
+          "name": "Supreme Commander",
+          "description": "If this model is in your army, it must be your Warlord."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Hand of Dominion",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hand of Dominion",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "4",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "The Emperor's Sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2263-82ee-3db6-8be9",
+      "name": "Sergeant Chronus [Legends]",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sergeant Chronus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "SERGEANT CHRONUS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES"
+      ],
+      "abilities": [
+        {
+          "name": "Tank Commander",
+          "description": "While this model is commanding a Vehicle model (see reverse):\n\n■ Ranged weapons equipped by that Vehicle model have a Ballistic Skill characteristic of 2+.\n■ Each time that Vehicle model is selected to shoot, you can re-roll one Wound roll when resolving those attacks.\n\nIf your army includes one or more of the Vehicle models listed below, Sergeant Chronus must start the battle embarked within one of those models as if it were a Transport. Sergeant Chronus can only disembark from that Vehicle if it is destroyed. While embarked in this way, Sergeant Chronus is said to be commanding that Vehicle.\n\n■ Hunter\n■ Land Raider\n■ Land Raider Crusader\n■ Land Raider Redeemer\n■ Predator Annihilator\n■ Predator Destructor\n■ Stalker\n■ Vindicator\n■ Whirlwind"
+        },
+        {
+          "name": "Chronus",
+          "description": "When this model disembarks from a Vehicle model it was commanding, it has the Lone Operative ability until the end of the battle."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Chronus' Servo-Arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "696a-899e-514b-4a04",
+      "name": "Sergeant Telion [Legends]",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "4+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sergeant Telion",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "IMPERIUM",
+        "SERGEANT TELION",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Voice of Experience",
+          "description": "While this model is leading a unit, improve the Objective Control characteristic of models in that unit by 1 and each time a model in that unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "name": "Guiding Hand",
+          "description": "While this model is leading a unit, each time that unit is selected to shoot or fight, select one of the following abilities to apply to weapons equipped by models in that unit until the end of the phase:\n\n\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]"
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Scout Squad\n■ Scout Sniper Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Quietus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Combat Knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "8770-b0eb-f430-1dda",
+      "name": "Tyrannic War Veterans [Legends]",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tyrannic War Veterans",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Veteran Sergeant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "TYRANNIC WAR VETERANS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES"
+      ],
+      "abilities": [
+        {
+          "name": "Tyrannic War Veterans",
+          "description": "Weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability when targeting Tyranids units."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Bolt Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+"
+          ]
+        },
+        {
+          "name": "Bolt Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Tyranids 4+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "169a-7229-ea50-1c4f",
+      "name": "Uriel Ventris",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 105,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Uriel Ventris",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "URIEL VENTRIS",
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "CAPTAIN",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "TACTICUS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Unorthodox Strategist [Aura]",
+          "description": "Each time your opponent targets a unit from their army with a  stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem)."
+        },
+        {
+          "name": "Master of the Fleet",
+          "description": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army.  That unit gains the Deep Strike ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Invictus",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Sword of Idaeus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f4a3-1616-2f8e-59a3",
+      "name": "Ultramarines Honour Guard [Legends]",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 155,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ultramarines Honor Guard",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Ultramarines Honor Guard",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Ultramarines Honor Guard",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "HONOR GUARD",
+        "FACTION: ULTRAMARINES",
+        "FACTION: ADEPTUS ASTARTES"
+      ],
+      "abilities": [
+        {
+          "name": "Honour Guard",
+          "description": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "description": "MARNEUS CALGAR can be attached to this unit. If a CAPTAIN model from your army with the Leader ability can be attached to a COMMAND SQUAD, it can be attached to this unit instead."
+        },
+        {
+          "name": "Astartes Banner",
+          "description": "While this unit contains a Company Ancient, add 1 to the Objective Control characteristic of models in this unit."
+        },
+        {
+          "name": "Honour or Death",
+          "description": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic  Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "b07a-c1e9-24e5-09ee",
+      "name": "Lieutenant Titus",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Lieutenant Titus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "IMPERIUM",
+        "GRENADES",
+        "EPIC HERO",
+        "LIEUTENANT",
+        "TITUS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "TACTICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Press the Attack",
+          "description": ": Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "name": "Honour of the Chapter",
+          "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Astartes Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a136-76f7-34d1-8035",
+      "name": "Marneus Calgar in Armour of Antilochus",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 155,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 6,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Marneus Calgar in Armour of Antilochus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "IMPERIUM",
+        "TERMINATOR",
+        "CHAPTER MASTER",
+        "MARNEUS CALGAR",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Inspiring Leader",
+          "description": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+        },
+        {
+          "name": "Master Tactician",
+          "description": "At the start of your Command phase, if this unit’s Marneus Calgar model is your ^^**Warlord**^^ and is on the battlefield, you gain 1CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, ERADICATOR SQUAD STERNGUARD VETERAN SQUAD TERMINATOR SQUAD, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, RELIC TERMINATOR SQUAD, TACTICAL SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Gauntlets of Ultramar",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Gauntlets of Ultramar",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b014-911d-271a-5b8e",
+      "name": "Cato Sicarius",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 105,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cato Sicarius",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "CAPTAIN",
+        "IMPERIUM",
+        "TACTICUS",
+        "SICARIUS",
+        "CATO",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Knight Champion of Macragge",
+          "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+        },
+        {
+          "name": "Honour or Death",
+          "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used\nthat Stratagem on a different unit this phase."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: \n\n\n■ VICTRIX HONOUR GUARD\n\n\nYou can attach this model to the above unit even if a Marneus Calgar unit has already been attached\nto it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate\nunits, with their original Starting Strengths"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Artisan Plasma Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Talassarian Tempest Blade - Strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Talassarian Tempest Blade - Coup de Grace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Talassarian Tempest Blade - Sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9b89-f132-4fef-8e51",
+      "name": "Victrix Honour Guard",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 110,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Victrix Honour Guard",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "IMPERIUM",
+        "TACTICUS",
+        "FACTION: ULTRAMARINES",
+        "VICTRIX HONOUR GUARD",
+        "FACTION: ADEPTUS ASTARTES"
+      ],
+      "abilities": [
+        {
+          "name": "Ultramarines Honour Guard",
+          "description": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll"
+        },
+        {
+          "name": "Glory of Ultramar",
+          "description": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit\nwere destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be\nmoved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle‑shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a Captain or Chapter Master unit from your army can be attached to a Company Heroes unit, it can\nbe attached to this unit instead."
+        },
+        {
+          "name": "Banner of Macragge",
+          "description": "Once per battle, at the start of the Fight phase, the bearer can use this ability. If it does, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in the bearer’s unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Master-crafted Bolt Carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Blades of Honour",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision",
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "596f-dbdc-41e7-088a",
+      "name": "Captain Titus",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Captain Titus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TITUS",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "TACTICUS",
+        "GRENADES",
+        "CAPTAIN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Press the Attack",
+          "description": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability"
+        },
+        {
+          "name": "Honour of Ultramar",
+          "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: \n\n■ ASSAULT INTERCESSOR SQUAD\n■ ASSAULT SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ COMMAND SQUAD\n■ COMPANY HEROES\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ VANGUARD VETERAN SQUAD\n■ VICTRIX HONOUR GUARD\n■ WARDENS OF ULTRAMAR"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Master-crafted Bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Master-crafted Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 2+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b793-b77e-9e49-d397",
+      "name": "Wardens of Ultramar",
+      "factionId": "imperium-ultramarines",
+      "factionName": "Adeptus Astartes - Ultramarines",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 120,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ancient Gadriel, Veteran Sergeant Metaurus",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "EPIC HERO",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: ULTRAMARINES",
+        "WARDENS OF ULTRAMAR",
+        "SUPPORT"
+      ],
+      "abilities": [
+        {
+          "name": "Second Company Banner",
+          "description": "While this unit contains Ancient Gadriel, add 1 to the Objective Control characteristic of models in this unit. While this unit contains Ancient Gadriel and Captain Titus, improve the Leadership characteristic of models in this unit by 1 as well."
+        },
+        {
+          "name": "Strategium Command",
+          "description": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it\nis embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+        },
+        {
+          "name": "Storm Shield",
+          "description": "The bearer has a 4+ Invulnerable save."
+        },
+        {
+          "name": "Refractor Field",
+          "description": "The bearer has a 5+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Astropathic Blast",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Force Stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5191 @@
+{
+  "id": "imperium-agents-of-the-imperium",
+  "name": "Agents of the Imperium",
+  "sourceFile": "Imperium - Agents of the Imperium.json",
+  "totalDatasheets": 50,
+  "detachments": [
+    {
+      "name": "Detachment",
+      "id": "1162-9cd5-d6b0-1663",
+      "rules": [
+        "Deathwatch Mission Tactics",
+        "Root Out Heresy",
+        "Destroy the Daemonic",
+        "At All Costs",
+        "Extremis Sanction"
+      ]
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "efa3-2cf5-dcfb-b976",
+      "name": "Vindicare Assassin",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 110,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Vindicare Assassin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "SMOKE",
+        "IMPERIUM",
+        "VINDICARE ASSASSIN",
+        "OFFICIO ASSASSINORUM"
+      ],
+      "abilities": [
+        {
+          "name": "Shieldbreaker",
+          "description": "Once per battle, when selecting targets for this model’s exitus rifle, it can fire a shieldbreaker round. If it does, until the end of the phase, each time this model makes an attack with that weapon, add 1 to the Wound roll and any successful Wound roll scores a Critical Wound."
+        },
+        {
+          "name": "Dead-shot",
+          "description": "When this unit is **selected to shoot**, until this unit has shot: \n- Enemy units do not have Lone Operative. \n- Hidden enemy units have +15\" detection range.'"
+        },
+        {
+          "name": "Micromelta Rounds",
+          "description": "This model’s exitus rifle has the [ANTI‑MONSTER 4+] and [ANTI‑VEHICLE 4+] abilities."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Exitus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Ignores Cover",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Exitus rifle",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3+3",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy",
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Vindicare combat knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "5e5e-d6b2-6a1c-aa69",
+      "name": "Culexus Assassin",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 85,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Culexus Assassin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "GRENADES",
+        "IMPERIUM",
+        "CULEXUS ASSASSIN",
+        "OFFICIO ASSASSINORUM"
+      ],
+      "abilities": [
+        {
+          "name": "Abomination",
+          "description": "This model has the Feel No Pain 2+ ability against Psychic Attacks."
+        },
+        {
+          "name": "Soulless Horror",
+          "description": "Once per battle, at the start of any Command phase, this model can use this ability. If it does, each enemy unit within 9\" of this model must take a Battle-shock test, subtracting 1 from that test (or subtracting 2 if that unit is a PSYKER)."
+        },
+        {
+          "name": "Etheric Emergence",
+          "description": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an etheric emergence. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge."
+        },
+        {
+          "name": "Esoteric Explosives",
+          "description": "Each time this model is targeted with the Grenades Stratagem, 1 mortal wound is inflicted for each D6 roll of 3+ instead of for each 4+"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Animus speculum",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Anti-PSYKER 2+",
+            "Assault",
+            "Precision",
+            "Psychic Assassin"
+          ]
+        },
+        {
+          "name": "Life-draining touch",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-PSYKER 2+",
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f201-1f4a-b907-d9d1",
+      "name": "Eversor Assassin",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "9\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Eversor Assassin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "GRENADES",
+        "IMPERIUM",
+        "EVERSOR ASSASSIN",
+        "OFFICIO ASSASSINORUM"
+      ],
+      "abilities": [
+        {
+          "name": "Frenzon",
+          "description": "This model is eligible to shoot and declare a charge in a turn in which it Advanced."
+        },
+        {
+          "name": "Overkill",
+          "description": "Once per battle, in your Movement phase, this model can use this ability before it makes a Normal move. If it does, until the end of the turn, add 6\" to this model's Movement characteristic and add 3 to the Attacks characteristic of this model's melee weapons."
+        },
+        {
+          "name": "Intra-neural Biotech",
+          "description": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Executioner pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-INFANTRY 3+",
+            "Pistol",
+            "Precision",
+            "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "Power sword and neuro gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-INFANTRY 3+",
+            "Precision",
+            "Sustained Hits 3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1cfe-be05-5603-133",
+      "name": "Callidus Assassin",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Callidus Assassin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "CALLIDUS ASSASSIN",
+        "OFFICIO ASSASSINORUM"
+      ],
+      "abilities": [
+        {
+          "name": "Reign of Confusion",
+          "description": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a **stratagem**, this model can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+        },
+        {
+          "name": "Acrobatic Escape",
+          "description": "- At the end of the Fight phase, if this unit is engaged, this unit can make a fall-back move of up to D6\". \n- At the end of your opponent’s turn, if this unit is more than 3\" from all enemy units, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit must make an ingress move in your next Movement phase (including in your first turn)."
+        },
+        {
+          "name": "Decoy Targets",
+          "description": "Twice per battle, in your Movement phase, you can select one other friendly INFANTRY model that is on the battlefield and not within Engagement Range of one or more enemy units. The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and this model is removed from the battlefield and set up again as close as possible to where that destroyed model was and not within Engagement Range of one or more enemy units. This ability cannot be used more than once in the same battle round."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Neural shredder",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-INFANTRY 2+",
+            "Precision",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Phase sword and poison blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -4,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9360-d8b2-cd92-9e7f",
+      "name": "Rogue Trader Entourage",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Rogue Trader",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Death Cult Assassin",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Lectro-maester",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Rejuvenant Adept",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "ROGUE TRADER ENTOURAGE",
+        "VOIDFARERS",
+        "VOIDFARER CHARACTER",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Backroom Deals",
+          "description": "If your army contains one or more units with this ability, during the Declare Battle Formations step, select one of those units. While the selected unit is leading a unit, models in that unit have the Infiltrators ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        },
+        {
+          "name": "Warrant of Trade",
+          "description": "If your army contains one or more models with this ability, after both players have deployed their armies, select up to D3 IMPERIUM BATTLELINE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserve, regardless of how many units are already in Strategic Reserve."
+        },
+        {
+          "name": "Healing Serum",
+          "description": "At the start of your Command phase, if the bearer's unit is below its Starting Strength, you can return up to D3 destroyed models (excluding CHARACTERS) to the bearer's unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Household pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Pistol",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Dartmask",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-INFANTRY 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Voltaic pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Monomolecular cane-rapier",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death Cult power blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3953-4e12-fe7b-97e9",
+      "name": "Voidsmen-at-Arms",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 50,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Voidsmen-at-Arms",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "RETINUE",
+        "VOIDSMEN-AT-ARMS",
+        "VOIDFARERS"
+      ],
+      "abilities": [
+        {
+          "name": "Masters of Close Confines",
+          "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, that attack has the [LETHAL HITS] ability."
+        },
+        {
+          "name": "Navy Bodyguards",
+          "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each VOIDFARERS CHARACTER unit you include in your army, you can include one VOIDSMEN-AT-ARMS unit in your army that does not count towards the number of RETINUE units your army can include."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Artificer shotgun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Lasgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Voidsman rotor cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Vicious bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "6db9-cede-3810-f1f0",
+      "name": "Subductor Squad",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Subductor Squad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "RETINUE",
+        "SUBDUCTOR SQUAD",
+        "ADEPTUS ARBITES"
+      ],
+      "abilities": [
+        {
+          "name": "Dedication to Duty",
+          "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "ec63-524d-55a-3065",
+      "name": "Exaction Squad",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 90,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Exaction Squad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "RETINUE",
+        "EXACTION SQUAD",
+        "ADEPTUS ARBITES"
+      ],
+      "abilities": [
+        {
+          "name": "Imperial Law",
+          "description": "At the start of the battle, select one unit from your opponent's army. Each time a model in this unit makes an attack that targets that unit, that attack has the [Lethal Hits] and [Precision] abilities."
+        },
+        {
+          "name": "Arbites medi-kit",
+          "description": "At the start of your Command phase, if the bearer's unit is below its Starting Strength, you can return up to D3 destroyed Exaction Vigilants to this unit."
+        },
+        {
+          "name": "Soulguilt scanner",
+          "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Arbites grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Executioner shotgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "d44c-5cde-cb79-3ec3",
+      "name": "Vigilant Squad",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "BATTLELINE",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Vigilant Squad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "BATTLELINE",
+        "GRENADES",
+        "IMPERIUM",
+        "RETINUE",
+        "VIGILANT SQUAD",
+        "ADEPTUS ARBITES"
+      ],
+      "abilities": [
+        {
+          "name": "Merciless Judgement",
+          "description": "Each time a model in this unit makes a ranged attack that targets a unit that is Below Half-strength, add 1 to the Wound roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Arbites grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Executioner shotgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f3a6-de9-584e-c394",
+      "name": "Inquisitor Draxus",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Draxus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "PSYKER",
+        "GRENADES",
+        "IMPERIUM",
+        "INQUISITOR",
+        "DRAXUS",
+        "ORDO XENOS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Xenos Hunter",
+          "description": "While this model is leading a unit, each time a model in that unit makes an attack that targets an enemy unit that does not have the IMPERIUM or CHAOS keywords, add 1 to the Hit roll."
+        },
+        {
+          "name": "Psychic Veil (Psychic)",
+          "description": "In your Command phase, this PSYKER can use this ability. If it does, roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the start of your next Command phase, this PSYKER’s unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: AQUILA KILL TEAM,  BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Dirgesinger",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Assault",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Psychic Tempest",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "264a-fc24-3a98-31dc",
+      "name": "Inquisitor Coteaz",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Coteaz",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "PSYKER",
+        "IMPERIUM",
+        "INQUISITOR",
+        "COTEAZ",
+        "ORDO MALLEUS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Malefic Wardings (Psychic)",
+          "description": "While this model is leading a unit, models in that unit have a 6+ invulnerable save, and 4+ invulnerable save against Psychic Attacks and attacks made by DAEMON models."
+        },
+        {
+          "name": "Spy Network",
+          "description": "Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
+          "name": "Glovodan Psyber-eagle",
+          "description": "In your Command phase, you can select one enemy unit within 18\" of the bearer. Until the start of your next Command phase, that unit cannot have the Benefit of Cover."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Psychic Blast",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-DAEMON 4+",
+            "Anti-INFANTRY 5+",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Nemesis daemon hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6e0e-b9a2-f53d-ad0e",
+      "name": "Inquisitor Greyfax",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 65,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Greyfax",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "PSYKER",
+        "GRENADES",
+        "IMPERIUM",
+        "INQUISITOR",
+        "GREYFAX",
+        "ORDO HERETICUS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Psyoculum",
+          "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ANTI-PSYKER 4+] ability."
+        },
+        {
+          "name": "No Mercy",
+          "description": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SANCTIFIERS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Castigation",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-CHARACTER 4+",
+            "Devastating Wounds",
+            "Precision",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Condemnor stake",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-PSYKER 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Master-crafted power sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4349-390e-e183-f0b",
+      "name": "Inquisitor Karamazov [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 140,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 10,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Karamazov",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "VEHICLE",
+        "WALKER",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "INQUISITOR",
+        "KARAMAZOV",
+        "ORDO HERETICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Unsubtle Crusader",
+          "description": "At the start of the Declare Battle Formations step, you can select up to 3 ^^**Agents of the Imperium Infantry^^** units from your army, or one ^^**Imperium Battleline^^** unit from your army - those units gain the Scouts 6\" ability."
+        },
+        {
+          "name": "Throne of Judgement (Aura)",
+          "description": "While a friendly unit is within 6\" of this model, improve the Leadership characteristic of models in that unit by 1. While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Master-crafted multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Master-crafted power sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3e57-b15c-5580-1de1",
+      "name": "Inquisitor",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 55,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "INQUISITOR",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: AQUILA KILL TEAM, BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SANCTIFIERS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
+          "name": "Blessed Wardings",
+          "description": "While this model is leading a unit, models in that unit have a 6+ invulnerable save."
+        },
+        {
+          "name": "Psychic gifts",
+          "description": "The bearer has the PSYKER keyword."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Psychic Shock Wave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Inquisitorial melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4d2-5f39-6a24-60ab",
+      "name": "Inquisitor Eisenhorn [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 65,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Eisenhorn",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "PSYKER",
+        "GRENADES",
+        "IMPERIUM",
+        "INQUISITOR",
+        "EISENHORN",
+        "ORDO XENOS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: DAEMONHOST, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, EXACTION SQUAD, FORTIS KILL TEAM, IMPERIAL NAVY BREACHERS, INDOMITOR KILL TEAM, INQUISITORIAL AGENTS, PROTEUS KILL TEAM, SPECTRUS KILL TEAM, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
+          "name": "Malus Codicium",
+          "description": "While this model is leading a unit, double the Attacks characteristic of weapons equipped by Daemonhost models in that unit."
+        },
+        {
+          "name": "Dominate Will (Psychic)",
+          "description": "At the start of your opponent’s Shooting phase, select one enemy INFANTRY unit that is within 12\" of and visible to this model and roll one D6: on a 1, this model suffers D3 mortal wounds; on a 2-5, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; on a 6, until the end of the phase, that unit is not eligible to shoot."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Artificer bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Mind Assault",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision",
+            "Psychic",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Runestaff and Barbarisater",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4f74-c65c-3a56-41d6",
+      "name": "UR-025 [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 55,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 5,
+        "save": "3+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "UR-025",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "UR-025"
+      ],
+      "abilities": [
+        {
+          "name": "Self Repair",
+          "description": "At the start of your Command phase, this model regains 1 lost wound."
+        },
+        {
+          "name": "Evade and Survive",
+          "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model is not within Engagement Range of one or more enemy units, it can make a Normal move."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Mk 1 assault weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Power claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "c50a-8-694-6fa6",
+      "name": "Neyam Shai Murad [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 40,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Neyam Shai Murad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "GRENADES",
+        "IMPERIUM",
+        "NEYAM SHAI MURAD",
+        "VOIDFARERS",
+        "VOIDFARER CHARACTER",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Negotiator pistols",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "a8a5-f886-c09e-a6f2",
+      "name": "Janus Draik [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 40,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Janus Draik",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "EPIC HERO",
+        "GRENADES",
+        "IMPERIUM",
+        "JANUS DRAIK",
+        "VOIDFARER CHARACTER",
+        "VOIDFARERS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heirloom pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Monomolecular rapier",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bbbf-a0fb-d032-3a61",
+      "name": "Damned Legionnaires [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 90,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Damned Legionnaires",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "DAMNED LEGIONAIRES",
+        "RETINUE"
+      ],
+      "abilities": [
+        {
+          "name": "Grim Spectres",
+          "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test, subtracting 1 from the result when doing so."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c29e-e398-9588-7f30",
+      "name": "Inquisitor in Terminator Armour [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor in Terminator Armour",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "TERMINATOR",
+        "IMPERIUM",
+        "INQUISITOR",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, EXACTION SQUAD, FORTIS KILL TEAM, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INDOMITOR KILL TEAM, INQUISITORIAL AGENTS, PROTEUS KILL TEAM, SISTERS OF BATTLE SQUAD, SPECTRUS KILL TEAM, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
+          "name": "Psychic Gifts",
+          "description": "The bearer has the PSYKER keyword."
+        },
+        {
+          "name": "Blessed Wardings",
+          "description": "While this model is leading a unit, models in that unit have a 6+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Psychic shock wave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Psycannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inquisitorial melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "55cf-8d86-affd-bc9b",
+      "name": "Navigator",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "invulnerableSave": "4+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Navigator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "PSYKER",
+        "IMPERIUM",
+        "VOIDFARERS",
+        "NAVIGATOR",
+        "VOIDFARER CHARACTER",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Third Eye (Psychic)",
+          "description": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit; if the test is failed, that enemy unit suffers 3 mortal wounds."
+        },
+        {
+          "name": "Gaze into the Empyrean (Psychic)",
+          "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Force-orb cane",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7554-37de-cd68-68a7",
+      "name": "Ministorum Priest",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 40,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ministorum Priest",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "IMPERIUM",
+        "ORDO HERETICUS",
+        "MINISTORUM PRIEST",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "SUPPORT"
+      ],
+      "abilities": [
+        {
+          "name": "Zealot",
+          "description": "Once per battle, in the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristics of melee weapons equipped by this model by 3."
+        },
+        {
+          "name": "Holy Hatred",
+          "description": "While this model is leading a unit, melee weapons equipped by that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SANCTIFIERS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Holy Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Zealot's vindictor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Zealot's vindictor",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4469-7239-717e-9abd",
+      "name": "Inquisitorial Agents",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 50,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitorial Agents",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "RETINUE",
+        "INQUISITORIAL AGENTS",
+        "FACTION: AGENTS OF THE IMPERIUM"
+      ],
+      "abilities": [
+        {
+          "name": "Loyal Henchmen",
+          "description": "While an INQUISITOR model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+        },
+        {
+          "name": "Inquisitorial Henchmen",
+          "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each INQUISITOR unit you include in your army, you can include one INQUISITORIAL AGENTS unit in your army that does not count towards the number of RETINUE units your army can include."
+        },
+        {
+          "name": "Tome-skull",
+          "description": "Once per battle for each Tome-skull this unit is equipped with, at the start of any phase, you can select one other friendly AGENTS OF THE IMPERIUM unit that is Battle-shocked and within 6\" of this unit or one enemy unit within 6\" of this unit. If you select a friendly unit, that unit is no longer Battle-shocked. If you select an enemy unit, it must take a Battle-shock test."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - standard",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - supercharge",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Mystic stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15c0-9294-7eb8-f3a7",
+      "name": "Grey Knights Terminator Squad",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 175,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 6,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Grey Knights Terminator Squad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "PSYKER",
+        "TERMINATOR",
+        "GRENADES",
+        "IMPERIUM",
+        "ORDO MALLEUS",
+        "REQUISITIONED",
+        "GREY KNIGHTS TERMINATOR SQUAD"
+      ],
+      "abilities": [
+        {
+          "name": "Rites of Teleportation",
+          "description": "If one or more INQUISITOR units are attached to this unit during the Declare Battle Formations step, models in those units have the Deep Strike ability."
+        },
+        {
+          "name": "Hammerhand (Psychic)",
+          "description": "Each time this unit makes a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [LETHAL HITS] ability."
+        },
+        {
+          "name": "Narthecium",
+          "description": "In your Command phase, you can return 1 destroyed model (excluding CHARACTERS) to the bearer's unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Incinerator",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Psilencer",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Psycannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ede2-ae50-5f5b-cced",
+      "name": "Inquisitorial Chimera",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 60,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitorial Chimera",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "DEDICATED TRANSPORT",
+        "VEHICLE",
+        "SMOKE",
+        "TRANSPORT",
+        "IMPERIUM",
+        "INQUISITORIAL CHIMERA",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Rapid Deployment",
+          "description": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Lasgun array",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 6"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Multi-laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "cbbd-8e0a-fd90-fa0d",
+      "name": "Imperial Rhino",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 65,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 10,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Imperial Rhino",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "DEDICATED TRANSPORT",
+        "VEHICLE",
+        "SMOKE",
+        "TRANSPORT",
+        "IMPERIUM",
+        "IMPERIAL RHINO",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Self-repair",
+          "description": "At the start of your Command phase, this model regains 1 lost wound."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "73fc-a193-7da1-d9c4",
+      "name": "Sisters of Battle Squad",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 100,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sisters of Battle Squad",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "ORDO HERETICUS",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "SISTERS OF BATTLE SQUAD",
+        "REQUISITIONED"
+      ],
+      "abilities": [
+        {
+          "name": "Defenders of the Faith",
+          "description": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models in range of it, until your opponent controls it at the start or end of any turn."
+        },
+        {
+          "name": "Incensor Cherub",
+          "description": "Once per battle, you can target this unit with the Command Re-roll Stratagem for 0CP and can do so if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+          "name": "Simulacrum Imperialis",
+          "description": "Improve the Leadership characteristic of models in the bearer's unit by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "a5c9-2cb7-d874-8169",
+      "name": "Sisters of Battle Immolator",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 90,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 10,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Immolator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "DEDICATED TRANSPORT",
+        "VEHICLE",
+        "SMOKE",
+        "TRANSPORT",
+        "IMPERIUM",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "ORDO HERETICUS",
+        "SISTERS OF BATTLE IMMOLATOR",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Purge and Cleanse",
+          "description": "Each time this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Immolation flamers",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2",
+            "Twin-Linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fac5-a242-951a-e1b2",
+      "name": "Daemonhost [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 0,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "invulnerableSave": "5+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Daemonhost",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "IMPERIUM",
+        "PSYKER",
+        "RETINUE",
+        "DAEMON",
+        "DAEMONHOST"
+      ],
+      "abilities": [
+        {
+          "name": "Malefic Warding",
+          "description": "While an INQUISITOR model is leading a unit that contains one or more DAEMONHOST models, models in this unit have a 5+ invulnerable save."
+        },
+        {
+          "name": "Bound Daemon",
+          "description": "While an INQUISITOR model is leading a unit that includes one or more DAEMONHOST models, the Objective Control characteristic of DAEMONHOST models in that unit is 1."
+        },
+        {
+          "name": "Inquisitorial Retinue",
+          "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1. At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an INQUISITOR model (a unit cannot have more than one DAEMONHOST unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Unholy gaze",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Warp grasp",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits",
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bd54-3e9f-3f7d-ad5a",
+      "name": "Jokaero Weaponsmith [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 30,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "5+",
+        "invulnerableSave": "4+",
+        "wounds": 2,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Jokaero Weaponsmith",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "IMPERIUM",
+        "CHARACTER",
+        "JOKAERO WEAPONSMITH",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Inconceivable Augmentation",
+          "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: INQUISITORIAL AGENTS"
+        },
+        {
+          "name": "Inquisitorial Agent",
+          "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 JOKAERO WEAPONSMITH unit occuring in your army, increase the maximum number of CHARACTER units permitted in your army by 1."
+        },
+        {
+          "name": "A Weaponsmith, Not a Warlord",
+          "description": "This model cannot be selected to be your Warlord. While an INQUISITOR model is leading a unit that includes one or more JOKAERO WEAPONSMITH models, the Objective Control characteristic of JOKAERO WEAPONSMITH models in that unit is 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Jokaero weapons - focused",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Jokaero weapons - scattered",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "8b98-0ac7-a0ba-dedf",
+      "name": "Corvus Blackstar",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 180,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 14,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Corvus Blackstar",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FLY",
+        "VEHICLE",
+        "IMPERIUM",
+        "TRANSPORT",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "RETINUE",
+        "CORVUS BLACKSTAR",
+        "ORDO XENOS",
+        "DEATHWATCH",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Blackstar Cluster Launcher",
+          "description": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound."
+        },
+        {
+          "name": "Damaged: 1-5 Wounds Remaining",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Auspex Array",
+          "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+        },
+        {
+          "name": "Infernum Halo-launcher",
+          "description": "The bearer has the SMOKE keyword."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Hurricane bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 6",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin assault cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Blackstar rocket launcher",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Stormstrike missile launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "edce-f61c-8029-897f",
+      "name": "Fortis Kill Team [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 100,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Outrider",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "DEATHWATCH",
+        "FORTIS KILL TEAM"
+      ],
+      "abilities": [
+        {
+          "name": "Fortis Doctrines",
+          "description": "Each time a model in this unit makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a CHARACTER from your army with the Leader ability can be attached to an DEATHWATCH KILL TEAM, it can be attached to this unit instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Hand Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Twin Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c538-aaf0-5788-5c07",
+      "name": "Indomitor Kill Team [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 120,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 6,
+        "save": "3+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kill Team Heavy Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor w/ Heavy Bolter",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor w/ jump pack",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Heavy Intercessor w/ jump pack",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "INDOMITOR KILL TEAM",
+        "DEATHWATCH"
+      ],
+      "abilities": [
+        {
+          "name": "Indomitor Doctrines",
+          "description": "Each time a model in this unit makes an attack, add 1 to the Hit roll if this unit is below its Starting Strength, and add 1 to the Wound roll as well if this unit is Below Half-strength."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a CHARACTER unit from your army can be attached to a DEATHWATCH KILL TEAM, it can be attached to this unit instead."
+        },
+        {
+          "name": "Jump pack",
+          "description": "The bearer has a Move characteristic of 10\" and can move over models and terrain features as if they were not there."
+        },
+        {
+          "name": "Jump pack",
+          "description": "The bearer has a Move characteristic of 10\" and can move over models and terrain features as if they were not there."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy bolt rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Heavy Bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Flamestorm gauntlets",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6+1",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Auto boltstorm gauntlets",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Fragstorm grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Melta rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Assault bolters",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Sustained Hits 2",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "➤ Plasma exterminators - Standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "➤ Plasma exterminators - Supercharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Assault",
+            "Hazardous",
+            "Pistol",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Power fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Power fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "88af-6e47-7162-b1be",
+      "name": "Kill Team Cassius [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 220,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "5+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Chaplain Cassius",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Vael Donatus",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Zameon Gydrael",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Rodricus Grytt",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Antor Delassio",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Edryc Setorax",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Jensus Natorian",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Drenn Redblade",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Garran Branatar",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Ennox Sorrlock",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Jetek Suberei",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "KILL TEAM CASSIUS",
+        "DEATHWATCH",
+        "ORDO XENOS",
+        "KILL TEAM"
+      ],
+      "abilities": [
+        {
+          "name": "Catechism of Death",
+          "description": "While this unit contains Chaplain Cassius, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+          "name": "Unflinching",
+          "description": "You can re-roll Battle-shock tests for this unit."
+        },
+        {
+          "name": "Jump Pack",
+          "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain as if they were not there."
+        },
+        {
+          "name": "Jump Pack",
+          "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain as if they were not there."
+        },
+        {
+          "name": "Psychic Hood",
+          "description": "Models in the bearer’s unit have the Feel No Pain 4+ ability against Psychic Attacks."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Frag cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Heavy",
+            "Rapid Fire D3"
+          ]
+        },
+        {
+          "name": "Psychic Cleanse",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Deathwatch twin boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Artificer crozius",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin lightning claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4681-2af4-acf9-2bce",
+      "name": "Proteus Kill Team [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 160,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "3+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kill Team Biker",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Terminator",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Terminator",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Veteran w/ Jump Pack",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "PROTEUS KILL TEAM",
+        "DEATHWATCH",
+        "KILL TEAM"
+      ],
+      "abilities": [
+        {
+          "name": "Proteus Doctrines",
+          "description": "Each time a model in this unit makes an attack that targets a unit that is not Below Half-strength, add 1 to the Hit roll."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a CHARACTER from your army with the Leader ability can be attached to a DEATHWATCH KILL TEAM, it can be attached to this unit instead."
+        },
+        {
+          "name": "Invulnerable Save",
+          "description": "4+"
+        },
+        {
+          "name": "Storm shield",
+          "description": "The bearer has a Wounds characteristic of 4."
+        },
+        {
+          "name": "Invulnerable Save",
+          "description": "4+"
+        },
+        {
+          "name": "Jump Pack",
+          "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain features as if they were not there."
+        },
+        {
+          "name": "Astartes shield",
+          "description": "The bearer has a 4+ invulnerable save."
+        },
+        {
+          "name": "Astartes shield",
+          "description": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Frag Cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Heavy",
+            "Rapid Fire D3"
+          ]
+        },
+        {
+          "name": "Twin lightning claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Thunder hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "-"
+          ]
+        },
+        {
+          "name": "Deathwatch thunder hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f527-0a42-15b4-1924",
+      "name": "Spectrus Kill Team [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 90,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kill Team Infiltrator",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Infiltrator w/ Jump pack",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Infiltrator",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Infiltrator",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Kill Team Infiltrator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "SMOKE",
+        "SPECTRUS KILL TEAM",
+        "DEATHWATCH",
+        "KILL TEAM"
+      ],
+      "abilities": [
+        {
+          "name": "Attached Unit",
+          "description": "If a CHARACTER unit from your army can be attached to a DEATHWATCH KILL TEAM, it can be attached to this unit instead."
+        },
+        {
+          "name": "Spectrus Doctrines",
+          "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase."
+        },
+        {
+          "name": "Helix Gauntlet",
+          "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability."
+        },
+        {
+          "name": "Infiltrator Comms Array",
+          "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "name": "Jump pack",
+          "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain features as if they were not there."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Marksman bolt carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Accelerator autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Occulus bolt carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Special-issue bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bolt carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bolt sniper rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Las fusil",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Bolt carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Paired combat blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Combat knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "-"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50a9-30aa-e03a-847d",
+      "name": "Veteran Bike Squad [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "MOUNTED",
+      "basePoints": 70,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "3+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Veteran Biker Sergeant",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Veteran Biker",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MOUNTED",
+        "GRENADES",
+        "IMPERIUM",
+        "VETERAN BIKE SQUAD",
+        "DEATHWATCH"
+      ],
+      "abilities": [
+        {
+          "name": "Turbo-boost",
+          "description": "Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit."
+        },
+        {
+          "name": "Astartes Shield",
+          "description": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Xenophase blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f158-1e0b-585b-bf40",
+      "name": "Watch Captain Artemis",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Watch Captain Artemis",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "DEATHWATCH",
+        "WATCH CAPTAIN ARTEMIS",
+        "ORDO XENOS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Tactical Instinct",
+          "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        },
+        {
+          "name": "Unstoppable Champion",
+          "description": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: AQUILA KILL TEAM, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, FORTIS KILL TEAM, INDOMITOR KILL TEAM, PROTEUS KILL TEAM, SPECTRUS KILL TEAM"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Hellfire Extremis",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Master-crafted power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "cfa5-df26-a886-9975",
+      "name": "Watch Master",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 105,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Watch Master",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "CAPTAIN",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "WATCH MASTER",
+        "DEATHWATCH",
+        "ORDO XENOS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Strategic Knowledge",
+          "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+        },
+        {
+          "name": "Rites of Battle",
+          "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: AQUILA KILL TEAM, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, FORTIS KILL TEAM, INDOMITOR KILL TEAM, PROTEUS KILL TEAM, SPECTRUS KILL TEAM"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Vigil spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Vigil spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Lance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4e74-3710-7a66-9d6c",
+      "name": "Sanctifiers",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 100,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "6+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sanctifiers",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "SANCTIFIERS",
+        "RETINUE"
+      ],
+      "abilities": [
+        {
+          "name": "Ministorum Sermon",
+          "description": "While this unit contains a **^^Ministorum Priest**^^, each time a model in this unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "name": "Cherub",
+          "description": "Once per battle, you can target this unit with the Command Re-roll Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a ^^**Ministorum Priest^^** or ^^**Inquisitor^^** model from your army with the Leader ability can be attached to a ^^**Sisters of Battle Squad^^**, it can be attached to this unit instead. If a ^^**Ministorum Priest^^** or ^^**Inquisitor^^** model from your army is attached to this unit during the Declare Battle Formations step, that model gains the Scouts 6\" ability."
+        },
+        {
+          "name": "Salvationist Medikit",
+          "description": "In your Command phase, if the bearer is on the battlefield, you can return up to D3 destroyed models (excluding ^^**Character models^^**) to this unit."
+        },
+        {
+          "name": "Simulacrum Imperialis",
+          "description": "Improve the Leadership characteristic of models in the bearer’s unit by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Holy fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Holy fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Burning hands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death Cult blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "6315-d3e6-aa1c-69e4",
+      "name": "Inquisitor Ostromandeus [Legends]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 65,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Ostromandeus",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Stentor-I-52",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "INFANTRY",
+        "IMPERIUM",
+        "GRENADES",
+        "CHARACTER",
+        "INQUISITOR",
+        "OSTROMANDEUS",
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Ward Against the Malefic Arts",
+          "description": "While this unit is leading a unit, each time a Psychic Attack targets that unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll."
+        },
+        {
+          "name": "Vox‑cast Proclamations (Aura)",
+          "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this unit’s Inquisitor Ostromandeus model, increase the cost of that use of that Stratagem by 1CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units: EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
+          "name": "Vox-skull",
+          "description": "Once per battle, at the start of any phase, you can select one enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) within 12\" of the bearer. That unit must take a Battle-shock test; if that test is failed, until the end of your next turn, that unit cannot have the Benefit of Cover. \n**Designer’s Note**: *Place a vox‑skull token next to the unit, removing it once this ability has been used.*"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hydraulic vox-ram",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "050d-797a-bb9a-2e8b",
+      "name": "Deathwatch Veteran w/ carbine",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "OTHER",
+      "basePoints": 0,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Deathwatch Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TACTICUS"
+      ],
+      "abilities": [],
+      "weapons": [
+        {
+          "name": "Deathwatch marksman bolt carbine",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Combat knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "df47-6883-78e7-d725",
+      "name": "Deathwatch Veteran w/ heavy thunder hammer",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "OTHER",
+      "basePoints": 0,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Deathwatch Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TACTICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Astartes shield",
+          "description": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy thunder hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3435-d900-05e9-19e6",
+      "name": "Deathwatch Veteran w/ stalker bolt rifle",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "OTHER",
+      "basePoints": 0,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Deathwatch Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TACTICUS"
+      ],
+      "abilities": [],
+      "weapons": [
+        {
+          "name": "Stalker bolt rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Lethal Hits",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "77a2-7703-4d4f-f30d",
+      "name": "Gravis Veteran w/ infernus heavy bolter",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "OTHER",
+      "basePoints": 0,
+      "stats": {
+        "movement": "5\"",
+        "toughness": 6,
+        "save": "3+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Gravis Veteran",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "GRAVIS"
+      ],
+      "abilities": [],
+      "weapons": [
+        {
+          "name": "Frag cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Heavy",
+            "Lethal Hits",
+            "Rapid Fire D3"
+          ]
+        },
+        {
+          "name": "Hellstorm bolt rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Heavy",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Astartes grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Astartes grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Infernus heavy bolter - heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Infernus heavy bolter - heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores cover",
+            "Torrent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e05a-fe00-3df3-d551",
+      "name": "Kill Team Sergeant",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "OTHER",
+      "basePoints": 0,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Kill Team Sergeant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [],
+      "abilities": [],
+      "weapons": []
+    },
+    {
+      "id": "90e0-c5a9-17c5-fba4",
+      "name": "Martial Agent [Crucible]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Martial Agent",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "MARTIAL AGENT",
+        "CRUCIBLE",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Moment of Glory",
+          "description": "Once per battle, in the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristics of melee weapons equipped by this model by 3."
+        },
+        {
+          "name": "High-handed Authority",
+          "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "9a75-f3a2-bff5-9f08",
+      "name": "Deathwatch Agent [Crucible]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 105,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Deathwatch Agent",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "CRUCIBLE",
+        "ORDO XENOS",
+        "DEATHWATCH",
+        "DEATHWATCH AGENT"
+      ],
+      "abilities": [
+        {
+          "name": "Your Vigil is Not Yet Ended",
+          "description": "While this model is leading a unit, in your Command phase, you can returned 1 destroyed model (excluding ^^**Character**^^ models) to that unit."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit: ^^**Deathwatch Kill Team^^**"
+        },
+        {
+          "name": "High-handed Authority",
+          "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "2b47-b5e8-b297-7bd8",
+      "name": "Enthroned Agent [Crucible]",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 120,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 9,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Enthroned Agent",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "CHARACTER",
+        "IMPERIUM",
+        "CRUCIBLE",
+        "VEHICLE",
+        "WALKER",
+        "ENTHRONED AGENT",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Towering Reputation (Aura)",
+          "description": "While a friendly unit is within 6\" of this model, improve the Leadership characteristic of models in that unit by 1. While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1."
+        },
+        {
+          "name": "High-handed Authority",
+          "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "2a3f-b53b-6ea4-6da9",
+      "name": "Inquisitor Kroyle",
+      "factionId": "imperium-agents-of-the-imperium",
+      "factionName": "Agents of the Imperium",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Inquisitor Kroyle",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: AGENTS OF THE IMPERIUM",
+        "MOUNTED",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "GRENADES",
+        "ORDO XENOS",
+        "INQUISITOR",
+        "KROYLE",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "On My Signal, Fire!",
+          "description": "After this unit has shot, you can select one enemy unit hit by those attacks. Until the end of the phase, each time an ^^**Agents of the Imperium^^** or ^^**Imperium Infantry Battleline^^** model from your army makes an attack that targets that enemy unit, you can re‑roll the Hit roll."
+        },
+        {
+          "name": "Tox‑cycler",
+          "description": "In your Shooting phase, after this unit has shot, if this model scored a hit with its Jindarii tox‑cycler, until the end of the battle, add 2 to the Strength and Damage characteristics of that weapon (to a maximum Damage characteristic of 6)."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Jindarii tox-cycler",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 2+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Butcher blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Garralisk's claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ]
+    }
+  ]
+}

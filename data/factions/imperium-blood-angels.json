@@ -1,0 +1,2042 @@
+{
+  "id": "imperium-blood-angels",
+  "name": "Adeptus Astartes - Blood Angels",
+  "sourceFile": "Imperium - Blood Angels.json",
+  "totalDatasheets": 27,
+  "detachments": [],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "f943-72c8-581c-e6f2",
+      "name": "Astorath",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 85,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "5+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Astorath",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "FLY",
+        "JUMP PACK",
+        "IMPERIUM",
+        "CHAPLAIN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "ASTORATH",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Redeemer of the Lost",
+          "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "name": "Mass of Doom",
+          "description": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n\n■ Death Company Marines with Jump Packs"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "The Executioner's Axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "640-9969-d5b9-875c",
+      "name": "Baal Predator",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 125,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 11,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Baal Predator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "IMPERIUM",
+        "SMOKE",
+        "VEHICLE",
+        "FACTION: ADEPTUS ASTARTES",
+        "BAAL PREDATOR",
+        "FACTION: BLOOD ANGELS",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Overcharged Engines",
+          "description": "You can re-roll Advance rolls made for this model."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Heavy Bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Baal Flamestorm Cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Twin Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating wounds",
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8d87-ee8a-6af4-3715",
+      "name": "Brother Corbulo [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Brother Corbulo",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "SANGUINARY PRIEST",
+        "BROTHER CORBULO"
+      ],
+      "abilities": [
+        {
+          "name": "Sanguinary Priest",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        },
+        {
+          "name": "The Red Grail",
+          "description": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Assault Intercessor Squad\n■ Sternguard Veteran Squad\n■ Devastator Squad\n■ Tactical Squad\n■ Vanguard Veteran Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heaven's Teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae0a-e23c-2184-7c65",
+      "name": "Captain Tycho [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Captain Tycho",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "CAPTAIN",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "TYCHO"
+      ],
+      "abilities": [
+        {
+          "name": "Gifted Commander",
+          "description": "While this model is leading a unit, each time that unit is selected to shoot, select one of the following abilities to apply to ranged weapons equipped by models in that unit until the end of the phase:\n\n\n■ [ASSAULT]\n■ [HEAVY]\n■ [RAPID FIRE 1]"
+        },
+        {
+          "name": "Embittered",
+          "description": "The first time an attack is allocated to this model, after the attacking unit has finished making its attacks, until the end of the battle, change the Attacks characteristic of this model’s Dead Man’s Hand to 12"
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Command Squad\n■ Assault Intercessor Squad\n■ Sternguard Veteran Squad\n■ Company Heroes\n■ Tactical Squad\n■ Vanguard Veteran Squad"
+        },
+        {
+          "name": "Tycho",
+          "description": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Blood Song",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Dead Man's Hand",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "8577-8a5d-75f6-a630",
+      "name": "Tycho the Lost [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 90,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "2+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tycho the Lost",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "CAPTAIN",
+        "IMPERIUM",
+        "GRENADES",
+        "TYCHO THE LOST",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS"
+      ],
+      "abilities": [
+        {
+          "name": "Forlorn Hero",
+          "description": "While this model is leading a unit, that unit is  eligible to declare a charge in a turn in which it Advanced"
+        },
+        {
+          "name": "Death Visions of Sanguinius",
+          "description": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord: on a 2-3, that enemy unit suffers 3 mortal wounds; on a 4-5, that enemy unit suffers D3+3 mortal wounds; on a 6+, that enemy unit suffers D6+3 mortal wounds."
+        },
+        {
+          "name": "Tycho",
+          "description": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n\n■ Death Company Marines"
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "ab35-2c36-9389-d1d5",
+      "name": "Chief Librarian Mephiston",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 110,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 5,
+        "save": "2+",
+        "invulnerableSave": "5+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Chief Librarian Mephiston",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "TACTICUS",
+        "PSYKER",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "CHIEF LIBRARIAN MEPHISTON"
+      ],
+      "abilities": [
+        {
+          "name": "The Quickening [Psychic]",
+          "description": "This model is eligible to declare a charge in a turn which it Advanced."
+        },
+        {
+          "name": "Transfixing Gaze [Aura, Psychic]",
+          "description": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Fury of the Ancients - Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Pistol",
+            "Psychic",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Fury of the Ancients - Focused Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Hazardous",
+            "Pistol",
+            "Psychic",
+            "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "Vitarus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits",
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7323-ebf-9afe-7e7a",
+      "name": "Commander Dante",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 125,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Commander Dante",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FLY",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "JUMP PACK",
+        "TACTICUS",
+        "CHAPTER MASTER",
+        "COMMANDER DANTE",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Death Mask of Sanguinius",
+          "description": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+        },
+        {
+          "name": "Lord Regent of the Imperium Nihilus",
+          "description": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad with Jump Packs\n■ Sanguinary Guard\n■ Vanguard Veteran Squad with Jump Packs\n■ Assault Intercessors with Jump Packs"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Perdition",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2",
+            "Pistol",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "The Axe Mortalis",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e7ee-e70-bd87-7c5c",
+      "name": "Death Company Dreadnought with Magna-Grapple [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 145,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "2+",
+        "wounds": 8,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Dreadnought",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "DEATH COMPANY DREADNOUGHT",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY",
+        "DREADNOUGHT"
+      ],
+      "abilities": [
+        {
+          "name": "Frenzied Reprisal",
+          "description": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase."
+        },
+        {
+          "name": "Magna-grapple",
+          "description": "Add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a MOSNTER or VEHICLE unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Storm Bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bb83-db85-6ce1-9a61",
+      "name": "Death Company Intercessors",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Intercessors",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY INTERCESSORS"
+      ],
+      "abilities": [],
+      "weapons": [
+        {
+          "name": "➤ Astartes Grenade Launcher - Frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Astartes Grenade Launcher - Krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "6562-9dcd-afea-d4ae",
+      "name": "Death Company Marines with Boltguns [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 125,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Marine",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY MARINES WITH BOLTGUNS",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "An Honourable Death in Combat",
+          "description": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+        },
+        {
+          "name": "Attached Leader",
+          "description": "If a Chaplain model from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines unit, it can be attached to this unit instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Thunder Hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "65f6-18df-f6df-7e39",
+      "name": "Death Company Marines with Jump Packs",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 115,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Marine with Jump Pack",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY MARINES WITH JUMP PACKS",
+        "TACTICUS",
+        "FLY",
+        "JUMP PACK",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "Savage Fury",
+          "description": "You can re-roll Charge rolls made for this unit."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead"
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "c954-8157-25fd-5f99",
+      "name": "Furioso Dreadnought [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 150,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 9,
+        "save": "2+",
+        "wounds": 8,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Furioso Dreadnought",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "FURIOSO DREADNOUGHT",
+        "SMOKE",
+        "DREADNOUGHT"
+      ],
+      "abilities": [
+        {
+          "name": "Wrathful Rampage",
+          "description": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range  of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy Frag Cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Rapid Fire D6"
+          ]
+        },
+        {
+          "name": "Furioso Fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "462-f17c-3bb-16a",
+      "name": "Gabriel Seth [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 90,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 6,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Gabriel Seth",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "CHAPTER MASTER",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "GABRIEL SETH"
+      ],
+      "abilities": [
+        {
+          "name": "Lord of Slaughter",
+          "description": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+        },
+        {
+          "name": "Whirlwind of Rage",
+          "description": "Each time this model fights, until that fight is resolved, add 1 to the Attacks characteristic of this model’s Blood Reaver for every 5 enemy models within 6\" of this model."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Command Squad\n■ Tactical Squad\n■ Vanguard Veteran Squad\n■ Assault Intercessor Squad\n■ Company Heroes\n■ Sternguard Veteran Squad\n■ Bladeguard Veteran Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Blood Reaver",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cbc2-18c9-45b6-6327",
+      "name": "Lemartes",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "5+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Lemartes",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FLY",
+        "CHAPLAIN",
+        "LEMARTES",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "JUMP PACK",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Guardian of the Lost",
+          "description": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+          "name": "Fury Unbound",
+          "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n\n■ Death Company Marines with Jump Packs"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Absolvor Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "The Blood Crozius",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b6e0-b465-801c-24c8",
+      "name": "Librarian Dreadnought [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 170,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "2+",
+        "wounds": 8,
+        "leadership": "6+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Librarian Dreadnought",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "PSYKER",
+        "IMPERIUM",
+        "LIBRARIAN DREADNOUGHT",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "SMOKE",
+        "DREADNOUGHT"
+      ],
+      "abilities": [
+        {
+          "name": "Shield of Sanguinius (Aura, Psychic)",
+          "description": "While a friendly Adeptus Astartes unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
+        },
+        {
+          "name": "Wings of Sanguinius (Psychic)",
+          "description": "Once per turn, at the end of your Movement phase, one Psyker from your army with this ability can use it. If it does, roll one D6: on a 1, that Psyker suffers D3 mortal wounds; on a 2+, select one friendly Adeptus Astartes Infantry unit within 12\" of that Psyker and remove the selected unit from the battlefield, then set it up again anywhere on the battlefield that is more than 9\"\nhorizontally away from all enemy models."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Blood Lance - Focused Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+3",
+          "keywords": [
+            "Hazardous",
+            "Psychic",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "➤ Blood Lance - Witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Furioso Fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Furioso Force Halberd",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "D6+3",
+          "keywords": [
+            "Extra Attacks",
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25e4-ead-faac-2531",
+      "name": "Sanguinary Guard",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 120,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 3,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sanguinary Guard",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "FLY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "SANGUINARY GUARD",
+        "JUMP PACK"
+      ],
+      "abilities": [
+        {
+          "name": "Angelic Visage",
+          "description": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+        },
+        {
+          "name": "Heirs of Azkaellon",
+          "description": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a Captain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead."
+        },
+        {
+          "name": "Sanguinary Banner",
+          "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Angelus Boltgun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Encarmine Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Encarmine Spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f80-be5-d17c-db23",
+      "name": "Sanguinary Priest",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sanguinary Priest",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "SANGUINARY PRIEST",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "TACTICUS"
+      ],
+      "abilities": [
+        {
+          "name": "Sanguinary Priest",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        },
+        {
+          "name": "Blood Chalice",
+          "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units: \n- **^^Assault Intercessor Squad^^**\n- **^^Bladeguard Veteran Squad^^**\n- **^^Desolation Squad^^**\n- **^^Devastator Squad^^**\n- **^^Hellblaster Squad^^**\n- **^^Infernus Squad^^**\n- **^^Intercessor Squad^^**\n- **^^Tactical Squad^^**\n- **^^Sternguard Veteran Squad^^**\n\n\nYou can attach this model to one of the above units, even if one **^^Captain, Chapter Master^^** or **^^Lieutenant**^^ model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths"
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "29f1-bb28-6424-6d14",
+      "name": "The Sanguinor",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 120,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 7,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "The Sanguinor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "FLY",
+        "IMPERIUM",
+        "JUMP PACK",
+        "THE SANGUINOR",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS"
+      ],
+      "abilities": [
+        {
+          "name": "Aura of Fervour (Aura)",
+          "description": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+        },
+        {
+          "name": "Miraculous Savior",
+          "description": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. . That move does not prevent this unit from being eligible to move"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Encarmine Broadsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa13-ba8a-8711-87b6",
+      "name": "Sanguinary Priest with Jump Pack [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sanguinary Priest with Jump Pack",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "FLY",
+        "JUMP PACK",
+        "SANGUINARY PRIEST"
+      ],
+      "abilities": [
+        {
+          "name": "Sanguinary Priest",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        },
+        {
+          "name": "Blood Chalice",
+          "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        },
+        {
+          "name": "Support",
+          "description": "This model can be attached to the following units:\n\n■ Assault Squad with Jump Packs\n■ Vanguard Veteran Squad with Jump packs\n■ Assault Intercessors with Jump Packs"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Astartes Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3621-b460-722-8954",
+      "name": "Sanguinary Priest on Bike [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 135,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "3+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Sanguinary Priest on Bike",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "MOUNTED",
+        "GRENADES",
+        "IMPERIUM",
+        "SANGUINARY PRIEST",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS"
+      ],
+      "abilities": [
+        {
+          "name": "Blood Chalice",
+          "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Bike Squad\n■ Outrider Squad"
+        },
+        {
+          "name": "Sanguinary Priest",
+          "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Power Fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "829b-da42-2d62-6daf",
+      "name": "Blood Angels Captain",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Blood Angels Captain",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "CAPTAIN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "TACTICUS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Company Heroes\n■ Tactical Squad"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Master-crafted Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4743-6dc9-fda7-0a8c",
+      "name": "Death Company Captain",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Captain",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "CAPTAIN",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "TACTICUS",
+        "DEATH COMPANY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Death Company Marines\n■ Death Company Marines with Bolt Rifles"
+        },
+        {
+          "name": "Forlorn Hero",
+          "description": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+        },
+        {
+          "name": "Death Vision of Sanguinius",
+          "description": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Master-crafted Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "2574-a949-ae3f-58c2",
+      "name": "Death Company Captain with Jump Pack",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 75,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Captain with Jump Pack",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "CAPTAIN",
+        "GRENADES",
+        "FLY",
+        "FACTION: BLOOD ANGELS",
+        "FACTION: ADEPTUS ASTARTES",
+        "IMPERIUM",
+        "JUMP PACK",
+        "TACTICUS",
+        "DEATH COMPANY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Death Vision of Sanguinius",
+          "description": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+        },
+        {
+          "name": "Lost to Fury",
+          "description": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n\n■ Death Company Marines with Jump Packs"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Heavy Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "4aab-3ca5-0435-ed5e",
+      "name": "Death Company Marines with Bolt Rifles",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 80,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Marines with Bolt Rifles",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY MARINES WITH BOLT RIFLES",
+        "TACTICUS",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "Attached Unit",
+          "description": "If a Chaplain model from your army with the Leader ability can be attached to Intercessor Squad, it can be attached to this unit instead."
+        },
+        {
+          "name": "Visions of Heresy",
+          "description": "• This unit can re-roll charge rolls.\n▪ When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Astartes Grenade Launcher - Frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Astartes Grenade Launcher - Krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power Fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "3825-ac3a-75ec-fa0d",
+      "name": "Death Company Marines",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 85,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Marines",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY MARINES",
+        "TACTICUS",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "An Honourable Death in Combat",
+          "description": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+        },
+        {
+          "name": "Attached Unit",
+          "description": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessor Squad, it can be attached to this unit instead."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "3b6e-cc3e-c2a4-0cbd",
+      "name": "Death Company Dreadnought",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 150,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 10,
+        "save": "2+",
+        "wounds": 12,
+        "leadership": "6+",
+        "objectiveControl": 4
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Dreadnought",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "DREADNOUGHT",
+        "DEATH COMPANY DREADNOUGHT",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "Driven by Fury",
+          "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Blood Fist Bolt Rifles",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Blood Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Blood Talons - Strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Blood Talons - Sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bcfe-f4fb-5c44-652d",
+      "name": "Death Company Marines with Boltguns and Jump Packs [Legends]",
+      "factionId": "imperium-blood-angels",
+      "factionName": "Adeptus Astartes - Blood Angels",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 140,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "3+",
+        "wounds": 2,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Death Company Marine",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GRENADES",
+        "IMPERIUM",
+        "FACTION: ADEPTUS ASTARTES",
+        "FACTION: BLOOD ANGELS",
+        "DEATH COMPANY MARINES WITH BOLTGUNS AND JUMP PACKS",
+        "DEATH COMPANY"
+      ],
+      "abilities": [
+        {
+          "name": "Beserk Fury",
+          "description": "You can re-roll Charge rolls made for this unit"
+        },
+        {
+          "name": "Attached Leader",
+          "description": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines with Jump Packs unit, it can be attached to this unit instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Thunder Hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    }
+  ]
+}

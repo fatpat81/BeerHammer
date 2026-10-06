@@ -1,0 +1,1993 @@
+{
+  "id": "imperium-imperial-knights-library",
+  "name": "Imperial Knights - Library",
+  "sourceFile": "Imperium - Imperial Knights - Library.json",
+  "totalDatasheets": 22,
+  "detachments": [
+    {
+      "name": "Detachment",
+      "id": "5a84-ea91-b707-1656",
+      "rules": []
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "core-command-reroll",
+      "name": "Command Re-roll",
+      "cpCost": 1,
+      "phase": "ANY",
+      "category": "CORE",
+      "description": "Re-roll one Hit roll, Wound roll, Damage roll, saving throw, Advance roll, Charge roll, Desperate Escape test, or Hazard test.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-counter-offensive",
+      "name": "Counter-Offensive",
+      "cpCost": 2,
+      "phase": "FIGHT",
+      "category": "CORE",
+      "description": "Interrupt the combat sequence immediately after an enemy unit has fought to fight with one eligible unit from your army.",
+      "requiredKeywords": []
+    },
+    {
+      "id": "core-rapid-ingress",
+      "name": "Rapid Ingress",
+      "cpCost": 1,
+      "phase": "MOVEMENT",
+      "category": "CORE",
+      "description": "Your unit can arrive from Reserves as if it were the Reinforcements step of your Movement phase, during your opponent's turn.",
+      "requiredKeywords": [
+        "DEEP STRIKE"
+      ]
+    },
+    {
+      "id": "core-heroic-intervention",
+      "name": "Heroic Intervention",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Declare a counter-charge with one eligible unit after an enemy unit completes a charge move within 6\" of that unit.",
+      "requiredKeywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER"
+      ]
+    },
+    {
+      "id": "core-smokescreen",
+      "name": "Smokescreen",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and the Stealth ability until the end of the phase.",
+      "requiredKeywords": [
+        "SMOKE"
+      ]
+    },
+    {
+      "id": "core-tank-shock",
+      "name": "Tank Shock",
+      "cpCost": 1,
+      "phase": "CHARGE",
+      "category": "CORE",
+      "description": "Select one enemy unit within Engagement Range after completing a Charge move; roll dice equal to your vehicle toughness and inflict mortal wounds on 5+.",
+      "requiredKeywords": [
+        "VEHICLE"
+      ]
+    },
+    {
+      "id": "core-go-to-ground",
+      "name": "Go to Ground",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Target unit gains the Benefit of Cover and a 6+ invulnerable save until the end of the phase.",
+      "requiredKeywords": [
+        "INFANTRY"
+      ]
+    },
+    {
+      "id": "core-grenade",
+      "name": "Grenade",
+      "cpCost": 1,
+      "phase": "SHOOTING",
+      "category": "CORE",
+      "description": "Select one enemy unit within 8\" and visible to this unit; roll six D6, each 4+ causes 1 mortal wound.",
+      "requiredKeywords": [
+        "GRENADES"
+      ]
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "55fb-9c91-1a4f-3037",
+      "name": "Canis Rex",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 415,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Canis Rex",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Sir Hekhtur",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS"
+      ],
+      "abilities": [
+        {
+          "name": "Chainbreaker",
+          "description": "Once per battle, at the start of any phase, you can select one friendly **^^Imperium^^** unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+        },
+        {
+          "name": "Legendary Freeblade",
+          "description": "Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP."
+        },
+        {
+          "name": "Using Sir Hekhtur",
+          "description": "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **^^Transport^^** and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Las-impulsor - high intensity",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "4",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Las-impulsor - low intensity",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Questoris multi-laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Hekhtur's pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Freedom's Hand - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "9",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Freedom's Hand - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "5bbd-c5d3-58d7-e391",
+      "name": "Armiger Warglaive",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 140,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 14,
+        "leadership": "7+",
+        "objectiveControl": 6
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Armiger Warglaive",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "WARGLAIVE",
+        "ARMIGER"
+      ],
+      "abilities": [
+        {
+          "name": "Impetuous Glory",
+          "description": "Each time this model makes a charge move, until the end of the turn, add 1 to the Attacks characteristic of this model's reaper chain-cleaver - strike profile, and add 2 to the Attacks characteristic of this model's reaper chain-cleaver - sweep profile."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Thermal spear",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "➤ Reaper chain-cleaver - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chain-cleaver - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "7314-3c4a-36ab-a594",
+      "name": "Armiger Helverin",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 140,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 14,
+        "leadership": "7+",
+        "objectiveControl": 6
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Armiger Helverin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "HELVERIN",
+        "ARMIGER"
+      ],
+      "abilities": [
+        {
+          "name": "Suppression Protocols",
+          "description": "In your Shooting phase, after this model has shot, select one enemy unit (excluding **^^Monsters^^** and **^^Vehicles^^**) hit by one or more of those attacks made with an Armiger autocannon. Until the start of your next turn, that enemy unit is suppressed. While that unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Armiger autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "8441-8356-5e7c-69ee",
+      "name": "Knight Paladin",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 375,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Paladin",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT PALADIN",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Seasoned Noble",
+          "description": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Questoris heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9efd-ec72-353f-4b23",
+      "name": "Knight Errant",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 355,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Errant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT ERRANT",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Aggressive Assault",
+          "description": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "eb4-4a67-11e9-3cb8",
+      "name": "Knight Gallant",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 355,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Gallant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT GALLANT",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Martial Pride",
+          "description": "Each time this unit Consolidates, models in it can move an additional 3\" provided your unit can end that move within Engagement Range of one or more enemy units."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "18",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Thunderstrike gauntlet - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Thunderstrike gauntlet - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c609-c87e-f9dd-5006",
+      "name": "Knight Warden",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 365,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Warden",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT WARDEN",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Thin Their Ranks",
+          "description": "Each time this model makes a ranged attack that targets an enemy unit (excluding **^^Monsters^^** and **^^Vehicles^^**), that attack has the **[DEVASTATING WOUNDS]** ability."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "1e27-a6de-3840-a050",
+      "name": "Knight Crusader",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 395,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Crusader",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT CRUSADER",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Punishing Salvoes",
+          "description": "In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the **[SUSTAINED HITS 1]** ability."
+        }
+      ],
+      "weapons": []
+    },
+    {
+      "id": "ebd9-7175-3f0c-72a9",
+      "name": "Knight Preceptor",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 365,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Preceptor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT PRECEPTOR",
+        "QUESTORIS"
+      ],
+      "abilities": [
+        {
+          "name": "Exemplar of the Code",
+          "description": "At the start of the battle, select one unit from your opponent’s army to be this model's quarry. Each time this model makes an attack that targets its quarry, you can re-roll the Wound roll. Each time this model's quarry is destroyed, you can select a new unit from your opponent's army to be its quarry."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Las-impulsor - high intensity",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "4",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Las-impulsor - low intensity",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Preceptor multi-laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "6e36-f85-1c3b-8bf3",
+      "name": "Knight Castellan",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 425,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 12,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Castellan",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT CASTELLAN",
+        "DOMINUS"
+      ],
+      "abilities": [
+        {
+          "name": "Titan Hunter",
+          "description": "Each time a ranged attack made by this model is allocated to a **^^Monster^^** or **^^Vehicle^^** model, you can re-roll the Damage roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Plasma decimator - standard",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Plasma decimator - supercharge",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Volcano lance",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -5,
+          "damage": "D6+8",
+          "keywords": [
+            "Blast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8fb9-50b2-adc6-161a",
+      "name": "Knight Valiant",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 390,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 12,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Valiant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT VALIANT",
+        "DOMINUS"
+      ],
+      "abilities": [
+        {
+          "name": "Thundershock",
+          "description": "In your Shooting phase, each time you select a target for this model's thundercoil harpoon, roll one D6 for the target unit and one D6 for each other enemy unit within 6\" of the target unit. On a 4+, the unit being rolled for is struck by arcing energies; after resolving all of this model's attacks against the target unit, each unit struck by arcing energies suffers D3 mortal wounds."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Conflagration cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3D6",
+          "skill": "N/A",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Thundercoil harpoon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 24,
+          "armorPenetration": -6,
+          "damage": "10",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f8d0-fdf2-2e5e-3b74",
+      "name": "Acastus Knight Asterius",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 785,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 13,
+        "save": "2+",
+        "invulnerableSave": "5+*",
+        "wounds": 30,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Acastus Knight Asterius",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT ASTERIUS",
+        "ACASTUS",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Sunderer of Fortresses",
+          "description": "Each time this model makes an attack that targets a VEHICLE, improve the Strength and Damage characteristics of that attack by 1. If that attack targets a FORTIFICATION, improve the Strength and Damage characteristics of that attack by 2 instead."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin conversion beam cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -2,
+          "damage": "6",
+          "keywords": [
+            "Conversion",
+            "Twin-linked",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Asterius volkite culverin",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Karacnos mortar battery",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Blast",
+            "Ignores Cover",
+            "Indirect Fire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "61c9-8baf-22b4-5d84",
+      "name": "Acastus Knight Porphyrion",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 725,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 13,
+        "save": "2+",
+        "invulnerableSave": "5+*",
+        "wounds": 30,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Acastus Knight Porphyrion",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "ACASTUS",
+        "KNIGHT PORPHYRION",
+        "FRAME"
+      ],
+      "abilities": [],
+      "weapons": [
+        {
+          "name": "Twin magna lascannon",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -4,
+          "damage": "D6+6",
+          "keywords": [
+            "Blast",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Acastus autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Acastus autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Acastus ironstorm missile pod",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Heavy",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Helios defence missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Anti-Fly 2+",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9ee-e289-bc6c-d943",
+      "name": "Cerastus Knight Lancer",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 415,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cerastus Knight Lancer",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "KNIGHT LANCER",
+        "CERASTUS"
+      ],
+      "abilities": [
+        {
+          "name": "Shock Charge",
+          "description": "You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Cerastus shock lance",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "➤ Cerastus shock lance - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "➤ Cerastus shock lance - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "1654-5c17-474e-2d84",
+      "name": "Cerastus Knight Castigator",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 380,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cerastus Knight Castigator",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "CERASTUS",
+        "KNIGHT CASTIGATOR"
+      ],
+      "abilities": [
+        {
+          "name": "Storm of Bolts",
+          "description": "In your Shooting phase, after this model has shot, select one unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Castigator bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "18",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Tempest warblade - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Tempest warblade - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "11d3-167b-6dff-a4c2",
+      "name": "Cerastus Knight Acheron",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 380,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cerastus Knight Acheron",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "CERASTUS",
+        "KNIGHT ACHERON"
+      ],
+      "abilities": [
+        {
+          "name": "Searing Flames",
+          "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks made with an Acheron flame cannon. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Acheron flame cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Torrent",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "➤ Reaper chainfist - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainfist - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "37a7-d156-1e4c-8fe1",
+      "name": "Cerastus Knight Atrapos",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 420,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 28,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cerastus Knight Atrapos",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "CERASTUS",
+        "KNIGHT ATRAPOS"
+      ],
+      "abilities": [
+        {
+          "name": "Macro-extinction Protocols",
+          "description": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Atrapos lascutter - high intensity (ranged)",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "4",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Atrapos lascutter - low intensity (ranged)",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Graviton singularity cannon - singularity",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Graviton singularity cannon - contained",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Atrapos lascutter - high intensity (melee)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "4",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Atrapos lascutter - low intensity (melee)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adfa-19fc-7337-7350",
+      "name": "Questoris Knight Magaera",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 385,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Questoris Knight Magaera",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "QUESTORIS",
+        "KNIGHT MAGAERA"
+      ],
+      "abilities": [
+        {
+          "name": "Repair Auto-simulacra",
+          "description": "At the end of your Command phase, this model regains up to D3 lost wounds."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Phased plasma-fusil",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Lightning cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f8f3-a438-1212-93e8",
+      "name": "Questoris Knight Styrix",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 375,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Questoris Knight Styrix",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "QUESTORIS",
+        "KNIGHT STYRIX"
+      ],
+      "abilities": [
+        {
+          "name": "Grav-pinned",
+          "description": "In your Shooting phase, after this model has shot, if an enemy INFANTRY unit was hit by one or more of those attacks made with a graviton crusher, until the end of your opponent’s next turn, that enemy unit is grav-pinned. While a unit is grav-pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Graviton crusher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 2+",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Volkite chierovile",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e3dd-7e90-140a-b3ab",
+      "name": "Armiger Moirax",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 150,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 14,
+        "leadership": "7+",
+        "objectiveControl": 6
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Armiger Moirax",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "ARMIGER",
+        "MOIRAX"
+      ],
+      "abilities": [
+        {
+          "name": "Protection Protocols",
+          "description": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Volkite veuglaire",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Graviton pulsar",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 2+",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Lightning lock",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Conversion beam cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Conversion",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Rad cleanser",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Siege claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "id": "f12b-ca2a-9c87-79bb",
+      "name": "Knight Defender",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 385,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 11,
+        "save": "3+",
+        "invulnerableSave": "4+*",
+        "wounds": 26,
+        "leadership": "6+",
+        "objectiveControl": 10
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Defender",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "QUESTORIS",
+        "KNIGHT DEFENDER"
+      ],
+      "abilities": [
+        {
+          "name": "Selfless Protector",
+          "description": "Each time a ranged attack is allocated to an **^^Imperial Knights^^** model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin incendine combustor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Conversion beam obliterator",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "4",
+          "keywords": [
+            "Conversion",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "➤ Plasma executor - standard",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Plasma executor - supercharge",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Phosphor blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Rapid Fire 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10d8-d702-f556-5d3c",
+      "name": "Knight Destrier",
+      "factionId": "imperium-imperial-knights-library",
+      "factionName": "Imperial Knights - Library",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 265,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 10,
+        "save": "3+",
+        "invulnerableSave": "5+*",
+        "wounds": 18,
+        "leadership": "6+",
+        "objectiveControl": 8
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Knight Destrier",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "WALKER",
+        "TITANIC",
+        "TOWERING",
+        "CHARACTER",
+        "IMPERIUM",
+        "FACTION: IMPERIAL KNIGHTS",
+        "BELLATUS",
+        "KNIGHT DESTRIER"
+      ],
+      "abilities": [
+        {
+          "name": "Damaged: 1-6 Wounds Remaining",
+          "description": "While this model has 1-6 wounds remaining, subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Thundercharge",
+          "description": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+        },
+        {
+          "name": "Ram Jets",
+          "description": "Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3\" to the Move characteristic of this model."
+        },
+        {
+          "name": "Saturation Fire",
+          "description": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Questoris heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Chastiser gatling cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Frag bombard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Blast",
+            "Rapid Fire D6+3"
+          ]
+        },
+        {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
+    }
+  ]
+}
