@@ -4,9 +4,12 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 datasource db {
-  provider   = "postgresql"
-  url        = env("DATABASE_URL")
-  directUrl  = env("DIRECT_URL")
+  provider = "postgresql"
+  // Pooled/direct connection split (pgbouncer-style setups): set both
+  // DATABASE_URL and DIRECT_URL. Plain self-hosted Postgres needs only
+  // DATABASE_URL — the API container entrypoint defaults DIRECT_URL to it.
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 generator client {

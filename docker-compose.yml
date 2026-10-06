@@ -49,10 +49,7 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    # Apply pending Prisma migrations, then start the server
-    command: >
-      sh -c "npx prisma migrate deploy --schema=packages/db-client/prisma/schema.prisma
-      && node apps/api/dist/index.js"
+    # The image entrypoint applies pending Prisma migrations before booting.
     environment:
       NODE_ENV: development
       PORT: 4000
