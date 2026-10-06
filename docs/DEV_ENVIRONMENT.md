@@ -119,6 +119,7 @@ caches only via the named volumes above).
 
 | Symptom | Fix |
 |---|---|
+| Haptics don't fire in desktop Chrome | Expected: browsers without `navigator.vibrate` simply skip the pulse (mobile-only API) |
 | `port is already allocated` on `up` | `WEB_PORT=… API_PORT=… ./scripts/dev.sh up` |
 | Web 500s with `globals.css` parse errors after switching branches | `docker compose -f docker-compose.dev.yml restart web` (stale `.next` volume cache) |
 | E2E says browsers missing | `./scripts/dev.sh e2e-install` |
