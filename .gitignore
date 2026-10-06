@@ -17,11 +17,6 @@ coverage/
 .env.local
 .env.*.local
 
-# Supabase CLI
-supabase/.temp/
-supabase/.branches/
-supabase/functions/.env
-
 # IDE
 .vscode/
 .idea/
