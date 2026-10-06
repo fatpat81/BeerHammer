@@ -11,3 +11,12 @@
 npm-debug.log*
 Dockerfile*
 docker-compose.yml
+
+# Catalog data is development/test-only (see docs/DEPLOYMENT.md and
+# scripts/extract-factions.js): the pinned BSData snapshot, the extracted
+# intermediate, and the static copy in the web app never enter an image.
+# Release builds get catalog data from the live sync pipeline (API/DB).
+data/bsdata/
+data/factions/
+apps/web/public/data/
+
