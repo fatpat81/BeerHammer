@@ -1,13 +1,75 @@
 {
   "id": "genestealer-cults",
   "name": "Genestealer Cults",
-  "sourceFile": "Genestealer Cults.json",
+  "grandAlliance": "Xenos",
+  "isLegends": false,
   "totalDatasheets": 26,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "b96c-3fb6-1ee9-15ae",
-      "rules": []
+      "name": "Detachment",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "f435-efc3-2e04-3b25",
+      "name": "Cult claws",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "453d-665e-6444-3cb4",
+      "name": "Cult sniper rifle",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "2e1-6b0-5e8-7dbf",
+      "name": "Cult Icon",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "7d45-4735-62d9-9c89",
+      "name": "Cult sniper rifle and close combat weapon",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "3338-b9a2-7d75-33e6",
+      "name": "Cult icon",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "661-4ada-993b-de26",
+      "name": "Cult claws and knife",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "9b0d-6cb-c1c7-22b2",
+      "name": "Cult bonesword",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "5b49-67fd-cdc8-1bf0",
+      "name": "Cult claws and talons",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "8b6c-58ec-2889-b68f",
+      "name": "Beloved of the Cult",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "b62c-dc85-7160-b5e6",
+      "name": "Sacred Cult Banner",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -98,6 +160,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "f51d-bc51-f301-9dee",
@@ -144,7 +207,9 @@
           "description": "While a CHARACTER is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "97b1-4873-9fcb-5cb8",
@@ -208,6 +273,10 @@
           "damage": "D6+1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**ABERRANTS**"
       ]
     },
     {
@@ -309,7 +378,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e367-b2cb-d22a-b17c",
@@ -370,6 +441,12 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
       ]
     },
     {
@@ -473,7 +550,9 @@
             "Rapid Fire 3"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "725f-8a41-dc78-52f5",
@@ -525,7 +604,16 @@
           "description": "Once per battle, when the bearer’s unit is selected to fight, the bearer can use its alchemicus familiar. If it does, until the end of the phase, each time a model in the bearer's unit makes an attack that targets an INFANTRY unit, add 1 to the Wound roll"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "ABERRANTS",
+        "ACOLYTE HYBRIDS WITH AUTOPISTOLS",
+        "ACOLYTE HYBRIDS WITH HANDFLAMERS",
+        "HYBRID METAMORPHS",
+        "NEOPHYTE HYBRIDS",
+        "You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      ]
     },
     {
       "id": "5543-973a-cd2e-c941",
@@ -573,7 +661,14 @@
           "description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "ACOLYTE HYBRIDS",
+        "HYBRID METAMORPHS",
+        "NEOPHYTE HYBRIDS",
+        "You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      ]
     },
     {
       "id": "5ac1-3adb-212a-5e02",
@@ -652,7 +747,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1d1-f0d2-b810-12fe",
@@ -718,7 +815,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8a84-a8fd-977e-9118",
@@ -769,7 +868,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6426-ca59-402a-d399",
@@ -829,7 +930,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5e0e-11d9-181d-3481",
@@ -888,7 +991,9 @@
             "Pistol"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "51e8-dac1-561a-aaa9",
@@ -949,6 +1054,13 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**",
+        "You can attach this model to an **^^Acolyte Hybrids^^** or **^^Neophyte Hybrids^^** unit, even if a **^^Primus^^**, **^^Magus^^**, or **^^Acolyte Iconward^^** model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
       ]
     },
     {
@@ -1003,7 +1115,13 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     },
     {
       "id": "b5d2-8681-6bba-f05b",
@@ -1117,7 +1235,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "55c7-90e0-419-44f9",
@@ -1165,7 +1285,14 @@
           "description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "ACOLYTE HYBRIDS",
+        "HYBRID METAMORPHS",
+        "NEOPHYTE HYBRIDS",
+        "You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      ]
     },
     {
       "id": "2a91-a18e-bd08-fa66",
@@ -1238,6 +1365,10 @@
             "Twin-linked"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "PURESTRAIN GENESTEALERS"
       ]
     },
     {
@@ -1287,7 +1418,13 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     },
     {
       "id": "965b-496a-3a1b-22a8",
@@ -1326,7 +1463,9 @@
           "description": "This unit is eligible to declare a charge in a turn in which it Advanced."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4565-bd65-9e8b-284d",
@@ -1387,7 +1526,9 @@
             "One Shot"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3d6c-357e-3c09-813c",
@@ -1450,7 +1591,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4c63-309e-88e3-7d17",
@@ -1513,7 +1656,9 @@
           "damage": "D6",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "908a-9fd8-2270-8dbd",
@@ -1563,7 +1708,13 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     },
     {
       "id": "0f8d-ba1b-c2cf-c8e7",
@@ -1608,7 +1759,14 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids with Hand Flamers^^**\n- **^^Acolyte Hybrids with Autopistols^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids with Hand Flamers^^**",
+        "**^^Acolyte Hybrids with Autopistols^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     },
     {
       "id": "5138-978e-c8e6-b90c",
@@ -1654,7 +1812,14 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids with Hand Flamers^^**\n- **^^Acolyte Hybrids with Autopistols^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids with Hand Flamers^^**",
+        "**^^Acolyte Hybrids with Autopistols^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     },
     {
       "id": "678c-b59c-f85d-0a43",
@@ -1700,7 +1865,14 @@
           "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids with Hand Flamers^^**\n- **^^Acolyte Hybrids with Autopistols^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Acolyte Hybrids with Hand Flamers^^**",
+        "**^^Acolyte Hybrids with Autopistols^^**",
+        "**^^Hybrid Metamorphs^^**",
+        "**^^Neophyte Hybrids^^**"
+      ]
     }
   ]
 }

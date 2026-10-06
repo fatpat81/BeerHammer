@@ -1,13 +1,15 @@
 {
   "id": "tyranids",
   "name": "Tyranids",
-  "sourceFile": "Tyranids.json",
+  "grandAlliance": "Xenos",
+  "isLegends": false,
   "totalDatasheets": 38,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "bac9-a18e-5a8a-48d1",
-      "rules": []
+      "name": "Detachment",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -98,6 +100,29 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "leviathan",
+      "name": "Hive Fleet Leviathan",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "kraken",
+      "name": "Hive Fleet Kraken",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "behemoth",
+      "name": "Hive Fleet Behemoth",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "cd6d-87b3-125a-f372",
@@ -176,7 +201,9 @@
           "damage": "D6+1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "13f7-1a3-eff-7393",
@@ -261,6 +288,10 @@
             "Twin-linked"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Tyrant Guard^^**"
       ]
     },
     {
@@ -328,6 +359,10 @@
             "Twin-linked"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Genestealers^^**"
       ]
     },
     {
@@ -400,6 +435,10 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Carnifexes^^**"
       ]
     },
     {
@@ -444,7 +483,9 @@
           "description": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5815-871c-9260-287a",
@@ -489,7 +530,9 @@
           "description": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 **S**.\n▪ <ins>Or</ins>: This unit has +1 **T**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f15b-9f9c-9bf0-8160",
@@ -541,7 +584,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "30d0-521c-1d45-f57b",
@@ -610,7 +655,9 @@
             "Anti-infantry 2+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1645-5407-92c8-1441",
@@ -684,7 +731,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1ae1-ed96-5100-eda5",
@@ -752,6 +801,12 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Neurogaunts^^**",
+        "**^^Tyrant Guard^^**",
+        "**^^Zoanthropes^^**"
       ]
     },
     {
@@ -816,7 +871,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d2c6-bd0b-3205-3319",
@@ -871,7 +928,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6249-358f-27d7-ef60",
@@ -937,7 +996,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b563-c6d3-d0e5-1b78",
@@ -990,7 +1051,9 @@
             "Anti-Infantry 2+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8ccc-3f27-7e4e-da81",
@@ -1034,7 +1097,9 @@
           "description": "While this unit is within Synapse Range of your friendly **^^Tyranids^^** unit (excluding **^^Neurogaunt^^** units), it has the **^^Synapse^^** keyword."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "bbfd-5b01-5bd3-a28b",
@@ -1098,7 +1163,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3f2c-85ec-d83c-4a2f",
@@ -1153,7 +1220,9 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9efd-5564-f0f5-21ea",
@@ -1280,7 +1349,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8e53-d4a-a69f-e71d",
@@ -1344,7 +1415,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ac7a-2560-c083-45b8",
@@ -1415,7 +1488,9 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1705-379b-330d-36d4",
@@ -1478,7 +1553,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "93aa-dd13-de9d-402b",
@@ -1561,7 +1638,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c679-b06a-750b-e7f7",
@@ -1631,7 +1710,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2cdd-3bf1-55e0-7641",
@@ -1698,7 +1779,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b6ac-f091-a018-dab2",
@@ -1757,7 +1840,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6de-ccee-11b4-be3e",
@@ -1821,7 +1906,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "afd0-a0ca-68c3-d912",
@@ -1885,7 +1972,9 @@
           "damage": "D3+3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "218c-639e-22e0-59ce",
@@ -1949,7 +2038,9 @@
           "damage": "D3+3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9b5c-3b5a-1f80-9a74",
@@ -2019,7 +2110,9 @@
           "damage": "D6",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fbc0-3a2b-1d7d-23d9",
@@ -2122,7 +2215,9 @@
           "damage": "D6+1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "853e-48b8-4cc5-3704",
@@ -2174,7 +2269,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "78ca-3743-c254-4404",
@@ -2228,7 +2325,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f46f-9d2b-1f97-aaf6",
@@ -2307,7 +2406,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c17f-f55f-a3cb-530b",
@@ -2369,6 +2470,10 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Venomthropes^^**"
       ]
     },
     {
@@ -2447,7 +2552,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5720-2873-8c2c-edc3",
@@ -2550,7 +2657,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e96-8098-3401-77af",
@@ -2597,7 +2706,11 @@
           "description": "This model can be attached to the following unit:\n- **^^Tyrant Guard^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Tyrant Guard^^**"
+      ]
     },
     {
       "id": "31f9-9730-853c-6f13",
@@ -2682,6 +2795,13 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Hormagaunts^^**",
+        "**^^Termagants^^**",
+        "**^^Tyranid Warriors with Melee Bio-weapons^^**",
+        "**^^Tyranid Warriors with Ranged Bio-weapons^^**"
       ]
     }
   ]

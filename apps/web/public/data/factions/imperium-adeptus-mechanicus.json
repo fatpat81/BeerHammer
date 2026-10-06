@@ -1,13 +1,23 @@
 {
   "id": "imperium-adeptus-mechanicus",
   "name": "Adeptus Mechanicus",
-  "sourceFile": "Imperium - Adeptus Mechanicus.json",
+  "grandAlliance": "Imperium",
+  "isLegends": false,
   "totalDatasheets": 41,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "c82f-1b42-946-9c9a",
-      "rules": []
+      "name": "Detachment",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "ce65-6b89-4a0e-4f3b",
+      "name": "Haloscreed Battleclade",
+      "rules": [
+        "Noospheric Transference"
+      ],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -98,6 +108,29 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "mars",
+      "name": "Mars",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "lucius",
+      "name": "Lucius",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "ryza",
+      "name": "Ryza",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "7662-5fde-16f1-5267",
@@ -146,7 +179,9 @@
           "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d54e-1007-26b5-6a79",
@@ -237,7 +272,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "295-769-8893-2bb0",
@@ -286,7 +323,9 @@
           "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1f1e-2989-4762-cf88",
@@ -395,7 +434,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fd5a-f7a3-833c-85b",
@@ -464,7 +505,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "841-f339-8086-efe2",
@@ -519,7 +562,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "bd6c-8683-8bc4-962d",
@@ -658,7 +703,9 @@
             "-"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a46f-848-b87d-4484",
@@ -699,7 +746,9 @@
           "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. While this unit is within 6” of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, you can re-roll the Hit roll instead."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7bee-a476-2167-76e7",
@@ -740,7 +789,9 @@
           "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ea05-4db7-9ee6-7a87",
@@ -916,7 +967,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b31e-5003-5b63-a305",
@@ -1015,7 +1068,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "958-a256-360-8620",
@@ -1127,7 +1182,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5797-adb8-930-e832",
@@ -1249,7 +1306,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e775-4fe1-832b-95ca",
@@ -1381,7 +1440,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9b4-26b2-9e6d-a62d",
@@ -1524,7 +1585,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8863-9784-8377-aa7a",
@@ -1623,7 +1686,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b897-e4c6-fcb6-6538",
@@ -1684,7 +1749,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "de59-f65c-181a-8509",
@@ -1839,7 +1906,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ba33-c21-bddc-ab0",
@@ -2001,7 +2070,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3fcc-b6a1-399b-1a29",
@@ -2103,7 +2174,9 @@
           "damage": "D6+1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2b9c-3982-701d-f8fd",
@@ -2150,7 +2223,9 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport^^** this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3053-c0c1-aedd-b211",
@@ -2227,7 +2302,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6424-ed86-9e15-3e14",
@@ -2351,7 +2428,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c0e0-4d86-96d2-ec86",
@@ -2430,7 +2509,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "2d9b-610a-dc4d-15ae",
@@ -2519,7 +2600,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "fa82-61cc-aa85-e94c",
@@ -2584,7 +2667,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d59d-ef1-9ef8-4f44",
@@ -2646,7 +2731,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "705b-2635-fcab-48f9",
@@ -2822,7 +2909,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7774-a50b-cb1e-8372",
@@ -3030,7 +3119,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3639-75ba-cab2-c159",
@@ -3146,7 +3237,9 @@
             "Anti-Vehicle 3+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a896-3e21-1319-c86",
@@ -3219,7 +3312,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "52e7-9347-3f16-9eec",
@@ -3312,7 +3407,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d99a-6563-8c08-23c",
@@ -3389,7 +3486,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2183-5b38-1726-2a11",
@@ -3502,7 +3601,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a523-606f-b05c-851e",
@@ -3646,7 +3747,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "18e0-96d4-7d85-2b3b",
@@ -3693,7 +3796,9 @@
           "description": "While this model's unit is in range of one or more objective markers, improve this model's Leadership characteristic by 1."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "7d17-4620-8dbf-4ef6",
@@ -3740,7 +3845,9 @@
           "description": "Melee weapons equipped by this model have [^^Precision^^]."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "6b3e-11ad-7a9d-ca5d",
@@ -3788,7 +3895,9 @@
           "description": "Ranged weapons equipped by this model have [^^Ignores Cover^^]."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "7135-8430-eb02-ded4",
@@ -3898,7 +4007,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "52d3-71a9-f755-d6aa",
@@ -3948,7 +4059,9 @@
           "description": "Each time a model in this unit makes an attack with an eradication caster that targets a unit (excluding **^^Monster^^** and **^^Vehicle^^** units), that attack has the **[SUSTAINED HITS 1]** ability."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d653-1ac3-d944-224f",
@@ -3998,7 +4111,9 @@
           "description": "Each time a model in this unit makes an attack with a neutron fusil against a **^^Monster^^** or **^^Vehicle^^** unit, that attack has the **[IGNORES COVER]** ability."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

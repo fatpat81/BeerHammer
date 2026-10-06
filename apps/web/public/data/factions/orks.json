@@ -1,13 +1,48 @@
 {
   "id": "orks",
   "name": "Orks",
-  "sourceFile": "Orks.json",
-  "totalDatasheets": 66,
+  "grandAlliance": "Xenos",
+  "isLegends": false,
+  "totalDatasheets": 65,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "73c2-d0ed-3c7e-7e17",
-      "rules": []
+      "name": "Detachment",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "496c-ddb9-3e71-e0b3",
+      "name": "War Horde",
+      "rules": [
+        "Get Stuck In"
+      ],
+      "enhancements": [
+        {
+          "id": "bfd3-e26-ad9d-3079",
+          "name": "Da Boss Is Watchin'",
+          "points": 25,
+          "description": "**ORKS** model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is **riled up** until the start of your next turn."
+        },
+        {
+          "id": "40fb-e485-dca0-cb12",
+          "name": "Headwoppa’s Killchoppa",
+          "points": 15,
+          "description": "**ORKS** model only. If this unit made a **charge move** this turn, this model's melee attacks have +1 **AP**."
+        },
+        {
+          "id": "e201-253f-1f52-e389",
+          "name": "Kunnin’ But Brutal",
+          "points": 20,
+          "description": "**ORKS** model only. When this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot/declare a charge**."
+        },
+        {
+          "id": "ed0c-e9cb-399f-a5a2",
+          "name": "Follow Me Ladz",
+          "points": 20,
+          "description": "**ORKS** model only. This unit has +2\" **M**."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -98,6 +133,36 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "goffs",
+      "name": "Goffs",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "bad-moons",
+      "name": "Bad Moons",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "evil-sunz",
+      "name": "Evil Sunz",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "deathskulls",
+      "name": "Deathskulls",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "306a-b2ac-aaf1-9a7c",
@@ -152,7 +217,9 @@
             "CLEAVE 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b7c3-d00e-daf2-76fb",
@@ -207,7 +274,9 @@
             "ANTI-MONSTER/VEHICLE 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5a5d-c5a4-39b8-4a3f",
@@ -281,6 +350,10 @@
             "SUSTAINED HITS 2: MONSTER/VEHICLE"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Beast Snagga Boyz^^**"
       ]
     },
     {
@@ -365,7 +438,9 @@
             "CLEAVE 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "95e9-6da3-5e75-2566",
@@ -496,6 +571,11 @@
             "RAPID FIRE 1"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**MEGANOBZ**",
+        "**MEK GUNZ**"
       ]
     },
     {
@@ -567,6 +647,13 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**BOYZ**",
+        "**MEK GUNZ**",
+        "**NOBZ**",
+        "**TANKBUSTAS**"
       ]
     },
     {
@@ -640,7 +727,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a20-d3af-2c3e-3267",
@@ -681,7 +770,9 @@
           "description": "At the end of your opponent’s Fight phase, select one **visible** enemy unit (excluding **Lone Operative** units) within 24\" of this unit, and roll one D6 for that unit:\n- On a 1-3, that enemy unit suffers D3 **mortal wounds**.\n- On a 4-5, that enemy unit suffers 3 **mortal wounds**.\n- On a 6, that enemy unit suffers D3+3 **mortal wounds**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e651-5901-35e5-dc35",
@@ -762,6 +853,10 @@
             "PRECISION"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**KOMMANDOS**"
       ]
     },
     {
@@ -825,6 +920,10 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**STORMBOYZ**"
       ]
     },
     {
@@ -898,7 +997,9 @@
             "CLEAVE 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "71b2-e955-6588-87f4",
@@ -935,7 +1036,9 @@
           "description": "This unit's attacks that target a unit within 6\" of this unit can re-roll **wound rolls** of 1."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "93a1-386a-e40f-472f",
@@ -1006,7 +1109,9 @@
             "IGNORES COVER"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3b42-b41f-d11e-bdca",
@@ -1047,7 +1152,9 @@
           "description": "In your Shooting phase, this unit's ranged attacks that target a unit (excluding **FLY** units) have +1 to **hit rolls**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1594-b986-e77e-d89d",
@@ -1100,7 +1207,9 @@
             "CLEAVE 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ca85-1d18-dc30-d64e",
@@ -1219,6 +1328,13 @@
             "CLEAVE 2"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**NOBZ ON WARBIKES**",
+        "**SKORCHAS**",
+        "**WARBIKERS**",
+        "**WARBUGGIES**"
       ]
     },
     {
@@ -1257,7 +1373,9 @@
           "description": "In your Shooting phase, if any of the following apply, this unit's ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4ea0-6b70-c17c-bc00",
@@ -1369,7 +1487,9 @@
             "DEVASTATING WOUNDS"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "56d6-a7fc-fa08-4345",
@@ -1451,7 +1571,9 @@
             "CLEAVE 3"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "de8f-24f9-c543-92b7",
@@ -1505,7 +1627,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "70de-d621-8465-f7b8",
@@ -1550,7 +1674,9 @@
           "description": "This unit's Butcha Boyz weapon has +2 **A** for each model embarked within this unit (to a maximum of +22 **A**)."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ffa6-66d3-dfa5-557e",
@@ -1629,6 +1755,10 @@
             "SUSTAINED HITS 1"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**FLASH GITZ**"
       ]
     },
     {
@@ -1687,7 +1817,9 @@
             "TORRENT"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8c36-c946-2e0f-f648",
@@ -1779,7 +1911,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "303-267f-e45c-6aa9",
@@ -1838,7 +1972,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3bff-9fad-2d11-7866",
@@ -1875,7 +2011,9 @@
           "description": "- This unit's ranged attacks can re-roll **hit rolls** of 1.\n- This unit's ranged attacks that target a unit within range of an **objective** can re-roll **hit rolls**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7d51-e2a3-aab6-f7de",
@@ -1925,7 +2063,15 @@
           "description": "This model can be attached to the following units:\n- **BOYZ**\n- **BURNA BOYZ**\n- **LOOTAS**\n- **NOBZ**\n- **TANKBUSTAS**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**BOYZ**",
+        "**BURNA BOYZ**",
+        "**LOOTAS**",
+        "**NOBZ**",
+        "**TANKBUSTAS**"
+      ]
     },
     {
       "id": "3b2-8c11-616a-1005",
@@ -1999,7 +2145,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9ee5-2b39-de06-dda6",
@@ -2083,7 +2231,9 @@
             "CLEAVE 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b42b-ea0-38f1-6300",
@@ -2173,7 +2323,9 @@
             "CLEAVE 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3b35-92f5-bd1a-af8d",
@@ -2228,7 +2380,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a74a-107a-e2ac-7e4c",
@@ -2295,7 +2449,9 @@
             "ANTI-MONSTER/VEHICLE 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7669-1442-2c0b-e0c9",
@@ -2369,7 +2525,9 @@
             "EXTRA ATTACKS"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a856-30b7-e56d-57db",
@@ -2450,7 +2608,9 @@
             "CLEAVE 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6a83-8e1f-63ef-50c3",
@@ -2551,7 +2711,9 @@
             "ANTI-MONSTER/VEHICLE 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6c08-9131-14a3-a3b4",
@@ -2666,7 +2828,9 @@
             "CLEAVE 4"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4adf-8249-c6b2-dd4f",
@@ -2711,7 +2875,9 @@
           "description": "When this unit is **selected to fight**, if this unit made a **charge move** this turn, you can use this ability. If you do, this unit's melee attacks have:\n- +1 **A** and **S**.\n- **[HAZARDOUS]**."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1291-7ba8-2c5a-4a92",
@@ -2794,7 +2960,9 @@
             "EXTRA ATTACKS"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "83a7-ea20-ed9-d14a",
@@ -2862,7 +3030,9 @@
             "LETHAL HITS: non-MONSTER/VEHICLE"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2efc-c4b3-2ecc-5a37",
@@ -2936,6 +3106,12 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**BOYZ**",
+        "**BREAKA BOYZ**",
+        "**NOBZ**"
       ]
     },
     {
@@ -3010,6 +3186,10 @@
             "CLEAVE 2"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**MEGANOBZ**"
       ]
     },
     {
@@ -3114,7 +3294,9 @@
             "RAPID FIRE 4"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "260d-9ce4-ea1f-a957",
@@ -3188,7 +3370,9 @@
             "PSYCHIC"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ce45-db08-3795-18a9",
@@ -3261,6 +3445,10 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Gretchin^^**"
       ]
     },
     {
@@ -3307,7 +3495,9 @@
           "description": "While an enemy unit is **engaged** with only **FORTIFICATION** units:\n- That enemy unit can be selected as a target of ranged attacks.\n- When shooting that enemy unit, those ranged attacks have -1 to **hit rolls** (excluding **[CLOSE-QUARTERS]** attacks).\n- When that enemy unit is selected to make a **fall-back move**, if that enemy unit is only **engaged** with **FORTIFICATION** units, and that enemy unit is not **battle-shocked**, **hazard rolls** made for that enemy unit are automatically passed."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2d97-52db-2c1b-de5e",
@@ -3455,7 +3645,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "aeed-c6d9-4b90-376a",
@@ -3523,7 +3715,9 @@
             "Cleave 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b8fe-c7af-20fd-631d",
@@ -3645,7 +3839,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "609a-6ef1-a3e3-3baa",
@@ -3710,7 +3906,9 @@
             "BLAST 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6aed-92bb-49d6-12da",
@@ -3796,6 +3994,10 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**WARBIKERS**"
       ]
     },
     {
@@ -3851,7 +4053,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "afab-635c-23c5-cacc",
@@ -3945,7 +4149,9 @@
             "Cleave 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e53-68fa-a7b4-d6c6",
@@ -4015,7 +4221,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fbee-427a-1c46-f621",
@@ -4097,6 +4305,15 @@
           "damage": "3",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**BOYZ**",
+        "**BREAKA BOYZ**",
+        "**FLASH GITZ**",
+        "**MEK GUNZ**",
+        "**NOBZ**",
+        "**TANKBUSTAS**"
       ]
     },
     {
@@ -4137,7 +4354,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6610-3cb7-dc72-8852",
@@ -4206,7 +4425,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "070f-5f7f-2cab-6ee6",
@@ -4271,7 +4492,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2ba9-e97a-909d-3ac5",
@@ -4315,7 +4538,12 @@
           "description": "This model can be attached to the following units:\n- **^^Boyz^^**\n- **^^Nobz^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Boyz^^**",
+        "**^^Nobz^^**"
+      ]
     },
     {
       "id": "54de-2004-bbc1-3ac6",
@@ -4359,7 +4587,13 @@
           "description": "This model can be attached to the following units:\n- **^^Boyz^^**\n- **^^Nobz^^**\n- **^^Gretchin^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Boyz^^**",
+        "**^^Nobz^^**",
+        "**^^Gretchin^^**"
+      ]
     },
     {
       "id": "6a69-8e75-49ae-408f",
@@ -4404,7 +4638,11 @@
           "description": "This model can be attached to the following units:\n- **^^Gretchin^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Gretchin^^**"
+      ]
     },
     {
       "id": "2ab7-ab71-0af4-5d39",
@@ -4518,7 +4756,9 @@
             "EXTRA ATTACKS"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "181e-be55-d9c6-2b69",
@@ -4575,7 +4815,9 @@
             "PRECISION"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "78a7-cf35-aa8d-c420",
@@ -4660,7 +4902,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "80c4-14b2-d02d-d289",
@@ -4781,61 +5025,10 @@
             "EXTRA ATTACKS"
           ]
         }
-      ]
-    },
-    {
-      "id": "f401-c74a-cca8-5de3",
-      "name": "Runtherd",
-      "factionId": "orks",
-      "factionName": "Orks",
-      "battlefieldRole": "CHARACTER",
-      "basePoints": 10,
-      "stats": {
-        "movement": "6\"",
-        "toughness": 5,
-        "save": "5+",
-        "wounds": 3,
-        "leadership": "7+",
-        "objectiveControl": 1
-      },
-      "unitComposition": {
-        "models": [
-          {
-            "name": "Runtherd",
-            "baseSize": "32mm",
-            "count": 1
-          }
-        ]
-      },
-      "keywords": [
-        "INFANTRY",
-        "CHARACTER",
-        "FACTION: ORKS",
-        "SUPPORT",
-        "RUNTHERD"
       ],
-      "abilities": [
-        {
-          "name": "That'll Learn Ya (Once per battle round, per unit)",
-          "description": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**."
-        },
-        {
-          "name": "Support",
-          "description": "This model can be attached to the following units: \n- **GRETCHIN**"
-        }
-      ],
-      "weapons": [
-        {
-          "name": "Runtherd's Toolz",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        }
+      "isLeader": true,
+      "attachableTo": [
+        "**MEGANOBZ**"
       ]
     },
     {
@@ -4950,7 +5143,9 @@
             "SUSTAINED HITS 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

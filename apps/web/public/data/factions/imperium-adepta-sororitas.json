@@ -1,17 +1,43 @@
 {
   "id": "imperium-adepta-sororitas",
   "name": "Adepta Sororitas",
-  "sourceFile": "Imperium - Adepta Sororitas.json",
+  "grandAlliance": "Imperium",
+  "isLegends": false,
   "totalDatasheets": 34,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "9cc-e2b2-81eb-df6",
+      "name": "Detachment",
       "rules": [
         "Angelic Judgement",
         "Holy Quest",
         "Hymns of Battle"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "8e26-78e2-10bd-6982",
+      "name": "Hallowed Martyrs",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "a2f5-a466-96b6-d389",
+      "name": "Penitent Host",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "25b9-2563-1da8-b222",
+      "name": "Death Cult power blades",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "d9ef-2bc9-67d5-e7c9",
+      "name": "Death Cult blades",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -102,6 +128,29 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "our-martyred-lady",
+      "name": "Order of Our Martyred Lady",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "bloody-rose",
+      "name": "Order of the Bloody Rose",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "argent-shroud",
+      "name": "Order of the Argent Shroud",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "4b94-c22e-84f9-8d32",
@@ -181,6 +230,10 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD"
       ]
     },
     {
@@ -235,7 +288,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c338-14f9-4ee-f223",
@@ -410,6 +465,10 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD"
       ]
     },
     {
@@ -497,7 +556,9 @@
             "Ignores Cover"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8569-2390-d4db-30fd",
@@ -577,7 +638,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "91b8-3ccb-de30-6e54",
@@ -639,7 +702,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "76b1-f4d1-b2f0-6949",
@@ -702,7 +767,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "684e-4dd3-340a-23ee",
@@ -793,7 +860,9 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "938e-1c24-4e63-4cf3",
@@ -855,7 +924,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3ad3-558b-29f9-2e45",
@@ -917,7 +988,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1001-80ff-c9a8-5d9b",
@@ -1020,7 +1093,9 @@
             "Twin-Linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8f9a-8a8b-2539-547f",
@@ -1099,7 +1174,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "3c3f-f02d-c05c-492a",
@@ -1255,7 +1332,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7188-4d20-8216-c68a",
@@ -1366,7 +1445,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fbeb-1caf-8f5c-ff8e",
@@ -1456,7 +1537,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e75d-a7ac-7fcc-d302",
@@ -1653,7 +1736,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "327d-a6df-26b-bb9b",
@@ -1765,7 +1850,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "599d-1e2a-eb0e-430e",
@@ -1870,7 +1957,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c49d-f150-4b3-c118",
@@ -1919,7 +2008,9 @@
           "description": "Each time a model in this unit makes a ranged attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. If such an attack targets an enemy unit that has destroyed one or more ^^**Adepta Sororitas^^** units from your army during the battle, add 1 to the Hit roll and add 1 to the Wound roll as well."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "21f1-8ed6-52c6-54c7",
@@ -2002,6 +2093,10 @@
             "Devastating Wounds"
           ]
         }
+      ],
+      "isLeader": false,
+      "attachableTo": [
+        "This unit can be attached to the following units: SERAPHIM SQUAD, ZEPHYRIM SQUAD"
       ]
     },
     {
@@ -2049,7 +2144,9 @@
           "description": "At the start of your Command phase, this model regains 1 lost wound."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9f5f-d769-7900-c8a1",
@@ -2154,7 +2251,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9516-5ea3-ec42-dcfe",
@@ -2208,7 +2307,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d324-8119-7bf-d5e1",
@@ -2297,7 +2398,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e80a-4a97-2c3b-710e",
@@ -2382,6 +2485,10 @@
             "Sustained Hits 1"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: SERAPHIM SQUAD, ZEPHYRIM SQUAD"
       ]
     },
     {
@@ -2437,7 +2544,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e15e-17fa-23ca-693e",
@@ -2481,7 +2590,9 @@
           "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6227-8c95-0e8a-81de",
@@ -2540,7 +2651,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "eade-6ec7-7236-bfdb",
@@ -2726,7 +2839,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e286-849d-8f74-75e6",
@@ -2816,7 +2931,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8f3c-d887-6e18-02e8",
@@ -2865,7 +2982,9 @@
           "description": "This model can be attached to the following units: ^^**Battle Sisters Squad, Celestian Sacresants, Dominion Squad, Retributor Squad, Sisters Novitiate Squad**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "622e-1e15-13f1-601a",
@@ -2913,7 +3032,9 @@
           "description": "This model can be attached to the following units: ^^**Battle Sisters Squad, Celestian Sacresants, Dominion Squad, Retributor Squad, Sisters Novitiate Squad**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "1b8d-2b8b-084a-feba",
@@ -2963,7 +3084,9 @@
           "description": "This model can be attached to the following units: ^^**Paragon Warsuits**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e59a-2a90-e102-940f",
@@ -3064,7 +3187,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

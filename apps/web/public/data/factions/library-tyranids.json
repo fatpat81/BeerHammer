@@ -1,9 +1,156 @@
 {
   "id": "library-tyranids",
-  "name": "Library - Tyranids",
-  "sourceFile": "Library - Tyranids.json",
+  "name": "Tyranids Legends",
+  "grandAlliance": "Xenos",
+  "isLegends": true,
   "totalDatasheets": 17,
-  "detachments": [],
+  "detachments": [
+    {
+      "id": "6fe4-d5e5-26c-449a",
+      "name": "Psychostatic Disruption (Aura)",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "c2fe-bf23-bf24-aa43",
+      "name": "Invasion Fleet",
+      "rules": [
+        "Hyper Adaptions"
+      ],
+      "enhancements": [
+        {
+          "id": "1b44-a62d-8dcf-c9d9",
+          "name": "Alien Cunning",
+          "points": 30,
+          "description": "**^^Tyranids^^** model only. After both players have deployed their armies, select up to three **^^Tyranids^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "ae4f-4b00-7733-1cf2",
+          "name": "Perfectly Adapted",
+          "points": 15,
+          "description": "**^^Tyranids^^** model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer"
+        },
+        {
+          "id": "abdd-58fa-44ee-4fa0",
+          "name": "Synaptic Linchpin",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only. While a friendly **^^Tyranids^^** unit is within 9\" of the bearer, that unit is within Synapse Range of your army."
+        },
+        {
+          "id": "8036-cb7f-d252-2e2a",
+          "name": "Adaptive Biology",
+          "points": 25,
+          "description": "**^^Tyranids^^** model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead."
+        }
+      ]
+    },
+    {
+      "id": "731f-1524-da02-945b",
+      "name": "Subterranean Assault",
+      "rules": [
+        "Keywords",
+        "Surprise Assault"
+      ],
+      "enhancements": [
+        {
+          "id": "f4a3-f457-328f-582b",
+          "name": "Vanguard Intellect",
+          "points": 15,
+          "description": "**^^Tyranids^^** model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        },
+        {
+          "id": "fe84-1d81-827d-7473",
+          "name": "Trygon Prime",
+          "points": 20,
+          "description": "**^^Trygon^^** model only. The bearer gains the **^^Synapse^^** keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
+        },
+        {
+          "id": "4632-bb29-3e38-bb30",
+          "name": "Synaptic Synergy",
+          "points": 15,
+          "description": "**^^Tyranids^^** model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+          "id": "6bbb-ce96-9443-1f1d",
+          "name": "Tremor Senses",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only. After both players have deployed their armies, select up to three friendly **^^Tyranids^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        }
+      ]
+    },
+    {
+      "id": "0a79-5968-68f0-56b5",
+      "name": "Host of Ascension",
+      "rules": [
+        "A Perfect Ambush"
+      ],
+      "enhancements": [
+        {
+          "id": "7402-e585-d7cf-913e",
+          "name": "Our Time is Nigh",
+          "points": 20,
+          "description": "**^^Genestealer Cults^^** model only. Once per battle, when the bearer's unit declares a charge, the bearer can use the Enhancement. If it does, until the end of the phase, add 2 to Charge rolls made for the bearer's unit."
+        },
+        {
+          "id": "ca5f-020c-44b1-586b",
+          "name": "A Chink in Their Armour",
+          "points": 20,
+          "description": "**^^Genestealer Cults^^** model only. Each time the bearer is set up on the battlefield as Reinforcements, until the end of your next Fight phase, ranged weapons equipped in the bearer's unit have the **[LETHAL HITS]** ability."
+        },
+        {
+          "id": "de75-d3a6-0cac-1903",
+          "name": "Prowling Agitant",
+          "points": 15,
+          "description": "**GENESTEALER CULTS** model only. In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”."
+        },
+        {
+          "id": "4136-84c7-ed34-09a6",
+          "name": "Assassination Edict",
+          "points": 15,
+          "description": "**^^Genestealer Cults^^** model only. Each time a model in the bearer's unit makes an attack that targets a **^^Character^^** unit, add 1 to the Hit roll."
+        }
+      ]
+    },
+    {
+      "id": "24fc-8c17-7d50-bec9",
+      "name": "Cult Unveiled",
+      "rules": [
+        "Forming Boarding Squads",
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Harassing Fire"
+      ],
+      "enhancements": [
+        {
+          "id": "9c6d-1f1f-45ea-fe5b",
+          "name": "Primary Detonator",
+          "points": 0,
+          "description": "Once per battle, when an enemy unit opens a closed Hatchway, if the bearer is on the battlefield, it can use this Enhancement. If it does, roll one D6: on a 3-4, that enemy unit suffers 1 mortal wound; on a 5+, that enemy unit suffers 2 mortal wounds."
+        },
+        {
+          "id": "f793-7dfa-d20a-7410",
+          "name": "Master Saboteur",
+          "points": 0,
+          "description": "The first time in the battle that your opponent's army Secures an objective marker while the bearer is on the battlefield, roll one D6: on a 3+, that objective marker is not Secured by your opponent's army."
+        }
+      ]
+    },
+    {
+      "id": "deed-cbf8-1ac5-0294",
+      "name": "Xenocult Masses",
+      "rules": [
+        "Hordes of the Faithful"
+      ],
+      "enhancements": [
+        {
+          "id": "5398-3d10-e060-16a2",
+          "name": "Devious Disguises",
+          "points": 15,
+          "description": "**NEOPHYTE HYBRIDS** unit only. This unit has ‑3\" **detection range**."
+        }
+      ]
+    }
+  ],
   "stratagems": [
     {
       "id": "core-command-reroll",
@@ -92,12 +239,13 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "fa68-fcb9-38c-cd0f",
       "name": "Winged Hive Tyrant",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 185,
       "stats": {
@@ -148,13 +296,15 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "507d-5ea4-6ef1-bf66",
       "name": "Winged Tyranid Prime",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 65,
       "stats": {
@@ -211,13 +361,19 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Gargoyles^^**",
+        "**^^Tyranid Warriors With Melee Bio-Weapons^^**",
+        "**^^Tyranid Warriors With Ranged Bio-Weapons^^**"
       ]
     },
     {
       "id": "bc36-92fe-ecc6-58b3",
       "name": "Deathleaper",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 80,
       "stats": {
@@ -257,13 +413,15 @@
           "description": "This model cannot be your Warlord"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9ce8-7a63-15c3-0347",
       "name": "Gargoyles",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "BATTLELINE",
       "basePoints": 75,
       "stats": {
@@ -324,13 +482,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c10d-772e-a54f-a2b9",
       "name": "Hyperadapted Raveners",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 165,
       "stats": {
@@ -415,13 +575,17 @@
             "Twin-linked"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: **^^Raveners^^**"
       ]
     },
     {
       "id": "da44-72c9-7a27-48aa",
       "name": "Lictor",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "INFANTRY",
       "basePoints": 60,
       "stats": {
@@ -454,13 +618,15 @@
           "description": "Once per battle round, you can target one model with this ability with the Rapid Ingress Stratagem for 0CP."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2bbb-d811-15f7-1a81",
       "name": "Mawloc",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "MONSTER",
       "basePoints": 130,
       "stats": {
@@ -520,13 +686,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "642f-9302-4fdc-ab68",
       "name": "Neurolictor",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "INFANTRY",
       "basePoints": 80,
       "stats": {
@@ -583,13 +751,15 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d213-efd8-a2b4-42d2",
       "name": "Parasite of Mortrex",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 65,
       "stats": {
@@ -655,13 +825,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3f5-f7d6-1ce8-e6b9",
       "name": "Raveners",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "INFANTRY",
       "basePoints": 125,
       "stats": {
@@ -709,13 +881,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "56db-d7c-b349-677f",
       "name": "Trygon",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "MONSTER",
       "basePoints": 135,
       "stats": {
@@ -760,13 +934,15 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fada-677a-f6a4-cd12",
       "name": "Tyrannocyte",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "DEDICATED_TRANSPORT",
       "basePoints": 80,
       "stats": {
@@ -825,13 +1001,15 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9bd8-ac8c-2d3b-79f6",
       "name": "Von Ryan's Leapers",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "INFANTRY",
       "basePoints": 55,
       "stats": {
@@ -877,13 +1055,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "527c-d3c6-c620-c7c6",
       "name": "Node Organism [Crucible]",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 80,
       "stats": {
@@ -923,13 +1103,18 @@
           "description": "This model can be attached to the following units:\n- **^^Tyranid Warriors with Melee Bio-weapons^^**\n- **^^Tyranid Warriors with Ranged Bio-weapons^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Tyranid Warriors with Melee Bio-weapons^^**",
+        "**^^Tyranid Warriors with Ranged Bio-weapons^^**"
+      ]
     },
     {
       "id": "6f46-0c77-acd0-3f5d",
       "name": "Prime Organism [Crucible]",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 135,
       "stats": {
@@ -968,13 +1153,18 @@
           "description": "This model can be attached to the following units:\n- **^^Carnifexes^^**\n- **^^Tyrant Guard^^**"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Carnifexes^^**",
+        "**^^Tyrant Guard^^**"
+      ]
     },
     {
       "id": "a89f-8ad1-3d79-174f",
       "name": "Macro Organism [Crucible]",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 150,
       "stats": {
@@ -1008,13 +1198,15 @@
           "description": "At the start of each player's Command phase, this model regains up to D3 lost wounds."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7173-1bd9-b60b-6555",
       "name": "The Red Terror",
       "factionId": "library-tyranids",
-      "factionName": "Library - Tyranids",
+      "factionName": "Tyranids Legends",
       "battlefieldRole": "CHARACTER",
       "basePoints": 120,
       "stats": {
@@ -1082,7 +1274,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

@@ -269,7 +269,9 @@ export default function RosterEditPage() {
         <div className="layout-edit">
           <section style={{ gridColumn: '1 / -1' }}>
             <RosterBuilder
-              factionId={army?.factionId || 'adeptus_astartes'}
+              factionId={army?.factionId || 'imperium-space-marines'}
+              subfactionId={army?.factionThemeOverride}
+              detachmentPrimary={army?.detachmentPrimary}
               pointsLimit={army?.pointsLimit || 2000}
               dpLimit={army?.detachmentPointsLimit || 3}
               initialUnits={initialUnits}

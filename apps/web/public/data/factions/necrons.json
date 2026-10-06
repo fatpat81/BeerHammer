@@ -1,17 +1,45 @@
 {
   "id": "necrons",
   "name": "Necrons",
-  "sourceFile": "Necrons.json",
+  "grandAlliance": "Xenos",
+  "isLegends": false,
   "totalDatasheets": 67,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "82f1-b597-7b06-8ba2",
+      "name": "Detachment",
       "rules": [
         "Hypermotility Protocols",
         "Transdimensional Deployment",
         "Empowered Engines"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "9ebf-2bbd-6059-1d40",
+      "name": "Awakened Dynasty",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "163f-63bd-f2e1-5e7",
+      "name": "Obeisance Phalanx",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "e0fd-c955-4822-6dba",
+      "name": "Starshatter Arsenal",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "51c2-e233-ea51-14df",
+      "name": "Skyshroud Spearhead",
+      "rules": [
+        "Transdimensional Deployment"
+      ],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -102,6 +130,36 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "szarekhan",
+      "name": "Szarekhan Dynasty",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "sautekh",
+      "name": "Sautekh Dynasty",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "mephrit",
+      "name": "Mephrit Dynasty",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "novokh",
+      "name": "Novokh Dynasty",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "ba86-eaad-5396-fc07",
@@ -166,7 +224,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "49fd-a80d-8cc0-c76b",
@@ -255,7 +315,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "43b5-f4f9-f7c6-327a",
@@ -319,7 +381,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "b5c3-317e-df69-53bb",
@@ -382,6 +446,10 @@
             "Precision"
           ]
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "You can attach this model to one of the above units even if NEMESOR ZAHNDREKH has already been attached to it. If it is, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
       ]
     },
     {
@@ -467,7 +535,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8386-4191-ac3a-aa28",
@@ -540,7 +610,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c1e6-b88a-2003-174d",
@@ -604,7 +676,9 @@
             "Sustained Hits D3"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "379b-d6a0-cd05-ef89",
@@ -677,7 +751,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c401-d95f-c5ce-7738",
@@ -762,7 +838,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8725-de36-7ef7-45f6",
@@ -852,7 +930,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8005-b0eb-72ab-aed5",
@@ -936,7 +1016,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e667-b37c-61c-4893",
@@ -1035,7 +1117,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "dbe5-257e-e2bd-1b40",
@@ -1116,7 +1200,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "852a-ba39-e93f-6b62",
@@ -1188,7 +1274,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "aea6-b6a1-a924-d31",
@@ -1259,7 +1347,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b7d-54ea-f7a8-9688",
@@ -1333,7 +1423,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "84bc-87b1-1eec-f574",
@@ -1404,7 +1496,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "58e9-5212-f5a6-c12d",
@@ -1474,7 +1568,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f81-b23c-e183-39d7",
@@ -1555,7 +1651,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7c45-2aab-7526-febe",
@@ -1617,7 +1715,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d504-e79e-f4d9-90aa",
@@ -1686,7 +1786,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c4e3-f6b0-f3aa-9d90",
@@ -1754,7 +1856,9 @@
             "-"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b7d7-14c9-63c1-ded5",
@@ -1817,7 +1921,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c219-a708-f5b0-f0e7",
@@ -1869,7 +1975,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ef7a-c413-c779-2d18",
@@ -1938,7 +2046,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "66e-26f2-7c38-e4d8",
@@ -1988,7 +2098,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "14fa-6813-e51b-7942",
@@ -2095,7 +2207,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e09-d7d6-e4e3-42c1",
@@ -2167,7 +2281,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f926-a2fe-3494-24b7",
@@ -2248,7 +2364,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8065-e9c0-dcb5-be1d",
@@ -2358,7 +2476,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "276e-bc21-e1d0-3c41",
@@ -2434,7 +2554,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cae9-5277-87f4-54b8",
@@ -2503,7 +2625,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "259b-a8e3-928f-1d0c",
@@ -2560,7 +2684,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c6db-9736-4d53-3ef6",
@@ -2610,7 +2736,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "77d-d442-a3-422c",
@@ -2719,7 +2847,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6829-6dcb-b342-afe4",
@@ -2805,7 +2935,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a022-9bf6-f08b-c416",
@@ -2845,7 +2977,9 @@
           "description": "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1ff-6384-ef1a-8297",
@@ -2926,7 +3060,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e046-8220-d8a2-1d19",
@@ -2999,7 +3135,9 @@
             "Rapid Fire 5"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6f72-b8f7-fd8d-5c2c",
@@ -3063,7 +3201,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d9ea-2965-24-d3a3",
@@ -3132,7 +3272,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ff8f-2e43-8af1-3470",
@@ -3217,7 +3359,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9928-da6-4e86-ec9f",
@@ -3274,7 +3418,9 @@
             "Rapid Fire 5"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2a86-2d6-6446-7f1",
@@ -3336,7 +3482,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "52fb-edb1-c747-415a",
@@ -3407,7 +3555,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "256d-92cd-5d14-bbab",
@@ -3482,7 +3632,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5451-67b5-a66c-71d2",
@@ -3553,7 +3705,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "db10-2662-da6a-516e",
@@ -3651,7 +3805,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7422-7fbf-8694-364c",
@@ -3769,7 +3925,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "919f-7076-c827-b844",
@@ -3828,7 +3986,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f868-afbc-9f6b-e4e9",
@@ -3894,7 +4054,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9519-5dbc-ab5-c720",
@@ -3958,7 +4120,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a7e1-5b53-1d89-e1e3",
@@ -4022,7 +4186,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ef1-14e1-cf28-4701",
@@ -4129,7 +4295,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fa11-cd65-fcf6-427c",
@@ -4236,7 +4404,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b6b0-9a60-d2e4-7ef0",
@@ -4314,7 +4484,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "37d1-5b3e-b4e6-f8ef",
@@ -4397,7 +4569,9 @@
             "Melta 4"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e6d4-56e1-3bbd-475",
@@ -4455,7 +4629,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2e4-afdd-efdd-c5c8",
@@ -4501,7 +4677,9 @@
           "description": "This model can be attached to the following units: IMMORTALS, LYCHGUARD, NECRON WARRIORS"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "97d7-4b22-46b7-dae0",
@@ -4587,7 +4765,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b7ee-a0fa-5736-b58f",
@@ -4692,7 +4872,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "92cc-9d54-5d0c-6663",
@@ -4783,7 +4965,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1d4b-a179-ae99-3283",
@@ -4876,7 +5060,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "be60-a5ae-6c7c-df47",
@@ -4921,7 +5107,9 @@
           "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e884-dd7a-a1cd-bad8",
@@ -4961,7 +5149,9 @@
           "description": "This model can be attached to the following units: ^^**Immortals, Necron Warriors**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "50cd-aa29-f506-8ed1",
@@ -5004,7 +5194,9 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d3ee-bc80-1eea-6463",
@@ -5081,7 +5273,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

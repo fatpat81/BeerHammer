@@ -1,12 +1,13 @@
 {
   "id": "chaos-thousand-sons",
   "name": "Thousand Sons",
-  "sourceFile": "Chaos - Thousand Sons.json",
+  "grandAlliance": "Chaos",
+  "isLegends": false,
   "totalDatasheets": 41,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "3b0d-dccf-8661-be1c",
+      "name": "Detachment",
       "rules": [
         "Flow of Magic",
         "Kindred Sorcery",
@@ -17,7 +18,106 @@
         "Sorcerous Invigoration",
         "Ensorcelled Animus",
         "All-seeing Mutant Hordes"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "7b92-cca6-0617-1b6d",
+      "name": "Hexwarp Thrallband",
+      "rules": [
+        "Flow of Magic"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "9aba-cb08-cd38-9e01",
+      "name": "Grand Coven",
+      "rules": [
+        "Kindred Sorcery"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "6acc-9928-2b67-73c3",
+      "name": "Changehost of Deceit",
+      "rules": [
+        "Infernal Pacts"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "7510-5cb8-60fe-61a0",
+      "name": "Rubricae Phalanx",
+      "rules": [
+        "All is Dust"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "e215-5f19-8d65-cd21",
+      "name": "Cultist firearm",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "138f-e150-fe55-e471",
+      "name": "Occult Apparitions",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "d81a-1b2e-73d9-d0ad",
+      "name": "The Cult of Manipulation",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "8e37-897a-18b6-98d2",
+      "name": "The Cult of Mutation",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "554f-2544-67fc-16d8",
+      "name": "The Cult of Prophecy",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "2ad5-66f8-2521-7515",
+      "name": "The Cult of Time",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "3dfb-fe28-56e4-40f5",
+      "name": "The Cult of Scheming",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "979c-9492-712d-b5ba",
+      "name": "The Cult of Magic",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "3795-1c4b-6bf5-e6f8",
+      "name": "The Cult of Knowledge",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "a00c-25d1-c7af-14c6",
+      "name": "The Cult of Change",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "7a37-52f8-d1f8-841b",
+      "name": "The Cult of Duplicity",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -108,6 +208,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "3bfa-bf00-b5ed-cc81",
@@ -189,7 +290,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "dfde-eaff-e63e-3aae",
@@ -254,7 +357,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a619-beee-4bde-d049",
@@ -309,7 +414,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4819-dbbe-8547-4e23",
@@ -364,7 +471,9 @@
             "Rapid Fire 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8d9b-b949-2557-dcc4",
@@ -407,7 +516,9 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport^^** this turn makes a Psychic attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "60de-4c77-95e1-1337",
@@ -460,7 +571,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3413-b8fd-e22c-da4f",
@@ -515,7 +628,9 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c3a6-8fab-45f0-2d45",
@@ -594,7 +709,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "1724-8c9c-c385-16c6",
@@ -675,7 +792,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d2f1-7a0b-f7cd-9b46",
@@ -740,7 +859,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b9d-e3c1-3d55-8276",
@@ -883,7 +1004,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "637a-d542-35aa-e95c",
@@ -953,7 +1076,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1693-5e00-da69-57bb",
@@ -1035,7 +1160,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "91dc-9aad-0505-52a8",
@@ -1146,7 +1273,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f2aa-19fd-335a-09b3",
@@ -1226,7 +1355,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "094c-c618-92c1-b394",
@@ -1334,7 +1465,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5d3d-e13b-8b76-dad3",
@@ -1480,7 +1613,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b1cf-c5-5121-92a4",
@@ -1632,7 +1767,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "af1e-9a3d-785c-47f8",
@@ -1705,7 +1842,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c6d1-e73b-9d26-5d8b",
@@ -1769,7 +1908,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "eccd-e442-607b-3fd0",
@@ -1875,7 +2016,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "66f4-929e-1769-f277",
@@ -1978,7 +2121,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1703-3edd-5eb3-fcef",
@@ -2020,7 +2165,9 @@
           "description": "Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c251-bd54-441-4799",
@@ -2102,7 +2249,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "f5b9-50c8-5c60-d8ea",
@@ -2174,7 +2323,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c4ab-b52d-3ac0-5d56",
@@ -2228,7 +2379,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3a8-a34f-76aa-b56a",
@@ -2293,7 +2446,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "dc89-ef5-e91d-b155",
@@ -2531,6 +2686,12 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "RUBRIC MARINES"
       ]
     },
     {
@@ -2616,7 +2777,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8b9f-917f-37c1-99c3",
@@ -2659,7 +2822,9 @@
           "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8f70-9bec-9b83-216b",
@@ -2758,7 +2923,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c964-c75a-2a9d-e451",
@@ -2878,7 +3045,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "694f-a205-b260-783c",
@@ -2974,7 +3143,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7cbe-2406-8e67-aff5",
@@ -3032,7 +3203,9 @@
             "Anti-VEHICLE 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4c73-cbd1-f052-80c3",
@@ -3168,7 +3341,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "aec5-4419-39e7-3e63",
@@ -3270,7 +3445,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "dd17-8cb8-ed8c-f6c8",
@@ -3323,7 +3500,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8e43-1b14-4d87-7d17",
@@ -3370,7 +3549,9 @@
           "description": "This model can be attached to the following unit: ^^**Rubric Marines**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d288-821d-7fef-f3ae",
@@ -3416,7 +3597,9 @@
           "description": "If this unit starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third turn, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting up this unit on the battlefield, treat the current battle round number as being one higher than it actually is."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "f75a-a5e6-f478-6f55",
@@ -3463,7 +3646,9 @@
           "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "f158-2979-c38b-65b5",
@@ -3620,7 +3805,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

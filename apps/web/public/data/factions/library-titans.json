@@ -1,7 +1,8 @@
 {
   "id": "library-titans",
-  "name": "Library - Titans",
-  "sourceFile": "Library - Titans.json",
+  "name": "Titans (Adeptus Titanicus & Traitoris)",
+  "grandAlliance": "Other",
+  "isLegends": true,
   "totalDatasheets": 4,
   "detachments": [],
   "stratagems": [
@@ -92,12 +93,13 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "8eb5-a990-6eb0-9b41",
       "name": "Warhound Titan",
       "factionId": "library-titans",
-      "factionName": "Library - Titans",
+      "factionName": "Titans (Adeptus Titanicus & Traitoris)",
       "battlefieldRole": "VEHICLE",
       "basePoints": 1100,
       "stats": {
@@ -219,13 +221,15 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b7e8-f3ae-be53-9ba5",
       "name": "Reaver Titan",
       "factionId": "library-titans",
-      "factionName": "Library - Titans",
+      "factionName": "Titans (Adeptus Titanicus & Traitoris)",
       "battlefieldRole": "VEHICLE",
       "basePoints": 2200,
       "stats": {
@@ -370,13 +374,15 @@
           "damage": "6",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8e6f-4e09-12d5-fafd",
       "name": "Warbringer Nemesis Titan",
       "factionId": "library-titans",
-      "factionName": "Library - Titans",
+      "factionName": "Titans (Adeptus Titanicus & Traitoris)",
       "battlefieldRole": "VEHICLE",
       "basePoints": 2600,
       "stats": {
@@ -540,13 +546,15 @@
           "damage": "4",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "eafa-cd47-1c2f-61ee",
       "name": "Warlord Titan",
       "factionId": "library-titans",
-      "factionName": "Library - Titans",
+      "factionName": "Titans (Adeptus Titanicus & Traitoris)",
       "battlefieldRole": "VEHICLE",
       "basePoints": 3500,
       "stats": {
@@ -752,7 +760,9 @@
           "damage": "8",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

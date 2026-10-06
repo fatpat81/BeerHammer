@@ -1,7 +1,8 @@
 {
   "id": "unaligned-forces",
   "name": "Unaligned Forces",
-  "sourceFile": "Unaligned Forces.json",
+  "grandAlliance": "Other",
+  "isLegends": true,
   "totalDatasheets": 22,
   "detachments": [],
   "stratagems": [
@@ -92,6 +93,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "e85b-17c7-1ad9-8375",
@@ -146,7 +148,9 @@
           "damage": "D3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b1d-134a-9996-b634",
@@ -178,7 +182,9 @@
         "AEGIS DEFENCE LINE WITH WEAPON EMPLACEMENT"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5134-5fe9-e489-43c4",
@@ -213,7 +219,9 @@
         "BASTION"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "71b0-77b9-522c-17d6",
@@ -248,7 +256,9 @@
         "FIRESTORM REDOUBT"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c4d1-c85a-a20e-6c94",
@@ -327,7 +337,9 @@
           "damage": "D6+1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e3ba-7f87-c32-229",
@@ -403,7 +415,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3b75-e314-ecd5-cd63",
@@ -456,7 +470,9 @@
           "damage": "4",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cabe-2c66-c8b6-de6c",
@@ -524,7 +540,9 @@
             "Hazardous"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f39-fc54-f95a-8395",
@@ -651,7 +669,9 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "54c-8b9f-b1d8-93c3",
@@ -693,7 +713,9 @@
           "description": "At the end of your Movement phase, if there is a friendly Aircraft model on top of this Fortification, that Aircraft regains up to D3 lost wounds"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "da76-e18f-523e-d45a",
@@ -756,7 +778,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "11b2-8348-ae67-fa98",
@@ -826,7 +850,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "14fe-18ed-9c25-189c",
@@ -865,7 +891,9 @@
           "description": "Each time this model makes a ranged attack that targets the closest enemy unit:\n- If that attack is made with a Punisher gatling cannon and the target is not a MONSTER or VEHICLE, add 1 to the Hit roll.\n- If that attack is made with a battle cannon and the target is a MONSTER or VEHICLE, add 1 to the Hit roll.\n- If that attack is made with a quad-lascannon and the target can FLY, add 1 to the Hit roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4501-646d-e705-9dca",
@@ -903,7 +931,9 @@
           "description": "While a friendly model is wholly within 6\" of this FORTIFICATION, that model has a 4+ invulnerable save against ranged attacks."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5c81-92c5-e20b-edf1",
@@ -961,7 +991,9 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9698-2e0-15ac-1193",
@@ -1001,7 +1033,9 @@
           "description": "Each time an attack is allocated to this Fortification, subtract 1 from the Damage characteristic of that attack."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8419-8133-33f3-e0a4",
@@ -1034,7 +1068,9 @@
         "DEFENCE EMPLACEMENT"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "64b7-a2df-416a-9963",
@@ -1067,7 +1103,9 @@
         "DEFENCE LINE"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f6f8-8759-3282-2ab",
@@ -1126,7 +1164,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "20c8-d2-586d-623",
@@ -1212,7 +1252,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "983d-b163-dc9f-3c54",
@@ -1266,7 +1308,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a5c2-3951-e727-b64a",
@@ -1328,7 +1372,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

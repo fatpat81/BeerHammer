@@ -1,12 +1,13 @@
 {
   "id": "imperium-adeptus-custodes",
   "name": "Adeptus Custodes",
-  "sourceFile": "Imperium - Adeptus Custodes.json",
+  "grandAlliance": "Imperium",
+  "isLegends": false,
   "totalDatasheets": 34,
   "detachments": [
     {
-      "name": "Detachments",
       "id": "5218-339c-eb34-9ac0",
+      "name": "Detachments",
       "rules": [
         "Martial Mastery",
         "Revered Companions",
@@ -18,7 +19,47 @@
         "March of the Honoured Dead",
         "Skin-crawling Disorientation",
         "The Hammer Falls"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "70eb-2978-3ad5-5901",
+      "name": "Shield Host",
+      "rules": [
+        "Martial Mastery"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "757a-b5ed-a43f-3cdd",
+      "name": "Talons of the Emperor",
+      "rules": [
+        "Revered Companions"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "a060-3a8d-670c-25f0",
+      "name": "Solar Spearhead",
+      "rules": [
+        "Auric Armour",
+        "Moritoi Ancients"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "3b75-a700-050c-06f5",
+      "name": "Lions of the Emperor",
+      "rules": [
+        "Against All Odds"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "4f56-b2a4-d4d7-2828",
+      "name": "Heralds of the Host",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -109,6 +150,29 @@
       ]
     }
   ],
+  "subfactions": [
+    {
+      "id": "solar-watch",
+      "name": "Solar Watch",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "shadowkeepers",
+      "name": "Shadowkeepers",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "emissaries-imperatus",
+      "name": "Emissaries Imperatus",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    }
+  ],
   "datasheets": [
     {
       "id": "9e42-7207-9c30-6122",
@@ -174,7 +238,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c8a6-a4c5-703e-b717",
@@ -278,7 +344,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d7cb-7d30-715b-50d2",
@@ -346,7 +414,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "48b7-e713-d5b1-f11c",
@@ -435,7 +505,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "91b3-2e1c-e642-d213",
@@ -550,7 +622,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9610-b148-8433-93b8",
@@ -694,7 +768,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7099-71b-56e8-7191",
@@ -794,6 +870,12 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Prosecutors",
+        "Vigilators",
+        "Witchseekers"
       ]
     },
     {
@@ -887,7 +969,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b61c-b815-65c0-b1cc",
@@ -1055,7 +1139,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "6319-eeba-b717-bd86",
@@ -1150,7 +1236,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "58fa-4a25-a5af-1144",
@@ -1238,7 +1326,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "7d7c-c212-47a3-38e4",
@@ -1317,7 +1407,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8103-2e01-5d6a-b761",
@@ -1393,7 +1485,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "188b-e48b-29f-1456",
@@ -1485,7 +1579,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "76be-3bcb-cf4-bcbd",
@@ -1580,7 +1676,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "918b-c9ed-7af7-74df",
@@ -1678,7 +1776,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "dd2d-568a-9c56-1b6e",
@@ -1751,7 +1851,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "503b-f7be-eeeb-9e31",
@@ -1818,7 +1920,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "af0f-5212-907e-7125",
@@ -1913,7 +2017,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6f9f-e6aa-ba13-aab1",
@@ -1981,7 +2087,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "03bc-0141-b967-40e0",
@@ -2025,7 +2133,9 @@
           "description": "Once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves�"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "00ab-41c4-cf52-4ad2",
@@ -2147,7 +2257,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "201e-e502-a8d1-3974",
@@ -2253,7 +2365,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4988-d93e-5034-2b3c",
@@ -2321,7 +2435,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "db3b-02cd-87a2-3b52",
@@ -2427,7 +2543,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "06df-2fb2-8dfa-2fce",
@@ -2494,7 +2612,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3ee2-62a9-af84-1a90",
@@ -2591,7 +2711,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e7d8-1c73-7d03-8b62",
@@ -2714,7 +2836,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f35e-ef9c-9ef4-77e1",
@@ -2799,7 +2923,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9c1a-7efd-ed36-440e",
@@ -2893,7 +3019,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9335-74d9-ad68-3ff7",
@@ -2972,7 +3100,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "de0b-37e9-b9f5-d3a6",
@@ -3017,7 +3147,9 @@
           "description": "Once per phase, you can re-roll one Hit roll or one Wound roll for an attack made by this model."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e58d-17d4-71f8-4137",
@@ -3063,7 +3195,9 @@
           "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c11a-f70a-2877-ed27",
@@ -3110,7 +3244,9 @@
           "description": "Each time this model makes an attack that targets a ^^**Monster**^^ or ^^**Vehicle**^^ unit, you can re-roll the Wound roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     }
   ]
 }

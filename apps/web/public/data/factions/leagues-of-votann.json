@@ -1,12 +1,13 @@
 {
   "id": "leagues-of-votann",
   "name": "Leagues of Votann",
-  "sourceFile": "Leagues of Votann.json",
+  "grandAlliance": "Xenos",
+  "isLegends": false,
   "totalDatasheets": 25,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "5914-3326-fac9-bf29",
+      "name": "Detachment",
       "rules": [
         "Methodical Annihilation",
         "Assailed From Every Angle",
@@ -18,7 +19,22 @@
         "Sagitaur Spearhead",
         "Eye of the Hunt",
         "Avatars of the Ancestors"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "1077-70a1-0570-5685",
+      "name": "Hearthband",
+      "rules": [
+        "Methodical Annihilation"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "01f8-d9e4-7079-467a",
+      "name": "Grudge (Genestealer Cults)",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -109,6 +125,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "2e6e-95a1-60ad-7b1c",
@@ -171,7 +188,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "ba4f-c3f9-6925-af0c",
@@ -555,7 +574,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1b00-2abb-718f-def6",
@@ -626,7 +647,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "2cc6-e2bf-635f-1260",
@@ -701,7 +724,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d3a3-2d20-bd7e-6778",
@@ -820,7 +845,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8f33-5601-3707-78f4",
@@ -982,7 +1009,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "09d3-6357-7888-00d9",
@@ -1166,7 +1195,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "415a-e6f6-d17f-d700",
@@ -1246,7 +1277,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9086-5272-398b-bbce",
@@ -1329,7 +1362,9 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9655-8367-7467-9e6e",
@@ -1411,7 +1446,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ea1b-99f6-c398-06b1",
@@ -1503,7 +1540,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a110-e538-4e85-159b",
@@ -1631,7 +1670,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b0b-c18d-1470-44bb",
@@ -1729,7 +1770,9 @@
             "Assault"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b7e1-55fd-9aae-b690",
@@ -1812,7 +1855,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7932-6aac-cd01-3181",
@@ -1884,7 +1929,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e5c2-d1a0-b54d-65df",
@@ -1980,7 +2027,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f788-ecf2-9b2e-bc23",
@@ -2063,7 +2112,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cfbc-9eeb-badb-b28c",
@@ -2132,7 +2183,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1e3f-209d-798f-3a42",
@@ -2170,7 +2223,9 @@
           "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem. If units from your army have Fortify Takeover, hits are scored on unmodified Hit rolls of 4+ while resolving that Stratagem instead."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2add-0a08-fbef-8f5e",
@@ -2208,7 +2263,9 @@
           "description": "Each time an enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) that is within Engagement Range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "595a-cfac-3b40-710d",
@@ -2306,7 +2363,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "0039-5b91-2e96-0e08",
@@ -2352,7 +2411,9 @@
           "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "05b6-7622-edbe-7a9a",
@@ -2397,7 +2458,9 @@
           "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, you gain 1YP."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "4eaf-78d5-9195-0e36",
@@ -2442,7 +2505,9 @@
           "description": "Each time this model makes an attack, you can re-roll the Hit roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c7ea-1b76-c8c1-4786",
@@ -2535,7 +2600,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     }
   ]
 }

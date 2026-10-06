@@ -155,6 +155,60 @@ export async function fetchDatasheets(
   factionId?: string,
   role?: string,
 ): Promise<Datasheet[]> {
+  const basePath = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '';
+  let fid = factionId || 'imperium-space-marines';
+  if (fid === 'adeptus_astartes') fid = 'imperium-space-marines';
+  if (fid === 'necrons_szarekhan') fid = 'necrons';
+  if (fid === 'tau_empire') fid = 't-au-empire';
+  if (fid === 'chaos_space_marines') fid = 'chaos-chaos-space-marines';
+
+  try {
+    const res = await fetch(`${basePath}/data/factions/${fid}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      let list: Datasheet[] = (data.datasheets || []).map((ds: any) => ({
+        id: ds.id,
+        factionId: ds.factionId || fid,
+        name: ds.name,
+        battlefieldRole: ds.battlefieldRole,
+        basePoints: ds.basePoints,
+        detachmentPointsCost: 0,
+        unitComposition: ds.unitComposition || { models: [{ name: ds.name, count: 1 }] },
+        stats: ds.stats,
+        keywords: ds.keywords || [],
+        isAlliedEligible: false,
+        weapons: (ds.weapons || []).map((w: any, idx: number) => ({
+          weapon: {
+            id: `wep_${idx}`,
+            name: w.name,
+            range: w.range,
+            attacks: w.attacks,
+            skill: w.skill,
+            strength: w.strength,
+            armorPenetration: w.armorPenetration,
+            damage: w.damage,
+            keywords: w.keywords || [],
+          }
+        })),
+        abilities: (ds.abilities || []).map((a: any, idx: number) => ({
+          id: `ab_${idx}`,
+          name: a.name,
+          source: a.name.toLowerCase() === 'leader' ? 'LEADER' : 'BODYGUARD',
+          description: a.description,
+        })),
+        canonicalImageUrl: '/assets/models/default_placeholder.webp',
+        canonicalThumbUrl: '/assets/models/default_placeholder.webp',
+      }));
+
+      if (role && role !== 'ALL') {
+        list = list.filter(d => d.battlefieldRole === role);
+      }
+      return list;
+    }
+  } catch (err) {
+    console.warn(`Could not load static catalogue for ${fid}:`, err);
+  }
+
   const params = new URLSearchParams();
   if (factionId) params.set('factionId', factionId);
   if (role) params.set('role', role);
@@ -290,6 +344,7 @@ export async function createRoster(data: {
   pointsLimit?: number;
   detachmentPointsLimit?: number;
   factionThemeOverride?: string;
+  rosterPayload?: any;
 }): Promise<UserArmy> {
   const userId = getLocalUserId();
   let created: UserArmy | null = null;
@@ -312,7 +367,7 @@ export async function createRoster(data: {
       pointsLimit: data.pointsLimit || 2000,
       detachmentPointsLimit: data.detachmentPointsLimit || 3,
       factionThemeOverride: data.factionThemeOverride || null,
-      rosterPayload: { units: [], totalPoints: 0, detachmentPointsUsed: 0 },
+      rosterPayload: data.rosterPayload || { units: [], totalPoints: 0, detachmentPointsUsed: 0 },
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };

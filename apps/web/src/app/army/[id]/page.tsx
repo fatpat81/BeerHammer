@@ -216,15 +216,13 @@ type NormalizedCatalogUnit = RosterUnit['catalogUnit'] & {
   modelComposition: { name: string; count: number }[];
 };
 
-    return payloadUnits.map((puRaw, i) => {
-      const pu = puRaw as unknown as OfflineRosterUnit;
-      // Roster units persisted in guest/offline mode (lib/api.ts) carry only
-      // datasheetId/datasheetName on the unit; the richer catalogUnit shape is
-      // produced by RosterBuilder. Normalize so both render without crashing.
+    // Map all payload units to base display units
+    const baseDisplayUnits = payloadUnits.map((puRaw, i) => {
+      const pu = puRaw as any;
       const catalogUnit: NormalizedCatalogUnit = pu.catalogUnit ?? {
         id: pu.datasheetId ?? `ds_${i}`,
         name: pu.datasheetName ?? 'Unknown Unit',
-        factionId: army?.factionId ?? 'adeptus_astartes',
+        factionId: army?.factionId ?? 'imperium-space-marines',
         battlefieldRole: 'INFANTRY',
         basePoints: pu.pointsCost ?? 0,
         dpCost: 0,
@@ -235,18 +233,22 @@ type NormalizedCatalogUnit = RosterUnit['catalogUnit'] & {
       const ds = datasheets.find(d => d.id === catalogUnit.id || d.name === catalogUnit.name);
       const dsStats = ds?.stats as any;
 
+      const isLeaderUnit = catalogUnit.battlefieldRole === 'CHARACTER' || (catalogUnit.keywords || []).includes('CHARACTER');
+
       const models: ModelHealth[] = (catalogUnit.modelComposition || []).flatMap((mc, mIdx) =>
         Array.from({ length: mc.count }).map((_, cIdx) => ({
           id: `m_${pu.instanceId}_${mIdx}_${cIdx}`,
           modelName: mc.name,
-          isLeader: mc.name.toLowerCase().includes('sergeant') || mc.name.toLowerCase().includes('captain') || mc.name.toLowerCase().includes('leader'),
-          maxWounds: (dsStats?.wounds || dsStats?.toughness || 4) > 5 ? 3 : 2,
-          currentWounds: (dsStats?.wounds || dsStats?.toughness || 4) > 5 ? 3 : 2,
+          isLeader: isLeaderUnit || mc.name.toLowerCase().includes('sergeant') || mc.name.toLowerCase().includes('captain') || mc.name.toLowerCase().includes('leader'),
+          maxWounds: dsStats?.wounds || (dsStats?.toughness && dsStats.toughness > 5 ? 3 : 2),
+          currentWounds: dsStats?.wounds || (dsStats?.toughness && dsStats.toughness > 5 ? 3 : 2),
         }))
       );
 
       return {
         instanceId: pu.instanceId,
+        attachedToInstanceId: pu.attachedToInstanceId,
+        enhancement: pu.enhancement,
         name: catalogUnit.name,
         role: catalogUnit.battlefieldRole,
         points: pu.pointsCost,
@@ -259,7 +261,7 @@ type NormalizedCatalogUnit = RosterUnit['catalogUnit'] & {
           leadership: dsStats?.leadership || '6+',
           objectiveControl: dsStats?.objectiveControl || 1,
         },
-        models: models.length > 0 ? models : [{ id: `m_${i}`, modelName: catalogUnit.name, isLeader: true, maxWounds: 4, currentWounds: 4 }],
+        models: models.length > 0 ? models : [{ id: `m_${i}`, modelName: catalogUnit.name, isLeader: isLeaderUnit, maxWounds: 4, currentWounds: 4 }],
         weapons: (ds as any)?.weapons?.map((w: any) => ({
           id: w.weapon?.id || `w_${i}`,
           name: w.weapon?.name || 'Default Weapon',
@@ -279,6 +281,68 @@ type NormalizedCatalogUnit = RosterUnit['catalogUnit'] & {
         })) || DEMO_FALLBACK_UNITS[0]!.abilities,
       };
     });
+
+    // Pair attached leaders to their bodyguard units into a single composite card
+    const compositeUnits: any[] = [];
+    const consumedLeaderIds = new Set<string>();
+
+    // First find which leaders are attached to which bodyguards
+    const leaderByBodyguard = new Map<string, any>();
+    for (const u of baseDisplayUnits) {
+      if (u.attachedToInstanceId) {
+        leaderByBodyguard.set(u.attachedToInstanceId, u);
+        consumedLeaderIds.add(u.instanceId);
+      }
+    }
+
+    for (const u of baseDisplayUnits) {
+      if (consumedLeaderIds.has(u.instanceId)) {
+        // This leader will be displayed inside its bodyguard unit
+        continue;
+      }
+
+      const attachedLeader = leaderByBodyguard.get(u.instanceId);
+      if (attachedLeader) {
+        // Merge attached leader and bodyguard into one unified view
+        compositeUnits.push({
+          instanceId: u.instanceId,
+          name: `${attachedLeader.name} + ${u.name}`,
+          bodyguardName: u.name,
+          leaderName: attachedLeader.enhancement
+            ? `${attachedLeader.name} (${attachedLeader.enhancement.name})`
+            : attachedLeader.name,
+          role: u.role,
+          points: u.points + attachedLeader.points,
+          keywords: Array.from(new Set([...u.keywords, ...attachedLeader.keywords])),
+          stats: {
+            movement: u.stats.movement,
+            bodyguardToughness: u.stats.bodyguardToughness,
+            armorSave: u.stats.armorSave,
+            invulnerableSave: attachedLeader.stats.invulnerableSave || u.stats.invulnerableSave,
+            leadership: u.stats.leadership,
+            objectiveControl: u.stats.objectiveControl,
+          },
+          models: [...attachedLeader.models, ...u.models],
+          weapons: [
+            ...attachedLeader.weapons.map((w: any) => ({ ...w, name: `[Leader] ${w.name}` })),
+            ...u.weapons.map((w: any) => ({ ...w, name: `[Bodyguard] ${w.name}` })),
+          ],
+          abilities: [
+            ...attachedLeader.abilities.map((a: any) => ({ ...a, source: 'Leader' })),
+            ...u.abilities.map((a: any) => ({ ...a, source: 'Bodyguard' })),
+          ],
+        });
+      } else {
+        // Standalone unattached unit
+        compositeUnits.push({
+          ...u,
+          bodyguardName: u.name,
+          leaderName: undefined,
+        });
+      }
+    }
+
+    return compositeUnits;
   }, [army, datasheets]);
 
   const activeUnit = unitsList[activeUnitIndex] || unitsList[0];

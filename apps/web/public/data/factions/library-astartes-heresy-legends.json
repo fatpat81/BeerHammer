@@ -1,7 +1,8 @@
 {
   "id": "library-astartes-heresy-legends",
-  "name": "Library - Astartes Heresy Legends",
-  "sourceFile": "Library - Astartes Heresy Legends.json",
+  "name": "Astartes Heresy Legends",
+  "grandAlliance": "Imperium",
+  "isLegends": true,
   "totalDatasheets": 37,
   "detachments": [],
   "stratagems": [
@@ -92,12 +93,13 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "78aa-3f99-5fb7-7f83",
       "name": "Kratos [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 240,
       "stats": {
@@ -220,13 +222,15 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d38d-c3a2-f753-efea",
       "name": "Deredeo Dreadnought [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -348,13 +352,15 @@
             "Hazardous"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "783a-1c02-b377-b169",
       "name": "Relic Contemptor Dreadnought [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 140,
       "stats": {
@@ -540,13 +546,15 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "14d4-8062-f090-6719",
       "name": "Leviathan Dreadnought [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -659,13 +667,15 @@
             "Anti-VEHICLE 3+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1f26-fce8-bb2d-2c44",
       "name": "Javelin Attack Speeder [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 110,
       "stats": {
@@ -734,13 +744,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "68be-7090-1fbc-9021",
       "name": "Deathstorm Drop Pod [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 95,
       "stats": {
@@ -799,13 +811,15 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "34c8-1025-33f7-baaf",
       "name": "Land Raider Proteus [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 220,
       "stats": {
@@ -837,13 +851,15 @@
           "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer, but the bearer must halve its Transport Capacity."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3006-ffe-2b0c-6b1b",
       "name": "Land Raider Achilles [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 230,
       "stats": {
@@ -911,13 +927,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b2f1-197b-fb3b-687f",
       "name": "Sicaran Battle Tank [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -962,13 +980,15 @@
             "Rapid Fire 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ca2a-69ca-dd3c-47",
       "name": "Sicaran Arcus [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -1015,13 +1035,15 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e63e-2aa6-f840-b54e",
       "name": "Sicaran Venator [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 180,
       "stats": {
@@ -1066,13 +1088,15 @@
             "Heavy"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "68aa-28bf-bd73-3355",
       "name": "Sicaran Punisher [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -1117,13 +1141,15 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8b64-6aba-150d-27e4",
       "name": "Sicaran Omega [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 180,
       "stats": {
@@ -1181,13 +1207,15 @@
             "Hazardous"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2aee-e03c-836e-4c6e",
       "name": "Rapier Carrier [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 90,
       "stats": {
@@ -1312,13 +1340,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "97dc-f0c8-1354-88fb",
       "name": "Whirlwind Scorpius [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 115,
       "stats": {
@@ -1364,13 +1394,15 @@
             "Indirect Fire"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "128d-5011-8e6-45a6",
       "name": "Vindicator Laser Destroyer [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 175,
       "stats": {
@@ -1428,13 +1460,15 @@
           "damage": "D3+3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7fd0-d95d-d076-3472",
       "name": "Dreadnought Drop Pod [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 75,
       "stats": {
@@ -1467,13 +1501,15 @@
           "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3d36-e9d7-54c5-deb7",
       "name": "Terrax-pattern Termite [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "DEDICATED_TRANSPORT",
       "basePoints": 200,
       "stats": {
@@ -1546,13 +1582,15 @@
             "Anti-VEHICLE 3+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1aa5-d081-2442-4c37",
       "name": "Xiphon Interceptor [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 115,
       "stats": {
@@ -1609,13 +1647,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3b7d-b14e-603-e1ad",
       "name": "Storm Eagle Gunship [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 250,
       "stats": {
@@ -1714,13 +1754,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1fc7-7880-e4d4-acbf",
       "name": "Fire Raptor Gunship [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 290,
       "stats": {
@@ -1794,13 +1836,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f60c-1b93-9ee8-59d2",
       "name": "Typhon [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 320,
       "stats": {
@@ -1845,13 +1889,15 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4044-b458-fb4d-d05b",
       "name": "Cerberus [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 270,
       "stats": {
@@ -1896,13 +1942,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7b3a-9a63-6200-ec7",
       "name": "Spartan [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 300,
       "stats": {
@@ -1954,13 +2002,15 @@
             "Heavy"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "585d-722b-4304-2f63",
       "name": "Fellblade [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 480,
       "stats": {
@@ -2068,13 +2118,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "625b-29e4-7be7-db5a",
       "name": "Falchion [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 420,
       "stats": {
@@ -2145,13 +2197,15 @@
             "Heavy"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e337-7f05-f1b3-d64e",
       "name": "Mastodon [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 540,
       "stats": {
@@ -2215,13 +2269,15 @@
             "Anti-FLY 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a80f-8343-85f3-716a",
       "name": "Sokar-pattern Stormbird [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 900,
       "stats": {
@@ -2285,13 +2341,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d298-eb55-5779-f90e",
       "name": "Tarantula Sentry Battery [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 30,
       "stats": {
@@ -2324,13 +2382,15 @@
           "description": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7e7a-96f6-cad0-50ec",
       "name": "Decimator [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 165,
       "stats": {
@@ -2443,13 +2503,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "412c-3499-8275-2637",
       "name": "Greater Blight Drone [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 150,
       "stats": {
@@ -2524,13 +2586,15 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9401-616b-6e9e-10e5",
       "name": "Dreadclaw Drop Pod [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 115,
       "stats": {
@@ -2576,13 +2640,15 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fdad-1104-a934-3812",
       "name": "Blood Slaughterer [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 160,
       "stats": {
@@ -2657,13 +2723,15 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f564-7bc-21a6-7796",
       "name": "Greater Brass Scorpion [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 500,
       "stats": {
@@ -2766,13 +2834,15 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6c76-b4e-4437-27e2",
       "name": "Kytan Ravager [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 400,
       "stats": {
@@ -2846,13 +2916,15 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5bb7-ac8-4448-a4d8",
       "name": "Kharybdis Assault Claw [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 300,
       "stats": {
@@ -2940,13 +3012,15 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6844-986c-b0ea-6dd5",
       "name": "Chaos Thunderhawk [Legends]",
       "factionId": "library-astartes-heresy-legends",
-      "factionName": "Library - Astartes Heresy Legends",
+      "factionName": "Astartes Heresy Legends",
       "battlefieldRole": "VEHICLE",
       "basePoints": 840,
       "stats": {
@@ -3029,7 +3103,9 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

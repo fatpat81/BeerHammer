@@ -1,19 +1,39 @@
 {
   "id": "imperium-agents-of-the-imperium",
   "name": "Agents of the Imperium",
-  "sourceFile": "Imperium - Agents of the Imperium.json",
+  "grandAlliance": "Imperium",
+  "isLegends": false,
   "totalDatasheets": 50,
   "detachments": [
     {
-      "name": "Detachment",
+      "id": "8782-4837-c336-c95e",
+      "name": "Death Cult power blade",
+      "rules": [],
+      "enhancements": []
+    },
+    {
       "id": "1162-9cd5-d6b0-1663",
+      "name": "Detachment",
       "rules": [
         "Deathwatch Mission Tactics",
         "Root Out Heresy",
         "Destroy the Daemonic",
         "At All Costs",
         "Extremis Sanction"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "05a0-b6ef-1ab3-10af",
+      "name": "Death Cult blades",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "3a4c-7090-8c04-d5e7",
+      "name": "Cult Uprising",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -104,6 +124,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "efa3-2cf5-dcfb-b976",
@@ -198,7 +219,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5e5e-d6b2-6a1c-aa69",
@@ -285,7 +308,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f201-1f4a-b907-d9d1",
@@ -368,7 +393,9 @@
             "Sustained Hits 3"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1cfe-be05-5603-133",
@@ -448,7 +475,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9360-d8b2-cd92-9e7f",
@@ -587,7 +616,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "3953-4e12-fe7b-97e9",
@@ -684,7 +715,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6db9-cede-3810-f1f0",
@@ -726,7 +759,9 @@
           "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ec63-524d-55a-3065",
@@ -853,7 +888,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d44c-5cde-cb79-3ec3",
@@ -962,7 +999,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f3a6-de9-584e-c394",
@@ -1057,7 +1096,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "264a-fc24-3a98-31dc",
@@ -1157,7 +1198,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "6e0e-b9a2-f53d-ad0e",
@@ -1255,7 +1298,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "4349-390e-e183-f0b",
@@ -1328,7 +1373,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e57-b15c-5580-1de1",
@@ -1446,7 +1493,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d4d2-5f39-6a24-60ab",
@@ -1541,7 +1590,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "4f74-c65c-3a56-41d6",
@@ -1610,7 +1661,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c50a-8-694-6fa6",
@@ -1680,7 +1733,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "a8a5-f886-c09e-a6f2",
@@ -1753,7 +1808,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "bbbf-a0fb-d032-3a61",
@@ -1836,7 +1893,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c29e-e398-9588-7f30",
@@ -1968,7 +2027,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "55cf-8d86-affd-bc9b",
@@ -2034,7 +2095,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "7554-37de-cd68-68a7",
@@ -2134,7 +2197,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4469-7239-717e-9abd",
@@ -2280,7 +2345,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "15c0-9294-7eb8-f3a7",
@@ -2374,7 +2441,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ede2-ae50-5f5b-cced",
@@ -2467,7 +2536,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cbbd-8e0a-fd90-fa0d",
@@ -2523,7 +2594,9 @@
             "Rapid Fire 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "73fc-a193-7da1-d9c4",
@@ -2724,7 +2797,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a5c9-2cb7-d874-8169",
@@ -2811,7 +2886,9 @@
             "Twin-Linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "fac5-a242-951a-e1b2",
@@ -2889,7 +2966,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "bd54-3e9f-3f7d-ad5a",
@@ -2978,7 +3057,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8b98-0ac7-a0ba-dedf",
@@ -3111,7 +3192,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "edce-f61c-8029-897f",
@@ -3286,7 +3369,9 @@
             "Pistol"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c538-aaf0-5788-5c07",
@@ -3530,7 +3615,9 @@
             "Twin-Linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "88af-6e47-7162-b1be",
@@ -3760,7 +3847,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4681-2af4-acf9-2bce",
@@ -3926,7 +4015,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f527-0a42-15b4-1924",
@@ -4150,7 +4241,9 @@
             "-"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "50a9-30aa-e03a-847d",
@@ -4212,7 +4305,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f158-1e0b-585b-bf40",
@@ -4293,7 +4388,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "cfa5-df26-a886-9975",
@@ -4371,7 +4468,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "4e74-3710-7a66-9d6c",
@@ -4545,7 +4644,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6315-d3e6-aa1c-69e4",
@@ -4643,7 +4744,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "050d-797a-bb9a-2e8b",
@@ -4701,7 +4804,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "df47-6883-78e7-d725",
@@ -4750,7 +4855,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3435-d900-05e9-19e6",
@@ -4796,7 +4903,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "77a2-7703-4d4f-f30d",
@@ -4909,7 +5018,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e05a-fe00-3df3-d551",
@@ -4937,7 +5048,9 @@
       },
       "keywords": [],
       "abilities": [],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "90e0-c5a9-17c5-fba4",
@@ -4984,7 +5097,9 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9a75-f3a2-bff5-9f08",
@@ -5036,7 +5151,9 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "2b47-b5e8-b297-7bd8",
@@ -5083,7 +5200,9 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2a3f-b53b-6ea4-6da9",
@@ -5185,7 +5304,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

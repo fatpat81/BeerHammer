@@ -1,12 +1,13 @@
 {
   "id": "chaos-death-guard",
   "name": "Death Guard",
-  "sourceFile": "Chaos - Death Guard.json",
+  "grandAlliance": "Chaos",
+  "isLegends": false,
   "totalDatasheets": 50,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "57f2-e2d6-47ed-ddd2",
+      "name": "Detachment",
       "rules": [
         "Verminous Haze",
         "Worldblight",
@@ -17,7 +18,36 @@
         "Reverberant Rancidity",
         "Warped and Rusted Animus",
         "Hypervirulent Strains"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "df4a-2ead-43d5-ea61",
+      "name": "Flyblown Host",
+      "rules": [
+        "Verminous Haze"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "e2ff-ece0-6cbb-be05",
+      "name": "Virulent Vectorium",
+      "rules": [
+        "Worldblight"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "16c6-ff2d-bc79-4e1a",
+      "name": "Cultist firearm",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "8192-f68c-a482-67fb",
+      "name": "Host of the Hybridised Pox",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -108,6 +138,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "4cb3-e6b6-4e82-23bf",
@@ -157,7 +188,9 @@
           "description": "While a friendly ^^**Death Guard^^** unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f4d7-244d-16c4-f2f3",
@@ -218,7 +251,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e6a4-7055-fd23-5123",
@@ -298,7 +333,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "cfc1-1741-530c-3335",
@@ -409,7 +446,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "bacc-4f1-649-a051",
@@ -481,7 +520,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c15c-2b5a-dcab-7627",
@@ -562,7 +603,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8700-3d3-efbb-ef8d",
@@ -641,7 +684,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "93ac-1b31-4238-d60e",
@@ -773,7 +818,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9900-77d7-10e3-5c91",
@@ -867,7 +914,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "8467-b3a2-2597-de0d",
@@ -971,7 +1020,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d579-88cd-c634-f800",
@@ -1057,7 +1108,9 @@
           "damage": "D3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7c30-1e92-2faa-eb03",
@@ -1110,7 +1163,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1ffc-27de-8aea-e7bb",
@@ -1174,7 +1229,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c88f-d4dc-84b3-1b31",
@@ -1247,7 +1304,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "690b-a189-5935-f32e",
@@ -1337,7 +1396,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "506c-16a8-68f7-c08a",
@@ -1394,7 +1455,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9a82-ea13-3511-6c08",
@@ -1453,7 +1516,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "83e8-ebb7-785a-2115",
@@ -1498,7 +1563,9 @@
           "description": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from any other enemy units."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2a2b-643e-860e-b524",
@@ -1641,7 +1708,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b4e-dcf1-5c6f-4d35",
@@ -1749,7 +1818,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1d85-475f-5ab-9823",
@@ -1800,7 +1871,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "35b2-7490-1a7b-cd99",
@@ -1909,7 +1982,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "26d5-ec73-3517-f3f",
@@ -1993,7 +2068,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e58b-507a-937f-7abf",
@@ -2106,7 +2183,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "89d-b0c0-6e19-f017",
@@ -2171,7 +2250,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9b58-210d-c12f-4d46",
@@ -2226,7 +2307,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ab4e-466d-e9e8-89d5",
@@ -2282,7 +2365,9 @@
             "Rapid Fire 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b899-92e2-693a-975f",
@@ -2325,7 +2410,9 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport**^^ this turn makes an attack that targets that unit, you can re-roll the Wound roll."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f5ac-4f37-fe7b-36b6",
@@ -2439,7 +2526,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e5b-23db-4ccd-ea97",
@@ -2498,7 +2587,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "55c7-e5b8-9737-f58e",
@@ -2561,7 +2652,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1d25-87a1-2d17-5d02",
@@ -2799,6 +2892,12 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "PLAGUE MARINES"
       ]
     },
     {
@@ -2891,7 +2990,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e86-ef61-9b87-3658",
@@ -2945,7 +3046,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8cba-21cc-a3b3-91ed",
@@ -3010,7 +3113,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2dfd-cddb-9fef-494b",
@@ -3063,7 +3168,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "474-6b31-df19-2b49",
@@ -3258,6 +3365,10 @@
           "damage": "1",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "PLAGUE MARINES"
       ]
     },
     {
@@ -3314,7 +3425,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c5a7-5f07-2b1a-8f98",
@@ -3380,7 +3493,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "2425-13a7-77f0-0112",
@@ -3512,7 +3627,9 @@
             "Reverberating Summons"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "66dd-f8c9-f9a6-0e6b",
@@ -3609,7 +3726,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "904b-0319-7b2e-2145",
@@ -3679,7 +3798,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cd03-e1f3-fa31-a271",
@@ -3805,7 +3926,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5f38-3bbb-ce09-485b",
@@ -3861,7 +3984,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7e32-0162-71e2-57a0",
@@ -3917,7 +4042,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d055-25eb-eb2b-7f6a",
@@ -3987,7 +4114,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d037-162a-ac85-9c88",
@@ -4033,7 +4162,9 @@
           "description": "This model can be attached to the following units: ^^**Plague Marines, Poxwalkers**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "89d8-7e90-be47-59b6",
@@ -4080,7 +4211,9 @@
           "description": "This model can be attached to the following units: ^^**Plague Marines, Poxwalkers**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "fa2a-1b44-a513-318d",
@@ -4122,7 +4255,11 @@
           "description": "This unit can be attached to the following units: ^^**Plague Marines, Poxwalkers**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: ^^**Plague Marines, Poxwalkers**^^"
+      ]
     },
     {
       "id": "bc88-0833-743e-0146",
@@ -4291,7 +4428,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

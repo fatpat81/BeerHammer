@@ -1,12 +1,13 @@
 {
   "id": "chaos-world-eaters",
   "name": "World Eaters",
-  "sourceFile": "Chaos - World Eaters.json",
+  "grandAlliance": "Chaos",
+  "isLegends": false,
   "totalDatasheets": 34,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "84c8-b821-877d-72e6",
+      "name": "Detachment",
       "rules": [
         "Relentless Rage",
         "Idols of Khorne",
@@ -15,7 +16,16 @@
         "Rush to the Fray",
         "Rampaging Terrors",
         "Adamantine Avalanche"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "9c45-483a-44b9-536c",
+      "name": "Cult of Blood",
+      "rules": [
+        "Idols of Khorne"
+      ],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -106,6 +116,7 @@
       ]
     }
   ],
+  "subfactions": [],
   "datasheets": [
     {
       "id": "f4b8-1179-de57-4d69",
@@ -185,7 +196,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3449-7dac-6ac8-5d51",
@@ -252,7 +265,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "3b15-b424-2059-71fa",
@@ -343,7 +358,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "40c5-9ebd-6d42-2855",
@@ -429,7 +446,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "0294-61a4-c6ed-b2e8",
@@ -512,7 +531,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ec72-f024-4283-0558",
@@ -587,7 +608,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "1b56-682c-ac33-bc5f",
@@ -663,7 +686,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "45f6-8429-a1d9-2a51",
@@ -728,7 +753,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6f81-4538-a414-251e",
@@ -791,7 +818,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9435-1f44-7e5b-d510",
@@ -856,7 +885,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9932-3d2b-1e47-d53b",
@@ -898,7 +929,9 @@
           "description": "Each time a model in this unit makes a melee attack that targets a ^^**Monster^^** or ^^**Vehicle^^** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4251-bd4f-f7ac-9487",
@@ -965,7 +998,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "497c-f787-5a7e-1020",
@@ -1021,7 +1056,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "04a0-269e-3bab-2c61",
@@ -1076,7 +1113,9 @@
             "Rapid Fire 6"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "ea51-5575-9e74-9346",
@@ -1241,7 +1280,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "81e1-b212-69c1-308f",
@@ -1306,7 +1347,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "273a-db24-3f7c-b977",
@@ -1454,7 +1497,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "de2e-8fae-9d22-24a4",
@@ -1525,7 +1570,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a619-8a52-be03-3bd5",
@@ -1610,7 +1657,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e849-ce40-ee43-7623",
@@ -1653,7 +1702,9 @@
           "description": "In your opponent's Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8\" of this model, any units embarked within it can disembark."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "edde-57bf-bccc-d8b2",
@@ -1704,7 +1755,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "836c-f65b-6bcb-9663",
@@ -1844,7 +1897,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4e04-74aa-2c2f-66d0",
@@ -1909,7 +1964,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7320-3dba-703c-b3f0",
@@ -1963,7 +2020,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b399-9b66-e550-8050",
@@ -2018,7 +2077,9 @@
             "Sustained Hits D3"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "71c9-b10b-b55f-483e",
@@ -2085,7 +2146,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "71d9-9dc2-2b9a-6db3",
@@ -2173,7 +2236,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4ad2-bd20-6dfe-776b",
@@ -2286,7 +2351,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9188-4709-00ba-e5e0",
@@ -2328,7 +2395,9 @@
           "description": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e65f-c7c7-1d18-1a60",
@@ -2370,7 +2439,9 @@
           "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b657-1743-6e3a-0838",
@@ -2427,7 +2498,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "85e5-721a-d505-3881",
@@ -2474,7 +2547,9 @@
           "description": "This model can be attached to the following unit: ^^**Khorne Berzerkers**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "71ad-8562-f833-5872",
@@ -2535,7 +2610,9 @@
             "Lance"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "544e-3db3-4878-3db3",
@@ -2581,7 +2658,9 @@
           "description": "This model can be attached to the following unit: ^^**Jakhals**^^"
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     }
   ]
 }

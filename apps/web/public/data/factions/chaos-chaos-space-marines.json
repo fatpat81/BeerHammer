@@ -1,12 +1,13 @@
 {
   "id": "chaos-chaos-space-marines",
   "name": "Chaos Space Marines",
-  "sourceFile": "Chaos - Chaos Space Marines.json",
+  "grandAlliance": "Chaos",
+  "isLegends": false,
   "totalDatasheets": 84,
   "detachments": [
     {
-      "name": "Detachment",
       "id": "e296-4a38-d9a5-289c",
+      "name": "Detachment",
       "rules": [
         "Marks of Chaos",
         "Focus of Hatred",
@@ -27,7 +28,88 @@
         "Soul Forge Boons",
         "Rain of Ruin",
         "Prey on the Weak"
-      ]
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "53dd-68f7-7c1f-3e5d",
+      "name": "Pactbound Zealots",
+      "rules": [
+        "Marks of Chaos"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "b906-aa42-9cd9-c6f2",
+      "name": "Renegade Raiders",
+      "rules": [
+        "Raiders and Reavers"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "89a5-170b-1bf3-7016",
+      "name": "Fellhammer Siege-host",
+      "rules": [
+        "Iron Fortitude"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "6cec-4da4-a89d-fb98",
+      "name": "Chaos Cult",
+      "rules": [
+        "Desperate Devotion"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "1c30-e099-1aca-8708",
+      "name": "Creations of Bile",
+      "rules": [
+        "Creations of Bile"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "44d2-04f0-309d-575e",
+      "name": "Huron's Marauders",
+      "rules": [
+        "Tyrannical Motivation"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "5f38-038e-a1e9-a457",
+      "name": "Cult of the Arkifane",
+      "rules": [
+        "Soul Forge Boons"
+      ],
+      "enhancements": []
+    },
+    {
+      "id": "3f6e-80fd-e950-9df7",
+      "name": "Cultist sniper rifle",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "b10e-4aad-977f-5ee6",
+      "name": "Cultist grenade launcher",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "42ab-1d5e-7a31-2de7",
+      "name": "Cultist's Brand",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "199b-a165-dc5f-b07e",
+      "name": "Daemon Host",
+      "rules": [],
+      "enhancements": []
     }
   ],
   "stratagems": [
@@ -116,6 +198,43 @@
       "requiredKeywords": [
         "GRENADES"
       ]
+    }
+  ],
+  "subfactions": [
+    {
+      "id": "black-legion",
+      "name": "Black Legion",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "iron-warriors",
+      "name": "Iron Warriors",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "night-lords",
+      "name": "Night Lords",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "word-bearers",
+      "name": "Word Bearers",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
+    },
+    {
+      "id": "alpha-legion",
+      "name": "Alpha Legion",
+      "datasheetCount": 0,
+      "datasheets": [],
+      "detachments": []
     }
   ],
   "datasheets": [
@@ -209,7 +328,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d93f-6d73-1792-cb18",
@@ -305,7 +426,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "d9e3-8baf-128f-6389",
@@ -383,7 +506,9 @@
           "damage": "3",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9bbd-a535-a4ef-9680",
@@ -466,7 +591,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2a1d-2757-347c-58f2",
@@ -547,7 +674,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cd9c-96e7-6dcb-bedf",
@@ -653,7 +782,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f399-fe33-375b-d1a2",
@@ -756,7 +887,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "287f-7d48-59cf-dc1e",
@@ -854,7 +987,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e496-5a54-4cb2-4fc1",
@@ -947,7 +1082,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "b206-250d-84aa-fc42",
@@ -1071,7 +1208,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "980d-c80a-19b2-f641",
@@ -1121,7 +1260,9 @@
           "description": "Each time this model is selected to shoot or fight, after resolving its attacks, select one enemy unit hit by one or more of those attacks that had the [PSYCHIC] ability. That unit must take a Leadership test: if that test is failed, that unit suffers D3 mortal wounds."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "683f-bfb2-f8d0-c39e",
@@ -1205,7 +1346,9 @@
             "Rapid Fire 1"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "46e1-2159-7c26-9105",
@@ -1329,7 +1472,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "440-a22a-eac1-b107",
@@ -1424,7 +1569,9 @@
             "Anti-VEHICLE 4+"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "f3d9-883e-6ca2-e3b",
@@ -1485,7 +1632,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d2b8-454a-d061-b592",
@@ -1566,7 +1715,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "1780-25b8-ce0b-898d",
@@ -1732,7 +1883,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "615-e6bf-cfd2-9384",
@@ -1900,7 +2053,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "1267-78f1-7774-859",
@@ -1986,7 +2141,9 @@
             "Pistol"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "23aa-b45a-6d5d-e92b",
@@ -2053,7 +2210,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "203d-c50f-a438-4982",
@@ -2122,7 +2281,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "da34-7071-8658-a453",
@@ -2186,7 +2347,9 @@
             "Precision"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "cb1-5bcf-9e36-8136",
@@ -2238,7 +2401,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4e85-615b-5d49-dfa4",
@@ -2277,7 +2442,9 @@
           "description": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3e98-7689-8bf0-96e0",
@@ -2341,7 +2508,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7373-47b7-11a3-2b48",
@@ -2400,7 +2569,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "acb5-dbf2-e3a6-ad94",
@@ -2462,7 +2633,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9f33-ff4a-d948-4636",
@@ -2537,7 +2710,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "946c-d784-c8be-f21",
@@ -2646,7 +2821,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2311-fa63-364-22a3",
@@ -2737,7 +2914,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a3ab-ed12-fa70-2042",
@@ -2792,7 +2971,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "dcc0-b70c-9779-e6c9",
@@ -2886,7 +3067,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8dc5-4dcb-d77f-7d23",
@@ -3080,7 +3263,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "6bf7-888c-7aa6-6831",
@@ -3261,7 +3446,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f69d-2171-5f95-9c88",
@@ -3335,6 +3522,10 @@
           "damage": "2",
           "keywords": []
         }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following unit: TRAITOR GUARDSMAN SQUAD"
       ]
     },
     {
@@ -3399,7 +3590,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "279e-62d4-bff1-141",
@@ -3453,7 +3646,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3dfb-3b2a-94b-2fbe",
@@ -3507,7 +3702,9 @@
             "Rapid Fire 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e687-6d7a-bb28-dcaa",
@@ -3561,7 +3758,9 @@
             "Blast"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "45b-19f6-38d2-703f",
@@ -3625,7 +3824,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9ff2-45e0-fe97-65f8",
@@ -3766,7 +3967,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "79e5-a673-cca5-91a4",
@@ -3836,7 +4039,9 @@
             "Devastating Wounds"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d37d-7e8f-341b-c67c",
@@ -3915,7 +4120,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "e981-27ae-112f-aa9a",
@@ -3957,7 +4164,9 @@
           "description": "At the start of your Command phase, this model regains 1 lost wound."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "b27f-1c85-5e7f-4e7d",
@@ -4091,7 +4300,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7263-70e5-b424-61eb",
@@ -4141,7 +4352,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "3832-4208-11e9-ca22",
@@ -4206,7 +4419,9 @@
           "description": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f2e7-80c9-853d-2c6c",
@@ -4385,7 +4600,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "9030-f62d-417-fc92",
@@ -4501,7 +4718,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "4893-c42f-4ca8-2b3d",
@@ -4565,7 +4784,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "8373-f06d-7680-9de",
@@ -4631,7 +4852,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5205-d436-bedd-e3df",
@@ -4746,7 +4969,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "c8b4-e13c-1a3a-7b55",
@@ -4859,7 +5084,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "2af2-8812-7aa9-3db7",
@@ -5013,7 +5240,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "7456-b122-14c3-eca9",
@@ -5155,7 +5384,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "dceb-1d2c-40be-e591",
@@ -5310,7 +5541,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "349b-6e2d-e554-f2c6",
@@ -5465,7 +5698,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "13b0-de3a-650c-d352",
@@ -5593,7 +5828,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "e1c2-8417-403a-68",
@@ -5686,7 +5923,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "afed-8173-a1e0-cbae",
@@ -5740,7 +5979,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "5b66-39e6-aeb5-8011",
@@ -5877,7 +6118,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9df-7c70-84d2-e095",
@@ -6038,7 +6281,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a7bb-ec24-40e6-5b8c",
@@ -6092,7 +6337,9 @@
             "Lethal Hits"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "7299-5b5-2b56-ef50",
@@ -6166,7 +6413,9 @@
           "damage": "D6+2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "24c4-fa24-67ff-eef",
@@ -6228,7 +6477,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "c0f9-d16c-6caf-5b95",
@@ -6336,7 +6587,9 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9238-473a-54ee-6b0e",
@@ -6394,7 +6647,9 @@
             "Sustained Hits 2"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "af6f-7c4e-ec78-858e",
@@ -6519,7 +6774,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "658e-a63f-bac7-6201",
@@ -6586,7 +6843,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2dfd-2e5f-53f2-b695",
@@ -6738,7 +6997,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "6add-621e-381e-4acf",
@@ -6859,7 +7120,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "d880-9968-2ed9-5a21",
@@ -6943,7 +7206,9 @@
             "Twin-linked"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "cb66-af7-2cca-1c85",
@@ -7019,7 +7284,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "478-9d24-e5c8-c6f7",
@@ -7152,7 +7419,9 @@
             "Rapid Fire 3"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "f666-1f5d-0c20-06c1",
@@ -7282,7 +7551,9 @@
             "Sustained Hits 1"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "371f-09ee-951e-88b3",
@@ -7384,7 +7655,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "a998-9dce-fbab-8d32",
@@ -7585,7 +7858,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "2078-97ce-8793-3382",
@@ -7644,7 +7919,9 @@
             "Torrent"
           ]
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "beed-356b-2fec-2c2a",
@@ -7718,7 +7995,9 @@
           "damage": "2",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "b9a4-a9c4-5f8d-ed3a",
@@ -7764,7 +8043,9 @@
           "description": "Each time this model makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "b6c0-4be6-7487-73dc",
@@ -7811,7 +8092,9 @@
           "description": "Each time this model is selected to shoot or fight, after resolving its attacks, select one enemy unit hit by one or more of those attacks that had the [^^PSYCHIC^^] ability. That unit must take a Leadership test. If it fails, it suffers D3 mortal wounds."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": []
     },
     {
       "id": "9573-8b24-3796-d9d9",
@@ -7854,7 +8137,9 @@
           "description": "While this model is within 3\" of one or more friendly ^^**Heretic Astartes Infantry**^^ units, this model has the Lone Operative ability."
         }
       ],
-      "weapons": []
+      "weapons": [],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "29f9-fc47-787e-d9d3",
@@ -8010,7 +8295,9 @@
           "damage": "1",
           "keywords": []
         }
-      ]
+      ],
+      "isLeader": false,
+      "attachableTo": []
     },
     {
       "id": "eec8-c21f-c284-a682",
@@ -8117,7 +8404,9 @@
             "Extra Attacks"
           ]
         }
-      ]
+      ],
+      "isLeader": true,
+      "attachableTo": []
     }
   ]
 }

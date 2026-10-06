@@ -1,0 +1,598 @@
+/**
+ * Generates official Warhammer 40k Combat Patrol dataset
+ * Referenced against Wahapedia Combat Patrol ruleset.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const outDir = path.join(__dirname, '../data/combat-patrol');
+const webOutDir = path.join(__dirname, '../apps/web/public/data/combat-patrol');
+
+if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+if (!fs.existsSync(webOutDir)) fs.mkdirSync(webOutDir, { recursive: true });
+
+const COMBAT_PATROLS = [
+  {
+    id: 'cp-space-marines-octavius',
+    factionId: 'imperium-space-marines',
+    factionName: 'Space Marines',
+    patrolName: 'Strike Force Octavius',
+    grandAlliance: 'Imperium',
+    description: 'A vanguard task force of elite Terminator veterans supported by flame-swept Infernus squads and an armoured Captain.',
+    patrolRule: {
+      name: 'Oath of Moment [Patrol]',
+      description: 'At the start of your Command phase, select one enemy unit in your opponent’s army. Until the start of your next Command phase, each time a model from your army with this ability makes an attack that targets that enemy unit, you can re-roll the Hit roll.'
+    },
+    enhancements: [
+      {
+        name: 'Adamantine Mantle',
+        leader: 'Captain in Terminator Armour',
+        description: 'Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1.'
+      },
+      {
+        name: 'Champion of the Imperium',
+        leader: 'Captain in Terminator Armour',
+        description: 'Add 1 to the Attacks characteristic of the bearer’s melee weapons, and each time the bearer fights, you can re-roll one Wound roll.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Know No Fear',
+        description: 'Score 5 VP at the end of the battle if no friendly units are below Half-strength or destroyed.'
+      },
+      {
+        name: 'Purge the Foe',
+        description: 'Score 3 VP at the end of the battle round if one or more enemy units were destroyed this round.'
+      }
+    ],
+    units: [
+      {
+        name: 'Captain in Terminator Armour',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '5"', toughness: 5, save: '2+', invulnerableSave: '4+', wounds: 6, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Storm Bolter', type: 'Ranged', range: '24"', attacks: '2', skill: '2+', strength: 4, armorPenetration: 0, damage: '1', keywords: ['RAPID FIRE 2'] },
+          { name: 'Relic Weapon', type: 'Melee', range: 'Melee', attacks: '6', skill: '2+', strength: 5, armorPenetration: -2, damage: '2', keywords: [] }
+        ],
+        abilities: ['Oath of Moment', 'Leader', 'Rites of Battle']
+      },
+      {
+        name: 'Terminator Squad',
+        role: 'INFANTRY',
+        modelCount: 5,
+        stats: { movement: '5"', toughness: 5, save: '2+', invulnerableSave: '4+', wounds: 3, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Storm Bolter', type: 'Ranged', range: '24"', attacks: '2', skill: '3+', strength: 4, armorPenetration: 0, damage: '1', keywords: ['RAPID FIRE 2'] },
+          { name: 'Assault Cannon', type: 'Ranged', range: '24"', attacks: '6', skill: '3+', strength: 6, armorPenetration: 0, damage: '1', keywords: ['DEVASTATING WOUNDS'] },
+          { name: 'Power Fist', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 8, armorPenetration: -2, damage: '2', keywords: [] }
+        ],
+        abilities: ['Deep Strike', 'Fury of the First']
+      },
+      {
+        name: 'Infernus Squad',
+        role: 'INFANTRY',
+        modelCount: 5,
+        stats: { movement: '6"', toughness: 4, save: '3+', wounds: 2, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Pyreblaster', type: 'Ranged', range: '12"', attacks: 'D6', skill: 'N/A', strength: 5, armorPenetration: 0, damage: '1', keywords: ['IGNORES COVER', 'TORRENT'] },
+          { name: 'Close Combat Weapon', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] }
+        ],
+        abilities: ['Purge with Flame']
+      },
+      {
+        name: 'Librarian in Terminator Armour',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '5"', toughness: 5, save: '2+', invulnerableSave: '4+', wounds: 5, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Smite', type: 'Ranged', range: '24"', attacks: 'D6', skill: '3+', strength: 5, armorPenetration: -1, damage: 'D3', keywords: ['PSYCHIC'] },
+          { name: 'Force Weapon', type: 'Melee', range: 'Melee', attacks: '4', skill: '3+', strength: 6, armorPenetration: -1, damage: 'D3', keywords: ['PSYCHIC'] }
+        ],
+        abilities: ['Leader', 'Veil of Time', 'Psychic Hood']
+      }
+    ]
+  },
+  {
+    id: 'cp-necrons-amonhotek',
+    factionId: 'necrons',
+    factionName: 'Necrons',
+    patrolName: 'Amonhotek’s Guard',
+    grandAlliance: 'Xenos',
+    description: 'An ancient phalanx led by Overlord Amonhotek, flanked by terrifying Skorpekh Destroyers, relentless Warriors, and a looming Canoptek Doomstalker.',
+    patrolRule: {
+      name: 'Reanimation Protocols [Patrol]',
+      description: 'At the end of your Command phase, each friendly Necrons unit from your army activates its Reanimation Protocols and reanimates D3 wounds.'
+    },
+    enhancements: [
+      {
+        name: 'Hypermaterial Ablator',
+        leader: 'Overlord',
+        description: 'While the bearer is leading a unit, models in that unit have the Stealth ability and Benefit of Cover.'
+      },
+      {
+        name: 'Sempiternal Weave',
+        leader: 'Overlord',
+        description: 'The bearer has the Feel No Pain 4+ ability.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Awaken the Dynasties',
+        description: 'Score 4 VP at the end of your turn if you control two or more objective markers outside your deployment zone.'
+      },
+      {
+        name: 'Purge the Vermin',
+        description: 'Score 3 VP at the end of the battle round if no enemy units are within your deployment zone.'
+      }
+    ],
+    units: [
+      {
+        name: 'Overlord',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '5"', toughness: 5, save: '2+', invulnerableSave: '4+', wounds: 6, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Tachyon Arrow', type: 'Ranged', range: '72"', attacks: '1', skill: '2+', strength: 16, armorPenetration: -5, damage: 'D6+2', keywords: ['ONE SHOT'] },
+          { name: 'Overlord\'s Blade', type: 'Melee', range: 'Melee', attacks: '4', skill: '2+', strength: 8, armorPenetration: -3, damage: '2', keywords: [] }
+        ],
+        abilities: ['Leader', 'My Will Be Done', 'Resurrection Orb']
+      },
+      {
+        name: 'Necron Warriors',
+        role: 'BATTLELINE',
+        modelCount: 10,
+        stats: { movement: '5"', toughness: 4, save: '4+', wounds: 1, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Gauss Flayer', type: 'Ranged', range: '24"', attacks: '1', skill: '4+', strength: 4, armorPenetration: 0, damage: '1', keywords: ['LETHAL HITS', 'RAPID FIRE 1'] },
+          { name: 'Close Combat Weapon', type: 'Melee', range: 'Melee', attacks: '1', skill: '4+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] }
+        ],
+        abilities: ['Their Number is Legion']
+      },
+      {
+        name: 'Skorpekh Destroyers',
+        role: 'INFANTRY',
+        modelCount: 3,
+        stats: { movement: '7"', toughness: 6, save: '3+', wounds: 3, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Skorpekh Hyperphase Weapons', type: 'Melee', range: 'Melee', attacks: '4', skill: '3+', strength: 7, armorPenetration: -2, damage: '2', keywords: [] }
+        ],
+        abilities: ['Whirlwind of Severed Limbs']
+      },
+      {
+        name: 'Canoptek Scarab Swarms',
+        role: 'BEAST',
+        modelCount: 3,
+        stats: { movement: '9"', toughness: 2, save: '6+', wounds: 4, leadership: '8+', objectiveControl: 0 },
+        weapons: [
+          { name: 'Feeder Mandibles', type: 'Melee', range: 'Melee', attacks: '6', skill: '5+', strength: 2, armorPenetration: 0, damage: '1', keywords: ['LETHAL HITS'] }
+        ],
+        abilities: ['Self-Destruction']
+      },
+      {
+        name: 'Canoptek Doomstalker',
+        role: 'MONSTER',
+        modelCount: 1,
+        stats: { movement: '7"', toughness: 8, save: '3+', invulnerableSave: '4+', wounds: 12, leadership: '7+', objectiveControl: 4 },
+        weapons: [
+          { name: 'Doomsday Blaster', type: 'Ranged', range: '48"', attacks: 'D6+1', skill: '4+', strength: 14, armorPenetration: -3, damage: '3', keywords: ['BLAST', 'HEAVY'] },
+          { name: 'Twin Gauss Flayer', type: 'Ranged', range: '24"', attacks: '1', skill: '4+', strength: 4, armorPenetration: 0, damage: '1', keywords: ['LETHAL HITS', 'TWIN-LINKED'] },
+          { name: 'Doomstalker Feet', type: 'Melee', range: 'Melee', attacks: '3', skill: '4+', strength: 6, armorPenetration: 0, damage: '1', keywords: [] }
+        ],
+        abilities: ['Sentinel Construct']
+      }
+    ]
+  },
+  {
+    id: 'cp-tau-sudden-dawn',
+    factionId: 't-au-empire',
+    factionName: "T'au Empire",
+    patrolName: 'Sudden Dawn Cadre',
+    grandAlliance: 'Xenos',
+    description: 'A mobile combined-arms detachment of high-tech battlesuits, Breachers mounted in a Devilfish transport, and coordinated Pathfinder spotters.',
+    patrolRule: {
+      name: 'For the Greater Good [Patrol]',
+      description: 'In your Shooting phase, pairs of friendly units can guide each other. When an Observer unit guides a Guided unit against a Spotted enemy, improve Ballistic Skill by 1.'
+    },
+    enhancements: [
+      {
+        name: 'Exemplar of the Kauyon',
+        leader: 'Commander in Enforcer Battlesuit',
+        description: 'From the second battle round onwards, weapons equipped by the bearer’s unit have [SUSTAINED HITS 1].'
+      },
+      {
+        name: 'Puretide Neurochip',
+        leader: 'Commander in Enforcer Battlesuit',
+        description: 'Once per battle round, one model in the bearer’s unit can use a Stratagem for 0 CP.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Cleanse the Area',
+        description: 'Score 4 VP at the end of your turn if a friendly Guided unit destroyed a Spotted enemy unit on an objective.'
+      },
+      {
+        name: 'Deploy Uplinks',
+        description: 'Score 3 VP for each objective marker in No Man’s Land your units control.'
+      }
+    ],
+    units: [
+      {
+        name: 'Commander in Enforcer Battlesuit',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '8"', toughness: 5, save: '2+', invulnerableSave: '4+', wounds: 6, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Plasma Rifle', type: 'Ranged', range: '24"', attacks: '1', skill: '3+', strength: 8, armorPenetration: -3, damage: '3', keywords: [] },
+          { name: 'Cyclic Ion Blaster', type: 'Ranged', range: '18"', attacks: '3', skill: '3+', strength: 7, armorPenetration: -1, damage: '1', keywords: [] }
+        ],
+        abilities: ['Leader', 'Enforcer Class', 'For the Greater Good']
+      },
+      {
+        name: 'Breacher Team',
+        role: 'BATTLELINE',
+        modelCount: 10,
+        stats: { movement: '6"', toughness: 3, save: '4+', wounds: 1, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Pulse Blaster (Close)', type: 'Ranged', range: '8"', attacks: '2', skill: '3+', strength: 6, armorPenetration: -1, damage: '1', keywords: ['ASSAULT'] },
+          { name: 'Pulse Blaster (Long)', type: 'Ranged', range: '10"', attacks: '2', skill: '3+', strength: 5, armorPenetration: 0, damage: '1', keywords: ['ASSAULT'] }
+        ],
+        abilities: ['Breaching Team']
+      },
+      {
+        name: 'Devilfish',
+        role: 'DEDICATED_TRANSPORT',
+        modelCount: 1,
+        stats: { movement: '12"', toughness: 9, save: '3+', wounds: 11, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Burst Cannon', type: 'Ranged', range: '18"', attacks: '4', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Twin Smart Missile System', type: 'Ranged', range: '30"', attacks: '3', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: ['INDIRECT FIRE', 'TWIN-LINKED'] }
+        ],
+        abilities: ['Rapid Deployment', 'Transport (12 T\'AU INFANTRY)']
+      },
+      {
+        name: 'Stealth Battlesuits',
+        role: 'INFANTRY',
+        modelCount: 3,
+        stats: { movement: '8"', toughness: 4, save: '3+', wounds: 3, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Burst Cannon', type: 'Ranged', range: '18"', attacks: '4', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Fusion Blaster', type: 'Ranged', range: '12"', attacks: '1', skill: '4+', strength: 9, armorPenetration: -4, damage: 'D6', keywords: ['MELTA 2'] }
+        ],
+        abilities: ['Infiltrators', 'Stealth', 'Forward Observers']
+      },
+      {
+        name: 'Pathfinder Team',
+        role: 'INFANTRY',
+        modelCount: 10,
+        stats: { movement: '7"', toughness: 3, save: '5+', wounds: 1, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Pulse Carbine', type: 'Ranged', range: '20"', attacks: '2', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Rail Rifle', type: 'Ranged', range: '30"', attacks: '1', skill: '4+', strength: 10, armorPenetration: -4, damage: '3', keywords: ['DEVASTATING WOUNDS'] }
+        ],
+        abilities: ['Scouts 7"', 'Target Sighted']
+      }
+    ]
+  },
+  {
+    id: 'cp-chaos-space-marines-foresworn',
+    factionId: 'chaos-chaos-space-marines',
+    factionName: 'Chaos Space Marines',
+    patrolName: 'The Foresworn',
+    grandAlliance: 'Chaos',
+    description: 'Vengeful traitors led by a Dark Apostle reciting blasphemous dark pacts, backed by brutal Possessed and hardened Legionaries.',
+    patrolRule: {
+      name: 'Dark Pacts [Patrol]',
+      description: 'Each time a friendly unit is selected to shoot or fight, it can make a Dark Pact to gain [LETHAL HITS] or [SUSTAINED HITS 1]. Take a Leadership test after; on failure, the unit suffers D3 mortal wounds.'
+    },
+    enhancements: [
+      {
+        name: 'Talisman of Burning Blood',
+        leader: 'Dark Apostle',
+        description: 'Add 2 to the bearer’s Attacks and Strength characteristics in melee.'
+      },
+      {
+        name: 'Eye of Tzeentch',
+        leader: 'Dark Apostle',
+        description: 'Once per battle round, you can gain 1 CP when the bearer’s unit passes a Dark Pact Leadership test.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Desecrate Ground',
+        description: 'Score 4 VP at the end of your turn if a friendly unit successfully performed a Desecration action on an objective.'
+      },
+      {
+        name: 'Glory to the Dark Gods',
+        description: 'Score 3 VP if you destroyed an enemy Character or Monster/Vehicle.'
+      }
+    ],
+    units: [
+      {
+        name: 'Dark Apostle',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '6"', toughness: 4, save: '3+', invulnerableSave: '4+', wounds: 4, leadership: '5+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Accursed Crozius', type: 'Melee', range: 'Melee', attacks: '5', skill: '2+', strength: 6, armorPenetration: -1, damage: '2', keywords: [] }
+        ],
+        abilities: ['Leader', 'Dark Pacts', 'Demagogue']
+      },
+      {
+        name: 'Legionaries',
+        role: 'BATTLELINE',
+        modelCount: 10,
+        stats: { movement: '6"', toughness: 4, save: '3+', wounds: 2, leadership: '6+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Boltgun', type: 'Ranged', range: '24"', attacks: '2', skill: '3+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Astartes Chainsword', type: 'Melee', range: 'Melee', attacks: '4', skill: '3+', strength: 4, armorPenetration: -1, damage: '1', keywords: [] },
+          { name: 'Heavy Melee Weapon', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 8, armorPenetration: -2, damage: '2', keywords: [] }
+        ],
+        abilities: ['Veterans of the Long War']
+      },
+      {
+        name: 'Possessed',
+        role: 'INFANTRY',
+        modelCount: 5,
+        stats: { movement: '9"', toughness: 6, save: '3+', invulnerableSave: '5+', wounds: 3, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Hideous Mutations', type: 'Melee', range: 'Melee', attacks: '5', skill: '3+', strength: 5, armorPenetration: -1, damage: '2', keywords: [] }
+        ],
+        abilities: ['Writhing Horrors']
+      },
+      {
+        name: 'Chaos Cultists',
+        role: 'INFANTRY',
+        modelCount: 10,
+        stats: { movement: '6"', toughness: 3, save: '6+', wounds: 1, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Autopistol', type: 'Ranged', range: '12"', attacks: '1', skill: '4+', strength: 3, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Brutal Assault Weapon', type: 'Melee', range: 'Melee', attacks: '2', skill: '4+', strength: 3, armorPenetration: 0, damage: '1', keywords: [] }
+        ],
+        abilities: ['For the Dark Gods!']
+      }
+    ]
+  },
+  {
+    id: 'cp-tyranids-vardenghast',
+    factionId: 'tyranids',
+    factionName: 'Tyranids',
+    patrolName: 'The Vardenghast Swarm',
+    grandAlliance: 'Xenos',
+    description: 'A terrifying vanguard bio-swarm spearheaded by a winged Prime, chittering Termagants, leaping predators, and a voracious Psychophage.',
+    patrolRule: {
+      name: 'Shadow in the Warp [Patrol]',
+      description: 'Once per battle, in either player’s Command phase, unleash the Shadow in the Warp. Every enemy unit on the battlefield must take a Battle-shock test.'
+    },
+    enhancements: [
+      {
+        name: 'Adaptive Biology',
+        leader: 'Winged Tyranid Prime',
+        description: 'The bearer has the Feel No Pain 5+ ability (improves to 4+ after taking damage).'
+      },
+      {
+        name: 'Synaptic Lynchpin',
+        leader: 'Winged Tyranid Prime',
+        description: 'The bearer has a Synapse Range of 9" instead of 6".'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Digest Biomass',
+        description: 'Score 4 VP at the end of the battle round if an enemy unit was destroyed within 6" of the Psychophage.'
+      },
+      {
+        name: 'Infest the Area',
+        description: 'Score 3 VP for each objective marker controlled by your Swarm units.'
+      }
+    ],
+    units: [
+      {
+        name: 'Winged Tyranid Prime',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '12"', toughness: 5, save: '4+', wounds: 6, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Prime Talons', type: 'Melee', range: 'Melee', attacks: '6', skill: '2+', strength: 6, armorPenetration: -1, damage: '2', keywords: [] }
+        ],
+        abilities: ['Fly', 'Leader', 'Alpha Predator']
+      },
+      {
+        name: 'Termagants',
+        role: 'BATTLELINE',
+        modelCount: 20,
+        stats: { movement: '6"', toughness: 3, save: '5+', wounds: 1, leadership: '8+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Fleshborer', type: 'Ranged', range: '18"', attacks: '1', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: ['ASSAULT'] }
+        ],
+        abilities: ['Skittering Swarm']
+      },
+      {
+        name: 'Von Ryan’s Leapers',
+        role: 'INFANTRY',
+        modelCount: 3,
+        stats: { movement: '10"', toughness: 5, save: '4+', invulnerableSave: '6+', wounds: 3, leadership: '8+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Leaper Talons', type: 'Melee', range: 'Melee', attacks: '6', skill: '3+', strength: 5, armorPenetration: -1, damage: '1', keywords: [] }
+        ],
+        abilities: ['Infiltrators', 'Stealth', 'Fights First']
+      },
+      {
+        name: 'Barbgaunts',
+        role: 'INFANTRY',
+        modelCount: 5,
+        stats: { movement: '6"', toughness: 4, save: '4+', wounds: 2, leadership: '8+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Barblauncher', type: 'Ranged', range: '24"', attacks: 'D6', skill: '4+', strength: 5, armorPenetration: 0, damage: '1', keywords: ['BLAST', 'HEAVY'] }
+        ],
+        abilities: ['Disruption Bombardment']
+      },
+      {
+        name: 'Psychophage',
+        role: 'MONSTER',
+        modelCount: 1,
+        stats: { movement: '8"', toughness: 9, save: '3+', wounds: 10, leadership: '8+', objectiveControl: 3 },
+        weapons: [
+          { name: 'Psychoclastic Torrent', type: 'Ranged', range: '12"', attacks: 'D6', skill: 'N/A', strength: 6, armorPenetration: -1, damage: '1', keywords: ['IGNORES COVER', 'TORRENT'] },
+          { name: 'Talons and Betentacled Maw', type: 'Melee', range: 'Melee', attacks: '6', skill: '3+', strength: 6, armorPenetration: -1, damage: '2', keywords: ['ANTI-PSYKER 2+'] }
+        ],
+        abilities: ['Digestive Aura (Feel No Pain 6+ to nearby allies)', 'Feast on Sanity']
+      }
+    ]
+  },
+  {
+    id: 'cp-orks-morgrim',
+    factionId: 'orks',
+    factionName: 'Orks',
+    patrolName: 'Morgrim’s Butchas',
+    grandAlliance: 'Xenos',
+    description: 'A ramshackle mob of violent Beast Snagga Boyz mounted on savage Squighogs, led by a roaring Beastboss on foot.',
+    patrolRule: {
+      name: 'Waaagh! [Patrol]',
+      description: 'Once per battle, at the start of the battle round, call the Waaagh! Friendly Orks units can Advance and Charge, gain +1 Strength and +1 Attack in melee, and a 5+ invulnerable save.'
+    },
+    enhancements: [
+      {
+        name: 'Headwoppa’s Killchoppa',
+        leader: 'Beastboss',
+        description: 'Melee weapons equipped by the bearer have the [DEVASTATING WOUNDS] ability.'
+      },
+      {
+        name: 'Kunnin’ But Brutal',
+        leader: 'Beastboss',
+        description: 'The bearer’s unit can Fall Back and still shoot and charge.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Da Biggest and da Best',
+        description: 'Score 4 VP at the end of the battle round if your Beastboss destroyed an enemy model this round.'
+      },
+      {
+        name: 'Stomp ‘Em Good',
+        description: 'Score 3 VP if you control more objective markers than your opponent at the end of the round.'
+      }
+    ],
+    units: [
+      {
+        name: 'Beastboss',
+        role: 'CHARACTER',
+        modelCount: 1,
+        stats: { movement: '6"', toughness: 5, save: '4+', invulnerableSave: '4+', wounds: 6, leadership: '6+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Shoota', type: 'Ranged', range: '18"', attacks: '2', skill: '5+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] },
+          { name: 'Beastchoppa', type: 'Melee', range: 'Melee', attacks: '6', skill: '2+', strength: 6, armorPenetration: -1, damage: '2', keywords: ['ANTI-VEHICLE 4+', 'ANTI-MONSTER 4+'] }
+        ],
+        abilities: ['Leader', 'Beastboss', 'Waaagh!']
+      },
+      {
+        name: 'Beast Snagga Boyz',
+        role: 'BATTLELINE',
+        modelCount: 10,
+        stats: { movement: '6"', toughness: 5, save: '5+', wounds: 1, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Slugga', type: 'Ranged', range: '12"', attacks: '1', skill: '5+', strength: 4, armorPenetration: 0, damage: '1', keywords: ['PISTOL'] },
+          { name: 'Choppa', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 5, armorPenetration: -1, damage: '1', keywords: [] }
+        ],
+        abilities: ['Monster Hunters', 'Feel No Pain 6+']
+      },
+      {
+        name: 'Squighog Boyz',
+        role: 'MOUNTED',
+        modelCount: 3,
+        stats: { movement: '10"', toughness: 6, save: '4+', wounds: 3, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Stikka', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 5, armorPenetration: -1, damage: '2', keywords: ['LANCE'] },
+          { name: 'Squighog Jaws', type: 'Melee', range: 'Melee', attacks: '3', skill: '4+', strength: 6, armorPenetration: -1, damage: '2', keywords: ['EXTRA ATTACKS'] }
+        ],
+        abilities: ['Feel No Pain 5+', 'Squighog Charge']
+      }
+    ]
+  },
+  {
+    id: 'cp-astra-militarum-cadian',
+    factionId: 'imperium-astra-militarum',
+    factionName: 'Astra Militarum',
+    patrolName: 'Cadian Armoured Fist',
+    grandAlliance: 'Imperium',
+    description: 'Disciplined Cadian infantry battalions backed by a mobile Command Squad, an Armoured Sentinel, and long-range Field Ordnance heavy artillery.',
+    patrolRule: {
+      name: 'Voice of Command [Patrol]',
+      description: 'In your Command phase, Officer models can issue one Order (e.g., Take Aim! [+1 BS], First Rank Fire Second Rank Fire! [Rapid Fire +1], Move Move Move! [+3" M]) to friendly Regimental units within 6".'
+    },
+    enhancements: [
+      {
+        name: 'Grand Strategist',
+        leader: 'Cadian Command Squad',
+        description: 'The Officer model in the bearer’s unit can issue one additional Order each turn.'
+      },
+      {
+        name: 'Death Mask of Ollanius',
+        leader: 'Cadian Command Squad',
+        description: 'Models in the bearer’s unit have the Objective Control 3 characteristic.'
+      }
+    ],
+    secondaryObjectives: [
+      {
+        name: 'Hold at All Costs',
+        description: 'Score 4 VP at the end of the round if you control an objective marker in No Man’s Land with a unit receiving an Order.'
+      },
+      {
+        name: 'Heavy Firepower',
+        description: 'Score 3 VP if an enemy unit was destroyed by your Field Ordnance Battery this round.'
+      }
+    ],
+    units: [
+      {
+        name: 'Cadian Command Squad',
+        role: 'CHARACTER',
+        modelCount: 5,
+        stats: { movement: '6"', toughness: 3, save: '5+', wounds: 3, leadership: '7+', objectiveControl: 1 },
+        weapons: [
+          { name: 'Plasma Pistol', type: 'Ranged', range: '12"', attacks: '1', skill: '3+', strength: 8, armorPenetration: -3, damage: '2', keywords: ['OVERCHARGE'] },
+          { name: 'Power Weapon', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 4, armorPenetration: -2, damage: '1', keywords: [] }
+        ],
+        abilities: ['Leader', 'Voice of Command', 'Regimental Standard (+1 OC)']
+      },
+      {
+        name: 'Cadian Shock Troops',
+        role: 'BATTLELINE',
+        modelCount: 20,
+        stats: { movement: '6"', toughness: 3, save: '5+', wounds: 1, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Lasgun', type: 'Ranged', range: '24"', attacks: '1', skill: '4+', strength: 3, armorPenetration: 0, damage: '1', keywords: ['RAPID FIRE 1'] },
+          { name: 'Plasma Gun', type: 'Ranged', range: '24"', attacks: '1', skill: '4+', strength: 8, armorPenetration: -3, damage: '2', keywords: ['RAPID FIRE 1'] },
+          { name: 'Meltagun', type: 'Ranged', range: '12"', attacks: '1', skill: '4+', strength: 9, armorPenetration: -4, damage: 'D6', keywords: ['MELTA 2'] }
+        ],
+        abilities: ['Born Soldiers', 'Shock Troops (Sticky Objectives)']
+      },
+      {
+        name: 'Armoured Sentinel',
+        role: 'VEHICLE',
+        modelCount: 1,
+        stats: { movement: '8"', toughness: 8, save: '2+', wounds: 7, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Lascannon', type: 'Ranged', range: '48"', attacks: '1', skill: '4+', strength: 12, armorPenetration: -3, damage: 'D6+1', keywords: [] },
+          { name: 'Sentinel Chainsaw', type: 'Melee', range: 'Melee', attacks: '2', skill: '4+', strength: 6, armorPenetration: -1, damage: '1', keywords: [] }
+        ],
+        abilities: ['Reinforced Armour', 'Daring Recon']
+      },
+      {
+        name: 'Field Ordnance Battery',
+        role: 'INFANTRY',
+        modelCount: 2,
+        stats: { movement: '6"', toughness: 4, save: '4+', wounds: 6, leadership: '7+', objectiveControl: 2 },
+        weapons: [
+          { name: 'Bombast Field Gun', type: 'Ranged', range: '48"', attacks: 'D6', skill: '5+', strength: 7, armorPenetration: -1, damage: '2', keywords: ['BLAST', 'INDIRECT FIRE'] }
+        ],
+        abilities: ['Heavy Artillery', 'Fire on My Coordinates']
+      }
+    ]
+  }
+];
+
+fs.writeFileSync(path.join(outDir, 'combat-patrols.json'), JSON.stringify(COMBAT_PATROLS, null, 2), 'utf8');
+fs.writeFileSync(path.join(webOutDir, 'combat-patrols.json'), JSON.stringify(COMBAT_PATROLS, null, 2), 'utf8');
+
+console.log(`✓ Wrote ${COMBAT_PATROLS.length} official Wahapedia Combat Patrols to ${outDir} and ${webOutDir}`);

@@ -1,9 +1,267 @@
 {
   "id": "aeldari-drukhari",
   "name": "Drukhari",
-  "sourceFile": "Aeldari - Drukhari.json",
-  "totalDatasheets": 0,
-  "detachments": [],
+  "grandAlliance": "Xenos",
+  "isLegends": false,
+  "totalDatasheets": 21,
+  "detachments": [
+    {
+      "id": "e9b7-c334-8d6d-9422",
+      "name": "Ghostglaive",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "4c4c-3535-df71-cd27",
+      "name": "Ghostswords",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "8b0e-6ad0-b02b-da43",
+      "name": "Ghostaxe and Forceshield",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "426b-b231-8a8b-56ab",
+      "name": "Ghostaxe",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "5782-cffd-df63-ee62",
+      "name": "Ghostspear",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "68f1-24f4-a4c6-303f",
+      "name": "Detachment",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "2d05-efec-bda2-f059",
+      "name": "Titanic Ghostglaive",
+      "rules": [],
+      "enhancements": []
+    },
+    {
+      "id": "3c31-6fac-9914-827a",
+      "name": "Warhost",
+      "rules": [
+        "Martial Grace"
+      ],
+      "enhancements": [
+        {
+          "id": "6716-5adc-b3c9-2acb",
+          "name": "Guiding Presence",
+          "points": 25,
+          "description": "**AELDARI PSYKER** model only. At the start of your Shooting phase, select one **visible** friendly **AELDARI VEHICLE** unit within 6\" of this model. That **VEHICLE** unit’s ranged attacks have +1 to **hit rolls**."
+        },
+        {
+          "id": "4196-9426-5925-ce63",
+          "name": "Spirit Stone of Raelyth",
+          "points": 20,
+          "description": "**AELDARI PSYKER** model only.\n- While this model is within 3\" of a friendly **AELDARI VEHICLE** unit, this model has **Lone Operative**.\n- In your Movement phase, at the start or end of this unit’s move, you can select one friendly **AELDARI VEHICLE** model within 3\" of this model. That **VEHICLE** model **heals** D3 wounds."
+        }
+      ]
+    },
+    {
+      "id": "e688-8140-bc36-3cee",
+      "name": "Reaper's Wager",
+      "rules": [
+        "Callous Competition"
+      ],
+      "enhancements": [
+        {
+          "id": "8a73-4f00-0bb8-9298",
+          "name": "Archraider",
+          "points": 15,
+          "description": "^^**Harlequins**^^ or ^^**Drukhari**^^ model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a ^^**Dedicated Transport**^^, that ^^**Dedicated Transport**^^ has the Scouts 9\" ability."
+        },
+        {
+          "id": "acb4-8fc5-8c22-82f2",
+          "name": "Webway walker",
+          "points": 15,
+          "description": "^^**Harlequins**^^ or ^^**Drukhari**^^ model only. Models in the bearer’s unit have the Deep Strike ability. Each time the bearer’s unit is set up on the battlefield using the Deep Strike ability, if that unit is currently losing the wager, until the end of the turn, you can re‑roll Charge rolls made for that unit."
+        },
+        {
+          "id": "4483-1caf-6caa-d571",
+          "name": "Reaper's Cowl",
+          "points": 25,
+          "description": "^^**Harlequins**^^ model only. Models in the bearer’s unit have the Stealth and Infiltrators abilities."
+        },
+        {
+          "id": "25d9-822d-ff7f-53b5",
+          "name": "Conductor of Torment",
+          "points": 20,
+          "description": "^^**Drukhari**^^ model only. In your Command phase, you can do one of the following:\n■ If your ^^**Drukhari**^^ units are currently losing the wager, you can gain 1 Pain token. If you do, ^^**Drukhari**^^ units from your army are now winning the wager.\n■ If your ^^**Drukhari**^^ units are currently winning the wager, you can discard 1 Pain token. If you do, ^^**Harlequins**^^ units from your army are now winning the wager."
+        }
+      ]
+    },
+    {
+      "id": "a27b-ac32-f0fd-8111",
+      "name": "Armoured Warhost",
+      "rules": [
+        "Skilled Crews"
+      ],
+      "enhancements": [
+        {
+          "id": "6716-5adc-b3c9-2acb",
+          "name": "Guiding Presence",
+          "points": 25,
+          "description": "**AELDARI PSYKER** model only. At the start of your Shooting phase, select one **visible** friendly **AELDARI VEHICLE** unit within 6\" of this model. That **VEHICLE** unit’s ranged attacks have +1 to **hit rolls**."
+        },
+        {
+          "id": "4196-9426-5925-ce63",
+          "name": "Spirit Stone of Raelyth",
+          "points": 20,
+          "description": "**AELDARI PSYKER** model only.\n- While this model is within 3\" of a friendly **AELDARI VEHICLE** unit, this model has **Lone Operative**.\n- In your Movement phase, at the start or end of this unit’s move, you can select one friendly **AELDARI VEHICLE** model within 3\" of this model. That **VEHICLE** model **heals** D3 wounds."
+        }
+      ]
+    },
+    {
+      "id": "c8a3-920b-166b-30d9",
+      "name": "Windrider Host",
+      "rules": [
+        "Ride the Wind"
+      ],
+      "enhancements": [
+        {
+          "id": "cb45-ba0f-165f-45dc",
+          "name": "Firstdrawn Blade",
+          "points": 10,
+          "description": "**^^Asuryani Mounted^^** model only. Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "9867-5fd8-af23-34a8",
+          "name": "Mirage Field",
+          "points": 25,
+          "description": "Asuryani Mounted model only. Each time an attack targets the bearer's unit, subtract 1 from the Hit roll."
+        },
+        {
+          "id": "116d-f3dd-042d-4c4f",
+          "name": "Seersight Strike",
+          "points": 15,
+          "description": "Asuryani Mounted Psyker model only. Psychic weapons equipped by the bearer have the [Anti-Monster 2+] and [Anti-Vehicle 2+] abilities."
+        },
+        {
+          "id": "81a9-3e2f-0181-e550",
+          "name": "Echoes of Ulthanesh",
+          "points": 20,
+          "description": "Asuryani Mounted model only. In your Command phase, roll one D6, adding 1 to the result if the bearer is not within your deployment zone, and adding an additional 1 to the result if the bearer is within your opponent's deployment zone: on a 5+, you gain 1CP."
+        }
+      ]
+    },
+    {
+      "id": "9805-eaee-0a84-f86f",
+      "name": "Guardian Battlehost",
+      "rules": [
+        "Defend at All Costs"
+      ],
+      "enhancements": [
+        {
+          "id": "4d59-81d8-0a78-adf3",
+          "name": "Craftworld's Champion",
+          "points": 25,
+          "description": "Asuryani model only. The bearer has an Objective Control characteristic of 5."
+        },
+        {
+          "id": "7b5e-5f21-cb77-1208",
+          "name": "Ethereal Pathway",
+          "points": 30,
+          "description": "Asuryani model only. In the Deploy Armies step, select up to two Guardians units from your army. Models in the selected units have the Infiltrators ability."
+        },
+        {
+          "id": "7c21-5892-1827-1ff9",
+          "name": "Protector of the Paths",
+          "points": 20,
+          "description": "Asuryani model only. While the bearer is leading a Dire Avengers or Guardians unit, once per battle round, you can target the bearer's unit with the Fire Overwatch Stratagem for 0CP, and while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+, or unmodified Hit rolls of 4+ instead if the bearer's unit is within range of an objective marker you control."
+        },
+        {
+          "id": "b142-6aad-160a-75d0",
+          "name": "Breath of Vaul",
+          "points": 10,
+          "description": "**ASURYANI** model only. While the bearer is leading a **STORM GUARDIANS** unit, each time you roll to determine the number of attacks made with a flamer equipped by a model in that unit, you can re‑roll the result, and each time you make a Damage roll for a model equipped with a fusion gun in that unit, you can re‑roll the result."
+        }
+      ]
+    },
+    {
+      "id": "be59-ec7d-2f02-b6ec",
+      "name": "Ghosts of the Webway",
+      "rules": [
+        "Acrobatic Onslaught",
+        "Travelling Players"
+      ],
+      "enhancements": [
+        {
+          "id": "ad20-1ee6-b7ce-0c17",
+          "name": "Cegorach's Coil",
+          "points": 25,
+          "description": "Troupe Master model only. Each time the bearer's unit ends a Charge move, select one enemy unit within Engagement Range of the bearer's unit, then roll one D6 for each model in the bearer's unit that is within Engagment Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+        },
+        {
+          "id": "a067-906b-f29b-253a",
+          "name": "Mask of Secrets",
+          "points": 15,
+          "description": "Harlequins model only. Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer's unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+        },
+        {
+          "id": "f479-1838-39ed-3c9d",
+          "name": "Murder's Jest",
+          "points": 20,
+          "description": "Death Jester model only. Each time the bearer makes an attack that targets a unit that is below Half-strength, each successful Hit scores a Critical Hit."
+        },
+        {
+          "id": "5d21-7924-d79b-3be1",
+          "name": "Mistweave",
+          "points": 15,
+          "description": "Shadowseer model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability."
+        }
+      ]
+    },
+    {
+      "id": "8e89-2c14-6bf5-87bf",
+      "name": "Aspect Host",
+      "rules": [
+        "Path of the Warrior"
+      ],
+      "enhancements": [
+        {
+          "id": "c8de-3531-4ac1-a88b",
+          "name": "Aspect of Murder",
+          "points": 15,
+          "description": "**^^Autarch^^** or **^^Autarch Wayleaper^^** model only. Add 1 to the Damage characteristics of melee weapons equipped by the bearer, and those weapons have the **[PRECISION]** ability."
+        },
+        {
+          "id": "0a0b-4e89-3576-1d96",
+          "name": "Mantle of Wisdom",
+          "points": 20,
+          "description": "^^**Autarch^^** or ^^**Autarch Wayleaper^^** model only. While the bearer is leading an ^^**Aspect Warriors^^** unit, each time that unit is selected to shoot or fight, until the end of the phase, models in that unit gain both of the abilities from the Path of the Warrior Detachment rule."
+        },
+        {
+          "id": "aad8-7608-0af0-628c",
+          "name": "Shimmerstone",
+          "points": 10,
+          "description": "Autarch or Autarch Wayleaper model only. While the bearer is leading an Aspect Warriors unit, each time a ranged attack targets that unit, subtract 1 from the Wound roll."
+        },
+        {
+          "id": "f980-e125-e534-dd4e",
+          "name": "Strategic Savant",
+          "points": 10,
+          "description": "Autarch or Autarch Wayleaper model only. While the bearer is leading an Aspect Warriors unit, add 1 to the Objective Control characteristic of models in that unit."
+        }
+      ]
+    },
+    {
+      "id": "1927-5104-198f-4b11",
+      "name": "Key of Ghosts",
+      "rules": [],
+      "enhancements": []
+    }
+  ],
   "stratagems": [
     {
       "id": "core-command-reroll",
@@ -92,5 +350,2049 @@
       ]
     }
   ],
-  "datasheets": []
+  "subfactions": [],
+  "datasheets": [
+    {
+      "id": "5c1c-fa4a-3234-c711",
+      "name": "Archon",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "2+*",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Archon",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "KABAL",
+        "AELDARI",
+        "ARCHON",
+        "FACTION: DRUKHARI",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **COURT OF THE ARCHON**\n- **HAND OF THE ARCHON**\n- **INCUBI**\n- **KABALITE WARRIORS**"
+        },
+        {
+          "name": "Overlord",
+          "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Drukhari**^^ unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+        },
+        {
+          "name": "Devious Mastermind",
+          "description": "Once per battle round, one model from your army with this ability can use it when its unit is targeted with a stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        },
+        {
+          "name": "Hatred Eternal (Pain)",
+          "description": "In your Shooting or the Fight phase, when you select this model's unit to shoot or fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Shadowfield",
+          "description": "While this model has an **InSv**, this unit cannot re‑roll **save rolls**. When this model loses a wound (excluding from **mortal wounds**), this model has no **InSv** until the end of the battle."
+        },
+        {
+          "name": "Soul Trap",
+          "description": "Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. The first time the bearer makes a melee attack that destroys an enemy model, after all the bearer's attacks have been resolved, until the end of the battle, add an additional 1 to the Attacks and Strength characteristics of the bearer's melee weapons."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Splinter pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Blast pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Huskblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Master-crafted power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**COURT OF THE ARCHON**",
+        "**HAND OF THE ARCHON**",
+        "**INCUBI**",
+        "**KABALITE WARRIORS**"
+      ]
+    },
+    {
+      "id": "f99a-af49-64c0-9bed",
+      "name": "Beastmaster [Legends]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 135,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "6+",
+        "wounds": 3,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Beastmaster",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Clawed Fiend",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Khymerae",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Razorwing Flock",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "BEAST",
+        "CHARACTER"
+      ],
+      "abilities": [
+        {
+          "name": "Beastmaster",
+          "description": "While this unit contains a Beastmaster model, you can re-roll Charge rolls made for this unit."
+        },
+        {
+          "name": "Goaded Savagery (Pain)",
+          "description": "In the Fight phase, when you select this unit to fight, you can spend 1 of your Pain tokens to Empower this unit. While this unit is Empowered, if it contains a ^^**Beastmaster**^^ model, each time a ^^**Beast**^^ model in this unit makes a melee attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Splinter pods",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Agonizer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Clawed Fiend fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Khymerae talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Razorwing Feathers",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "a5d3-e21b-bf13-a952",
+      "name": "Cronos",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "MONSTER",
+      "basePoints": 55,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Cronos",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CRONOS",
+        "AELDARI",
+        "HAEMONCULUS COVENS",
+        "FACTION: DRUKHARI",
+        "MONSTER",
+        "FLY"
+      ],
+      "abilities": [
+        {
+          "name": "Pain Engine (Aura)",
+          "description": "Each time you spend 1 Pain token to Empower a friendly unit within 9\" of this unit, roll one D6, adding 1 to the result if one or more models in this unit are not equipped with a spirit vortex: on a 5+, you gain 1 Pain token.\n\n\n**Designer's Note:** Pain tokens you spend for reasons other than Empowering a unit do not trigger this ability."
+        },
+        {
+          "name": "Pain Parasite (Pain)",
+          "description": "In your Shooting phase or the Fight phase, when you select this unit to shoot or fight, you can spend 1 Pain token to Empower this unit. While Empowered, each time this unit shoots or fights, after it has resolved its attacks, if one or more enemy models were destroyed as a result of those attacks, one model in this unit regains up to 3 lost wounds (if all models in this unit have their starting number of wounds and this unit is below its Starting Strength, 1 model is returned to this unit with 3 wounds remaining)."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Spirit Vortex",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Spirit Syphon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Spirit-leech Tentacles",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "a30b-b966-d264-e935",
+      "name": "Drazhar",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 85,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 3,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Drazhar",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "DRAZHAR",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "INFANTRY",
+        "CHARACTER",
+        "BLADES FOR HIRE",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n■ Incubi"
+        },
+        {
+          "name": "Master of Blades (Pain)",
+          "description": "In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "name": "Onslaught",
+          "description": "While this model is leading a unit, each time a model in that unit makes a Pile-In or Consolidation move, it can move up to 6\" instead of up to 3\"."
+        },
+        {
+          "name": "Silent Executioner",
+          "description": "Each time this model make an attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that target is Below Half-Strength, you can re-roll the Wound roll as well."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ The Executioner's demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ The Executioner's demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Incubi"
+      ]
+    },
+    {
+      "id": "32ff-aec4-9669-c8a2",
+      "name": "Haemonculus",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 50,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "5+",
+        "invulnerableSave": "6+",
+        "wounds": 5,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Haemonculus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "HAEMONCULUS",
+        "HAEMONCULUS COVENS",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "CHARACTER",
+        "INFANTRY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n■ Wracks"
+        },
+        {
+          "name": "Fear Incarnate (Aura)",
+          "description": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent's Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test."
+        },
+        {
+          "name": "Pain Adept",
+          "description": "In your Command phase, if one or more models from your army with this ability are on the battlefield, roll one D6: on a 4+, you gain 1 Pain token."
+        },
+        {
+          "name": "Fleshcraft (Pain)",
+          "description": "In your Command phase, you can spend 1 Pain token to Empower this model's unit. Each time you do, you can return up to D3+1 destroyed Bodyguard models to that unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Stinger Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-infantry 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Wracks"
+      ]
+    },
+    {
+      "id": "1529-793d-481b-82bf",
+      "name": "Incubi",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 90,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 3,
+        "save": "3+",
+        "invulnerableSave": "5+",
+        "wounds": 1,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Incubi",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Klaivex",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INCUBI",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "INFANTRY",
+        "BLADES FOR HIRE"
+      ],
+      "abilities": [
+        {
+          "name": "Tormentors",
+          "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test. Each time a model in this unit makes a melee attack that targets a Battle-shocked unit, add 1 to the Hit roll."
+        },
+        {
+          "name": "Decapitating Strikes (Pain)",
+          "description": "In the Fight phase, when you select this unit to fight, you can spend 1 Pain token to Empower this unit. While Empowered, each time a model in this unit makes a melee attack that targets an ^^**Infantry**^^ unit, that attack has the ^^**[Devastating Wounds]**^^ ability."
+        },
+        {
+          "name": "Incubi Shrine Token",
+          "description": "Once per battle for each Incubi Shrine token this unit has, you can change the result of one Hit roll or one Wound roll made for a Klaivex or Incubi model in this unit to an unmodified 6."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Klaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Klaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "ae1b-1a96-5b4c-cecc",
+      "name": "Lelith Hesperax",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 3,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Lelith Hesperax",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "LELITH HESPERAX",
+        "AELDARI",
+        "WYCH CULT",
+        "SUCCUBUS",
+        "FACTION: DRUKHARI",
+        "EPIC HERO",
+        "CHARACTER",
+        "INFANTRY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n■ Wyches"
+        },
+        {
+          "name": "Brides of Death (Pain)",
+          "description": "In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, improve the Strength and Armour Penetration characteristics of that attack by 1."
+        },
+        {
+          "name": "Thrilling Spectacle",
+          "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save and change the Attacks characteristic of melee weapons equipped by this model to 12."
+        },
+        {
+          "name": "Blur of Blades",
+          "description": "While this model is leading a unit, models in that unit have the Fights First ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Lelith's blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision",
+            "Sustained Hits 2"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Wyches"
+      ]
+    },
+    {
+      "id": "635b-21f4-f801-453",
+      "name": "Raider",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 75,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 8,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Raider",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "RAIDER",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "DEDICATED TRANSPORT",
+        "FLY",
+        "VEHICLE",
+        "TRANSPORT",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Splinter Racks (Pain)",
+          "description": "In your Shooting phase, when you select this model to shoot, you can spend 1 Pain token to Empower this model. While Empowered, if one or more units are embarked within this model, each time this model makes an attack with a ranged weapon that has the ^^**Anti**^^ ability, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Vanguard of the Dark City",
+          "description": "At the start of your Command phase, select one of the abilities in the Vanguard of the Dark City section for this model. Until the start of your next Command phase, this model has that ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Disintegrator Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Dark Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Bladevanes and chainsnares",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "D3+3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "3376-d337-6a33-4bca",
+      "name": "Ravager",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 110,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 9,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ravager",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "RAVAGER",
+        "AELDARI",
+        "KABAL",
+        "FACTION: DRUKHARI",
+        "FLY",
+        "VEHICLE",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Damaged: 1-4 Wounds Remaining",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Eradicate the Foe",
+          "description": "Each time this model makes an attack that targets an enemy unit that is at its Starting Strength, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Agonising Suppression (Pain)",
+          "description": "In your Shooting phase, when you select this model to shoot, you can spend 1 Pain token to Empower this model. While Empowered, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Disintegrator Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Dark Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "fbc4-c7d0-db5b-91c",
+      "name": "Razorwing Jetfighter",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 170,
+      "stats": {
+        "movement": "-",
+        "toughness": 8,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Razorwing Jetfighter",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "RAZORWING JETFIGHTER",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "AIRCRAFT",
+        "VEHICLE",
+        "FLY"
+      ],
+      "abilities": [
+        {
+          "name": "Ground-attack Craft",
+          "description": "Each time a model in this unit makes a ranged attack that targets an enemy unit (excluding units that can ^^**Fly**^^), add 1 to the Hit roll."
+        },
+        {
+          "name": "Nowhere to Run (Pain)",
+          "description": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, after this unit has shot, select one enemy unit (excluding ^^**Monsters**^^ and ^^**Vehicles**^^) hit by one or more of those attacks; until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from Charge rolls made for that unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Razorwing Missiles - Monoscythe Missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Razorwing Missiles - Neurotoxin Missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Razorwing Missiles - Shatterfield Missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Dark Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Disintegrator Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Splinter Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Twin Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Rapid Fire 2",
+            "Twin Linked"
+          ]
+        },
+        {
+          "name": "Bladed Wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "b5a9-c802-10f0-6768",
+      "name": "Succubus",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 50,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 3,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Succubus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "SUCCUBUS",
+        "WYCH CULT",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "CHARACTER",
+        "INFANTRY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Lithe Agility (Pain)",
+          "description": "In your Movement phase when you select this model's unit to Advance, or in your Charge phase before you make a Charge roll for this model's unit, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, you can re-roll Advance and Charge rolls made for that unit."
+        },
+        {
+          "name": "Storm of Blades",
+          "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n■ Wyches"
+        },
+        {
+          "name": "Bloody Spectacle",
+          "description": "Each time this model makes a melee attack that targets a ^^**Character**^^ unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's unit destroys a ^^**Character**^^ model, you gain 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Archite glaive and agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Wyches"
+      ]
+    },
+    {
+      "id": "5c5f-b70b-f6ee-a81e",
+      "name": "Talos",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "MONSTER",
+      "basePoints": 70,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 7,
+        "save": "3+",
+        "invulnerableSave": "6+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Talos",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TALOS",
+        "AELDARI",
+        "HAEMONCULUS COVENS",
+        "FACTION: DRUKHARI",
+        "MONSTER",
+        "FLY"
+      ],
+      "abilities": [
+        {
+          "name": "Torture Device",
+          "description": "Each time this unit destroys an enemy unit, you gain 1 additional Pain token."
+        },
+        {
+          "name": "Devoted to Pain",
+          "description": "If a model in this unit is equipped with 2 macro-scalpels, those weapons have the ^^**[Twin-Linked]**^^ ability."
+        },
+        {
+          "name": "Mindless Killing Machines (Pain)",
+          "description": "At the start of the Fight phase, you can spend 1 Pain token to Empower this unit. While Empowered, each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; that destroyed model can fight after the attacking unit has finished making its attacks, and it is then removed from play."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin Liquifier Gun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Torrent",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin Splinter Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Sustained hits 1",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin Haywire Blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Twin heat lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Stinger Pod",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Macro-Scalpel",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Talos Ichor Injector",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Chain-flails",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Talos Gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Macro-Scalpel",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "76c4-e2ba-e247-560e",
+      "name": "Urien Rakarth [Legends]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Urien Rakarth",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "URIEN RAKARTH",
+        "HAEMONCULUS COVENS",
+        "AELDARI",
+        "HAEMONCULUS",
+        "FACTION: DRUKHARI",
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following unit:\n■ Wracks"
+        },
+        {
+          "name": "Horrific Regeneration",
+          "description": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining"
+        },
+        {
+          "name": "Sculptor of Torments (Pain)",
+          "description": "In your Fight phase, when you select this model’s unit to fight, you can spend 1 of your Pain tokens to Empower this model’s unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "name": "Father of Pain",
+          "description": "Each time an attack with a Damage characteristic of 1 is allocated to a model in this model’s unit, that model has the Feel No Pain 4+ ability against that attack."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Casket of Flensing",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Wracks"
+      ]
+    },
+    {
+      "id": "ee2c-6ca0-5e29-37a6",
+      "name": "Venom",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 65,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 6,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 6,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Venom",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VENOM",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "FLY",
+        "DEDICATED TRANSPORT",
+        "TRANSPORT",
+        "VEHICLE",
+        "FRAME"
+      ],
+      "abilities": [
+        {
+          "name": "Aerialists",
+          "description": "At the end of the Fight phase, if there are no models currently embarked within this **TRANSPORT**, you can select one friendly **DRUKHARI INFANTRY** unit that has 6 or fewer models that is wholly within 6\" of this **TRANSPORT** (you cannot select a unit that can **FLY**). Unless that unit is within Engagement Range of one or more enemy units, it can embark within this **TRANSPORT**. That unit can embark within this **TRANSPORT** in a turn it disembarked from a **TRANSPORT**."
+        },
+        {
+          "name": "Rapid Deployment (Pain)",
+          "description": "In your Movement phase, when you select this model to Advance, you can spend 1 Pain token to Empower this model. While Empowered, units can disembark from this model after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Splinter Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Sustained hits 1"
+          ]
+        },
+        {
+          "name": "Splinter Cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Sustained hits 1"
+          ]
+        },
+        {
+          "name": "Twin Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Rapid Fire 2",
+            "Twin Linked"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "71e1-7d54-4856-4ce1",
+      "name": "Voidraven Bomber",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 245,
+      "stats": {
+        "movement": "-",
+        "toughness": 9,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 12,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Voidraven",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VOIDRAVEN",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "AIRCRAFT",
+        "VEHICLE",
+        "FLY"
+      ],
+      "abilities": [
+        {
+          "name": "Damaged: 1-4 Wounds Remaining",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Void Mine",
+          "description": "At the end of your opponent’s Fight phase, select one **visible** enemy model (excluding **Lone Operative** units) within 24\" of this unit, and roll one D6 for each enemy unit within D6\" of that model:\n- For each 4+, that enemy unit suffers D6 **mortal wounds**."
+        },
+        {
+          "name": "Nowhere to Hide (Pain)",
+          "description": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Voidraven Missiles -  Implosion Missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Voidraven Missiles - Shatterfield Missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Void Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Dark Scythe",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bladed Wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "dfe4-d4db-9d04-9e7a",
+      "name": "Tantalus [Legends]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 230,
+      "stats": {
+        "movement": "16\"",
+        "toughness": 10,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 18,
+        "leadership": "7+",
+        "objectiveControl": 5
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tantalus",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "VEHICLE",
+        "TRANSPORT",
+        "FLY",
+        "FACTION: DRUKHARI",
+        "AELDARI"
+      ],
+      "abilities": [
+        {
+          "name": "Damaged: 1-6 Wounds Remaining",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Scything Charge",
+          "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+        },
+        {
+          "name": "Engine of Destruction (Pain)",
+          "description": "In your Shooting phase, when you select this model to shoot, you can spend 1 Pain token to Empower this model. While Empowered, this model’s pulse disintegrators have the ^^**[RAPID FIRE 8]**^^ ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Pulse disintegrators",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Dire scythe blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "28c1-2c51-ab58-2d91",
+      "name": "Raven Strike Fighter [Legends]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 170,
+      "stats": {
+        "movement": "20+\"",
+        "toughness": 8,
+        "save": "4+",
+        "invulnerableSave": "5+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Raven Strike Fighter",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: DRUKHARI",
+        "VEHICLE",
+        "FLY",
+        "AIRCRAFT",
+        "AELDARI",
+        "RAVEN STRIKE FIGHTER"
+      ],
+      "abilities": [
+        {
+          "name": "Ground-attack Craft",
+          "description": "Each time a model in this unit makes a ranged attack that targets an enemy unit  (excluding unit that can ^^**Fly**^^), add 1 to the Hit roll."
+        },
+        {
+          "name": "Shredding Fire (Pain)",
+          "description": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, the Armour Penetration characteristic of its ranged weapons is increased by 1."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Dark lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Splinterstorm cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Bladed wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "a228-7269-9961-daf4",
+      "name": "Reaper [Legends]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "VEHICLE",
+      "basePoints": 115,
+      "stats": {
+        "movement": "14\"",
+        "toughness": 9,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 11,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Reaper",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: DRUKHARI",
+        "VEHICLE",
+        "KABAL",
+        "FLY",
+        "AELDARI",
+        "REAPER"
+      ],
+      "abilities": [
+        {
+          "name": "Eradicate the Foe",
+          "description": "Each time this model makes an attack that targets an enemy unit that is at its Starting Strength, re-roll a Hit roll of 1. If the target unit has a Starting Strength of 1, this ability only applies if that unit has its starting number of wounds."
+        },
+        {
+          "name": "Damaged: 1-4 Wounds Remaining",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "name": "Electromagnetic Cascade (Pain)",
+          "description": "In your Shooting phase, when you select this model to shoot, you can spend 1 Pain token to Empower this model. While Empowered: \n■ Each time this model makes a ranged attack that targets a ^^**Vehicle**^^ unit, that attack has the ^^**[SUSTAINED HITS 2]**^^ ability. \n■ Each time this model makes a ranged attack that targets a non-^^**Vehicle**^^ unit, that attack has the ^^**[SUSTAINED HITS 1]**^^ ability."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "➤ Storm vortex projector - beam",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Storm vortex projector - blast",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Prow blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lance",
+            "Sustained Hits 3"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "a223-234b-7886-fccc",
+      "name": "Lady Malys",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 100,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 3,
+        "save": "4+",
+        "invulnerableSave": "4+",
+        "wounds": 5,
+        "leadership": "6+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Lady Malys",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "KABAL",
+        "CHARACTER",
+        "AELDARI",
+        "ARCHON",
+        "EPIC HERO",
+        "FACTION: DRUKHARI",
+        "LADY MALYS",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n■ Hand of the Archon\n■ Incubi\n■ Kabalite Warriors"
+        },
+        {
+          "name": "Archon of the Poisoned Tongue (Pain)",
+          "description": "In your Shooting phase or the Fight phase, when you select this model's unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you do, select one of the following abilities: **^^[Sustained Hits 1]; [Lethal Hits]^^**. Until the end of the phase, while that unit is Empowered, weapons equipped by models in that unit have that selected ability."
+        },
+        {
+          "name": "Precognisant",
+          "description": "If you army includes this model, after both players have deployed their armies, select up to three ^^**Drukhari**^^ units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "name": "Mind Like a Steel Trap",
+          "description": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Lady's Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Razor fan",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "Hand of the Archon",
+        "Incubi",
+        "Kabalite Warriors"
+      ]
+    },
+    {
+      "id": "62f8-6a75-5ffb-e83b",
+      "name": "Archtormentor [Crucible]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "8",
+        "toughness": 3,
+        "save": "6+",
+        "invulnerableSave": "4+",
+        "wounds": 4,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Archtormentor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "CRUCIBLE",
+        "WYCH CULT",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "ARCHTORMENTOR"
+      ],
+      "abilities": [
+        {
+          "name": "Hatred Eternal (Pain)",
+          "description": "In your Shooting phase or the Fight phase, when you select this model’s unit to shoot or fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "name": "Cruel Example",
+          "description": "Each time this model makes an attack that targets a **CHARACTER** unit, you can add 1 to the Wound roll. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **^^Wyches^^**"
+        }
+      ],
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Wyches^^**"
+      ]
+    },
+    {
+      "id": "b5a1-7e2b-7a1d-bbda",
+      "name": "Flesh Crafter [Crucible]",
+      "factionId": "aeldari-drukhari",
+      "factionName": "Drukhari",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 60,
+      "stats": {
+        "movement": "7\"",
+        "toughness": 4,
+        "save": "5+",
+        "invulnerableSave": "6+",
+        "wounds": 5,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Flesh Crafter",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "CRUCIBLE",
+        "AELDARI",
+        "FACTION: DRUKHARI",
+        "HAEMONCULUS COVENS",
+        "FLESH CRAFTER"
+      ],
+      "abilities": [
+        {
+          "name": "Fleshcraft (Pain)",
+          "description": "In your Command phase, you can spend 1 Pain token to Empower this model’s unit. Each time you do, you can return up to D3+1 destroyed Bodyguard models to that unit."
+        },
+        {
+          "name": "Pain Adept",
+          "description": "In your Command phase, if one or more models from your army with this ability are on the battlefield, roll one D6: on a 4+, you gain 1 Pain token."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **^^Wracks^^**"
+        }
+      ],
+      "weapons": [],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Wracks^^**"
+      ]
+    }
+  ]
 }
