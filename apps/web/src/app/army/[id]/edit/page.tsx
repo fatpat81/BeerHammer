@@ -217,19 +217,39 @@ export default function RosterEditPage() {
             )}
           </div>
 
-          {/* Mode Toggle Switcher */}
-          <div className="mode-toggle">
-            <div className="mode-toggle-btn mode-toggle-btn--active">
-              <span className="mode-toggle-icon">✎</span>
-              <span className="mode-toggle-label">Edit</span>
+          {/* Labeled Mode Toggle Switcher (Edit Mode <--> Battle Mode) */}
+          <div style={{ display: 'flex', gap: '0.25rem', background: '#0F172A', padding: '3px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div
+              style={{
+                padding: '0.4rem 0.85rem',
+                fontSize: '0.8rem',
+                fontWeight: 800,
+                background: 'rgba(200, 157, 60, 0.25)',
+                border: '1px solid #C89D3C',
+                borderRadius: '4px',
+                color: '#F8FAFC',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+              }}
+            >
+              <span>✎</span> Edit Mode
             </div>
             <Link
               href={`/army/${armyId}`}
-              className="mode-toggle-btn"
-              style={{ textDecoration: 'none' }}
+              style={{
+                padding: '0.4rem 0.85rem',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                color: '#94A3B8',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                borderRadius: '4px',
+              }}
             >
-              <span className="mode-toggle-icon">⚔</span>
-              <span className="mode-toggle-label">Console</span>
+              <span>⚔</span> Battle Mode
             </Link>
           </div>
 
