@@ -103,9 +103,10 @@ docker compose -f docker-compose.prod.yml pull
 docker compose -f docker-compose.prod.yml up -d
 ```
 
-Checks: `curl http://localhost:4000/api/health` → `{"success":true,...}`,
+checks: `curl http://localhost:4000/api/health` → `{"success":true,...}`,
 `http://localhost:3000` loads the login gate. The API image self-migrates a
-fresh database on boot (14 tables); no manual migration step.
+fresh database on boot (13 tables + Prisma's migration bookkeeping); no
+manual migration step.
 
 For a **real deployment** — anything reachable beyond localhost — set real
 credentials first (see §2); the placeholders are public in this repository,
