@@ -1,0 +1,56 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# ForceOrg-40k — Sync Worker Container
+# Wahapedia ETL worker; runs a sync pass and exits. Schedule it with any
+# facility the host provides (systemd timer, cron, `docker compose run`,
+# or an orchestrator). Needs DATABASE_URL (+ optional ALERT_WEBHOOK_URL).
+# ─────────────────────────────────────────────────────────────────────────────
+
+FROM node:20-bookworm-slim AS builder
+
+WORKDIR /app
+
+RUN apt-get update -qq && apt-get install -y --no-install-recommends openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+
+COPY package.json package-lock.json* turbo.json ./
+COPY packages/types/package.json ./packages/types/
+COPY packages/db-client/package.json ./packages/db-client/
+COPY packages/rules-engine-11e/package.json ./packages/rules-engine-11e/
+COPY apps/sync-worker/package.json ./apps/sync-worker/
+
+RUN npm ci --ignore-scripts
+
+COPY packages/types/ ./packages/types/
+COPY packages/db-client/ ./packages/db-client/
+COPY packages/rules-engine-11e/ ./packages/rules-engine-11e/
+COPY apps/sync-worker/ ./apps/sync-worker/
+COPY tsconfig.json ./
+
+RUN npx prisma generate --schema=packages/db-client/prisma/schema.prisma
+RUN npm run build --workspace=packages/types
+RUN npm run build --workspace=packages/db-client
+RUN npm run build --workspace=packages/rules-engine-11e
+RUN npm run build --workspace=apps/sync-worker
+
+# ── Runtime stage ────────────────────────────────────────────────────────────
+
+FROM node:20-bookworm-slim
+
+WORKDIR /app
+
+RUN apt-get update -qq && apt-get install -y --no-install-recommends openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/packages/types/dist ./packages/types/dist
+COPY --from=builder /app/packages/types/package.json ./packages/types/package.json
+COPY --from=builder /app/packages/db-client/dist ./packages/db-client/dist
+COPY --from=builder /app/packages/db-client/package.json ./packages/db-client/package.json
+COPY --from=builder /app/packages/rules-engine-11e/dist ./packages/rules-engine-11e/dist
+COPY --from=builder /app/packages/rules-engine-11e/package.json ./packages/rules-engine-11e/package.json
+COPY --from=builder /app/apps/sync-worker/dist ./apps/sync-worker/dist
+COPY --from=builder /app/apps/sync-worker/package.json ./apps/sync-worker/package.json
+COPY --from=builder /app/package.json ./package.json
+
+ENV NODE_ENV=production
+
+# Runs one ETL pass and exits; schedule externally.
+CMD ["node", "apps/sync-worker/dist/index.js"]
