@@ -76,3 +76,14 @@ jobs:
           tags: |
             ${{ steps.imagename.outputs.name }}/forceorg-web:latest
             ${{ steps.imagename.outputs.name }}/forceorg-web:${{ github.sha }}
+
+      - name: Build and Push Sync Worker Image to GHCR
+        if: github.ref == 'refs/heads/main'
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.sync-worker
+          push: true
+          tags: |
+            ${{ steps.imagename.outputs.name }}/forceorg-sync-worker:latest
+            ${{ steps.imagename.outputs.name }}/forceorg-sync-worker:${{ github.sha }}

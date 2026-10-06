@@ -81,6 +81,25 @@ services:
     ports:
       - '3000:3000'
 
+  # ── Wahapedia ETL (one-shot; run on demand or schedule on the host) ────────
+  # Not started by default. Run a pass:
+  #   docker compose run --rm sync-worker
+  # or schedule it (cron example, daily 02:00 UTC):
+  #   0 2 * * * cd /path/to/BeerHammer && docker compose run --rm sync-worker
+  sync-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.sync-worker
+    container_name: forceorg-sync-worker
+    profiles: ['tools']
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      DIRECT_URL: postgresql://postgres:postgrespassword@postgres:5432/forceorg_dev?schema=public
+      ALERT_WEBHOOK_URL: ${ALERT_WEBHOOK_URL:-}
+
 volumes:
   postgres_data:
   s3_data:
