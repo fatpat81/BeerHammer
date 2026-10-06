@@ -1,13 +1,18 @@
-# ForceOrg-40k ⚔️
+# ForceOrg-40k / BeerHammer ⚔️
 
-> **Tournament-Grade Force Construction & Tabletop Combat Console**  
-> Tailored for Warhammer 40,000 11th Edition. Built with Next.js 14, Express, Prisma, Turborepo, and standard Docker containers.
+> **Tournament-Grade Force Construction & Tabletop Combat Console**
+> Tailored for Warhammer 40,000 11th Edition. Built with Next.js 14, Express,
+> Prisma, Turborepo, and standard Docker containers.
+
+**Self-hosted by design.** The canonical deployment is a single host running
+the Docker Compose stack: the app, the PostgreSQL database, and S3-compatible
+object storage are all local containers you control. There is no dependency on
+any managed cloud service, and the API is the integration point for external
+systems that want to read or write ForceOrg data.
 
 ---
 
-## 🚀 Quick Start (Local Development)
-
-Run the entire application on your local machine with a single command:
+## Quick start (local development)
 
 ```bash
 # 1. Install all monorepo dependencies
@@ -17,76 +22,62 @@ npm install
 npm run dev
 ```
 
-- **Frontend (Web App)**: [http://localhost:3000](http://localhost:3000)
-- **Backend (API Server)**: [http://localhost:4000](http://localhost:4000)
+- **Frontend (Web App)**: http://localhost:3000
+- **Backend (API Server)**: http://localhost:4000
+
+Prefer containers? See `docs/DEV_ENVIRONMENT.md` — the exact same toolchain,
+backed services, and one entry point (`./scripts/dev.sh up`) with Docker as
+the only host requirement.
 
 ---
 
-## 👥 How Users Log In & Produce Their Own Data
+## How users log in
 
-ForceOrg-40k is designed with a **dual-engine architecture** so that anyone visiting the deployed page can immediately begin building and commanding armies, regardless of whether a cloud backend is configured:
+ForceOrg-40k ships with **instant guest access**: on the login page, enter
+any callsign (e.g. `Captain Titus`) and click **"Enter ForceOrg →"**.
+No account or external service is required — sessions and rosters persist in
+the browser's local storage, per callsign. When the API is reachable,
+rosters are also read from and written to the server.
 
-### 1. Instant Commander Access (Zero-Config / Works Everywhere)
-- When a user lands on the login page, they can enter their Callsign (e.g. `Captain Titus`, `Inquisitor Grey`) and click **"Enter ForceOrg →"**.
-- No database or cloud registration is required.
-- Rosters, unit compositions, wargear AST configurations, and tabletop wound tracking are automatically persisted in their browser's local storage.
-- Each user's data is isolated so multiple users can test or produce their own battle forces independently.
-
-### 2. Multi-User Cloud Authentication (Supabase)
-- When you connect a free [Supabase](https://supabase.com) project:
-  1. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to your environment variables.
-  2. Users can create accounts via Email/Password or Google OAuth.
-  3. All armies, custom miniature uploads, and audit records sync directly to PostgreSQL with Row-Level Security (RLS).
+The client transparently falls back to this local persistence whenever the
+API is offline or unauthenticated, so the UI is fully usable with zero
+configuration.
 
 ---
 
-## 🦊 Hosting on GitLab (Copy & Paste Setup)
+## Can external systems connect?
 
-This repository includes a ready-to-use [`.gitlab-ci.yml`](file:///.gitlab-ci.yml) pipeline configured for the GitLab Container Registry.
+Yes. Everything that touches ForceOrg data goes through a versioned HTTP
+API served by your own instance — there is no shared backend behind it.
 
-### Step 1: Push to GitLab
+**OpenAPI 3.1 schema:** [`docs/OPENAPI.yaml`](docs/OPENAPI.yaml) ·
+**API guide:** [`docs/API.md`](docs/API.md)
+
 ```bash
-# Initialize git if needed
-git init
-git add .
-git commit -m "feat: initial commit of ForceOrg-40k monorepo"
-
-# Add your GitLab repository remote and push
-git remote add origin https://gitlab.com/<your-username-or-group>/forceorg-40k.git
-git branch -M main
-git push -u origin main
+curl http://localhost:4000/api/health
+# {"success":true,"data":{"status":"operational", ...}}
 ```
 
-### Step 2: Automated GitLab CI/CD Pipeline
-Once pushed, GitLab CI will automatically:
-1. **Validate & Test**: Run `npx turbo run test build` across all 7 workspace packages using cached `.npm` and `.turbo` layers.
-2. **Build & Publish Containers**: Build [`Dockerfile.web`](file:///Dockerfile.web) and [`Dockerfile.api`](file:///Dockerfile.api) and publish them directly to your project's **GitLab Container Registry**:
-   - `registry.gitlab.com/<group>/<project>/web:latest`
-   - `registry.gitlab.com/<group>/<project>/api:latest`
+- **Read endpoints are public** — catalog browsing (`/api/datasheets`,
+  `/api/stratagems`, `/api/weapons`, `/api/changelog`) needs no token, so
+  third-party tools can fetch rules data freely.
+- **Write endpoints require a JWT** (`Authorization: Bearer <token>`,
+  HS256, signed with the instance's `JWT_SECRET`) — used by roster
+  management and miniature photo uploads. Any client that presents a token
+  signed with your `JWT_SECRET` can sync or maintain rosters.
+- Rate limiting: 300 requests / 15 min / IP. Set `CORS_ORIGIN` when serving
+  the API to browsers on another origin.
 
-### Step 3: Deploying Out
-You can run the published images anywhere:
-- **VPS with Docker Compose**: Pull from GitLab Container Registry using a Deploy Token and run `docker compose up -d`.
-- **Cloud Containers**: Connect Google Cloud Run, AWS ECS/App Runner, DigitalOcean App Platform, or Coolify to your GitLab registry images.
-- **Frontend Hosting**: Connect your GitLab repository directly to [Vercel](https://vercel.com) or [Cloudflare Pages](https://pages.cloudflare.com) for edge-hosted web frontend.
-
----
-
-## 🐙 Hosting on GitHub
-
-If publishing to GitHub:
-```bash
-git remote add origin https://github.com/<your-username>/forceorg-40k.git
-git branch -M main
-git push -u origin main
-```
-The repository includes `.github/workflows/deploy.yml` and `e2e.yml` which automatically run continuous integration and Playwright test suites.
+The web frontend itself runs client-side with browser-local persistence, so a
+second instance or any static host works without touching the API.
 
 ---
 
-## 🐳 Full Production Stack with Docker Compose
+## Full production stack with Docker Compose
 
-To run the complete production environment locally or on a server (Next.js web app, Express API, PostgreSQL database, and MinIO S3 object storage):
+The complete self-hosted environment — Next.js web app, Express API,
+PostgreSQL 16, and S3-compatible object storage (SeaweedFS) for miniature
+photos — runs on one host:
 
 ```bash
 docker compose up --build -d
@@ -97,32 +88,36 @@ docker compose up --build -d
 | **Web Frontend** | `3000` | Next.js 14 App Router UI |
 | **Backend API** | `4000` | Express REST API & rate limiter |
 | **PostgreSQL 16** | `5432` | Relational database with Prisma schema |
-| **MinIO (S3)** | `9000` / `9001` | S3-compatible miniature photo storage |
+| **S3 storage (SeaweedFS)** | `9000` / `9333` | S3-compatible miniature photo storage |
+
+Every component runs as a local container; no external storage or database
+service is involved. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for
+server deployment, environment variables, and maintenance.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
-# Run unit tests across the 11th edition rules engine
+# Unit tests (11th edition rules engine)
 npm test
 
-# Run full monorepo build verification
+# Full monorepo build verification
 npm run build
 
-# Run Playwright end-to-end tests
+# Playwright end-to-end tests (guest journey)
 npm run test:e2e --workspace=@forceorg/web
 ```
 
 ---
 
-## 📁 Monorepo Structure
+## Monorepo structure
 
 ```
 ├── apps/
-│   ├── web/                     # Next.js 14 App Router frontend (PWA, Console, Studio)
+│   ├── web/                     # Next.js 14 App Router frontend (guest-first UI)
 │   ├── api/                     # Express REST API with JWT middleware & rate limiting
-│   └── sync-worker/             # Wahapedia sync worker daemon
+│   └── sync-worker/             # Wahapedia sync worker (needs DATABASE_URL)
 ├── packages/
 │   ├── types/                   # Shared TypeScript definitions
 │   ├── ui-theme/                # Faction CSS design system & SVG chapter heraldry
@@ -130,8 +125,6 @@ npm run test:e2e --workspace=@forceorg/web
 │   └── db-client/               # Prisma client & PostgreSQL database schema
 ├── Dockerfile.web               # Multi-stage production container for web app
 ├── Dockerfile.api               # Multi-stage production container for API
-├── docker-compose.yml           # Multi-container orchestration
-├── .gitlab-ci.yml               # Automated GitLab CI/CD pipeline
-└── docs/
-    └── DEPLOYMENT.md            # Comprehensive cloud deployment manual
+├── docker-compose.yml           # Single-host orchestration (all services local)
+└── docs/                        # Deployment, dev environment, API guides
 ```
