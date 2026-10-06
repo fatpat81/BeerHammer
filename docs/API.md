@@ -39,11 +39,19 @@ you mint tokens for your own users and integrations.
 
 ```bash
 node -e "console.log(require('jsonwebtoken').sign(
-  { sub: 'external-sync-agent', email: 'sync@example.com' },
+  { sub: 'USER_PROFILE_UUID' },
   process.env.JWT_SECRET,
   { expiresIn: '7d' }
 ))"
 ```
+
+Two requirements on the `sub` claim:
+
+1. it must be a **UUID** — roster rows key on `user_profiles.id` (Prisma
+   `@db.Uuid`); an arbitrary string fails with a database error, and
+2. a matching **`user_profiles` row must exist** (`sub` → `user_id` foreign
+   key). Until the local signup endpoint lands, provision the profile row
+   directly in the database (see `packages/db-client/prisma/schema.prisma`).
 
 Requests with a missing token on protected routes return HTTP 401
 `UNAUTHORIZED`; invalid/expired tokens return HTTP 401 `TOKEN_INVALID`.
