@@ -19,7 +19,9 @@
     "db:seed": "npm run seed --prefix packages/db-client",
     "clean": "turbo run clean && rm -rf node_modules",
     "postinstall": "prisma generate --schema=packages/db-client/prisma/schema.prisma",
-    "dev:s3-migrate": "turbo run dev --filter=@forceorg/sync-worker"
+    "dev:s3-migrate": "turbo run dev --filter=@forceorg/sync-worker",
+    "data:extract": "node scripts/extract-factions.js",
+    "data:verify": "node scripts/verify-data.js"
   },
   "devDependencies": {
     "turbo": "^2.1.0",
