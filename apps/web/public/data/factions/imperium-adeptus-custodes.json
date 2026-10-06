@@ -6,29 +6,37 @@
   "totalDatasheets": 34,
   "detachments": [
     {
-      "id": "5218-339c-eb34-9ac0",
-      "name": "Detachments",
-      "rules": [
-        "Martial Mastery",
-        "Revered Companions",
-        "Creeping Dread (Aura)",
-        "Assemblage of Might",
-        "Auric Armour",
-        "Moritoi Ancients",
-        "Against All Odds",
-        "March of the Honoured Dead",
-        "Skin-crawling Disorientation",
-        "The Hammer Falls"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "70eb-2978-3ad5-5901",
       "name": "Shield Host",
       "rules": [
         "Martial Mastery"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "ad42-02d7-33e2-6bd0",
+          "name": "Castellan's Mark",
+          "points": 20,
+          "description": "After both players have deployed their armies, you can select up to two **ADEPTUS CUSTODES** units from your army (excluding **ANATHEMA PSYKANA** units) and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how  any units are already in Strategic Reserves."
+        },
+        {
+          "id": "58ef-390c-f552-7b8e",
+          "name": "Panoptispex",
+          "points": 5,
+          "description": "While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
+        },
+        {
+          "id": "34d9-49de-f88f-6d0a",
+          "name": "From the Hall of Armouries",
+          "points": 20,
+          "description": "Add 1 to the Strength and Damage characteristics of the bearer's melee weapons."
+        },
+        {
+          "id": "4f9f-d992-fa1d-ceaf",
+          "name": "Auric Mantle",
+          "points": 15,
+          "description": "**^^Shield-Captain^^** or **^^Blade Champion^^** model only. Add 2 to the bearer's Wounds characteristic."
+        }
+      ]
     },
     {
       "id": "757a-b5ed-a43f-3cdd",
@@ -36,7 +44,98 @@
       "rules": [
         "Revered Companions"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "1c2d-6ccb-ac24-fad3",
+          "name": "Radiant Mantle",
+          "points": 30,
+          "description": "Each time an attack targets the bearer's unit, if the attacking model is within 12\", subtract 1 from the Hit roll."
+        },
+        {
+          "id": "56c8-5ff8-c160-bb2f",
+          "name": "Aegis Projector",
+          "points": 20,
+          "description": "Once per turn, the first time a saving throw is failed for the bearer's unit, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "327-cedb-7228-fdc3",
+          "name": "Gift of Terran Artifice",
+          "points": 15,
+          "description": "Each time the bearer makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "5529-cb7e-ad1d-93c8",
+          "name": "Champion of the Imperium",
+          "points": 25,
+          "description": "The range of the bearer’s Null Aegis or Deadly Unity ability is increased to 9\"."
+        }
+      ]
+    },
+    {
+      "id": "d3ee-47e1-4540-dfe5",
+      "name": "Null Maiden Vigil",
+      "rules": [
+        "Creeping Dread (Aura)"
+      ],
+      "enhancements": [
+        {
+          "id": "8d42-66ef-fdf8-2323",
+          "name": "Raptor Blade",
+          "points": 5,
+          "description": "Add 1 to the Attacks, Strength and Damage characteristics of the bearer's melee weapons. While the bearer is within Engagement Range of one or more enemy **^^Psyker^^** units that are Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer's melee weapons instead."
+        },
+        {
+          "id": "a597-2781-f386-2b76",
+          "name": "Enhanced Voidsheen Cloak",
+          "points": 10,
+          "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made by a **^^Psyker^^** or Battle-shocked model, change the Damage characteristic of that attack to 1 instead."
+        },
+        {
+          "id": "767-b565-147c-90ec",
+          "name": "Huntress' Eye",
+          "points": 15,
+          "description": "In your Command phase, select one enemy unit within 12\" of the bearer. That unit must take a Battle-shock test."
+        },
+        {
+          "id": "cf7c-3ccc-c128-18a",
+          "name": "Oblivion Knight",
+          "points": 25,
+          "description": "While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll. If that attack targeted an enemy **^^Psyker^^** unit, add 1 to the Wound roll as well."
+        }
+      ]
+    },
+    {
+      "id": "a36b-bb22-1a15-2a48",
+      "name": "Auric Champions",
+      "rules": [
+        "Assemblage of Might"
+      ],
+      "enhancements": [
+        {
+          "id": "6b4b-1a5a-5bbc-f4cb",
+          "name": "Blade Imperator",
+          "points": 25,
+          "description": "Each time the bearer's unit ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds. Once per battle, when the bearer's unit ends a Charge move, all enemy units within 6\" of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "9802-9f18-ae5b-f8a7",
+          "name": "Inspirational Exemplar",
+          "points": 10,
+          "description": "The bearer has a Leadership characteristic of 5+. Once per battle, at the start of any phase, you can select one friendly **^^Adeptus Custodes^^** unit that is Battle-shocked and within 12\" of the bearer: that unit is no longer Battle-shocked."
+        },
+        {
+          "id": "567b-5e95-4c07-9ae5",
+          "name": "Veiled Blade",
+          "points": 25,
+          "description": "Add 2 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any Command phase, triple the bearer's Objective Control characteristic until the end of the turn."
+        },
+        {
+          "id": "9cf8-9c46-5987-b107",
+          "name": "Martial Philosopher",
+          "points": 30,
+          "description": "Once per battle, in your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of the bearer, if the bearer's unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+        }
+      ]
     },
     {
       "id": "a060-3a8d-670c-25f0",
@@ -45,7 +144,32 @@
         "Auric Armour",
         "Moritoi Ancients"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "226b-01e8-549e-00fe",
+          "name": "Honoured Fallen (Aura)",
+          "points": 15,
+          "description": "ADEPTUS CUSTODES VEHICLE model only. While a friendly ADEPTUS CUSTODES INFANTRY or ADEPTUS CUSTODES MOUNTED unit is within 6\" of the bearer, each time a model in that unit makes  an attack, re‑roll a Hit roll of 1."
+        },
+        {
+          "id": "47c5-027c-0c6f-7d1d",
+          "name": "Augury Uplink",
+          "points": 35,
+          "description": "ADEPTUS CUSTODES model only. The bearer has the Feel No Pain 5+ ability."
+        },
+        {
+          "id": "13ca-9a7a-47da-acc1",
+          "name": "Adamantine Talisman",
+          "points": 25,
+          "description": "**^^Adeptus Custodes^^** model only. Improve the Attacks, Strength and Damage characteristics of melee weapons equipped by the bearer by 1."
+        },
+        {
+          "id": "6f4d-144b-698b-55ad",
+          "name": "Veteran of the Kataphraktoi",
+          "points": 10,
+          "description": "ADEPTUS CUSTODES INFANTRY or ADEPTUS CUSTODES MOUNTED model only. In your Command phase, select one ADEPTUS CUSTODES VEHICLE or ADEPTUS CUSTODES MOUNTED unit within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back."
+        }
+      ]
     },
     {
       "id": "3b75-a700-050c-06f5",
@@ -53,13 +177,76 @@
       "rules": [
         "Against All Odds"
       ],
+      "enhancements": [
+        {
+          "id": "2ede-aacf-f98d-83d5",
+          "name": "Superior Creation",
+          "points": 25,
+          "description": "**^^Adeptus Custodes Infantry^^** model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining."
+        },
+        {
+          "id": "1672-069e-577d-5d7f",
+          "name": "Praesidius",
+          "points": 25,
+          "description": "The bearer has the Lone Operative and Stealth abilities."
+        },
+        {
+          "id": "678c-b63b-438c-37f6",
+          "name": "Fierce Conqueror",
+          "points": 15,
+          "description": "At the start of the Fight phase, until the end of the phase, add 2 to the Attacks characteristic of melee weapons equipped by the bearer for every 5 enemy models within 6\" of the bearer (rounding  down)."
+        },
+        {
+          "id": "83f4-94db-c9b3-e128",
+          "name": "Admonimortis",
+          "points": 30,
+          "description": "**^^Shield‑Captain^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 3, and improve the Armour Penetration and Damage characteristics of those weapons by  1."
+        }
+      ]
+    },
+    {
+      "id": "1bb5-5aba-6c8f-7afc",
+      "name": "Might of the Moritoi",
+      "rules": [
+        "March of the Honoured Dead"
+      ],
       "enhancements": []
     },
     {
-      "id": "4f56-b2a4-d4d7-2828",
-      "name": "Heralds of the Host",
-      "rules": [],
-      "enhancements": []
+      "id": "60e4-3c48-7e50-4d37",
+      "name": "Silent Hunters",
+      "rules": [
+        "Skin-crawling Disorientation"
+      ],
+      "enhancements": [
+        {
+          "id": "917c-13ad-3a1c-a723",
+          "name": "Encircling Hunter",
+          "points": 15,
+          "description": "When both players have deployed their armies, you can redeploy up to three friendly **ANATHEMA PSYKANA INFANTRY** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**."
+        }
+      ]
+    },
+    {
+      "id": "ebc1-90da-ce89-ee5b",
+      "name": "Tharanatoi Hammerblow",
+      "rules": [
+        "The Hammer Falls"
+      ],
+      "enhancements": [
+        {
+          "id": "43a1-301b-3e6e-be5c",
+          "name": "Efficient Aggression",
+          "points": 25,
+          "description": "(Once per turn, per army) In your opponent’s Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+1\"."
+        },
+        {
+          "id": "f0e0-85b0-eaae-1f78",
+          "name": "Mnemo-locked Shrine Cipher",
+          "points": 25,
+          "description": "In your first Movement phase, this unit can make an **ingress move**."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -287,32 +474,6 @@
       "weapons": [
         {
           "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
           "type": "Melee",
           "range": "Melee",
           "attacks": "5",
@@ -321,6 +482,19 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         },
         {
           "name": "Castellan axe",
@@ -413,6 +587,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -564,33 +751,6 @@
       "weapons": [
         {
           "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Sentinel Blade",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
           "type": "Melee",
           "range": "Melee",
           "attacks": "5",
@@ -674,80 +834,6 @@
       "weapons": [
         {
           "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Guardian Spear",
           "type": "Melee",
           "range": "Melee",
           "attacks": "5",
@@ -822,19 +908,6 @@
       ],
       "weapons": [
         {
-          "name": "Master-crafted boltgun",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
           "name": "Executioner Greatblade",
           "type": "Melee",
           "range": "Melee",
@@ -860,15 +933,31 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 3,
+          "name": "Witchseeker flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Master-crafted boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": true,
@@ -935,30 +1024,6 @@
           ]
         },
         {
-          "name": "Boltgun",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
           "name": "Close combat weapon",
           "type": "Melee",
           "range": "Melee",
@@ -1019,73 +1084,6 @@
       "weapons": [
         {
           "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Sentinel Blade",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Sentinel Blade",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Pyrithite Spear",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -4,
-          "damage": "D6",
-          "keywords": [
-            "Melta 2"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
           "type": "Melee",
           "range": "Melee",
           "attacks": "7",
@@ -1104,17 +1102,6 @@
           "strength": 9,
           "armorPenetration": -1,
           "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Sentinel Blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "7",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "1",
           "keywords": []
         },
         {
@@ -1190,32 +1177,6 @@
       "weapons": [
         {
           "name": "Guardian Spear",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Castellan axe",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "Guardian Spear",
           "type": "Melee",
           "range": "Melee",
           "attacks": "7",
@@ -1235,6 +1196,19 @@
           "armorPenetration": -1,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": true,
@@ -1287,6 +1261,19 @@
       ],
       "weapons": [
         {
+          "name": "Interceptor lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
           "name": "Vertus hurricane bolter",
           "type": "Ranged",
           "range": "18\"",
@@ -1311,19 +1298,6 @@
           "damage": "D6+1",
           "keywords": [
             "Twin-linked"
-          ]
-        },
-        {
-          "name": "Interceptor lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
           ]
         }
       ],
@@ -1384,6 +1358,17 @@
       ],
       "weapons": [
         {
+          "name": "Watcher's Axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Eagle's Scream",
           "type": "Ranged",
           "range": "24\"",
@@ -1395,17 +1380,6 @@
           "keywords": [
             "Assault"
           ]
-        },
-        {
-          "name": "Watcher's Axe",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -1473,17 +1447,6 @@
           "keywords": [
             "Assault"
           ]
-        },
-        {
-          "name": "Gnosis",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "7",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -1543,6 +1506,17 @@
           ]
         },
         {
+          "name": "Contemptor combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Multi-melta",
           "type": "Ranged",
           "range": "18\"",
@@ -1567,17 +1541,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Contemptor combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1628,6 +1591,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Godhammer lascannon",
           "type": "Ranged",
           "range": "48\"",
@@ -1666,15 +1640,17 @@
           ]
         },
         {
-          "name": "Armoured tracks",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -1724,6 +1700,19 @@
       ],
       "weapons": [
         {
+          "name": "Interceptor lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
           "name": "Salvo launcher",
           "type": "Ranged",
           "range": "24\"",
@@ -1748,32 +1737,6 @@
           "keywords": [
             "Rapid Fire 3",
             "Twin-linked"
-          ]
-        },
-        {
-          "name": "Interceptor lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
-          ]
-        },
-        {
-          "name": "Interceptor lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
           ]
         }
       ],
@@ -1823,20 +1786,6 @@
         }
       ],
       "weapons": [
-        {
-          "name": "Executioner greatblade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Anti-Psyker 5+",
-            "Devastating Wounds"
-          ]
-        },
         {
           "name": "Executioner greatblade",
           "type": "Melee",
@@ -1910,15 +1859,18 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 3,
+          "name": "Witchseeker flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -1980,30 +1932,6 @@
           "strength": 5,
           "armorPenetration": -2,
           "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Pyrithite spear",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -4,
-          "damage": "D6",
-          "keywords": [
-            "Melta 2"
-          ]
-        },
-        {
-          "name": "Adrasite spear",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
           "keywords": []
         },
         {
@@ -2133,7 +2061,70 @@
           "description": "Once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves�"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Solerite power gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Lastrum storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Twin adrathic destructor",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Infernus firepike",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Solerite power talon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2195,6 +2186,19 @@
           ]
         },
         {
+          "name": "Interceptor Lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
           "name": "Adrathic devastator",
           "type": "Ranged",
           "range": "18\"",
@@ -2216,45 +2220,6 @@
           "damage": "2",
           "keywords": [
             "Twin-linked"
-          ]
-        },
-        {
-          "name": "Interceptor Lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
-          ]
-        },
-        {
-          "name": "Interceptor Lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
-          ]
-        },
-        {
-          "name": "Interceptor Lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
           ]
         }
       ],
@@ -2342,19 +2307,6 @@
           ]
         },
         {
-          "name": "Venatari lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lance"
-          ]
-        },
-        {
           "name": "Tarsis buckler",
           "type": "Melee",
           "range": "Melee",
@@ -2423,17 +2375,6 @@
             "Torrent",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Galatus warblade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2529,19 +2470,6 @@
           "keywords": [
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Achillus dreadspear",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "D6+1",
-          "keywords": [
-            "Lance"
-          ]
         }
       ],
       "isLeader": false,
@@ -2588,6 +2516,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin arachnus blaze cannon",
           "type": "Ranged",
           "range": "24\"",
@@ -2600,17 +2539,6 @@
             "Devastating Wounds",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2661,6 +2589,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin lastrum bolt cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -2699,17 +2638,6 @@
           "keywords": [
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2764,6 +2692,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Spiculus bolt launcher",
           "type": "Ranged",
           "range": "36\"",
@@ -2801,6 +2740,17 @@
           "keywords": []
         },
         {
+          "name": "Telemon Caestus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Twin plasma projector",
           "type": "Ranged",
           "range": "12\"",
@@ -2813,28 +2763,6 @@
             "Torrent",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Armoured feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Telemon Caestus",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2886,6 +2814,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin arachnus blaze cannon",
           "type": "Ranged",
           "range": "24\"",
@@ -2911,17 +2850,6 @@
           "keywords": [
             "Sustained Hits 1"
           ]
-        },
-        {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2983,6 +2911,17 @@
           "keywords": []
         },
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Spiculus heavy bolt launcher",
           "type": "Ranged",
           "range": "36\"",
@@ -3007,17 +2946,6 @@
           "keywords": [
             "Sustained Hits 1"
           ]
-        },
-        {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "9",
-          "skill": "4+",
-          "strength": 9,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3147,7 +3075,218 @@
           "description": "Once per phase, you can re-roll one Hit roll or one Wound roll for an attack made by this model."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Guardian spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Castellan axe",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Master-crafted boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Witchseeker flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pyrithite spear",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Sentinel blade",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Executioner greatblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Psyker 5+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Interceptor lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Misericordia",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Behemor",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Hurricanis",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Victus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Vertus hurricane bolter",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Salvo launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3195,7 +3334,218 @@
           "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Guardian spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Castellan axe",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Master-crafted boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Witchseeker flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pyrithite spear",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Sentinel blade",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Executioner greatblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Psyker 5+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Interceptor lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Misericordia",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Behemor",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Hurricanis",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Victus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Vertus hurricane bolter",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Salvo launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3244,7 +3594,218 @@
           "description": "Each time this model makes an attack that targets a ^^**Monster**^^ or ^^**Vehicle**^^ unit, you can re-roll the Wound roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Guardian spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Castellan axe",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Master-crafted boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Witchseeker flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pyrithite spear",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Sentinel blade",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Executioner greatblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Psyker 5+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Interceptor lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Misericordia",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Behemor",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Hurricanis",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Vaultswords - Victus",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Vertus hurricane bolter",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Salvo launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     }

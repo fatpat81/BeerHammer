@@ -634,7 +634,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                               ))}
                           </select>
                           <div style={{ fontSize: '0.65rem', color: '#94A3B8', marginTop: '0.35rem' }}>
-                            When attached, this unit shares defensive toughness and wound tracking in Play Mode.
+                            When attached, this unit is deployed together with its bodyguard in Battle Mode.
                           </div>
                         </div>
                       </div>

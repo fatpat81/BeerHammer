@@ -6,26 +6,732 @@
   "totalDatasheets": 67,
   "detachments": [
     {
-      "id": "6470-c44a-45f4-3313",
-      "name": "Detachment",
-      "rules": [
-        "Beguiling Aura",
-        "Fates in Flux",
-        "Murdercall",
-        "Bloodtainted",
-        "Melancholic Miasma",
-        "First Prince of Chaos",
-        "Unholy Avalanche",
-        "Loci of Power",
-        "Shudderblink"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "a7cf-90fa-4093-6047",
       "name": "Daemonic Incursion",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "55e8-3587-8285-d3e0",
+          "name": "A'rgath, the King of Blades",
+          "points": 20,
+          "description": "**^^Khorne Legiones Daemonica^^** model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is within your army’s Shadow of Chaos, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+        },
+        {
+          "id": "a80f-8b38-42e7-5ab6",
+          "name": "The Everstave",
+          "points": 25,
+          "description": "**^^Tzeentch Legiones Daemonica^^** model only. Add 1 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 3\". While the bearer is within your army’s Shadow of Chaos, add 2 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 6\" instead."
+        },
+        {
+          "id": "de5c-77a2-684a-2f10",
+          "name": "The Endless Gift",
+          "points": 30,
+          "description": "NURGLE LEGIONES DAEMONICA model only. The bearer has the Feel No Pain 5+ ability."
+        },
+        {
+          "id": "2680-4597-b6c3-b0c5",
+          "name": "Soulstealer",
+          "points": 15,
+          "description": "SLAANESH LEGIONES DAEMONICA model only. Each time the bearer destroys an enemy model with a melee attack, roll one D6, adding 1 to the result if the bearer is within your army’s Shadow of Chaos. On a 4+, the bearer regains 1 lost wound."
+        }
+      ]
+    },
+    {
+      "id": "24f0-3c89-41be-0675",
+      "name": "Legion of Excess",
+      "rules": [
+        "Beguiling Aura"
+      ],
+      "enhancements": [
+        {
+          "id": "68bd-b1b0-cc80-eaa0",
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "c918-c2ed-eb33-e512",
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "806e-b30b-3bcd-71c3",
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "description": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+        },
+        {
+          "id": "2ed9-45a3-0611-6a2d",
+          "name": "Soul Glutton",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+        },
+        {
+          "id": "4f8a-c385-a04c-222d",
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+        },
+        {
+          "id": "7889-754e-cf05-8b98",
+          "name": "Fury's Cage",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+        },
+        {
+          "id": "5c15-6ac1-0115-9df8",
+          "name": "Inescapable Eye",
+          "points": 15,
+          "description": "**^^Legiones Daemonica Tzeentch**^^ model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+        },
+        {
+          "id": "d6e9-169c-3b2a-ee09",
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "description": "**^^Legiones Daemonica Tzeentch^^** model only. While a friendly **^^Legiones Daemonica Tzeentch^^** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "id": "b4ce-a5bf-52e7-884c",
+          "name": "Neverblade",
+          "points": 25,
+          "description": "**^^Legiones Daemonica Tzeentch Monster^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "8d0b-296c-5515-4267",
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "description": "LEGIONES DAEMONICA KHORNE model only.  While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "id": "87ae-e092-2e5d-16a6",
+          "name": "Brazenmaw",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "202a-2f25-f692-8b36",
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+        },
+        {
+          "id": "12f2-8867-2b0f-a619",
+          "name": "Maggot Maws",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "3014-b3f7-7236-9ef5",
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "0f1b-f380-fa24-beb0",
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "33a0-657f-619d-5961",
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "id": "15b1-1f0f-9bf6-9f0a",
+          "name": "Leaping Shadows",
+          "points": 25,
+          "description": "Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "0af0-fe8c-ad36-60c5",
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "description": "While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        },
+        {
+          "id": "0b93-011a-c681-722c",
+          "name": "Fade to Darkness",
+          "points": 30,
+          "description": "At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "8978-7278-1e4a-40a4",
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
+    },
+    {
+      "id": "dec0-c9cb-c265-cae0",
+      "name": "Scintillating Legion",
+      "rules": [
+        "Fates in Flux"
+      ],
+      "enhancements": [
+        {
+          "id": "68bd-b1b0-cc80-eaa0",
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "c918-c2ed-eb33-e512",
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "806e-b30b-3bcd-71c3",
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "description": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+        },
+        {
+          "id": "2ed9-45a3-0611-6a2d",
+          "name": "Soul Glutton",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+        },
+        {
+          "id": "4f8a-c385-a04c-222d",
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+        },
+        {
+          "id": "7889-754e-cf05-8b98",
+          "name": "Fury's Cage",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+        },
+        {
+          "id": "5c15-6ac1-0115-9df8",
+          "name": "Inescapable Eye",
+          "points": 15,
+          "description": "**^^Legiones Daemonica Tzeentch**^^ model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+        },
+        {
+          "id": "d6e9-169c-3b2a-ee09",
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "description": "**^^Legiones Daemonica Tzeentch^^** model only. While a friendly **^^Legiones Daemonica Tzeentch^^** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "id": "b4ce-a5bf-52e7-884c",
+          "name": "Neverblade",
+          "points": 25,
+          "description": "**^^Legiones Daemonica Tzeentch Monster^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "8d0b-296c-5515-4267",
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "description": "LEGIONES DAEMONICA KHORNE model only.  While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "id": "87ae-e092-2e5d-16a6",
+          "name": "Brazenmaw",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "202a-2f25-f692-8b36",
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+        },
+        {
+          "id": "12f2-8867-2b0f-a619",
+          "name": "Maggot Maws",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "3014-b3f7-7236-9ef5",
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "0f1b-f380-fa24-beb0",
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "33a0-657f-619d-5961",
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "id": "15b1-1f0f-9bf6-9f0a",
+          "name": "Leaping Shadows",
+          "points": 25,
+          "description": "Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "0af0-fe8c-ad36-60c5",
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "description": "While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        },
+        {
+          "id": "0b93-011a-c681-722c",
+          "name": "Fade to Darkness",
+          "points": 30,
+          "description": "At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "8978-7278-1e4a-40a4",
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
+    },
+    {
+      "id": "21b4-7a36-fec6-b7ea",
+      "name": "Blood Legion",
+      "rules": [
+        "Murdercall",
+        "Bloodtainted"
+      ],
+      "enhancements": [
+        {
+          "id": "68bd-b1b0-cc80-eaa0",
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "c918-c2ed-eb33-e512",
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "806e-b30b-3bcd-71c3",
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "description": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+        },
+        {
+          "id": "2ed9-45a3-0611-6a2d",
+          "name": "Soul Glutton",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+        },
+        {
+          "id": "4f8a-c385-a04c-222d",
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+        },
+        {
+          "id": "7889-754e-cf05-8b98",
+          "name": "Fury's Cage",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+        },
+        {
+          "id": "5c15-6ac1-0115-9df8",
+          "name": "Inescapable Eye",
+          "points": 15,
+          "description": "**^^Legiones Daemonica Tzeentch**^^ model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+        },
+        {
+          "id": "d6e9-169c-3b2a-ee09",
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "description": "**^^Legiones Daemonica Tzeentch^^** model only. While a friendly **^^Legiones Daemonica Tzeentch^^** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "id": "b4ce-a5bf-52e7-884c",
+          "name": "Neverblade",
+          "points": 25,
+          "description": "**^^Legiones Daemonica Tzeentch Monster^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "8d0b-296c-5515-4267",
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "description": "LEGIONES DAEMONICA KHORNE model only.  While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "id": "87ae-e092-2e5d-16a6",
+          "name": "Brazenmaw",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "202a-2f25-f692-8b36",
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+        },
+        {
+          "id": "12f2-8867-2b0f-a619",
+          "name": "Maggot Maws",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "3014-b3f7-7236-9ef5",
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "0f1b-f380-fa24-beb0",
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "33a0-657f-619d-5961",
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "id": "15b1-1f0f-9bf6-9f0a",
+          "name": "Leaping Shadows",
+          "points": 25,
+          "description": "Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "0af0-fe8c-ad36-60c5",
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "description": "While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        },
+        {
+          "id": "0b93-011a-c681-722c",
+          "name": "Fade to Darkness",
+          "points": 30,
+          "description": "At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "8978-7278-1e4a-40a4",
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
+    },
+    {
+      "id": "9ad0-91ee-ae18-b5aa",
+      "name": "Plague Legion",
+      "rules": [
+        "Melancholic Miasma"
+      ],
+      "enhancements": [
+        {
+          "id": "68bd-b1b0-cc80-eaa0",
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "c918-c2ed-eb33-e512",
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "806e-b30b-3bcd-71c3",
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "description": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+        },
+        {
+          "id": "2ed9-45a3-0611-6a2d",
+          "name": "Soul Glutton",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+        },
+        {
+          "id": "4f8a-c385-a04c-222d",
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+        },
+        {
+          "id": "7889-754e-cf05-8b98",
+          "name": "Fury's Cage",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+        },
+        {
+          "id": "5c15-6ac1-0115-9df8",
+          "name": "Inescapable Eye",
+          "points": 15,
+          "description": "**^^Legiones Daemonica Tzeentch**^^ model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+        },
+        {
+          "id": "d6e9-169c-3b2a-ee09",
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "description": "**^^Legiones Daemonica Tzeentch^^** model only. While a friendly **^^Legiones Daemonica Tzeentch^^** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "id": "b4ce-a5bf-52e7-884c",
+          "name": "Neverblade",
+          "points": 25,
+          "description": "**^^Legiones Daemonica Tzeentch Monster^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "8d0b-296c-5515-4267",
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "description": "LEGIONES DAEMONICA KHORNE model only.  While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "id": "87ae-e092-2e5d-16a6",
+          "name": "Brazenmaw",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "202a-2f25-f692-8b36",
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+        },
+        {
+          "id": "12f2-8867-2b0f-a619",
+          "name": "Maggot Maws",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "3014-b3f7-7236-9ef5",
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "0f1b-f380-fa24-beb0",
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "33a0-657f-619d-5961",
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "id": "15b1-1f0f-9bf6-9f0a",
+          "name": "Leaping Shadows",
+          "points": 25,
+          "description": "Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "0af0-fe8c-ad36-60c5",
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "description": "While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        },
+        {
+          "id": "0b93-011a-c681-722c",
+          "name": "Fade to Darkness",
+          "points": 30,
+          "description": "At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "8978-7278-1e4a-40a4",
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
+    },
+    {
+      "id": "5063-25bd-d22e-665b",
+      "name": "Shadow Legion",
+      "rules": [
+        "First Prince of Chaos"
+      ],
+      "enhancements": [
+        {
+          "id": "68bd-b1b0-cc80-eaa0",
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "c918-c2ed-eb33-e512",
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "description": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "806e-b30b-3bcd-71c3",
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "description": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+        },
+        {
+          "id": "2ed9-45a3-0611-6a2d",
+          "name": "Soul Glutton",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+        },
+        {
+          "id": "4f8a-c385-a04c-222d",
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+        },
+        {
+          "id": "7889-754e-cf05-8b98",
+          "name": "Fury's Cage",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+        },
+        {
+          "id": "5c15-6ac1-0115-9df8",
+          "name": "Inescapable Eye",
+          "points": 15,
+          "description": "**^^Legiones Daemonica Tzeentch**^^ model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+        },
+        {
+          "id": "d6e9-169c-3b2a-ee09",
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "description": "**^^Legiones Daemonica Tzeentch^^** model only. While a friendly **^^Legiones Daemonica Tzeentch^^** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+        },
+        {
+          "id": "b4ce-a5bf-52e7-884c",
+          "name": "Neverblade",
+          "points": 25,
+          "description": "**^^Legiones Daemonica Tzeentch Monster^^** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "8d0b-296c-5515-4267",
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "description": "LEGIONES DAEMONICA KHORNE model only.  While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+        },
+        {
+          "id": "87ae-e092-2e5d-16a6",
+          "name": "Brazenmaw",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "202a-2f25-f692-8b36",
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "description": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+        },
+        {
+          "id": "12f2-8867-2b0f-a619",
+          "name": "Maggot Maws",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "3014-b3f7-7236-9ef5",
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "0f1b-f380-fa24-beb0",
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "description": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+        },
+        {
+          "id": "33a0-657f-619d-5961",
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "description": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "id": "15b1-1f0f-9bf6-9f0a",
+          "name": "Leaping Shadows",
+          "points": 25,
+          "description": "Models in the bearer's unit have the Scouts 9\" ability."
+        },
+        {
+          "id": "0af0-fe8c-ad36-60c5",
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "description": "While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        },
+        {
+          "id": "0b93-011a-c681-722c",
+          "name": "Fade to Darkness",
+          "points": 30,
+          "description": "At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "8978-7278-1e4a-40a4",
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
+    },
+    {
+      "id": "0dd1-86f6-d2a0-3aba",
+      "name": "Cavalcade of Chaos",
+      "rules": [
+        "Unholy Avalanche"
+      ],
+      "enhancements": [
+        {
+          "id": "3a4c-dc85-8115-abba",
+          "name": "Soul-shattering Charge",
+          "points": 10,
+          "description": "When this unit is **selected to fight**, if this unit made a **charge move** this turn, you can use this ability. If you do, when determining which models in this unit can fight, friendly models that are within 3\" of enemy units **engaged** with this unit can target those enemy units,"
+        },
+        {
+          "id": "c1ad-05cf-f50b-ee91",
+          "name": "Apocalyptic Steeds",
+          "points": 10,
+          "description": "This unit has +1\" M."
+        }
+      ]
+    },
+    {
+      "id": "6d62-2c41-fb3f-7d00",
+      "name": "Lords of the Warp",
+      "rules": [
+        "Loci of Power"
+      ],
+      "enhancements": [
+        {
+          "id": "eb8c-5d0f-d302-9d60",
+          "name": "Swollen with Power",
+          "points": 10,
+          "description": "This model has +2 W."
+        }
+      ]
+    },
+    {
+      "id": "357d-d51b-f001-a33d",
+      "name": "Warptide",
+      "rules": [
+        "Shudderblink"
+      ],
+      "enhancements": [
+        {
+          "id": "eb8c-5d0f-d302-9d60",
+          "name": "Swollen with Power",
+          "points": 10,
+          "description": "This model has +2 W."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -301,6 +1007,50 @@
           ]
         },
         {
+          "name": "➤ Great axe of Khorne - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Great axe of Khorne - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Axe of Khorne - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D3+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Axe of Khorne - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bloodflail",
           "type": "Ranged",
           "range": "12\"",
@@ -321,28 +1071,6 @@
           "skill": "2+",
           "strength": 8,
           "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "➤ Great axe of Khorne - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "7",
-          "skill": "2+",
-          "strength": 16,
-          "armorPenetration": -4,
-          "damage": "D6+2",
-          "keywords": []
-        },
-        {
-          "name": "➤ Great axe of Khorne - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "14",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -2,
           "damage": "2",
           "keywords": []
         }
@@ -475,7 +1203,19 @@
           "description": "Each time this model’s unit Consolidates, it can move up to 6\" instead of up to 3\"."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "BLOODLETTERS"
@@ -533,7 +1273,33 @@
           "description": "This model can be attached to the following units:\n■ BLOODCRUSHERS"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "BLOODCRUSHERS"
@@ -599,6 +1365,17 @@
           "keywords": [
             "Extra Attacks"
           ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -662,20 +1439,6 @@
       ],
       "weapons": [
         {
-          "name": "Scalding Roar",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6+3",
-          "skill": "N/A",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent"
-          ]
-        },
-        {
           "name": "Soul-rending fangs",
           "type": "Melee",
           "range": "Melee",
@@ -687,6 +1450,20 @@
           "keywords": [
             "Anti-Character 3+",
             "Precision"
+          ]
+        },
+        {
+          "name": "Scalding Roar",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6+3",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
           ]
         }
       ],
@@ -737,7 +1514,19 @@
           "description": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -782,7 +1571,33 @@
           "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -828,6 +1643,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Gore-drenched fangs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Burning roar",
           "type": "Ranged",
@@ -889,19 +1715,6 @@
       ],
       "weapons": [
         {
-          "name": "Skull cannon",
-          "type": "Ranged",
-          "range": "48\"",
-          "attacks": "D6+2",
-          "skill": "3+",
-          "strength": 9,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Blast"
-          ]
-        },
-        {
           "name": "Attendant's hellblades",
           "type": "Melee",
           "range": "Melee",
@@ -924,6 +1737,19 @@
           "armorPenetration": 0,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Skull cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,
@@ -1137,17 +1963,6 @@
       ],
       "weapons": [
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -1167,6 +1982,17 @@
           "strength": 6,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1219,17 +2045,6 @@
       ],
       "weapons": [
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -1249,6 +2064,17 @@
           "strength": 6,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1305,6 +2131,19 @@
       ],
       "weapons": [
         {
+          "name": "Staff of Tomorrow",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "➤ Infernal Gateway - witchfire",
           "type": "Ranged",
           "range": "24\"",
@@ -1332,19 +2171,6 @@
             "Blast",
             "Indirect Fire",
             "Hazardous",
-            "Psychic"
-          ]
-        },
-        {
-          "name": "Staff of Tomorrow",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2D3",
-          "keywords": [
             "Psychic"
           ]
         }
@@ -1429,19 +2255,6 @@
           ]
         },
         {
-          "name": "Rod of sorcery",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Psychic"
-          ]
-        },
-        {
           "name": "Staff of Tzeentch",
           "type": "Melee",
           "range": "Melee",
@@ -1450,6 +2263,19 @@
           "strength": 6,
           "armorPenetration": -1,
           "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Rod of sorcery",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": [
             "Psychic"
           ]
@@ -1521,6 +2347,19 @@
       ],
       "weapons": [
         {
+          "name": "The Trickster's Staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "➤ Infernal Flames - witchfire",
           "type": "Ranged",
           "range": "12\"",
@@ -1549,19 +2388,6 @@
             "Ignores Cover",
             "Psychic",
             "Torrent"
-          ]
-        },
-        {
-          "name": "The Trickster's Staff",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
           ]
         }
       ],
@@ -1637,6 +2463,47 @@
             "Anti-VEHICLE 4+",
             "Extra Attacks"
           ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Herald combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
         }
       ],
       "isLeader": true,
@@ -1698,7 +2565,49 @@
           "description": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Herald combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "PINK HORRORS",
@@ -1824,7 +2733,49 @@
           "description": "This model can be attached to the following units:\n■ PINK HORRORS\n■ BLUE HORRORS"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Herald combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "PINK HORRORS",
@@ -1896,6 +2847,17 @@
           ]
         },
         {
+          "name": "Yellow claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Coruscating Blue flames",
           "type": "Ranged",
           "range": "18\"",
@@ -1908,17 +2870,6 @@
             "Pistol",
             "Psychic"
           ]
-        },
-        {
-          "name": "Yellow claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Blue claws",
@@ -2001,6 +2952,28 @@
           ]
         },
         {
+          "name": "Yellow claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Blue claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Coruscating Blue flames (ref. only)",
           "type": "Ranged",
           "range": "18\"",
@@ -2027,28 +3000,6 @@
             "Pistol",
             "Psychic"
           ]
-        },
-        {
-          "name": "Yellow claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Blue claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "5+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Pink claws",
@@ -2122,32 +3073,6 @@
             "Psychic",
             "Torrent"
           ]
-        },
-        {
-          "name": "Flickering Flames",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Psychic",
-            "Torrent"
-          ]
-        },
-        {
-          "name": "Flamer mouths",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Flamer mouths",
@@ -2232,6 +3157,35 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Fires of Tzeentch - blue fire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Fires of Tzeentch - pink fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": true,
@@ -2367,6 +3321,35 @@
             "Anti-MONSTER 4+",
             "Anti-VEHICLE 4+",
             "Extra Attacks"
+          ]
+        },
+        {
+          "name": "➤ Fires of Tzeentch - blue fire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Fires of Tzeentch - pink fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
           ]
         }
       ],
@@ -2531,17 +3514,6 @@
           ]
         },
         {
-          "name": "Plague flail",
-          "type": "Ranged",
-          "range": "6\"",
-          "attacks": "D6+1",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
           "name": "➤ Bilesword - strike",
           "type": "Melee",
           "range": "Melee",
@@ -2580,6 +3552,17 @@
             "Lethal Hits",
             "Reverberating Summons"
           ]
+        },
+        {
+          "name": "Plague flail",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         },
         {
           "name": "Bileblade",
@@ -3043,19 +4026,6 @@
           "keywords": [
             "Lethal Hits"
           ]
-        },
-        {
-          "name": "Plaguesword",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Lethal Hits"
-          ]
         }
       ],
       "isLeader": false,
@@ -3234,47 +4204,6 @@
           "damage": "1",
           "keywords": [
             "Blast",
-            "Lethal Hits"
-          ]
-        },
-        {
-          "name": "Death's heads",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Blast",
-            "Lethal Hits"
-          ]
-        },
-        {
-          "name": "Foul mouthparts",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Extra Attacks",
-            "Lethal Hits"
-          ]
-        },
-        {
-          "name": "Plaguesword",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
             "Lethal Hits"
           ]
         },
@@ -3562,19 +4491,6 @@
           ]
         },
         {
-          "name": "Living whip",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
           "name": "Snapping claws",
           "type": "Melee",
           "range": "Melee",
@@ -3598,6 +4514,19 @@
           "armorPenetration": -2,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Living whip",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
         },
         {
           "name": "Ritual knife",
@@ -3834,16 +4763,27 @@
       ],
       "weapons": [
         {
-          "name": "Scourging whip",
-          "type": "Ranged",
-          "range": "9\"",
+          "name": "Axe of Dominion",
+          "type": "Melee",
+          "range": "Melee",
           "attacks": "6",
           "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Scourging whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
           "strength": 4,
           "armorPenetration": -1,
           "damage": "1",
           "keywords": [
-            "Assault"
+            "Extra Attacks"
           ]
         },
         {
@@ -3877,30 +4817,6 @@
             "Ignores Cover",
             "Psychic",
             "Torrent"
-          ]
-        },
-        {
-          "name": "Axe of Dominion",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Scourging whip",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Extra Attacks"
           ]
         }
       ],
@@ -4064,20 +4980,6 @@
           ]
         },
         {
-          "name": "Lashes of torment",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Anti-INFANTRY 3+",
-            "Extra Attacks"
-          ]
-        },
-        {
           "name": "Seeker tongues",
           "type": "Melee",
           "range": "Melee",
@@ -4238,19 +5140,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Slashing claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Devastating Wounds"
-          ]
         }
       ],
       "isLeader": false,
@@ -4388,33 +5277,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Lashing tongues",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Extra Attacks",
-            "Lethal Hits"
-          ]
-        },
-        {
-          "name": "Slashing claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Devastating Wounds"
-          ]
         }
       ],
       "isLeader": false,
@@ -4475,20 +5337,6 @@
             "Anti-INFANTRY 3+",
             "Assault",
             "Pistol"
-          ]
-        },
-        {
-          "name": "Lashes of torment",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Anti-INFANTRY 3+",
-            "Extra Attacks"
           ]
         },
         {
@@ -5306,6 +6154,31 @@
       ],
       "weapons": [
         {
+          "name": "Snapping claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Souleater blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Phantasmagoria - witchfire",
           "type": "Ranged",
           "range": "18\"",
@@ -5333,31 +6206,6 @@
             "Hazardous",
             "Psychic"
           ]
-        },
-        {
-          "name": "Snapping claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "Devastating Wounds",
-            "Extra Attacks"
-          ]
-        },
-        {
-          "name": "Souleater blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -5552,7 +6400,312 @@
           "description": "This model can be attached to the following units: ^^**Infantry Daemon**^^ units (excluding ^^**Possessed**^^ units) which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -5601,7 +6754,312 @@
           "description": "This model can be attached to the following unit: ^^**Mounted Daemon**^^ units which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -5649,7 +7107,312 @@
           "description": "Each time an attack is allocated to a friendly ^^**Daemon**^^ unit within 3\" of this model, subtract 1 from the Hit roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     }

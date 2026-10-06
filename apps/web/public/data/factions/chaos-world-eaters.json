@@ -6,18 +6,56 @@
   "totalDatasheets": 34,
   "detachments": [
     {
-      "id": "84c8-b821-877d-72e6",
-      "name": "Detachment",
+      "id": "3490-ec82-70b3-c5cf",
+      "name": "Berzerker Warband",
       "rules": [
-        "Relentless Rage",
-        "Idols of Khorne",
-        "Blood Tithe",
-        "Brazen Fury",
-        "Rush to the Fray",
-        "Rampaging Terrors",
-        "Adamantine Avalanche"
+        "Relentless Rage"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "2c4c-5aac-b510-28ef",
+          "name": "Berzerker Glaive",
+          "points": 35,
+          "description": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
+        },
+        {
+          "id": "33e2-4ee8-2e10-3e47",
+          "name": "Battle-lust",
+          "points": 20,
+          "description": "You can re-roll Charge rolls made for the bearer's unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer's unit."
+        },
+        {
+          "id": "6836-5818-2135-a8aa",
+          "name": "Helm of Brazen Ire",
+          "points": 30,
+          "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+          "id": "9ecf-cc71-16df-c473",
+          "name": "Favoured of Khorne",
+          "points": 20,
+          "description": "Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to 2 of the D6 rolled."
+        }
+      ]
+    },
+    {
+      "id": "70d9-0c7a-6b46-65fa",
+      "name": "Vessels of Wrath",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "5b76-3e1c-8801-1e4b",
+          "name": "Archslaughterer",
+          "points": 30,
+          "description": "(Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn."
+        },
+        {
+          "id": "0986-e2aa-a2d9-f0db",
+          "name": "Gateways to Glory",
+          "points": 10,
+          "description": "This model has: \n- MOBILE. \n- +1 to charge rolls."
+        }
+      ]
     },
     {
       "id": "9c45-483a-44b9-536c",
@@ -25,7 +63,172 @@
       "rules": [
         "Idols of Khorne"
       ],
+      "enhancements": [
+        {
+          "id": "564a-24c3-b6c5-f85c",
+          "name": "Brazen Form",
+          "points": 25,
+          "description": "Add 1 to the bearer's Toughness characteristic and the bearer has the Feel No Pain 5+ ability."
+        },
+        {
+          "id": "3109-eff5-24d5-cf3d",
+          "name": "Butcher Lord",
+          "points": 10,
+          "description": "The bearer has the Infiltrators ability."
+        },
+        {
+          "id": "5990-5b77-0916-c439",
+          "name": "Chosen of the Blood God",
+          "points": 15,
+          "description": "Add 3\" to the range of the bearer's Aura abilities."
+        },
+        {
+          "id": "05fc-0c29-ad53-acd9",
+          "name": "Strategic Slaughter",
+          "points": 20,
+          "description": "After both players have deployed their armies, select up to 3 ^^**Jakhals^^** and/or ^^**Goremongers^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        }
+      ]
+    },
+    {
+      "id": "1558-660f-466b-a087",
+      "name": "Khorne Daemonkin",
+      "rules": [
+        "Blood Tithe"
+      ],
+      "enhancements": [
+        {
+          "id": "6d28-ca9d-79a5-063a",
+          "name": "Disciple of Khorne",
+          "points": 15,
+          "description": "The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword."
+        },
+        {
+          "id": "eddd-9b27-00c2-b0ce",
+          "name": "Blood-forged Armour",
+          "points": 20,
+          "description": "The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point."
+        },
+        {
+          "id": "29b7-1040-548a-a4b1",
+          "name": "Icon of War",
+          "points": 25,
+          "description": "While a friendly ^^**Blood Legions^^** unit is within 6\" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then while a friendly ^^**Blood Legions^^** unit is within 6\" of the bearer, you can re-roll Battle-shock tests taken for that unit."
+        },
+        {
+          "id": "75ce-5ce7-0a6e-a876",
+          "name": "Blade of Endless Bloodshed",
+          "points": 30,
+          "description": "Add 1 to the Attacks, Strength and Damage characteristics of the bearer's melee weapons. Each time the bearer's unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead."
+        }
+      ]
+    },
+    {
+      "id": "dda8-a874-feac-1f81",
+      "name": "Possessed Slaughterband",
+      "rules": [
+        "Brazen Fury"
+      ],
+      "enhancements": [
+        {
+          "id": "426e-34a5-b952-1612",
+          "name": "Frenzied Focus",
+          "points": 20,
+          "description": "Each time a model in the bearer's unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6."
+        },
+        {
+          "id": "e987-b024-d619-1bb9",
+          "name": "Killing Clarity",
+          "points": 15,
+          "description": "Each time the bearer's unit destroys an enemy unit, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "46b0-fddc-73aa-9539",
+          "name": "Violent Demise",
+          "points": 10,
+          "description": "The bearer's Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, the bearer has the Deadly Demise D3+1 ability, instead of the Deadly Demise D3 ability."
+        },
+        {
+          "id": "2492-65d1-1840-3f19",
+          "name": "Malicious Vigour",
+          "points": 30,
+          "description": "Each time the bearer's unit makes a Brazen Fury move, it is treated as having rolled a 6 for the distance the unit can be moved."
+        }
+      ]
+    },
+    {
+      "id": "8a29-5bbd-3ee6-b64a",
+      "name": "Goretrack Onslaught",
+      "rules": [
+        "Rush to the Fray"
+      ],
+      "enhancements": [
+        {
+          "id": "ba80-4557-e097-bf3e",
+          "name": "Aggressive Deployment",
+          "points": 20,
+          "description": "In the Declare Battle Formations step, if the bearer starts the battle embarked within a ^^**Dedicated Transport^^**, that ^^**Dedicated Transport^^** has the Scouts 9\" ability."
+        },
+        {
+          "id": "32d7-ab1a-70f8-ca05",
+          "name": "Unleash Hell",
+          "points": 10,
+          "description": "At the start of your Shooting phase, you can select one ^^**Vehicle^^** model within 6\" of the bearer or, if the bearer is embarked within a ^^**Transport^^**, you can select that ^^**Transport^^** model. Until the end of the phase, after the selected model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "id": "62d3-25b8-aa7f-7ebb",
+          "name": "Infernal Infusion",
+          "points": 25,
+          "description": "Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's unit has the Fights First ability."
+        },
+        {
+          "id": "507e-a083-0a4e-e427",
+          "name": "Murderous Onslaught",
+          "points": 5,
+          "description": "If the bearer's unit disembarked from a ^^**Transport^^** this turn, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit."
+        }
+      ]
+    },
+    {
+      "id": "6e10-ae52-9955-07fb",
+      "name": "Brazen Engines",
+      "rules": [
+        "Rampaging Terrors"
+      ],
       "enhancements": []
+    },
+    {
+      "id": "0985-28ae-cf24-2fba",
+      "name": "Butchers of Khorne",
+      "rules": [
+        "Adamantine Avalanche"
+      ],
+      "enhancements": [
+        {
+          "id": "6d28-ca9d-79a5-063a",
+          "name": "Disciple of Khorne",
+          "points": 15,
+          "description": "The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword."
+        },
+        {
+          "id": "eddd-9b27-00c2-b0ce",
+          "name": "Blood-forged Armour",
+          "points": 20,
+          "description": "The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point."
+        },
+        {
+          "id": "29b7-1040-548a-a4b1",
+          "name": "Icon of War",
+          "points": 25,
+          "description": "While a friendly ^^**Blood Legions^^** unit is within 6\" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then while a friendly ^^**Blood Legions^^** unit is within 6\" of the bearer, you can re-roll Battle-shock tests taken for that unit."
+        },
+        {
+          "id": "75ce-5ce7-0a6e-a876",
+          "name": "Blade of Endless Bloodshed",
+          "points": 30,
+          "description": "Add 1 to the Attacks, Strength and Damage characteristics of the bearer's melee weapons. Each time the bearer's unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -264,6 +467,33 @@
           "armorPenetration": -2,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -412,19 +642,6 @@
       ],
       "weapons": [
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -445,6 +662,19 @@
           "armorPenetration": -1,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -497,19 +727,6 @@
       ],
       "weapons": [
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -530,6 +747,19 @@
           "armorPenetration": -1,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -607,6 +837,33 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -660,19 +917,6 @@
       ],
       "weapons": [
         {
-          "name": "Bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
           "name": "Axe of dismemberment",
           "type": "Melee",
           "range": "Melee",
@@ -684,6 +928,19 @@
           "keywords": [
             "Devastating Wounds",
             "Precision"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
           ]
         }
       ],
@@ -739,6 +996,82 @@
       ],
       "weapons": [
         {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Accursed weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Anti-VEHICLE 3+"
+          ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Paired accursed weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
           "name": "Reaper autocannon",
           "type": "Ranged",
           "range": "36\"",
@@ -751,6 +1084,20 @@
             "Devastating Wounds",
             "Rapid Fire 2",
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
           ]
         }
       ],
@@ -796,6 +1143,41 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Chainblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Mauler chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
         {
           "name": "Skullsmasher and mangler",
           "type": "Melee",
@@ -873,17 +1255,6 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
-        },
-        {
-          "name": "Chainblades",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -929,7 +1300,22 @@
           "description": "Each time a model in this unit makes a melee attack that targets a ^^**Monster^^** or ^^**Vehicle^^** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Chainblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Anti-MONSTER 3+",
+            "Anti-VEHICLE 3+"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -975,6 +1361,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "9",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Soulshatter lascannon",
           "type": "Ranged",
           "range": "48\"",
@@ -988,15 +1385,60 @@
           ]
         },
         {
-          "name": "Armoured tracks",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "9",
-          "skill": "3+",
-          "strength": 8,
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1055,6 +1497,83 @@
             "Rapid Fire 2",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,
@@ -1112,6 +1631,83 @@
           "keywords": [
             "Rapid Fire 6"
           ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,
@@ -1163,6 +1759,28 @@
       ],
       "weapons": [
         {
+          "name": "Shearing claws - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Shearing claws - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Heavy missile launcher - frag",
           "type": "Ranged",
           "range": "48\"",
@@ -1187,6 +1805,48 @@
           "damage": "D6+1",
           "keywords": [
             "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Electroscourge",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Hades lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy reaper autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Rapid Fire 2",
+            "Sustained Hits 1"
           ]
         },
         {
@@ -1257,28 +1917,6 @@
             "Melta 2",
             "Rapid Fire 1"
           ]
-        },
-        {
-          "name": "Shearing claws - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 16,
-          "armorPenetration": -3,
-          "damage": "D6+1",
-          "keywords": []
-        },
-        {
-          "name": "Shearing claws - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "12",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1325,6 +1963,33 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Ectoplasma cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Hades autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
         {
           "name": "Forgefiend claws",
           "type": "Melee",
@@ -1395,6 +2060,55 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Helbrute fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
           "name": "➤ Missile launcher - frag",
           "type": "Ranged",
           "range": "48\"",
@@ -1420,6 +2134,28 @@
           "keywords": [
             "Rapid Fire 1"
           ]
+        },
+        {
+          "name": "Helbrute hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Power scourge",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         },
         {
           "name": "Multi-melta",
@@ -1465,37 +2201,33 @@
           ]
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Helbrute hammer",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
           "skill": "4+",
-          "strength": 14,
-          "armorPenetration": -3,
-          "damage": "D6+1",
-          "keywords": []
-        },
-        {
-          "name": "Power scourge",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "10",
-          "skill": "3+",
-          "strength": 7,
+          "strength": 5,
           "armorPenetration": -1,
           "damage": "2",
-          "keywords": []
+          "keywords": [
+            "Rapid Fire 2",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Rapid Fire 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1543,6 +2275,20 @@
       ],
       "weapons": [
         {
+          "name": "Heldrake claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-FLY 2+",
+            "Devastating Wounds"
+          ]
+        },
+        {
           "name": "Baleflamer",
           "type": "Ranged",
           "range": "12\"",
@@ -1557,17 +2303,16 @@
           ]
         },
         {
-          "name": "Heldrake claws",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "Hades autocannon",
+          "type": "Ranged",
+          "range": "36\"",
           "attacks": "6",
-          "skill": "3+",
-          "strength": 7,
+          "skill": "4+",
+          "strength": 8,
           "armorPenetration": -1,
           "damage": "2",
           "keywords": [
-            "Anti-FLY 2+",
-            "Devastating Wounds"
+            "Rapid Fire 4"
           ]
         }
       ],
@@ -1620,6 +2365,17 @@
       ],
       "weapons": [
         {
+          "name": "Maulerfiend fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
           "name": "Magma cutter",
           "type": "Ranged",
           "range": "6\"",
@@ -1632,17 +2388,6 @@
             "Melta 2",
             "Rapid Fire 1"
           ]
-        },
-        {
-          "name": "Maulerfiend fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "3+",
-          "strength": 14,
-          "armorPenetration": -2,
-          "damage": "D6+1",
-          "keywords": []
         },
         {
           "name": "Lasher tendrils",
@@ -1702,7 +2447,60 @@
           "description": "In your opponent's Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8\" of this model, any units embarked within it can disembark."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 4"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1807,6 +2605,28 @@
       ],
       "weapons": [
         {
+          "name": "➤ Great cleaver of Khorne - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "8",
+          "keywords": []
+        },
+        {
+          "name": "➤ Great cleaver of Khorne - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "18",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Hades gatling cannon",
           "type": "Ranged",
           "range": "48\"",
@@ -1874,28 +2694,6 @@
             "Blast",
             "Rapid Fire 4"
           ]
-        },
-        {
-          "name": "➤ Great cleaver of Khorne - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 16,
-          "armorPenetration": -4,
-          "damage": "8",
-          "keywords": []
-        },
-        {
-          "name": "➤ Great cleaver of Khorne - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "18",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1943,6 +2741,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Autocannon",
           "type": "Ranged",
           "range": "48\"",
@@ -1954,15 +2763,31 @@
           "keywords": []
         },
         {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
           "skill": "4+",
-          "strength": 6,
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Rapid Fire 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2019,6 +2844,33 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Twin autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Rapid Fire 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2063,6 +2915,43 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Blood harpoon",
           "type": "Ranged",
@@ -2306,6 +3195,50 @@
           ]
         },
         {
+          "name": "➤ Great axe of Khorne - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -4,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Great axe of Khorne - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Axe of Khorne - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D3+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Axe of Khorne - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bloodflail",
           "type": "Ranged",
           "range": "12\"",
@@ -2326,28 +3259,6 @@
           "skill": "2+",
           "strength": 8,
           "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "➤ Great axe of Khorne - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "7",
-          "skill": "2+",
-          "strength": 16,
-          "armorPenetration": -4,
-          "damage": "D6+2",
-          "keywords": []
-        },
-        {
-          "name": "➤ Great axe of Khorne - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "14",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -2,
           "damage": "2",
           "keywords": []
         }
@@ -2395,7 +3306,19 @@
           "description": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2439,7 +3362,33 @@
           "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2484,6 +3433,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Gore-drenched fangs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Burning roar",
           "type": "Ranged",
@@ -2547,7 +3507,271 @@
           "description": "This model can be attached to the following unit: ^^**Khorne Berzerkers**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Accursed weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Axe of dismemberment",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Chainblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Daemon hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Exalted chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Khornate eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Mauler chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paired manglers",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Skullsmasher and mangler",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Blood harpoon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Reaper autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Rapid Fire 2",
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -2609,6 +3833,269 @@
             "Extra Attacks",
             "Lance"
           ]
+        },
+        {
+          "name": "Accursed weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Axe of dismemberment",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Chainblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Daemon hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Exalted chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Khornate eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Mauler chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paired manglers",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Skullsmasher and mangler",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Blood harpoon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Reaper autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Rapid Fire 2",
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": true,
@@ -2658,7 +4145,271 @@
           "description": "This model can be attached to the following unit: ^^**Jakhals**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Accursed weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Axe of dismemberment",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Chainblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Daemon hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Exalted chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Khornate eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Mauler chainblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paired manglers",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Skullsmasher and mangler",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Blood harpoon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits D3"
+          ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Reaper autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Rapid Fire 2",
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     }

@@ -6,7 +6,7 @@
     "isLegends": false,
     "file": "imperium-space-marines.json",
     "datasheetCount": 132,
-    "detachmentCount": 27,
+    "detachmentCount": 52,
     "subfactions": [
       {
         "id": "ultramarines",
@@ -72,7 +72,7 @@
     "isLegends": false,
     "file": "imperium-astra-militarum.json",
     "datasheetCount": 112,
-    "detachmentCount": 2,
+    "detachmentCount": 13,
     "subfactions": [
       {
         "id": "cadian",
@@ -103,7 +103,7 @@
     "isLegends": false,
     "file": "imperium-adepta-sororitas.json",
     "datasheetCount": 34,
-    "detachmentCount": 5,
+    "detachmentCount": 8,
     "subfactions": [
       {
         "id": "our-martyred-lady",
@@ -129,7 +129,7 @@
     "isLegends": false,
     "file": "imperium-adeptus-custodes.json",
     "datasheetCount": 34,
-    "detachmentCount": 6,
+    "detachmentCount": 9,
     "subfactions": [
       {
         "id": "solar-watch",
@@ -155,7 +155,7 @@
     "isLegends": false,
     "file": "imperium-adeptus-mechanicus.json",
     "datasheetCount": 41,
-    "detachmentCount": 2,
+    "detachmentCount": 10,
     "subfactions": [
       {
         "id": "mars",
@@ -181,7 +181,7 @@
     "isLegends": false,
     "file": "imperium-grey-knights.json",
     "datasheetCount": 31,
-    "detachmentCount": 4,
+    "detachmentCount": 11,
     "subfactions": []
   },
   {
@@ -191,7 +191,7 @@
     "isLegends": false,
     "file": "imperium-imperial-knights.json",
     "datasheetCount": 22,
-    "detachmentCount": 4,
+    "detachmentCount": 8,
     "subfactions": []
   },
   {
@@ -201,7 +201,7 @@
     "isLegends": false,
     "file": "imperium-agents-of-the-imperium.json",
     "datasheetCount": 50,
-    "detachmentCount": 4,
+    "detachmentCount": 5,
     "subfactions": []
   },
   {
@@ -211,7 +211,7 @@
     "isLegends": false,
     "file": "chaos-chaos-space-marines.json",
     "datasheetCount": 84,
-    "detachmentCount": 12,
+    "detachmentCount": 17,
     "subfactions": [
       {
         "id": "black-legion",
@@ -247,7 +247,7 @@
     "isLegends": false,
     "file": "chaos-death-guard.json",
     "datasheetCount": 50,
-    "detachmentCount": 5,
+    "detachmentCount": 9,
     "subfactions": []
   },
   {
@@ -257,7 +257,7 @@
     "isLegends": false,
     "file": "chaos-thousand-sons.json",
     "datasheetCount": 41,
-    "detachmentCount": 16,
+    "detachmentCount": 9,
     "subfactions": []
   },
   {
@@ -267,7 +267,7 @@
     "isLegends": false,
     "file": "chaos-world-eaters.json",
     "datasheetCount": 34,
-    "detachmentCount": 2,
+    "detachmentCount": 8,
     "subfactions": []
   },
   {
@@ -277,7 +277,7 @@
     "isLegends": false,
     "file": "chaos-emperor-s-children.json",
     "datasheetCount": 26,
-    "detachmentCount": 6,
+    "detachmentCount": 10,
     "subfactions": []
   },
   {
@@ -287,7 +287,7 @@
     "isLegends": false,
     "file": "chaos-chaos-daemons.json",
     "datasheetCount": 67,
-    "detachmentCount": 2,
+    "detachmentCount": 9,
     "subfactions": [
       {
         "id": "khorne",
@@ -318,7 +318,7 @@
     "isLegends": false,
     "file": "chaos-chaos-knights.json",
     "datasheetCount": 20,
-    "detachmentCount": 2,
+    "detachmentCount": 8,
     "subfactions": []
   },
   {
@@ -328,7 +328,7 @@
     "isLegends": false,
     "file": "necrons.json",
     "datasheetCount": 67,
-    "detachmentCount": 5,
+    "detachmentCount": 12,
     "subfactions": [
       {
         "id": "szarekhan",
@@ -359,7 +359,7 @@
     "isLegends": false,
     "file": "t-au-empire.json",
     "datasheetCount": 64,
-    "detachmentCount": 4,
+    "detachmentCount": 9,
     "subfactions": [
       {
         "id": "tau-sept",
@@ -384,8 +384,8 @@
     "grandAlliance": "Xenos",
     "isLegends": false,
     "file": "tyranids.json",
-    "datasheetCount": 38,
-    "detachmentCount": 1,
+    "datasheetCount": 55,
+    "detachmentCount": 13,
     "subfactions": [
       {
         "id": "leviathan",
@@ -410,7 +410,7 @@
     "grandAlliance": "Xenos",
     "isLegends": false,
     "file": "genestealer-cults.json",
-    "datasheetCount": 26,
+    "datasheetCount": 43,
     "detachmentCount": 11,
     "subfactions": []
   },
@@ -421,7 +421,7 @@
     "isLegends": false,
     "file": "orks.json",
     "datasheetCount": 65,
-    "detachmentCount": 2,
+    "detachmentCount": 17,
     "subfactions": [
       {
         "id": "goffs",
@@ -452,7 +452,7 @@
     "isLegends": false,
     "file": "aeldari-craftworlds.json",
     "datasheetCount": 88,
-    "detachmentCount": 15,
+    "detachmentCount": 24,
     "subfactions": [
       {
         "id": "ulthe",
@@ -483,7 +483,7 @@
     "isLegends": false,
     "file": "aeldari-drukhari.json",
     "datasheetCount": 21,
-    "detachmentCount": 15,
+    "detachmentCount": 24,
     "subfactions": []
   },
   {
@@ -493,7 +493,7 @@
     "isLegends": false,
     "file": "leagues-of-votann.json",
     "datasheetCount": 25,
-    "detachmentCount": 3,
+    "detachmentCount": 10,
     "subfactions": []
   },
   {
@@ -523,7 +523,7 @@
     "isLegends": true,
     "file": "library-tyranids.json",
     "datasheetCount": 17,
-    "detachmentCount": 6,
+    "detachmentCount": 24,
     "subfactions": []
   },
   {

@@ -6,33 +6,143 @@
   "totalDatasheets": 50,
   "detachments": [
     {
-      "id": "8782-4837-c336-c95e",
-      "name": "Death Cult power blade",
-      "rules": [],
-      "enhancements": []
+      "id": "aabf-4988-4054-bed2",
+      "name": "Ordo Xenos Alien Hunters",
+      "rules": [
+        "Deathwatch Mission Tactics"
+      ],
+      "enhancements": [
+        {
+          "id": "5947-a87c-2425-2a48",
+          "name": "Universal Anathema",
+          "points": 10,
+          "description": "Melee weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities"
+        },
+        {
+          "id": "f8b3-8f83-2256-0216",
+          "name": "Blackweave Shroud",
+          "points": 15,
+          "description": "The bearer has the Feel No Pain 4+ ability."
+        },
+        {
+          "id": "a27e-5d4e-6700-b1d3",
+          "name": "Beacon Angelis",
+          "points": 30,
+          "description": "Models in the bearer's unit have the Deep Strike ability. In addition, you can target the bearer's unit with the Rapid Ingress Stratagem for 0CP."
+        },
+        {
+          "id": "85ba-c01b-fc50-12c3",
+          "name": "Amulet of Auto-chastisement",
+          "points": 25,
+          "description": "At the start of your opponent's Shooting phase, select one enemy VEHICLE unit (excluding TITANIC units) within 12\" of and visible to the bearer. That unit must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll. If that test is failed, that unit is not eligible to shoot this phase."
+        }
+      ]
     },
     {
-      "id": "1162-9cd5-d6b0-1663",
-      "name": "Detachment",
+      "id": "cfc6-5531-53cb-1964",
+      "name": "Ordo Hereticus Purgation Force",
       "rules": [
-        "Deathwatch Mission Tactics",
-        "Root Out Heresy",
-        "Destroy the Daemonic",
-        "At All Costs",
+        "Root Out Heresy"
+      ],
+      "enhancements": [
+        {
+          "id": "84af-733a-1f33-c2ba",
+          "name": "Liber Heresius",
+          "points": 10,
+          "description": "After both players have deployed their armies, select up to 3 AGENTS OF THE IMPERIUM units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "823a-d96e-6bdd-1d6b",
+          "name": "No Escape",
+          "points": 25,
+          "description": "While an enemy unit is within 6\" of the bearer, each time it is selected to Fall Back it must first take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+        },
+        {
+          "id": "1756-8ed9-6344-30c5",
+          "name": "Witch Hunter",
+          "points": 15,
+          "description": "While the bearer is leading a unit, each time a model in that unit makes an attack that targets a PSYKER unit, you can re-roll the Hit roll."
+        },
+        {
+          "id": "b295-d8d6-1339-22a8",
+          "name": "Ignis Judicium",
+          "points": 10,
+          "description": "The bearer's ranged weapons have the [DEVASTATING WOUNDS], [MELTA 1] and [PRECISION] abilities."
+        }
+      ]
+    },
+    {
+      "id": "bd6f-97c7-6ac4-8320",
+      "name": "Ordo Malleus Daemon Hunters",
+      "rules": [
+        "Destroy the Daemonic"
+      ],
+      "enhancements": [
+        {
+          "id": "7175-709a-91a9-9b44",
+          "name": "Formidable Resolve",
+          "points": 5,
+          "description": "Improve the bearer's Leadership and Wounds characteristics by 1. Once per battle, at the start of any phase, you can select one friendly Battle-shocked unit within 12\" of the bearer. That unit is no longer Battle-shocked."
+        },
+        {
+          "id": "57c9-449c-c11c-6611",
+          "name": "Daemon Slayer",
+          "points": 10,
+          "description": "Add 1 to the Attacks characteristic of the bearer's melee weapons, and those weapons have the **[ANTI-DAEMON 3+]** ability."
+        },
+        {
+          "id": "eebd-ca6a-65e2-0694",
+          "name": "Grimoire of True Names",
+          "points": 10,
+          "description": "While an enemy unit is within 9\" of the bearer, worsen the Leadership characteristic of models in that unit by 1. In addition, while an enemy DAEMON unit is within 9\" of the bearer, each time a model in that DAEMON unit makes an attack, subtract 1 from the Hit roll and subtract 1 from the Wound roll."
+        },
+        {
+          "id": "ee2f-4840-645c-ba0d",
+          "name": "Gift of the Prescient",
+          "points": 20,
+          "description": "Once per battle, if the bearer is on the battlefield, you can use the Rapid Ingress Stratagem for 0CP. When doing so, you must target a GREY KNIGHTS TERMINATOR SQUAD unit from your army, and when using the Stratagem, that unit can be set up on the battlefield anywhere that is more than 6\" from all enemy units."
+        }
+      ]
+    },
+    {
+      "id": "5347-93e5-b3f2-366d",
+      "name": "Imperialis Fleet",
+      "rules": [
+        "At All Costs"
+      ],
+      "enhancements": [
+        {
+          "id": "e180-015c-b361-d651",
+          "name": "Digital Weapons",
+          "points": 10,
+          "description": "Each time the bearer is selected to fight, roll three D6; for each 4+, one enemy unit within Engagement Range of the bearer suffers 1 mortal wound. Mortal wounds inflicted by this Enhancement are allocated as if they have the [PRECISION] ability."
+        },
+        {
+          "id": "c390-c4f9-4c37-5475",
+          "name": "Clandestine Operation",
+          "points": 15,
+          "description": "At the start of the Declare Battle Formations step, you can select up to three AGENTS OF THE IMPERIUM INFANTRY units from your army (excluding GREY KNIGHTS TERMINATOR SQUAD units) - those units gain the Infiltrators ability."
+        },
+        {
+          "id": "c59c-981b-a818-0367",
+          "name": "Fleetmaster",
+          "points": 20,
+          "description": "Once per battle round, you can target the bearer's unit with the Violent Acquisition, Masters of the Void or Close-quarters Barrage Stratagems for 0CP."
+        },
+        {
+          "id": "ab5d-7944-acf3-eb56",
+          "name": "Combat Landers",
+          "points": 10,
+          "description": "At the start of the Declare Battle Formations step, you can select up to three VOIDFARERS units from your army - those units gain the Deep Strike ability."
+        }
+      ]
+    },
+    {
+      "id": "e203-73dc-18d9-f390",
+      "name": "Veiled Blade Elimination Force",
+      "rules": [
         "Extremis Sanction"
       ],
-      "enhancements": []
-    },
-    {
-      "id": "05a0-b6ef-1ab3-10af",
-      "name": "Death Cult blades",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "3a4c-7090-8c04-d5e7",
-      "name": "Cult Uprising",
-      "rules": [],
       "enhancements": []
     }
   ],
@@ -278,6 +388,21 @@
       ],
       "weapons": [
         {
+          "name": "Life-draining touch",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-PSYKER 2+",
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
           "name": "Animus speculum",
           "type": "Ranged",
           "range": "24\"",
@@ -291,21 +416,6 @@
             "Assault",
             "Precision",
             "Psychic Assassin"
-          ]
-        },
-        {
-          "name": "Life-draining touch",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Anti-PSYKER 2+",
-            "Devastating Wounds",
-            "Precision"
           ]
         }
       ],
@@ -550,6 +660,17 @@
       ],
       "weapons": [
         {
+          "name": "Monomolecular cane-rapier",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Household pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -579,6 +700,19 @@
           ]
         },
         {
+          "name": "Death Cult power blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
           "name": "Voltaic pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -593,27 +727,27 @@
           ]
         },
         {
-          "name": "Monomolecular cane-rapier",
+          "name": "Close combat weapon",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
           "damage": "1",
           "keywords": []
         },
         {
-          "name": "Death Cult power blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -2,
+          "name": "Laspistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
           "damage": "1",
           "keywords": [
-            "Precision"
+            "Pistol"
           ]
         }
       ],
@@ -678,6 +812,41 @@
           ]
         },
         {
+          "name": "Laspistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Vicious bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Lasgun",
           "type": "Ranged",
           "range": "24\"",
@@ -703,17 +872,6 @@
             "Heavy",
             "Sustained Hits 1"
           ]
-        },
-        {
-          "name": "Vicious bite",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -759,7 +917,43 @@
           "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arbites shotpistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Shock maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Mechanical bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -812,6 +1006,54 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Arbites combat shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Arbites shotpistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "➤ Arbites grenade launcher - frag",
           "type": "Ranged",
           "range": "24\"",
@@ -878,14 +1120,14 @@
           ]
         },
         {
-          "name": "Excruciator maul",
+          "name": "Mechanical bite",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
+          "attacks": "3",
+          "skill": "4+",
           "strength": 4,
-          "armorPenetration": -1,
-          "damage": "2",
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ],
@@ -934,6 +1176,43 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Arbites combat shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Arbites shotpistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
           "name": "➤ Arbites grenade launcher - frag",
           "type": "Ranged",
           "range": "24\"",
@@ -998,6 +1277,17 @@
             "Devastating Wounds",
             "Torrent"
           ]
+        },
+        {
+          "name": "Mechanical bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1427,6 +1717,30 @@
       ],
       "weapons": [
         {
+          "name": "Inquisitorial melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "Bolt pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -1467,30 +1781,6 @@
             "Devastating Wounds",
             "Psychic",
             "Torrent"
-          ]
-        },
-        {
-          "name": "Inquisitorial melee weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Force weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
           ]
         }
       ],
@@ -1853,6 +2143,121 @@
       ],
       "weapons": [
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Astartes chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
           "name": "➤ Plasma gun - standard",
           "type": "Ranged",
           "range": "24\"",
@@ -1891,6 +2296,19 @@
           "keywords": [
             "Ignores Cover",
             "Torrent"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
           ]
         }
       ],
@@ -1963,6 +2381,30 @@
           ]
         },
         {
+          "name": "Inquisitorial melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "Storm bolter",
           "type": "Ranged",
           "range": "24\"",
@@ -1999,30 +2441,6 @@
           "strength": 8,
           "armorPenetration": -1,
           "damage": "2",
-          "keywords": [
-            "Psychic"
-          ]
-        },
-        {
-          "name": "Inquisitorial melee weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Force weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "D3",
           "keywords": [
             "Psychic"
           ]
@@ -2094,6 +2512,19 @@
           "keywords": [
             "Psychic"
           ]
+        },
+        {
+          "name": "Laspistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -2162,20 +2593,6 @@
           ]
         },
         {
-          "name": "Zealot's vindictor",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent"
-          ]
-        },
-        {
           "name": "Power weapon",
           "type": "Melee",
           "range": "Melee",
@@ -2188,14 +2605,17 @@
         },
         {
           "name": "Zealot's vindictor",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
           "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -2249,6 +2669,30 @@
       ],
       "weapons": [
         {
+          "name": "Agent melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Agent firearm",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
           "name": "➤ Plasma pistol - standard",
           "type": "Ranged",
           "range": "12\"",
@@ -2276,6 +2720,33 @@
           ]
         },
         {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Mystic stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Psychic"
+          ]
+        },
+        {
           "name": "Heavy bolter",
           "type": "Ranged",
           "range": "36\"",
@@ -2287,6 +2758,20 @@
           "keywords": [
             "Heavy",
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
           ]
         },
         {
@@ -2316,33 +2801,6 @@
             "Blast",
             "Hazardous",
             "Heavy"
-          ]
-        },
-        {
-          "name": "Eviscerator",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Mystic stave",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Anti-INFANTRY 4+",
-            "Psychic"
           ]
         }
       ],
@@ -2400,6 +2858,32 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Nemesis force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
         {
           "name": "Incinerator",
           "type": "Ranged",
@@ -2500,6 +2984,33 @@
           ]
         },
         {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
           "name": "Storm bolter",
           "type": "Ranged",
           "range": "24\"",
@@ -2535,6 +3046,30 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -2593,6 +3128,30 @@
           "keywords": [
             "Rapid Fire 2"
           ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -2647,6 +3206,28 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Condemnor boltgun",
           "type": "Ranged",
@@ -2748,6 +3329,30 @@
           ]
         },
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Ministorum heavy flamer",
           "type": "Ranged",
           "range": "12\"",
@@ -2776,26 +3381,58 @@
           ]
         },
         {
-          "name": "Chainsword",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
         },
         {
-          "name": "Power weapon",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
           "attacks": "2",
           "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -2884,6 +3521,43 @@
           "keywords": [
             "Melta 2",
             "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
           ]
         }
       ],
@@ -3023,6 +3697,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Jokaero weapons - focused",
           "type": "Ranged",
           "range": "24\"",
@@ -3045,17 +3730,6 @@
           "keywords": [
             "Torrent"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "5+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -3116,6 +3790,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Hurricane bolter",
           "type": "Ranged",
@@ -3179,17 +3864,6 @@
           "strength": 10,
           "armorPenetration": -2,
           "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
           "keywords": []
         }
       ],
@@ -3288,6 +3962,30 @@
           ]
         },
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Hand Flamer",
           "type": "Ranged",
           "range": "12\"",
@@ -3303,31 +4001,67 @@
           ]
         },
         {
-          "name": "Bolt Rifle",
+          "name": "➤ Plasma pistol - Standard",
           "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -1,
+          "strength": 7,
+          "armorPenetration": -2,
           "damage": "1",
           "keywords": [
-            "Assault",
-            "Heavy"
+            "Pistol"
           ]
         },
         {
-          "name": "Bolt Rifle",
+          "name": "➤ Plasma pistol - Supercharge",
           "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Long Vigil melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Astartes chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
           "strength": 4,
           "armorPenetration": -1,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Long Vigil ranged weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": [
-            "Assault",
-            "Heavy"
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
           ]
         },
         {
@@ -3357,16 +4091,32 @@
           ]
         },
         {
-          "name": "Bolt pistol",
+          "name": "➤ Plasma incinerator - Standard",
           "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
+          "range": "24\"",
+          "attacks": "2",
           "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
+          "strength": 7,
+          "armorPenetration": -2,
           "damage": "1",
           "keywords": [
-            "Pistol"
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Plasma incinerator - Supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Hazardous",
+            "Heavy"
           ]
         }
       ],
@@ -3473,6 +4223,30 @@
           ]
         },
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Heavy Bolter",
           "type": "Ranged",
           "range": "36\"",
@@ -3499,6 +4273,19 @@
           "keywords": [
             "Ignores Cover",
             "Torrent",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Power fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
             "Twin-Linked"
           ]
         },
@@ -3534,6 +4321,20 @@
           "range": "18\"",
           "attacks": "1",
           "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
           "strength": 9,
           "armorPenetration": -4,
           "damage": "D6",
@@ -3586,32 +4387,6 @@
             "Assault",
             "Hazardous",
             "Pistol",
-            "Twin-Linked"
-          ]
-        },
-        {
-          "name": "Power fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Twin-Linked"
-          ]
-        },
-        {
-          "name": "Power fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
             "Twin-Linked"
           ]
         }
@@ -3728,6 +4503,78 @@
       ],
       "weapons": [
         {
+          "name": "Artificer crozius",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Long Vigil ranged weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Long Vigil melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Frag cannon",
           "type": "Ranged",
           "range": "18\"",
@@ -3743,63 +4590,6 @@
           ]
         },
         {
-          "name": "Psychic Cleanse",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "D6",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
-          ]
-        },
-        {
-          "name": "Deathwatch twin boltgun",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Artificer crozius",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
           "name": "Twin lightning claws",
           "type": "Melee",
           "range": "Melee",
@@ -3810,6 +4600,19 @@
           "damage": "1",
           "keywords": [
             "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Psychic Cleanse",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
           ]
         },
         {
@@ -3837,13 +4640,27 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
           "strength": 5,
-          "armorPenetration": -2,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Deathwatch twin boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
           "damage": "1",
           "keywords": []
         }
@@ -3949,19 +4766,87 @@
       ],
       "weapons": [
         {
-          "name": "Frag Cannon",
+          "name": "Bolt pistol",
           "type": "Ranged",
-          "range": "18\"",
-          "attacks": "D3",
-          "skill": "4+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": [
-            "Blast",
-            "Heavy",
-            "Rapid Fire D3"
+            "Pistol"
           ]
+        },
+        {
+          "name": "Long Vigil melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Power Fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Twin lightning claws",
@@ -3990,16 +4875,122 @@
           ]
         },
         {
-          "name": "Power weapon",
+          "name": "Chainfist",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "4",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Assault cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
           "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
           "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - standard",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 7,
           "armorPenetration": -2,
           "damage": "1",
           "keywords": [
-            "-"
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Plasma cannon - supercharge",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Long Vigil ranged weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
           ]
         },
         {
@@ -4013,6 +5004,49 @@
           "damage": "3",
           "keywords": [
             "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Frag Cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Heavy",
+            "Rapid Fire D3"
+          ]
+        },
+        {
+          "name": "➤ Infernus heavy bolter - heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "➤ Infernus heavy bolter - heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores cover",
+            "Torrent"
           ]
         }
       ],
@@ -4109,6 +5143,30 @@
           ]
         },
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Accelerator autocannon",
           "type": "Ranged",
           "range": "48\"",
@@ -4136,6 +5194,19 @@
           ]
         },
         {
+          "name": "Paired combat blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
           "name": "Special-issue bolt pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -4146,6 +5217,19 @@
           "damage": "1",
           "keywords": [
             "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Combat knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
             "Precision"
           ]
         },
@@ -4187,58 +5271,6 @@
           "damage": "D6",
           "keywords": [
             "Heavy"
-          ]
-        },
-        {
-          "name": "Bolt carbine",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Precision"
-          ]
-        },
-        {
-          "name": "Paired combat blades",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Combat knife",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Precision"
-          ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "-"
           ]
         }
       ],
@@ -4304,6 +5336,69 @@
           "keywords": [
             "Devastating Wounds"
           ]
+        },
+        {
+          "name": "Long Vigil ranged weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Long Vigil melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4454,19 +5549,6 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
-        },
-        {
-          "name": "Vigil spear",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "D3",
-          "keywords": [
-            "Lance"
-          ]
         }
       ],
       "isLeader": true,
@@ -4544,48 +5626,6 @@
           ]
         },
         {
-          "name": "Holy fire",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Ignores Cover",
-            "One Shot",
-            "Torrent"
-          ]
-        },
-        {
-          "name": "➤ Plasma gun - standard",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
-          "name": "➤ Plasma gun - supercharge",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": [
-            "Hazardous",
-            "Rapid Fire 1"
-          ]
-        },
-        {
           "name": "Burning hands",
           "type": "Melee",
           "range": "Melee",
@@ -4623,10 +5663,50 @@
           ]
         },
         {
-          "name": "Close combat weapon",
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Sanctifier melee weapon",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "2",
+          "attacks": "3",
           "skill": "3+",
           "strength": 3,
           "armorPenetration": 0,
@@ -4634,15 +5714,33 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 3,
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -4803,6 +5901,32 @@
           "keywords": [
             "Precision"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Special-issue bolt pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Precision",
+            "Lethal Hits"
+          ]
         }
       ],
       "isLeader": false,
@@ -4843,6 +5967,19 @@
       ],
       "weapons": [
         {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
           "name": "Heavy thunder hammer",
           "type": "Melee",
           "range": "Melee",
@@ -4853,6 +5990,20 @@
           "damage": "3",
           "keywords": [
             "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Lethal Hits"
           ]
         }
       ],
@@ -4902,6 +6053,60 @@
             "Lethal Hits",
             "Precision"
           ]
+        },
+        {
+          "name": "➤ Plasma incinerator - Standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Plasma incinerator - Supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -5017,6 +6222,31 @@
             "Ignores cover",
             "Torrent"
           ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -5048,7 +6278,48 @@
       },
       "keywords": [],
       "abilities": [],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "➤ Plasma pistol - Standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - Supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -5097,7 +6368,539 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arbites combat shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Artificer shotgun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Executioner shotgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Master-crafted bolt sniper rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Lasgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Psychic Shock Wave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Unholy Gaze",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Vigil spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Agent firearm",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Holy pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Household pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Voltaic pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathwatch weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warp grasp",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits",
+            "Psychic"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -5151,7 +6954,539 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arbites combat shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Artificer shotgun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Executioner shotgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Master-crafted bolt sniper rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Lasgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Psychic Shock Wave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Unholy Gaze",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Vigil spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Agent firearm",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Holy pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Household pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Voltaic pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathwatch weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warp grasp",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits",
+            "Psychic"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -5200,7 +7535,539 @@
           "description": "While this model is leading a unit, it can embark within any ^^**Transport**^^ that its Bodyguard unit can embark within."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arbites combat shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - frag",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Arbites grenade launcher - krak",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Artificer shotgun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Executioner shotgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Master-crafted bolt sniper rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Lasgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - standard",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Plasma gun - supercharge",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Psychic Shock Wave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Unholy Gaze",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Vigil spear",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Agent firearm",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Holy pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Household pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Voltaic pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathwatch weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warp grasp",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits",
+            "Psychic"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },

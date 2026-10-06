@@ -6,16 +6,37 @@
   "totalDatasheets": 64,
   "detachments": [
     {
-      "id": "5804-a3f4-b65a-4e32",
-      "name": "Ghostkeel fists",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "5691-9564-6d30-64b0",
-      "name": "Detachment",
-      "rules": [],
-      "enhancements": []
+      "id": "e366-3583-f47a-986e",
+      "name": "Kauyon",
+      "rules": [
+        "Patient Hunter"
+      ],
+      "enhancements": [
+        {
+          "id": "6588-706c-183-89b6",
+          "name": "Exemplar of the Kauyon",
+          "points": 20,
+          "description": "**^^T’au Empire^^** model only (excluding **^^Kroot Shaper^^** models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of the third."
+        },
+        {
+          "id": "8890-1932-b85c-f7de",
+          "name": "Precision of the Patient Hunter",
+          "points": 15,
+          "description": "**^^T’au Empire^^** model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well."
+        },
+        {
+          "id": "a4bd-c0a7-e26e-ece8",
+          "name": "Solid-image Projection Unit",
+          "points": 20,
+          "description": "**^^T’au Empire^^** model only. After both players have deployed their armies, select up to three **^^T’au Empire^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "f835-9b5b-d767-7447",
+          "name": "Through Unity, Devastation",
+          "points": 30,
+          "description": "**T’AU EMPIRE** model only (excluding **KROOT SHAPER** models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the **[LETHAL HITS]** ability while targeting their Spotted unit."
+        }
+      ]
     },
     {
       "id": "6aea-8ba5-978e-8def",
@@ -80,6 +101,157 @@
           "name": "Puretide Engram Neurochip",
           "points": 15,
           "description": "**T’AU EMPIRE BATTLESUIT** model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP."
+        }
+      ]
+    },
+    {
+      "id": "452e-5b5b-cdbc-c94a",
+      "name": "Kroot Hunting Pack",
+      "rules": [
+        "Hunter's Instincts",
+        "Skirmish Fighters"
+      ],
+      "enhancements": [
+        {
+          "id": "e72b-61f3-5e33-983f",
+          "name": "Nomadic Hunter",
+          "points": 20,
+          "description": "**^^Kroot Trail Shaper^^** model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by the models in that unit have the **[ASSAULT]** ability."
+        },
+        {
+          "id": "26d2-5d6-3735-e50d",
+          "name": "Borthrod Gland",
+          "points": 15,
+          "description": "**^^Kroot Flesh Shaper^^** only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+        },
+        {
+          "id": "9a57-b814-5b96-54f9",
+          "name": "Root-carved Weapons",
+          "points": 10,
+          "description": "**^^Kroot War Shaper^^** model only. All weapons equipped by the bearer have the **[PRECISION]** and **[DEVASTATING WOUNDS]** abilities."
+        },
+        {
+          "id": "56d3-d687-ee98-2b7",
+          "name": "Kroothawk Flock",
+          "points": 10,
+          "description": "**^^Kroot^^** model only. Ranged weapons equipped by models in the bearer's unit have the **[IGNORES COVER]** ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer."
+        }
+      ]
+    },
+    {
+      "id": "97bc-1349-fb9d-c04f",
+      "name": "Auxiliary Cadre",
+      "rules": [
+        "Integrated Command Structure"
+      ],
+      "enhancements": [
+        {
+          "id": "ded3-abf8-bdeb-fd8d",
+          "name": "Student of Kauyon",
+          "points": 20,
+          "description": "**KROOT SHAPER** model only. In the Declare Battle Formations step, you can select up to three friendly **KROOT CARNIVORES/FARSTALKERS** units. Those units have **Deep Strike**."
+        },
+        {
+          "id": "b7cd-d78c-d062-64f0",
+          "name": "Admired Leader",
+          "points": 20,
+          "description": "**T’AU EMPIRE** model only (excluding **KROOT** models). In your Command phase, you can select one **KROOT/VESPID STINGWINGS** unit within 12\" of this model. If you do, that unit has +1 **Ld** and **OC** until the start of your next Command phase."
+        }
+      ]
+    },
+    {
+      "id": "1520-c344-f4fe-b414",
+      "name": "Experimental Prototype Cadre",
+      "rules": [
+        "Superior Craftmanship"
+      ],
+      "enhancements": [
+        {
+          "id": "1184-c004-494b-642e",
+          "name": "Thermoneutronic Projector",
+          "points": 15,
+          "description": "**BATTLESUIT** model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have:\n- +2 **S**\n- +1 **AP** and **D**."
+        },
+        {
+          "id": "bc44-f33b-73bc-5ae5",
+          "name": "Plasma Accelerator Rifle",
+          "points": 20,
+          "description": "**BATTLESUIT** model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have:\n- +2 **S**\n- +1 **A**, **AP** and **D**."
+        },
+        {
+          "id": "8588-2b55-0468-0a97",
+          "name": "Supernova Launcher",
+          "points": 15,
+          "description": "**BATTLESUIT** model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have:\n- +3 **S**\n- +1 **AP** and **D**."
+        }
+      ]
+    },
+    {
+      "id": "deca-477c-ac30-a5ce",
+      "name": "Kroot Raiding Party",
+      "rules": [
+        "Guerrilla Ambushers",
+        "Forming Boarding Squads",
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions"
+      ],
+      "enhancements": [
+        {
+          "id": "21f6-2c59-c09d-0fcf",
+          "name": "Quill Marker",
+          "points": 0,
+          "description": "At the start of your Charge phase, select one enemy unit within 12\" of the bearer. Until the end of the phase, each time a **^^Kroot^^** unit from your army declares a charge, if it is within 6\" of that enemy unit, it can include that enemy unit as a target of that charge, even if it is not visible to it."
+        },
+        {
+          "id": "a3a2-0b54-ef8e-4345",
+          "name": "Experienced Leader",
+          "points": 0,
+          "description": "At the start of the first battle round, select one enemy unit on the battlefield. Until the end of the battle, each time a **^^Kroot^^** model from your army makes an attack that targets that enemy unit, if the bearer is on the battlefield, you can re-roll the Wound roll."
+        }
+      ]
+    },
+    {
+      "id": "7e3b-b9cf-5be0-8bc1",
+      "name": "Starfire Cadre",
+      "rules": [
+        "Rules Adaptions",
+        "Mustering A Boarding Patrol",
+        "Forming Boarding Squads",
+        "Markerlight Precision"
+      ],
+      "enhancements": [
+        {
+          "id": "06ff-66ff-308f-0a44",
+          "name": "Target Optimisation Microdrones",
+          "points": 0,
+          "description": "**^^Cadre Fireblade^^** model only. Once per turn, in your Shooting phase, when a friendly **^^Fire Warrior^^**, **^^Pathfinder Team^^** or **^^Cadre Fireblade^^** unit within 6\" of the bearer is selected to shoot, the bearer use this Enhancement. If it does, until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in that unit by 1."
+        },
+        {
+          "id": "f5a1-76c2-3de2-85e9",
+          "name": "Duty's Echo",
+          "points": 0,
+          "description": "**^^Ethereal^^** model only. At the end of your Shooting phase, you can select one friendly **^^Fire Warrior^^** or **^^Pathfinder Team^^** unit within 6\" of the bearer. If you do, that unit can make a Normal move of up to 3\" and then counts as having performed the Set Overwatch Tactical Manoeuvre this turn."
+        }
+      ]
+    },
+    {
+      "id": "4417-6fdc-a5d9-cdf7",
+      "name": "Advanced Acquisition Cadre",
+      "rules": [
+        "Expert Fieldcraft"
+      ],
+      "enhancements": [
+        {
+          "id": "ea6f-2de1-8db9-9a62",
+          "name": "Unmasking Suite",
+          "points": 15,
+          "description": "**GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS** unit only. When this unit is **selected to shoot**, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" **detection range** until this unit has shot."
+        },
+        {
+          "id": "9ceb-d88d-2e9c-d52a",
+          "name": "Negation Emitters",
+          "points": 15,
+          "description": "**STEALTH BATTLESUITS** unit only. This unit has -3\" **detection range**."
         }
       ]
     }
@@ -299,6 +471,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -443,7 +628,131 @@
           "description": "This model can be attached to the following units:\n- **CRISIS BATTLESUITS**\n- **CRISIS FIREKNIFE BATTLESUITS**\n- **CRISIS STARSCYTHE BATTLESUITS**\n- **CRISIS SUNFORGE BATTLESUITS**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Airbursting fragmentation projector",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**CRISIS BATTLESUITS**",
@@ -497,7 +806,131 @@
           "description": "This model can be attached to the following units:\n- **CRISIS BATTLESUITS**\n- **CRISIS FIREKNIFE BATTLESUITS**\n- **CRISIS STARSCYTHE BATTLESUITS**\n- **CRISIS SUNFORGE BATTLESUITS**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Airbursting fragmentation projector",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**CRISIS BATTLESUITS**",
@@ -562,6 +995,129 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Airbursting fragmentation projector",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": true,
@@ -619,7 +1175,57 @@
           "description": "This model can be attached to the following units:\n- **^^Breacher Team^^**\n- **^^Strike Team^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Fireblade pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Breacher Team^^**",
@@ -687,6 +1293,31 @@
           "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -905,6 +1536,17 @@
           "keywords": [
             "Assault"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -953,6 +1595,19 @@
       ],
       "weapons": [
         {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
           "name": "Railgun",
           "type": "Ranged",
           "range": "72\"",
@@ -992,6 +1647,55 @@
             "Blast",
             "Hazardous"
           ]
+        },
+        {
+          "name": "Accelerator burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1062,6 +1766,82 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Support turret",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1116,7 +1896,84 @@
           "description": "In your Movement phase, if this unit Remains Stationary, until the start of your next turn, its Shas’ui model is equipped with the support turret weapon.\n\nDesigner’s Note: Place a Support Turret token next to this unit to remind you."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Pulse blaster",
+          "type": "Ranged",
+          "range": "10\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Support turret",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1161,7 +2018,69 @@
           "description": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (e.g. you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kroot rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Tanglebomb launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Kroot carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kroot pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1204,6 +2123,19 @@
       ],
       "weapons": [
         {
+          "name": "Krootox fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
           "name": "Repeater cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1217,6 +2149,17 @@
           ]
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Tanglecannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1228,32 +2171,6 @@
           "keywords": [
             "Blast",
             "Heavy"
-          ]
-        },
-        {
-          "name": "Krootox fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Extra Attacks"
-          ]
-        },
-        {
-          "name": "Krootox fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Extra Attacks"
           ]
         }
       ],
@@ -1308,7 +2225,131 @@
           "description": "If a **^^Character^^** unit from your army with the Leader ability can be attached to a **^^Crisis Fireknife Battlesuit^^** unit, it can be attached to this unit instead."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Airbursting fragmentation projector",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1362,7 +2403,81 @@
           "description": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in a Guided unit that targets their Spotted unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1412,6 +2527,17 @@
       ],
       "weapons": [
         {
+          "name": "Ghostkeel fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Twin burst cannon",
           "type": "Ranged",
           "range": "18\"",
@@ -1421,6 +2547,35 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2",
             "Twin-linked"
           ]
         },
@@ -1460,17 +2615,6 @@
           "keywords": [
             "Hazardous"
           ]
-        },
-        {
-          "name": "Ghostkeel fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "5+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1516,6 +2660,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Longshot pulse rifles",
           "type": "Ranged",
           "range": "36\"",
@@ -1530,15 +2685,17 @@
           ]
         },
         {
-          "name": "Close combat weapons",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "5+",
-          "strength": 3,
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -1616,6 +2773,66 @@
       ],
       "weapons": [
         {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - EMP",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - fusion",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Ion rifle - standard",
           "type": "Ranged",
           "range": "30\"",
@@ -1665,6 +2882,31 @@
           "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1733,6 +2975,44 @@
           "keywords": [
             "Melta 4"
           ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked",
+            "Assault"
+          ]
         }
       ],
       "isLeader": false,
@@ -1780,6 +3060,44 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Stingwing claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Neutron blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
         {
           "name": "Neutron grenade launcher",
           "type": "Ranged",
@@ -1910,7 +3228,111 @@
           "description": "Models in this unit have the Feel No Pain 4+ ability against mortal wounds."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Heavy rail rifle",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Heavy",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "High-yield missile pods",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Crushing bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1956,6 +3378,17 @@
       ],
       "weapons": [
         {
+          "name": "Riptide fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Heavy burst cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1991,6 +3424,17 @@
           ]
         },
         {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Twin smart missile system",
           "type": "Ranged",
           "range": "30\"",
@@ -2005,15 +3449,31 @@
           ]
         },
         {
-          "name": "Riptide fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "5+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "2",
-          "keywords": []
+          "name": "Twin fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2100,6 +3560,30 @@
           ]
         },
         {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Accelerator burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin pulse carbine",
           "type": "Ranged",
           "range": "20\"",
@@ -2111,6 +3595,30 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2168,6 +3676,55 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Accelerator burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2213,7 +3770,70 @@
           "description": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Accelerator burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2282,6 +3902,52 @@
             "Hazardous",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Accelerator burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2365,6 +4031,41 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2608,6 +4309,17 @@
           ]
         },
         {
+          "name": "Thunderous footfalls",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Twin smart missile system",
           "type": "Ranged",
           "range": "30\"",
@@ -2693,15 +4405,19 @@
           ]
         },
         {
-          "name": "Thunderous footfalls",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "5+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
+          "name": "Twin T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2739,7 +4455,33 @@
         "NON-KROOT"
       ],
       "abilities": [],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "6+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2787,6 +4529,17 @@
       ],
       "weapons": [
         {
+          "name": "Ripping fangs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Farstalker firearm",
           "type": "Ranged",
           "range": "24\"",
@@ -2800,28 +4553,57 @@
           ]
         },
         {
-          "name": "T'au tech rifle",
+          "name": "Kroot pistol",
           "type": "Ranged",
-          "range": "30\"",
+          "range": "12\"",
           "attacks": "1",
           "skill": "4+",
-          "strength": 5,
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": [
-            "Rapid Fire 1"
+            "Pistol"
           ]
         },
         {
-          "name": "Ripping fangs",
+          "name": "Close combat weapon",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "3",
+          "attacks": "2",
           "skill": "3+",
-          "strength": 3,
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Dvorgite skinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Londaxi tribalest",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Heavy"
+          ]
         },
         {
           "name": "Ritual blade",
@@ -2833,6 +4615,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "T'au tech rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -2891,6 +4686,28 @@
           "keywords": [
             "Blast"
           ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2988,6 +4805,28 @@
             "Ignores Cover",
             "Torrent"
           ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3042,6 +4881,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -3087,6 +4939,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Remora seeker missile",
           "type": "Ranged",
           "range": "48\"",
@@ -3111,17 +4974,6 @@
           "keywords": [
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "5+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3173,6 +5025,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Crushing feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
         {
           "name": "➤ Tri-axis ion cannon - standard",
           "type": "Ranged",
@@ -3265,15 +5128,28 @@
           ]
         },
         {
-          "name": "Crushing feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "5+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire"
+          ]
         }
       ],
       "isLeader": false,
@@ -3358,11 +5234,83 @@
           ]
         },
         {
+          "name": "Swiftstrike railgun",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 20,
+          "armorPenetration": -5,
+          "damage": "D6+6",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
           "name": "Long-barrelled burst cannon",
           "type": "Ranged",
           "range": "24\"",
           "attacks": "8",
           "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
           "strength": 6,
           "armorPenetration": 0,
           "damage": "1",
@@ -3417,6 +5365,41 @@
       ],
       "weapons": [
         {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Ion cannon - standard",
           "type": "Ranged",
           "range": "60\"",
@@ -3455,6 +5438,32 @@
           "keywords": []
         },
         {
+          "name": "Swiftstrike railgun",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 20,
+          "armorPenetration": -5,
+          "damage": "D6+6",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
           "name": "Skyspear missile rack",
           "type": "Ranged",
           "range": "72\"",
@@ -3467,6 +5476,28 @@
             "Anti-Fly 3+",
             "Blast"
           ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3525,6 +5556,76 @@
             "Devastating Wounds",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - standard",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Cyclic ion blaster - overcharge",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3583,6 +5684,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Heavy rail cannon",
           "type": "Ranged",
           "range": "120\"",
@@ -3634,14 +5746,27 @@
           ]
         },
         {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "5+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -3694,6 +5819,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Long-barrelled burst cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -3705,14 +5841,14 @@
           "keywords": []
         },
         {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "5+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -3761,7 +5897,43 @@
           "description": "Once per turn, in your opponent’s Shooting phase, when a friendly T'AU EMPIRE unit within 6\" of this unit is selected as the target of an attack, one unit from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, the unit using this ability can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target)."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "6+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -3808,6 +5980,19 @@
       ],
       "weapons": [
         {
+          "name": "Great Knarloc beak and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
           "name": "Kroot bolt thrower",
           "type": "Ranged",
           "range": "12\"",
@@ -3834,6 +6019,17 @@
           ]
         },
         {
+          "name": "Kroot rifle (Melee)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin Kroot gun",
           "type": "Ranged",
           "range": "36\"",
@@ -3845,30 +6041,6 @@
           "keywords": [
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Great Knarloc beak and talons",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": [
-            "Extra Attacks"
-          ]
-        },
-        {
-          "name": "Kroot rifle (Melee)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3913,6 +6085,41 @@
       ],
       "weapons": [
         {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Rail rifle",
           "type": "Ranged",
           "range": "30\"",
@@ -3924,6 +6131,17 @@
           "keywords": [
             "Devastating Wounds"
           ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3962,19 +6180,6 @@
       "abilities": [],
       "weapons": [
         {
-          "name": "Kroot rifle (Ranged)",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
           "name": "Knarloc beak and talons",
           "type": "Melee",
           "range": "Melee",
@@ -3985,6 +6190,19 @@
           "damage": "1",
           "keywords": [
             "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Kroot rifle (Ranged)",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
           ]
         },
         {
@@ -4060,6 +6278,17 @@
       ],
       "weapons": [
         {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Experimental pulse submunitions rifle - EMP",
           "type": "Ranged",
           "range": "24\"",
@@ -4085,17 +6314,6 @@
           "keywords": [
             "Blast"
           ]
-        },
-        {
-          "name": "Battlesuit fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -4179,6 +6397,42 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4311,6 +6565,19 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Twin burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -4365,7 +6632,55 @@
           "description": "Each time a model in this unit makes a ranged attack, you can ignore any or all modifiers to the Hit roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -4418,7 +6733,69 @@
           "description": "The unit is eligible to shoot in a turn in which it Fell Back."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "T'au flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Twin pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Missile pod",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Battlesuit fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -4469,7 +6846,32 @@
           "description": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Kroot rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Shaper's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Kroot Carnivores^^**",
@@ -4519,7 +6921,60 @@
           "description": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Bladestave and prey-hook",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Dart-bow and tri-blade",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3+1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Shaper's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kroot pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Kroot Carnivores^^**",
@@ -4573,7 +7028,34 @@
           "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Twin ritualistic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Kroot scattergun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Kroot Carnivores^^**",
@@ -4645,6 +7127,47 @@
           "keywords": [
             "Lance"
           ]
+        },
+        {
+          "name": "Blast javelin",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Kroot long gun",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Kalamandra's bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
         }
       ],
       "isLeader": false,
@@ -4687,7 +7210,49 @@
           "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers D3 mortal wounds. If one or more enemy models are destroyed as a result of these mortal wounds, that enemy unit must take a Battle-shock test."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hunting blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Kroot pistol and hunting javelins",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Rampager fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -4734,7 +7299,463 @@
           "description": "This model can be attached to the following units:\n- **^^Breacher Team^^**\n- **^^Strike Team^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Kalamandra's bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Rampager fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy rail rifle",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "High-yield missile pods",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - overcharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Rail rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - EMP",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - fusion",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Twin plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Tanglebomb launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fireblade pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Kroot rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Blast javelin",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kroot carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kroot long gun",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Dart-bow and tri-blade",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3+1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Kroot scattergun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Londaxi tribalest",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse blaster",
+          "type": "Ranged",
+          "range": "10\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Dvorgite skinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol and hunting javelins",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Crushing bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Bladestave and prey-hook",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunting blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Shaper's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin ritualistic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Breacher Team^^**",
@@ -4786,7 +7807,463 @@
           "description": "This model can be attached to the following unit:\n- **^^Stealth Battlesuits^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Kalamandra's bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Rampager fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy rail rifle",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "High-yield missile pods",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - overcharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Rail rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - EMP",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - fusion",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Twin plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Tanglebomb launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fireblade pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Kroot rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Blast javelin",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kroot carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kroot long gun",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Dart-bow and tri-blade",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3+1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Kroot scattergun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Londaxi tribalest",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse blaster",
+          "type": "Ranged",
+          "range": "10\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Dvorgite skinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol and hunting javelins",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Crushing bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Bladestave and prey-hook",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunting blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Shaper's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin ritualistic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Stealth Battlesuits^^**"
@@ -4831,7 +8308,463 @@
           "description": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Kalamandra's bite",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Rampager fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy rail rifle",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "High-yield missile pods",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "➤ Ion rifle - overcharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse carbine",
+          "type": "Ranged",
+          "range": "20\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Rail rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Seeker missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - EMP",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Semi-automatic grenade launcher - fusion",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Twin plasma rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin smart missile system",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Indirect Fire",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Tanglebomb launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fireblade pulse rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Kroot rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Blast javelin",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Fusion blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Burst cannon",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kroot carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kroot long gun",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Dart-bow and tri-blade",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3+1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Kroot scattergun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Londaxi tribalest",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Pulse blaster",
+          "type": "Ranged",
+          "range": "10\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Dvorgite skinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Pulse pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol and hunting javelins",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Kroot pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Crushing bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Bladestave and prey-hook",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunting blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Lance"
+          ]
+        },
+        {
+          "name": "Shaper's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Twin ritualistic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Kroot Carnivores^^**",

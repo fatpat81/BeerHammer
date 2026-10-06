@@ -91,16 +91,108 @@ function parseAttachableUnits(leaderDescription) {
 
 // 1. First pass: Preload all catalogues into memory
 const loadedCatalogues = new Map();
+const globalProfileMap = new Map();
+const globalEntryMap = new Map();
+
+function indexCatalogue(node) {
+  if (!node || typeof node !== 'object') return;
+  if (node.id) {
+    if (node.profiles && Array.isArray(node.profiles)) {
+      for (const p of node.profiles) globalProfileMap.set(p.id, p);
+    }
+    if (node.typeName) {
+      globalProfileMap.set(node.id, node);
+    }
+    globalEntryMap.set(node.id, node);
+  }
+  for (const k of Object.keys(node)) {
+    if (Array.isArray(node[k])) {
+      for (const c of node[k]) indexCatalogue(c);
+    }
+  }
+}
+
 for (const file of files) {
   const filePath = path.join(bsDir, file);
   try {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     if (raw && raw.catalogue) {
       loadedCatalogues.set(file, raw.catalogue);
+      indexCatalogue(raw.catalogue);
     }
   } catch (err) {
     console.error(`Error loading ${file}:`, err.message);
   }
+}
+
+const whSystemPath = path.join(bsDir, 'Warhammer 40,000.json');
+if (fs.existsSync(whSystemPath)) {
+  try {
+    const rawSystem = JSON.parse(fs.readFileSync(whSystemPath, 'utf8'));
+    if (rawSystem.gameSystem) indexCatalogue(rawSystem.gameSystem);
+  } catch (e) {}
+}
+
+console.log(`Indexed ${globalProfileMap.size} profiles and ${globalEntryMap.size} entries across catalogues.`);
+
+// Helper to extract unit weapons by following entryLinks, infoLinks, and targetId
+function extractUnitWeapons(entry) {
+  const unitWeapons = [];
+  const seenWeapons = new Set();
+
+  function scanWeapons(node, visited = new Set()) {
+    if (!node || typeof node !== 'object' || visited.has(node)) return;
+    visited.add(node);
+
+    // Skip crusade or enhancements when finding standard unit wargear
+    if (/crusade|enhancement/i.test(node.name || '')) return;
+
+    if (node.targetId) {
+      const target = globalEntryMap.get(node.targetId) || globalProfileMap.get(node.targetId);
+      if (target) scanWeapons(target, visited);
+    }
+
+    if (node.profiles && Array.isArray(node.profiles)) {
+      for (const p of node.profiles) {
+        if (p.typeName === 'Ranged Weapons' || p.typeName === 'Melee Weapons') {
+          addWeapon(p);
+        }
+      }
+    }
+
+    if (node.typeName === 'Ranged Weapons' || node.typeName === 'Melee Weapons') {
+      addWeapon(node);
+    }
+
+    for (const key of ['selectionEntries', 'selectionEntryGroups', 'entryLinks', 'infoLinks']) {
+      if (node[key] && Array.isArray(node[key])) {
+        for (const child of node[key]) {
+          scanWeapons(child, visited);
+        }
+      }
+    }
+  }
+
+  function addWeapon(p) {
+    if (!p.name || seenWeapons.has(p.name)) return;
+    seenWeapons.add(p.name);
+    const chars = parseCharacteristics(p.characteristics);
+    const isRanged = p.typeName === 'Ranged Weapons';
+    unitWeapons.push({
+      name: p.name,
+      type: isRanged ? 'Ranged' : 'Melee',
+      range: chars.Range || (isRanged ? '24"' : 'Melee'),
+      attacks: chars.A || '1',
+      skill: (isRanged ? chars.BS : chars.WS) || '3+',
+      strength: parseInt(chars.S, 10) || 4,
+      armorPenetration: parseInt(chars.AP, 10) || 0,
+      damage: chars.D || '1',
+      keywords: (chars.Keywords || '').split(',').map(s => s.trim()).filter(Boolean)
+    });
+  }
+
+  scanWeapons(entry);
+  return unitWeapons;
 }
 
 // Helper to extract unit entries from a catalogue
@@ -138,33 +230,7 @@ function extractCatalogueDatasheets(cat, factionId, factionName) {
       if (ptCost && typeof ptCost.value === 'number') points = ptCost.value;
     }
 
-    const unitWeapons = [];
-    for (const w of extracted.rangedWeapons) {
-      unitWeapons.push({
-        name: w.name,
-        type: 'Ranged',
-        range: w.Range || '24"',
-        attacks: w.A || '1',
-        skill: w.BS || '3+',
-        strength: parseInt(w.S, 10) || 4,
-        armorPenetration: parseInt(w.AP, 10) || 0,
-        damage: w.D || '1',
-        keywords: (w.Keywords || '').split(',').map(s => s.trim()).filter(Boolean)
-      });
-    }
-    for (const w of extracted.meleeWeapons) {
-      unitWeapons.push({
-        name: w.name,
-        type: 'Melee',
-        range: 'Melee',
-        attacks: w.A || '1',
-        skill: w.WS || '3+',
-        strength: parseInt(w.S, 10) || 4,
-        armorPenetration: parseInt(w.AP, 10) || 0,
-        damage: w.D || '1',
-        keywords: (w.Keywords || '').split(',').map(s => s.trim()).filter(Boolean)
-      });
-    }
+    const unitWeapons = extractUnitWeapons(entry);
 
     // Check for Leader ability and attachable bodyguards
     const leaderAbility = extracted.abilities.find(a => a.name.toLowerCase() === 'leader');
@@ -199,84 +265,110 @@ function extractCatalogueDatasheets(cat, factionId, factionName) {
 }
 
 // Helper to extract detachments and enhancements
-function extractDetachmentsAndEnhancements(cat) {
+function extractDetachmentsAndEnhancements(cat, libCat = null) {
   const detachments = [];
-  const enhancementsByGroup = new Map();
+  const enhancementsList = [];
 
-  function scanNode(node) {
-    if (!node || typeof node !== 'object') return;
+  const catalogues = [cat, libCat].filter(Boolean);
 
-    // Scan for detachments
-    const isDet = (node.categoryLinks && node.categoryLinks.some(cl => /detachment/i.test(cl.name))) ||
-                  (node.type === 'upgrade' && /detachment|task force|spearhead|phalanx|host|cult/i.test(node.name || ''));
+  for (const c of catalogues) {
+    function scanDetAndEnh(node) {
+      if (!node || typeof node !== 'object') return;
 
-    if (isDet && node.name && !/enhancement/i.test(node.name)) {
-      const extracted = extractProfiles(node);
-      detachments.push({
-        id: node.id || sanitizeId(node.name),
-        name: node.name,
-        rules: extracted.rules.map(r => r.name),
-        enhancements: []
-      });
-    }
-
-    // Scan for enhancement groups
-    if (node.selectionEntryGroups && Array.isArray(node.selectionEntryGroups)) {
-      for (const g of node.selectionEntryGroups) {
-        if (/enhancement/i.test(g.name)) {
-          const list = [];
-          if (g.selectionEntries && Array.isArray(g.selectionEntries)) {
-            for (const e of g.selectionEntries) {
-              const ptCost = (e.costs || []).find(c => c.name === 'pts');
-              const extracted = extractProfiles(e);
-              const desc = extracted.abilities.map(a => a.description).join(' ') ||
-                           extracted.rules.map(r => r.description).join(' ');
-              list.push({
-                id: e.id || sanitizeId(e.name),
-                name: e.name,
-                points: ptCost ? ptCost.value : 0,
-                description: desc
-              });
+      for (const key of ['selectionEntryGroups', 'sharedSelectionEntryGroups']) {
+        if (node[key] && Array.isArray(node[key])) {
+          for (const g of node[key]) {
+            // Check for Detachment group
+            if (/^detachment/i.test(g.name)) {
+              for (const e of (g.selectionEntries || [])) {
+                // Must be an actual detachment, not 'Detachment' literally or 'None'
+                if (e.name && !/^detachment$/i.test(e.name.trim()) && e.name.toLowerCase() !== 'none') {
+                  const extracted = extractProfiles(e);
+                  detachments.push({
+                    id: e.id || sanitizeId(e.name),
+                    name: e.name,
+                    rules: extracted.rules.map(r => r.name),
+                    enhancements: []
+                  });
+                }
+              }
             }
+
+            // Check for Enhancements group
+            if (/enhancement/i.test(g.name)) {
+              const detPrefix = g.name.replace(/\s+Enhancements$/i, '').trim();
+              for (const e of (g.selectionEntries || [])) {
+                const ptCost = (e.costs || []).find(cost => cost.name === 'pts');
+                const extracted = extractProfiles(e);
+                const desc = extracted.abilities.map(a => a.description).join(' ') ||
+                             extracted.rules.map(r => r.description).join(' ');
+                enhancementsList.push({
+                  id: e.id || sanitizeId(e.name),
+                  name: e.name,
+                  points: ptCost ? ptCost.value : 0,
+                  description: desc,
+                  comment: e.comment || '',
+                  groupName: detPrefix,
+                  modifiers: e.modifiers || e.modifierGroups || []
+                });
+              }
+            }
+
+            scanDetAndEnh(g);
           }
-          if (list.length > 0) {
-            enhancementsByGroup.set(g.name.replace(/\s+Enhancements$/i, '').trim().toLowerCase(), list);
-          }
+        }
+      }
+
+      for (const key of ['sharedSelectionEntries', 'selectionEntries', 'entryLinks']) {
+        if (node[key] && Array.isArray(node[key])) {
+          for (const child of node[key]) scanDetAndEnh(child);
         }
       }
     }
 
-    for (const k of Object.keys(node)) {
-      if (Array.isArray(node[k])) {
-        for (const item of node[k]) scanNode(item);
-      }
-    }
-  }
-
-  scanNode(cat);
-
-  // Link enhancements to detachments
-  for (const det of detachments) {
-    const detKey = det.name.toLowerCase();
-    for (const [groupName, enhs] of enhancementsByGroup.entries()) {
-      if (detKey.includes(groupName) || groupName.includes(detKey)) {
-        det.enhancements = enhs;
-        break;
-      }
-    }
+    scanDetAndEnh(c);
   }
 
   // De-duplicate detachments by name
-  const unique = [];
-  const seen = new Set();
+  const uniqueDetachments = [];
+  const seenDet = new Set();
   for (const d of detachments) {
-    if (!seen.has(d.name)) {
-      seen.add(d.name);
-      unique.push(d);
+    if (!seenDet.has(d.name)) {
+      seenDet.add(d.name);
+      uniqueDetachments.push(d);
     }
   }
 
-  return unique;
+  // Map enhancements to each detachment
+  for (const det of uniqueDetachments) {
+    const detName = det.name.toLowerCase();
+    det.enhancements = enhancementsList.filter(enh => {
+      // 1. Check enhancement comment
+      if (enh.comment) {
+        const comm = enh.comment.toLowerCase();
+        if (detName.includes(comm) || comm.includes(detName)) return true;
+        const words = comm.split(/\s+/).filter(w => w.length > 3);
+        if (words.some(w => detName.includes(w))) return true;
+      }
+      // 2. Check groupName prefix
+      if (enh.groupName && !/^enhancement/i.test(enh.groupName)) {
+        const grp = enh.groupName.toLowerCase();
+        if (detName.includes(grp) || grp.includes(detName)) return true;
+      }
+      // 3. Check condition/modifier referencing det.id
+      if (enh.modifiers && JSON.stringify(enh.modifiers).includes(det.id)) {
+        return true;
+      }
+      return false;
+    }).map(e => ({
+      id: e.id,
+      name: e.name,
+      points: e.points,
+      description: e.description
+    }));
+  }
+
+  return uniqueDetachments;
 }
 
 // Major Playable Factions Configuration
@@ -455,6 +547,7 @@ const FACTION_DEFINITIONS = [
     name: 'Tyranids',
     grandAlliance: 'Xenos',
     primaryFile: 'Tyranids.json',
+    libraryFile: 'Library - Tyranids.json',
     subfactions: [
       { id: 'leviathan', name: 'Hive Fleet Leviathan' },
       { id: 'kraken', name: 'Hive Fleet Kraken' },
@@ -465,7 +558,8 @@ const FACTION_DEFINITIONS = [
     id: 'genestealer-cults',
     name: 'Genestealer Cults',
     grandAlliance: 'Xenos',
-    primaryFile: 'Genestealer Cults.json'
+    primaryFile: 'Genestealer Cults.json',
+    libraryFile: 'Library - Tyranids.json'
   },
   {
     id: 'orks',
@@ -568,9 +662,19 @@ for (const fDef of FACTION_DEFINITIONS) {
   }
 
   // Extract detachments and their enhancements (Q7=A)
-  let detachments = extractDetachmentsAndEnhancements(cat);
-  if (detachments.length === 0 && fDef.libraryFile && loadedCatalogues.has(fDef.libraryFile)) {
-    detachments = extractDetachmentsAndEnhancements(loadedCatalogues.get(fDef.libraryFile));
+  const libCat = fDef.libraryFile && loadedCatalogues.has(fDef.libraryFile) ? loadedCatalogues.get(fDef.libraryFile) : null;
+  let detachments = extractDetachmentsAndEnhancements(cat, libCat);
+
+  const gscDetNames = new Set([
+    'Host of Ascension', 'Xenocreed Congregation', 'Biosanctic Broodsurge',
+    'Outlander Claw', 'Brood Brother Auxilia', 'Final Day', 'Cult Unveiled',
+    'Genespawn Onslaught', 'Heroes of the Uprising', 'Purestrain Broodswarm', 'Xenocult Masses'
+  ]);
+
+  if (fDef.id === 'tyranids') {
+    detachments = detachments.filter(d => !gscDetNames.has(d.name));
+  } else if (fDef.id === 'genestealer-cults') {
+    detachments = detachments.filter(d => gscDetNames.has(d.name));
   }
 
   // Process subfactions (e.g. Space Marine chapters) (Q6=A)
@@ -582,7 +686,7 @@ for (const fDef of FACTION_DEFINITIONS) {
       if (sub.file && loadedCatalogues.has(sub.file)) {
         const subCat = loadedCatalogues.get(sub.file);
         subDatasheets = extractCatalogueDatasheets(subCat, sub.id, sub.name);
-        subDetachments = extractDetachmentsAndEnhancements(subCat);
+        subDetachments = extractDetachmentsAndEnhancements(subCat, cat);
       }
       processedSubfactions.push({
         id: sub.id,

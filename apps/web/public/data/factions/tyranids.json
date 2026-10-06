@@ -3,13 +3,374 @@
   "name": "Tyranids",
   "grandAlliance": "Xenos",
   "isLegends": false,
-  "totalDatasheets": 38,
+  "totalDatasheets": 55,
   "detachments": [
     {
-      "id": "bac9-a18e-5a8a-48d1",
-      "name": "Detachment",
-      "rules": [],
+      "id": "c2fe-bf23-bf24-aa43",
+      "name": "Invasion Fleet",
+      "rules": [
+        "Hyper Adaptions"
+      ],
+      "enhancements": [
+        {
+          "id": "1b44-a62d-8dcf-c9d9",
+          "name": "Alien Cunning",
+          "points": 30,
+          "description": "**^^Tyranids^^** model only. After both players have deployed their armies, select up to three **^^Tyranids^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "ae4f-4b00-7733-1cf2",
+          "name": "Perfectly Adapted",
+          "points": 15,
+          "description": "**^^Tyranids^^** model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer"
+        },
+        {
+          "id": "abdd-58fa-44ee-4fa0",
+          "name": "Synaptic Linchpin",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only. While a friendly **^^Tyranids^^** unit is within 9\" of the bearer, that unit is within Synapse Range of your army."
+        },
+        {
+          "id": "8036-cb7f-d252-2e2a",
+          "name": "Adaptive Biology",
+          "points": 25,
+          "description": "**^^Tyranids^^** model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead."
+        }
+      ]
+    },
+    {
+      "id": "bba-65f6-a4d1-66ae",
+      "name": "Assimilation Swarm",
+      "rules": [
+        "Feed the Swarm"
+      ],
+      "enhancements": [
+        {
+          "id": "1173-a18c-18fb-fac9",
+          "name": "Instinctive Defense",
+          "points": 15,
+          "description": "**TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention stratagem**, that use is ‑1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer's unit have the Fights First ability."
+        },
+        {
+          "id": "9785-ca88-1ecd-2d55",
+          "name": "Parasitic Biomorphology",
+          "points": 25,
+          "description": "**^^Tyranids^^** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more **^^Harvester^^** units, until the end of battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit."
+        },
+        {
+          "id": "9531-2e9e-5137-baff",
+          "name": "Regenerating Monstrosity",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only (excluding **^^Monsters^^** models) The bearer's unit can be regenerated up to twice per phase, instead of once."
+        },
+        {
+          "id": "a223-8758-335-7c21",
+          "name": "Biophagic Flow (Aura)",
+          "points": 10,
+          "description": "**^^Tyranids^^** model only. While a friendly **^^Harvester^^** model is within 12\" of the bearer, when using the Feed the Swarm ability, that **^^Harvester^^** model can Regenerate one friendly **^^Tyranids^^** unit that is within 9\" instead of one within 6\"."
+        }
+      ]
+    },
+    {
+      "id": "850e-bee1-4845-820d",
+      "name": "Crusher Stampede",
+      "rules": [
+        "Enraged Behemoths"
+      ],
+      "enhancements": [
+        {
+          "id": "131b-ff57-84bb-e87a",
+          "name": "Monstrous Nemesis",
+          "points": 25,
+          "description": "**^^Tyranids Monster^^** only. Each time the bearer makes a melee attack that targets a **^^Monster^^** or **^^Vehicle^^** unit, add 1 to the Wound roll."
+        },
+        {
+          "id": "a871-eedb-51f1-d830",
+          "name": "Null Nodules",
+          "points": 10,
+          "description": "**^^Tyranids Monster^^** only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks."
+        },
+        {
+          "id": "7a14-6c3f-a0e8-a8c7",
+          "name": "Ominous Presence",
+          "points": 15,
+          "description": "**^^Tyranids Monster^^** only. Add 3 to the bearer's Objective Control characteristic."
+        },
+        {
+          "id": "f96b-73b5-ee83-730c",
+          "name": "Enraged Reserves",
+          "points": 20,
+          "description": "**^^Tyranids Monster^^** only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+        }
+      ]
+    },
+    {
+      "id": "16ff-a068-4c31-285a",
+      "name": "Synaptic Nexus",
+      "rules": [
+        "Synaptic Imperitives"
+      ],
+      "enhancements": [
+        {
+          "id": "6fe4-d5e5-26c-449a",
+          "name": "Psychostatic Disruption (Aura)",
+          "points": 30,
+          "description": "**^^Tyranids Synapse^^** model only. Enemy units that arrive on the battlefield from Reserves cannot be set up with 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this enhancement. If it does, roll one D6: on a 4+, that enemy cannot arrive on the battlefield this turn."
+        },
+        {
+          "id": "3701-5586-1d17-d3e1",
+          "name": "Synaptic Control",
+          "points": 20,
+          "description": "**^^Tyranids Synapse^^** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of the attack."
+        },
+        {
+          "id": "d30d-70a1-48b0-7d7d",
+          "name": "The Dirgeheart of Kharis (Aura)",
+          "points": 15,
+          "description": "**^^Tyranids Synapse^^** model only. While an enemy unit is within 9\" of the bearer, worsen that unit's Leadership characteristic by 1."
+        },
+        {
+          "id": "84e3-612f-dc55-695e",
+          "name": "Power of the Hive Mind",
+          "points": 10,
+          "description": "**^^Tyranids Psyker^^** model only. Improve the Strength and Armour Penetration characteristic of psychic weapons equipped by the wearer of 1."
+        }
+      ]
+    },
+    {
+      "id": "4cd9-313f-cd9b-c85a",
+      "name": "Unending Swarm",
+      "rules": [
+        "Insurmountable Odds"
+      ],
+      "enhancements": [
+        {
+          "id": "ab34-ffd7-199d-5b79",
+          "name": "Naturalised Camoflage",
+          "points": 30,
+          "description": "**^^Tyranids^^** model only. At the start of the first battle round, select up to three friendly **^^Endless Multitude^^** units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack."
+        },
+        {
+          "id": "566a-5414-3e51-8d1d",
+          "name": "Piercing Talons",
+          "points": 25,
+          "description": "**^^Tyranids^^** model only. Each time a model in the Bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "93a9-67ca-3da4-f741",
+          "name": "Relentless Hunger",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only. Add 2\" to the Move characteristic of models in the bearer's unit."
+        },
+        {
+          "id": "d597-c1dc-494d-271d",
+          "name": "Adrenalised Onslaught",
+          "points": 15,
+          "description": "**^^Tyranids^^** model only. Each time the bearer's unit makes a Pile In or Consolidation, models in this unit can move an additional 3\""
+        }
+      ]
+    },
+    {
+      "id": "f773-f91c-2999-c7e1",
+      "name": "Vanguard Onslaught",
+      "rules": [
+        "Vanguard Prime",
+        "Questing Tendrils"
+      ],
+      "enhancements": [
+        {
+          "id": "b119-9e54-236-21ef",
+          "name": "Hunting Grounds",
+          "points": 30,
+          "description": "**^^Tyranids^^** model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+ that unit must make a Battle-shock test."
+        },
+        {
+          "id": "9902-e31e-b3e6-b7ab",
+          "name": "Neuronode",
+          "points": 20,
+          "description": "**TYRANIDS** model only. After both players have deployed their armies, you can select up to three **VANGUARD INVADER** units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "c38c-8aa3-738b-382c",
+          "name": "Stalker",
+          "points": 10,
+          "description": "**^^Vanguard Invader^^** model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and Wound roll."
+        },
+        {
+          "id": "2b0d-6060-7697-47a0",
+          "name": "Chameleonic",
+          "points": 15,
+          "description": "**VANGUARD INVADER** model only. This unit has **Stealth**."
+        }
+      ]
+    },
+    {
+      "id": "7416-b7cc-fdbf-5bf0",
+      "name": "Warrior Bioform Onslaught",
+      "rules": [
+        "Leader-beasts"
+      ],
+      "enhancements": [
+        {
+          "id": "b4ec-aafc-1bc1-c75a",
+          "name": "Elevated Might",
+          "points": 30,
+          "description": "**WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP** model only. This model’s melee attacks:\n- Can re‑roll **wound rolls**.\n- Have +1 **AP**."
+        },
+        {
+          "id": "2670-661d-34d7-d135",
+          "name": "Ocular Adaptation",
+          "points": 20,
+          "description": "**WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP** model only. This unit’s melee attacks have +1 to **hit rolls**."
+        }
+      ]
+    },
+    {
+      "id": "731f-1524-da02-945b",
+      "name": "Subterranean Assault",
+      "rules": [
+        "Keywords",
+        "Surprise Assault"
+      ],
+      "enhancements": [
+        {
+          "id": "f4a3-f457-328f-582b",
+          "name": "Vanguard Intellect",
+          "points": 15,
+          "description": "**^^Tyranids^^** model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        },
+        {
+          "id": "fe84-1d81-827d-7473",
+          "name": "Trygon Prime",
+          "points": 20,
+          "description": "**^^Trygon^^** model only. The bearer gains the **^^Synapse^^** keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
+        },
+        {
+          "id": "4632-bb29-3e38-bb30",
+          "name": "Synaptic Synergy",
+          "points": 15,
+          "description": "**^^Tyranids^^** model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+          "id": "6bbb-ce96-9443-1f1d",
+          "name": "Tremor Senses",
+          "points": 20,
+          "description": "**^^Tyranids^^** model only. After both players have deployed their armies, select up to three friendly **^^Tyranids^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        }
+      ]
+    },
+    {
+      "id": "0f40-fb6c-49f7-9541",
+      "name": "Tyranid Attack",
+      "rules": [
+        "Forming Boarding Squads",
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Xeno-Terror"
+      ],
+      "enhancements": [
+        {
+          "id": "7d8c-eb0a-a42e-3e6b",
+          "name": "Reinforced Carapace",
+          "points": 0,
+          "description": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (note that if given to a Tyranid Prime model, this only affects that model and not other models in its unit)."
+        },
+        {
+          "id": "84f8-855d-96eb-0afa",
+          "name": "Synaptic Goad",
+          "points": 0,
+          "description": "In your Command phase, select one friendly **^^Tyranid Warriors with Melee Bio-weapons^^** or **^^Tyranid Warriors with Ranged Bio-weapons^^** unit within 6\" of the bearer. Until the end of the turn, add 2\" to the Move characteristic of models in that unit."
+        }
+      ]
+    },
+    {
+      "id": "7a6f-7334-fa6c-290e",
+      "name": "Boarding Swarm",
+      "rules": [
+        "Forming Boarding Squads",
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Priority Predation"
+      ],
       "enhancements": []
+    },
+    {
+      "id": "cbfd-453f-6288-6157",
+      "name": "Biotide",
+      "rules": [
+        "Forming Boarding Squads",
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Unstoppable Swarm"
+      ],
+      "enhancements": [
+        {
+          "id": "bae9-a3ed-7437-5c9b",
+          "name": "Synaptic Beacon",
+          "points": 0,
+          "description": "While a friendly **^^Tyranids^^** unit is within 9\" of the bearer (ignoring Walls and closed Hatchways), that unit is within Synapse Range of the bearer and of your army."
+        },
+        {
+          "id": "909e-b90f-de9d-4aca",
+          "name": "Hypersurge Gland",
+          "points": 0,
+          "description": "Once per battle, at the end of your opponent's Charge phase, the bearer can use this Enhancement. If it does, it can declare a charge as if it were your Charge phase."
+        },
+        {
+          "id": "8f01-371b-ea62-40fc",
+          "name": "Psi-spoor Sensitivity",
+          "points": 0,
+          "description": "Each time the bearer declares a charge, it can target enemy units that are not visible to it."
+        },
+        {
+          "id": "916b-b065-5189-7ee6",
+          "name": "Stalking Menace",
+          "points": 0,
+          "description": "Once per battle, at the end of your opponent's Fight phase, if the bearer is not within Engagement Range of one or more enemy units, it can use this Enhancement. If it does, remove the bearer from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase as if it had the Deep Strike ability. If this is not possible, the bearer is destroyed. When the bearer is set back up on the battlefield, until the end of the turn, it cannot declare a charge."
+        }
+      ]
+    },
+    {
+      "id": "cf1b-eb18-c465-27a5",
+      "name": "Ambush Predators",
+      "rules": [
+        "Mindhunger"
+      ],
+      "enhancements": [
+        {
+          "id": "adec-a011-9920-9f17",
+          "name": "Encircling Horrors",
+          "points": 20,
+          "description": "**NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS** unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a **normal move** of up to D3+3\"."
+        },
+        {
+          "id": "b463-67bb-f9d1-2ce8",
+          "name": "Cryptophotaic Camouflage",
+          "points": 15,
+          "description": "**VON RYAN’S LEAPERS** unit only. This unit has ‑3\" **detection range**."
+        }
+      ]
+    },
+    {
+      "id": "8d8b-a030-83d5-f4e6",
+      "name": "Talons of the Norn Queen",
+      "rules": [
+        "Higher Imperatives"
+      ],
+      "enhancements": [
+        {
+          "id": "a336-1346-0281-b4b2",
+          "name": "Destabilising Predation",
+          "points": 20,
+          "description": "**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI‑CHARACTER 2+]**."
+        },
+        {
+          "id": "d40a-c9a6-74d5-288d",
+          "name": "Synaptoprescience",
+          "points": 30,
+          "description": "**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -200,6 +561,17 @@
           "armorPenetration": -3,
           "damage": "D6+1",
           "keywords": []
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -262,6 +634,19 @@
       ],
       "weapons": [
         {
+          "name": "Bone Sabres",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
           "name": "Synaptic Pulse",
           "type": "Ranged",
           "range": "18\"",
@@ -273,19 +658,6 @@
           "keywords": [
             "Psychic",
             "Torrent"
-          ]
-        },
-        {
-          "name": "Bone Sabres",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "Twin-linked"
           ]
         }
       ],
@@ -483,7 +855,82 @@
           "description": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Deathspitter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Spinefists",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Barbed strangler",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Devourer",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Tyranid Warrior claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -530,7 +977,21 @@
           "description": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 **S**.\n▪ <ins>Or</ins>: This unit has +1 **T**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Tyranid Warrior claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -629,19 +1090,6 @@
         }
       ],
       "weapons": [
-        {
-          "name": "Massive toxic lashes",
-          "type": "Ranged",
-          "range": "9\"",
-          "attacks": "2D6",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Anti-infantry 2+"
-          ]
-        },
         {
           "name": "Massive toxic lashes",
           "type": "Melee",
@@ -800,6 +1248,21 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Psychic scream",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": true,
@@ -870,6 +1333,20 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Psychic overload",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
         }
       ],
       "isLeader": false,
@@ -927,6 +1404,17 @@
             "Torrent",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Chitin-barbed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -995,6 +1483,17 @@
           "keywords": [
             "Extra Attacks"
           ]
+        },
+        {
+          "name": "Ravenous maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1097,7 +1596,19 @@
           "description": "While this unit is within Synapse Range of your friendly **^^Tyranids^^** unit (excluding **^^Neurogaunt^^** units), it has the **^^Synapse^^** keyword."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Chitinous claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1219,6 +1730,17 @@
             "Heavy",
             "Indirect Fire"
           ]
+        },
+        {
+          "name": "Chitin-barbed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1262,6 +1784,17 @@
       ],
       "weapons": [
         {
+          "name": "Chitinous claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bio-plasma",
           "type": "Ranged",
           "range": "12\"",
@@ -1289,6 +1822,50 @@
           ]
         },
         {
+          "name": "Carnifex scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Deathspitters with slimer maggots",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourers with brainleech worms",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "12",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Carnifex crushing claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
           "name": "Heavy venom cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1313,28 +1890,6 @@
           "keywords": [
             "Blast"
           ]
-        },
-        {
-          "name": "Chitinous claws and teeth",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Carnifex scything talons",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         },
         {
           "name": "Carnifex extra scything talons",
@@ -1475,6 +2030,17 @@
           ]
         },
         {
+          "name": "Chitinous claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Impaler cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1530,6 +2096,17 @@
       ],
       "weapons": [
         {
+          "name": "Powerful limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Rupture cannon",
           "type": "Ranged",
           "range": "48\"",
@@ -1543,14 +2120,42 @@
           ]
         },
         {
-          "name": "Powerful limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
+          "name": "Fleshborer hive",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
           "skill": "3+",
-          "strength": 8,
+          "strength": 5,
           "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Acid spray",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
           "damage": "2",
+          "keywords": [
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ],
@@ -1637,6 +2242,28 @@
             "Anti-fly 2+",
             "Extra Attacks"
           ]
+        },
+        {
+          "name": "Scything wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1709,6 +2336,28 @@
             "Blast",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Scything wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1756,6 +2405,17 @@
       ],
       "weapons": [
         {
+          "name": "Flensing whips",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Sporocyst bio-weapon",
           "type": "Ranged",
           "range": "24\"",
@@ -1767,17 +2427,6 @@
           "keywords": [
             "Hive Defences"
           ]
-        },
-        {
-          "name": "Flensing whips",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1838,6 +2487,20 @@
           "keywords": [
             "Anti-Psyker 4+",
             "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Psychoclastic torrent",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
           ]
         }
       ],
@@ -2368,6 +3031,19 @@
       ],
       "weapons": [
         {
+          "name": "Claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
           "name": "Spinemaws",
           "type": "Ranged",
           "range": "6\"",
@@ -2378,32 +3054,6 @@
           "damage": "1",
           "keywords": [
             "Pistol"
-          ]
-        },
-        {
-          "name": "Claws and teeth",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Claws and teeth",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Sustained Hits 1"
           ]
         }
       ],
@@ -2516,19 +3166,6 @@
       ],
       "weapons": [
         {
-          "name": "Toxinjecter Harpoon",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -3,
-          "damage": "D6+1",
-          "keywords": [
-            "Harpooned"
-          ]
-        },
-        {
           "name": "Monstrous scything talons",
           "type": "Melee",
           "range": "Melee",
@@ -2592,6 +3229,30 @@
       "abilities": [],
       "weapons": [
         {
+          "name": "Monstrous rending claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Psychic tendril - neuroparasite",
           "type": "Ranged",
           "range": "18\"",
@@ -2632,30 +3293,6 @@
             "Blast",
             "Psychic"
           ]
-        },
-        {
-          "name": "Monstrous rending claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Extra Attacks"
-          ]
-        },
-        {
-          "name": "Monstrous scything talons",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2706,7 +3343,60 @@
           "description": "This model can be attached to the following unit:\n- **^^Tyrant Guard^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Monstrous bonesword and lash whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Heavy venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Stranglethorn cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Tyrant Guard^^**"
@@ -2803,6 +3493,2393 @@
         "**^^Tyranid Warriors with Melee Bio-weapons^^**",
         "**^^Tyranid Warriors with Ranged Bio-weapons^^**"
       ]
+    },
+    {
+      "id": "fa68-fcb9-38c-cd0f",
+      "name": "Winged Hive Tyrant",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 185,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 9,
+        "save": "2+",
+        "invulnerableSave": "4+",
+        "wounds": 10,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Winged Hive Tyrant",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MONSTER",
+        "CHARACTER",
+        "PSYKER",
+        "WINGED HIVE TYRANT",
+        "FACTION: TYRANIDS",
+        "GREAT DEVOURER",
+        "FLY",
+        "SYNAPSE",
+        "VANGUARD INVADER",
+        "HIVE TYRANT"
+      ],
+      "abilities": [
+        {
+          "name": "Paroxysm (Psychic)",
+          "description": "At the start of the Fight phase, you can select one enemy unit within 12\" of and visible to this model and roll one D6: on a 1, this Psyker suffers D3 mortal wounds; on a 2+, until the end of the phase, subtract 1 from the Attacks characteristic of weapons equipped by models in that unit."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Tyrant talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Stranglethorn cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Heavy venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Monstrous bonesword and lash whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "507d-5ea4-6ef1-bf66",
+      "name": "Winged Tyranid Prime",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 65,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "4+",
+        "wounds": 6,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Winged Tyranid Prime",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "WINGED TYRANID PRIME",
+        "CHARACTER",
+        "INFANTRY",
+        "FLY",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "SYNAPSE",
+        "VANGUARD INVADER",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Alpha Warrior",
+          "description": "While this model is leading a unit, weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability."
+        },
+        {
+          "name": "Death Blow",
+          "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **^^Gargoyles^^**\n- **^^Tyranid Warriors With Melee Bio-Weapons^^**\n- **^^Tyranid Warriors With Ranged Bio-Weapons^^**"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Prime talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Gargoyles^^**",
+        "**^^Tyranid Warriors With Melee Bio-Weapons^^**",
+        "**^^Tyranid Warriors With Ranged Bio-Weapons^^**"
+      ]
+    },
+    {
+      "id": "bc36-92fe-ecc6-58b3",
+      "name": "Deathleaper",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 6,
+        "save": "3+",
+        "invulnerableSave": "4+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Deathleaper",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "EPIC HERO",
+        "FACTION: TYRANIDS",
+        "CHARACTER",
+        "GREAT DEVOURER",
+        "DEATHLEAPER",
+        "INFANTRY",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Fear of the Unseen (Aura)",
+          "description": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent’s Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test."
+        },
+        {
+          "name": "Hunter Organism",
+          "description": "This model cannot be your Warlord"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Lictor claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "9ce8-7a63-15c3-0347",
+      "name": "Gargoyles",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "BATTLELINE",
+      "basePoints": 75,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 3,
+        "save": "6+",
+        "wounds": 1,
+        "leadership": "8+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Gargoyles",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "BATTLELINE",
+        "INFANTRY",
+        "FLY",
+        "GARGOYLES",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "ENDLESS MULTITUDE",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Winged Swarm",
+          "description": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Blinding venom",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Fleshborer",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "c10d-772e-a54f-a2b9",
+      "name": "Hyperadapted Raveners",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 165,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 5,
+        "save": "4+",
+        "wounds": 6,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Ravener Prime",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Ravener",
+            "baseSize": "32mm",
+            "count": 1
+          },
+          {
+            "name": "Ravener",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GREAT DEVOURER",
+        "VANGUARD INVADER",
+        "BURROWERS",
+        "HYPERADAPTED RAVENERS",
+        "FACTION: TYRANIDS",
+        "CHARACTER",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Alpha Invader",
+          "description": "Weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+        },
+        {
+          "name": "Hypersensory Array",
+          "description": "Once per battle round, you can target this unit with the **Rapid Ingress/Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
+        },
+        {
+          "name": "Leader",
+          "description": "This unit can be attached to the following units: **^^Raveners^^**"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Prime claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 5+",
+            "Anti-Vehicle 5+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Ravener heavy claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 5+",
+            "Anti-Vehicle 5+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Venom bolt",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6+3",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "This unit can be attached to the following units: **^^Raveners^^**"
+      ]
+    },
+    {
+      "id": "da44-72c9-7a27-48aa",
+      "name": "Lictor",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 60,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 6,
+        "save": "4+",
+        "wounds": 6,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Lictor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GREAT DEVOURER",
+        "LICTOR",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Pheromone Trail",
+          "description": "Once per battle round, you can target one model with this ability with the Rapid Ingress Stratagem for 0CP."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Lictor claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "2bbb-d811-15f7-1a81",
+      "name": "Mawloc",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "MONSTER",
+      "basePoints": 130,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 14,
+        "leadership": "8+",
+        "objectiveControl": 4
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Mawloc",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "MAWLOC",
+        "MONSTER",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Terror from the Deep",
+          "description": "Each time this unit is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Distendible jaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Anti-infantry 4+",
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Mawloc scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "642f-9302-4fdc-ab68",
+      "name": "Neurolictor",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 80,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 5,
+        "save": "4+",
+        "invulnerableSave": "4+",
+        "wounds": 7,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Neurolictor",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GREAT DEVOURER",
+        "NEUROLICTOR",
+        "VANGUARD INVADER",
+        "FACTION: TYRANIDS",
+        "SYNAPSE"
+      ],
+      "abilities": [
+        {
+          "name": "Feeder Tendrils",
+          "description": "Each time this model destroys an enemy CHARACTER model, you gain 1CP"
+        },
+        {
+          "name": "Neural Disruption",
+          "description": "In your Command phase, select one enemy unit within 12\" of this model. That unit must take a Battle-shock test"
+        },
+        {
+          "name": "Psychological Saboteur (Aura)",
+          "description": "While an enemy unit is with 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Piercing claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "d213-efd8-a2b4-42d2",
+      "name": "Parasite of Mortrex",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 65,
+      "stats": {
+        "movement": "12\"",
+        "toughness": 5,
+        "save": "4+",
+        "wounds": 5,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Parasite of Mortrex",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "PARASITE OF MORTREX",
+        "CHARACTER",
+        "FLY",
+        "GREAT DEVOURER",
+        "INFANTRY",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER",
+        "SYNAPSE"
+      ],
+      "abilities": [
+        {
+          "name": "Parasitic Infection",
+          "description": "Each time an **^^Infantry^^** model is destroyed by an attack made with this model’s barbed ovipositor, after this model has finished making its attacks, you can add one new **^^Ripper Swarms^^** unit to your army consisting of D3 models and set it up within 3\" of this model. If you do, that **^^Ripper Swarms^^** unit can be set up within Engagement Range of the destroyed model’s unit (but not within Engagement Range of any other enemy units)."
+        },
+        {
+          "name": "It Itches!",
+          "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. That enemy unit must take a Battle-shock test."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Barbed ovipositor",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-infantry 3+",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "3f5-f7d6-1ce8-e6b9",
+      "name": "Raveners",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 125,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 5,
+        "save": "4+",
+        "wounds": 3,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Raveners",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "FACTION: TYRANIDS",
+        "INFANTRY",
+        "GREAT DEVOURER",
+        "RAVENERS",
+        "VANGUARD INVADER",
+        "BURROWERS"
+      ],
+      "abilities": [
+        {
+          "name": "Death From Below",
+          "description": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Ravener claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "56db-d7c-b349-677f",
+      "name": "Trygon",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "MONSTER",
+      "basePoints": 135,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 14,
+        "leadership": "8+",
+        "objectiveControl": 4
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Trygon",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "TRYGON",
+        "MONSTER",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Subterranean Tunnels",
+          "description": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Trygon scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Bio-electric pulse",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "fada-677a-f6a4-cd12",
+      "name": "Tyrannocyte",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "DEDICATED_TRANSPORT",
+      "basePoints": 80,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "3+",
+        "wounds": 10,
+        "leadership": "8+",
+        "objectiveControl": 2
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Tyrannocyte",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "DEDICATED TRANSPORT",
+        "TRANSPORT",
+        "MONSTER",
+        "FLY",
+        "GREAT DEVOURER",
+        "TYRANNOCYTE",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Aerial Seeding",
+          "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Flensing Whips",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Tyrannocyte Bio-weapons",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "9bd8-ac8c-2d3b-79f6",
+      "name": "Von Ryan's Leapers",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "INFANTRY",
+      "basePoints": 55,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 5,
+        "save": "4+",
+        "invulnerableSave": "6+",
+        "wounds": 3,
+        "leadership": "8+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Von Ryan's Leaper",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "INFANTRY",
+        "GREAT DEVOURER",
+        "VON RYAN'S LEAPERS",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER"
+      ],
+      "abilities": [
+        {
+          "name": "Pouncing Leap",
+          "description": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n▪ That use is ‑1 CP.\n▪ That use does not prevent any uses of that **stratagem** on other units this phase."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Leaper's talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "527c-d3c6-c620-c7c6",
+      "name": "Node Organism [Crucible]",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 80,
+      "stats": {
+        "movement": "6\"",
+        "toughness": 5,
+        "save": "4+",
+        "wounds": 6,
+        "leadership": "7+",
+        "objectiveControl": 1
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Node Organism",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "INFANTRY",
+        "CRUCIBLE",
+        "GREAT DEVOURER",
+        "SYNAPSE",
+        "FACTION: TYRANIDS",
+        "NODE ORGANISM",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Alpha Warrior",
+          "description": "While this model is leading a unit, weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **^^Tyranid Warriors with Melee Bio-weapons^^**\n- **^^Tyranid Warriors with Ranged Bio-weapons^^**"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Barbed strangler",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasma",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasmic cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Deathspitter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathspitters with slimer maggots",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourer",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourers with brainleech worms",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Spine banks",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Spinefists",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Stranglethorn cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Thoracic bio-weapon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Rupture cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -4,
+          "damage": "2D6",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Acid spray",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Bio-electric pulse",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Fleshborer hive",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Psychic overload",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Psychic scream",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Psychoclastic torrent",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Crushing claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Monster-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Piercing claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Ravener claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Tyrant-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Warrior-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Monstrous bonesword and lash whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Ravenous maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Tyranid Warriors with Melee Bio-weapons^^**",
+        "**^^Tyranid Warriors with Ranged Bio-weapons^^**"
+      ]
+    },
+    {
+      "id": "6f46-0c77-acd0-3f5d",
+      "name": "Prime Organism [Crucible]",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 135,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 9,
+        "save": "2+",
+        "wounds": 9,
+        "leadership": "7+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Prime Organism",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "CRUCIBLE",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "MONSTER",
+        "PRIME ORGANISM",
+        "LEADER"
+      ],
+      "abilities": [
+        {
+          "name": "Monstrous Barrage",
+          "description": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+        },
+        {
+          "name": "Leader",
+          "description": "This model can be attached to the following units:\n- **^^Carnifexes^^**\n- **^^Tyrant Guard^^**"
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Barbed strangler",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasma",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasmic cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Deathspitter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathspitters with slimer maggots",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourer",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourers with brainleech worms",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Spine banks",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Spinefists",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Stranglethorn cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Thoracic bio-weapon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Rupture cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -4,
+          "damage": "2D6",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Acid spray",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Bio-electric pulse",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Fleshborer hive",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Psychic overload",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Psychic scream",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Psychoclastic torrent",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Crushing claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Monster-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Piercing claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Ravener claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Tyrant-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Warrior-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Monstrous bonesword and lash whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Ravenous maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": true,
+      "attachableTo": [
+        "**^^Carnifexes^^**",
+        "**^^Tyrant Guard^^**"
+      ]
+    },
+    {
+      "id": "a89f-8ad1-3d79-174f",
+      "name": "Macro Organism [Crucible]",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 150,
+      "stats": {
+        "movement": "8\"",
+        "toughness": 10,
+        "save": "3+",
+        "wounds": 14,
+        "leadership": "8+",
+        "objectiveControl": 4
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "Macro Organism",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "CRUCIBLE",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "MONSTER",
+        "MACRO ORGANISM"
+      ],
+      "abilities": [
+        {
+          "name": "Unstoppable Monstrosity",
+          "description": "At the start of each player's Command phase, this model regains up to D3 lost wounds."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Barbed strangler",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasma",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bio-plasmic cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Deathspitter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deathspitters with slimer maggots",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourer",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Devourers with brainleech worms",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Spine banks",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Spinefists",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Stranglethorn cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Thoracic bio-weapon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Venom cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Rupture cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -4,
+          "damage": "2D6",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Acid spray",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Bio-electric pulse",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Fleshborer hive",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Psychic overload",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Psychic scream",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Psychoclastic torrent",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Stinger salvoes",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Crushing claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Massive scything talons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Monster-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Piercing claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Ravener claws and talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Tyrant-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Warrior-beast weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Monstrous scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Monstrous bonesword and lash whip",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Ravenous maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "14",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
+    },
+    {
+      "id": "7173-1bd9-b60b-6555",
+      "name": "The Red Terror",
+      "factionId": "tyranids",
+      "factionName": "Tyranids",
+      "battlefieldRole": "CHARACTER",
+      "basePoints": 120,
+      "stats": {
+        "movement": "10\"",
+        "toughness": 8,
+        "save": "3+",
+        "wounds": 9,
+        "leadership": "8+",
+        "objectiveControl": 3
+      },
+      "unitComposition": {
+        "models": [
+          {
+            "name": "The Red Terror",
+            "baseSize": "32mm",
+            "count": 1
+          }
+        ]
+      },
+      "keywords": [
+        "CHARACTER",
+        "GREAT DEVOURER",
+        "FACTION: TYRANIDS",
+        "VANGUARD INVADER",
+        "EPIC HERO",
+        "MONSTER",
+        "THE RED TERROR",
+        "BURROWERS",
+        "MOBILE"
+      ],
+      "abilities": [
+        {
+          "name": "Swallow Whole",
+          "description": "Each time an attack with this model’s gaping maw targets an **^^Infantry^^**, **^^Mounted^^** or **^^Beasts^^** unit, each successful unmodified Wound roll is a Critical Wound. Each time an **^^Infantry^^**, **^^Mounted^^** or **^^Beasts^^** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
+        },
+        {
+          "name": "Subterranean Hunter",
+          "description": "At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Gaping maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "D3+2",
+          "keywords": [
+            "Extra Attacks",
+            "Devastating Wounds",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Scything talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
+      "isLeader": false,
+      "attachableTo": []
     }
   ]
 }

@@ -144,6 +144,17 @@
       ],
       "weapons": [
         {
+          "name": "Warhound feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Warhound vulcan mega-bolter",
           "type": "Ranged",
           "range": "48\"",
@@ -209,17 +220,6 @@
           "keywords": [
             "Blast"
           ]
-        },
-        {
-          "name": "Warhound feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "4+",
-          "strength": 10,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -273,6 +273,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Reaver feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "4",
+          "keywords": []
+        },
         {
           "name": "Reaver apocalypse launcher",
           "type": "Ranged",
@@ -340,17 +351,6 @@
             "Blast",
             "Heavy"
           ]
-        },
-        {
-          "name": "Reaver feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "4",
-          "keywords": []
         },
         {
           "name": "➤ Reaver power fist - strike",
@@ -455,6 +455,17 @@
           "keywords": []
         },
         {
+          "name": "Nemesis feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "4",
+          "keywords": []
+        },
+        {
           "name": "Nemesis quake cannon",
           "type": "Ranged",
           "range": "480\"",
@@ -534,17 +545,6 @@
             "Blast",
             "Heavy"
           ]
-        },
-        {
-          "name": "Nemesis feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "4",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -621,6 +621,17 @@
           "keywords": []
         },
         {
+          "name": "Warlord feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "4",
+          "keywords": []
+        },
+        {
           "name": "Arioch power claw",
           "type": "Ranged",
           "range": "48\"",
@@ -632,6 +643,28 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "➤ Arioch power claw - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 20,
+          "armorPenetration": -4,
+          "damage": "24",
+          "keywords": []
+        },
+        {
+          "name": "➤ Arioch power claw - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": []
         },
         {
           "name": "Belicosa volcano cannon",
@@ -726,39 +759,6 @@
           "keywords": [
             "Blast"
           ]
-        },
-        {
-          "name": "Warlord feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "4",
-          "keywords": []
-        },
-        {
-          "name": "➤ Arioch power claw - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 20,
-          "armorPenetration": -4,
-          "damage": "24",
-          "keywords": []
-        },
-        {
-          "name": "➤ Arioch power claw - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "12",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -3,
-          "damage": "8",
-          "keywords": []
         }
       ],
       "isLeader": false,

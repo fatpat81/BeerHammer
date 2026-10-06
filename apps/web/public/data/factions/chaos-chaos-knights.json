@@ -6,25 +6,517 @@
   "totalDatasheets": 20,
   "detachments": [
     {
-      "id": "a435-b94a-eb7b-7c0c",
-      "name": "Detachment",
+      "id": "603e-6bcd-927f-cb70",
+      "name": "Traitoris Lance",
       "rules": [
-        "Paragons of Terror",
-        "Wretched Thralls",
-        "Tyrannical Court",
-        "Marked Prey",
-        "Malefic Surge",
-        "Masters of the Pack",
-        "Annihilate the Unworthy",
-        "Scenting Fear"
+        "Paragons of Terror"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "ffa9-e86a-6f79-c949",
+          "name": "Malevolent Heraldry",
+          "points": 30,
+          "description": "Each time you roll dice to randomly select which Dread abilities are active for your army, if the bearer is on the battlefield, you can re-roll one or both results rolled."
+        },
+        {
+          "id": "d1ba-fbad-1b6b-3567",
+          "name": "Veil of Medrengard",
+          "points": 35,
+          "description": "The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+        },
+        {
+          "id": "6e61-530c-d0b5-486c",
+          "name": "Tyrant's Shadow",
+          "points": 25,
+          "description": "At the end of your Command phase, select one objective marker the bearer is in range of and that you control. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Deathly Terror ability as if it were a ^^**Chaos Knights^^** model from your army."
+        },
+        {
+          "id": "c186-769a-41a4-21d7",
+          "name": "Nightmare's Master",
+          "points": 20,
+          "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "64b1-051f-daf5-e148",
+          "name": "Loping Predator",
+          "points": 10,
+          "description": "The bearer's ranged weapons have the [Assault] ability."
+        },
+        {
+          "id": "42e1-e706-eb89-6cb6",
+          "name": "Final Howl (Aura)",
+          "points": 20,
+          "description": "While a friendly ^^**War Dog^^** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+        },
+        {
+          "id": "fb26-6d89-aa65-fb7e",
+          "name": "Panoply of the Cursed Knights",
+          "points": 15,
+          "description": "Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "433a-6769-0b68-fef3",
+          "name": "Preyslayer's Mantle",
+          "points": 15,
+          "description": "The bearer has the Super-Heavy Walker ability."
+        },
+        {
+          "id": "27b4-53af-ee1b-688a",
+          "name": "Fleshmetal Fusion",
+          "points": 35,
+          "description": "Add 1 to the bearer's Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+        },
+        {
+          "id": "c799-77ce-c706-3079",
+          "name": "Blasphemous Engine",
+          "points": 35,
+          "description": "Add 2 to the bearer's Wounds characteristic. Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds."
+        },
+        {
+          "id": "4ff3-7dce-5a52-94e9",
+          "name": "Bestial Aspect",
+          "points": 30,
+          "description": "The bearer's ranged weapons have the [Assault] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit."
+        },
+        {
+          "id": "4676-0c32-b62c-debd",
+          "name": "Knight Diabolus",
+          "points": 25,
+          "description": "Improve the Weapon Skill characteristic of the bearer's melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [Lance] ability."
+        },
+        {
+          "id": "235a-a20a-c65f-9f8e",
+          "name": "Hunter's Helm",
+          "points": 15,
+          "description": "You can re‑roll Advance and Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "36be-0c43-6c75-17b9",
+          "name": "Octagram of Conjuration",
+          "points": 40,
+          "description": "While a friendly ^^**War Dog**^^ model is within 9” of this model, after that ^^**War Dog**^^ model has shot, you can select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle‑shock test."
+        },
+        {
+          "id": "ad66-f295-a2d9-e49a",
+          "name": "Throne Tyrannicus",
+          "points": 25,
+          "description": "In your Command phase, select one other ^^**Chaos Knights Character**^^ model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly **^^War Dog**^^ units, until the start of your next Command phase, the selected **^^Chaos Knights Character**^^ model is affected by those Aura abilities as well."
+        },
+        {
+          "id": "650c-14dc-b1b7-df8b",
+          "name": "Aspect of the Beast",
+          "points": 30,
+          "description": "At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities active for your army."
+        }
+      ]
+    },
+    {
+      "id": "7fe8-de91-8976-e705",
+      "name": "Iconoclast Fiefdom",
+      "rules": [
+        "Wretched Thralls"
+      ],
+      "enhancements": [
+        {
+          "id": "06cd-7848-7124-ca3c",
+          "name": "Cruel Lashmaster",
+          "points": 25,
+          "description": "While a friendly DAMNED unit is within 6\" of this model, when that unit is selected to make a normal/advance/fall-back move that unit has +2\" M until the end of the phase."
+        },
+        {
+          "id": "80fb-b674-d736-1ca7",
+          "name": "Iconoclast Idol",
+          "points": 20,
+          "description": "While a friendly DAMNED unit is within 6\" of this model, when you target that unit with the Heroic Intervention stratagem, that use is -1 CP."
+        }
+      ]
+    },
+    {
+      "id": "e5ab-9622-8b2a-84d0",
+      "name": "Lords of Dread",
+      "rules": [
+        "Tyrannical Court"
+      ],
+      "enhancements": [
+        {
+          "id": "0691-638b-52ed-33a7",
+          "name": "Warp-borne Stalker",
+          "points": 25,
+          "description": "The bearer has the Deep Strike ability. In addition, once per battle, at the end of your opponent's turn, if the bearer is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "ebcd-5b08-117d-1afc",
+          "name": "Blade of Celerity",
+          "points": 35,
+          "description": "The bearer's ranged weapons have the [Assault] ability. In addition, once per battle, in the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+        },
+        {
+          "id": "3de9-689b-62a5-3cac",
+          "name": "Putrid Carapace",
+          "points": 30,
+          "description": "The bearer has a Save characteristic of 2+. In addition, once per battle, at the start of either player's Command phase, the bearer can use this Enhancement. If it does, the bearer regains up to D6 lost wounds."
+        },
+        {
+          "id": "f36a-acd9-06f2-33f4",
+          "name": "Mirror of Fates",
+          "points": 30,
+          "description": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a **stratagem**, you can use this ability. If you do, increase the CP cost of that use of that **stratagem** by 1CP."
+        },
+        {
+          "id": "fe66-2b8b-6ded-dd43",
+          "name": "Blessing of the Dark Master",
+          "points": 20,
+          "description": "The bearer has the Stealth ability. In addition, once per battle, after you make a saving throw for the bearer, you can change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "4982-b6dd-5bd6-d402",
+          "name": "Throne Mechanicum of Skulls",
+          "points": 25,
+          "description": "You can re-roll Charge rolls made for the bearer's unit. In addition, once per battle, in your Charge phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's unit is eligible to declare a charge in a turn in which it Advanced."
+        }
+      ]
+    },
+    {
+      "id": "6cb5-45cf-c626-fa86",
+      "name": "Houndpack Lance",
+      "rules": [
+        "Marked Prey"
+      ],
+      "enhancements": [
+        {
+          "id": "ffa9-e86a-6f79-c949",
+          "name": "Malevolent Heraldry",
+          "points": 30,
+          "description": "Each time you roll dice to randomly select which Dread abilities are active for your army, if the bearer is on the battlefield, you can re-roll one or both results rolled."
+        },
+        {
+          "id": "d1ba-fbad-1b6b-3567",
+          "name": "Veil of Medrengard",
+          "points": 35,
+          "description": "The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+        },
+        {
+          "id": "6e61-530c-d0b5-486c",
+          "name": "Tyrant's Shadow",
+          "points": 25,
+          "description": "At the end of your Command phase, select one objective marker the bearer is in range of and that you control. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Deathly Terror ability as if it were a ^^**Chaos Knights^^** model from your army."
+        },
+        {
+          "id": "c186-769a-41a4-21d7",
+          "name": "Nightmare's Master",
+          "points": 20,
+          "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "64b1-051f-daf5-e148",
+          "name": "Loping Predator",
+          "points": 10,
+          "description": "The bearer's ranged weapons have the [Assault] ability."
+        },
+        {
+          "id": "42e1-e706-eb89-6cb6",
+          "name": "Final Howl (Aura)",
+          "points": 20,
+          "description": "While a friendly ^^**War Dog^^** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+        },
+        {
+          "id": "fb26-6d89-aa65-fb7e",
+          "name": "Panoply of the Cursed Knights",
+          "points": 15,
+          "description": "Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "433a-6769-0b68-fef3",
+          "name": "Preyslayer's Mantle",
+          "points": 15,
+          "description": "The bearer has the Super-Heavy Walker ability."
+        },
+        {
+          "id": "27b4-53af-ee1b-688a",
+          "name": "Fleshmetal Fusion",
+          "points": 35,
+          "description": "Add 1 to the bearer's Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+        },
+        {
+          "id": "c799-77ce-c706-3079",
+          "name": "Blasphemous Engine",
+          "points": 35,
+          "description": "Add 2 to the bearer's Wounds characteristic. Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds."
+        },
+        {
+          "id": "4ff3-7dce-5a52-94e9",
+          "name": "Bestial Aspect",
+          "points": 30,
+          "description": "The bearer's ranged weapons have the [Assault] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit."
+        },
+        {
+          "id": "4676-0c32-b62c-debd",
+          "name": "Knight Diabolus",
+          "points": 25,
+          "description": "Improve the Weapon Skill characteristic of the bearer's melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [Lance] ability."
+        },
+        {
+          "id": "235a-a20a-c65f-9f8e",
+          "name": "Hunter's Helm",
+          "points": 15,
+          "description": "You can re‑roll Advance and Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "36be-0c43-6c75-17b9",
+          "name": "Octagram of Conjuration",
+          "points": 40,
+          "description": "While a friendly ^^**War Dog**^^ model is within 9” of this model, after that ^^**War Dog**^^ model has shot, you can select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle‑shock test."
+        },
+        {
+          "id": "ad66-f295-a2d9-e49a",
+          "name": "Throne Tyrannicus",
+          "points": 25,
+          "description": "In your Command phase, select one other ^^**Chaos Knights Character**^^ model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly **^^War Dog**^^ units, until the start of your next Command phase, the selected **^^Chaos Knights Character**^^ model is affected by those Aura abilities as well."
+        },
+        {
+          "id": "650c-14dc-b1b7-df8b",
+          "name": "Aspect of the Beast",
+          "points": 30,
+          "description": "At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities active for your army."
+        }
+      ]
     },
     {
       "id": "812b-f056-ec50-2c3c",
       "name": "Infernal Lance",
       "rules": [
         "Malefic Surge"
+      ],
+      "enhancements": [
+        {
+          "id": "ffa9-e86a-6f79-c949",
+          "name": "Malevolent Heraldry",
+          "points": 30,
+          "description": "Each time you roll dice to randomly select which Dread abilities are active for your army, if the bearer is on the battlefield, you can re-roll one or both results rolled."
+        },
+        {
+          "id": "d1ba-fbad-1b6b-3567",
+          "name": "Veil of Medrengard",
+          "points": 35,
+          "description": "The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+        },
+        {
+          "id": "6e61-530c-d0b5-486c",
+          "name": "Tyrant's Shadow",
+          "points": 25,
+          "description": "At the end of your Command phase, select one objective marker the bearer is in range of and that you control. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Deathly Terror ability as if it were a ^^**Chaos Knights^^** model from your army."
+        },
+        {
+          "id": "c186-769a-41a4-21d7",
+          "name": "Nightmare's Master",
+          "points": 20,
+          "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "64b1-051f-daf5-e148",
+          "name": "Loping Predator",
+          "points": 10,
+          "description": "The bearer's ranged weapons have the [Assault] ability."
+        },
+        {
+          "id": "42e1-e706-eb89-6cb6",
+          "name": "Final Howl (Aura)",
+          "points": 20,
+          "description": "While a friendly ^^**War Dog^^** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+        },
+        {
+          "id": "fb26-6d89-aa65-fb7e",
+          "name": "Panoply of the Cursed Knights",
+          "points": 15,
+          "description": "Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "433a-6769-0b68-fef3",
+          "name": "Preyslayer's Mantle",
+          "points": 15,
+          "description": "The bearer has the Super-Heavy Walker ability."
+        },
+        {
+          "id": "27b4-53af-ee1b-688a",
+          "name": "Fleshmetal Fusion",
+          "points": 35,
+          "description": "Add 1 to the bearer's Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+        },
+        {
+          "id": "c799-77ce-c706-3079",
+          "name": "Blasphemous Engine",
+          "points": 35,
+          "description": "Add 2 to the bearer's Wounds characteristic. Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds."
+        },
+        {
+          "id": "4ff3-7dce-5a52-94e9",
+          "name": "Bestial Aspect",
+          "points": 30,
+          "description": "The bearer's ranged weapons have the [Assault] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit."
+        },
+        {
+          "id": "4676-0c32-b62c-debd",
+          "name": "Knight Diabolus",
+          "points": 25,
+          "description": "Improve the Weapon Skill characteristic of the bearer's melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [Lance] ability."
+        },
+        {
+          "id": "235a-a20a-c65f-9f8e",
+          "name": "Hunter's Helm",
+          "points": 15,
+          "description": "You can re‑roll Advance and Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "36be-0c43-6c75-17b9",
+          "name": "Octagram of Conjuration",
+          "points": 40,
+          "description": "While a friendly ^^**War Dog**^^ model is within 9” of this model, after that ^^**War Dog**^^ model has shot, you can select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle‑shock test."
+        },
+        {
+          "id": "ad66-f295-a2d9-e49a",
+          "name": "Throne Tyrannicus",
+          "points": 25,
+          "description": "In your Command phase, select one other ^^**Chaos Knights Character**^^ model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly **^^War Dog**^^ units, until the start of your next Command phase, the selected **^^Chaos Knights Character**^^ model is affected by those Aura abilities as well."
+        },
+        {
+          "id": "650c-14dc-b1b7-df8b",
+          "name": "Aspect of the Beast",
+          "points": 30,
+          "description": "At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities active for your army."
+        }
+      ]
+    },
+    {
+      "id": "915c-3949-0da6-83c5",
+      "name": "Helhunt Lance",
+      "rules": [
+        "Masters of the Pack"
+      ],
+      "enhancements": [
+        {
+          "id": "ffa9-e86a-6f79-c949",
+          "name": "Malevolent Heraldry",
+          "points": 30,
+          "description": "Each time you roll dice to randomly select which Dread abilities are active for your army, if the bearer is on the battlefield, you can re-roll one or both results rolled."
+        },
+        {
+          "id": "d1ba-fbad-1b6b-3567",
+          "name": "Veil of Medrengard",
+          "points": 35,
+          "description": "The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+        },
+        {
+          "id": "6e61-530c-d0b5-486c",
+          "name": "Tyrant's Shadow",
+          "points": 25,
+          "description": "At the end of your Command phase, select one objective marker the bearer is in range of and that you control. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Deathly Terror ability as if it were a ^^**Chaos Knights^^** model from your army."
+        },
+        {
+          "id": "c186-769a-41a4-21d7",
+          "name": "Nightmare's Master",
+          "points": 20,
+          "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "64b1-051f-daf5-e148",
+          "name": "Loping Predator",
+          "points": 10,
+          "description": "The bearer's ranged weapons have the [Assault] ability."
+        },
+        {
+          "id": "42e1-e706-eb89-6cb6",
+          "name": "Final Howl (Aura)",
+          "points": 20,
+          "description": "While a friendly ^^**War Dog^^** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+        },
+        {
+          "id": "fb26-6d89-aa65-fb7e",
+          "name": "Panoply of the Cursed Knights",
+          "points": 15,
+          "description": "Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "433a-6769-0b68-fef3",
+          "name": "Preyslayer's Mantle",
+          "points": 15,
+          "description": "The bearer has the Super-Heavy Walker ability."
+        },
+        {
+          "id": "27b4-53af-ee1b-688a",
+          "name": "Fleshmetal Fusion",
+          "points": 35,
+          "description": "Add 1 to the bearer's Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+        },
+        {
+          "id": "c799-77ce-c706-3079",
+          "name": "Blasphemous Engine",
+          "points": 35,
+          "description": "Add 2 to the bearer's Wounds characteristic. Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds."
+        },
+        {
+          "id": "4ff3-7dce-5a52-94e9",
+          "name": "Bestial Aspect",
+          "points": 30,
+          "description": "The bearer's ranged weapons have the [Assault] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit."
+        },
+        {
+          "id": "4676-0c32-b62c-debd",
+          "name": "Knight Diabolus",
+          "points": 25,
+          "description": "Improve the Weapon Skill characteristic of the bearer's melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [Lance] ability."
+        },
+        {
+          "id": "235a-a20a-c65f-9f8e",
+          "name": "Hunter's Helm",
+          "points": 15,
+          "description": "You can re‑roll Advance and Charge rolls made for the bearer’s unit."
+        },
+        {
+          "id": "36be-0c43-6c75-17b9",
+          "name": "Octagram of Conjuration",
+          "points": 40,
+          "description": "While a friendly ^^**War Dog**^^ model is within 9” of this model, after that ^^**War Dog**^^ model has shot, you can select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle‑shock test."
+        },
+        {
+          "id": "ad66-f295-a2d9-e49a",
+          "name": "Throne Tyrannicus",
+          "points": 25,
+          "description": "In your Command phase, select one other ^^**Chaos Knights Character**^^ model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly **^^War Dog**^^ units, until the start of your next Command phase, the selected **^^Chaos Knights Character**^^ model is affected by those Aura abilities as well."
+        },
+        {
+          "id": "650c-14dc-b1b7-df8b",
+          "name": "Aspect of the Beast",
+          "points": 30,
+          "description": "At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities active for your army."
+        }
+      ]
+    },
+    {
+      "id": "8a80-e529-a86f-84b5",
+      "name": "Bastions of Tyranny",
+      "rules": [
+        "Annihilate the Unworthy"
+      ],
+      "enhancements": [
+        {
+          "id": "27cf-7fc3-7c18-681e",
+          "name": "Pterrorshade Rookery",
+          "points": 20,
+          "description": "When this unit is **selected to shoot**, select one enemy unit within 24\" of this unit. That enemy unit has +6\" **detection range** until this unit has shot."
+        },
+        {
+          "id": "b200-0024-3e31-8f39",
+          "name": "Hate-filled Dominion",
+          "points": 20,
+          "description": "This unit can re-roll rolls to determine the **A** of a weapon."
+        }
+      ]
+    },
+    {
+      "id": "5d30-981f-43b8-81be",
+      "name": "Hunting Warpack",
+      "rules": [
+        "Scenting Fear"
       ],
       "enhancements": []
     }
@@ -173,6 +665,43 @@
           "armorPenetration": -1,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Daemonbreath meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -217,7 +746,92 @@
           "description": "Each time this model makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Havoc multi-launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Avenger chaincannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath spear",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "Slaughterclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chaintalon - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chaintalon - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -286,6 +900,33 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Havoc multi-launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
         }
       ],
       "isLeader": false,
@@ -330,7 +971,70 @@
           "description": "Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Havoc multi-launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Avenger chaincannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath spear",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -377,7 +1081,69 @@
           "description": "This unit’s ranged attacks have +6\" R."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Daemonbreath meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Daemonbreath spear",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "➤ Reaper chaintalon - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chaintalon - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -439,6 +1205,168 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Havoc missile pod",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Ruinspear rocket pod",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Hellstorm autocannons",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-FLY 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Despoiler gatling cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "18",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Heavy darkflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Torrent",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Despoiler battle cannon",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Rapid Fire D6+3"
+          ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath thermal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2D3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Melta 6"
+          ]
+        },
+        {
+          "name": "➤ Warpstrike claw - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -517,6 +1445,50 @@
           "keywords": [
             "Rapid Fire 3"
           ]
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -621,6 +1593,19 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
         }
       ],
       "isLeader": false,
@@ -676,20 +1661,6 @@
       ],
       "weapons": [
         {
-          "name": "Volkite combustor",
-          "type": "Ranged",
-          "range": "30\"",
-          "attacks": "12",
-          "skill": "3+",
-          "strength": 12,
-          "armorPenetration": 0,
-          "damage": "3",
-          "keywords": [
-            "Devastating Wounds",
-            "Ignores Cover"
-          ]
-        },
-        {
           "name": "Balemace",
           "type": "Melee",
           "range": "Melee",
@@ -713,6 +1684,33 @@
           "damage": "3",
           "keywords": [
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Volkite combustor",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
           ]
         }
       ],
@@ -767,6 +1765,17 @@
       ],
       "weapons": [
         {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Twin daemonbreath meltagun",
           "type": "Ranged",
           "range": "12\"",
@@ -777,6 +1786,34 @@
           "damage": "D6",
           "keywords": [
             "Melta 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Gheiststrike missile launcher",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -6,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-TITANIC 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Twin desecrator cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
             "Twin-linked"
           ]
         },
@@ -847,17 +1884,6 @@
             "Blast",
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Titanic feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -949,6 +1975,17 @@
             "Twin-linked",
             "Sustained Hits D3"
           ]
+        },
+        {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1060,6 +2097,17 @@
           "strength": 12,
           "armorPenetration": -3,
           "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1305,20 +2353,6 @@
           ]
         },
         {
-          "name": "Twin heavy bolter",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Sustained Hits 1",
-            "Twin-linked"
-          ]
-        },
-        {
           "name": "➤ Reaper chainfist - strike",
           "type": "Melee",
           "range": "Melee",
@@ -1339,6 +2373,20 @@
           "armorPenetration": -3,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1394,9 +2442,9 @@
       "weapons": [
         {
           "name": "➤ Atrapos lascutter - low intensity",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "2D6",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
           "skill": "3+",
           "strength": 7,
           "armorPenetration": -1,
@@ -1444,32 +2492,6 @@
             "Blast",
             "Devastating Wounds",
             "Hazardous"
-          ]
-        },
-        {
-          "name": "➤ Atrapos lascutter - low intensity",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "12",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "➤ Atrapos lascutter - high intensity",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 14,
-          "armorPenetration": -3,
-          "damage": "4",
-          "keywords": [
-            "Sustained Hits 1"
           ]
         }
       ],
@@ -1582,6 +2604,28 @@
           "strength": 10,
           "armorPenetration": -2,
           "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1700,6 +2744,28 @@
           "strength": 10,
           "armorPenetration": -2,
           "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
           "keywords": []
         }
       ],
@@ -1825,6 +2891,17 @@
           "armorPenetration": -3,
           "damage": "D6+2",
           "keywords": []
+        },
+        {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1893,19 +2970,6 @@
           ]
         },
         {
-          "name": "Terrorpulse missiles",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "D6+6",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Blast"
-          ]
-        },
-        {
           "name": "➤ Fellbore - strike",
           "type": "Melee",
           "range": "Melee",
@@ -1929,6 +2993,19 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Terrorpulse missiles",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6+6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,

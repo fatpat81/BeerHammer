@@ -493,7 +493,7 @@ export default function MyArmiesDashboard() {
                           transition: 'all 120ms ease',
                         }}
                       >
-                        <span>⚔</span> Play Mode
+                        <span>⚔</span> Battle Mode
                       </Link>
 
                       <Link
@@ -515,7 +515,7 @@ export default function MyArmiesDashboard() {
                           transition: 'all 120ms ease',
                         }}
                       >
-                        <span>✎</span> Studio
+                        <span>✎</span> Edit Mode
                       </Link>
 
                       <button
@@ -684,7 +684,7 @@ export default function MyArmiesDashboard() {
                         gap: '0.4rem',
                       }}
                     >
-                      <span>⚡</span> {deployingPatrolId === patrol.id ? 'Deploying Patrol...' : 'Deploy Patrol to Play Mode'}
+                      <span>⚡</span> {deployingPatrolId === patrol.id ? 'Deploying Patrol...' : 'Deploy Patrol to Battle Mode'}
                     </button>
                   </div>
                 ))}

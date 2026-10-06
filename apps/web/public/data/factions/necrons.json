@@ -6,32 +6,435 @@
   "totalDatasheets": 67,
   "detachments": [
     {
-      "id": "82f1-b597-7b06-8ba2",
-      "name": "Detachment",
-      "rules": [
-        "Hypermotility Protocols",
-        "Transdimensional Deployment",
-        "Empowered Engines"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "9ebf-2bbd-6059-1d40",
       "name": "Awakened Dynasty",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "a562-e37c-3a4d-d152",
+          "name": "Veil of Darkness",
+          "points": 20,
+          "description": "NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn)."
+        },
+        {
+          "id": "76a0-7f0a-49e7-992a",
+          "name": "Nether-realm Casket",
+          "points": 20,
+          "description": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+        },
+        {
+          "id": "a89b-612a-b6f-40ee",
+          "name": "Phasal Subjugator",
+          "points": 35,
+          "description": "NECRONS model only. While a friendly NECRONS unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the hit roll."
+        },
+        {
+          "id": "3cc5-4b3-9380-981a",
+          "name": "Enaegic Dermal Bond",
+          "points": 30,
+          "description": "NECRONS model only. The bearer has the Feel No Pain 4+ ability."
+        }
+      ]
+    },
+    {
+      "id": "6493-9079-727d-d95f",
+      "name": "Annihilation Legion",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "d191-f492-ef11-6c9d",
+          "name": "Dimensional Overseer",
+          "points": 25,
+          "description": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add 1 to the number of units from your army that you can select for the Hyperphasing rule."
+        },
+        {
+          "id": "cb96-5b69-ad55-31ce",
+          "name": "Eternal Madness",
+          "points": 20,
+          "description": "NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model had not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "id": "8923-bbd7-b53b-71c6",
+          "name": "Ingrained Superiority",
+          "points": 5,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "90ad-322-9cab-ceed",
+          "name": "Soulless Reaper",
+          "points": 15,
+          "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6. On a 3+, that unit cannot Fall Back and must Remain Stationary."
+        },
+        {
+          "id": "6f24-8659-cef-d28d",
+          "name": "Eldritch Nightmare",
+          "points": 10,
+          "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "11d5-61c1-bc4a-d9ca",
+          "name": "Arisen Tyrant",
+          "points": 25,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+        },
+        {
+          "id": "e294-31a1-a398-8695",
+          "name": "Hyperspatial Transfer Node",
+          "points": 15,
+          "description": "NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit."
+        },
+        {
+          "id": "ebd8-d7a3-52cf-4a4b",
+          "name": "Osteoclave Fulcrum",
+          "points": 20,
+          "description": "NECRONS model only. Models in the bearer's unit have the Deep Strike ability."
+        },
+        {
+          "id": "66a0-347d-f5b8-bb2e",
+          "name": "Destroyer Ankh",
+          "points": 20,
+          "description": "The bearer has the ^^**Destroyer Cult^^** keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer."
+        },
+        {
+          "id": "ccef-1913-7d41-e982",
+          "name": "Murdermind",
+          "points": 15,
+          "description": "The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
+        },
+        {
+          "id": "019d-d56d-fb52-6b33",
+          "name": "Mark of the Nekrosor",
+          "points": 20,
+          "description": "Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "ac69-1119-fea9-9088",
+          "name": "Cursed Circlet",
+          "points": 25,
+          "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer’s unit were destroyed as a result of those attacks, the bearer’s unit can make a Surge move. To do so, roll one D6: the bearer’s unit can be moved a number of inches up to the result, but the bearer’s unit must finish that move as close as possible to the closest enemy unit (excluding ^^**Aircraft^^**). \nWhen doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle‑shocked."
+        }
+      ]
+    },
+    {
+      "id": "aed9-cb3b-1d0c-f87d",
+      "name": "Canoptek Court",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "8894-c0fc-28c4-1bb4",
+          "name": "Dimensional Sanctum",
+          "points": 20,
+          "description": "CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability."
+        },
+        {
+          "id": "23b2-9675-34d6-b505",
+          "name": "Hyperphasic Fulcrum",
+          "points": 15,
+          "description": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army's Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1."
+        },
+        {
+          "id": "a894-7fcb-6cf-6809",
+          "name": "Autodivinator",
+          "points": 15,
+          "description": "CRYPTEK model only. Each time your opponent gains a CP as a result of an ability, roll one D6: on a 2+, you also gain 1CP."
+        },
+        {
+          "id": "481d-a059-d2fd-600d",
+          "name": "Metalodermal Tesla Weave",
+          "points": 10,
+          "description": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds, on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ]
     },
     {
       "id": "163f-63bd-f2e1-5e7",
       "name": "Obeisance Phalanx",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "adf7-e842-41e1-6994",
+          "name": "Honourable Combatant",
+          "points": 10,
+          "description": "OVERLORD model only. Each time the bearer's unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any."
+        },
+        {
+          "id": "2339-9780-e93d-943b",
+          "name": "Unflinching Will",
+          "points": 20,
+          "description": "OVERLORD model only. The bearer's melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities."
+        },
+        {
+          "id": "4abc-8ef7-8689-80d7",
+          "name": "Warrior Noble",
+          "points": 15,
+          "description": "OVERLORD model only. Each time a melee attack targets the bearer's unit, subtract 1 from the Hit roll."
+        },
+        {
+          "id": "f607-55be-a68b-a452",
+          "name": "Eternal Conqueror",
+          "points": 25,
+          "description": "OVERLORD model only. Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll."
+        }
+      ]
+    },
+    {
+      "id": "8861-5385-8fd1-dfee",
+      "name": "Hypercrypt Legion",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "d191-f492-ef11-6c9d",
+          "name": "Dimensional Overseer",
+          "points": 25,
+          "description": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add 1 to the number of units from your army that you can select for the Hyperphasing rule."
+        },
+        {
+          "id": "cb96-5b69-ad55-31ce",
+          "name": "Eternal Madness",
+          "points": 20,
+          "description": "NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model had not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "id": "8923-bbd7-b53b-71c6",
+          "name": "Ingrained Superiority",
+          "points": 5,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "90ad-322-9cab-ceed",
+          "name": "Soulless Reaper",
+          "points": 15,
+          "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6. On a 3+, that unit cannot Fall Back and must Remain Stationary."
+        },
+        {
+          "id": "6f24-8659-cef-d28d",
+          "name": "Eldritch Nightmare",
+          "points": 10,
+          "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "11d5-61c1-bc4a-d9ca",
+          "name": "Arisen Tyrant",
+          "points": 25,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+        },
+        {
+          "id": "e294-31a1-a398-8695",
+          "name": "Hyperspatial Transfer Node",
+          "points": 15,
+          "description": "NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit."
+        },
+        {
+          "id": "ebd8-d7a3-52cf-4a4b",
+          "name": "Osteoclave Fulcrum",
+          "points": 20,
+          "description": "NECRONS model only. Models in the bearer's unit have the Deep Strike ability."
+        },
+        {
+          "id": "66a0-347d-f5b8-bb2e",
+          "name": "Destroyer Ankh",
+          "points": 20,
+          "description": "The bearer has the ^^**Destroyer Cult^^** keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer."
+        },
+        {
+          "id": "ccef-1913-7d41-e982",
+          "name": "Murdermind",
+          "points": 15,
+          "description": "The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
+        },
+        {
+          "id": "019d-d56d-fb52-6b33",
+          "name": "Mark of the Nekrosor",
+          "points": 20,
+          "description": "Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "ac69-1119-fea9-9088",
+          "name": "Cursed Circlet",
+          "points": 25,
+          "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer’s unit were destroyed as a result of those attacks, the bearer’s unit can make a Surge move. To do so, roll one D6: the bearer’s unit can be moved a number of inches up to the result, but the bearer’s unit must finish that move as close as possible to the closest enemy unit (excluding ^^**Aircraft^^**). \nWhen doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle‑shocked."
+        }
+      ]
     },
     {
       "id": "e0fd-c955-4822-6dba",
       "name": "Starshatter Arsenal",
       "rules": [],
+      "enhancements": [
+        {
+          "id": "564a-6fab-2aa8-260e",
+          "name": "Dread Majesty",
+          "points": 30,
+          "description": "While a friendly ^^**Necrons**^^ unit (excluding ^^**Monster^^** and ^^**Titianic^^** units) is within 6\" of the bearer, each time a model in that unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1."
+        },
+        {
+          "id": "d8be-0f2f-0902-ae47",
+          "name": "Miniaturised Nebuloscope",
+          "points": 15,
+          "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+        },
+        {
+          "id": "40fb-0220-5d6a-4b29",
+          "name": "Demanding Leader",
+          "points": 10,
+          "description": "In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back."
+        },
+        {
+          "id": "0def-3e8b-cd0d-f2aa",
+          "name": "Chrono-impedance Fields",
+          "points": 25,
+          "description": "In your Command phase, select one friendly **^^Necrons Vehicle^^** or **^^Necrons Mounted^^** unit (excluding Titanic units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+        }
+      ]
+    },
+    {
+      "id": "1de5-2462-f59c-db94",
+      "name": "Cryptek Conclave",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "855d-dea4-9142-0b71",
+          "name": "Gauntlet of Compression",
+          "points": 20,
+          "description": "Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit."
+        },
+        {
+          "id": "4d2f-1b67-641e-b036",
+          "name": "Atomic Disintegrators",
+          "points": 10,
+          "description": "In your Shooting phase, each time the bearer’s unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: [ANTI‑MONSTER 5+], [ANTI‑VEHICLE 5+]."
+        },
+        {
+          "id": "cede-96ee-5e36-d4de",
+          "name": "Quantum Abacus",
+          "points": 15,
+          "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "7e5d-8216-9ab0-1294",
+          "name": "Gravitic Bolas",
+          "points": 15,
+          "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding ^^**Titanic^^** units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit."
+        }
+      ]
+    },
+    {
+      "id": "c4ee-83c7-812c-5ff0",
+      "name": "Cursed Legion",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "d191-f492-ef11-6c9d",
+          "name": "Dimensional Overseer",
+          "points": 25,
+          "description": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add 1 to the number of units from your army that you can select for the Hyperphasing rule."
+        },
+        {
+          "id": "cb96-5b69-ad55-31ce",
+          "name": "Eternal Madness",
+          "points": 20,
+          "description": "NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model had not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "id": "8923-bbd7-b53b-71c6",
+          "name": "Ingrained Superiority",
+          "points": 5,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "id": "90ad-322-9cab-ceed",
+          "name": "Soulless Reaper",
+          "points": 15,
+          "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6. On a 3+, that unit cannot Fall Back and must Remain Stationary."
+        },
+        {
+          "id": "6f24-8659-cef-d28d",
+          "name": "Eldritch Nightmare",
+          "points": 10,
+          "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "11d5-61c1-bc4a-d9ca",
+          "name": "Arisen Tyrant",
+          "points": 25,
+          "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+        },
+        {
+          "id": "e294-31a1-a398-8695",
+          "name": "Hyperspatial Transfer Node",
+          "points": 15,
+          "description": "NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit."
+        },
+        {
+          "id": "ebd8-d7a3-52cf-4a4b",
+          "name": "Osteoclave Fulcrum",
+          "points": 20,
+          "description": "NECRONS model only. Models in the bearer's unit have the Deep Strike ability."
+        },
+        {
+          "id": "66a0-347d-f5b8-bb2e",
+          "name": "Destroyer Ankh",
+          "points": 20,
+          "description": "The bearer has the ^^**Destroyer Cult^^** keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer."
+        },
+        {
+          "id": "ccef-1913-7d41-e982",
+          "name": "Murdermind",
+          "points": 15,
+          "description": "The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
+        },
+        {
+          "id": "019d-d56d-fb52-6b33",
+          "name": "Mark of the Nekrosor",
+          "points": 20,
+          "description": "Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "ac69-1119-fea9-9088",
+          "name": "Cursed Circlet",
+          "points": 25,
+          "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer’s unit were destroyed as a result of those attacks, the bearer’s unit can make a Surge move. To do so, roll one D6: the bearer’s unit can be moved a number of inches up to the result, but the bearer’s unit must finish that move as close as possible to the closest enemy unit (excluding ^^**Aircraft^^**). \nWhen doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle‑shocked."
+        }
+      ]
+    },
+    {
+      "id": "1707-57c5-676e-90d9",
+      "name": "Pantheon of Woe",
+      "rules": [],
       "enhancements": []
+    },
+    {
+      "id": "ec2e-3289-5a4a-d5a6",
+      "name": "Hand of the Dynasty",
+      "rules": [
+        "Hypermotility Protocols"
+      ],
+      "enhancements": [
+        {
+          "id": "a562-e37c-3a4d-d152",
+          "name": "Veil of Darkness",
+          "points": 20,
+          "description": "NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn)."
+        },
+        {
+          "id": "76a0-7f0a-49e7-992a",
+          "name": "Nether-realm Casket",
+          "points": 20,
+          "description": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+        },
+        {
+          "id": "a89b-612a-b6f-40ee",
+          "name": "Phasal Subjugator",
+          "points": 35,
+          "description": "NECRONS model only. While a friendly NECRONS unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the hit roll."
+        },
+        {
+          "id": "3cc5-4b3-9380-981a",
+          "name": "Enaegic Dermal Bond",
+          "points": 30,
+          "description": "NECRONS model only. The bearer has the Feel No Pain 4+ ability."
+        }
+      ]
     },
     {
       "id": "51c2-e233-ea51-14df",
@@ -40,6 +443,21 @@
         "Transdimensional Deployment"
       ],
       "enhancements": []
+    },
+    {
+      "id": "7e16-552d-f3a9-035f",
+      "name": "The Phaeron's Armoury",
+      "rules": [
+        "Empowered Engines"
+      ],
+      "enhancements": [
+        {
+          "id": "cb60-485d-6054-36e5",
+          "name": "Prelocational Optimiser",
+          "points": 25,
+          "description": "When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have: \n- [LETHAL HITS]. \n- Or: [SUSTAINED HITS 1]."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -301,19 +719,6 @@
           "armorPenetration": -3,
           "damage": "2",
           "keywords": []
-        },
-        {
-          "name": "Staff of the Destroyer",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": [
-            "Devastating Wounds"
-          ]
         }
       ],
       "isLeader": true,
@@ -379,6 +784,19 @@
           "damage": "2",
           "keywords": [
             "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Tachyon arrow",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -5,
+          "damage": "D6+2",
+          "keywords": [
+            "One Shot"
           ]
         }
       ],
@@ -512,17 +930,6 @@
           "keywords": []
         },
         {
-          "name": "Eldritch lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 9,
-          "armorPenetration": -3,
-          "damage": "3",
-          "keywords": []
-        },
-        {
           "name": "Impaling legs",
           "type": "Melee",
           "range": "Melee",
@@ -593,17 +1000,6 @@
           "type": "Ranged",
           "range": "18\"",
           "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Staff of light",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
           "skill": "3+",
           "strength": 5,
           "armorPenetration": -2,
@@ -727,6 +1123,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Relic gauss blaster",
           "type": "Ranged",
           "range": "24\"",
@@ -739,17 +1146,6 @@
             "Lethal Hits",
             "Rapid Fire 2"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -896,17 +1292,6 @@
       ],
       "weapons": [
         {
-          "name": "Staff of light",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
           "name": "Lord's blade",
           "type": "Melee",
           "range": "Melee",
@@ -921,9 +1306,9 @@
         },
         {
           "name": "Staff of light",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
           "skill": "2+",
           "strength": 5,
           "armorPenetration": -2,
@@ -982,17 +1367,6 @@
       ],
       "weapons": [
         {
-          "name": "Staff of light",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
           "name": "Lord's blade",
           "type": "Melee",
           "range": "Melee",
@@ -1007,8 +1381,8 @@
         },
         {
           "name": "Staff of light",
-          "type": "Melee",
-          "range": "Melee",
+          "type": "Ranged",
+          "range": "18\"",
           "attacks": "3",
           "skill": "3+",
           "strength": 5,
@@ -1107,15 +1481,17 @@
           "keywords": []
         },
         {
-          "name": "Staff of light",
+          "name": "Overlord's blade",
           "type": "Melee",
           "range": "Melee",
           "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
         }
       ],
       "isLeader": false,
@@ -1166,15 +1542,30 @@
       ],
       "weapons": [
         {
-          "name": "Staff of light",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
+          "name": "Overlord's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
           "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Tachyon arrow",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -5,
+          "damage": "D6+2",
+          "keywords": [
+            "One Shot"
+          ]
         },
         {
           "name": "Voidscythe",
@@ -1191,9 +1582,9 @@
         },
         {
           "name": "Staff of light",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
           "skill": "2+",
           "strength": 5,
           "armorPenetration": -2,
@@ -1262,17 +1653,6 @@
           "armorPenetration": -2,
           "damage": "1",
           "keywords": []
-        },
-        {
-          "name": "Staff of light",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1335,17 +1715,6 @@
           "armorPenetration": -3,
           "damage": "3",
           "keywords": []
-        },
-        {
-          "name": "Abyssal lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -3,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1399,19 +1768,6 @@
         }
       ],
       "weapons": [
-        {
-          "name": "Chronomancer's stave",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "D6",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Blast"
-          ]
-        },
         {
           "name": "Chronomancer's stave",
           "type": "Melee",
@@ -1484,17 +1840,6 @@
           "armorPenetration": -3,
           "damage": "2",
           "keywords": []
-        },
-        {
-          "name": "Plasmic lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 7,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1556,6 +1901,17 @@
           ]
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Gauss reaper",
           "type": "Ranged",
           "range": "12\"",
@@ -1614,6 +1970,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Gauss blaster",
           "type": "Ranged",
           "range": "24\"",
@@ -1639,17 +2006,6 @@
             "Assault",
             "Sustained Hits 2"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1762,6 +2118,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Enmitic disintegrator pistols",
           "type": "Ranged",
           "range": "18\"",
@@ -1774,17 +2141,6 @@
             "Ignores Cover",
             "Pistol"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2143,6 +2499,17 @@
       ],
       "weapons": [
         {
+          "name": "Stalker's forelimbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Heat ray - dispersed",
           "type": "Ranged",
           "range": "12\"",
@@ -2195,17 +2562,6 @@
           "keywords": [
             "Lethal Hits"
           ]
-        },
-        {
-          "name": "Stalker's forelimbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2426,20 +2782,6 @@
           ]
         },
         {
-          "name": "Voltaic storm",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "D6+3",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Blast",
-            "Sustained Hits 2"
-          ]
-        },
-        {
           "name": "➤ Spear of the Void Dragon - strike",
           "type": "Melee",
           "range": "Melee",
@@ -2462,6 +2804,20 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Voltaic storm",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+3",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Sustained Hits 2"
+          ]
         },
         {
           "name": "Canoptek tail blades",
@@ -2528,6 +2884,19 @@
       ],
       "weapons": [
         {
+          "name": "Crackling tendrils",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
           "name": "Seismic assault",
           "type": "Ranged",
           "range": "12\"",
@@ -2538,19 +2907,6 @@
           "damage": "2",
           "keywords": [
             "Assault",
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Crackling tendrils",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -3,
-          "damage": "D6",
-          "keywords": [
             "Sustained Hits 1"
           ]
         }
@@ -2601,6 +2957,17 @@
       ],
       "weapons": [
         {
+          "name": "Automaton claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Particle beamer",
           "type": "Ranged",
           "range": "18\"",
@@ -2613,17 +2980,6 @@
             "Blast",
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Automaton claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2794,6 +3150,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin gauss blaster",
           "type": "Ranged",
           "range": "24\"",
@@ -2835,17 +3202,6 @@
             "Sustained Hits 2",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2890,9 +3246,9 @@
       "weapons": [
         {
           "name": "Rod of covenant",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
           "skill": "3+",
           "strength": 5,
           "armorPenetration": -2,
@@ -2912,17 +3268,6 @@
             "Devastating Wounds",
             "Pistol"
           ]
-        },
-        {
-          "name": "Rod of covenant",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         },
         {
           "name": "Voidblade",
@@ -2977,7 +3322,55 @@
           "description": "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Vicious claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Transdimensional beamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Particle caster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Whip coils",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -3059,6 +3452,17 @@
           "keywords": [
             "Sustained Hits 2"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3134,6 +3538,17 @@
             "Lethal Hits",
             "Rapid Fire 5"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3259,6 +3674,17 @@
           ]
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Gauss destructor",
           "type": "Ranged",
           "range": "48\"",
@@ -3334,6 +3760,17 @@
           ]
         },
         {
+          "name": "Doomstalker limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Twin gauss flayer",
           "type": "Ranged",
           "range": "24\"",
@@ -3347,17 +3784,6 @@
             "Rapid Fire 1",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Doomstalker limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3417,6 +3843,17 @@
             "Lethal Hits",
             "Rapid Fire 5"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3481,6 +3918,17 @@
             "Sustained Hits 2",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3554,6 +4002,17 @@
             "Sustained Hits 2",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3608,6 +4067,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Tesla sphere",
           "type": "Ranged",
           "range": "24\"",
@@ -3620,17 +4090,6 @@
             "Anti-FLY 4+",
             "Sustained Hits 2"
           ]
-        },
-        {
-          "name": "Armoured bulk",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3682,6 +4141,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Tesla sphere",
           "type": "Ranged",
           "range": "24\"",
@@ -3693,17 +4163,6 @@
           "keywords": [
             "Sustained Hits 2"
           ]
-        },
-        {
-          "name": "Armoured bulk",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3768,6 +4227,17 @@
           ]
         },
         {
+          "name": "Portal of exile",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Death ray",
           "type": "Ranged",
           "range": "24\"",
@@ -3793,17 +4263,6 @@
             "Lethal Hits",
             "Rapid Fire 3"
           ]
-        },
-        {
-          "name": "Portal of exile",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3891,17 +4350,6 @@
           ]
         },
         {
-          "name": "Annihilator beam",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 14,
-          "armorPenetration": -4,
-          "damage": "6",
-          "keywords": []
-        },
-        {
           "name": "Weapons of the Final Triarch",
           "type": "Melee",
           "range": "Melee",
@@ -3913,6 +4361,17 @@
           "keywords": [
             "Lethal Hits"
           ]
+        },
+        {
+          "name": "Annihilator beam",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
         },
         {
           "name": "Armoured bulk",
@@ -4294,6 +4753,17 @@
           "keywords": [
             "Sustained Hits 2"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4345,6 +4815,28 @@
       ],
       "weapons": [
         {
+          "name": "➤ Titanic forelimbs - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "5",
+          "keywords": []
+        },
+        {
+          "name": "➤ Titanic forelimbs - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Singularity generator",
           "type": "Ranged",
           "range": "36\"",
@@ -4380,28 +4872,6 @@
           "strength": 24,
           "armorPenetration": -4,
           "damage": "D6+4",
-          "keywords": []
-        },
-        {
-          "name": "➤ Titanic forelimbs - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 14,
-          "armorPenetration": -3,
-          "damage": "5",
-          "keywords": []
-        },
-        {
-          "name": "➤ Titanic forelimbs - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "12",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
           "keywords": []
         }
       ],
@@ -4628,6 +5098,17 @@
             "Sustained Hits 2",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Armoured bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4677,7 +5158,21 @@
           "description": "This model can be attached to the following units: IMMORTALS, LYCHGUARD, NECRON WARRIORS"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Overlord's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -4734,6 +5229,17 @@
           "attacks": "1",
           "skill": "4+",
           "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
           "armorPenetration": -1,
           "damage": "1",
           "keywords": []
@@ -4826,18 +5332,15 @@
           ]
         },
         {
-          "name": "Twin gauss reaper",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "2",
+          "name": "Claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
           "skill": "4+",
-          "strength": 4,
+          "strength": 6,
           "armorPenetration": -1,
           "damage": "1",
-          "keywords": [
-            "Lethal Hits",
-            "Twin-linked"
-          ]
+          "keywords": []
         },
         {
           "name": "Dimensional isolator",
@@ -4848,28 +5351,6 @@
           "strength": 4,
           "armorPenetration": -2,
           "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
           "keywords": []
         }
       ],
@@ -5022,6 +5503,19 @@
       ],
       "weapons": [
         {
+          "name": "Blade tail and whip coils",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
           "name": "Enmitic disintegrators",
           "type": "Ranged",
           "range": "18\"",
@@ -5034,19 +5528,6 @@
             "Ignores Cover",
             "Pistol",
             "Sustained Hits 2"
-          ]
-        },
-        {
-          "name": "Blade tail and whip coils",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Extra Attacks"
           ]
         },
         {
@@ -5107,7 +5588,356 @@
           "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Abyssal lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Chronomancer's stave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Enmitic annihilator",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Enmitic exterminator",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Rapid Fire 6",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Gauss cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Gauss destructor",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": [
+            "Heavy",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - dispersed",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - focused",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "Heavy gauss cannon array",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Particle caster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Particle shredder",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Plasmic lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Relic gauss blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits",
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rod of covenant",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Staff of light",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Tachyon arrow",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -5,
+          "damage": "D6+2",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Hyperphase sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Flayer claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Flensing claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hyperphase harvester",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Lord's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Skorpekh hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ophydian hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stalker's forelimbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Voidblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Voidscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -5149,7 +5979,356 @@
           "description": "This model can be attached to the following units: ^^**Immortals, Necron Warriors**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Abyssal lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Chronomancer's stave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Enmitic annihilator",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Enmitic exterminator",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Rapid Fire 6",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Gauss cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Gauss destructor",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": [
+            "Heavy",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - dispersed",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - focused",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "Heavy gauss cannon array",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Particle caster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Particle shredder",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Plasmic lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Relic gauss blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits",
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rod of covenant",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Staff of light",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Tachyon arrow",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -5,
+          "damage": "D6+2",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Hyperphase sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Flayer claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Flensing claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hyperphase harvester",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Lord's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Skorpekh hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ophydian hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stalker's forelimbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Voidblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Voidscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -5194,7 +6373,356 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Abyssal lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Chronomancer's stave",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Enmitic annihilator",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Enmitic exterminator",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Rapid Fire 6",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Gauss cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Gauss destructor",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": [
+            "Heavy",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - dispersed",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Heat ray - focused",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 4"
+          ]
+        },
+        {
+          "name": "Heavy gauss cannon array",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Particle caster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Particle shredder",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6+6",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Plasmic lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Relic gauss blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits",
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rod of covenant",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Staff of light",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Tachyon arrow",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 16,
+          "armorPenetration": -5,
+          "damage": "D6+2",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Hyperphase sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Flayer claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Flensing claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hyperphase harvester",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Lord's blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Skorpekh hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ophydian hyperphase weapons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stalker's forelimbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Voidblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Warscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Voidscythe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },

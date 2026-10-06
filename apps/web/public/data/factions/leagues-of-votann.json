@@ -6,35 +6,429 @@
   "totalDatasheets": 25,
   "detachments": [
     {
-      "id": "5914-3326-fac9-bf29",
-      "name": "Detachment",
-      "rules": [
-        "Methodical Annihilation",
-        "Assailed From Every Angle",
-        "Martial Leverage",
-        "Optimal Application",
-        "Fury from the Dêlve",
-        "Mobile Sensor Relays",
-        "Ruthless Reinvestment",
-        "Sagitaur Spearhead",
-        "Eye of the Hunt",
-        "Avatars of the Ancestors"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "1077-70a1-0570-5685",
       "name": "Hearthband",
       "rules": [
         "Methodical Annihilation"
       ],
+      "enhancements": [
+        {
+          "id": "7d25-b49e-85d4-d20a",
+          "name": "Bastion Shield",
+          "points": 25,
+          "description": "Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1. If you spend 1YP, until the end of the phase, if the attacking model is within 18\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1 instead."
+        },
+        {
+          "id": "0af8-8b93-2b39-2559",
+          "name": "High Kâhl",
+          "points": 30,
+          "description": "Each time a model in the bearer’s unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "id": "ef91-2506-ac67-5a93",
+          "name": "Ironskein",
+          "points": 10,
+          "description": "Add 2 to the bearer’s Wounds characteristic."
+        },
+        {
+          "id": "2697-5d0d-5125-1bfb",
+          "name": "Quake Multigenerator",
+          "points": 15,
+          "description": "In your Shooting phase, after the bearer has shot, select one enemy unit (excluding TITANIC units) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ]
+    },
+    {
+      "id": "e73f-ac86-44b1-c3f2",
+      "name": "Persecution Prospect",
+      "rules": [
+        "Assailed From Every Angle"
+      ],
+      "enhancements": [
+        {
+          "id": "5e4b-a70c-c422-6c61",
+          "name": "Writ of Acquisition",
+          "points": 10,
+          "description": "In your Shooting phase, after the bearer's unit has shot, you gain 1YP for each assailed unit hit by one or more of those attacks (to a maximum of 3YP)."
+        },
+        {
+          "id": "b031-0da4-5d52-dd4f",
+          "name": "Surgical Saboteur",
+          "points": 10,
+          "description": "In your Shooting phase, after this model has shot, select one ^^**Monster^^** or ^^**Vehicle^^** unit hit by one or more of those attacks; until the start of your next Shooting phase, that model is pinned."
+        },
+        {
+          "id": "6194-dfd6-e9af-6585",
+          "name": "Nomad Strategist",
+          "points": 20,
+          "description": "Once per battle, at the end of your opponent's Fight phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, select one ^^**Hernkyn^^** unit from your army, and, for every 2YP you just spent, select up to one additional ^^**Hernkyn^^** unit from your army. You can remove those units from the battlefield and place them into Strategic Reserves. You cannot select a unit that is within Engagement Range of one or more enemy units (excluding assailed units)."
+        },
+        {
+          "id": "2908-04e0-3f3c-dfab",
+          "name": "Eye For Weakness",
+          "points": 25,
+          "description": "Each time a model in the bearer's unit makes an attack that targets an assailed unit, add 1 to the Wound roll."
+        }
+      ]
+    },
+    {
+      "id": "01b8-fa17-620e-8e79",
+      "name": "Needgaârd Oathband",
+      "rules": [
+        "Martial Leverage"
+      ],
+      "enhancements": [
+        {
+          "id": "9c61-9b04-2baf-1c12",
+          "name": "Oathbound Speculator",
+          "points": 30,
+          "description": "Each time a model in the bearer's unit makes an attack, re-roll a Wound roll of 1. Each time the bearer's unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer's unit makes an attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "7c61-0dcb-0802-cb98",
+          "name": "Dead Reckoning",
+          "points": 10,
+          "description": "**^^Leagues of Votann^^** model only. At the end of the turn, if the bearer is on the battlefield and you spent no YP in that turn, you gain 1YP."
+        },
+        {
+          "id": "d187-cd04-8370-8612",
+          "name": "Iron Ambassador",
+          "points": 5,
+          "description": "**^^Leagues of Votann^^** model equipped with an Autoch-pattern combi-bolter only. Once per battle, when the bearer's unit is selected to shoot, the bearer can use this Enhancement. If it does, spend up to 3YP, and, until the end of the phase, add the number of YP you just spent to the Damage characteristic of the bearer's ranged weapons."
+        },
+        {
+          "id": "0817-8eb3-9b75-ad7e",
+          "name": "Ancestral Crest",
+          "points": 15,
+          "description": "Once per turn, when you target the bearer's unit with the Command Re-roll Stratagem, the bearer can use this Enhancement. If it does, spend 1YP and reduces the CP cost of that Stratagem by 1CP."
+        },
+        {
+          "id": "8238-3c39-4e2b-c050",
+          "name": "Tactical Alchemy",
+          "points": 10,
+          "description": "In your Command phase, if the bearer's unit is in range of one or more objective markers you control that are not in your deployment zone, you can spend 1YP. If you do, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "3383-7b1a-0d06-7cf3",
+          "name": "Trivârg Cyber Implant",
+          "points": 40,
+          "description": "In your Shooting phase, each time the bearer's unit is selected to shoot, if it disembarked from a ^^**Transport^^** this turn, or if you spend 2YP, until the end of the phase, ranged weapons equipped by model in that unit have the [**^^Sustained Hits 2^^**] ability."
+        },
+        {
+          "id": "90c6-b425-91a8-6e52",
+          "name": "Precursive Judgement",
+          "points": 15,
+          "description": "While the bearer's unit is wholly within 6\" of one or more friendly ^^**Leagues of Votann Transport^^** units, you can target the bearer's unit with the Fire Overwatch Stratagem for 0CP and hits are scored on an unmodified Hit roll of 5+ while resolving that Stratagem."
+        },
+        {
+          "id": "74ca-8eea-42de-d435",
+          "name": "Signature Restoration",
+          "points": 5,
+          "description": "Each time a friendly ^^**Leagues of Votann^^** model is repaired using the bearer's Forgewrought Expertise ability, that model regains one additional lost wound."
+        },
+        {
+          "id": "ff2a-7cd5-c926-912a",
+          "name": "Mercenary Prospector",
+          "points": 20,
+          "description": "Each time an enemy unit is destroyed by the bearer’s unit, gain 2YP."
+        },
+        {
+          "id": "ef82-544b-6cf9-48b5",
+          "name": "Metaphysical Brokerage",
+          "points": 20,
+          "description": "At the end of your turn, if the bearer is on the battlefield and you gained fewer than 3YP this turn, you gain an amount of YP equal to the difference."
+        },
+        {
+          "id": "201a-6d33-642b-89ea",
+          "name": "Etacarn SB9 Targeting Implant",
+          "points": 15,
+          "description": "Each time a model in the bearer’s unit makes an attack, re‑roll a Hit roll of 1. Each time the bearer’s unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer’s unit makes an attack, that attack has the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "id": "874b-263c-74b0-1804",
+          "name": "Asset Manipulator",
+          "points": 25,
+          "description": "At the start of the Command phase, you can spend 3YP. If you do, until the end of the turn, while an enemy unit is within 3” of the bearer, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        }
+      ]
+    },
+    {
+      "id": "768a-d0b6-e9a1-c221",
+      "name": "Hearthfyre Arsenal",
+      "rules": [
+        "Optimal Application"
+      ],
+      "enhancements": [
+        {
+          "id": "0fee-7c71-5cba-f038",
+          "name": "Fârstryder Node",
+          "points": 20,
+          "description": "Models in the bearer's unit have the Deep Strike abilty."
+        },
+        {
+          "id": "a1f6-2251-28e7-5735",
+          "name": "Graviton Vault",
+          "points": 5,
+          "description": "In your Shooting phase, after the bearer has shot, and in the Fight phase, after the bearer has fought, select one enemy ^^**Monster^^** or ^^**Vehicle**^^ unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "id": "b3fd-908e-84c1-ae06",
+          "name": "Mantle of Elders",
+          "points": 10,
+          "description": "Each time the bearer's unit is selected to shoot, if you spend YP using the Optimal Application Detachment rule when doing so, you can roll one D6: on a 2+, you gain 1YP."
+        },
+        {
+          "id": "2e1b-db01-0680-e689",
+          "name": "Calculated Tenacity",
+          "points": 15,
+          "description": "While the bearer is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+        }
+      ]
+    },
+    {
+      "id": "faf5-7477-8cdc-679f",
+      "name": "Dêlve Assault Shift",
+      "rules": [
+        "Fury from the Dêlve"
+      ],
+      "enhancements": [
+        {
+          "id": "1b78-e427-3c50-e81d",
+          "name": "Dêlvwerke Navigator",
+          "points": 25,
+          "description": "In the Reinforcements step of your Movement phase, the bearer can use this Enhancement. If it does, select one friendly ^^**Cthonian Beserks^^** unit visible to the bearer and then spend any number of YP. Return one destroyed model (excluding ^^**Character**^^ models) to that unit, and then, for every 2YP you just spent, return up to one additional destroyed model (excluding ^^**Character**^^ models) to that unit."
+        },
+        {
+          "id": "fe19-a88f-cca8-bd73",
+          "name": "Quake Supervisor",
+          "points": 20,
+          "description": "While the bearer is within 3\" of one or more friendly ^^**Leagues of Votann Artillery^^** units, the bearer has the Lone Operative ability, and each time one of those ^^**Artillery^^** units makes a ranged attack that targets an enemy unit visible to the bearer, add 1 to the Hit roll."
+        },
+        {
+          "id": "71cf-2707-fc5f-5f50",
+          "name": "Piledriver",
+          "points": 15,
+          "description": "Each time the bearer's unit is selected to fight, the bearer can use this Enhancement. If it does, spend up to 2YP and, until the end of the phase, add the number of YP you just spent to the Damage characteristic of the bearer's melee weapons."
+        },
+        {
+          "id": "97da-2424-fa61-1bdf",
+          "name": "Multiwave System Jammer",
+          "points": 10,
+          "description": "Once per battle, in your Movement phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, select one friendly ^^**Cthonian^^** unit that is in Reserves. Until the end of the phase, for the purposes of setting up that unit on the battlefield, treat the current battle round number as one higher than it actually is."
+        }
+      ]
+    },
+    {
+      "id": "437f-0cb8-194f-a716",
+      "name": "Brandfast Oathband",
+      "rules": [
+        "Mobile Sensor Relays"
+      ],
+      "enhancements": [
+        {
+          "id": "9c61-9b04-2baf-1c12",
+          "name": "Oathbound Speculator",
+          "points": 30,
+          "description": "Each time a model in the bearer's unit makes an attack, re-roll a Wound roll of 1. Each time the bearer's unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer's unit makes an attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "7c61-0dcb-0802-cb98",
+          "name": "Dead Reckoning",
+          "points": 10,
+          "description": "**^^Leagues of Votann^^** model only. At the end of the turn, if the bearer is on the battlefield and you spent no YP in that turn, you gain 1YP."
+        },
+        {
+          "id": "d187-cd04-8370-8612",
+          "name": "Iron Ambassador",
+          "points": 5,
+          "description": "**^^Leagues of Votann^^** model equipped with an Autoch-pattern combi-bolter only. Once per battle, when the bearer's unit is selected to shoot, the bearer can use this Enhancement. If it does, spend up to 3YP, and, until the end of the phase, add the number of YP you just spent to the Damage characteristic of the bearer's ranged weapons."
+        },
+        {
+          "id": "0817-8eb3-9b75-ad7e",
+          "name": "Ancestral Crest",
+          "points": 15,
+          "description": "Once per turn, when you target the bearer's unit with the Command Re-roll Stratagem, the bearer can use this Enhancement. If it does, spend 1YP and reduces the CP cost of that Stratagem by 1CP."
+        },
+        {
+          "id": "8238-3c39-4e2b-c050",
+          "name": "Tactical Alchemy",
+          "points": 10,
+          "description": "In your Command phase, if the bearer's unit is in range of one or more objective markers you control that are not in your deployment zone, you can spend 1YP. If you do, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "3383-7b1a-0d06-7cf3",
+          "name": "Trivârg Cyber Implant",
+          "points": 40,
+          "description": "In your Shooting phase, each time the bearer's unit is selected to shoot, if it disembarked from a ^^**Transport^^** this turn, or if you spend 2YP, until the end of the phase, ranged weapons equipped by model in that unit have the [**^^Sustained Hits 2^^**] ability."
+        },
+        {
+          "id": "90c6-b425-91a8-6e52",
+          "name": "Precursive Judgement",
+          "points": 15,
+          "description": "While the bearer's unit is wholly within 6\" of one or more friendly ^^**Leagues of Votann Transport^^** units, you can target the bearer's unit with the Fire Overwatch Stratagem for 0CP and hits are scored on an unmodified Hit roll of 5+ while resolving that Stratagem."
+        },
+        {
+          "id": "74ca-8eea-42de-d435",
+          "name": "Signature Restoration",
+          "points": 5,
+          "description": "Each time a friendly ^^**Leagues of Votann^^** model is repaired using the bearer's Forgewrought Expertise ability, that model regains one additional lost wound."
+        },
+        {
+          "id": "ff2a-7cd5-c926-912a",
+          "name": "Mercenary Prospector",
+          "points": 20,
+          "description": "Each time an enemy unit is destroyed by the bearer’s unit, gain 2YP."
+        },
+        {
+          "id": "ef82-544b-6cf9-48b5",
+          "name": "Metaphysical Brokerage",
+          "points": 20,
+          "description": "At the end of your turn, if the bearer is on the battlefield and you gained fewer than 3YP this turn, you gain an amount of YP equal to the difference."
+        },
+        {
+          "id": "201a-6d33-642b-89ea",
+          "name": "Etacarn SB9 Targeting Implant",
+          "points": 15,
+          "description": "Each time a model in the bearer’s unit makes an attack, re‑roll a Hit roll of 1. Each time the bearer’s unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer’s unit makes an attack, that attack has the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "id": "874b-263c-74b0-1804",
+          "name": "Asset Manipulator",
+          "points": 25,
+          "description": "At the start of the Command phase, you can spend 3YP. If you do, until the end of the turn, while an enemy unit is within 3” of the bearer, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        }
+      ]
+    },
+    {
+      "id": "b36b-1a84-3f57-2063",
+      "name": "Mercenary Oathband",
+      "rules": [
+        "Ruthless Reinvestment"
+      ],
+      "enhancements": [
+        {
+          "id": "9c61-9b04-2baf-1c12",
+          "name": "Oathbound Speculator",
+          "points": 30,
+          "description": "Each time a model in the bearer's unit makes an attack, re-roll a Wound roll of 1. Each time the bearer's unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer's unit makes an attack, add 1 to the Wound roll."
+        },
+        {
+          "id": "7c61-0dcb-0802-cb98",
+          "name": "Dead Reckoning",
+          "points": 10,
+          "description": "**^^Leagues of Votann^^** model only. At the end of the turn, if the bearer is on the battlefield and you spent no YP in that turn, you gain 1YP."
+        },
+        {
+          "id": "d187-cd04-8370-8612",
+          "name": "Iron Ambassador",
+          "points": 5,
+          "description": "**^^Leagues of Votann^^** model equipped with an Autoch-pattern combi-bolter only. Once per battle, when the bearer's unit is selected to shoot, the bearer can use this Enhancement. If it does, spend up to 3YP, and, until the end of the phase, add the number of YP you just spent to the Damage characteristic of the bearer's ranged weapons."
+        },
+        {
+          "id": "0817-8eb3-9b75-ad7e",
+          "name": "Ancestral Crest",
+          "points": 15,
+          "description": "Once per turn, when you target the bearer's unit with the Command Re-roll Stratagem, the bearer can use this Enhancement. If it does, spend 1YP and reduces the CP cost of that Stratagem by 1CP."
+        },
+        {
+          "id": "8238-3c39-4e2b-c050",
+          "name": "Tactical Alchemy",
+          "points": 10,
+          "description": "In your Command phase, if the bearer's unit is in range of one or more objective markers you control that are not in your deployment zone, you can spend 1YP. If you do, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "3383-7b1a-0d06-7cf3",
+          "name": "Trivârg Cyber Implant",
+          "points": 40,
+          "description": "In your Shooting phase, each time the bearer's unit is selected to shoot, if it disembarked from a ^^**Transport^^** this turn, or if you spend 2YP, until the end of the phase, ranged weapons equipped by model in that unit have the [**^^Sustained Hits 2^^**] ability."
+        },
+        {
+          "id": "90c6-b425-91a8-6e52",
+          "name": "Precursive Judgement",
+          "points": 15,
+          "description": "While the bearer's unit is wholly within 6\" of one or more friendly ^^**Leagues of Votann Transport^^** units, you can target the bearer's unit with the Fire Overwatch Stratagem for 0CP and hits are scored on an unmodified Hit roll of 5+ while resolving that Stratagem."
+        },
+        {
+          "id": "74ca-8eea-42de-d435",
+          "name": "Signature Restoration",
+          "points": 5,
+          "description": "Each time a friendly ^^**Leagues of Votann^^** model is repaired using the bearer's Forgewrought Expertise ability, that model regains one additional lost wound."
+        },
+        {
+          "id": "ff2a-7cd5-c926-912a",
+          "name": "Mercenary Prospector",
+          "points": 20,
+          "description": "Each time an enemy unit is destroyed by the bearer’s unit, gain 2YP."
+        },
+        {
+          "id": "ef82-544b-6cf9-48b5",
+          "name": "Metaphysical Brokerage",
+          "points": 20,
+          "description": "At the end of your turn, if the bearer is on the battlefield and you gained fewer than 3YP this turn, you gain an amount of YP equal to the difference."
+        },
+        {
+          "id": "201a-6d33-642b-89ea",
+          "name": "Etacarn SB9 Targeting Implant",
+          "points": 15,
+          "description": "Each time a model in the bearer’s unit makes an attack, re‑roll a Hit roll of 1. Each time the bearer’s unit is selected to shoot or fight, you can spend 3YP. If you do, until the end of the phase, each time a model in the bearer’s unit makes an attack, that attack has the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "id": "874b-263c-74b0-1804",
+          "name": "Asset Manipulator",
+          "points": 25,
+          "description": "At the start of the Command phase, you can spend 3YP. If you do, until the end of the turn, while an enemy unit is within 3” of the bearer, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+        }
+      ]
+    },
+    {
+      "id": "39c2-616a-92c8-ad9d",
+      "name": "Armoured Trailblazers",
+      "rules": [
+        "Sagitaur Spearhead"
+      ],
       "enhancements": []
     },
     {
-      "id": "01f8-d9e4-7079-467a",
-      "name": "Grudge (Genestealer Cults)",
-      "rules": [],
-      "enhancements": []
+      "id": "273e-953c-a337-ec5d",
+      "name": "Farseekers",
+      "rules": [
+        "Eye of the Hunt"
+      ],
+      "enhancements": [
+        {
+          "id": "df55-c20a-27f8-c415",
+          "name": "Pan-spectral Lockons",
+          "points": 10,
+          "description": "In your Shooting phase, you can select one **visible** enemy unit within 12\" of this unit. That enemy unit is **spotted**: \n- While a unit is spotted, that unit has +3\" **detection range**."
+        },
+        {
+          "id": "c839-8281-c627-ecba",
+          "name": "Shroudwërke Talismans",
+          "points": 15,
+          "description": "This unit has -3\" **detection range**."
+        }
+      ]
+    },
+    {
+      "id": "ccdf-fb88-9ae3-aa6c",
+      "name": "Hearthguard Covenant",
+      "rules": [
+        "Avatars of the Ancestors"
+      ],
+      "enhancements": [
+        {
+          "id": "aece-b6eb-2068-df38",
+          "name": "Ironskein",
+          "points": 10,
+          "description": "This model has +2**W**."
+        },
+        {
+          "id": "d549-0bca-9575-9c8e",
+          "name": "High Kâhl",
+          "points": 30,
+          "description": "In the Fight phase, when a model in this unit is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6: on a 4+, do not remove that model from the battlefield; after this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -187,6 +581,19 @@
           "keywords": [
             "Devastating Wounds"
           ]
+        },
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
         }
       ],
       "isLeader": true,
@@ -236,6 +643,28 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Theyn's melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Autoch-pattern bolt pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -284,78 +713,15 @@
           ]
         },
         {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Autoch-pattern bolter",
-          "type": "Ranged",
-          "range": "24\"",
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
           "attacks": "2",
           "skill": "4+",
           "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Ion blaster",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 5,
           "armorPenetration": -2,
           "damage": "1",
           "keywords": []
-        },
-        {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
         },
         {
           "name": "HYLas rotary cannon",
@@ -369,19 +735,6 @@
           "keywords": [
             "Heavy",
             "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
           ]
         },
         {
@@ -399,30 +752,28 @@
           ]
         },
         {
-          "name": "Autoch-pattern bolt pistol",
+          "name": "➤ L7 missile launcher - blast",
           "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
+          "range": "24\"",
+          "attacks": "D6",
           "skill": "4+",
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": [
-            "Pistol"
+            "Blast"
           ]
         },
         {
-          "name": "Autoch-pattern bolt pistol",
+          "name": "➤ L7 missile launcher - focused",
           "type": "Ranged",
-          "range": "12\"",
+          "range": "24\"",
           "attacks": "1",
           "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
         },
         {
           "name": "Magna-rail rifle",
@@ -439,19 +790,6 @@
           ]
         },
         {
-          "name": "Autoch-pattern bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
           "name": "EtaCarn plasma beamer",
           "type": "Ranged",
           "range": "18\"",
@@ -463,116 +801,6 @@
           "keywords": [
             "Sustained Hits D3"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Theyn's melee weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -646,6 +874,30 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
         }
       ],
       "isLeader": true,
@@ -723,6 +975,17 @@
           "armorPenetration": -3,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -784,6 +1047,19 @@
       ],
       "weapons": [
         {
+          "name": "Ancestral ward stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "➤ Ancestral Wrath - witchfire",
           "type": "Ranged",
           "range": "24\"",
@@ -820,19 +1096,6 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
-        },
-        {
-          "name": "Ancestral ward stave",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
-          ]
         },
         {
           "name": "Close combat weapon",
@@ -914,6 +1177,20 @@
       ],
       "weapons": [
         {
+          "name": "Graviton hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-MONSTER 3+",
+            "Anti-VEHICLE 3+"
+          ]
+        },
+        {
           "name": "Graviton rifle",
           "type": "Ranged",
           "range": "18\"",
@@ -938,31 +1215,6 @@
           "damage": "1",
           "keywords": [
             "Pistol"
-          ]
-        },
-        {
-          "name": "Las-beam cutter",
-          "type": "Ranged",
-          "range": "6\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -3,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Graviton hammer",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 9,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": [
-            "Anti-MONSTER 3+",
-            "Anti-VEHICLE 3+"
           ]
         },
         {
@@ -999,13 +1251,13 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "Las-beam cutter",
+          "type": "Ranged",
+          "range": "6\"",
           "attacks": "1",
           "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
+          "strength": 6,
+          "armorPenetration": -3,
           "damage": "1",
           "keywords": []
         }
@@ -1099,45 +1351,6 @@
           ]
         },
         {
-          "name": "Exo-armour grenade launcher",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "D3",
-          "skill": "3+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Blast"
-          ]
-        },
-        {
-          "name": "EtaCarn plasma gun",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": [
-            "Rapid Fire 1"
-          ]
-        },
-        {
-          "name": "Volkanite disintegrator",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Devastating Wounds"
-          ]
-        },
-        {
           "name": "Concussion gauntlet",
           "type": "Melee",
           "range": "Melee",
@@ -1172,28 +1385,6 @@
             "Anti-MONSTER 3+",
             "Anti-VEHICLE 3+"
           ]
-        },
-        {
-          "name": "Concussion gauntlet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Plasma blade gauntlet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1251,18 +1442,29 @@
       ],
       "weapons": [
         {
-          "name": "Mole grenade launcher",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "D6",
-          "skill": "5+",
+          "name": "Concussion maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
           "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
+          "armorPenetration": -2,
+          "damage": "3",
           "keywords": [
-            "Blast",
-            "Indirect Fire"
+            "Anti-MONSTER 3+",
+            "Anti-VEHICLE 3+"
           ]
+        },
+        {
+          "name": "Heavy plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
         },
         {
           "name": "Twin concussion gauntlets",
@@ -1275,6 +1477,20 @@
           "damage": "2",
           "keywords": [
             "Twin-linked"
+          ]
+        },
+        {
+          "name": "Mole grenade launcher",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
           ]
         }
       ],
@@ -1336,6 +1552,54 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "HYLas rotary cannon",
           "type": "Ranged",
@@ -1414,6 +1678,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured wheels",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "HYLas beam cannon",
           "type": "Ranged",
           "range": "24\"",
@@ -1436,15 +1711,56 @@
           "keywords": []
         },
         {
-          "name": "Armoured wheels",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "➤ L7 missile launcher - blast",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ L7 missile launcher - focused",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "MATR autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Twin bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
           "attacks": "3",
           "skill": "4+",
           "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1489,6 +1805,17 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bolt cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1528,17 +1855,6 @@
             "Conversion",
             "Lethal Hits"
           ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1590,6 +1906,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Armoured wheels",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "SP heavy conversion beamer",
           "type": "Ranged",
@@ -1646,6 +1973,20 @@
           ]
         },
         {
+          "name": "Twin bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2",
+            "Twin-linked"
+          ]
+        },
+        {
           "name": "Hekaton warhead",
           "type": "Ranged",
           "range": "36\"",
@@ -1660,15 +2001,18 @@
           ]
         },
         {
-          "name": "Armoured wheels",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "MATR autocannon",
+          "type": "Ranged",
+          "range": "24\"",
           "attacks": "6",
           "skill": "4+",
-          "strength": 8,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -1730,6 +2074,17 @@
           ]
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "APM launcher",
           "type": "Ranged",
           "range": "24\"",
@@ -1758,17 +2113,28 @@
           ]
         },
         {
-          "name": "Bolt shotgun",
+          "name": "Bolt revolver",
           "type": "Ranged",
-          "range": "18\"",
-          "attacks": "2",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
           "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": [
-            "Assault"
+            "Pistol"
           ]
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2075,6 +2441,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Magna-rail cannon ",
           "type": "Ranged",
           "range": "24\"",
@@ -2102,15 +2479,17 @@
           ]
         },
         {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "Twin magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
           "attacks": "3",
           "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2182,6 +2561,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Twin magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2223,7 +2615,58 @@
           "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem. If units from your army have Fortify Takeover, hits are scored on unmodified Hit rolls of 4+ while resolving that Stratagem instead."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Plasma sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2263,7 +2706,47 @@
           "description": "Each time an enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) that is within Engagement Range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Plasma sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2310,6 +2793,17 @@
       ],
       "weapons": [
         {
+          "name": "Plasma picks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Autoch-pattern bolt pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -2351,17 +2845,6 @@
             "Heavy",
             "Indirect Fire"
           ]
-        },
-        {
-          "name": "Plasma picks",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2411,7 +2894,404 @@
           "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Exo-armour grenade launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ancestral Wrath - witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Ancestral Wrath - focused witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Graviton blast cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "EtaCarn plasma gun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Graviton rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "SP conversion beamer",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Conversion",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Theyn's pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ancestral ward stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Concussion maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Darkstar axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Forgewrought plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Graviton hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma blade gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Theyn's melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -2458,7 +3338,404 @@
           "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, you gain 1YP."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Exo-armour grenade launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ancestral Wrath - witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Ancestral Wrath - focused witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Graviton blast cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "EtaCarn plasma gun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Graviton rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "SP conversion beamer",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Conversion",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Theyn's pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ancestral ward stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Concussion maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Darkstar axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Forgewrought plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Graviton hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma blade gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Theyn's melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -2505,7 +3782,404 @@
           "description": "Each time this model makes an attack, you can re-roll the Hit roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Exo-armour grenade launcher",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ancestral Wrath - witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Ancestral Wrath - focused witchfire",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Graviton blast cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "EtaCarn plasma gun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Bolt cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Graviton rifle",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "SP conversion beamer",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Conversion",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Theyn's pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ancestral ward stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Concussion maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Darkstar axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Forgewrought plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Graviton hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Heavy plasma axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Mass hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma blade gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Plasma sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Theyn's melee weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },

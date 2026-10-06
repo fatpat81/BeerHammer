@@ -182,7 +182,35 @@
         "AEGIS DEFENCE LINE WITH WEAPON EMPLACEMENT"
       ],
       "abilities": [],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Quad-gun",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Icarus Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -219,7 +247,48 @@
         "BASTION"
       ],
       "abilities": [],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Icarus Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        },
+        {
+          "name": "Quad-gun",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -256,7 +325,73 @@
         "FIRESTORM REDOUBT"
       ],
       "abilities": [],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Icarus Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        },
+        {
+          "name": "Quad-gun",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Battle cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Punisher gatling cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Quad lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked",
+            "Anti-Fly 2+"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -336,6 +471,19 @@
           "armorPenetration": -2,
           "damage": "D6+1",
           "keywords": []
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -469,6 +617,19 @@
           "armorPenetration": -4,
           "damage": "4",
           "keywords": []
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -667,6 +828,87 @@
           "keywords": [
             "Blast",
             "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Battle cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
           ]
         }
       ],
@@ -891,7 +1133,46 @@
           "description": "Each time this model makes a ranged attack that targets the closest enemy unit:\n- If that attack is made with a Punisher gatling cannon and the target is not a MONSTER or VEHICLE, add 1 to the Hit roll.\n- If that attack is made with a battle cannon and the target is a MONSTER or VEHICLE, add 1 to the Hit roll.\n- If that attack is made with a quad-lascannon and the target can FLY, add 1 to the Hit roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Battle cannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Punisher gatling cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "20",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Quad lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked",
+            "Anti-Fly 2+"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -990,6 +1271,19 @@
             "Hazardous",
             "Indirect Fire"
           ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -1033,7 +1327,35 @@
           "description": "Each time an attack is allocated to this Fortification, subtract 1 from the Damage characteristic of that attack."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Icarus Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        },
+        {
+          "name": "Quad-gun",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1163,6 +1485,33 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1249,6 +1598,88 @@
           "damage": "D6+1",
           "keywords": [
             "Anti-Fly 2+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Castellum air defence missiles",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Anti-Fly 2+"
+          ]
+        },
+        {
+          "name": "Twin assault cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
             "Twin-linked"
           ]
         }

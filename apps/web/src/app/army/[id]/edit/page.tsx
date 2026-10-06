@@ -166,7 +166,7 @@ export default function RosterEditPage() {
           <ChapterIcon chapterKey={activeTheme} size={30} />
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span className="app-title">{army?.name || 'Roster Studio'}</span>
+              <span className="app-title">{army?.name || 'Force Editor'}</span>
               <span style={{
                 fontSize: '0.65rem',
                 padding: '1px 5px',
@@ -176,7 +176,7 @@ export default function RosterEditPage() {
                 fontWeight: 700,
                 letterSpacing: '0.04em',
               }}>
-                STUDIO
+                EDIT MODE
               </span>
             </div>
             <div className="app-subtitle">

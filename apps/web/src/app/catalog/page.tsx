@@ -548,7 +548,7 @@ export default function DatasheetCatalogPage() {
                   className="btn btn-primary"
                   style={{ textDecoration: 'none' }}
                 >
-                  Add to Army via Studio
+                  Add to Army in Edit Mode
                 </Link>
                 <button
                   type="button"

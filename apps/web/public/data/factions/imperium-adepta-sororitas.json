@@ -6,38 +6,288 @@
   "totalDatasheets": 34,
   "detachments": [
     {
-      "id": "9cc-e2b2-81eb-df6",
-      "name": "Detachment",
-      "rules": [
-        "Angelic Judgement",
-        "Holy Quest",
-        "Hymns of Battle"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "8e26-78e2-10bd-6982",
       "name": "Hallowed Martyrs",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "ab0f-119b-4628-eb86",
+          "name": "Chaplet of Sacrifice",
+          "points": 25,
+          "description": "ADEPTA SORORITAS model only. At the end of your Command phase, if the bearer is on the battlefield, you can re-roll one Miracle dice from your Miracle dice pool and return it to your Miracle dice pool with the new result you rolled. When doing so, if the bearer's unit is below its Starting Strength, you can re-roll up to 3 Miracle dice in this way instead."
+        },
+        {
+          "id": "ffbd-988d-1497-2fdc",
+          "name": "Mantle of Ophelia",
+          "points": 20,
+          "description": "**^^Canoness^^** or **^^Palatine^^** model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
+        },
+        {
+          "id": "302c-b8d2-7d21-305f",
+          "name": "Saintly Example",
+          "points": 10,
+          "description": "ADEPTA SORORITAS model only. When the bearer is destroyed, you gain an additional D3 Miracle dice."
+        },
+        {
+          "id": "7056-256b-9392-bbbc",
+          "name": "Through Suffering, Strength",
+          "points": 25,
+          "description": "**^^Adepta Sororitas^^** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. If the bearer has lost one or more wounds, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead."
+        }
+      ]
     },
     {
       "id": "a2f5-a466-96b6-d389",
       "name": "Penitent Host",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "ad43-4753-3b84-776a",
+          "name": "Catechism of Divine Penitence",
+          "points": 15,
+          "description": "CANONESS, PALATINE, or MINISTORUM PRIEST model only. The bearer gains the PENITENT keyword."
+        },
+        {
+          "id": "e77d-7180-7b77-4c42",
+          "name": "Psalm of Righteous Judgement",
+          "points": 20,
+          "description": "ADEPTA SORORITAS model only. While the bearer is on the battlefield, each time an enemy unit is destroyed by a PENITENT unit from your army, you can discard 1 Miracle dice to gain 1 Miracle dice showing a value of 6."
+        },
+        {
+          "id": "0491-e21f-9916-6799",
+          "name": "Refrain of Enduring Faith",
+          "points": 15,
+          "description": "PENITENT model only. While the bearer is leading a unit, models in that unit have a 5+ invulnerable save."
+        },
+        {
+          "id": "5393-e3e0-d4d2-efc8",
+          "name": "Verse of Holy Piety",
+          "points": 15,
+          "description": "PENITENT model only. Once per battle, at the start of the battle round, select one Vow of Atonement. Until the start of the next battle round, that Vow of Atonement is active for the bearer's unit in addition to any that is active for your army, even if you have already selected that Vow of Atonement this battle."
+        }
+      ]
     },
     {
-      "id": "25b9-2563-1da8-b222",
-      "name": "Death Cult power blades",
+      "id": "575d-76f6-2edb-22c1",
+      "name": "Bringers of Flame",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "32e8-f267-c03d-c48e",
+          "name": "Fire and Fury",
+          "points": 30,
+          "description": "**^^Adepta Sororitas^^** model only. While the bearer is leading a unit, add 1 to the Attacks characteristic of Torrent weapons equipped by models in that unit, and all other ranged weapons equipped by models that unit have the **[SUSTAINED HITS 1]** ability."
+        },
+        {
+          "id": "e8b3-d714-4605-2480",
+          "name": "Iron Surplice of Saint Istalela",
+          "points": 10,
+          "description": "CANONESS or PALATINE model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+        },
+        {
+          "id": "9105-7062-e61d-cc8b",
+          "name": "Manual of Saint Griselda",
+          "points": 20,
+          "description": "ADEPTA SORORITAS model only. At the start of your Command phase, you can discard up to 2 Miracle dice. Then, add 1 Miracle dice to your Miracle Dice pool showing a value equal to the sum of the two Miracle dice you discarded (to a maximum of 6)."
+        },
+        {
+          "id": "b16a-1b5e-85a6-0e1b",
+          "name": "Righteous Rage",
+          "points": 15,
+          "description": "**^^Adepta Sororitas^^** model only. Each time the bearer is selected to fight, you can first discard up to 3 Miracle dice. For each Miracle dice just discarded, until the end of the phase, add 1 to the Attacks and Strength characteristics of the bearer's melee weapons."
+        }
+      ]
     },
     {
-      "id": "d9ef-2bc9-67d5-e7c9",
-      "name": "Death Cult blades",
+      "id": "6f81-1a3e-c84e-0954",
+      "name": "Army of Faith",
       "rules": [],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "ac74-f4fb-2471-0cd2",
+          "name": "Blade of Saint Ellynor",
+          "points": 15,
+          "description": "ADEPTA SORORITAS model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1, and those weapons have the [Precision] ability. In addition, each time the bearer fights, if one or more enemy models is destroyed by those attacks, you gain 1 Miracle dice."
+        },
+        {
+          "id": "ea36-91b8-f9d0-524b",
+          "name": "Divine Aspect",
+          "points": 5,
+          "description": "ADEPTA SORORITAS model only. In your Movement phase, you can select one enemy unit within 12\" of that bearer; that unit must take a Battle-shock test. If that test is failed, you gain 1 Miracle dice."
+        },
+        {
+          "id": "6afa-ce02-9563-368b",
+          "name": "Litanies of Faith",
+          "points": 10,
+          "description": "CANONESS or PALATINE model only. At the start of your Command phase, if the bearer is on the battlefield, take a Leadership test for the bearer. If that test is passed, you gain 1 Miracle dice."
+        },
+        {
+          "id": "b6bd-5c3a-835b-08a8",
+          "name": "Triptych of the Macharian Crusade",
+          "points": 20,
+          "description": "ADEPTA SORORITAS model only. Each time the bearer uses an Act of Faith to substitute a saving throw, that saving throw is successful, irrespective of the value of the Miracle dice used."
+        },
+        {
+          "id": "5344-3b0c-c939-e6a2",
+          "name": "Eyes of the Oracle",
+          "points": 10,
+          "description": "ADEPTA SORORITAS model only. The bearer’s weapons have the [PRECISION] ability. Each time the bearer’s unit destroys an enemy Character model, you gain 1CP."
+        },
+        {
+          "id": "6a87-e11a-7a83-54ac",
+          "name": "Mark of Devotion",
+          "points": 30,
+          "description": "**^^Adepta Sororitas^^** model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead."
+        },
+        {
+          "id": "2c1d-5416-8c0d-f790",
+          "name": "Sanctified Amulet",
+          "points": 25,
+          "description": "ADEPTA SORORITAS model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer"
+        },
+        {
+          "id": "4e52-3be7-153f-2ef8",
+          "name": "Triptych of Judgement",
+          "points": 15,
+          "description": "ADEPTA SORORITAS model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+        }
+      ]
+    },
+    {
+      "id": "5c81-a47b-d3a0-31e8",
+      "name": "Champions of Faith",
+      "rules": [],
+      "enhancements": [
+        {
+          "id": "ac74-f4fb-2471-0cd2",
+          "name": "Blade of Saint Ellynor",
+          "points": 15,
+          "description": "ADEPTA SORORITAS model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1, and those weapons have the [Precision] ability. In addition, each time the bearer fights, if one or more enemy models is destroyed by those attacks, you gain 1 Miracle dice."
+        },
+        {
+          "id": "ea36-91b8-f9d0-524b",
+          "name": "Divine Aspect",
+          "points": 5,
+          "description": "ADEPTA SORORITAS model only. In your Movement phase, you can select one enemy unit within 12\" of that bearer; that unit must take a Battle-shock test. If that test is failed, you gain 1 Miracle dice."
+        },
+        {
+          "id": "6afa-ce02-9563-368b",
+          "name": "Litanies of Faith",
+          "points": 10,
+          "description": "CANONESS or PALATINE model only. At the start of your Command phase, if the bearer is on the battlefield, take a Leadership test for the bearer. If that test is passed, you gain 1 Miracle dice."
+        },
+        {
+          "id": "b6bd-5c3a-835b-08a8",
+          "name": "Triptych of the Macharian Crusade",
+          "points": 20,
+          "description": "ADEPTA SORORITAS model only. Each time the bearer uses an Act of Faith to substitute a saving throw, that saving throw is successful, irrespective of the value of the Miracle dice used."
+        },
+        {
+          "id": "5344-3b0c-c939-e6a2",
+          "name": "Eyes of the Oracle",
+          "points": 10,
+          "description": "ADEPTA SORORITAS model only. The bearer’s weapons have the [PRECISION] ability. Each time the bearer’s unit destroys an enemy Character model, you gain 1CP."
+        },
+        {
+          "id": "6a87-e11a-7a83-54ac",
+          "name": "Mark of Devotion",
+          "points": 30,
+          "description": "**^^Adepta Sororitas^^** model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead."
+        },
+        {
+          "id": "2c1d-5416-8c0d-f790",
+          "name": "Sanctified Amulet",
+          "points": 25,
+          "description": "ADEPTA SORORITAS model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer"
+        },
+        {
+          "id": "4e52-3be7-153f-2ef8",
+          "name": "Triptych of Judgement",
+          "points": 15,
+          "description": "ADEPTA SORORITAS model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+        },
+        {
+          "id": "becb-e7cd-ff9f-f8ac",
+          "name": "Perfervid Haste",
+          "points": 10,
+          "description": "This unit has +1\" M."
+        }
+      ]
+    },
+    {
+      "id": "3ee6-23e1-8bc0-90f7",
+      "name": "Chorus of Condemnation",
+      "rules": [
+        "Angelic Judgement"
+      ],
+      "enhancements": [
+        {
+          "id": "2474-62bc-deab-c31b",
+          "name": "Clarion of Urgency",
+          "points": 15,
+          "description": "At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**."
+        },
+        {
+          "id": "bd97-06c3-a527-9a3e",
+          "name": "Symphonic Payload",
+          "points": 10,
+          "description": "This unit can re‑roll rolls to determine the **A** of a weapon."
+        }
+      ]
+    },
+    {
+      "id": "0017-3a94-11f8-7fca",
+      "name": "Sacred Champions",
+      "rules": [
+        "Holy Quest"
+      ],
+      "enhancements": [
+        {
+          "id": "5344-3b0c-c939-e6a2",
+          "name": "Eyes of the Oracle",
+          "points": 10,
+          "description": "ADEPTA SORORITAS model only. The bearer’s weapons have the [PRECISION] ability. Each time the bearer’s unit destroys an enemy Character model, you gain 1CP."
+        },
+        {
+          "id": "6a87-e11a-7a83-54ac",
+          "name": "Mark of Devotion",
+          "points": 30,
+          "description": "**^^Adepta Sororitas^^** model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead."
+        },
+        {
+          "id": "2c1d-5416-8c0d-f790",
+          "name": "Sanctified Amulet",
+          "points": 25,
+          "description": "ADEPTA SORORITAS model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer"
+        },
+        {
+          "id": "4e52-3be7-153f-2ef8",
+          "name": "Triptych of Judgement",
+          "points": 15,
+          "description": "ADEPTA SORORITAS model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+        },
+        {
+          "id": "becb-e7cd-ff9f-f8ac",
+          "name": "Perfervid Haste",
+          "points": 10,
+          "description": "This unit has +1\" M."
+        }
+      ]
+    },
+    {
+      "id": "f9b6-3e44-772b-8eb1",
+      "name": "Sanctified Orators",
+      "rules": [
+        "Hymns of Battle"
+      ],
+      "enhancements": [
+        {
+          "id": "df1f-deb6-d44c-b653",
+          "name": "Hagiomnifex",
+          "points": 25,
+          "description": "(Once per turn, per unit) At the start of a phase, you can use this ability. If you do, select one of the abilities below: \n- **Rite of Revelation**: While this unit is shooting, enemy units have +6\" detection range. \n- **Sermon of Intolerance**: This unit’s battle‑shock rolls automatically succeed. \n- **Catechism of Raging Fervour**: This unit has +1\" M. \n- **Psalm of Righteous Smiting**: This unit’s attacks have +1 S. \n- **Chorus of Repudiation**: Attacks that target this unit with a S greater than this unit’s T have ‑1 to wound rolls."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -220,6 +470,19 @@
           "keywords": []
         },
         {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
           "name": "Scribe's staff",
           "type": "Melee",
           "range": "Melee",
@@ -361,6 +624,41 @@
           ]
         },
         {
+          "name": "Blessed blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Hallowed Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bolt Pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -429,41 +727,6 @@
             "Hazardous",
             "Pistol"
           ]
-        },
-        {
-          "name": "Blessed blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Lethal Hits"
-          ]
-        },
-        {
-          "name": "Power weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Hallowed Chainsword",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 3,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -555,6 +818,43 @@
             "Blast",
             "Ignores Cover"
           ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -623,6 +923,19 @@
           "keywords": [
             "Anti-Chaos 2+",
             "Precision"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
           ]
         },
         {
@@ -701,6 +1014,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -766,6 +1092,19 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -859,6 +1198,30 @@
             "Ignores Cover",
             "Indirect Fire"
           ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -923,6 +1286,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -987,6 +1363,32 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -1091,6 +1493,30 @@
           "keywords": [
             "Melta 2",
             "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
           ]
         }
       ],
@@ -1223,62 +1649,6 @@
       ],
       "weapons": [
         {
-          "name": "Heavy Bolter",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Mortifier flamer",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "n/a",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent",
-            "Twin-Linked"
-          ]
-        },
-        {
-          "name": "Heavy Bolter",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Mortifier flamer",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "n/a",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent",
-            "Twin-Linked"
-          ]
-        },
-        {
           "name": "Twin Penitent Buzz-Blades",
           "type": "Melee",
           "range": "Melee",
@@ -1330,6 +1700,34 @@
           "damage": "1",
           "keywords": [
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Heavy Bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Mortifier flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "n/a",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent",
+            "Twin-Linked"
           ]
         }
       ],
@@ -1383,6 +1781,32 @@
       ],
       "weapons": [
         {
+          "name": "➤ Lance of Illumination - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Lance of Illumination - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
           "name": "Fidelis",
           "type": "Ranged",
           "range": "36\"",
@@ -1417,32 +1841,6 @@
           "damage": "1",
           "keywords": [
             "Blast"
-          ]
-        },
-        {
-          "name": "➤ Lance of Illumination - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "➤ Lance of Illumination - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "10",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Devastating Wounds"
           ]
         }
       ],
@@ -1500,6 +1898,30 @@
       ],
       "weapons": [
         {
+          "name": "Palatine blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
           "name": "➤ Plasma pistol - supercharge",
           "type": "Ranged",
           "range": "12\"",
@@ -1525,17 +1947,6 @@
           "keywords": [
             "Pistol"
           ]
-        },
-        {
-          "name": "Palatine blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -1614,6 +2025,28 @@
           ]
         },
         {
+          "name": "Paragon War Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon War Mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Heavy Bolter",
           "type": "Ranged",
           "range": "36\"",
@@ -1640,101 +2073,31 @@
           ]
         },
         {
-          "name": "Paragon Storm Bolters",
+          "name": "Ministorum heavy flamer",
           "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "3+",
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": [
-            "Rapid Fire 2",
-            "Twin-Linked"
+            "Pistol"
           ]
-        },
-        {
-          "name": "Paragon Grenade Launchers",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "3+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "D3",
-          "keywords": [
-            "Twin-Linked"
-          ]
-        },
-        {
-          "name": "Heavy Bolter",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Sustained Hits 1"
-          ]
-        },
-        {
-          "name": "Multi-melta",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 9,
-          "armorPenetration": -4,
-          "damage": "D6",
-          "keywords": [
-            "Melta 2"
-          ]
-        },
-        {
-          "name": "Paragon War Blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Paragon War Mace",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 12,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Paragon War Blade",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Paragon War Mace",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 12,
-          "armorPenetration": -1,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1922,20 +2285,6 @@
           ]
         },
         {
-          "name": "Zealot's vindictor",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent"
-          ]
-        },
-        {
           "name": "Power weapon",
           "type": "Melee",
           "range": "Melee",
@@ -1948,14 +2297,17 @@
         },
         {
           "name": "Zealot's vindictor",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
           "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": true,
@@ -2008,7 +2360,196 @@
           "description": "Each time a model in this unit makes a ranged attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. If such an attack targets an enemy unit that has destroyed one or more ^^**Adepta Sororitas^^** units from your army during the battle, add 1 to the Hit roll and add 1 to the Wound roll as well."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Heavy",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2081,16 +2622,27 @@
           ]
         },
         {
-          "name": "The Ardent Blade",
+          "name": "Power Weapon",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -3,
-          "damage": "2",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Bolt Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": [
-            "Devastating Wounds"
+            "Pistol"
           ]
         }
       ],
@@ -2144,7 +2696,45 @@
           "description": "At the start of your Command phase, this model regains 1 lost wound."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2284,6 +2874,17 @@
       "abilities": [],
       "weapons": [
         {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Bolt Pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -2295,17 +2896,6 @@
           "keywords": [
             "Pistol"
           ]
-        },
-        {
-          "name": "Power Weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2359,6 +2949,17 @@
       ],
       "weapons": [
         {
+          "name": "Dozer Ram",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Repressor twin heavy flamer",
           "type": "Ranged",
           "range": "12\"",
@@ -2388,15 +2989,30 @@
           ]
         },
         {
-          "name": "Dozer Ram",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 7,
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
         }
       ],
       "isLeader": false,
@@ -2473,6 +3089,21 @@
           "keywords": []
         },
         {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
           "name": "Holy Eviscerator",
           "type": "Melee",
           "range": "Melee",
@@ -2532,19 +3163,7 @@
           "description": "If a model from your army with the Leader ability can be attached to a BATTLE SISTERS SQUAD, it can be attached to this unit instead."
         }
       ],
-      "weapons": [
-        {
-          "name": "Power Weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        }
-      ],
+      "weapons": [],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2650,6 +3269,21 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -2711,6 +3345,32 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
           "name": "Holy fire",
           "type": "Ranged",
           "range": "12\"",
@@ -2766,36 +3426,10 @@
           ]
         },
         {
-          "name": "Holy fire",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Ignores Cover",
-            "One Shot",
-            "Torrent"
-          ]
-        },
-        {
-          "name": "Close combat weapon",
+          "name": "Sanctifier melee weapon",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
+          "attacks": "3",
           "skill": "3+",
           "strength": 3,
           "armorPenetration": 0,
@@ -2829,15 +3463,18 @@
           ]
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "3+",
-          "strength": 3,
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -2904,6 +3541,64 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Condemnor bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-PSYKER 4+",
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Null mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-PSYKER 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
         {
           "name": "Blessed sword",
           "type": "Melee",
@@ -2982,7 +3677,387 @@
           "description": "This model can be attached to the following units: ^^**Battle Sisters Squad, Celestian Sacresants, Dominion Squad, Retributor Squad, Sisters Novitiate Squad**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Autogun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Brazier of holy fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hallowed mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hallowed chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Blessed blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Holy eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Neural whips",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Paragon war blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon war mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Blessed polearm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Paragon grenade launchers",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Paragon storm bolters",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3032,7 +4107,387 @@
           "description": "This model can be attached to the following units: ^^**Battle Sisters Squad, Celestian Sacresants, Dominion Squad, Retributor Squad, Sisters Novitiate Squad**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Autogun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Brazier of holy fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hallowed mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hallowed chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Blessed blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Holy eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Neural whips",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Paragon war blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon war mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Blessed polearm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Paragon grenade launchers",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Paragon storm bolters",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3084,7 +4539,387 @@
           "description": "This model can be attached to the following units: ^^**Paragon Warsuits**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D3",
+          "keywords": [
+            "Melta 2",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Ministorum hand flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Artificer-crafted storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Autogun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Brazier of holy fire",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "One Shot",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Condemnor boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Psyker 2+",
+            "Devastating Wounds",
+            "Precision",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Ministorum flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hallowed mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hallowed chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Blessed blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Holy eviscerator",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Neural whips",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Paragon war blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon war mace",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Blessed polearm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Paragon grenade launchers",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Paragon storm bolters",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3185,6 +5020,20 @@
           "damage": "1",
           "keywords": [
             "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Ministorum heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
           ]
         }
       ],

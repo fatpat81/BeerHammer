@@ -559,12 +559,6 @@ export default function BattleModeConsolePage() {
             unitsList.map(unit => {
               const isExpanded = expandedUnitId === unit.instanceId;
 
-              // Filter weapons based on active phase
-              const phaseWeapons = unit.weapons.filter((w: any) => {
-                if (activePhase === 'SHOOTING') return w.type === 'Ranged';
-                if (activePhase === 'FIGHT') return w.type === 'Melee';
-                return false; // Command, Movement, Charge hide weapons per specification
-              });
 
               // Filter stratagems matching unit keywords AND active phase (or requiredKeywords: [])
               const eligibleStratagems = CORE_STRATAGEMS.filter(strat => {
@@ -677,47 +671,103 @@ export default function BattleModeConsolePage() {
                         </div>
                       </div>
 
-                      {/* Phase-Specific Weapons (Shooting = Ranged only, Fight = Melee only, Others = None) */}
-                      {phaseWeapons.length > 0 && (
+                      {/* Weapon Profiles (Characteristics displayed in EACH phase) */}
+                      {unit.weapons && unit.weapons.length > 0 && (
                         <div style={{ marginBottom: '1.25rem' }}>
-                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem' }}>
-                            {activePhase === 'SHOOTING' ? '🎯 Ranged Weapons' : '⚔ Melee Weapons'}:
+                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>Weapons & Profiles ({unit.weapons.length}):</span>
+                            <span style={{ fontSize: '0.65rem', color: '#94A3B8' }}>
+                              {activePhase === 'SHOOTING' ? '🎯 Shooting Phase Focus' : activePhase === 'FIGHT' || activePhase === 'CHARGE' ? '⚔ Melee Phase Focus' : 'Full Armament'}
+                            </span>
                           </div>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                            {phaseWeapons.map((w: any, idx: number) => (
-                              <div
-                                key={idx}
-                                style={{
-                                  padding: '0.6rem 0.85rem',
-                                  background: '#0F172A',
-                                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                                  borderRadius: '6px',
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                  alignItems: 'center',
-                                  flexWrap: 'wrap',
-                                  gap: '0.5rem',
-                                }}
-                              >
-                                <div>
-                                  <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.displayName}</span>
-                                  {w.keywords && w.keywords.length > 0 && (
-                                    <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
-                                      {w.keywords.join(', ')}
-                                    </div>
-                                  )}
-                                </div>
-                                <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem' }}>
-                                  <span>Range: <strong>{w.range}</strong></span>
-                                  <span>A: <strong>{w.attacks}</strong></span>
-                                  <span>{w.type === 'Ranged' ? 'BS' : 'WS'}: <strong>{w.skill}</strong></span>
-                                  <span>S: <strong>{w.strength}</strong></span>
-                                  <span>AP: <strong>{w.armorPenetration}</strong></span>
-                                  <span>D: <strong>{w.damage}</strong></span>
-                                </div>
+
+                          {/* Ranged Weapons */}
+                          {unit.weapons.filter((w: any) => w.type === 'Ranged').length > 0 && (
+                            <div style={{ marginBottom: '0.6rem' }}>
+                              <div style={{ fontSize: '0.65rem', fontWeight: 800, color: activePhase === 'SHOOTING' ? '#38BDF8' : '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>
+                                🎯 Ranged Weapons {activePhase === 'SHOOTING' && <span style={{ color: '#38BDF8' }}>● Active</span>}
                               </div>
-                            ))}
-                          </div>
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                {unit.weapons.filter((w: any) => w.type === 'Ranged').map((w: any, idx: number) => (
+                                  <div
+                                    key={idx}
+                                    style={{
+                                      padding: '0.55rem 0.85rem',
+                                      background: activePhase === 'SHOOTING' ? 'rgba(56, 189, 248, 0.08)' : '#0F172A',
+                                      border: activePhase === 'SHOOTING' ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                                      borderRadius: '6px',
+                                      display: 'flex',
+                                      justifyContent: 'space-between',
+                                      alignItems: 'center',
+                                      flexWrap: 'wrap',
+                                      gap: '0.5rem',
+                                    }}
+                                  >
+                                    <div>
+                                      <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.displayName}</span>
+                                      {w.keywords && w.keywords.length > 0 && (
+                                        <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
+                                          {w.keywords.join(', ')}
+                                        </div>
+                                      )}
+                                    </div>
+                                    <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
+                                      <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
+                                      <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
+                                      <span>BS: <strong style={{ color: '#38BDF8' }}>{w.skill}</strong></span>
+                                      <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
+                                      <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
+                                      <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Melee Weapons */}
+                          {unit.weapons.filter((w: any) => w.type === 'Melee').length > 0 && (
+                            <div>
+                              <div style={{ fontSize: '0.65rem', fontWeight: 800, color: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? '#F97316' : '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>
+                                ⚔ Melee Weapons {(activePhase === 'FIGHT' || activePhase === 'CHARGE') && <span style={{ color: '#F97316' }}>● Active</span>}
+                              </div>
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                {unit.weapons.filter((w: any) => w.type === 'Melee').map((w: any, idx: number) => (
+                                  <div
+                                    key={idx}
+                                    style={{
+                                      padding: '0.55rem 0.85rem',
+                                      background: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? 'rgba(249, 115, 22, 0.08)' : '#0F172A',
+                                      border: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                                      borderRadius: '6px',
+                                      display: 'flex',
+                                      justifyContent: 'space-between',
+                                      alignItems: 'center',
+                                      flexWrap: 'wrap',
+                                      gap: '0.5rem',
+                                    }}
+                                  >
+                                    <div>
+                                      <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.displayName}</span>
+                                      {w.keywords && w.keywords.length > 0 && (
+                                        <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
+                                          {w.keywords.join(', ')}
+                                        </div>
+                                      )}
+                                    </div>
+                                    <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
+                                      <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
+                                      <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
+                                      <span>WS: <strong style={{ color: '#F97316' }}>{w.skill}</strong></span>
+                                      <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
+                                      <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
+                                      <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
 

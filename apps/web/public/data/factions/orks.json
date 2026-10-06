@@ -6,12 +6,6 @@
   "totalDatasheets": 65,
   "detachments": [
     {
-      "id": "73c2-d0ed-3c7e-7e17",
-      "name": "Detachment",
-      "rules": [],
-      "enhancements": []
-    },
-    {
       "id": "496c-ddb9-3e71-e0b3",
       "name": "War Horde",
       "rules": [
@@ -41,6 +35,383 @@
           "name": "Follow Me Ladz",
           "points": 20,
           "description": "**ORKS** model only. This unit has +2\" **M**."
+        }
+      ]
+    },
+    {
+      "id": "80e6-2190-9767-a7ed",
+      "name": "Da Big Hunt",
+      "rules": [
+        "Da Hunt Is On"
+      ],
+      "enhancements": [
+        {
+          "id": "3000-401c-cb1c-b4dd",
+          "name": "It Came From Da Drops",
+          "points": 20,
+          "description": "**BEASTBOSS ON SQUIGOSAUR** model only. This model has +1 **T**."
+        },
+        {
+          "id": "3fee-786-514d-b129",
+          "name": "Glory Hog",
+          "points": 25,
+          "description": "**BEAST SNAGGA** model only. When this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to declare a charge**."
+        }
+      ]
+    },
+    {
+      "id": "807c-9732-5465-5ca5",
+      "name": "Dread Mob",
+      "rules": [
+        "Try Dat Button!"
+      ],
+      "enhancements": [
+        {
+          "id": "f3f0-a73b-d062-9dc6",
+          "name": "Cybork Boosta",
+          "points": 10,
+          "description": "**BIG MEK/MEK** model only. This model has +2\" **M**."
+        },
+        {
+          "id": "3924-3f8-745d-7097",
+          "name": "Dreadherder",
+          "points": 30,
+          "description": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit's attacks can re-roll **hit rolls** of 1 until the end of the turn."
+        }
+      ]
+    },
+    {
+      "id": "795f-b961-9504-bd08",
+      "name": "Green Tide",
+      "rules": [
+        "Mob-handed Brutality"
+      ],
+      "enhancements": [
+        {
+          "id": "647-4242-1022-5d0a",
+          "name": "Ferocious Show-off",
+          "points": 15,
+          "description": "**ORKS INFANTRY** model only. This model's melee attacks have:\n- +1 **A**.\n- <ins>Or:</ins> If this unit has 11+ models, +2 **A**."
+        },
+        {
+          "id": "a475-b136-890b-c69e",
+          "name": "'Ardboyz",
+          "points": 25,
+          "description": "**BOYZ** unit only. This unit has 4+ **Sv**."
+        }
+      ]
+    },
+    {
+      "id": "4b17-a73a-7a0a-a265",
+      "name": "Bully Boyz",
+      "rules": [
+        "Displays of Savagery"
+      ],
+      "enhancements": [
+        {
+          "id": "b44f-e2fb-29d5-72f5",
+          "name": "Tellyporta Boss",
+          "points": 20,
+          "description": "**MEGA ARMOUR** model only. This unit (excluding **VEHICLE** units) has **Deep Strike**."
+        },
+        {
+          "id": "1831-efc5-03fd-25c1",
+          "name": "Wimp-kickaz",
+          "points": 15,
+          "description": "**NOBZ** unit only. When an enemy unit **engaged** with this unit is selected to make a **fall-back move**:\n- That enemy unit must select the **desperate escape** mode.\n- If this unit is **riled up**, that enemy unit has -1 to the **hazard rolls** made for that **desperate escape**."
+        }
+      ]
+    },
+    {
+      "id": "b404-44f-e9b4-7fe2",
+      "name": "Kult of Speed",
+      "rules": [
+        "Adrenaline Junkies"
+      ],
+      "enhancements": [
+        {
+          "id": "3ed-27a1-e50f-f0da",
+          "name": "Competitive Streak",
+          "points": 15,
+          "description": "**DEFFKILLA WARTRIKE** model only. This unit can re-roll **charge rolls**."
+        },
+        {
+          "id": "5ecd-f403-5178-fd54",
+          "name": "Smoky Gubbinz",
+          "points": 10,
+          "description": "**SPEED FREEKS** unit only (excluding **AIRCRAFT** units). When an attack targets a unit that is not **fully visible** to the attacking model because of a model in this unit, the target has the **benefit of cover** against that attack."
+        }
+      ]
+    },
+    {
+      "id": "fdd5-9868-a9ee-e9f1",
+      "name": "Taktikal Brigade",
+      "rules": [
+        "Suspiciously Well Organised"
+      ],
+      "enhancements": [
+        {
+          "id": "2381-390e-5e7d-0426",
+          "name": "Kill Kommanda",
+          "points": 20,
+          "description": "**BIG MEK/WARBOSS INFANTRY** model only. While this unit is part of an attached unit, this model has:\n- **Infiltrators**.\n- **Stealth**."
+        },
+        {
+          "id": "3d0e-9ca8-451d-5dc2",
+          "name": "Throat-slittas",
+          "points": 15,
+          "description": "**KOMMANDOS/STORMBOYZ** unit only. This unit's melee attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]**."
+        }
+      ]
+    },
+    {
+      "id": "09d3-a08a-0671-fe86",
+      "name": "Ramship Raiders",
+      "rules": [
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Forming Boarding Squads",
+        "Belligerent Boarders"
+      ],
+      "enhancements": [
+        {
+          "id": "738e-ed10-bda6-e042",
+          "name": "Living Battering Ram",
+          "points": 0,
+          "description": "Each time the bearer attempts to operate a closed Hatchway, your opponent cannot try to prevent it. In addition, each time the bearer opens a Hatchway, each enemy unit within 6\" of that Hatchway and wholly on the opposite side of it from the bearer must take a Battle-shock test."
+        },
+        {
+          "id": "e2d9-7229-fe69-b844",
+          "name": "Scarred Brute",
+          "points": 0,
+          "description": "The bearer has the Feel No Pain 5+ ability."
+        }
+      ]
+    },
+    {
+      "id": "726a-fa36-dac2-0b11",
+      "name": "Kaptin Killers",
+      "rules": [
+        "Mustering A Boarding Patrol",
+        "Rules Adaptions",
+        "Comin' Through"
+      ],
+      "enhancements": [
+        {
+          "id": "7d3f-9228-cee1-d300",
+          "name": "Tellyporta",
+          "points": 0,
+          "description": "In the Deploy Armies step, select one **^^Meganobz^^** unit from your army. Until the end of the battle, models in that unit have the Deep Strike ability."
+        },
+        {
+          "id": "1a94-5cd1-ee3b-3805",
+          "name": "Gnasher Squig Crates",
+          "points": 0,
+          "description": "**^^Warboss^^** model only. In your Command phase, you can select one **^^Nobz^^** or **^^Meganobz^^** unit from your army (excluding Battle-shocked units) that is within 6\" of the bearer and is within range of an objective marker. If there are no enemy models within range of that objective marker, it is Secured by your army."
+        }
+      ]
+    },
+    {
+      "id": "63cc-721f-b263-9d4a",
+      "name": "Blitz Brigade",
+      "rules": [
+        "Unstoppable Momentum"
+      ],
+      "enhancements": [
+        {
+          "id": "49a8-06a7-c692-fc7b",
+          "name": "Targetin' Gizmos",
+          "points": 25,
+          "description": "**WAGON** unit only. While a **BIG MEK** model is embarked within this unit:\n- This unit's ranged attacks have **[IGNORES COVER]**.\n- If this unit is **riled up**, this unit's ranged attacks have **[SUSTAINED HITS 1]**."
+        },
+        {
+          "id": "637d-28e4-6831-aa7a",
+          "name": "Boss Boomer",
+          "points": 10,
+          "description": "**WAGON** unit only. While a **WARBOSS** model is embarked within this unit, this unit has that **WARBOSS** model's **Intimidating Motivation/Keep Huntin'** ability."
+        }
+      ]
+    },
+    {
+      "id": "7b06-be3a-9754-1bd4",
+      "name": "Runt Swarm",
+      "rules": [
+        "Sneaky Little Gitz"
+      ],
+      "enhancements": [
+        {
+          "id": "06da-d011-874b-bf75",
+          "name": "Minefield Detail",
+          "points": 10,
+          "description": "**GRETCHIN** unit only. While this unit is not embarked, this unit has Scouts 6\"."
+        },
+        {
+          "id": "8ba4-a299-ac96-fbc5",
+          "name": "Extra Sneaky",
+          "points": 10,
+          "description": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
+        }
+      ]
+    },
+    {
+      "id": "fca1-ecdf-4e4a-df41",
+      "name": "Shoota Boyz",
+      "rules": [
+        "Dakka! Dakka! Dakka!"
+      ],
+      "enhancements": [
+        {
+          "id": "10f9-eb42-632e-3a6f",
+          "name": "Supa-glowy Fing",
+          "points": 25,
+          "description": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+}**\n\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**."
+        },
+        {
+          "id": "8128-b57a-74a5-c36b",
+          "name": "Targetin' Squigs",
+          "points": 20,
+          "description": "**BIG MEK/BIGBOSS/WARBOSS** model only. This unit's ranged attacks (excluding **[TORRENT]** attacks) have +3\" **R**."
+        }
+      ]
+    },
+    {
+      "id": "f782-e3f1-c132-fe52",
+      "name": "Wreckas",
+      "rules": [
+        "Wreckin' and Lootin'"
+      ],
+      "enhancements": [
+        {
+          "id": "7d3c-eecc-1311-4e7e",
+          "name": "Kaptin's Hat",
+          "points": 25,
+          "description": "**BIG MEK/WARBOSS INFANTRY** model only. When both players have deployed their armies, you can redeploy up to three friendly **ORKS INFANTRY** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**."
+        },
+        {
+          "id": "217d-4d10-bad0-1d6e",
+          "name": "Supa-snazz Dakka",
+          "points": 25,
+          "description": "**FLASH GITZ** unit only. This unit's Snazzgun weapons have **[RAPID FIRE 1]**."
+        }
+      ]
+    },
+    {
+      "id": "9ae4-56d1-1fd8-adcf",
+      "name": "Madcap Meks",
+      "rules": [
+        "Unpredictable Genius"
+      ],
+      "enhancements": [
+        {
+          "id": "e6ce-9af9-9883-c269",
+          "name": "Mekwaaagh! Mastermind",
+          "points": 30,
+          "description": "**BIG MEK** model only. This unit is **riled up**."
+        },
+        {
+          "id": "685d-9a51-d750-261c",
+          "name": "Enhanced Runt-maw",
+          "points": 10,
+          "description": "**BIG MEK WITH SHOKK ATTACK GUN** model only. When this unit has shot, select one enemy unit hit by those attacks. That unit is **infested with Snotlings** until the start of your next turn.\n- While an enemy unit is **infested with Snotlings**, that unit has -1 to **leadership rolls**."
+        },
+        {
+          "id": "bc26-0d3f-87e6-1e9f",
+          "name": "Temperamental Shokka",
+          "points": 20,
+          "description": "**BIG MEK WITH SHOKK ATTACK GUN** model only. In your Shooting phase, when this unit is **selected to shoot**, you can roll one D6:\n- On a 1, this model's Shokk Attack Gun weapon has **[TORRENT]**, and when this unit has shot, this model is **destroyed**.\n- On a 2-5, this model's Shokk Attack Gun weapon has +1 **A**.\n- One a 6, this model's Shokk Attack Gun wepon has **SUSTAINED HITS 2]**."
+        }
+      ]
+    },
+    {
+      "id": "7c3c-fb9c-8689-8c7a",
+      "name": "Flyboyz",
+      "rules": [
+        "Skyborne Loons"
+      ],
+      "enhancements": [
+        {
+          "id": "aa88-0f70-fb17-5d4a",
+          "name": "Impulsive Recon",
+          "points": 15,
+          "description": "**ORKS AIRCRAFT** unit only. In your first Movement phase, this unit can make an **ingress move**."
+        },
+        {
+          "id": "4f3f-f78f-1b26-0189",
+          "name": "Flyboss",
+          "points": 20,
+          "description": "**ORKS AIRCRAFT** unit only.\n- This unit has **CHARACTER**.\n- When this unit ends an **ingress move**, each friendly **ORKS AIRCRAFT/DEFFKOPTAS** unit within 6\" of this unit is **riled up** until the start of your next turn."
+        }
+      ]
+    },
+    {
+      "id": "09b2-b286-7608-d613",
+      "name": "Brute Bosses",
+      "rules": [
+        "'Ard As Nails"
+      ],
+      "enhancements": [
+        {
+          "id": "1a5d-7811-73df-2724",
+          "name": "Brutal But Kunnin'",
+          "points": 30,
+          "description": "**WARBOSS** model only. This model's melee attacks have +1 **D**."
+        },
+        {
+          "id": "c26f-7506-afbf-4b71",
+          "name": "Surly As A Squiggoth",
+          "points": 25,
+          "description": "**INFANTRY WARBOSS** model only. (Once per battle, per army) At the end of phase in which this model is **destroyed**, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining."
+        },
+        {
+          "id": "1776-bf60-6198-7d1d",
+          "name": "Da Gobshot Thunderbuss",
+          "points": 20,
+          "description": ""
+        },
+        {
+          "id": "65f7-96e2-592c-819d",
+          "name": "Blitzboss",
+          "points": 20,
+          "description": "**WARBOSS** model only. A **TRANSPORT** unit (excluding **WALKER** units) this unit is embarked within has:\n- +2\" **M**.\n- 5+ **InSv**."
+        },
+        {
+          "id": "55ac-3d8b-443f-ff63",
+          "name": "Proper Killy",
+          "points": 15,
+          "description": "**WARBOSS** model only. This model can re-roll **hit rolls** of 1."
+        },
+        {
+          "id": "cdbb-d4b7-580e-0413",
+          "name": "Morgog's Finkin' Cap",
+          "points": 50,
+          "description": "**WARBOSS** model only. (Once per battle, per army) At the end of your opponent's Movement phase, if this unit is **unengaged**, this unit can make a **normal move** of:\n- Up to D6\".\n- If this unit is **riled up**, you can re-roll that D6."
+        }
+      ]
+    },
+    {
+      "id": "1b34-af6b-8900-61b5",
+      "name": "Wurrband",
+      "rules": [
+        "Powers of Da Waaagh!"
+      ],
+      "enhancements": [
+        {
+          "id": "e336-1cf0-5c14-2a2d",
+          "name": "Warphead",
+          "points": 25,
+          "description": "**ORKS PSYKER** model only. This model:\n- Has **psyker level 2**.\n- Has **Deadly Demise D6**.\n- Can re-roll **psychic rolls**."
+        },
+        {
+          "id": "f2d7-e5cc-ac0a-9a47",
+          "name": "Da Krunch",
+          "points": 10,
+          "description": ""
+        },
+        {
+          "id": "d7a1-b719-0a67-2b10",
+          "name": "'Eadbanger",
+          "points": 15,
+          "description": ""
         }
       ]
     }
@@ -216,6 +587,47 @@
           "keywords": [
             "CLEAVE 1"
           ]
+        },
+        {
+          "name": "Grabbin' Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Wreckin' Ball",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "CLEAVE 2",
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -261,6 +673,55 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Thump Gun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
+          ]
+        },
+        {
+          "name": "➤ Choppa - Standard",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Choppa - Hunter (Hunter: MONSTER/VEHICLE)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
         {
           "name": "Power Snappa",
           "type": "Melee",
@@ -324,6 +785,19 @@
       ],
       "weapons": [
         {
+          "name": "Beast Snagga Klaw and Beastchoppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "SUSTAINED HITS 2: MONSTER/VEHICLE"
+          ]
+        },
+        {
           "name": "Shoota",
           "type": "Ranged",
           "range": "18\"",
@@ -335,19 +809,6 @@
           "keywords": [
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "RAPID FIRE 1"
-          ]
-        },
-        {
-          "name": "Beast Snagga Klaw and Beastchoppa",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "SUSTAINED HITS 2: MONSTER/VEHICLE"
           ]
         }
       ],
@@ -436,6 +897,33 @@
           "damage": "2",
           "keywords": [
             "CLEAVE 1"
+          ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Thump Gun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
           ]
         }
       ],
@@ -570,6 +1058,41 @@
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "RAPID FIRE 1"
           ]
+        },
+        {
+          "name": "Kustom Mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "Killsaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -726,6 +1249,20 @@
           "armorPenetration": -3,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -770,7 +1307,47 @@
           "description": "At the end of your opponent’s Fight phase, select one **visible** enemy unit (excluding **Lone Operative** units) within 24\" of this unit, and roll one D6 for that unit:\n- On a 1-3, that enemy unit suffers D3 **mortal wounds**.\n- On a 4-5, that enemy unit suffers 3 **mortal wounds**.\n- On a 6, that enemy unit suffers D3+3 **mortal wounds**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured Impact",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Dual Supa-shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "8",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 4"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -825,6 +1402,20 @@
       ],
       "weapons": [
         {
+          "name": "Mork’s Teef",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "ANTI-INFANTRY 2+",
+            "PRECISION"
+          ]
+        },
+        {
           "name": "Slugga",
           "type": "Ranged",
           "range": "12\"",
@@ -836,20 +1427,6 @@
           "keywords": [
             "CLOSE-QUARTERS",
             "LETHAL HITS: non-MONSTER/VEHICLE",
-            "PRECISION"
-          ]
-        },
-        {
-          "name": "Mork’s Teef",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "ANTI-INFANTRY 2+",
             "PRECISION"
           ]
         }
@@ -919,6 +1496,20 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
         }
       ],
       "isLeader": true,
@@ -974,6 +1565,97 @@
       ],
       "weapons": [
         {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
           "name": "Kustom Choppa",
           "type": "Melee",
           "range": "Melee",
@@ -983,6 +1665,84 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "➤ Kombi-skorcha - Skorcha",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
+          "name": "➤ Kombi-skorcha - Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
+        },
+        {
+          "name": "➤ Kombi-rokkit - Busta Rokkit",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Kombi-rokkit - Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
         },
         {
           "name": "Big Choppa",
@@ -1036,7 +1796,95 @@
           "description": "This unit's attacks that target a unit within 6\" of this unit can re-roll **wound rolls** of 1."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Cuttin’ Flames",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Kustom mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Gun Stock and Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1108,6 +1956,31 @@
             "BLAST 2",
             "IGNORES COVER"
           ]
+        },
+        {
+          "name": "Dual Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 4"
+          ]
+        },
+        {
+          "name": "Armoured Impact",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1152,7 +2025,33 @@
           "description": "In your Shooting phase, this unit's ranged attacks that target a unit (excluding **FLY** units) have +1 to **hit rolls**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured Impact",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Dual Supa-shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "8",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 4"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1205,6 +2104,84 @@
           "damage": "3",
           "keywords": [
             "CLEAVE 1"
+          ]
+        },
+        {
+          "name": "Extra Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Kustom Mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Skorcha",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
           ]
         }
       ],
@@ -1275,20 +2252,6 @@
           ]
         },
         {
-          "name": "Snagga Klaw",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "5+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "ASSAULT",
-            "PRECISION"
-          ]
-        },
-        {
           "name": "➤ Killa Jet - Burna",
           "type": "Melee",
           "range": "Melee",
@@ -1317,15 +2280,16 @@
         },
         {
           "name": "Snagga Klaw",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
           "strength": 7,
           "armorPenetration": -2,
           "damage": "2",
           "keywords": [
-            "CLEAVE 2"
+            "ASSAULT",
+            "PRECISION"
           ]
         }
       ],
@@ -1373,7 +2337,60 @@
           "description": "In your Shooting phase, if any of the following apply, this unit's ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Snazzgun - Cutta",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "D3+2",
+          "keywords": [
+            "HAZARDOUS",
+            "MELTA 2"
+          ]
+        },
+        {
+          "name": "➤ Snazzgun - Dakka",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "SUSTAINED HITS 1"
+          ]
+        },
+        {
+          "name": "➤ Snazzgun - Kill Shot",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1431,6 +2448,21 @@
       ],
       "weapons": [
         {
+          "name": "Adamantine 'Eadbutt",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -2,
+          "damage": "D3+3",
+          "keywords": [
+            "DEVASTATING WOUNDS",
+            "EXTRA ATTACKS",
+            "PRECISION"
+          ]
+        },
+        {
           "name": "➤ Mork’s Roar - Point Blank",
           "type": "Ranged",
           "range": "9\"",
@@ -1456,21 +2488,6 @@
           "keywords": [
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "RAPID FIRE 4"
-          ]
-        },
-        {
-          "name": "Adamantine 'Eadbutt",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 14,
-          "armorPenetration": -2,
-          "damage": "D3+3",
-          "keywords": [
-            "DEVASTATING WOUNDS",
-            "EXTRA ATTACKS",
-            "PRECISION"
           ]
         },
         {
@@ -1570,6 +2587,58 @@
           "keywords": [
             "CLEAVE 3"
           ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Skorcha",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
+          "name": "Dual Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 4"
+          ]
         }
       ],
       "isLeader": false,
@@ -1626,6 +2695,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Grot Blasta",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
         }
       ],
       "isLeader": false,
@@ -1674,7 +2756,76 @@
           "description": "This unit's Butcha Boyz weapon has +2 **A** for each model embarked within this unit (to a maximum of +22 **A**)."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "’Eavy Lobba",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "BLAST 2",
+            "INDIRECT FIRE"
+          ]
+        },
+        {
+          "name": "Butcha Boyz",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
+          ]
+        },
+        {
+          "name": "Savage Horns and Hooves",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "EXTRA ATTACKS",
+            "LANCE"
+          ]
+        },
+        {
+          "name": "Saw Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "CLEAVE 1",
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Stikka Kannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 2+"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -1754,6 +2905,31 @@
             "HEAVY",
             "SUSTAINED HITS 1"
           ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -1816,6 +2992,74 @@
             "PSYCHIC",
             "TORRENT"
           ]
+        },
+        {
+          "name": "’Eavy Lobba",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "BLAST 2",
+            "INDIRECT FIRE"
+          ]
+        },
+        {
+          "name": "Butcha Boyz",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
+          ]
+        },
+        {
+          "name": "Savage Horns and Hooves",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "EXTRA ATTACKS",
+            "LANCE"
+          ]
+        },
+        {
+          "name": "Saw Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "CLEAVE 1",
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Stikka Kannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 2+"
+          ]
         }
       ],
       "isLeader": false,
@@ -1861,6 +3105,17 @@
       ],
       "weapons": [
         {
+          "name": "Kan Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Kan Blasta - Kill Shot",
           "type": "Ranged",
           "range": "24\"",
@@ -1899,17 +3154,6 @@
             "IGNORES COVER",
             "SUSTAINED HITS 1"
           ]
-        },
-        {
-          "name": "Kan Klaw",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1962,6 +3206,45 @@
       ],
       "weapons": [
         {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
           "name": "Breacha Ram",
           "type": "Melee",
           "range": "Melee",
@@ -1971,6 +3254,68 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Big Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "CLEAVE 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -2011,7 +3356,84 @@
           "description": "- This unit's ranged attacks can re-roll **hit rolls** of 1.\n- This unit's ranged attacks that target a unit within range of an **objective** can re-roll **hit rolls**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Kustom Mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Gun Stock and Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Deffgun",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "6+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "HEAVY",
+            "RAPID FIRE 1"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2063,7 +3485,49 @@
           "description": "This model can be attached to the following units:\n- **BOYZ**\n- **BURNA BOYZ**\n- **LOOTAS**\n- **NOBZ**\n- **TANKBUSTAS**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "’Urty syringe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "ANTI-INFANTRY 4+",
+            "DEVASTATING WOUNDS: INFANTRY",
+            "EXTRA ATTACKS",
+            "PRECISION"
+          ]
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**BOYZ**",
@@ -2191,6 +3655,19 @@
       ],
       "weapons": [
         {
+          "name": "Klaw of Mork",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -3,
+          "damage": "6",
+          "keywords": [
+            "CLEAVE 2"
+          ]
+        },
+        {
           "name": "Kustom Mega-zappa",
           "type": "Ranged",
           "range": "36\"",
@@ -2219,16 +3696,40 @@
           ]
         },
         {
-          "name": "Klaw of Mork",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 18,
-          "armorPenetration": -3,
-          "damage": "6",
+          "name": "Kustom Mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
           "keywords": [
-            "CLEAVE 2"
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
           ]
         }
       ],
@@ -2322,6 +3823,19 @@
           "keywords": [
             "CLEAVE 1"
           ]
+        },
+        {
+          "name": "Thump Gun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
+          ]
         }
       ],
       "isLeader": false,
@@ -2379,6 +3893,20 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
         }
       ],
       "isLeader": false,
@@ -2658,6 +4186,60 @@
       ],
       "weapons": [
         {
+          "name": "Big Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+",
+            "CLEAVE 2+"
+          ]
+        },
+        {
+          "name": "Squig Jaws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Stikka (melee)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+"
+          ]
+        },
+        {
           "name": "Stikka (ranged)",
           "type": "Ranged",
           "range": "9\"",
@@ -2682,33 +4264,6 @@
           "damage": "1",
           "keywords": [
             "ASSAULT"
-          ]
-        },
-        {
-          "name": "Big Choppa",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "ANTI-MONSTER/VEHICLE 4+",
-            "CLEAVE 2+"
-          ]
-        },
-        {
-          "name": "Stikka (melee)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "ANTI-MONSTER/VEHICLE 4+"
           ]
         }
       ],
@@ -2775,6 +4330,19 @@
           ]
         },
         {
+          "name": "Mega-choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 24,
+          "armorPenetration": -4,
+          "damage": "10",
+          "keywords": [
+            "CLEAVE 4"
+          ]
+        },
+        {
           "name": "➤ Supa-gatler - Point Blank",
           "type": "Ranged",
           "range": "12\"",
@@ -2816,16 +4384,31 @@
           ]
         },
         {
-          "name": "Mega-choppa",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 24,
-          "armorPenetration": -4,
-          "damage": "10",
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": [
-            "CLEAVE 4"
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Twin big shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2",
+            "Twin-linked"
           ]
         }
       ],
@@ -2875,7 +4458,55 @@
           "description": "When this unit is **selected to fight**, if this unit made a **charge move** this turn, you can use this ability. If you do, this unit's melee attacks have:\n- +1 **A** and **S**.\n- **[HAZARDOUS]**."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Kustom Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2931,6 +4562,44 @@
           "damage": "1",
           "keywords": [
             "CLEAVE 1"
+          ]
+        },
+        {
+          "name": "Dual Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 4"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
           ]
         },
         {
@@ -3004,6 +4673,31 @@
       ],
       "weapons": [
         {
+          "name": "Dual Dakkagun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "ASSAULT",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Dual Kombi-rokkit - Busta Rokkit",
           "type": "Ranged",
           "range": "24\"",
@@ -3029,6 +4723,17 @@
             "ASSAULT",
             "LETHAL HITS: non-MONSTER/VEHICLE"
           ]
+        },
+        {
+          "name": "Kustom Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3105,6 +4810,73 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "➤ Kombi-skorcha - Skorcha",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
+          "name": "➤ Kombi-skorcha - Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
+        },
+        {
+          "name": "➤ Kombi-rokkit - Busta Rokkit",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Kombi-rokkit - Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 1"
+          ]
         }
       ],
       "isLeader": true,
@@ -3293,6 +5065,17 @@
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "RAPID FIRE 4"
           ]
+        },
+        {
+          "name": "Armoured Impact",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3342,6 +5125,19 @@
       ],
       "weapons": [
         {
+          "name": "Copper Staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "PSYCHIC"
+          ]
+        },
+        {
           "name": "Power Vomit",
           "type": "Ranged",
           "range": "12\"",
@@ -3355,19 +5151,6 @@
             "HAZARDOUS",
             "PSYCHIC",
             "TORRENT"
-          ]
-        },
-        {
-          "name": "Copper Staff",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "PSYCHIC"
           ]
         }
       ],
@@ -3420,6 +5203,17 @@
       ],
       "weapons": [
         {
+          "name": "Da Grabzappa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Squigstoppa",
           "type": "Ranged",
           "range": "12\"",
@@ -3433,17 +5227,6 @@
             "CLOSE-QUARTERS",
             "DEVASTATING WOUNDS: MONSTER/VEHICLE"
           ]
-        },
-        {
-          "name": "Da Grabzappa",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -3537,6 +5320,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Armoured Hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "Mega-tank Weapons",
           "type": "Ranged",
@@ -3633,17 +5427,6 @@
             "TORRENT",
             "TWIN-LINKED"
           ]
-        },
-        {
-          "name": "Armoured Hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3690,6 +5473,19 @@
       ],
       "weapons": [
         {
+          "name": "Huge tusks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "12",
+          "keywords": [
+            "Cleave 2"
+          ]
+        },
+        {
           "name": "Supa-kannon",
           "type": "Ranged",
           "range": "60\"",
@@ -3703,16 +5499,30 @@
           ]
         },
         {
-          "name": "Huge tusks",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 14,
-          "armorPenetration": -3,
-          "damage": "12",
+          "name": "➤ Kannon - shell",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6+1",
           "keywords": [
-            "Cleave 2"
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "➤ Kannon - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast 1",
+            "Rapid Fire 6"
           ]
         }
       ],
@@ -3763,6 +5573,58 @@
       ],
       "weapons": [
         {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
+          ]
+        },
+        {
+          "name": "Skorcha",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "-",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1",
+            "TORRENT"
+          ]
+        },
+        {
           "name": "➤ Tank Kannon - Tankhamma",
           "type": "Ranged",
           "range": "48\"",
@@ -3787,6 +5649,30 @@
           "keywords": [
             "BLAST 2"
           ]
+        },
+        {
+          "name": "Crushin' Bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "CLEAVE 2"
+          ]
+        },
+        {
+          "name": "Deff Rolla",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Lobba",
@@ -3829,15 +5715,20 @@
           ]
         },
         {
-          "name": "Deff Rolla",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 10,
+          "name": "Zzap Gun",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 8,
           "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
+          "damage": "4",
+          "keywords": [
+            "ANTI-MONSTER/VEHICLE 4+",
+            "DEVASTATING WOUNDS: MONSTER/VEHICLE",
+            "RAPID FIRE 2",
+            "SUSTAINED HITS 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -3905,6 +5796,55 @@
           "keywords": [
             "BLAST 2"
           ]
+        },
+        {
+          "name": "➤ Kannon - Shell",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D3+3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Kannon - Frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 1"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3993,6 +5933,20 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Dual Dakkagun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "ASSAULT",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
         }
       ],
       "isLeader": true,
@@ -4052,6 +6006,31 @@
           "armorPenetration": -2,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Kustom Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
         }
       ],
       "isLeader": false,
@@ -4147,6 +6126,44 @@
           "damage": "2",
           "keywords": [
             "Cleave 1"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "➤ Rokkit Launcha - Busta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rokkit Launcha - Blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "BLAST 2"
           ]
         }
       ],
@@ -4269,6 +6286,28 @@
       ],
       "weapons": [
         {
+          "name": "Drilla",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Power Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Kustom mega-blasta",
           "type": "Ranged",
           "range": "24\"",
@@ -4293,17 +6332,6 @@
           "keywords": [
             "ANTI-FLY 2+"
           ]
-        },
-        {
-          "name": "Drilla",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 12,
-          "armorPenetration": -3,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -4353,6 +6381,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
         }
       ],
       "isLeader": false,
@@ -4538,7 +6579,480 @@
           "description": "This model can be attached to the following units:\n- **^^Boyz^^**\n- **^^Nobz^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Twin dakkagun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Squig jaws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Traktor blasta",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "’Eadbanger",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "1",
+          "keywords": [
+            "Precision",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Snazzgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Saddlegit weapons",
+          "type": "Ranged",
+          "range": "9\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Kombi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Big shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rokkit launcha",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Eyez of Mork",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Kustom mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "Kustom mega-slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Shokk attack gun",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "D6+1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Rokkit pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Grot Blasta",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Beast Snagga klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Big choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cuttin’ flames",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Killsaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Knucklebustas",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Power snappa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Smash hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Tankhammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "’Uge choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Drilla",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Beastchoppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Weirdboy staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Attack Squig",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "’Urty syringe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "ANTI-INFANTRY 4+",
+            "DEVASTATING WOUNDS: INFANTRY",
+            "EXTRA ATTACKS",
+            "PRECISION"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Boyz^^**",
@@ -4587,7 +7101,480 @@
           "description": "This model can be attached to the following units:\n- **^^Boyz^^**\n- **^^Nobz^^**\n- **^^Gretchin^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Twin dakkagun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Squig jaws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Traktor blasta",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "’Eadbanger",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "1",
+          "keywords": [
+            "Precision",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Snazzgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Saddlegit weapons",
+          "type": "Ranged",
+          "range": "9\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Kombi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Big shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rokkit launcha",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Eyez of Mork",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Kustom mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "Kustom mega-slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Shokk attack gun",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "D6+1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Rokkit pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Grot Blasta",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Beast Snagga klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Big choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cuttin’ flames",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Killsaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Knucklebustas",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Power snappa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Smash hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Tankhammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "’Uge choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Drilla",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Beastchoppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Weirdboy staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Attack Squig",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "’Urty syringe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "ANTI-INFANTRY 4+",
+            "DEVASTATING WOUNDS: INFANTRY",
+            "EXTRA ATTACKS",
+            "PRECISION"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Boyz^^**",
@@ -4638,7 +7625,480 @@
           "description": "This model can be attached to the following units:\n- **^^Gretchin^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Twin dakkagun",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Rapid Fire 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Squig jaws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Traktor blasta",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-Fly 3+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "’Eadbanger",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "1",
+          "keywords": [
+            "Precision",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Snazzgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Saddlegit weapons",
+          "type": "Ranged",
+          "range": "9\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Kombi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Burna",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Big shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Rokkit launcha",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Eyez of Mork",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Kustom mega-blasta",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "HAZARDOUS"
+          ]
+        },
+        {
+          "name": "Kustom mega-slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "Kustom Shoota",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Shokk attack gun",
+          "type": "Ranged",
+          "range": "60\"",
+          "attacks": "D6+1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Rokkit pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Grot Blasta",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS"
+          ]
+        },
+        {
+          "name": "Beast Snagga klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Big choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cuttin’ flames",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Killsaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Knucklebustas",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Power snappa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Smash hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Tankhammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "’Uge choppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Drilla",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Beastchoppa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Weirdboy staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Power klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Attack Squig",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "’Urty syringe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "ANTI-INFANTRY 4+",
+            "DEVASTATING WOUNDS: INFANTRY",
+            "EXTRA ATTACKS",
+            "PRECISION"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Gretchin^^**"
@@ -4687,6 +8147,19 @@
       ],
       "weapons": [
         {
+          "name": "Fixit's Wrench",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
           "name": "Psyko-gatler",
           "type": "Ranged",
           "range": "24\"",
@@ -4699,33 +8172,6 @@
             "ASSAULT",
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "SUSTAINED HITS 1"
-          ]
-        },
-        {
-          "name": "Grabba Dragga",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "ASSAULT",
-            "PRECISION"
-          ]
-        },
-        {
-          "name": "Fixit's Wrench",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "EXTRA ATTACKS"
           ]
         },
         {
@@ -4814,6 +8260,20 @@
           "keywords": [
             "PRECISION"
           ]
+        },
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "CLOSE-QUARTERS",
+            "LETHAL HITS: non-MONSTER/VEHICLE"
+          ]
         }
       ],
       "isLeader": false,
@@ -4864,6 +8324,17 @@
       ],
       "weapons": [
         {
+          "name": "Stompy Feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Blitzkannon",
           "type": "Ranged",
           "range": "24\"",
@@ -4890,17 +8361,6 @@
             "IGNORES COVER",
             "LETHAL HITS"
           ]
-        },
-        {
-          "name": "Stompy Feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4957,6 +8417,34 @@
       ],
       "weapons": [
         {
+          "name": "Moonchewa",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "CLEAVE 1",
+            "TWIN-LINKED"
+          ]
+        },
+        {
+          "name": "Kustom Blasta X",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "CLEAVE 1",
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
           "name": "Kustom Blasta X - Skorcha",
           "type": "Ranged",
           "range": "12\"",
@@ -4995,34 +8483,6 @@
           "keywords": [
             "LETHAL HITS: non-MONSTER/VEHICLE",
             "RAPID FIRE 2"
-          ]
-        },
-        {
-          "name": "Moonchewa",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "CLEAVE 1",
-            "TWIN-LINKED"
-          ]
-        },
-        {
-          "name": "Kustom Blasta X",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "CLEAVE 1",
-            "EXTRA ATTACKS"
           ]
         }
       ],
@@ -5141,6 +8601,60 @@
             "DEVASTATING WOUNDS: MONSTER/VEHICLE",
             "RAPID FIRE 2",
             "SUSTAINED HITS 2"
+          ]
+        },
+        {
+          "name": "Crushin' Bulk",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "CLEAVE 2"
+          ]
+        },
+        {
+          "name": "Big Shoota",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "5+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "LETHAL HITS: non-MONSTER/VEHICLE",
+            "RAPID FIRE 2"
+          ]
+        },
+        {
+          "name": "Grabbin' Klaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "EXTRA ATTACKS"
+          ]
+        },
+        {
+          "name": "Wreckin' Ball",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": 0,
+          "damage": "D6",
+          "keywords": [
+            "CLEAVE 2",
+            "EXTRA ATTACKS"
           ]
         }
       ],

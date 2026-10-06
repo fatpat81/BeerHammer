@@ -6,48 +6,6 @@
   "totalDatasheets": 21,
   "detachments": [
     {
-      "id": "e9b7-c334-8d6d-9422",
-      "name": "Ghostglaive",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "4c4c-3535-df71-cd27",
-      "name": "Ghostswords",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "8b0e-6ad0-b02b-da43",
-      "name": "Ghostaxe and Forceshield",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "426b-b231-8a8b-56ab",
-      "name": "Ghostaxe",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "5782-cffd-df63-ee62",
-      "name": "Ghostspear",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "68f1-24f4-a4c6-303f",
-      "name": "Detachment",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "2d05-efec-bda2-f059",
-      "name": "Titanic Ghostglaive",
-      "rules": [],
-      "enhancements": []
-    },
-    {
       "id": "3c31-6fac-9914-827a",
       "name": "Warhost",
       "rules": [
@@ -65,6 +23,96 @@
           "name": "Spirit Stone of Raelyth",
           "points": 20,
           "description": "**AELDARI PSYKER** model only.\n- While this model is within 3\" of a friendly **AELDARI VEHICLE** unit, this model has **Lone Operative**.\n- In your Movement phase, at the start or end of this unit’s move, you can select one friendly **AELDARI VEHICLE** model within 3\" of this model. That **VEHICLE** model **heals** D3 wounds."
+        },
+        {
+          "id": "6605-bd06-4048-9e14",
+          "name": "Psychic Destroyer",
+          "points": 30,
+          "description": "^^Asuryani^^ ^^Psyker^^ model only. Add 1 to the Damage characteristic of ranged Psychic weapons equipped by the bearer."
+        },
+        {
+          "id": "607f-8f46-48c4-edb7",
+          "name": "Phoenix Gem",
+          "points": 35,
+          "description": "^^Asuryani^^ model only. The first time the bearer is destroyed, remove it from play, then, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one of more enemy units, with its full wounds remaining."
+        },
+        {
+          "id": "3c85-7aba-e35d-27be",
+          "name": "Gift of Foresight",
+          "points": 15,
+          "description": "^^Asuryani^^ model only. Once per battle round, you can target the bearer's unit with the Command Re-roll Stratagem for 0CP."
+        },
+        {
+          "id": "dab9-c5f2-a09f-c524",
+          "name": "Timeless Strategist",
+          "points": 15,
+          "description": "^^Asuryani^^ model only. At the start of the battle round, if the bearer is on the battlefield (or any Transport it is embarked within is on the battlefield), you receive 1 additional Battle Focus token."
+        }
+      ]
+    },
+    {
+      "id": "e299-e560-ccec-eeb3",
+      "name": "Realspace Raiders",
+      "rules": [
+        "Alliance of Agony"
+      ],
+      "enhancements": [
+        {
+          "id": "651b-340c-8698-732d",
+          "name": "Crucible of Malediction",
+          "points": 15,
+          "description": "**^^Haemonculus^^** model only. Once per battle, in your Shooting phase, the bearer can use this Enhancement. If it does, you can spend 1 Pain token. Then, each enemy unit within 12\" of the bearer must take a Battle-shock test, subtracting 1 from that test if you spent 1 Pain token. Each time a **^^Psyker^^** unit fails that test, it suffers 3 mortal wounds."
+        },
+        {
+          "id": "5158-7f1e-824c-3627",
+          "name": "Eye of Spite",
+          "points": 15,
+          "description": "**^^Succubus^^** model only. Improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer's unit is selected to fight, you can spend 1 Pain token; if you do, until the end of the phase, improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
+        },
+        {
+          "id": "3779-7a56-8add-3c27",
+          "name": "Labyrinthine Cunning",
+          "points": 25,
+          "description": "**^^Archon^^** model only. At the start of your Command phase, if the bearer is on the battlefield, you can do one of the following:\nSpend 1 Pain token and gain 1CP.\nRoll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "715-eb25-e05a-dda9",
+          "name": "Dark Vitality",
+          "points": 20,
+          "description": "**^^Drukhari^^** model only. The bearer's unit is always Empowered - you do not need to spend any Pain tokens to activate that unit's Pain abilities"
+        }
+      ]
+    },
+    {
+      "id": "7596-e2c8-71fb-1b4f",
+      "name": "Skysplinter Assault",
+      "rules": [
+        "Rain of Cruelty"
+      ],
+      "enhancements": [
+        {
+          "id": "389c-195a-faaa-3bd6",
+          "name": "Phantasmal Smoke",
+          "points": 15,
+          "description": "^^**Drukhari**^^ model only. While the bearer’s unit is wholly within 6\" of a friendly ^^**Drukhari Transport**^^:\nModels in the bearer’s unit have the  Stealth ability\nEach time a ranged attack targets the bearer's unit, models in that unit have the Benefit of Cover against that attack."
+        },
+        {
+          "id": "3151-c2de-c0cc-b8d0",
+          "name": "Sadistic Fulcrum",
+          "points": 15,
+          "description": "^^**Drukhari**^^ model only. Each time you spend 1 Pain token to Empower the bearer’s unit in the Shooting phase, select one friendly ^^**Drukhari Transport**^^ within 6\" of the bearer’s unit; until the end of the phase, each time that ^^**Transport**^^ makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "id": "c049-95f9-58cb-b70a",
+          "name": "Spiteful Raider",
+          "points": 10,
+          "description": "^^**Drukhari**^^ model only. Each time the bearer’s unit destroys an enemy unit in the Fight phase, if that enemy unit was within range of one or more objective markers when the bearer’s unit was selected to fight, you gain 1 additional Pain token."
+        },
+        {
+          "id": "894c-7f9e-5f07-1dc3",
+          "name": "Nightmare Shroud",
+          "points": 20,
+          "description": "^^**Drukhari**^^ model only. Each time the bearer’s unit disembarks from a ^^**Transport**^^, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
         }
       ]
     },
@@ -119,6 +167,30 @@
           "name": "Spirit Stone of Raelyth",
           "points": 20,
           "description": "**AELDARI PSYKER** model only.\n- While this model is within 3\" of a friendly **AELDARI VEHICLE** unit, this model has **Lone Operative**.\n- In your Movement phase, at the start or end of this unit’s move, you can select one friendly **AELDARI VEHICLE** model within 3\" of this model. That **VEHICLE** model **heals** D3 wounds."
+        },
+        {
+          "id": "6605-bd06-4048-9e14",
+          "name": "Psychic Destroyer",
+          "points": 30,
+          "description": "^^Asuryani^^ ^^Psyker^^ model only. Add 1 to the Damage characteristic of ranged Psychic weapons equipped by the bearer."
+        },
+        {
+          "id": "607f-8f46-48c4-edb7",
+          "name": "Phoenix Gem",
+          "points": 35,
+          "description": "^^Asuryani^^ model only. The first time the bearer is destroyed, remove it from play, then, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one of more enemy units, with its full wounds remaining."
+        },
+        {
+          "id": "3c85-7aba-e35d-27be",
+          "name": "Gift of Foresight",
+          "points": 15,
+          "description": "^^Asuryani^^ model only. Once per battle round, you can target the bearer's unit with the Command Re-roll Stratagem for 0CP."
+        },
+        {
+          "id": "dab9-c5f2-a09f-c524",
+          "name": "Timeless Strategist",
+          "points": 15,
+          "description": "^^Asuryani^^ model only. At the start of the battle round, if the bearer is on the battlefield (or any Transport it is embarked within is on the battlefield), you receive 1 additional Battle Focus token."
         }
       ]
     },
@@ -152,6 +224,39 @@
           "name": "Echoes of Ulthanesh",
           "points": 20,
           "description": "Asuryani Mounted model only. In your Command phase, roll one D6, adding 1 to the result if the bearer is not within your deployment zone, and adding an additional 1 to the result if the bearer is within your opponent's deployment zone: on a 5+, you gain 1CP."
+        }
+      ]
+    },
+    {
+      "id": "fc94-43bf-5247-8e7c",
+      "name": "Spirit Conclave",
+      "rules": [
+        "Shepherds of the Dead"
+      ],
+      "enhancements": [
+        {
+          "id": "9898-7c41-c373-b3c9",
+          "name": "Light of Clarity",
+          "points": 30,
+          "description": "Spiritseer model only. In your Command phase, select one friendly Wraith Construct unit within 12\" of the bearer. Until the start of your next Command phase, add 1 to the Objective Control characteristic of Infanty models in that unit and add 3 to the Objective Control characteristic of Monster models in that unit."
+        },
+        {
+          "id": "3f52-2f29-e0d8-8bff",
+          "name": "Stave of Kurnous",
+          "points": 15,
+          "description": "Spiritseer model only. In your Command phase, select one friendly Wraith Construct unit within 12\" of the bearer (excluding Titanic units). Until the start of your next Command phase, each time a model in that unit makes an attack, on a Critical Wound, that attack has the [Precision] ability."
+        },
+        {
+          "id": "0874-acfa-0e5d-ad23",
+          "name": "Rune of Mists",
+          "points": 10,
+          "description": "Spiritseer model only. In your Command phase, select one friendly Wraith Construct unit within 12\" of the bearer. Until the start of your next Command phase, each time a ranged attack targets that unit, unless the attacking model is within 18, models in that unit have the Benefit of Cover against that attack."
+        },
+        {
+          "id": "9647-0b96-2add-51a4",
+          "name": "Higher Duty",
+          "points": 25,
+          "description": "**SPIRITSEER** model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6\"."
         }
       ]
     },
@@ -223,6 +328,73 @@
       ]
     },
     {
+      "id": "925e-85fb-b477-70be",
+      "name": "Devoted of Ynnead",
+      "rules": [
+        "Strength From Death",
+        "Servants of the Whispering God"
+      ],
+      "enhancements": [
+        {
+          "id": "15a4-4dee-37f6-8d4b",
+          "name": "Gaze of Ynnead",
+          "points": 15,
+          "description": "Farseer model only. The bearer's Eldritch Storm weapon has the [Devastating Wounds] ability."
+        },
+        {
+          "id": "a5e4-493b-ef71-c833",
+          "name": "Storm of Whispers",
+          "points": 10,
+          "description": "Warlock model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+        },
+        {
+          "id": "7321-9d12-a2fa-d1e6",
+          "name": "Borrowed Vigour",
+          "points": 10,
+          "description": "**^^Archon^^** model only. Add 2 to the Attacks characteristic of the bearer's melee weapons."
+        },
+        {
+          "id": "6617-8f5a-b98a-e897",
+          "name": "Morbid Might",
+          "points": 15,
+          "description": "Succubus model only. Each time the bearer makes a melee attack, you can re-roll the Wound roll."
+        }
+      ]
+    },
+    {
+      "id": "b525-57b6-8a78-ed75",
+      "name": "Seer Council",
+      "rules": [
+        "Strands of Fate"
+      ],
+      "enhancements": [
+        {
+          "id": "6526-d88c-b082-688b",
+          "name": "Lucid Eye",
+          "points": 30,
+          "description": "Asuryani Psyker model only. In your Command phase, you can add 1 to or subtract 1 from the value of one Fate dice in your Fate dice pool."
+        },
+        {
+          "id": "b4a8-8ce4-a1f3-b8ce",
+          "name": "Runes of Warding",
+          "points": 25,
+          "description": "**^^Asuryani Psyker^^** model only. Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds, Psychic Attacks and Critical Wounds caused by attacks with the **[DEVASTATING WOUNDS]** ability."
+        },
+        {
+          "id": "ee05-f0eb-bbaa-5960",
+          "name": "Stone of Eldritch Fury",
+          "points": 15,
+          "description": "Asuryani Psyker model only. Add 12\" to the Range characteristic of ranged Psychic weapons equipped by the bearer."
+        },
+        {
+          "id": "bfba-62e0-2784-ef48",
+          "name": "Torc of Morai-Heg",
+          "points": 20,
+          "description": "Asuryani Psyker model only. Once per turn, when your opponent targets a unit from their army within 12\" of the bearer with a Stratagem, the bearer can use this Enhancement. If it does, increase the CP cost of that usage of that Stratagem by 1CP."
+        }
+      ]
+    },
+    {
       "id": "8e89-2c14-6bf5-87bf",
       "name": "Aspect Host",
       "rules": [
@@ -256,10 +428,331 @@
       ]
     },
     {
-      "id": "1927-5104-198f-4b11",
-      "name": "Key of Ghosts",
-      "rules": [],
-      "enhancements": []
+      "id": "47c7-52f9-c23d-1e4e",
+      "name": "Covenite Coterie",
+      "rules": [
+        "Stitchflesh Abominations"
+      ],
+      "enhancements": [
+        {
+          "id": "1cbe-8230-62e6-55ed",
+          "name": "Master Regenesist",
+          "points": 25,
+          "description": "^^**Haemonculus**^^ model only. Each time the bearer uses its Fleshcraft ability, you can return up to D3+3 destroyed Bodyguard models to the bearer's unit instead of D3+1."
+        },
+        {
+          "id": "7d78-1fd9-b1ab-f8bc",
+          "name": "Master Nemesine",
+          "points": 5,
+          "description": "^^**Haemonculus**^^ model only. The bearer's weapons have the ^^**[Anti-Beast 2+]**^^ and ^^**[Anti-Monster 4+]**^^ abilities."
+        },
+        {
+          "id": "8650-1a6c-82ee-1243",
+          "name": "Master Artisan",
+          "points": 20,
+          "description": "^^**Haemonculus**^^ model only. Add 1 to the bearer's Wounds characteristic and add 1 to the Toughness characteristic of models in the bearer's unit."
+        },
+        {
+          "id": "2cb1-da69-7c94-4bd2",
+          "name": "Master Repugnomancer [Aura]",
+          "points": 15,
+          "description": "^^**Haemonculus**^^ model only. Add 3\" to the range of the bearer's Fear Incarnate ability, and each time a friendly ^^**Drukhari**^^ within 9\" of the bearer fails a Battle-shock test or is destroyed, roll one D6; on a 4+, you gain 1 Pain token."
+        }
+      ]
+    },
+    {
+      "id": "b033-0c01-012e-fcca",
+      "name": "Kabalite Cartel",
+      "rules": [
+        "Murderous Agenda"
+      ],
+      "enhancements": [
+        {
+          "id": "7166-b2d0-75ef-5fe7",
+          "name": "Leechbite Plate",
+          "points": 5,
+          "description": "^^**Archon**^^ model only. The bearer has a Save characteristic of 3+. At the start of either player's Command phase, you can spend 1 Pain token; if you do, the bearer regains all of its lost wounds."
+        },
+        {
+          "id": "9754-99a2-5d48-bb74",
+          "name": "Webway Awl",
+          "points": 25,
+          "description": "^^**Archon**^^ model only. Models in the bearer's unit have the Deep Strike ability, and you can target the bearer's unit with the Rapid Ingress Stratagem for 0CP."
+        },
+        {
+          "id": "14ff-7d7e-2433-71fc",
+          "name": "Informant Network",
+          "points": 30,
+          "description": "^^**Archon**^^ model only. At the start of the Declare Battle Formations step, select up to three ^^**Kabalite Warriors**^^ and/or ^^**Hand of the Archon**^^ units from your army; those units gain the Infiltrators ability."
+        },
+        {
+          "id": "f775-311c-a54a-308a",
+          "name": "Towering Arrogance",
+          "points": 20,
+          "description": "^^**Archon**^^ models only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1."
+        }
+      ]
+    },
+    {
+      "id": "7008-2116-f479-a791",
+      "name": "Spectacle of Spite",
+      "rules": [
+        "Combat Drugs"
+      ],
+      "enhancements": [
+        {
+          "id": "bd2d-64aa-6077-a6ce",
+          "name": "Pharmacophex",
+          "points": 15,
+          "description": "^^**Succubus**^^ model only. At the start of your Command phase, after selecting which Combat Drugs will be active for your army, roll one D6 and consult the Combat Drugs list. The result rolled applies to the bearer's unit until the start of your next Command phase in addition to any other Combat Drugs that are active for your army. If you randomly select one that is already active for your army, it has no additional effect."
+        },
+        {
+          "id": "0246-f867-40c3-b190",
+          "name": "Chronoshard",
+          "points": 15,
+          "description": "^^** Succubus**^^ model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+        },
+        {
+          "id": "d0fe-007a-1800-d7c2",
+          "name": "Periapt of Torments",
+          "points": 25,
+          "description": "^^**Succubus**^^ model only. Enemy units cannot use the Fire Overwatch stratagem to shoot at the bearer's unit."
+        },
+        {
+          "id": "d1b4-483d-6dc9-7290",
+          "name": "Morghenna's Curse",
+          "points": 20,
+          "description": "^^**Succubus**^^ model only. Improve the Armour Penetration and Damage characteristics of the bearer's melee weapons by 1."
+        }
+      ]
+    },
+    {
+      "id": "5ad5-9b0d-a70e-b9ec",
+      "name": "Serpent's Brood",
+      "rules": [
+        "Boons of the Brood",
+        "Travelling Players"
+      ],
+      "enhancements": [
+        {
+          "id": "1927-5104-198f-4b11",
+          "name": "Key of Ghosts",
+          "points": 20,
+          "description": "^^**Harlequins**^^ model only (excluding ^^**Solitaire**^^ models). Models in the bearer’s unit have the Scouts 6\" ability."
+        },
+        {
+          "id": "46cb-e47a-0069-00b4",
+          "name": "Fanged Leer",
+          "points": 10,
+          "description": "^^**Death Jester**^^ model only. When using the bearer’s Cruel Amusement ability, you can select two of the abilities for its shrieker cannon to gain, instead of one."
+        },
+        {
+          "id": "ec57-0892-4279-0849",
+          "name": "Shedskin Raiment",
+          "points": 25,
+          "description": "^^**Shadowseer**^^ model only. After both players have deployed their armies, select up to three Harlequins units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "228e-07bd-f027-10f4",
+          "name": "Weavers' Wail",
+          "points": 20,
+          "description": "^^**Troupe Master**^^ model only. Add 3 to the Strength and add 1 to the Attacks characteristics of the bearer’s melee weapons."
+        }
+      ]
+    },
+    {
+      "id": "d519-c125-30b5-9c55",
+      "name": "Eldritch Raiders",
+      "rules": [
+        "Yriel's Own",
+        "Veterans of the Void"
+      ],
+      "enhancements": [
+        {
+          "id": "fb27-1469-5fc4-161d",
+          "name": "Pirate Prince",
+          "points": 15,
+          "description": "^^**Prince Yriel**^^ unit only. Each time you spend a Battle Focus token to enable this unit to perform an Agile Manoeuvre, roll one D6: on a 3+, you gain 1 Battle Focus token."
+        },
+        {
+          "id": "90c1-42b5-5052-5bbd",
+          "name": "Alacritous Assault",
+          "points": 20,
+          "description": "^^**Anhrathe**^^ unit only. Melee weapons equipped by models in this unit have the ^^**[LANCE]**^^ ability."
+        },
+        {
+          "id": "7e77-9e44-2644-3df6",
+          "name": "Exotic Munitions",
+          "points": 15,
+          "description": "^^**Anhrathe**^^ unit only. Ranged weapons equipped by models in this unit have the ^^**[ANTI‑MONSTER 5+]**^^ and ^^**[ANTI‑VEHICLE 5+]**^^ abilities."
+        },
+        {
+          "id": "233a-28cc-1059-ec0d",
+          "name": "Adrenal Infusions",
+          "points": 20,
+          "description": "^^**Anhrathe Infantry**^^ unit only. This unit can perform the Fade Back Agile Manoeuvre without spending a Battle Focus token to do so. It can do so even if other units have done so in the same phase, and doing so does not prevent other units from performing the same Agile Manoeuvre in the same phase."
+        }
+      ]
+    },
+    {
+      "id": "7224-4f3e-c557-115d",
+      "name": "Corsair Coterie",
+      "rules": [
+        "Relentless Raiders",
+        "Veterans of the Void"
+      ],
+      "enhancements": [
+        {
+          "id": "560e-1ef6-89e2-45f2",
+          "name": "Infamy (Aura)",
+          "points": 25,
+          "description": "^^**Anhrathe**^^ unit only. While an enemy unit is within 3” of this unit, subtract 1 from the Objective Control characteristic of models in that unit (to a minimum of 1)."
+        },
+        {
+          "id": "64d3-4806-a9ae-eb4e",
+          "name": "Webway Pathstone",
+          "points": 25,
+          "description": "^^**Anhrathe**^^ unit only. Models in this unit have the Deep Strike ability. In addition, once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, it can use this ability. If it does, remove this unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "id": "975b-7718-2400-78c9",
+          "name": "Archraider",
+          "points": 35,
+          "description": "^^**Anhrathe Character**^^ unit only. At the start of the battle, select one ^^**Character**^^ model in this unit. That model has the following ability: \n\n**Lord of Deceit (Aura):** Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP."
+        },
+        {
+          "id": "9b12-2696-ec8c-7730",
+          "name": "Voidstone",
+          "points": 15,
+          "description": "^^**Anhrathe Infantry**^^ unit only. Models in this unit have a 5+ invulnerable save."
+        }
+      ]
+    },
+    {
+      "id": "c40e-26bd-7e76-0815",
+      "name": "Fateful Performance",
+      "rules": [
+        "Acrobatic Onslaught"
+      ],
+      "enhancements": [
+        {
+          "id": "2ff0-c95d-1b38-dff2",
+          "name": "A Foot in the Future",
+          "points": 15,
+          "description": "**TROUPE MASTER** model only. This unit can re‑roll charge rolls."
+        },
+        {
+          "id": "29c8-5ca8-471c-8018",
+          "name": "Mistweave",
+          "points": 20,
+          "description": "**SHADOWSEER** model only. This unit has **Infiltrators**."
+        }
+      ]
+    },
+    {
+      "id": "8b57-c6f6-c651-65bf",
+      "name": "Path of the Outcast",
+      "rules": [
+        "Far-reaching Doom"
+      ],
+      "enhancements": [
+        {
+          "id": "0100-1901-999e-d7be",
+          "name": "Camouflaged Snipers",
+          "points": 10,
+          "description": "**RANGERS** unit only. This unit’s ranged attacks do not prevent this unit from being **hidden**."
+        },
+        {
+          "id": "38a3-11a3-eb1e-78a7",
+          "name": "Assassin's Eye",
+          "points": 15,
+          "description": "**RANGERS/SHROUD RUNNERS** unit only. This unit’s ranged attacks that target a **CHARACTER** unit have +1 **AP**."
+        }
+      ]
+    },
+    {
+      "id": "dcf3-cecd-ca37-4193",
+      "name": "Twilight Flickers",
+      "rules": [
+        "Dance of Distortion"
+      ],
+      "enhancements": [
+        {
+          "id": "8d5c-ff96-e34e-a4f1",
+          "name": "Prelude Performer",
+          "points": 20,
+          "description": "**HARLEQUINS** model only. This unit has **Scouts 6\"**."
+        },
+        {
+          "id": "6c34-6504-f458-2792",
+          "name": "Shadowfall Masks",
+          "points": 15,
+          "description": "**TROUPE** unit only. This unit has **Fights First**."
+        }
+      ]
+    },
+    {
+      "id": "7d47-b713-955c-1bf0",
+      "name": "Exhibition of Slaughter",
+      "rules": [
+        "Exacting Cruelty"
+      ],
+      "enhancements": [
+        {
+          "id": "104c-74f2-b459-f657",
+          "name": "Hyperstimm Trafficker",
+          "points": 20,
+          "description": "**SUCCUBUS** model only. This unit has +1 **T**."
+        },
+        {
+          "id": "c8af-ef33-9ff2-d116",
+          "name": "Periapt of Torments",
+          "points": 20,
+          "description": "**SUCCUBUS** model only. Enemy units cannot target this unit with **snap shooting** attacks."
+        }
+      ]
+    },
+    {
+      "id": "c649-7147-7e69-5db6",
+      "name": "Kabalite Agonysts",
+      "rules": [
+        "Contracted Harvest"
+      ],
+      "enhancements": [
+        {
+          "id": "0330-3784-e24f-a068",
+          "name": "Towering Arrogance",
+          "points": 15,
+          "description": "**ARCHON** model only. This unit has:\n- +1 **Ld** and **OC**."
+        },
+        {
+          "id": "9dce-13f4-fe52-14ce",
+          "name": "Contempt For Rivals",
+          "points": 20,
+          "description": "**ARCHON** model only. This unit’s attacks have **[PRECISION]**."
+        }
+      ]
+    },
+    {
+      "id": "1653-ad59-40e0-a08f",
+      "name": "Tools of Torment",
+      "rules": [
+        "Darkest Artifice"
+      ],
+      "enhancements": [
+        {
+          "id": "4b6b-1170-ac8b-e76b",
+          "name": "Gnarlskin Experimentor",
+          "points": 20,
+          "description": "**HAEMONCULUS** model only. Attacks that target this unit with a **S** greater than your unit’s **T** have ‑1 to **wound rolls**."
+        },
+        {
+          "id": "ad7a-ddc5-ffb8-e30c",
+          "name": "Elixir of the Corpse Courts",
+          "points": 15,
+          "description": "**CRONOS/TALOS** unit only. This unit has **5+ InSv**."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -545,6 +1038,19 @@
       ],
       "weapons": [
         {
+          "name": "Agonizer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
           "name": "Splinter pods",
           "type": "Ranged",
           "range": "18\"",
@@ -557,19 +1063,6 @@
             "Anti-Infantry 3+",
             "Assault",
             "Twin-Linked"
-          ]
-        },
-        {
-          "name": "Agonizer",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 3,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": [
-            "Anti-Infantry 3+"
           ]
         },
         {
@@ -844,6 +1337,20 @@
       ],
       "weapons": [
         {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
           "name": "Stinger Pistol",
           "type": "Ranged",
           "range": "12\"",
@@ -855,20 +1362,6 @@
           "keywords": [
             "Anti-infantry 2+",
             "Pistol",
-            "Precision"
-          ]
-        },
-        {
-          "name": "Haemonculus tools and scissorhands",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 3,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Anti-Infantry 2+",
             "Precision"
           ]
         }
@@ -957,17 +1450,6 @@
           "type": "Melee",
           "range": "Melee",
           "attacks": "4",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Klaive",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
           "skill": "3+",
           "strength": 5,
           "armorPenetration": -2,
@@ -1101,6 +1583,17 @@
       ],
       "weapons": [
         {
+          "name": "Bladevanes and chainsnares",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "D3+3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Disintegrator Cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1120,17 +1613,6 @@
           "strength": 12,
           "armorPenetration": -3,
           "damage": "D6+2",
-          "keywords": []
-        },
-        {
-          "name": "Bladevanes and chainsnares",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "D3+3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
           "keywords": []
         }
       ],
@@ -1187,6 +1669,17 @@
       ],
       "weapons": [
         {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Disintegrator Cannon",
           "type": "Ranged",
           "range": "36\"",
@@ -1206,17 +1699,6 @@
           "strength": 12,
           "armorPenetration": -3,
           "damage": "D6+2",
-          "keywords": []
-        },
-        {
-          "name": "Bladevanes",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
           "keywords": []
         }
       ],
@@ -1267,6 +1749,17 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Bladed Wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
         {
           "name": "➤ Razorwing Missiles - Monoscythe Missiles",
           "type": "Ranged",
@@ -1358,17 +1851,6 @@
             "Rapid Fire 2",
             "Twin Linked"
           ]
-        },
-        {
-          "name": "Bladed Wings",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1496,6 +1978,30 @@
       ],
       "weapons": [
         {
+          "name": "Macro-Scalpel",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Talos Ichor Injector",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
           "name": "Twin Liquifier Gun",
           "type": "Ranged",
           "range": "12\"",
@@ -1509,6 +2015,28 @@
             "Torrent",
             "Twin-Linked"
           ]
+        },
+        {
+          "name": "Chain-flails",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Talos Gauntlet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
         },
         {
           "name": "Twin Splinter Cannon",
@@ -1564,63 +2092,6 @@
           "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Macro-Scalpel",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Talos Ichor Injector",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "D6",
-          "keywords": [
-            "Extra Attacks"
-          ]
-        },
-        {
-          "name": "Chain-flails",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Talos Gauntlet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 9,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "Macro-Scalpel",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "2",
           "keywords": []
         }
       ],
@@ -1683,6 +2154,20 @@
       ],
       "weapons": [
         {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
           "name": "Casket of Flensing",
           "type": "Ranged",
           "range": "12\"",
@@ -1695,20 +2180,6 @@
             "Devastating Wounds",
             "One Shot",
             "Torrent"
-          ]
-        },
-        {
-          "name": "Haemonculus tools and scissorhands",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "2+",
-          "strength": 3,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Anti-Infantry 2+",
-            "Precision"
           ]
         }
       ],
@@ -1764,18 +2235,15 @@
       ],
       "weapons": [
         {
-          "name": "Splinter Cannon",
-          "type": "Ranged",
-          "range": "36\"",
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
           "attacks": "3",
-          "skill": "3+",
-          "strength": 3,
+          "skill": "4+",
+          "strength": 5,
           "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Anti-Infantry 3+",
-            "Sustained hits 1"
-          ]
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Splinter Cannon",
@@ -1806,17 +2274,6 @@
             "Rapid Fire 2",
             "Twin Linked"
           ]
-        },
-        {
-          "name": "Bladevanes",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1871,6 +2328,17 @@
       ],
       "weapons": [
         {
+          "name": "Bladed Wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Voidraven Missiles -  Implosion Missiles",
           "type": "Ranged",
           "range": "48\"",
@@ -1916,17 +2384,6 @@
           "strength": 8,
           "armorPenetration": -4,
           "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Bladed Wings",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
           "keywords": []
         }
       ],
@@ -1981,19 +2438,6 @@
       ],
       "weapons": [
         {
-          "name": "Pulse disintegrators",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "12",
-          "skill": "3+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
           "name": "Dire scythe blades",
           "type": "Melee",
           "range": "Melee",
@@ -2004,6 +2448,19 @@
           "damage": "2",
           "keywords": [
             "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Pulse disintegrators",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Assault"
           ]
         }
       ],
@@ -2055,6 +2512,17 @@
       ],
       "weapons": [
         {
+          "name": "Bladed wings",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Dark lance",
           "type": "Ranged",
           "range": "36\"",
@@ -2078,17 +2546,6 @@
             "Anti-Infantry 3+",
             "Sustained Hits 2"
           ]
-        },
-        {
-          "name": "Bladed wings",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2143,30 +2600,6 @@
       ],
       "weapons": [
         {
-          "name": "➤ Storm vortex projector - beam",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 12,
-          "armorPenetration": -3,
-          "damage": "D6",
-          "keywords": []
-        },
-        {
-          "name": "➤ Storm vortex projector - blast",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "D6+3",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Blast"
-          ]
-        },
-        {
           "name": "Bladevanes",
           "type": "Melee",
           "range": "Melee",
@@ -2190,6 +2623,30 @@
             "Extra Attacks",
             "Lance",
             "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "➤ Storm vortex projector - beam",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Storm vortex projector - blast",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Blast"
           ]
         }
       ],
@@ -2334,7 +2791,251 @@
           "description": "This model can be attached to the following units:\n- **^^Wyches^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Heat Lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Shardcarbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Splinter Pods",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Blast Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Splinter Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stinger Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Archite glaive and agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "➤ Demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Hellglaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Huskblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stunclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Lance",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Wyches^^**"
@@ -2388,7 +3089,251 @@
           "description": "This model can be attached to the following units:\n- **^^Wracks^^**"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Heat Lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Shardcarbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Splinter Pods",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Blast Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Splinter Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stinger Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Archite glaive and agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "➤ Demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Hellglaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Huskblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stunclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Lance",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": [
         "**^^Wracks^^**"

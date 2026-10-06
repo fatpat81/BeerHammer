@@ -6,10 +6,229 @@
   "totalDatasheets": 41,
   "detachments": [
     {
-      "id": "c82f-1b42-946-9c9a",
-      "name": "Detachment",
-      "rules": [],
-      "enhancements": []
+      "id": "7aa5-4c0c-40c3-e2a",
+      "name": "Rad-zone Corps",
+      "rules": [
+        "Rad-bombardment"
+      ],
+      "enhancements": [
+        {
+          "id": "cc1a-1fa6-1645-58b3",
+          "name": "Radial Suffusion",
+          "points": 25,
+          "description": "From the second battle round onwards, when resolving the Fallout effect of the Rad-bombardment Detachment rule, if the bearer is on the battlefield, roll one D6 for each enemy unit within 6\" of your opponent’s deployment zone, in addition to those that are within your opponent’s deployment zone."
+        },
+        {
+          "id": "8414-b1fd-c858-fb16",
+          "name": "Malphonic Susurrus",
+          "points": 20,
+          "description": "While the bearer is leading a unit, models in that unit have the Stealth ability."
+        },
+        {
+          "id": "c7c3-118c-ad37-b8a8",
+          "name": "Peerless Eradicator",
+          "points": 20,
+          "description": "While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "id": "dd74-c8b2-bc67-489c",
+          "name": "Autoclavic Denounciation",
+          "points": 15,
+          "description": "Ranged weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities."
+        }
+      ]
+    },
+    {
+      "id": "48bd-eeae-171d-a10a",
+      "name": "Skitarii Hunter Cohort",
+      "rules": [
+        "Skitarii Hunter Cohort"
+      ],
+      "enhancements": [
+        {
+          "id": "8007-cd63-594a-6fc9",
+          "name": "Cantic Thrallnet",
+          "points": 25,
+          "description": "At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
+        },
+        {
+          "id": "c755-e8eb-d3ae-41f7",
+          "name": "Clandestine Infiltrator",
+          "points": 15,
+          "description": "The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "id": "36f1-310e-5a40-f505",
+          "name": "Veiled Hunter",
+          "points": 10,
+          "description": "After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "6a11-7822-bd7f-dea1",
+          "name": "Battle-Sphere Uplink",
+          "points": 25,
+          "description": "In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
+        },
+        {
+          "id": "a886-5b5b-d3b2-cf38",
+          "name": "Necromechanic",
+          "points": 20,
+          "description": "Once per battle round, when a saving throw made for a friendly **^^Legio Cybernetica^^** or **^^Adeptus Mechanicus Vehicle^^** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "5f0a-b46d-1ade-9d4e",
+          "name": "Lord of Machines",
+          "points": 15,
+          "description": "Once per turn, at the start of your opponent’s Shooting phase, select one enemy Vehicle unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+        },
+        {
+          "id": "6a67-c129-8325-85c3",
+          "name": "Emotionless Clarity",
+          "points": 10,
+          "description": "Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        },
+        {
+          "id": "d5ab-b1f8-7963-ed08",
+          "name": "Arch Negator",
+          "points": 5,
+          "description": "Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
+        },
+        {
+          "id": "6571-1a2f-779b-e711",
+          "name": "Explorator Dispensation",
+          "points": 20,
+          "description": "This unit has Infiltrators."
+        }
+      ]
+    },
+    {
+      "id": "e01f-8783-4769-2eb6",
+      "name": "Explorator Maniple",
+      "rules": [
+        "Acquisition at any cost"
+      ],
+      "enhancements": [
+        {
+          "id": "cdc5-31e4-7850-1689",
+          "name": "Magos",
+          "points": 10,
+          "description": "At the end of your Command phase, if the bearer is within range of your Acquisition objective marker, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "id": "b06e-79be-ca64-2fcd",
+          "name": "Genetor",
+          "points": 20,
+          "description": "While the bearer is leading a unit that is within range of your Acquisition objective marker, models in that unit have a 4+ invulnerable save."
+        },
+        {
+          "id": "b70a-bfe9-7803-66fc",
+          "name": "Logis",
+          "points": 15,
+          "description": "While the bearer is leading a unit, each time a model in that unit makes an attack that targets a unit within range of your Acquisition objective marker, add 1 to the Hit roll."
+        },
+        {
+          "id": "3ad-5001-79ae-9e77",
+          "name": "Artisan",
+          "points": 10,
+          "description": "While the bearer is leading a unit that is within range of your Acquisition objective marker, once per phase, you can change the result of one Hit roll, one Wound roll or one saving throw made for that unit to an unmodified 6."
+        }
+      ]
+    },
+    {
+      "id": "e282-2b49-bd6a-679c",
+      "name": "Data-psalm Conclave",
+      "rules": [
+        "Benediction of the Omnissiah"
+      ],
+      "enhancements": [
+        {
+          "id": "e628-5793-9afe-df20",
+          "name": "Mechanicus Locum",
+          "points": 5,
+          "description": "The bearer has a Leadership characteristic of 6+ and, once per battle, at the start of any phase, you can select one friendly CULT MECHANICUS unit that is Battle-shocked and within 12\" of the bearer. That unit is no longer Battle-shocked."
+        },
+        {
+          "id": "22a6-cb05-be30-185",
+          "name": "Mantle of the Gnosticarch",
+          "points": 10,
+          "description": "Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
+        },
+        {
+          "id": "ce38-7111-75d1-f3",
+          "name": "Data-blessed Autosermon",
+          "points": 15,
+          "description": "Once per battle, at the start of your Command phase, you can select the Benediction of the Omnissiah you did not select at the start of the first battle round. Until the start of your next Command phase, that Benediction of the Omnissiah is active for the bearer’s unit in addition to the one that is currently active for your army."
+        },
+        {
+          "id": "716a-c9e8-b478-6248",
+          "name": "Temporcopia",
+          "points": 20,
+          "description": "The bearer’s unit has the Fights First ability."
+        }
+      ]
+    },
+    {
+      "id": "f67d-6f59-21b8-e1f9",
+      "name": "Cohort Cybernetica",
+      "rules": [
+        "Cyber Psalm-Programming"
+      ],
+      "enhancements": [
+        {
+          "id": "8007-cd63-594a-6fc9",
+          "name": "Cantic Thrallnet",
+          "points": 25,
+          "description": "At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
+        },
+        {
+          "id": "c755-e8eb-d3ae-41f7",
+          "name": "Clandestine Infiltrator",
+          "points": 15,
+          "description": "The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "id": "36f1-310e-5a40-f505",
+          "name": "Veiled Hunter",
+          "points": 10,
+          "description": "After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "6a11-7822-bd7f-dea1",
+          "name": "Battle-Sphere Uplink",
+          "points": 25,
+          "description": "In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
+        },
+        {
+          "id": "a886-5b5b-d3b2-cf38",
+          "name": "Necromechanic",
+          "points": 20,
+          "description": "Once per battle round, when a saving throw made for a friendly **^^Legio Cybernetica^^** or **^^Adeptus Mechanicus Vehicle^^** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "5f0a-b46d-1ade-9d4e",
+          "name": "Lord of Machines",
+          "points": 15,
+          "description": "Once per turn, at the start of your opponent’s Shooting phase, select one enemy Vehicle unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+        },
+        {
+          "id": "6a67-c129-8325-85c3",
+          "name": "Emotionless Clarity",
+          "points": 10,
+          "description": "Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        },
+        {
+          "id": "d5ab-b1f8-7963-ed08",
+          "name": "Arch Negator",
+          "points": 5,
+          "description": "Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
+        },
+        {
+          "id": "6571-1a2f-779b-e711",
+          "name": "Explorator Dispensation",
+          "points": 20,
+          "description": "This unit has Infiltrators."
+        }
+      ]
     },
     {
       "id": "ce65-6b89-4a0e-4f3b",
@@ -17,7 +236,224 @@
       "rules": [
         "Noospheric Transference"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "c672-929d-3d04-ace4",
+          "name": "Transoracular Dyad Wafers",
+          "points": 15,
+          "description": "CYBERNETICA DATASMITH model only. When the bearer is attached to a Kastelan Robots unit, until the end of the battle, models in that unit gain the Halo Override keyword. That unit cannot be selected when selecting units as part of the Noospheric Transference Detachment rule."
+        },
+        {
+          "id": "6825-6a1a-1398-2e0d",
+          "name": "Cognitive Reinforcement",
+          "points": 30,
+          "description": "ADEPTUS MECHANICUS model only (excluding CYBERNETICA DATASMITH models). The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit."
+        },
+        {
+          "id": "f4be-4aee-8549-c961",
+          "name": "Sanctified Ordnance",
+          "points": 10,
+          "description": "ADEPTUS MECHANICUS model only. Add 6\" to the range characteristic of ranged weapons equipped by models in the bearer’s unit and, each time a Hazardous test is taken for that unit, you can re‑roll the result."
+        },
+        {
+          "id": "d484-3dab-c879-c717",
+          "name": "Inloaded Lethality",
+          "points": 15,
+          "description": "**^^Tech-Priest Dominus^^** or **^^Tech-Priest Manipulus^^** model only. Add 3 to the Attacks characteristic of the bearer’s melee weapons and add 1 to the Damage characteristic of the bearer’s melee weapons."
+        }
+      ]
+    },
+    {
+      "id": "6d06-9e26-0d3c-5317",
+      "name": "Eradication Cohort",
+      "rules": [
+        "Murderous Imperative"
+      ],
+      "enhancements": [
+        {
+          "id": "8007-cd63-594a-6fc9",
+          "name": "Cantic Thrallnet",
+          "points": 25,
+          "description": "At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
+        },
+        {
+          "id": "c755-e8eb-d3ae-41f7",
+          "name": "Clandestine Infiltrator",
+          "points": 15,
+          "description": "The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "id": "36f1-310e-5a40-f505",
+          "name": "Veiled Hunter",
+          "points": 10,
+          "description": "After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "6a11-7822-bd7f-dea1",
+          "name": "Battle-Sphere Uplink",
+          "points": 25,
+          "description": "In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
+        },
+        {
+          "id": "a886-5b5b-d3b2-cf38",
+          "name": "Necromechanic",
+          "points": 20,
+          "description": "Once per battle round, when a saving throw made for a friendly **^^Legio Cybernetica^^** or **^^Adeptus Mechanicus Vehicle^^** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "5f0a-b46d-1ade-9d4e",
+          "name": "Lord of Machines",
+          "points": 15,
+          "description": "Once per turn, at the start of your opponent’s Shooting phase, select one enemy Vehicle unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+        },
+        {
+          "id": "6a67-c129-8325-85c3",
+          "name": "Emotionless Clarity",
+          "points": 10,
+          "description": "Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        },
+        {
+          "id": "d5ab-b1f8-7963-ed08",
+          "name": "Arch Negator",
+          "points": 5,
+          "description": "Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
+        },
+        {
+          "id": "6571-1a2f-779b-e711",
+          "name": "Explorator Dispensation",
+          "points": 20,
+          "description": "This unit has Infiltrators."
+        },
+        {
+          "id": "ed55-0829-d6a1-7e5d",
+          "name": "Omnicogitator",
+          "points": 25,
+          "description": "**^^Skitarii Marshal^^** model only. The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit."
+        },
+        {
+          "id": "e4da-4f2d-19c3-416b",
+          "name": "Martial Signatum Amplificator",
+          "points": 15,
+          "description": "**^^Tech‑Priest^^** model only. Models in the bearer’s unit have the **^^Skitarii^^** keyword."
+        },
+        {
+          "id": "27ed-5685-42e3-0844",
+          "name": "Belicosa-class Capacitor Vanes",
+          "points": 25,
+          "description": "**^^Adeptus Mechanicus^^** model only. Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit, and add 1 to the Strength characteristic of those weapons."
+        },
+        {
+          "id": "0f0c-895c-a149-285d",
+          "name": "Omnissiah's Fury",
+          "points": 10,
+          "description": "**^^Skitarii Marshal^^** model only. Add 2 to the Attacks characteristic of melee weapons equipped by the bearer, and improve the Armour Penetration and Damage characteristics of those weapons by 1."
+        }
+      ]
+    },
+    {
+      "id": "02e5-7fe0-d054-0209",
+      "name": "Cohort Acquisitus",
+      "rules": [
+        "Noospheric Recon"
+      ],
+      "enhancements": [
+        {
+          "id": "8007-cd63-594a-6fc9",
+          "name": "Cantic Thrallnet",
+          "points": 25,
+          "description": "At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
+        },
+        {
+          "id": "c755-e8eb-d3ae-41f7",
+          "name": "Clandestine Infiltrator",
+          "points": 15,
+          "description": "The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "id": "36f1-310e-5a40-f505",
+          "name": "Veiled Hunter",
+          "points": 10,
+          "description": "After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "6a11-7822-bd7f-dea1",
+          "name": "Battle-Sphere Uplink",
+          "points": 25,
+          "description": "In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
+        },
+        {
+          "id": "a886-5b5b-d3b2-cf38",
+          "name": "Necromechanic",
+          "points": 20,
+          "description": "Once per battle round, when a saving throw made for a friendly **^^Legio Cybernetica^^** or **^^Adeptus Mechanicus Vehicle^^** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "id": "5f0a-b46d-1ade-9d4e",
+          "name": "Lord of Machines",
+          "points": 15,
+          "description": "Once per turn, at the start of your opponent’s Shooting phase, select one enemy Vehicle unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+        },
+        {
+          "id": "6a67-c129-8325-85c3",
+          "name": "Emotionless Clarity",
+          "points": 10,
+          "description": "Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        },
+        {
+          "id": "d5ab-b1f8-7963-ed08",
+          "name": "Arch Negator",
+          "points": 5,
+          "description": "Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
+        },
+        {
+          "id": "6571-1a2f-779b-e711",
+          "name": "Explorator Dispensation",
+          "points": 20,
+          "description": "This unit has Infiltrators."
+        }
+      ]
+    },
+    {
+      "id": "24e2-b690-37b5-de9e",
+      "name": "Lords of the Forge",
+      "rules": [
+        "War-form Mantles"
+      ],
+      "enhancements": [
+        {
+          "id": "42f7-6065-5be3-3b74",
+          "name": "Vingh's Wafers of Dynamism",
+          "points": 25,
+          "description": "At the start of the first battle round, if this unit is an attached unit, this unit has **MOBILE** until the end of the battle."
+        },
+        {
+          "id": "3c7a-55cf-0e00-e031",
+          "name": "TL-409",
+          "points": 30,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "65e6-9ab1-6a2c-5410",
+      "name": "Luminen Auto-choir",
+      "rules": [
+        "Cyber-static Canticles"
+      ],
+      "enhancements": [
+        {
+          "id": "8314-a56c-610a-f597",
+          "name": "Electromiasmic Brazier",
+          "points": 10,
+          "description": "This unit has **Stealth**."
+        },
+        {
+          "id": "f3cc-d2d8-44d7-ac0f",
+          "name": "Voltagheist Reliquary",
+          "points": 15,
+          "description": "Enemy units cannot target this unit with **snap shooting** attacks."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -179,7 +615,34 @@
           "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cognis heavy stubber array",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "9",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 9",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -271,6 +734,17 @@
             "Sustained hits 1",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -323,7 +797,34 @@
           "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cognis heavy stubber array",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "9",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 9",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -383,19 +884,6 @@
       ],
       "weapons": [
         {
-          "name": "Solar atomiser",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 14,
-          "armorPenetration": -4,
-          "damage": "D6",
-          "keywords": [
-            "Melta 3"
-          ]
-        },
-        {
           "name": "Arc Scourge",
           "type": "Melee",
           "range": "Melee",
@@ -432,6 +920,19 @@
           "damage": "1",
           "keywords": [
             "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Solar atomiser",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 3"
           ]
         }
       ],
@@ -489,19 +990,6 @@
           "damage": "1",
           "keywords": [
             "Pistol",
-            "Sustained Hits 2"
-          ]
-        },
-        {
-          "name": "Electrostatic gauntlets",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
             "Sustained Hits 2"
           ]
         }
@@ -611,6 +1099,19 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "-"
+          ]
+        },
+        {
           "name": "Twin Kastelan phosphor blaster",
           "type": "Ranged",
           "range": "24\"",
@@ -622,6 +1123,32 @@
           "keywords": [
             "Ignores Cover",
             "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin Kastelan fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Kastelan fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "-"
           ]
         },
         {
@@ -662,45 +1189,6 @@
           "damage": "2",
           "keywords": [
             "Ignores Cover"
-          ]
-        },
-        {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "-"
-          ]
-        },
-        {
-          "name": "Twin Kastelan fist",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "Twin-linked"
-          ]
-        },
-        {
-          "name": "Kastelan fist",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 12,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": [
-            "-"
           ]
         }
       ],
@@ -746,7 +1234,60 @@
           "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. While this unit is within 6” of one or more friendly ^^**Adeptus Mechanicus Battleline^^** units, you can re-roll the Hit roll instead."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arc claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+"
+          ]
+        },
+        {
+          "name": "Heavy arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hydraulic claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Torsion cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Blast"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -789,7 +1330,84 @@
           "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Heavy grav-cannon",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 2+"
+          ]
+        },
+        {
+          "name": "Cognis flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Phosphor blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Kataphron plasma culverin - standard",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Kataphron plasma culverin - supercharge",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -861,6 +1479,17 @@
           ]
         },
         {
+          "name": "Dunecrawler legs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Eradication beamer - dissipated",
           "type": "Ranged",
           "range": "36\"",
@@ -916,20 +1545,6 @@
           ]
         },
         {
-          "name": "Cognis heavy stubber",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Rapid Fire 3",
-            "Sustained Hits 1"
-          ]
-        },
-        {
           "name": "Neutron laser",
           "type": "Ranged",
           "range": "48\"",
@@ -955,17 +1570,6 @@
             "Ignores Cover",
             "Twin-linked"
           ]
-        },
-        {
-          "name": "Dunecrawler legs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1034,17 +1638,6 @@
           ]
         },
         {
-          "name": "Flechette carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
           "name": "Taser goad",
           "type": "Melee",
           "range": "Melee",
@@ -1062,6 +1655,17 @@
           "type": "Melee",
           "range": "Melee",
           "attacks": "2",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Flechette carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
           "skill": "4+",
           "strength": 3,
           "armorPenetration": 0,
@@ -1134,20 +1738,6 @@
           ]
         },
         {
-          "name": "Phosphor torch",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Torrent"
-          ]
-        },
-        {
           "name": "Taser goad",
           "type": "Melee",
           "range": "Melee",
@@ -1172,15 +1762,18 @@
           "keywords": []
         },
         {
-          "name": "Pteraxii talons",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
+          "name": "Phosphor torch",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
         }
       ],
       "isLeader": false,
@@ -1248,63 +1841,29 @@
           ]
         },
         {
-          "name": "Galvanic carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
+          "name": "Cavalry sabre & clawed limbs",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
           "skill": "4+",
           "strength": 4,
-          "armorPenetration": 0,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
           "damage": "1",
           "keywords": [
-            "Devastating Wounds"
+            "Devastating Wounds",
+            "Pistol"
           ]
-        },
-        {
-          "name": "Galvanic carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Cavalry sabre & clawed limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Cavalry sabre & clawed limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Cavalry sabre & clawed limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1351,48 +1910,6 @@
       ],
       "weapons": [
         {
-          "name": "Phosphor pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Phosphor blast carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "D6",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Blast",
-            "Ignores cover"
-          ]
-        },
-        {
-          "name": "Phosphor pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Pistol"
-          ]
-        },
-        {
           "name": "Cavalry arc maul",
           "type": "Melee",
           "range": "Melee",
@@ -1419,26 +1936,61 @@
           "keywords": []
         },
         {
-          "name": "Clawed limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
+          "strength": 6,
+          "armorPenetration": -1,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         },
         {
-          "name": "Clawed limbs",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
+          "name": "Sulphur breath",
+          "type": "Ranged",
+          "range": "9\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Phosphor pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor blast carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores cover"
+          ]
         }
       ],
       "isLeader": false,
@@ -1486,6 +2038,17 @@
       ],
       "weapons": [
         {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Stubcarbine",
           "type": "Ranged",
           "range": "12\"",
@@ -1510,67 +2073,6 @@
           "keywords": [
             "Pistol"
           ]
-        },
-        {
-          "name": "Stubcarbine",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Flechette blaster",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Power weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Taser goad",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Sustained Hits 2"
-          ]
-        },
-        {
-          "name": "Power weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Taser goad",
@@ -1671,20 +2173,6 @@
             "Devastating Wounds",
             "Precision"
           ]
-        },
-        {
-          "name": "Transonic razor & chordclaw",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": [
-            "Anti-Infantry 3+",
-            "Precision"
-          ]
         }
       ],
       "isLeader": false,
@@ -1748,6 +2236,20 @@
           "armorPenetration": -1,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -1799,6 +2301,17 @@
       ],
       "weapons": [
         {
+          "name": "Alpha combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Galvanic rifle",
           "type": "Ranged",
           "range": "30\"",
@@ -1810,12 +2323,26 @@
           "keywords": []
         },
         {
-          "name": "Galvanic rifle",
+          "name": "Mechanicus pistol",
           "type": "Ranged",
-          "range": "30\"",
-          "attacks": "2",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
-          "strength": 4,
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
@@ -1870,39 +2397,6 @@
           "skill": "4+",
           "strength": 7,
           "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Galvanic rifle",
-          "type": "Ranged",
-          "range": "30\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Galvanic rifle",
-          "type": "Ranged",
-          "range": "30\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Alpha combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
           "damage": "1",
           "keywords": []
         }
@@ -1955,17 +2449,15 @@
       ],
       "weapons": [
         {
-          "name": "Radium carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
+          "name": "Alpha combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
           "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
+          "strength": 5,
+          "armorPenetration": -1,
           "damage": "1",
-          "keywords": [
-            "Anti-Infantry 4+"
-          ]
+          "keywords": []
         },
         {
           "name": "Radium carbine",
@@ -1979,6 +2471,31 @@
           "keywords": [
             "Anti-Infantry 4+"
           ]
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Transuranic arquebus",
@@ -2030,43 +2547,6 @@
           "skill": "4+",
           "strength": 7,
           "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Radium carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Anti-Infantry 4+"
-          ]
-        },
-        {
-          "name": "Radium carbine",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Anti-Infantry 4+"
-          ]
-        },
-        {
-          "name": "Alpha combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
           "damage": "1",
           "keywords": []
         }
@@ -2173,6 +2653,17 @@
           "armorPenetration": -3,
           "damage": "D6+1",
           "keywords": []
+        },
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2223,7 +2714,34 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport^^** this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Cognis heavy stubber array",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "9",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 9",
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2356,6 +2874,17 @@
       ],
       "weapons": [
         {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Macrostubber",
           "type": "Ranged",
           "range": "12\"",
@@ -2416,17 +2945,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Omnissian axe",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -2508,6 +3026,20 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -2563,6 +3095,17 @@
       ],
       "weapons": [
         {
+          "name": "Omnissian staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Magnarail lance",
           "type": "Ranged",
           "range": "36\"",
@@ -2588,17 +3131,6 @@
             "Devastating Wounds",
             "Torrent"
           ]
-        },
-        {
-          "name": "Omnissian staff",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": true,
@@ -2666,6 +3198,20 @@
             "Anti-Vehicle 4+",
             "Devastating Wounds"
           ]
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -2730,6 +3276,20 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -2783,62 +3343,6 @@
       ],
       "weapons": [
         {
-          "name": "Arc lance",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Arc lance",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Arc lance",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Arc lance",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds"
-          ]
-        },
-        {
           "name": "Alpha close combat weapon",
           "type": "Melee",
           "range": "Melee",
@@ -2865,48 +3369,17 @@
           ]
         },
         {
-          "name": "Arc lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
+          "name": "Archeotech pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
-          "strength": 5,
+          "strength": 6,
           "armorPenetration": -1,
           "damage": "1",
           "keywords": [
-            "Anti-Vehicle 4+",
             "Devastating Wounds",
-            "Lance"
-          ]
-        },
-        {
-          "name": "Arc lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds",
-            "Lance"
-          ]
-        },
-        {
-          "name": "Arc lance",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Anti-Vehicle 4+",
-            "Devastating Wounds",
-            "Lance"
+            "Pistol"
           ]
         }
       ],
@@ -2961,110 +3434,6 @@
       ],
       "weapons": [
         {
-          "name": "➤ Galvanic caster - flechette",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - hammershot",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Heavy"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - flechette",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - hammershot",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Heavy"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - flechette",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - hammershot",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Heavy"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - flechette",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Assault"
-          ]
-        },
-        {
-          "name": "➤ Galvanic caster - hammershot",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "4+",
-          "strength": 5,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Heavy"
-          ]
-        },
-        {
           "name": "Alpha close combat weapon",
           "type": "Melee",
           "range": "Melee",
@@ -3087,37 +3456,44 @@
           "keywords": []
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
+          "name": "➤ Galvanic caster - flechette",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "5",
           "skill": "4+",
-          "strength": 3,
+          "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Assault"
+          ]
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
+          "name": "➤ Galvanic caster - hammershot",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
           "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
+          "strength": 5,
+          "armorPenetration": -1,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Heavy"
+          ]
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
+          "name": "Archeotech pistol",
+          "type": "Ranged",
+          "range": "12\"",
           "attacks": "1",
           "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
+          "strength": 6,
+          "armorPenetration": -1,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -3171,6 +3547,19 @@
       ],
       "weapons": [
         {
+          "name": "Termite drill",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -2,
+          "damage": "D3+3",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
           "name": "Terrax melta cutter",
           "type": "Ranged",
           "range": "12\"",
@@ -3222,19 +3611,6 @@
           "keywords": [
             "Devastating Wounds",
             "Twin-linked"
-          ]
-        },
-        {
-          "name": "Termite drill",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 14,
-          "armorPenetration": -2,
-          "damage": "D3+3",
-          "keywords": [
-            "Anti-Vehicle 3+"
           ]
         }
       ],
@@ -3366,6 +3742,17 @@
       ],
       "weapons": [
         {
+          "name": "Sydonian Feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Radium Jezzail",
           "type": "Ranged",
           "range": "36\"",
@@ -3397,15 +3784,18 @@
           ]
         },
         {
-          "name": "Sydonian Feet",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "4+",
-          "strength": 3,
-          "armorPenetration": 0,
+          "strength": 6,
+          "armorPenetration": -1,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
         }
       ],
       "isLeader": false,
@@ -3485,6 +3875,17 @@
             "Heavy",
             "Precision"
           ]
+        },
+        {
+          "name": "Ironstrider feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3534,6 +3935,17 @@
       ],
       "weapons": [
         {
+          "name": "Servitor's servo arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "Heavy bolter",
           "type": "Ranged",
           "range": "36\"",
@@ -3546,6 +3958,17 @@
             "Heavy",
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Servitor's tools",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Multi-melta",
@@ -3589,17 +4012,6 @@
             "Heavy",
             "Blast"
           ]
-        },
-        {
-          "name": "Servitor's servo arm",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "5+",
-          "strength": 8,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3668,6 +4080,17 @@
           ]
         },
         {
+          "name": "Dataspikes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Heavy arc rifle",
           "type": "Ranged",
           "range": "30\"",
@@ -3680,6 +4103,17 @@
             "Anti-VEHICLE 4+",
             "Rapid Fire 1"
           ]
+        },
+        {
+          "name": "Servo-claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         },
         {
           "name": "Heavy bolter",
@@ -3735,17 +4169,6 @@
             "Ignores Cover",
             "Rapid Fire 1"
           ]
-        },
-        {
-          "name": "Dataspikes",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3796,7 +4219,458 @@
           "description": "While this model's unit is in range of one or more objective markers, improve this model's Leadership characteristic by 1."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Eradication ray - dissipated",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Eradication ray - focused",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Flechette carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Magnarail lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Phosphor blast carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Phosphor torch",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver -  supercharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Radium jezzail",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic cannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Twin cognis autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Twin cognis lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Volkite blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Macrostubber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Arc maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Control stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Ironstrider feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Servo-arc claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Servo-arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Taser lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Walker 2+",
+            "Lance",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Transonic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3845,7 +4719,458 @@
           "description": "Melee weapons equipped by this model have [^^Precision^^]."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Eradication ray - dissipated",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Eradication ray - focused",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Flechette carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Magnarail lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Phosphor blast carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Phosphor torch",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver -  supercharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Radium jezzail",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic cannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Twin cognis autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Twin cognis lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Volkite blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Macrostubber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Arc maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Control stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Ironstrider feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Servo-arc claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Servo-arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Taser lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Walker 2+",
+            "Lance",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Transonic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3895,7 +5220,458 @@
           "description": "Ranged weapons equipped by this model have [^^Ignores Cover^^]."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arc rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "➤ Eradication ray - dissipated",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Eradication ray - focused",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Flechette carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Galvanic carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Galvanic rifle",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Magnarail lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Phosphor blast carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Phosphor torch",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver -  supercharge",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous"
+          ]
+        },
+        {
+          "name": "➤ Plasma caliver - standard",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Radium carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Radium jezzail",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Transonic cannon",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Transuranic arquebus",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Monster 4+",
+            "Anti-Vehicle 4+",
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Twin cognis autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Twin cognis lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Volkite blaster",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Macrostubber",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Mechanicus pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flechette blaster",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Phosphor serpenta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stubcarbine",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Arc maul",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Control stave",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Ironstrider feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Omnissian axe",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Servo-arc claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Servo-arm",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Taser lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Walker 2+",
+            "Lance",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Transonic blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3959,6 +5735,28 @@
       ],
       "weapons": [
         {
+          "name": "➤ Rod of the War Forge - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Rod of the War Forge - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Jericho-class conversion resonator - shockwave",
           "type": "Ranged",
           "range": "24\"",
@@ -3984,28 +5782,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "➤ Rod of the War Forge - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
-        },
-        {
-          "name": "➤ Rod of the War Forge - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "12",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -4059,7 +5835,70 @@
           "description": "Each time a model in this unit makes an attack with an eradication caster that targets a unit (excluding **^^Monster^^** and **^^Vehicle^^** units), that attack has the **[SUSTAINED HITS 1]** ability."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Hastarii arc blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Eradication caster - focused",
+          "type": "Ranged",
+          "range": "15\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "➤ Eradication caster - dissipated",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 4+"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -4111,7 +5950,54 @@
           "description": "Each time a model in this unit makes an attack with a neutron fusil against a **^^Monster^^** or **^^Vehicle^^** unit, that attack has the **[IGNORES COVER]** ability."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hastarii phosphor blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Neutron fusil",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     }

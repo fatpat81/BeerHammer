@@ -6,28 +6,37 @@
   "totalDatasheets": 41,
   "detachments": [
     {
-      "id": "3b0d-dccf-8661-be1c",
-      "name": "Detachment",
-      "rules": [
-        "Flow of Magic",
-        "Kindred Sorcery",
-        "Infernal Pacts",
-        "Warpmeld Sacrifice",
-        "All is Dust",
-        "Warpfire Infusion",
-        "Sorcerous Invigoration",
-        "Ensorcelled Animus",
-        "All-seeing Mutant Hordes"
-      ],
-      "enhancements": []
-    },
-    {
       "id": "7b92-cca6-0617-1b6d",
       "name": "Hexwarp Thrallband",
       "rules": [
         "Flow of Magic"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "9d89-dede-5aac-0bcb",
+          "name": "Arcane Might",
+          "points": 20,
+          "description": "Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead."
+        },
+        {
+          "id": "4a67-5764-0da1-196e",
+          "name": "Empowered Manifestation",
+          "points": 20,
+          "description": "While the bearer’s unit is wholly within your army’s Flow of Magic, you can add 6\" to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re‑roll the result."
+        },
+        {
+          "id": "ee5d-56ac-adc7-c050",
+          "name": "Empyric Onslaught",
+          "points": 25,
+          "description": "While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer."
+        },
+        {
+          "id": "aa8d-db59-d651-a759",
+          "name": "Noctilith Mantle",
+          "points": 15,
+          "description": "While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals."
+        }
+      ]
     },
     {
       "id": "9aba-cb08-cd38-9e01",
@@ -35,7 +44,32 @@
       "rules": [
         "Kindred Sorcery"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "eef6-4b12-1eff-f412",
+          "name": "Lord of Forbidden Lore",
+          "points": 20,
+          "description": "Each time the bearer manifests a Ritual, while resolving the Ritual, add 6\" to its range."
+        },
+        {
+          "id": "3811-a215-d4a1-d197",
+          "name": "Umbralefic Crystal",
+          "points": 30,
+          "description": "(Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn)."
+        },
+        {
+          "id": "7213-a7b3-4c8e-96bc",
+          "name": "Eldritch Vortex of E'taph",
+          "points": 35,
+          "description": "Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer."
+        },
+        {
+          "id": "1150-7501-d526-d373",
+          "name": "Incandeum",
+          "points": 15,
+          "description": "Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army has already attempted to manifest that Ritual this phase."
+        }
+      ]
     },
     {
       "id": "6acc-9928-2b67-73c3",
@@ -43,7 +77,71 @@
       "rules": [
         "Infernal Pacts"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "1dc7-5ba1-1758-a0dd",
+          "name": "Nethershriek Mind-eater",
+          "points": 10,
+          "description": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. That unit must take a Battle-shock test; if that test is failed, that unit suffers 3 mortal wounds."
+        },
+        {
+          "id": "5ccc-1a90-1727-663f",
+          "name": "Diabolic Servant",
+          "points": 20,
+          "description": "While the bearer is within 6\" of one or more friendly ^^**Scintillating Legion^^** units, each time the bearer Channels the Warp, add 1 to the Psychic test result."
+        },
+        {
+          "id": "2c2a-02e4-f184-df16",
+          "name": "Duplicitous Malediction",
+          "points": 15,
+          "description": "After both players have deployed their armies, select up to three ^^**Thousand Sons^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserve if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "id": "3ee5-93cb-43a8-67f4",
+          "name": "Tome of True Names",
+          "points": 20,
+          "description": "Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 2+ invulnerable save."
+        },
+        {
+          "id": "bc51-90d0-936b-2acb",
+          "name": "Unravelled Fates",
+          "points": 15,
+          "description": "In your Movement phase, at the start or end of this unit's move, you can select one friendly **battle‑shocked MUTANT** unit within 6\" of this model. That unit is no longer **battle‑shocked**."
+        }
+      ]
+    },
+    {
+      "id": "5be7-3aa8-5d64-cbaf",
+      "name": "Warpmeld Pact",
+      "rules": [
+        "Warpmeld Sacrifice"
+      ],
+      "enhancements": [
+        {
+          "id": "5eaa-74bf-f08a-712c",
+          "name": "Warpmeld Dagger",
+          "points": 10,
+          "description": "Each time the bearer attempts a Ritual, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 mortal wounds; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered."
+        },
+        {
+          "id": "190d-7321-6e85-5251",
+          "name": "Diamond of Distortion",
+          "points": 20,
+          "description": "While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll."
+        },
+        {
+          "id": "c357-dd19-13a4-38cd",
+          "name": "Bray Lord",
+          "points": 15,
+          "description": "The bearer has the Scouts 6\" ability."
+        },
+        {
+          "id": "c84c-683a-79be-1620",
+          "name": "Flowing Flesh",
+          "points": 10,
+          "description": "The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5."
+        }
+      ]
     },
     {
       "id": "7510-5cb8-60fe-61a0",
@@ -51,73 +149,122 @@
       "rules": [
         "All is Dust"
       ],
-      "enhancements": []
+      "enhancements": [
+        {
+          "id": "2844-f588-0528-92ed",
+          "name": "Risen Rubricae",
+          "points": 30,
+          "description": "At the start of the Declare Battle Formations step, select either two ^^**Rubricae Battleline^^** units from your army or one other ^^**Rubricae^^** unit from your army; models in the selected units have the Infiltrators ability."
+        },
+        {
+          "id": "f27a-2ade-fd42-133d",
+          "name": "Arcane Thralls (Aura)",
+          "points": 5,
+          "description": "While a friendly ^^**Rubricae^^** unit is within 9\" of the bearer, you can re-roll Battle-shock tests taken for that unit."
+        },
+        {
+          "id": "df1d-52b9-516f-9d59",
+          "name": "Lord of the Rubricae",
+          "points": 15,
+          "description": "While the bearer is leading a unit, each time a ^^**Rubricae^^** model in that unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "id": "ae8c-980f-21c4-5290",
+          "name": "Stave Abominus",
+          "points": 20,
+          "description": "The bearer's melee weapons have the [Sustained Hits D3] and [Devastating Wounds] abilities."
+        }
+      ]
     },
     {
-      "id": "e215-5f19-8d65-cd21",
-      "name": "Cultist firearm",
-      "rules": [],
-      "enhancements": []
+      "id": "8839-1789-36e7-b66a",
+      "name": "Warpforged Cabal",
+      "rules": [
+        "Warpfire Infusion"
+      ],
+      "enhancements": [
+        {
+          "id": "aa85-8fcc-fbc7-d9c1",
+          "name": "Warp Syphon",
+          "points": 5,
+          "description": "While the bearer is within 6\" of one or more friendly ^^**Thousand Sons Vehicle^^** units, each time the bearer Channels the Warp, after you roll that additional D6 but before checking for doubles or triples, the bearer can use this Enhancement. If it does, select one of those ^^**Vehicle^^** units; that ^^**Vehicle^^** unit suffers 1 mortal wound and you can re-roll that additional D6."
+        },
+        {
+          "id": "3322-390b-8ea5-31f7",
+          "name": "Perplexing Cloak",
+          "points": 20,
+          "description": "While the bearer is within 3\" of one or more friendly ^^**Thousand Sons Vehicle^^** units, the bearer has the Lone Operative ability."
+        },
+        {
+          "id": "0931-df08-eae6-c749",
+          "name": "Biomechanical Mutation",
+          "points": 15,
+          "description": "In your Command phase, you can select one friendly ^^**Thousand Sons Vehicle^^** model within 6\" of this model. That model regains up to D3 lost wounds."
+        },
+        {
+          "id": "ccc5-5c73-1392-d855",
+          "name": "Warp-cursed Runemaster",
+          "points": 10,
+          "description": "While the bearer is within 6\" of one or more friendly ^^**Thousand Sons Vehicle^^** units, each time the bearer manifests a Ritual, while resolving that Ritual, add 6\" to its range."
+        }
+      ]
     },
     {
-      "id": "138f-e150-fe55-e471",
-      "name": "Occult Apparitions",
-      "rules": [],
-      "enhancements": []
+      "id": "4b8b-16b7-091d-7b6f",
+      "name": "Ritual of Regeneration",
+      "rules": [
+        "Sorcerous Invigoration"
+      ],
+      "enhancements": [
+        {
+          "id": "44f2-27ca-fad5-70ad",
+          "name": "Curse of Life",
+          "points": 20,
+          "description": "When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**."
+        },
+        {
+          "id": "a2c2-fa4a-7f25-d832",
+          "name": "Eruption of Vitality",
+          "points": 35,
+          "description": "(Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: \n- On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining."
+        }
+      ]
     },
     {
-      "id": "d81a-1b2e-73d9-d0ad",
-      "name": "The Cult of Manipulation",
-      "rules": [],
-      "enhancements": []
+      "id": "b5a7-4856-7c39-0c86",
+      "name": "Sekhetar Cohort",
+      "rules": [
+        "Ensorcelled Animus"
+      ],
+      "enhancements": [
+        {
+          "id": "800f-cfbb-ce7c-8cd0",
+          "name": "Occulus Infernum",
+          "points": 20,
+          "description": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **SEKHETAR ROBOTS** unit within 6\" of this unit. That unit’s ranged attacks have +1 **BS** until the start of your next turn."
+        },
+        {
+          "id": "4739-736e-fad3-2d4f",
+          "name": "Walking Rampart",
+          "points": 30,
+          "description": "This model has the following abilities: \n- Soul Bound: In your Movement phase, at the start or end of this unit’s move, you can select one friendly **SEKHETAR ROBOTS** unit within 3\" of this model. That **SEKHETAR ROBOTS** unit **heals** D3+1 wounds. \n▪ Kine‑shielded Guardians: While this model is within 3\" of a friendly **SEKHETAR ROBOTS** unit, this model has **Lone Operative**."
+        }
+      ]
     },
     {
-      "id": "8e37-897a-18b6-98d2",
-      "name": "The Cult of Mutation",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "554f-2544-67fc-16d8",
-      "name": "The Cult of Prophecy",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "2ad5-66f8-2521-7515",
-      "name": "The Cult of Time",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "3dfb-fe28-56e4-40f5",
-      "name": "The Cult of Scheming",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "979c-9492-712d-b5ba",
-      "name": "The Cult of Magic",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "3795-1c4b-6bf5-e6f8",
-      "name": "The Cult of Knowledge",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "a00c-25d1-c7af-14c6",
-      "name": "The Cult of Change",
-      "rules": [],
-      "enhancements": []
-    },
-    {
-      "id": "7a37-52f8-d1f8-841b",
-      "name": "The Cult of Duplicity",
-      "rules": [],
-      "enhancements": []
+      "id": "cec5-f3d2-05cb-212b",
+      "name": "Servants of Change",
+      "rules": [
+        "All-seeing Mutant Hordes"
+      ],
+      "enhancements": [
+        {
+          "id": "bc51-90d0-936b-2acb",
+          "name": "Unravelled Fates",
+          "points": 15,
+          "description": "In your Movement phase, at the start or end of this unit's move, you can select one friendly **battle‑shocked MUTANT** unit within 6\" of this model. That unit is no longer **battle‑shocked**."
+        }
+      ]
     }
   ],
   "stratagems": [
@@ -289,6 +436,19 @@
           "keywords": [
             "Psychic"
           ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -336,6 +496,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Soulshatter lascannon",
           "type": "Ranged",
           "range": "48\"",
@@ -347,15 +518,59 @@
           "keywords": []
         },
         {
-          "name": "Armoured tracks",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
           "skill": "4+",
-          "strength": 8,
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Twin inferno heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -412,6 +627,82 @@
           "damage": "D6+1",
           "keywords": [
             "Twin-linked"
+          ]
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Inferno heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
           ]
         }
       ],
@@ -470,6 +761,82 @@
           "keywords": [
             "Rapid Fire 2"
           ]
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Inferno heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,
@@ -516,7 +883,60 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this ^^**Transport^^** this turn makes a Psychic attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -627,6 +1047,58 @@
           "keywords": [
             "Blast"
           ]
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Armoured tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
         }
       ],
       "isLeader": false,
@@ -708,6 +1180,32 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -791,6 +1289,32 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -837,6 +1361,30 @@
         }
       ],
       "weapons": [
+        {
+          "name": "Ectoplasma cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Hades autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
         {
           "name": "Forgefiend claws",
           "type": "Melee",
@@ -908,6 +1456,55 @@
       ],
       "weapons": [
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Helbrute fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Heavy flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
           "name": "➤ Missile launcher - frag",
           "type": "Ranged",
           "range": "48\"",
@@ -929,6 +1526,28 @@
           "strength": 9,
           "armorPenetration": -2,
           "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Helbrute hammer",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "4+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Power scourge",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         },
         {
@@ -972,37 +1591,31 @@
           ]
         },
         {
-          "name": "Close combat weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
+          "name": "Twin inferno heavy bolter",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
           "skill": "3+",
-          "strength": 6,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1",
+            "Twin-linked"
+          ]
         },
         {
-          "name": "Helbrute hammer",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "4+",
-          "strength": 14,
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
           "armorPenetration": -3,
           "damage": "D6+1",
-          "keywords": []
-        },
-        {
-          "name": "Power scourge",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "8",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": []
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -1049,6 +1662,20 @@
       ],
       "weapons": [
         {
+          "name": "Heldrake claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-FLY 2+",
+            "Devastating Wounds"
+          ]
+        },
+        {
           "name": "Baleflamer",
           "type": "Ranged",
           "range": "12\"",
@@ -1063,18 +1690,15 @@
           ]
         },
         {
-          "name": "Heldrake claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
+          "name": "Hades autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
           "skill": "3+",
-          "strength": 7,
-          "armorPenetration": -1,
+          "strength": 8,
+          "armorPenetration": -2,
           "damage": "2",
-          "keywords": [
-            "Anti-FLY 2+",
-            "Devastating Wounds"
-          ]
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1159,6 +1783,32 @@
             "Psychic",
             "Torrent"
           ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -1232,21 +1882,6 @@
           ]
         },
         {
-          "name": "Tzeentch's Firestorm",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "D6+3",
-          "skill": "2+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Blast",
-            "Ignores Cover",
-            "Psychic"
-          ]
-        },
-        {
           "name": "➤ Blade of Magnus - strike",
           "type": "Melee",
           "range": "Melee",
@@ -1270,6 +1905,21 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Tzeentch's Firestorm",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6+3",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Blast",
+            "Ignores Cover",
             "Psychic"
           ]
         }
@@ -1319,6 +1969,17 @@
       ],
       "weapons": [
         {
+          "name": "Maulerfiend fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -2,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
           "name": "Magma cutter",
           "type": "Ranged",
           "range": "6\"",
@@ -1330,17 +1991,6 @@
           "keywords": [
             "Melta 2"
           ]
-        },
-        {
-          "name": "Maulerfiend fists",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "3+",
-          "strength": 14,
-          "armorPenetration": -2,
-          "damage": "D6+1",
-          "keywords": []
         },
         {
           "name": "Lasher tendrils",
@@ -1404,6 +2054,28 @@
       ],
       "weapons": [
         {
+          "name": "Betentacled maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "15",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Mutalith claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
           "name": "➤ Warp vortex - blast",
           "type": "Ranged",
           "range": "24\"",
@@ -1442,28 +2114,6 @@
             "Ignores Cover",
             "Torrent"
           ]
-        },
-        {
-          "name": "Betentacled maw",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "15",
-          "skill": "3+",
-          "strength": 7,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Mutalith claws",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "3",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1520,6 +2170,19 @@
       ],
       "weapons": [
         {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "Malefic Curse",
           "type": "Ranged",
           "range": "24\"",
@@ -1574,6 +2237,17 @@
           "keywords": []
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Warpflamer",
           "type": "Ranged",
           "range": "12\"",
@@ -1598,19 +2272,6 @@
           "damage": "1",
           "keywords": [
             "Devastating Wounds"
-          ]
-        },
-        {
-          "name": "Force weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
           ]
         }
       ],
@@ -1659,6 +2320,19 @@
       ],
       "weapons": [
         {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
           "name": "Malefic Curse",
           "type": "Ranged",
           "range": "24\"",
@@ -1674,14 +2348,14 @@
           ]
         },
         {
-          "name": "Hellfyre missile rack",
-          "type": "Ranged",
-          "range": "36\"",
-          "attacks": "2",
+          "name": "Prosperine khopesh",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
           "skill": "3+",
-          "strength": 10,
+          "strength": 5,
           "armorPenetration": -2,
-          "damage": "3",
+          "damage": "2",
           "keywords": []
         },
         {
@@ -1698,6 +2372,31 @@
           ]
         },
         {
+          "name": "Hellfyre missile rack",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Heavy warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
           "name": "Soulreaper cannon",
           "type": "Ranged",
           "range": "24\"",
@@ -1709,63 +2408,6 @@
           "keywords": [
             "Devastating Wounds"
           ]
-        },
-        {
-          "name": "Force weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "4",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -1,
-          "damage": "D3",
-          "keywords": [
-            "Psychic"
-          ]
-        },
-        {
-          "name": "Prosperine khopesh",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Prosperine khopesh",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Prosperine khopesh",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
-          "name": "Prosperine khopesh",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "3+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1841,6 +2483,32 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ],
       "isLeader": true,
@@ -1905,6 +2573,47 @@
             "Anti-MONSTER 4+",
             "Anti-VEHICLE 4+",
             "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
             "Psychic"
           ]
         }
@@ -1978,17 +2687,6 @@
           ]
         },
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -2015,6 +2713,17 @@
             "Devastating Wounds",
             "Psychic"
           ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2083,17 +2792,6 @@
           ]
         },
         {
-          "name": "Infernal cannon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "3",
-          "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
-        },
-        {
           "name": "➤ Hellforged weapons - strike",
           "type": "Melee",
           "range": "Melee",
@@ -2120,6 +2818,17 @@
             "Devastating Wounds",
             "Psychic"
           ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2165,7 +2874,48 @@
           "description": "Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Divining spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Precision"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -2313,12 +3063,25 @@
           "keywords": []
         },
         {
-          "name": "Chainsword",
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Tzaangor blades",
           "type": "Melee",
           "range": "Melee",
-          "attacks": "3",
+          "attacks": "2",
           "skill": "4+",
-          "strength": 4,
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
@@ -2378,6 +3141,32 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Twin autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2425,6 +3214,17 @@
       ],
       "weapons": [
         {
+          "name": "Armoured hull",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Autocannon",
           "type": "Ranged",
           "range": "48\"",
@@ -2436,15 +3236,30 @@
           "keywords": []
         },
         {
-          "name": "Armoured hull",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
-          "skill": "4+",
-          "strength": 6,
+          "name": "Havoc launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
           "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Twin lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": [
+            "Twin-linked"
+          ]
         }
       ],
       "isLeader": false,
@@ -2499,114 +3314,6 @@
         }
       ],
       "weapons": [
-        {
-          "name": "Bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "➤ Plasma pistol - standard",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "➤ Plasma pistol - supercharge",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": [
-            "Hazardous",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "➤ Plasma pistol - standard",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 7,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "➤ Plasma pistol - supercharge",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -3,
-          "damage": "2",
-          "keywords": [
-            "Hazardous",
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Bolt pistol",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "1",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Pistol"
-          ]
-        },
-        {
-          "name": "Combi-bolter",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "2",
-          "skill": "2+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Rapid Fire 2"
-          ]
-        },
-        {
-          "name": "Combi-weapon",
-          "type": "Ranged",
-          "range": "24\"",
-          "attacks": "1",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": [
-            "Anti-INFANTRY 4+",
-            "Devastating Wounds",
-            "Rapid Fire 1"
-          ]
-        },
         {
           "name": "Close combat weapon",
           "type": "Melee",
@@ -2665,26 +3372,72 @@
           ]
         },
         {
-          "name": "Accursed weapon",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "6",
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "2+",
-          "strength": 5,
-          "armorPenetration": -2,
+          "strength": 4,
+          "armorPenetration": 0,
           "damage": "1",
-          "keywords": []
+          "keywords": [
+            "Pistol"
+          ]
         },
         {
-          "name": "Power fist",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
           "skill": "2+",
           "strength": 8,
-          "armorPenetration": -2,
+          "armorPenetration": -3,
           "damage": "2",
-          "keywords": []
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-INFANTRY 4+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
         }
       ],
       "isLeader": true,
@@ -2753,6 +3506,53 @@
           ]
         },
         {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hellfyre missile rack",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Power claw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
           "name": "Warpflame projector",
           "type": "Ranged",
           "range": "12\"",
@@ -2765,17 +3565,6 @@
             "Ignores Cover",
             "Torrent"
           ]
-        },
-        {
-          "name": "Power claw",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 10,
-          "armorPenetration": -2,
-          "damage": "2",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -2822,7 +3611,34 @@
           "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Fatecaster greatbow",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Lethal Hits",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -3007,19 +3823,6 @@
           ]
         },
         {
-          "name": "Rod of sorcery",
-          "type": "Ranged",
-          "range": "18\"",
-          "attacks": "6",
-          "skill": "2+",
-          "strength": 8,
-          "armorPenetration": -1,
-          "damage": "2",
-          "keywords": [
-            "Psychic"
-          ]
-        },
-        {
           "name": "Staff of Tzeentch",
           "type": "Melee",
           "range": "Melee",
@@ -3028,6 +3831,19 @@
           "strength": 6,
           "armorPenetration": -1,
           "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Rod of sorcery",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": [
             "Psychic"
           ]
@@ -3092,6 +3908,17 @@
       ],
       "weapons": [
         {
+          "name": "Flamer mouths",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Flickering flames",
           "type": "Ranged",
           "range": "12\"",
@@ -3105,43 +3932,6 @@
             "Psychic",
             "Torrent"
           ]
-        },
-        {
-          "name": "Flickering flames",
-          "type": "Ranged",
-          "range": "12\"",
-          "attacks": "D6",
-          "skill": "N/A",
-          "strength": 4,
-          "armorPenetration": -1,
-          "damage": "1",
-          "keywords": [
-            "Ignores Cover",
-            "Psychic",
-            "Torrent"
-          ]
-        },
-        {
-          "name": "Flamer mouths",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Flamer mouths",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "3",
-          "skill": "4+",
-          "strength": 4,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
@@ -3267,6 +4057,17 @@
       ],
       "weapons": [
         {
+          "name": "Blue claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "5+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Coruscating blue flames (ref. only)",
           "type": "Ranged",
           "range": "18\"",
@@ -3295,6 +4096,17 @@
           ]
         },
         {
+          "name": "Yellow claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Coruscating pink flames",
           "type": "Ranged",
           "range": "18\"",
@@ -3307,28 +4119,6 @@
             "Pistol",
             "Psychic"
           ]
-        },
-        {
-          "name": "Blue claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "1",
-          "skill": "5+",
-          "strength": 3,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
-        },
-        {
-          "name": "Yellow claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Pink claws",
@@ -3410,6 +4200,17 @@
           ]
         },
         {
+          "name": "Yellow claws (ref. only)",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "5+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "Coruscating Blue flames",
           "type": "Ranged",
           "range": "18\"",
@@ -3422,17 +4223,6 @@
             "Pistol",
             "Psychic"
           ]
-        },
-        {
-          "name": "Yellow claws (ref. only)",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "2",
-          "skill": "5+",
-          "strength": 2,
-          "armorPenetration": 0,
-          "damage": "1",
-          "keywords": []
         },
         {
           "name": "Blue claws",
@@ -3549,7 +4339,332 @@
           "description": "This model can be attached to the following unit: ^^**Rubric Marines**^^"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arcane Fire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Astral Blast",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Baleful Devolution",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Fatecaster greatbow",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Lethal Hits",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Hazardous",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Gaze of Hate",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Anti-MONSTER 4+",
+            "Anti-VEHICLE 4+",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Heavy warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hellfyre missile rack",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Inferno boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Pandaemonic Delusion",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "Soulreaper cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Warpflame pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Divining spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Prosperine khopesh",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Tzaangor blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3597,7 +4712,332 @@
           "description": "If this unit starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third turn, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting up this unit on the battlefield, treat the current battle round number as being one higher than it actually is."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arcane Fire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Astral Blast",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Baleful Devolution",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Fatecaster greatbow",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Lethal Hits",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Hazardous",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Gaze of Hate",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Anti-MONSTER 4+",
+            "Anti-VEHICLE 4+",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Heavy warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hellfyre missile rack",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Inferno boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Pandaemonic Delusion",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "Soulreaper cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Warpflame pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Divining spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Prosperine khopesh",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Tzaangor blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3646,7 +5086,332 @@
           "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Arcane Fire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Ignores Cover",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Astral Blast",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Baleful Devolution",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Fatecaster greatbow",
+          "type": "Ranged",
+          "range": "30\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Ignores Cover",
+            "Lethal Hits",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Fires of the Abyss - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2D6",
+          "skill": "N/A",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Hazardous",
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Gaze of Hate",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Anti-MONSTER 4+",
+            "Anti-VEHICLE 4+",
+            "Devastating Wounds",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Heavy warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Hellfyre missile rack",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Inferno boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Inferno combi-bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Inferno combi-weapon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Devastating Wounds",
+            "Rapid Fire 1"
+          ]
+        },
+        {
+          "name": "Pandaemonic Delusion",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Sustained Hits 3"
+          ]
+        },
+        {
+          "name": "Soulreaper cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Warpflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Inferno bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Warpflame pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Precision"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Divining spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Force weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Prosperine khopesh",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Tzaangor blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": true,
       "attachableTo": []
     },
@@ -3696,6 +5461,28 @@
       ],
       "weapons": [
         {
+          "name": "Shearing claws - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 16,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Shearing claws - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "10",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
           "name": "➤ Heavy missile launcher - frag",
           "type": "Ranged",
           "range": "48\"",
@@ -3718,6 +5505,45 @@
           "armorPenetration": -2,
           "damage": "D6+1",
           "keywords": []
+        },
+        {
+          "name": "Electroscourge",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Sustained Hits 2"
+          ]
+        },
+        {
+          "name": "Hades lascannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "Heavy reaper autocannon",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Sustained Hits 1"
+          ]
         },
         {
           "name": "Hades battle cannon",
@@ -3782,28 +5608,6 @@
           "keywords": [
             "Melta 2"
           ]
-        },
-        {
-          "name": "Shearing claws - strike",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "5",
-          "skill": "3+",
-          "strength": 16,
-          "armorPenetration": -3,
-          "damage": "D6+1",
-          "keywords": []
-        },
-        {
-          "name": "Shearing claws - sweep",
-          "type": "Melee",
-          "range": "Melee",
-          "attacks": "10",
-          "skill": "3+",
-          "strength": 6,
-          "armorPenetration": -2,
-          "damage": "1",
-          "keywords": []
         }
       ],
       "isLeader": false,
