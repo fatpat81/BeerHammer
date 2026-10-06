@@ -18,5 +18,4 @@ docker-compose.yml
 # Release builds get catalog data from the live sync pipeline (API/DB).
 data/bsdata/
 data/factions/
-apps/web/public/data/
 

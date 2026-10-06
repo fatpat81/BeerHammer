@@ -80,6 +80,8 @@ services:
       NEXT_PUBLIC_API_URL: http://localhost:4000/api
     ports:
       - '3000:3000'
+    volumes:
+      - ./apps/web/public/data:/app/apps/web/public/data:ro
 
   # ── Wahapedia ETL (one-shot; run on demand or schedule on the host) ────────
   # Not started by default. Run a pass:
