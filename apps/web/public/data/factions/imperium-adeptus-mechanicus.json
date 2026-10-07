@@ -8,6 +8,7 @@
     {
       "id": "7aa5-4c0c-40c3-e2a",
       "name": "Rad-zone Corps",
+      "dpCost": 2,
       "rules": [
         "Rad-bombardment"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "48bd-eeae-171d-a10a",
       "name": "Skitarii Hunter Cohort",
+      "dpCost": 2,
       "rules": [
         "Skitarii Hunter Cohort"
       ],
@@ -104,6 +106,7 @@
     {
       "id": "e01f-8783-4769-2eb6",
       "name": "Explorator Maniple",
+      "dpCost": 2,
       "rules": [
         "Acquisition at any cost"
       ],
@@ -137,6 +140,7 @@
     {
       "id": "e282-2b49-bd6a-679c",
       "name": "Data-psalm Conclave",
+      "dpCost": 2,
       "rules": [
         "Benediction of the Omnissiah"
       ],
@@ -170,6 +174,7 @@
     {
       "id": "f67d-6f59-21b8-e1f9",
       "name": "Cohort Cybernetica",
+      "dpCost": 1,
       "rules": [
         "Cyber Psalm-Programming"
       ],
@@ -233,6 +238,7 @@
     {
       "id": "ce65-6b89-4a0e-4f3b",
       "name": "Haloscreed Battleclade",
+      "dpCost": 3,
       "rules": [
         "Noospheric Transference"
       ],
@@ -266,6 +272,7 @@
     {
       "id": "6d06-9e26-0d3c-5317",
       "name": "Eradication Cohort",
+      "dpCost": 2,
       "rules": [
         "Murderous Imperative"
       ],
@@ -353,6 +360,7 @@
     {
       "id": "02e5-7fe0-d054-0209",
       "name": "Cohort Acquisitus",
+      "dpCost": 1,
       "rules": [
         "Noospheric Recon"
       ],
@@ -416,6 +424,7 @@
     {
       "id": "24e2-b690-37b5-de9e",
       "name": "Lords of the Forge",
+      "dpCost": 2,
       "rules": [
         "War-form Mantles"
       ],
@@ -437,6 +446,7 @@
     {
       "id": "65e6-9ab1-6a2c-5410",
       "name": "Luminen Auto-choir",
+      "dpCost": 1,
       "rules": [
         "Cyber-static Canticles"
       ],

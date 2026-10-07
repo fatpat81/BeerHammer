@@ -8,6 +8,7 @@
     {
       "id": "3c31-6fac-9914-827a",
       "name": "Warhost",
+      "dpCost": 2,
       "rules": [
         "Martial Grace"
       ],
@@ -53,6 +54,7 @@
     {
       "id": "e299-e560-ccec-eeb3",
       "name": "Realspace Raiders",
+      "dpCost": 2,
       "rules": [
         "Alliance of Agony"
       ],
@@ -86,6 +88,7 @@
     {
       "id": "7596-e2c8-71fb-1b4f",
       "name": "Skysplinter Assault",
+      "dpCost": 2,
       "rules": [
         "Rain of Cruelty"
       ],
@@ -119,6 +122,7 @@
     {
       "id": "e688-8140-bc36-3cee",
       "name": "Reaper's Wager",
+      "dpCost": 3,
       "rules": [
         "Callous Competition"
       ],
@@ -152,6 +156,7 @@
     {
       "id": "a27b-ac32-f0fd-8111",
       "name": "Armoured Warhost",
+      "dpCost": 1,
       "rules": [
         "Skilled Crews"
       ],
@@ -197,6 +202,7 @@
     {
       "id": "c8a3-920b-166b-30d9",
       "name": "Windrider Host",
+      "dpCost": 2,
       "rules": [
         "Ride the Wind"
       ],
@@ -230,6 +236,7 @@
     {
       "id": "fc94-43bf-5247-8e7c",
       "name": "Spirit Conclave",
+      "dpCost": 2,
       "rules": [
         "Shepherds of the Dead"
       ],
@@ -263,6 +270,7 @@
     {
       "id": "9805-eaee-0a84-f86f",
       "name": "Guardian Battlehost",
+      "dpCost": 2,
       "rules": [
         "Defend at All Costs"
       ],
@@ -296,6 +304,7 @@
     {
       "id": "be59-ec7d-2f02-b6ec",
       "name": "Ghosts of the Webway",
+      "dpCost": 2,
       "rules": [
         "Acrobatic Onslaught",
         "Travelling Players"
@@ -330,6 +339,7 @@
     {
       "id": "925e-85fb-b477-70be",
       "name": "Devoted of Ynnead",
+      "dpCost": 2,
       "rules": [
         "Strength From Death",
         "Servants of the Whispering God"
@@ -364,6 +374,7 @@
     {
       "id": "b525-57b6-8a78-ed75",
       "name": "Seer Council",
+      "dpCost": 2,
       "rules": [
         "Strands of Fate"
       ],
@@ -397,6 +408,7 @@
     {
       "id": "8e89-2c14-6bf5-87bf",
       "name": "Aspect Host",
+      "dpCost": 3,
       "rules": [
         "Path of the Warrior"
       ],
@@ -430,6 +442,7 @@
     {
       "id": "47c7-52f9-c23d-1e4e",
       "name": "Covenite Coterie",
+      "dpCost": 2,
       "rules": [
         "Stitchflesh Abominations"
       ],
@@ -463,6 +476,7 @@
     {
       "id": "b033-0c01-012e-fcca",
       "name": "Kabalite Cartel",
+      "dpCost": 2,
       "rules": [
         "Murderous Agenda"
       ],
@@ -496,6 +510,7 @@
     {
       "id": "7008-2116-f479-a791",
       "name": "Spectacle of Spite",
+      "dpCost": 2,
       "rules": [
         "Combat Drugs"
       ],
@@ -529,6 +544,7 @@
     {
       "id": "5ad5-9b0d-a70e-b9ec",
       "name": "Serpent's Brood",
+      "dpCost": 2,
       "rules": [
         "Boons of the Brood",
         "Travelling Players"
@@ -563,6 +579,7 @@
     {
       "id": "d519-c125-30b5-9c55",
       "name": "Eldritch Raiders",
+      "dpCost": 2,
       "rules": [
         "Yriel's Own",
         "Veterans of the Void"
@@ -597,6 +614,7 @@
     {
       "id": "7224-4f3e-c557-115d",
       "name": "Corsair Coterie",
+      "dpCost": 2,
       "rules": [
         "Relentless Raiders",
         "Veterans of the Void"
@@ -631,6 +649,7 @@
     {
       "id": "c40e-26bd-7e76-0815",
       "name": "Fateful Performance",
+      "dpCost": 1,
       "rules": [
         "Acrobatic Onslaught"
       ],
@@ -652,6 +671,7 @@
     {
       "id": "8b57-c6f6-c651-65bf",
       "name": "Path of the Outcast",
+      "dpCost": 1,
       "rules": [
         "Far-reaching Doom"
       ],
@@ -673,6 +693,7 @@
     {
       "id": "dcf3-cecd-ca37-4193",
       "name": "Twilight Flickers",
+      "dpCost": 1,
       "rules": [
         "Dance of Distortion"
       ],
@@ -694,6 +715,7 @@
     {
       "id": "7d47-b713-955c-1bf0",
       "name": "Exhibition of Slaughter",
+      "dpCost": 1,
       "rules": [
         "Exacting Cruelty"
       ],
@@ -715,6 +737,7 @@
     {
       "id": "c649-7147-7e69-5db6",
       "name": "Kabalite Agonysts",
+      "dpCost": 1,
       "rules": [
         "Contracted Harvest"
       ],
@@ -736,6 +759,7 @@
     {
       "id": "1653-ad59-40e0-a08f",
       "name": "Tools of Torment",
+      "dpCost": 1,
       "rules": [
         "Darkest Artifice"
       ],

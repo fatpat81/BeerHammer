@@ -8,6 +8,7 @@
     {
       "id": "7b92-cca6-0617-1b6d",
       "name": "Hexwarp Thrallband",
+      "dpCost": 3,
       "rules": [
         "Flow of Magic"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "9aba-cb08-cd38-9e01",
       "name": "Grand Coven",
+      "dpCost": 3,
       "rules": [
         "Kindred Sorcery"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "6acc-9928-2b67-73c3",
       "name": "Changehost of Deceit",
+      "dpCost": 2,
       "rules": [
         "Infernal Pacts"
       ],
@@ -113,6 +116,7 @@
     {
       "id": "5be7-3aa8-5d64-cbaf",
       "name": "Warpmeld Pact",
+      "dpCost": 2,
       "rules": [
         "Warpmeld Sacrifice"
       ],
@@ -146,6 +150,7 @@
     {
       "id": "7510-5cb8-60fe-61a0",
       "name": "Rubricae Phalanx",
+      "dpCost": 3,
       "rules": [
         "All is Dust"
       ],
@@ -179,6 +184,7 @@
     {
       "id": "8839-1789-36e7-b66a",
       "name": "Warpforged Cabal",
+      "dpCost": 2,
       "rules": [
         "Warpfire Infusion"
       ],
@@ -212,6 +218,7 @@
     {
       "id": "4b8b-16b7-091d-7b6f",
       "name": "Ritual of Regeneration",
+      "dpCost": 1,
       "rules": [
         "Sorcerous Invigoration"
       ],
@@ -233,6 +240,7 @@
     {
       "id": "b5a7-4856-7c39-0c86",
       "name": "Sekhetar Cohort",
+      "dpCost": 1,
       "rules": [
         "Ensorcelled Animus"
       ],
@@ -254,6 +262,7 @@
     {
       "id": "cec5-f3d2-05cb-212b",
       "name": "Servants of Change",
+      "dpCost": 1,
       "rules": [
         "All-seeing Mutant Hordes"
       ],

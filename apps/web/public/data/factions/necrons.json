@@ -8,6 +8,7 @@
     {
       "id": "9ebf-2bbd-6059-1d40",
       "name": "Awakened Dynasty",
+      "dpCost": 3,
       "rules": [],
       "enhancements": [
         {
@@ -39,6 +40,7 @@
     {
       "id": "6493-9079-727d-d95f",
       "name": "Annihilation Legion",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -118,6 +120,7 @@
     {
       "id": "aed9-cb3b-1d0c-f87d",
       "name": "Canoptek Court",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -149,6 +152,7 @@
     {
       "id": "163f-63bd-f2e1-5e7",
       "name": "Obeisance Phalanx",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -180,6 +184,7 @@
     {
       "id": "8861-5385-8fd1-dfee",
       "name": "Hypercrypt Legion",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -259,6 +264,7 @@
     {
       "id": "e0fd-c955-4822-6dba",
       "name": "Starshatter Arsenal",
+      "dpCost": 3,
       "rules": [],
       "enhancements": [
         {
@@ -290,6 +296,7 @@
     {
       "id": "1de5-2462-f59c-db94",
       "name": "Cryptek Conclave",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -321,6 +328,7 @@
     {
       "id": "c4ee-83c7-812c-5ff0",
       "name": "Cursed Legion",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -400,12 +408,14 @@
     {
       "id": "1707-57c5-676e-90d9",
       "name": "Pantheon of Woe",
+      "dpCost": 2,
       "rules": [],
       "enhancements": []
     },
     {
       "id": "ec2e-3289-5a4a-d5a6",
       "name": "Hand of the Dynasty",
+      "dpCost": 1,
       "rules": [
         "Hypermotility Protocols"
       ],
@@ -439,6 +449,7 @@
     {
       "id": "51c2-e233-ea51-14df",
       "name": "Skyshroud Spearhead",
+      "dpCost": 1,
       "rules": [
         "Transdimensional Deployment"
       ],
@@ -447,6 +458,7 @@
     {
       "id": "7e16-552d-f3a9-035f",
       "name": "The Phaeron's Armoury",
+      "dpCost": 1,
       "rules": [
         "Empowered Engines"
       ],

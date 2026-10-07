@@ -8,6 +8,7 @@
     {
       "id": "70eb-2978-3ad5-5901",
       "name": "Shield Host",
+      "dpCost": 2,
       "rules": [
         "Martial Mastery"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "757a-b5ed-a43f-3cdd",
       "name": "Talons of the Emperor",
+      "dpCost": 3,
       "rules": [
         "Revered Companions"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "d3ee-47e1-4540-dfe5",
       "name": "Null Maiden Vigil",
+      "dpCost": 2,
       "rules": [
         "Creeping Dread (Aura)"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "a36b-bb22-1a15-2a48",
       "name": "Auric Champions",
+      "dpCost": 2,
       "rules": [
         "Assemblage of Might"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "a060-3a8d-670c-25f0",
       "name": "Solar Spearhead",
+      "dpCost": 2,
       "rules": [
         "Auric Armour",
         "Moritoi Ancients"
@@ -174,6 +179,7 @@
     {
       "id": "3b75-a700-050c-06f5",
       "name": "Lions of the Emperor",
+      "dpCost": 3,
       "rules": [
         "Against All Odds"
       ],
@@ -207,6 +213,7 @@
     {
       "id": "1bb5-5aba-6c8f-7afc",
       "name": "Might of the Moritoi",
+      "dpCost": 1,
       "rules": [
         "March of the Honoured Dead"
       ],
@@ -215,6 +222,7 @@
     {
       "id": "60e4-3c48-7e50-4d37",
       "name": "Silent Hunters",
+      "dpCost": 1,
       "rules": [
         "Skin-crawling Disorientation"
       ],
@@ -230,6 +238,7 @@
     {
       "id": "ebc1-90da-ce89-ee5b",
       "name": "Tharanatoi Hammerblow",
+      "dpCost": 1,
       "rules": [
         "The Hammer Falls"
       ],

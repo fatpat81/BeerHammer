@@ -8,6 +8,7 @@
     {
       "id": "aabf-4988-4054-bed2",
       "name": "Ordo Xenos Alien Hunters",
+      "dpCost": 2,
       "rules": [
         "Deathwatch Mission Tactics"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "cfc6-5531-53cb-1964",
       "name": "Ordo Hereticus Purgation Force",
+      "dpCost": 2,
       "rules": [
         "Root Out Heresy"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "bd6f-97c7-6ac4-8320",
       "name": "Ordo Malleus Daemon Hunters",
+      "dpCost": 2,
       "rules": [
         "Destroy the Daemonic"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "5347-93e5-b3f2-366d",
       "name": "Imperialis Fleet",
+      "dpCost": 2,
       "rules": [
         "At All Costs"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "e203-73dc-18d9-f390",
       "name": "Veiled Blade Elimination Force",
+      "dpCost": 1,
       "rules": [
         "Extremis Sanction"
       ],

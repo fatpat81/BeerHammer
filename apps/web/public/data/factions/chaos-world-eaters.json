@@ -8,6 +8,7 @@
     {
       "id": "3490-ec82-70b3-c5cf",
       "name": "Berzerker Warband",
+      "dpCost": 2,
       "rules": [
         "Relentless Rage"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "70d9-0c7a-6b46-65fa",
       "name": "Vessels of Wrath",
+      "dpCost": 1,
       "rules": [],
       "enhancements": [
         {
@@ -60,6 +62,7 @@
     {
       "id": "9c45-483a-44b9-536c",
       "name": "Cult of Blood",
+      "dpCost": 2,
       "rules": [
         "Idols of Khorne"
       ],
@@ -93,6 +96,7 @@
     {
       "id": "1558-660f-466b-a087",
       "name": "Khorne Daemonkin",
+      "dpCost": 2,
       "rules": [
         "Blood Tithe"
       ],
@@ -126,6 +130,7 @@
     {
       "id": "dda8-a874-feac-1f81",
       "name": "Possessed Slaughterband",
+      "dpCost": 2,
       "rules": [
         "Brazen Fury"
       ],
@@ -159,6 +164,7 @@
     {
       "id": "8a29-5bbd-3ee6-b64a",
       "name": "Goretrack Onslaught",
+      "dpCost": 2,
       "rules": [
         "Rush to the Fray"
       ],
@@ -192,6 +198,7 @@
     {
       "id": "6e10-ae52-9955-07fb",
       "name": "Brazen Engines",
+      "dpCost": 1,
       "rules": [
         "Rampaging Terrors"
       ],
@@ -200,6 +207,7 @@
     {
       "id": "0985-28ae-cf24-2fba",
       "name": "Butchers of Khorne",
+      "dpCost": 1,
       "rules": [
         "Adamantine Avalanche"
       ],

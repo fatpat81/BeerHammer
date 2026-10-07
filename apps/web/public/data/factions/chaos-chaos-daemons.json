@@ -8,6 +8,7 @@
     {
       "id": "a7cf-90fa-4093-6047",
       "name": "Daemonic Incursion",
+      "dpCost": 3,
       "rules": [],
       "enhancements": [
         {
@@ -39,6 +40,7 @@
     {
       "id": "24f0-3c89-41be-0675",
       "name": "Legion of Excess",
+      "dpCost": 2,
       "rules": [
         "Beguiling Aura"
       ],
@@ -168,6 +170,7 @@
     {
       "id": "dec0-c9cb-c265-cae0",
       "name": "Scintillating Legion",
+      "dpCost": 2,
       "rules": [
         "Fates in Flux"
       ],
@@ -297,6 +300,7 @@
     {
       "id": "21b4-7a36-fec6-b7ea",
       "name": "Blood Legion",
+      "dpCost": 2,
       "rules": [
         "Murdercall",
         "Bloodtainted"
@@ -427,6 +431,7 @@
     {
       "id": "9ad0-91ee-ae18-b5aa",
       "name": "Plague Legion",
+      "dpCost": 2,
       "rules": [
         "Melancholic Miasma"
       ],
@@ -556,6 +561,7 @@
     {
       "id": "5063-25bd-d22e-665b",
       "name": "Shadow Legion",
+      "dpCost": 2,
       "rules": [
         "First Prince of Chaos"
       ],
@@ -685,6 +691,7 @@
     {
       "id": "0dd1-86f6-d2a0-3aba",
       "name": "Cavalcade of Chaos",
+      "dpCost": 1,
       "rules": [
         "Unholy Avalanche"
       ],
@@ -706,6 +713,7 @@
     {
       "id": "6d62-2c41-fb3f-7d00",
       "name": "Lords of the Warp",
+      "dpCost": 1,
       "rules": [
         "Loci of Power"
       ],
@@ -721,6 +729,7 @@
     {
       "id": "357d-d51b-f001-a33d",
       "name": "Warptide",
+      "dpCost": 1,
       "rules": [
         "Shudderblink"
       ],

@@ -8,6 +8,7 @@
     {
       "id": "8e26-78e2-10bd-6982",
       "name": "Hallowed Martyrs",
+      "dpCost": 3,
       "rules": [],
       "enhancements": [
         {
@@ -39,6 +40,7 @@
     {
       "id": "a2f5-a466-96b6-d389",
       "name": "Penitent Host",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -70,6 +72,7 @@
     {
       "id": "575d-76f6-2edb-22c1",
       "name": "Bringers of Flame",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -101,6 +104,7 @@
     {
       "id": "6f81-1a3e-c84e-0954",
       "name": "Army of Faith",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -156,6 +160,7 @@
     {
       "id": "5c81-a47b-d3a0-31e8",
       "name": "Champions of Faith",
+      "dpCost": 2,
       "rules": [],
       "enhancements": [
         {
@@ -217,6 +222,7 @@
     {
       "id": "3ee6-23e1-8bc0-90f7",
       "name": "Chorus of Condemnation",
+      "dpCost": 1,
       "rules": [
         "Angelic Judgement"
       ],
@@ -238,6 +244,7 @@
     {
       "id": "0017-3a94-11f8-7fca",
       "name": "Sacred Champions",
+      "dpCost": 1,
       "rules": [
         "Holy Quest"
       ],
@@ -277,6 +284,7 @@
     {
       "id": "f9b6-3e44-772b-8eb1",
       "name": "Sanctified Orators",
+      "dpCost": 1,
       "rules": [
         "Hymns of Battle"
       ],

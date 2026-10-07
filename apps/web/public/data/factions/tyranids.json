@@ -8,6 +8,7 @@
     {
       "id": "c2fe-bf23-bf24-aa43",
       "name": "Invasion Fleet",
+      "dpCost": 3,
       "rules": [
         "Hyper Adaptions"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "bba-65f6-a4d1-66ae",
       "name": "Assimilation Swarm",
+      "dpCost": 2,
       "rules": [
         "Feed the Swarm"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "850e-bee1-4845-820d",
       "name": "Crusher Stampede",
+      "dpCost": 2,
       "rules": [
         "Enraged Behemoths"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "16ff-a068-4c31-285a",
       "name": "Synaptic Nexus",
+      "dpCost": 2,
       "rules": [
         "Synaptic Imperitives"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "4cd9-313f-cd9b-c85a",
       "name": "Unending Swarm",
+      "dpCost": 2,
       "rules": [
         "Insurmountable Odds"
       ],
@@ -173,6 +178,7 @@
     {
       "id": "f773-f91c-2999-c7e1",
       "name": "Vanguard Onslaught",
+      "dpCost": 2,
       "rules": [
         "Vanguard Prime",
         "Questing Tendrils"
@@ -207,6 +213,7 @@
     {
       "id": "7416-b7cc-fdbf-5bf0",
       "name": "Warrior Bioform Onslaught",
+      "dpCost": 1,
       "rules": [
         "Leader-beasts"
       ],
@@ -228,6 +235,7 @@
     {
       "id": "731f-1524-da02-945b",
       "name": "Subterranean Assault",
+      "dpCost": 3,
       "rules": [
         "Keywords",
         "Surprise Assault"
@@ -262,6 +270,7 @@
     {
       "id": "0f40-fb6c-49f7-9541",
       "name": "Tyranid Attack",
+      "dpCost": 1,
       "rules": [
         "Forming Boarding Squads",
         "Mustering A Boarding Patrol",
@@ -286,6 +295,7 @@
     {
       "id": "7a6f-7334-fa6c-290e",
       "name": "Boarding Swarm",
+      "dpCost": 1,
       "rules": [
         "Forming Boarding Squads",
         "Mustering A Boarding Patrol",
@@ -297,6 +307,7 @@
     {
       "id": "cbfd-453f-6288-6157",
       "name": "Biotide",
+      "dpCost": 1,
       "rules": [
         "Forming Boarding Squads",
         "Mustering A Boarding Patrol",
@@ -333,6 +344,7 @@
     {
       "id": "cf1b-eb18-c465-27a5",
       "name": "Ambush Predators",
+      "dpCost": 1,
       "rules": [
         "Mindhunger"
       ],
@@ -354,6 +366,7 @@
     {
       "id": "8d8b-a030-83d5-f4e6",
       "name": "Talons of the Norn Queen",
+      "dpCost": 1,
       "rules": [
         "Higher Imperatives"
       ],

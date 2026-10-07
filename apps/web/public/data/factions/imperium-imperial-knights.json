@@ -8,6 +8,7 @@
     {
       "id": "e424-58f3-8e79-19a6",
       "name": "Valourstrike Lance",
+      "dpCost": 2,
       "rules": [
         "Bold Gallantry"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "9a4a-a4c8-a16a-c969",
       "name": "Questor Forgepact",
+      "dpCost": 1,
       "rules": [
         "Cogbound Alliance",
         "Mechanicus Allies"
@@ -63,6 +65,7 @@
     {
       "id": "884c-fbb7-9f22-1297",
       "name": "Gate Warden Lance",
+      "dpCost": 2,
       "rules": [
         "Dauntless Defenders"
       ],
@@ -96,6 +99,7 @@
     {
       "id": "a692-b024-09d9-b79f",
       "name": "Questoris Companions",
+      "dpCost": 3,
       "rules": [
         "Heroes of Legend",
         "Valour's Reward"
@@ -130,6 +134,7 @@
     {
       "id": "d469-239c-7e4c-4210",
       "name": "Spearhead-at-Arms",
+      "dpCost": 2,
       "rules": [
         "Knightly Teachings",
         "Keywords"
@@ -164,6 +169,7 @@
     {
       "id": "4e8e-50db-0d32-423c",
       "name": "Freeblade Company",
+      "dpCost": 3,
       "rules": [
         "Knights of Legend"
       ],
@@ -197,6 +203,7 @@
     {
       "id": "d3a1-4b10-4d2c-d44f",
       "name": "Dominus Foebreakers",
+      "dpCost": 1,
       "rules": [
         "Rain of Devastation"
       ],
@@ -218,6 +225,7 @@
     {
       "id": "9671-eaea-ccf2-c122",
       "name": "Throne-bonded Outriders",
+      "dpCost": 1,
       "rules": [
         "Driven From Their Lairs"
       ],

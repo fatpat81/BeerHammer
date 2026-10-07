@@ -8,6 +8,7 @@
     {
       "id": "67ce-ebd5-b428-e4f7",
       "name": "Combined Arms",
+      "dpCost": 2,
       "rules": [
         "Born Soldiers"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "7afb-a0f6-b95d-e791",
       "name": "Bridgehead Strike",
+      "dpCost": 1,
       "rules": [
         "Fire Zone Purge"
       ],
@@ -62,6 +64,7 @@
     {
       "id": "87b5-6072-b2c5-0cdc",
       "name": "Siege Regiment",
+      "dpCost": 2,
       "rules": [
         "Artillery Support"
       ],
@@ -95,6 +98,7 @@
     {
       "id": "05ed-772d-bd3a-a790",
       "name": "Mechanised Assault",
+      "dpCost": 2,
       "rules": [
         "Armoured Fist"
       ],
@@ -128,6 +132,7 @@
     {
       "id": "97fc-2d9c-9008-f363",
       "name": "Hammer of the Emperor",
+      "dpCost": 2,
       "rules": [
         "Iron Tread"
       ],
@@ -161,6 +166,7 @@
     {
       "id": "3d9f-5d9a-4a18-21aa",
       "name": "Recon Element",
+      "dpCost": 2,
       "rules": [
         "Masters of Camouflage"
       ],
@@ -194,6 +200,7 @@
     {
       "id": "cc4e-a30b-f987-c984",
       "name": "Grizzled Company",
+      "dpCost": 3,
       "rules": [
         "Ruthless Discipline"
       ],
@@ -227,6 +234,7 @@
     {
       "id": "5ccc-76f0-d28e-672d",
       "name": "Embarked Regiment",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -252,6 +260,7 @@
     {
       "id": "f726-7b3d-7e35-e734",
       "name": "Tempestus Boarding Regiment",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -277,6 +286,7 @@
     {
       "id": "419a-c366-aa63-ebb5",
       "name": "Steel Hammer",
+      "dpCost": 2,
       "rules": [
         "Ceaseless Cannonade",
         "Keywords"
@@ -311,6 +321,7 @@
     {
       "id": "d071-6e6b-dde6-dcf4",
       "name": "Armoured Infantry",
+      "dpCost": 2,
       "rules": [
         "Squadron Command",
         "Keywords"
@@ -345,6 +356,7 @@
     {
       "id": "57a9-88a1-84c1-e421",
       "name": "Abhuman Auxiliaries",
+      "dpCost": 1,
       "rules": [
         "Absolutist Principles"
       ],
@@ -366,6 +378,7 @@
     {
       "id": "1aca-af79-006f-bf56",
       "name": "Designation Force",
+      "dpCost": 1,
       "rules": [
         "Designated Targets"
       ],

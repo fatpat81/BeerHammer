@@ -8,6 +8,7 @@
     {
       "id": "df4a-2ead-43d5-ea61",
       "name": "Flyblown Host",
+      "dpCost": 1,
       "rules": [
         "Verminous Haze"
       ],
@@ -16,6 +17,7 @@
     {
       "id": "e2ff-ece0-6cbb-be05",
       "name": "Virulent Vectorium",
+      "dpCost": 3,
       "rules": [
         "Worldblight"
       ],
@@ -73,6 +75,7 @@
     {
       "id": "7a84-2212-be14-a713",
       "name": "Shamblerot Vectorium",
+      "dpCost": 2,
       "rules": [
         "Numberless Horde"
       ],
@@ -130,6 +133,7 @@
     {
       "id": "f038-29f5-5625-6cc1",
       "name": "Death Lord's Chosen",
+      "dpCost": 2,
       "rules": [
         "Deadly Vectors"
       ],
@@ -163,6 +167,7 @@
     {
       "id": "18b0-2d87-798f-ef1c",
       "name": "Mortarion's Hammer",
+      "dpCost": 2,
       "rules": [
         "Miasmic Bombardment"
       ],
@@ -196,6 +201,7 @@
     {
       "id": "fd92-8b6d-0ef2-e14d",
       "name": "Champions of Contagion",
+      "dpCost": 2,
       "rules": [
         "Manifold Maladies"
       ],
@@ -229,6 +235,7 @@
     {
       "id": "69e5-13c7-06bf-d454",
       "name": "Tallyband Summoners",
+      "dpCost": 2,
       "rules": [
         "Reverberant Rancidity"
       ],
@@ -262,6 +269,7 @@
     {
       "id": "e58e-f981-24ed-6cd4",
       "name": "Contagion Engines",
+      "dpCost": 1,
       "rules": [
         "Warped and Rusted Animus"
       ],
@@ -295,6 +303,7 @@
     {
       "id": "c437-a67d-c0cd-11ab",
       "name": "Paragons of Putrescence",
+      "dpCost": 1,
       "rules": [
         "Hypervirulent Strains"
       ],

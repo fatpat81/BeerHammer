@@ -8,6 +8,7 @@
     {
       "id": "e366-3583-f47a-986e",
       "name": "Kauyon",
+      "dpCost": 2,
       "rules": [
         "Patient Hunter"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "6aea-8ba5-978e-8def",
       "name": "Mont'ka",
+      "dpCost": 3,
       "rules": [
         "Killing Blow"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "3bae-cf7-b9e3-4f00",
       "name": "Retaliation Cadre",
+      "dpCost": 3,
       "rules": [
         "Bonded Heroes"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "452e-5b5b-cdbc-c94a",
       "name": "Kroot Hunting Pack",
+      "dpCost": 2,
       "rules": [
         "Hunter's Instincts",
         "Skirmish Fighters"
@@ -141,6 +145,7 @@
     {
       "id": "97bc-1349-fb9d-c04f",
       "name": "Auxiliary Cadre",
+      "dpCost": 1,
       "rules": [
         "Integrated Command Structure"
       ],
@@ -162,6 +167,7 @@
     {
       "id": "1520-c344-f4fe-b414",
       "name": "Experimental Prototype Cadre",
+      "dpCost": 1,
       "rules": [
         "Superior Craftmanship"
       ],
@@ -189,6 +195,7 @@
     {
       "id": "deca-477c-ac30-a5ce",
       "name": "Kroot Raiding Party",
+      "dpCost": 1,
       "rules": [
         "Guerrilla Ambushers",
         "Forming Boarding Squads",
@@ -213,6 +220,7 @@
     {
       "id": "7e3b-b9cf-5be0-8bc1",
       "name": "Starfire Cadre",
+      "dpCost": 1,
       "rules": [
         "Rules Adaptions",
         "Mustering A Boarding Patrol",
@@ -237,6 +245,7 @@
     {
       "id": "4417-6fdc-a5d9-cdf7",
       "name": "Advanced Acquisition Cadre",
+      "dpCost": 1,
       "rules": [
         "Expert Fieldcraft"
       ],

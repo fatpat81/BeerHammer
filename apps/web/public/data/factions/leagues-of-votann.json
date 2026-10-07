@@ -8,6 +8,7 @@
     {
       "id": "1077-70a1-0570-5685",
       "name": "Hearthband",
+      "dpCost": 3,
       "rules": [
         "Methodical Annihilation"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "e73f-ac86-44b1-c3f2",
       "name": "Persecution Prospect",
+      "dpCost": 2,
       "rules": [
         "Assailed From Every Angle"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "01b8-fa17-620e-8e79",
       "name": "Needgaârd Oathband",
+      "dpCost": 2,
       "rules": [
         "Martial Leverage"
       ],
@@ -155,6 +158,7 @@
     {
       "id": "768a-d0b6-e9a1-c221",
       "name": "Hearthfyre Arsenal",
+      "dpCost": 2,
       "rules": [
         "Optimal Application"
       ],
@@ -188,6 +192,7 @@
     {
       "id": "faf5-7477-8cdc-679f",
       "name": "Dêlve Assault Shift",
+      "dpCost": 2,
       "rules": [
         "Fury from the Dêlve"
       ],
@@ -221,6 +226,7 @@
     {
       "id": "437f-0cb8-194f-a716",
       "name": "Brandfast Oathband",
+      "dpCost": 2,
       "rules": [
         "Mobile Sensor Relays"
       ],
@@ -302,6 +308,7 @@
     {
       "id": "b36b-1a84-3f57-2063",
       "name": "Mercenary Oathband",
+      "dpCost": 2,
       "rules": [
         "Ruthless Reinvestment"
       ],
@@ -383,6 +390,7 @@
     {
       "id": "39c2-616a-92c8-ad9d",
       "name": "Armoured Trailblazers",
+      "dpCost": 1,
       "rules": [
         "Sagitaur Spearhead"
       ],
@@ -391,6 +399,7 @@
     {
       "id": "273e-953c-a337-ec5d",
       "name": "Farseekers",
+      "dpCost": 1,
       "rules": [
         "Eye of the Hunt"
       ],
@@ -412,6 +421,7 @@
     {
       "id": "ccdf-fb88-9ae3-aa6c",
       "name": "Hearthguard Covenant",
+      "dpCost": 1,
       "rules": [
         "Avatars of the Ancestors"
       ],

@@ -284,9 +284,12 @@ function extractDetachmentsAndEnhancements(cat, libCat = null) {
                 // Must be an actual detachment, not 'Detachment' literally or 'None'
                 if (e.name && !/^detachment$/i.test(e.name.trim()) && e.name.toLowerCase() !== 'none') {
                   const extracted = extractProfiles(e);
+                  const dpCostEntry = (e.costs || []).find(c => /detachment points|dp/i.test(c.name));
+                  const dpCost = dpCostEntry && typeof dpCostEntry.value === 'number' ? dpCostEntry.value : 1;
                   detachments.push({
                     id: e.id || sanitizeId(e.name),
                     name: e.name,
+                    dpCost,
                     rules: extracted.rules.map(r => r.name),
                     enhancements: []
                   });

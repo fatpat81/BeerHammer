@@ -8,6 +8,7 @@
     {
       "id": "8635-b1cc-e7bb-e8a1",
       "name": "Slaanesh's Chosen",
+      "dpCost": 1,
       "rules": [
         "Internal Rivalries"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "faf3-053d-d290-a3d9",
       "name": "Peerless Bladesmen",
+      "dpCost": 2,
       "rules": [
         "Exquisite Swordsmanship"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "26ff-306a-fca9-ebfd",
       "name": "Rapid Evisceration",
+      "dpCost": 2,
       "rules": [
         "Mechanised Murder"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "9db8-cf55-983f-9671",
       "name": "Coterie of the Conceited",
+      "dpCost": 3,
       "rules": [
         "Pledges to the Dark Prince"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "ae45-3e0d-eac7-7edb",
       "name": "Mercurial Host",
+      "dpCost": 2,
       "rules": [
         "Quicksilver Grace"
       ],
@@ -185,6 +190,7 @@
     {
       "id": "3c9e-2156-254e-66e8",
       "name": "Carnival of Excess",
+      "dpCost": 3,
       "rules": [
         "Daemonic Empowerment"
       ],
@@ -218,6 +224,7 @@
     {
       "id": "12b9-2601-5150-66f4",
       "name": "Court of the Phoenician",
+      "dpCost": 2,
       "rules": [
         "Sensational Performance",
         "Master of the Pageant"
@@ -252,6 +259,7 @@
     {
       "id": "8aff-09e5-5ff7-e9f2",
       "name": "Elegant Brutes",
+      "dpCost": 1,
       "rules": [
         "Eager to Kill"
       ],
@@ -267,6 +275,7 @@
     {
       "id": "9a0b-73fb-c56f-babc",
       "name": "Frenzied Host",
+      "dpCost": 1,
       "rules": [
         "Frantic Focus"
       ],
@@ -312,6 +321,7 @@
     {
       "id": "68d6-d094-a5d3-9bb5",
       "name": "Spectacle of Slaughter",
+      "dpCost": 1,
       "rules": [
         "Entitled to Victory"
       ],

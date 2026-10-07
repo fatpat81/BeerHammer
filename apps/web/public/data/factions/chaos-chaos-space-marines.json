@@ -8,6 +8,7 @@
     {
       "id": "53dd-68f7-7c1f-3e5d",
       "name": "Pactbound Zealots",
+      "dpCost": 3,
       "rules": [
         "Marks of Chaos"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "a5ea-d708-db75-226c",
       "name": "Veterans of the Long War",
+      "dpCost": 2,
       "rules": [
         "Focus of Hatred"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "4972-a08d-9d88-5f7a",
       "name": "Deceptors",
+      "dpCost": 2,
       "rules": [
         "Masters of Misdirection"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "b906-aa42-9cd9-c6f2",
       "name": "Renegade Raiders",
+      "dpCost": 3,
       "rules": [
         "Raiders and Reavers"
       ],
@@ -164,6 +168,7 @@
     {
       "id": "d11c-e4a9-32c7-b761",
       "name": "Dread Talons",
+      "dpCost": 2,
       "rules": [
         "Terror Descends (Aura)"
       ],
@@ -197,6 +202,7 @@
     {
       "id": "89a5-170b-1bf3-7016",
       "name": "Fellhammer Siege-host",
+      "dpCost": 2,
       "rules": [
         "Iron Fortitude"
       ],
@@ -230,6 +236,7 @@
     {
       "id": "6cec-4da4-a89d-fb98",
       "name": "Chaos Cult",
+      "dpCost": 2,
       "rules": [
         "Desperate Devotion"
       ],
@@ -299,6 +306,7 @@
     {
       "id": "a523-e0fe-4e1c-bc70",
       "name": "Soulforged Warpack",
+      "dpCost": 2,
       "rules": [
         "Debt to the Soulforge"
       ],
@@ -332,6 +340,7 @@
     {
       "id": "1c30-e099-1aca-8708",
       "name": "Creations of Bile",
+      "dpCost": 3,
       "rules": [
         "Creations of Bile"
       ],
@@ -365,6 +374,7 @@
     {
       "id": "9e8b-efe2-7ff2-6b36",
       "name": "Cabal of Chaos",
+      "dpCost": 1,
       "rules": [
         "Empyric Wellspring"
       ],
@@ -410,6 +420,7 @@
     {
       "id": "f96f-5896-93c2-fc05",
       "name": "Nightmare Hunt",
+      "dpCost": 2,
       "rules": [
         "Terror Made Manifest"
       ],
@@ -443,6 +454,7 @@
     {
       "id": "44d2-04f0-309d-575e",
       "name": "Huron's Marauders",
+      "dpCost": 3,
       "rules": [
         "Tyrannical Motivation"
       ],
@@ -476,6 +488,7 @@
     {
       "id": "2cf4-ac9c-5417-10ac",
       "name": "Renegade Warband",
+      "dpCost": 2,
       "rules": [
         "Slaves to None",
         "Vendetta",
@@ -511,6 +524,7 @@
     {
       "id": "d545-85a4-65d6-2f59",
       "name": "Warpstrike Champions",
+      "dpCost": 2,
       "rules": [
         "Warp Portals"
       ],
@@ -544,6 +558,7 @@
     {
       "id": "5f38-038e-a1e9-a457",
       "name": "Cult of the Arkifane",
+      "dpCost": 2,
       "rules": [
         "Soul Forge Boons"
       ],
@@ -601,6 +616,7 @@
     {
       "id": "c6ca-bde2-8304-c97c",
       "name": "Devotees of Destruction",
+      "dpCost": 1,
       "rules": [
         "Rain of Ruin"
       ],
@@ -622,6 +638,7 @@
     {
       "id": "a914-9458-c5f8-0bbc",
       "name": "Murdertalon Raiders",
+      "dpCost": 1,
       "rules": [
         "Prey on the Weak"
       ],

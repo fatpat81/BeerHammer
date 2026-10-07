@@ -8,6 +8,7 @@
     {
       "id": "d2dc-693e-b491-b16d",
       "name": "Gladius Task Force",
+      "dpCost": 3,
       "rules": [
         "Combat Doctrines"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "3caf-c168-c372-51b1",
       "name": "Unforgiven Task Force",
+      "dpCost": 2,
       "rules": [
         "Grim Resolve"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "4459-12f0-bc-142b",
       "name": "Black Spear Task Force",
+      "dpCost": 3,
       "rules": [
         "Kill Teams",
         "Mission Tactics"
@@ -108,6 +111,7 @@
     {
       "id": "5ff-1ac3-bc73-8273",
       "name": "Liberator Assault Group",
+      "dpCost": 3,
       "rules": [
         "The Red Thirst"
       ],
@@ -141,6 +145,7 @@
     {
       "id": "b7d2-99c0-a2ed-3dce",
       "name": "Anvil Siege Force",
+      "dpCost": 2,
       "rules": [
         "Shield of the Imperium"
       ],
@@ -174,6 +179,7 @@
     {
       "id": "aa86-1617-4029-fcd7",
       "name": "Ironstorm Spearhead",
+      "dpCost": 2,
       "rules": [
         "Armoured Wrath"
       ],
@@ -207,6 +213,7 @@
     {
       "id": "abb4-dc89-4e0-9150",
       "name": "Firestorm Assault Force",
+      "dpCost": 2,
       "rules": [
         "Close-Range Eradication"
       ],
@@ -240,6 +247,7 @@
     {
       "id": "50ed-e07c-8f6b-b035",
       "name": "Stormlance Task Force",
+      "dpCost": 3,
       "rules": [
         "Lightning Assault"
       ],
@@ -273,6 +281,7 @@
     {
       "id": "cdda-2bc8-a746-80f",
       "name": "Vanguard Spearhead",
+      "dpCost": 2,
       "rules": [
         "Shadow Masters"
       ],
@@ -306,6 +315,7 @@
     {
       "id": "5d64-4100-80e-c8f3",
       "name": "1st Company Task Force",
+      "dpCost": 2,
       "rules": [
         "Extremis-level Threat"
       ],
@@ -339,6 +349,7 @@
     {
       "id": "a141-49c8-fd84-4c6d",
       "name": "Inner Circle Task Force",
+      "dpCost": 2,
       "rules": [
         "Vowed Target"
       ],
@@ -372,6 +383,7 @@
     {
       "id": "41e6-d47c-5e68-e066",
       "name": "Company of Hunters",
+      "dpCost": 2,
       "rules": [
         "Masters of Manoeuvre"
       ],
@@ -405,6 +417,7 @@
     {
       "id": "9d32-d514-00a8-6423",
       "name": "The Lost Brethren",
+      "dpCost": 2,
       "rules": [
         "A Noble Death in Combat"
       ],
@@ -438,6 +451,7 @@
     {
       "id": "657c-469d-679e-f3aa",
       "name": "The Angelic Host",
+      "dpCost": 2,
       "rules": [
         "Upon Wings of Fire"
       ],
@@ -471,6 +485,7 @@
     {
       "id": "bef5-925f-b143-d219",
       "name": "Lion's Blade Task Force",
+      "dpCost": 2,
       "rules": [
         "In the Lion's Claws"
       ],
@@ -504,6 +519,7 @@
     {
       "id": "ce39-a420-4206-827c",
       "name": "Librarius Conclave",
+      "dpCost": 1,
       "rules": [
         "Psychic Disciplines"
       ],
@@ -543,6 +559,7 @@
     {
       "id": "1242-7b3f-a47e-503a",
       "name": "Wrathful Procession",
+      "dpCost": 1,
       "rules": [
         "Wrathful Procession"
       ],
@@ -564,6 +581,7 @@
     {
       "id": "afb4-59c7-fa93-55f6",
       "name": "Champions of Fenris",
+      "dpCost": 1,
       "rules": [
         "The Great Wolf Watches"
       ],
@@ -585,6 +603,7 @@
     {
       "id": "dcc7-f9de-d4f2-69d0",
       "name": "Angelic Inheritors",
+      "dpCost": 3,
       "rules": [
         "Legacy of the Angel"
       ],
@@ -618,6 +637,7 @@
     {
       "id": "9d23-833a-17cb-2d7d",
       "name": "Wrath of the Rock",
+      "dpCost": 3,
       "rules": [
         "Dutiful Tenacity"
       ],
@@ -651,6 +671,7 @@
     {
       "id": "31c2-3bbc-d0b2-ba92",
       "name": "Saga of the Hunter",
+      "dpCost": 2,
       "rules": [
         "Pack's Quarry"
       ],
@@ -684,6 +705,7 @@
     {
       "id": "41dc-6769-c30c-b96c",
       "name": "Saga of the Bold",
+      "dpCost": 2,
       "rules": [
         "Heroes All"
       ],
@@ -717,6 +739,7 @@
     {
       "id": "98ed-f58a-3e6e-63a6",
       "name": "Saga of the Beastslayer",
+      "dpCost": 2,
       "rules": [
         "Legendary Slayers"
       ],
@@ -750,6 +773,7 @@
     {
       "id": "9d80-7508-5cd0-2f9e",
       "name": "Companions of Vehemence",
+      "dpCost": 2,
       "rules": [
         "Righteous Fervour"
       ],
@@ -783,6 +807,7 @@
     {
       "id": "f148-3273-e98f-427a",
       "name": "Vindication Task Force",
+      "dpCost": 2,
       "rules": [
         "Purge and Sanctify"
       ],
@@ -816,6 +841,7 @@
     {
       "id": "b6cd-9baf-8351-8dec",
       "name": "Godhammer Assault Force",
+      "dpCost": 2,
       "rules": [
         "Shock and Awe"
       ],
@@ -849,6 +875,7 @@
     {
       "id": "e073-8fe8-5b59-48f0",
       "name": "Forgefather's Seekers",
+      "dpCost": 2,
       "rules": [
         "Vulkan's Quest"
       ],
@@ -882,6 +909,7 @@
     {
       "id": "1dea-4c70-8d4d-3415",
       "name": "Emperor's Shield",
+      "dpCost": 2,
       "rules": [
         "Wrath of Dorn"
       ],
@@ -915,6 +943,7 @@
     {
       "id": "dd81-2af4-e7d9-bd07",
       "name": "Shadowmark Talon",
+      "dpCost": 2,
       "rules": [
         "Masters of Shadow"
       ],
@@ -948,6 +977,7 @@
     {
       "id": "2496-d271-a92f-d1c0",
       "name": "Hammer of Avernii",
+      "dpCost": 2,
       "rules": [
         "Calculated Annihilation"
       ],
@@ -981,6 +1011,7 @@
     {
       "id": "0256-e74f-0e54-3e45",
       "name": "Spearpoint Task Force",
+      "dpCost": 2,
       "rules": [
         "Storm-Swift Onslaught"
       ],
@@ -1014,6 +1045,7 @@
     {
       "id": "6d9d-6462-1738-6bb3",
       "name": "Blade of Ultramar",
+      "dpCost": 3,
       "rules": [
         "Mastered Doctrines"
       ],
@@ -1047,6 +1079,7 @@
     {
       "id": "bc26-5cb8-f5fb-2760",
       "name": "Saga of the Great Wolf",
+      "dpCost": 2,
       "rules": [
         "Master of Wolves"
       ],
@@ -1080,6 +1113,7 @@
     {
       "id": "d8e6-a4b2-c15f-49e2",
       "name": "Rage-Cursed Onslaught",
+      "dpCost": 3,
       "rules": [
         "Maddened Ferocity"
       ],
@@ -1113,6 +1147,7 @@
     {
       "id": "8884-ddf9-a44a-ec7a",
       "name": "Bastion Task Force",
+      "dpCost": 2,
       "rules": [
         "Interlocking Tactics"
       ],
@@ -1146,6 +1181,7 @@
     {
       "id": "72a9-ef68-b384-1421",
       "name": "Orbital Assault Force",
+      "dpCost": 2,
       "rules": [
         "Rapid-drop Deployment"
       ],
@@ -1179,6 +1215,7 @@
     {
       "id": "0b71-29ad-7485-83bd",
       "name": "Reclamation Force",
+      "dpCost": 2,
       "rules": [
         "Oath of Reclamation"
       ],
@@ -1212,6 +1249,7 @@
     {
       "id": "3000-9a97-6f30-5a00",
       "name": "Ceramite Sentinels",
+      "dpCost": 3,
       "rules": [
         "Adaptive Defence"
       ],
@@ -1245,6 +1283,7 @@
     {
       "id": "cf4f-5c50-4a22-6960",
       "name": "Headhunter Task Force",
+      "dpCost": 2,
       "rules": [
         "Target Sighted"
       ],
@@ -1278,6 +1317,7 @@
     {
       "id": "0888-6943-a4db-4826",
       "name": "Fulguris Task Force",
+      "dpCost": 1,
       "rules": [
         "Skystrike"
       ],
@@ -1299,6 +1339,7 @@
     {
       "id": "a8c0-4163-5195-a680",
       "name": "Subversion Assets",
+      "dpCost": 1,
       "rules": [
         "New Rule"
       ],
@@ -1314,6 +1355,7 @@
     {
       "id": "7bd3-602e-280c-ecad",
       "name": "The Living Miracle",
+      "dpCost": 1,
       "rules": [
         "Anointed Champion"
       ],
@@ -1329,6 +1371,7 @@
     {
       "id": "e533-c51a-5949-a579",
       "name": "Marshal's Household",
+      "dpCost": 1,
       "rules": [
         "Faith-Fuelled Resolve"
       ],
@@ -1337,6 +1380,7 @@
     {
       "id": "b611-6312-f2d4-5e13",
       "name": "Encarmine Speartip",
+      "dpCost": 1,
       "rules": [
         "Wrath of Angels"
       ],
@@ -1358,6 +1402,7 @@
     {
       "id": "ccdf-f7f2-2317-a51f",
       "name": "Legacy of Grace",
+      "dpCost": 1,
       "rules": [
         "Legacy of the Angel"
       ],
@@ -1379,6 +1424,7 @@
     {
       "id": "a37c-40dc-1ecb-12f7",
       "name": "Wrath of the Doomed",
+      "dpCost": 1,
       "rules": [
         "Fanatacal Celerity"
       ],
@@ -1400,6 +1446,7 @@
     {
       "id": "6357-b8d4-0b19-41a8",
       "name": "Dark Age Arsenal",
+      "dpCost": 1,
       "rules": [
         "Invocations of Ancient Fury"
       ],
@@ -1415,6 +1462,7 @@
     {
       "id": "64a6-9332-de28-21a9",
       "name": "Darkflight Pursuit",
+      "dpCost": 1,
       "rules": [
         "Black-winged Vigilance"
       ],
@@ -1430,6 +1478,7 @@
     {
       "id": "03a7-d965-5d2c-e346",
       "name": "Interrogation Conclave",
+      "dpCost": 1,
       "rules": [
         "Dread Catechism"
       ],
@@ -1451,6 +1500,7 @@
     {
       "id": "86b1-dc36-0d18-477a",
       "name": "Legends of Saga and Song",
+      "dpCost": 1,
       "rules": [
         "Loping Charge"
       ],
@@ -1466,6 +1516,7 @@
     {
       "id": "a2b8-4100-0c51-29af",
       "name": "Veterans of the Fang",
+      "dpCost": 1,
       "rules": [
         "Old Greymanes"
       ],
@@ -1474,6 +1525,7 @@
     {
       "id": "6619-187e-e309-3313",
       "name": "Vengeful Hosts",
+      "dpCost": 1,
       "rules": [
         "Imperator Unleashed"
       ],
@@ -3134,6 +3186,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -3167,6 +3220,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -3200,6 +3254,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -3234,6 +3289,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -3267,6 +3323,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -3300,6 +3357,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -3333,6 +3391,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -3366,6 +3425,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -3399,6 +3459,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -3432,6 +3493,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -3465,6 +3527,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -3498,6 +3561,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -3531,6 +3595,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -3564,6 +3629,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -3597,6 +3663,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -3630,6 +3697,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -3669,6 +3737,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -3690,6 +3759,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -3711,6 +3781,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -3744,6 +3815,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -3777,6 +3849,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -3810,6 +3883,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -3843,6 +3917,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -3876,6 +3951,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -3909,6 +3985,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -3942,6 +4019,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -3975,6 +4053,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -4008,6 +4087,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -4041,6 +4121,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -4074,6 +4155,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -4107,6 +4189,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -4140,6 +4223,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -4173,6 +4257,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -4206,6 +4291,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -4239,6 +4325,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -4272,6 +4359,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -4305,6 +4393,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -4338,6 +4427,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -4371,6 +4461,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -4404,6 +4495,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -4425,6 +4517,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -4440,6 +4533,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -4455,6 +4549,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -4463,6 +4558,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -4484,6 +4580,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -4505,6 +4602,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -4526,6 +4624,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -4541,6 +4640,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -4556,6 +4656,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -4577,6 +4678,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -4592,6 +4694,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -4600,6 +4703,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -8153,6 +8257,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -8186,6 +8291,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -8219,6 +8325,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -8253,6 +8360,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -8286,6 +8394,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -8319,6 +8428,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -8352,6 +8462,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -8385,6 +8496,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -8418,6 +8530,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -8451,6 +8564,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -8484,6 +8598,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -8517,6 +8632,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -8550,6 +8666,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -8583,6 +8700,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -8616,6 +8734,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -8649,6 +8768,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -8688,6 +8808,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -8709,6 +8830,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -8730,6 +8852,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -8763,6 +8886,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -8796,6 +8920,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -8829,6 +8954,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -8862,6 +8988,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -8895,6 +9022,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -8928,6 +9056,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -8961,6 +9090,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -8994,6 +9124,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -9027,6 +9158,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -9060,6 +9192,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -9093,6 +9226,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -9126,6 +9260,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -9159,6 +9294,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -9192,6 +9328,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -9225,6 +9362,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -9258,6 +9396,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -9291,6 +9430,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -9324,6 +9464,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -9357,6 +9498,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -9390,6 +9532,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -9423,6 +9566,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -9444,6 +9588,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -9459,6 +9604,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -9474,6 +9620,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -9482,6 +9629,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -9503,6 +9651,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -9524,6 +9673,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -9545,6 +9695,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -9560,6 +9711,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -9575,6 +9727,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -9596,6 +9749,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -9611,6 +9765,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -9619,6 +9774,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -12029,6 +12185,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -12062,6 +12219,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -12095,6 +12253,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -12129,6 +12288,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -12162,6 +12322,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -12195,6 +12356,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -12228,6 +12390,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -12261,6 +12424,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -12294,6 +12458,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -12327,6 +12492,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -12360,6 +12526,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -12393,6 +12560,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -12426,6 +12594,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -12459,6 +12628,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -12492,6 +12662,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -12525,6 +12696,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -12564,6 +12736,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -12585,6 +12758,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -12606,6 +12780,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -12639,6 +12814,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -12672,6 +12848,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -12705,6 +12882,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -12738,6 +12916,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -12771,6 +12950,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -12804,6 +12984,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -12837,6 +13018,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -12870,6 +13052,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -12903,6 +13086,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -12936,6 +13120,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -12969,6 +13154,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -13002,6 +13188,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -13035,6 +13222,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -13068,6 +13256,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -13101,6 +13290,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -13134,6 +13324,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -13167,6 +13358,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -13200,6 +13392,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -13233,6 +13426,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -13266,6 +13460,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -13299,6 +13494,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -13320,6 +13516,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -13335,6 +13532,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -13350,6 +13548,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -13358,6 +13557,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -13379,6 +13579,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -13400,6 +13601,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -13421,6 +13623,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -13436,6 +13639,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -13451,6 +13655,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -13472,6 +13677,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -13487,6 +13693,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -13495,6 +13702,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -19437,6 +19645,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -19470,6 +19679,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -19503,6 +19713,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -19537,6 +19748,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -19570,6 +19782,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -19603,6 +19816,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -19636,6 +19850,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -19669,6 +19884,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -19702,6 +19918,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -19735,6 +19952,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -19768,6 +19986,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -19801,6 +20020,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -19834,6 +20054,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -19867,6 +20088,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -19900,6 +20122,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -19933,6 +20156,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -19972,6 +20196,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -19993,6 +20218,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -20014,6 +20240,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -20047,6 +20274,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -20080,6 +20308,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -20113,6 +20342,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -20146,6 +20376,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -20179,6 +20410,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -20212,6 +20444,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -20245,6 +20478,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -20278,6 +20512,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -20311,6 +20546,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -20344,6 +20580,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -20377,6 +20614,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -20410,6 +20648,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -20443,6 +20682,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -20476,6 +20716,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -20509,6 +20750,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -20542,6 +20784,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -20575,6 +20818,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -20608,6 +20852,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -20641,6 +20886,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -20674,6 +20920,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -20707,6 +20954,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -20728,6 +20976,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -20743,6 +20992,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -20758,6 +21008,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -20766,6 +21017,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -20787,6 +21039,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -20808,6 +21061,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -20829,6 +21083,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -20844,6 +21099,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -20859,6 +21115,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -20880,6 +21137,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -20895,6 +21153,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -20916,6 +21175,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -23347,6 +23607,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -23380,6 +23641,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -23413,6 +23675,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -23447,6 +23710,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -23480,6 +23744,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -23513,6 +23778,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -23546,6 +23812,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -23579,6 +23846,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -23612,6 +23880,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -23645,6 +23914,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -23678,6 +23948,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -23711,6 +23982,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -23744,6 +24016,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -23777,6 +24050,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -23810,6 +24084,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -23843,6 +24118,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -23882,6 +24158,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -23903,6 +24180,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -23924,6 +24202,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -23957,6 +24236,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -23990,6 +24270,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -24023,6 +24304,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -24056,6 +24338,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -24089,6 +24372,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -24122,6 +24406,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -24155,6 +24440,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -24188,6 +24474,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -24221,6 +24508,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -24254,6 +24542,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -24287,6 +24576,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -24320,6 +24610,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -24353,6 +24644,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -24386,6 +24678,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -24419,6 +24712,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -24452,6 +24746,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -24485,6 +24780,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -24518,6 +24814,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -24551,6 +24848,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -24584,6 +24882,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -24617,6 +24916,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -24638,6 +24938,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -24653,6 +24954,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -24668,6 +24970,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -24676,6 +24979,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -24697,6 +25001,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -24718,6 +25023,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -24739,6 +25045,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -24754,6 +25061,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -24769,6 +25077,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -24790,6 +25099,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -24805,6 +25115,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -24813,6 +25124,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -27168,6 +27480,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -27201,6 +27514,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -27234,6 +27548,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -27268,6 +27583,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -27301,6 +27617,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -27334,6 +27651,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -27367,6 +27685,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -27400,6 +27719,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -27433,6 +27753,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -27466,6 +27787,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -27499,6 +27821,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -27532,6 +27855,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -27565,6 +27889,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -27598,6 +27923,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -27631,6 +27957,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -27664,6 +27991,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -27703,6 +28031,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -27724,6 +28053,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -27745,6 +28075,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -27778,6 +28109,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -27811,6 +28143,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -27844,6 +28177,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -27877,6 +28211,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -27910,6 +28245,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -27943,6 +28279,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -27976,6 +28313,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -28009,6 +28347,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -28042,6 +28381,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -28075,6 +28415,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -28108,6 +28449,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -28141,6 +28483,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -28174,6 +28517,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -28207,6 +28551,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -28240,6 +28585,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -28273,6 +28619,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -28306,6 +28653,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -28339,6 +28687,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -28372,6 +28721,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -28405,6 +28755,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -28438,6 +28789,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -28459,6 +28811,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -28474,6 +28827,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -28489,6 +28843,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -28497,6 +28852,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -28518,6 +28874,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -28539,6 +28896,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -28560,6 +28918,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -28575,6 +28934,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -28590,6 +28950,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -28611,6 +28972,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -28626,6 +28988,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -28634,6 +28997,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -28914,6 +29278,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -28947,6 +29312,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -28980,6 +29346,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -29014,6 +29381,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -29047,6 +29415,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -29080,6 +29449,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -29113,6 +29483,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -29146,6 +29517,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -29179,6 +29551,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -29212,6 +29585,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -29245,6 +29619,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -29278,6 +29653,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -29311,6 +29687,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -29344,6 +29721,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -29377,6 +29755,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -29410,6 +29789,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -29449,6 +29829,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -29470,6 +29851,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -29491,6 +29873,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -29524,6 +29907,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -29557,6 +29941,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -29590,6 +29975,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -29623,6 +30009,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -29656,6 +30043,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -29689,6 +30077,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -29722,6 +30111,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -29755,6 +30145,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -29788,6 +30179,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -29821,6 +30213,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -29854,6 +30247,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -29887,6 +30281,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -29920,6 +30315,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -29953,6 +30349,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -29986,6 +30383,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -30019,6 +30417,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -30052,6 +30451,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -30085,6 +30485,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -30118,6 +30519,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -30151,6 +30553,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -30184,6 +30587,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -30205,6 +30609,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -30220,6 +30625,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -30235,6 +30641,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -30243,6 +30650,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -30264,6 +30672,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -30285,6 +30694,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -30306,6 +30716,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -30321,6 +30732,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -30336,6 +30748,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -30357,6 +30770,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -30372,6 +30786,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -30380,6 +30795,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -30620,6 +31036,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -30653,6 +31070,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -30686,6 +31104,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -30720,6 +31139,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -30753,6 +31173,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -30786,6 +31207,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -30819,6 +31241,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -30852,6 +31275,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -30885,6 +31309,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -30918,6 +31343,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -30951,6 +31377,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -30984,6 +31411,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -31017,6 +31445,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -31050,6 +31479,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -31083,6 +31513,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -31116,6 +31547,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -31155,6 +31587,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -31176,6 +31609,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -31197,6 +31631,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -31230,6 +31665,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -31263,6 +31699,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -31296,6 +31733,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -31329,6 +31767,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -31362,6 +31801,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -31395,6 +31835,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -31428,6 +31869,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -31461,6 +31903,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -31494,6 +31937,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -31527,6 +31971,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -31560,6 +32005,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -31593,6 +32039,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -31626,6 +32073,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -31659,6 +32107,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -31692,6 +32141,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -31725,6 +32175,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -31758,6 +32209,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -31791,6 +32243,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -31824,6 +32277,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -31857,6 +32311,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -31890,6 +32345,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -31911,6 +32367,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -31926,6 +32383,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -31941,6 +32399,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -31949,6 +32408,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -31970,6 +32430,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -31991,6 +32452,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -32012,6 +32474,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -32027,6 +32490,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -32042,6 +32506,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -32063,6 +32528,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -32078,6 +32544,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -32086,6 +32553,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -32313,6 +32781,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -32346,6 +32815,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -32379,6 +32849,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -32413,6 +32884,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -32446,6 +32918,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -32479,6 +32952,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -32512,6 +32986,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -32545,6 +33020,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -32578,6 +33054,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -32611,6 +33088,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -32644,6 +33122,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -32677,6 +33156,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -32710,6 +33190,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -32743,6 +33224,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -32776,6 +33258,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -32809,6 +33292,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -32848,6 +33332,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -32869,6 +33354,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -32890,6 +33376,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -32923,6 +33410,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -32956,6 +33444,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -32989,6 +33478,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -33022,6 +33512,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -33055,6 +33546,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -33088,6 +33580,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -33121,6 +33614,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -33154,6 +33648,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -33187,6 +33682,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -33220,6 +33716,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -33253,6 +33750,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -33286,6 +33784,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -33319,6 +33818,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -33352,6 +33852,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -33385,6 +33886,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -33418,6 +33920,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -33451,6 +33954,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -33484,6 +33988,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -33517,6 +34022,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -33550,6 +34056,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -33583,6 +34090,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -33604,6 +34112,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -33619,6 +34128,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -33634,6 +34144,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -33642,6 +34153,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -33663,6 +34175,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -33684,6 +34197,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -33705,6 +34219,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -33720,6 +34235,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -33735,6 +34251,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -33756,6 +34273,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -33771,6 +34289,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -33779,6 +34298,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -33987,6 +34507,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -34020,6 +34541,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -34053,6 +34575,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -34087,6 +34610,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -34120,6 +34644,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -34153,6 +34678,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -34186,6 +34712,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -34219,6 +34746,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -34252,6 +34780,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -34285,6 +34814,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -34318,6 +34848,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -34351,6 +34882,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -34384,6 +34916,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -34417,6 +34950,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -34450,6 +34984,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -34483,6 +35018,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -34522,6 +35058,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -34543,6 +35080,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -34564,6 +35102,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -34597,6 +35136,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -34630,6 +35170,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -34663,6 +35204,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -34696,6 +35238,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -34729,6 +35272,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -34762,6 +35306,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -34795,6 +35340,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -34828,6 +35374,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -34861,6 +35408,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -34894,6 +35442,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -34927,6 +35476,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -34960,6 +35510,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -34993,6 +35544,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -35026,6 +35578,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -35059,6 +35612,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -35092,6 +35646,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -35125,6 +35680,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -35158,6 +35714,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -35191,6 +35748,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -35224,6 +35782,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -35257,6 +35816,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -35278,6 +35838,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -35293,6 +35854,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -35308,6 +35870,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -35316,6 +35879,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -35337,6 +35901,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -35358,6 +35923,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -35379,6 +35945,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -35394,6 +35961,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -35409,6 +35977,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -35430,6 +35999,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -35445,6 +36015,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -35453,6 +36024,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],
@@ -35678,6 +36250,7 @@
         {
           "id": "d2dc-693e-b491-b16d",
           "name": "Gladius Task Force",
+          "dpCost": 3,
           "rules": [
             "Combat Doctrines"
           ],
@@ -35711,6 +36284,7 @@
         {
           "id": "3caf-c168-c372-51b1",
           "name": "Unforgiven Task Force",
+          "dpCost": 2,
           "rules": [
             "Grim Resolve"
           ],
@@ -35744,6 +36318,7 @@
         {
           "id": "4459-12f0-bc-142b",
           "name": "Black Spear Task Force",
+          "dpCost": 3,
           "rules": [
             "Kill Teams",
             "Mission Tactics"
@@ -35778,6 +36353,7 @@
         {
           "id": "5ff-1ac3-bc73-8273",
           "name": "Liberator Assault Group",
+          "dpCost": 3,
           "rules": [
             "The Red Thirst"
           ],
@@ -35811,6 +36387,7 @@
         {
           "id": "b7d2-99c0-a2ed-3dce",
           "name": "Anvil Siege Force",
+          "dpCost": 2,
           "rules": [
             "Shield of the Imperium"
           ],
@@ -35844,6 +36421,7 @@
         {
           "id": "aa86-1617-4029-fcd7",
           "name": "Ironstorm Spearhead",
+          "dpCost": 2,
           "rules": [
             "Armoured Wrath"
           ],
@@ -35877,6 +36455,7 @@
         {
           "id": "abb4-dc89-4e0-9150",
           "name": "Firestorm Assault Force",
+          "dpCost": 2,
           "rules": [
             "Close-Range Eradication"
           ],
@@ -35910,6 +36489,7 @@
         {
           "id": "50ed-e07c-8f6b-b035",
           "name": "Stormlance Task Force",
+          "dpCost": 3,
           "rules": [
             "Lightning Assault"
           ],
@@ -35943,6 +36523,7 @@
         {
           "id": "cdda-2bc8-a746-80f",
           "name": "Vanguard Spearhead",
+          "dpCost": 2,
           "rules": [
             "Shadow Masters"
           ],
@@ -35976,6 +36557,7 @@
         {
           "id": "5d64-4100-80e-c8f3",
           "name": "1st Company Task Force",
+          "dpCost": 2,
           "rules": [
             "Extremis-level Threat"
           ],
@@ -36009,6 +36591,7 @@
         {
           "id": "a141-49c8-fd84-4c6d",
           "name": "Inner Circle Task Force",
+          "dpCost": 2,
           "rules": [
             "Vowed Target"
           ],
@@ -36042,6 +36625,7 @@
         {
           "id": "41e6-d47c-5e68-e066",
           "name": "Company of Hunters",
+          "dpCost": 2,
           "rules": [
             "Masters of Manoeuvre"
           ],
@@ -36075,6 +36659,7 @@
         {
           "id": "9d32-d514-00a8-6423",
           "name": "The Lost Brethren",
+          "dpCost": 2,
           "rules": [
             "A Noble Death in Combat"
           ],
@@ -36108,6 +36693,7 @@
         {
           "id": "657c-469d-679e-f3aa",
           "name": "The Angelic Host",
+          "dpCost": 2,
           "rules": [
             "Upon Wings of Fire"
           ],
@@ -36141,6 +36727,7 @@
         {
           "id": "bef5-925f-b143-d219",
           "name": "Lion's Blade Task Force",
+          "dpCost": 2,
           "rules": [
             "In the Lion's Claws"
           ],
@@ -36174,6 +36761,7 @@
         {
           "id": "ce39-a420-4206-827c",
           "name": "Librarius Conclave",
+          "dpCost": 1,
           "rules": [
             "Psychic Disciplines"
           ],
@@ -36213,6 +36801,7 @@
         {
           "id": "1242-7b3f-a47e-503a",
           "name": "Wrathful Procession",
+          "dpCost": 1,
           "rules": [
             "Wrathful Procession"
           ],
@@ -36234,6 +36823,7 @@
         {
           "id": "afb4-59c7-fa93-55f6",
           "name": "Champions of Fenris",
+          "dpCost": 1,
           "rules": [
             "The Great Wolf Watches"
           ],
@@ -36255,6 +36845,7 @@
         {
           "id": "dcc7-f9de-d4f2-69d0",
           "name": "Angelic Inheritors",
+          "dpCost": 3,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -36288,6 +36879,7 @@
         {
           "id": "9d23-833a-17cb-2d7d",
           "name": "Wrath of the Rock",
+          "dpCost": 3,
           "rules": [
             "Dutiful Tenacity"
           ],
@@ -36321,6 +36913,7 @@
         {
           "id": "31c2-3bbc-d0b2-ba92",
           "name": "Saga of the Hunter",
+          "dpCost": 2,
           "rules": [
             "Pack's Quarry"
           ],
@@ -36354,6 +36947,7 @@
         {
           "id": "41dc-6769-c30c-b96c",
           "name": "Saga of the Bold",
+          "dpCost": 2,
           "rules": [
             "Heroes All"
           ],
@@ -36387,6 +36981,7 @@
         {
           "id": "98ed-f58a-3e6e-63a6",
           "name": "Saga of the Beastslayer",
+          "dpCost": 2,
           "rules": [
             "Legendary Slayers"
           ],
@@ -36420,6 +37015,7 @@
         {
           "id": "9d80-7508-5cd0-2f9e",
           "name": "Companions of Vehemence",
+          "dpCost": 2,
           "rules": [
             "Righteous Fervour"
           ],
@@ -36453,6 +37049,7 @@
         {
           "id": "f148-3273-e98f-427a",
           "name": "Vindication Task Force",
+          "dpCost": 2,
           "rules": [
             "Purge and Sanctify"
           ],
@@ -36486,6 +37083,7 @@
         {
           "id": "b6cd-9baf-8351-8dec",
           "name": "Godhammer Assault Force",
+          "dpCost": 2,
           "rules": [
             "Shock and Awe"
           ],
@@ -36519,6 +37117,7 @@
         {
           "id": "e073-8fe8-5b59-48f0",
           "name": "Forgefather's Seekers",
+          "dpCost": 2,
           "rules": [
             "Vulkan's Quest"
           ],
@@ -36552,6 +37151,7 @@
         {
           "id": "1dea-4c70-8d4d-3415",
           "name": "Emperor's Shield",
+          "dpCost": 2,
           "rules": [
             "Wrath of Dorn"
           ],
@@ -36585,6 +37185,7 @@
         {
           "id": "dd81-2af4-e7d9-bd07",
           "name": "Shadowmark Talon",
+          "dpCost": 2,
           "rules": [
             "Masters of Shadow"
           ],
@@ -36618,6 +37219,7 @@
         {
           "id": "2496-d271-a92f-d1c0",
           "name": "Hammer of Avernii",
+          "dpCost": 2,
           "rules": [
             "Calculated Annihilation"
           ],
@@ -36651,6 +37253,7 @@
         {
           "id": "0256-e74f-0e54-3e45",
           "name": "Spearpoint Task Force",
+          "dpCost": 2,
           "rules": [
             "Storm-Swift Onslaught"
           ],
@@ -36684,6 +37287,7 @@
         {
           "id": "6d9d-6462-1738-6bb3",
           "name": "Blade of Ultramar",
+          "dpCost": 3,
           "rules": [
             "Mastered Doctrines"
           ],
@@ -36717,6 +37321,7 @@
         {
           "id": "bc26-5cb8-f5fb-2760",
           "name": "Saga of the Great Wolf",
+          "dpCost": 2,
           "rules": [
             "Master of Wolves"
           ],
@@ -36750,6 +37355,7 @@
         {
           "id": "d8e6-a4b2-c15f-49e2",
           "name": "Rage-Cursed Onslaught",
+          "dpCost": 3,
           "rules": [
             "Maddened Ferocity"
           ],
@@ -36783,6 +37389,7 @@
         {
           "id": "8884-ddf9-a44a-ec7a",
           "name": "Bastion Task Force",
+          "dpCost": 2,
           "rules": [
             "Interlocking Tactics"
           ],
@@ -36816,6 +37423,7 @@
         {
           "id": "72a9-ef68-b384-1421",
           "name": "Orbital Assault Force",
+          "dpCost": 2,
           "rules": [
             "Rapid-drop Deployment"
           ],
@@ -36849,6 +37457,7 @@
         {
           "id": "0b71-29ad-7485-83bd",
           "name": "Reclamation Force",
+          "dpCost": 2,
           "rules": [
             "Oath of Reclamation"
           ],
@@ -36882,6 +37491,7 @@
         {
           "id": "3000-9a97-6f30-5a00",
           "name": "Ceramite Sentinels",
+          "dpCost": 3,
           "rules": [
             "Adaptive Defence"
           ],
@@ -36915,6 +37525,7 @@
         {
           "id": "cf4f-5c50-4a22-6960",
           "name": "Headhunter Task Force",
+          "dpCost": 2,
           "rules": [
             "Target Sighted"
           ],
@@ -36948,6 +37559,7 @@
         {
           "id": "0888-6943-a4db-4826",
           "name": "Fulguris Task Force",
+          "dpCost": 1,
           "rules": [
             "Skystrike"
           ],
@@ -36969,6 +37581,7 @@
         {
           "id": "a8c0-4163-5195-a680",
           "name": "Subversion Assets",
+          "dpCost": 1,
           "rules": [
             "New Rule"
           ],
@@ -36984,6 +37597,7 @@
         {
           "id": "7bd3-602e-280c-ecad",
           "name": "The Living Miracle",
+          "dpCost": 1,
           "rules": [
             "Anointed Champion"
           ],
@@ -36999,6 +37613,7 @@
         {
           "id": "e533-c51a-5949-a579",
           "name": "Marshal's Household",
+          "dpCost": 1,
           "rules": [
             "Faith-Fuelled Resolve"
           ],
@@ -37007,6 +37622,7 @@
         {
           "id": "b611-6312-f2d4-5e13",
           "name": "Encarmine Speartip",
+          "dpCost": 1,
           "rules": [
             "Wrath of Angels"
           ],
@@ -37028,6 +37644,7 @@
         {
           "id": "ccdf-f7f2-2317-a51f",
           "name": "Legacy of Grace",
+          "dpCost": 1,
           "rules": [
             "Legacy of the Angel"
           ],
@@ -37049,6 +37666,7 @@
         {
           "id": "a37c-40dc-1ecb-12f7",
           "name": "Wrath of the Doomed",
+          "dpCost": 1,
           "rules": [
             "Fanatacal Celerity"
           ],
@@ -37070,6 +37688,7 @@
         {
           "id": "6357-b8d4-0b19-41a8",
           "name": "Dark Age Arsenal",
+          "dpCost": 1,
           "rules": [
             "Invocations of Ancient Fury"
           ],
@@ -37085,6 +37704,7 @@
         {
           "id": "64a6-9332-de28-21a9",
           "name": "Darkflight Pursuit",
+          "dpCost": 1,
           "rules": [
             "Black-winged Vigilance"
           ],
@@ -37100,6 +37720,7 @@
         {
           "id": "03a7-d965-5d2c-e346",
           "name": "Interrogation Conclave",
+          "dpCost": 1,
           "rules": [
             "Dread Catechism"
           ],
@@ -37121,6 +37742,7 @@
         {
           "id": "86b1-dc36-0d18-477a",
           "name": "Legends of Saga and Song",
+          "dpCost": 1,
           "rules": [
             "Loping Charge"
           ],
@@ -37136,6 +37758,7 @@
         {
           "id": "a2b8-4100-0c51-29af",
           "name": "Veterans of the Fang",
+          "dpCost": 1,
           "rules": [
             "Old Greymanes"
           ],
@@ -37144,6 +37767,7 @@
         {
           "id": "6619-187e-e309-3313",
           "name": "Vengeful Hosts",
+          "dpCost": 1,
           "rules": [
             "Imperator Unleashed"
           ],

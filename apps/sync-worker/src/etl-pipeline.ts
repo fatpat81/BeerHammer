@@ -74,10 +74,15 @@ async function processEndpoint(endpointConfig: { key: string; url: string }): Pr
   const rulesetVersionId = generateRulesetVersionId();
 
   // Look up last sync metadata
-  const lastSync = await prisma.syncMetadata.findFirst({
-    where: { endpoint: endpointConfig.url },
-    orderBy: { syncedAt: 'desc' },
-  });
+  let lastSync = null;
+  try {
+    lastSync = await prisma.syncMetadata.findFirst({
+      where: { endpoint: endpointConfig.url },
+      orderBy: { syncedAt: 'desc' },
+    });
+  } catch (dbErr) {
+    console.warn(`[ETL] Database query failed for ${endpointConfig.key}:`, dbErr);
+  }
 
   try {
     const result = await fetchEndpoint(endpointConfig.url, lastSync?.etag);
@@ -192,6 +197,12 @@ export async function runETLPipeline(): Promise<void> {
   console.log('║  ForceOrg-40k — Wahapedia 11th Ed ETL Pipeline  ║');
   console.log('║  Execution Time:', new Date().toISOString(), '    ║');
   console.log('╚══════════════════════════════════════════════════╝');
+
+  if (!process.env.DATABASE_URL || process.env.DATABASE_URL.trim() === '') {
+    console.warn('\n[ETL] WARNING: DATABASE_URL is not configured in environment or repository secrets.');
+    console.warn('[ETL] Skipping database sync operations gracefully. Set DATABASE_URL in repository secrets to enable persistence.');
+    return;
+  }
 
   const results = [];
 

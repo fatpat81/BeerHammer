@@ -8,6 +8,7 @@
     {
       "id": "0a79-5968-68f0-56b5",
       "name": "Host of Ascension",
+      "dpCost": 3,
       "rules": [
         "A Perfect Ambush"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "536a-b3ea-7597-81bb",
       "name": "Xenocreed Congregation",
+      "dpCost": 2,
       "rules": [
         "Unquestioning Fanaticism"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "ff11-0fa4-2950-380e",
       "name": "Biosanctic Broodsurge",
+      "dpCost": 2,
       "rules": [
         "Hypermorphic Fury"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "59e2-4fec-2b00-b1e8",
       "name": "Outlander Claw",
+      "dpCost": 2,
       "rules": [
         "Rapid Takeover"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "0a59-1d64-257c-04fb",
       "name": "Brood Brother Auxilia",
+      "dpCost": 2,
       "rules": [
         "Brood Brothers",
         "Integrated Tactics"
@@ -174,6 +179,7 @@
     {
       "id": "cb2f-554e-1162-75d5",
       "name": "Final Day",
+      "dpCost": 2,
       "rules": [
         "The Star Children's Blessings",
         "Psionic Parasitism"
@@ -208,6 +214,7 @@
     {
       "id": "24fc-8c17-7d50-bec9",
       "name": "Cult Unveiled",
+      "dpCost": 1,
       "rules": [
         "Forming Boarding Squads",
         "Mustering A Boarding Patrol",
@@ -232,6 +239,7 @@
     {
       "id": "be7f-de0b-6659-198a",
       "name": "Genespawn Onslaught",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -255,6 +263,7 @@
     {
       "id": "fc4a-2c42-6f33-0347",
       "name": "Heroes of the Uprising",
+      "dpCost": 1,
       "rules": [
         "Killer Reputation"
       ],
@@ -276,6 +285,7 @@
     {
       "id": "7acd-d099-e648-0838",
       "name": "Purestrain Broodswarm",
+      "dpCost": 1,
       "rules": [
         "Enemy Within"
       ],
@@ -297,6 +307,7 @@
     {
       "id": "deed-cbf8-1ac5-0294",
       "name": "Xenocult Masses",
+      "dpCost": 1,
       "rules": [
         "Hordes of the Faithful"
       ],

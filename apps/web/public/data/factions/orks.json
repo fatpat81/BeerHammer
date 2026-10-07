@@ -8,6 +8,7 @@
     {
       "id": "496c-ddb9-3e71-e0b3",
       "name": "War Horde",
+      "dpCost": 3,
       "rules": [
         "Get Stuck In"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "80e6-2190-9767-a7ed",
       "name": "Da Big Hunt",
+      "dpCost": 1,
       "rules": [
         "Da Hunt Is On"
       ],
@@ -62,6 +64,7 @@
     {
       "id": "807c-9732-5465-5ca5",
       "name": "Dread Mob",
+      "dpCost": 1,
       "rules": [
         "Try Dat Button!"
       ],
@@ -83,6 +86,7 @@
     {
       "id": "795f-b961-9504-bd08",
       "name": "Green Tide",
+      "dpCost": 1,
       "rules": [
         "Mob-handed Brutality"
       ],
@@ -104,6 +108,7 @@
     {
       "id": "4b17-a73a-7a0a-a265",
       "name": "Bully Boyz",
+      "dpCost": 1,
       "rules": [
         "Displays of Savagery"
       ],
@@ -125,6 +130,7 @@
     {
       "id": "b404-44f-e9b4-7fe2",
       "name": "Kult of Speed",
+      "dpCost": 1,
       "rules": [
         "Adrenaline Junkies"
       ],
@@ -146,6 +152,7 @@
     {
       "id": "fdd5-9868-a9ee-e9f1",
       "name": "Taktikal Brigade",
+      "dpCost": 1,
       "rules": [
         "Suspiciously Well Organised"
       ],
@@ -167,6 +174,7 @@
     {
       "id": "09d3-a08a-0671-fe86",
       "name": "Ramship Raiders",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -191,6 +199,7 @@
     {
       "id": "726a-fa36-dac2-0b11",
       "name": "Kaptin Killers",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -214,6 +223,7 @@
     {
       "id": "63cc-721f-b263-9d4a",
       "name": "Blitz Brigade",
+      "dpCost": 1,
       "rules": [
         "Unstoppable Momentum"
       ],
@@ -235,6 +245,7 @@
     {
       "id": "7b06-be3a-9754-1bd4",
       "name": "Runt Swarm",
+      "dpCost": 1,
       "rules": [
         "Sneaky Little Gitz"
       ],
@@ -256,6 +267,7 @@
     {
       "id": "fca1-ecdf-4e4a-df41",
       "name": "Shoota Boyz",
+      "dpCost": 1,
       "rules": [
         "Dakka! Dakka! Dakka!"
       ],
@@ -277,6 +289,7 @@
     {
       "id": "f782-e3f1-c132-fe52",
       "name": "Wreckas",
+      "dpCost": 1,
       "rules": [
         "Wreckin' and Lootin'"
       ],
@@ -298,6 +311,7 @@
     {
       "id": "9ae4-56d1-1fd8-adcf",
       "name": "Madcap Meks",
+      "dpCost": 1,
       "rules": [
         "Unpredictable Genius"
       ],
@@ -325,6 +339,7 @@
     {
       "id": "7c3c-fb9c-8689-8c7a",
       "name": "Flyboyz",
+      "dpCost": 1,
       "rules": [
         "Skyborne Loons"
       ],
@@ -346,6 +361,7 @@
     {
       "id": "09b2-b286-7608-d613",
       "name": "Brute Bosses",
+      "dpCost": 1,
       "rules": [
         "'Ard As Nails"
       ],
@@ -391,6 +407,7 @@
     {
       "id": "1b34-af6b-8900-61b5",
       "name": "Wurrband",
+      "dpCost": 1,
       "rules": [
         "Powers of Da Waaagh!"
       ],

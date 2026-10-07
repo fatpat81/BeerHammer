@@ -537,7 +537,7 @@ export default function MyArmiesDashboard() {
                           transition: 'all 120ms ease',
                         }}
                       >
-                        <span>⚖️</span>
+                        <span>⚖️</span> Audit
                       </button>
 
                       <button

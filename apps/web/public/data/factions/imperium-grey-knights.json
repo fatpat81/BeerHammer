@@ -8,6 +8,7 @@
     {
       "id": "bcb7-c2a7-e7fb-3aae",
       "name": "Hallowed Conclave",
+      "dpCost": 2,
       "rules": [
         "Duty Before All"
       ],
@@ -41,6 +42,7 @@
     {
       "id": "ce9d-e896-d9bc-767c",
       "name": "Warpbane Task Force",
+      "dpCost": 3,
       "rules": [
         "Hallowed Ground"
       ],
@@ -74,6 +76,7 @@
     {
       "id": "3f06-4e57-edb4-28e5",
       "name": "Brotherhood Strike",
+      "dpCost": 2,
       "rules": [
         "Fury of Titan"
       ],
@@ -107,6 +110,7 @@
     {
       "id": "9ed8-0b64-4e6a-5733",
       "name": "Augurium Task Force",
+      "dpCost": 2,
       "rules": [
         "Prescient Redeployment"
       ],
@@ -140,6 +144,7 @@
     {
       "id": "fb9d-20f7-3a78-22a3",
       "name": "Sanctic Spearhead",
+      "dpCost": 2,
       "rules": [
         "Mailed Fist"
       ],
@@ -173,6 +178,7 @@
     {
       "id": "1eb7-d49c-5fd4-9906",
       "name": "Banishers",
+      "dpCost": 2,
       "rules": [
         "Channelled Force"
       ],
@@ -206,6 +212,7 @@
     {
       "id": "ae8e-359f-01ff-52d1",
       "name": "Void Purge Force",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -229,6 +236,7 @@
     {
       "id": "29c0-f8cf-111e-a87c",
       "name": "Baneslayer Strike",
+      "dpCost": 1,
       "rules": [
         "Mustering A Boarding Patrol",
         "Rules Adaptions",
@@ -252,6 +260,7 @@
     {
       "id": "45aa-c450-8fb0-92c2",
       "name": "Argent Assault",
+      "dpCost": 1,
       "rules": [
         "Dauntless Champions"
       ],
@@ -273,6 +282,7 @@
     {
       "id": "cc43-5f22-04f2-5c31",
       "name": "Fires of Purgation",
+      "dpCost": 1,
       "rules": [
         "Searing Soulflame"
       ],
@@ -294,6 +304,7 @@
     {
       "id": "b96b-6cb7-211b-e744",
       "name": "Immaterial Interdiction",
+      "dpCost": 1,
       "rules": [
         "Echojump"
       ],
