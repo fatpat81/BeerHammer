@@ -15,7 +15,7 @@ import { ThemeProvider, ChapterIcon } from '@forceorg/ui-theme';
 import { FactionSelector } from '@/components/FactionSelector';
 import { ComplianceDashboard } from '@/components/ComplianceDashboard';
 import { FullPageSkeleton } from '@/components/Skeleton';
-import { fetchRoster, fetchDatasheets } from '@/lib/api';
+import { fetchRoster, fetchDatasheets, fetchStratagems } from '@/lib/api';
 import type { UserArmy, Datasheet, BattlePhase, Stratagem } from '@forceorg/types';
 import type { RosterUnit } from '@/components/RosterBuilder';
 
@@ -43,6 +43,8 @@ export default function BattleModeConsolePage() {
   const [loading, setLoading] = useState(true);
   const [activeTheme, setActiveTheme] = useState('ultramarines');
   const [isComplianceOpen, setIsComplianceOpen] = useState(false);
+  const [activeDetachmentRules, setActiveDetachmentRules] = useState<string[]>([]);
+  const [detachmentStratagems, setDetachmentStratagems] = useState<Stratagem[]>([]);
 
   // ── Battle Mode State ─────────────────────────────────────────────────────
   const [battleRound, setBattleRound] = useState<number>(1);
@@ -73,6 +75,41 @@ export default function BattleModeConsolePage() {
           const ds = await fetchDatasheets(rosterData.factionId);
           if (mounted && Array.isArray(ds)) {
             setDatasheets(ds);
+          }
+
+          // Fetch faction catalog to inspect detachment rules
+          try {
+            let normalizedId = rosterData.factionId;
+            if (normalizedId === 'adeptus_astartes') normalizedId = 'imperium-space-marines';
+            if (normalizedId === 'necrons_szarekhan') normalizedId = 'necrons';
+            if (normalizedId === 'tau_empire') normalizedId = 't-au-empire';
+            if (normalizedId === 'chaos_space_marines') normalizedId = 'chaos-chaos-space-marines';
+            const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+            const factionRes = await fetch(`${basePath}/data/factions/${normalizedId}.json`);
+            if (factionRes.ok) {
+              const factionData = await factionRes.json();
+              if (factionData.detachments) {
+                const det = factionData.detachments.find(
+                  (d: any) => d.name.toLowerCase() === (rosterData.detachmentPrimary || '').toLowerCase()
+                );
+                if (det && det.rules) {
+                  setActiveDetachmentRules(det.rules);
+                }
+              }
+            }
+          } catch (e) {
+            console.warn('[BattleMode] Failed to fetch detachment rules:', e);
+          }
+
+          if (rosterData.detachmentPrimary) {
+            try {
+              const strats = await fetchStratagems({ detachmentId: rosterData.detachmentPrimary });
+              if (mounted && Array.isArray(strats) && strats.length > 0) {
+                setDetachmentStratagems(strats);
+              }
+            } catch (e) {
+              console.warn('[BattleMode] Failed to fetch detachment stratagems:', e);
+            }
           }
         }
       } catch (err) {
@@ -215,6 +252,13 @@ export default function BattleModeConsolePage() {
       setExpandedUnitId(unitsList[0]!.instanceId);
     }
   }, [unitsList, expandedUnitId]);
+
+  // All available stratagems (Core + Detachment specific)
+  const allStratagems = useMemo(() => {
+    const existingIds = new Set(CORE_STRATAGEMS.map(s => s.id));
+    const extra = detachmentStratagems.filter(s => !existingIds.has(s.id));
+    return [...CORE_STRATAGEMS, ...extra];
+  }, [detachmentStratagems]);
 
   // CP Management
   const handleSpendCP = (amount: number, stratName: string) => {
@@ -549,6 +593,56 @@ export default function BattleModeConsolePage() {
           </div>
         )}
 
+        {/* ── ACTIVE DETACHMENT HUD BANNER ───────────────────────────────────── */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '0.65rem 1rem',
+          background: 'rgba(15, 23, 42, 0.95)',
+          border: '1px solid rgba(200, 157, 60, 0.3)',
+          borderRadius: '6px',
+          marginBottom: '1rem',
+          flexWrap: 'wrap',
+          gap: '0.5rem',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <span style={{
+              padding: '2px 8px',
+              borderRadius: '4px',
+              background: 'rgba(200, 157, 60, 0.2)',
+              border: '1px solid #C89D3C',
+              color: '#C89D3C',
+              fontWeight: 800,
+              fontSize: '0.75rem',
+            }}>
+              ⚡ ACTIVE DETACHMENT
+            </span>
+            <strong style={{ color: '#F8FAFC', fontSize: '0.9rem' }}>
+              {army?.detachmentPrimary || 'Standard Detachment'}
+            </strong>
+            {activeDetachmentRules.length > 0 && (
+              <span style={{ fontSize: '0.75rem', color: '#94A3B8' }}>
+                • Detachment Rules: <span style={{ color: '#E2E8F0', fontWeight: 600 }}>{activeDetachmentRules.join(', ')}</span>
+              </span>
+            )}
+          </div>
+          <Link
+            href={`/army/${armyId}/edit`}
+            style={{
+              fontSize: '0.75rem',
+              color: '#38BDF8',
+              fontWeight: 700,
+              textDecoration: 'none',
+              padding: '2px 8px',
+              border: '1px solid rgba(56, 189, 248, 0.3)',
+              borderRadius: '4px',
+            }}
+          >
+            Switch Detachment in Edit Mode →
+          </Link>
+        </div>
+
         {/* ── FORCE ORG SINGLE-ACCORDION (ONE EXPANDED AT A TIME) ───────────── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           {unitsList.length === 0 ? (
@@ -559,9 +653,8 @@ export default function BattleModeConsolePage() {
             unitsList.map(unit => {
               const isExpanded = expandedUnitId === unit.instanceId;
 
-
               // Filter stratagems matching unit keywords AND active phase (or requiredKeywords: [])
-              const eligibleStratagems = CORE_STRATAGEMS.filter(strat => {
+              const eligibleStratagems = allStratagems.filter(strat => {
                 // Phase match
                 if (strat.phase !== 'ANY' && strat.phase !== activePhase) return false;
                 // Keyword match: if no keyword required, it is always displayed!

@@ -132,6 +132,31 @@ export default function RosterEditPage() {
     performSave(currentUnitsRef.current);
   };
 
+  const handleDetachmentChange = useCallback(async (newDetachmentName: string) => {
+    if (!army) return;
+    const updatedArmy = { ...army, detachmentPrimary: newDetachmentName };
+    setArmy(updatedArmy);
+    setSaveState('saving');
+    try {
+      const units = currentUnitsRef.current;
+      const totalPoints = units.reduce((sum, u) => sum + (u.pointsCost || 0), 0);
+      const detachmentPointsUsed = units.reduce((sum, u) => sum + (u.catalogUnit?.dpCost || 0), 0);
+      await updateRoster(armyId, {
+        detachmentPrimary: newDetachmentName,
+        rosterPayload: {
+          units,
+          totalPoints,
+          detachmentPointsUsed,
+        },
+      });
+      setSaveState('saved');
+      setLastSavedTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    } catch {
+      setSaveState('saved');
+      setLastSavedTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    }
+  }, [army, armyId]);
+
   if (loading) {
     return <FullPageSkeleton />;
   }
@@ -296,6 +321,7 @@ export default function RosterEditPage() {
               dpLimit={army?.detachmentPointsLimit || 3}
               initialUnits={initialUnits}
               onRosterChange={handleRosterChange}
+              onDetachmentChange={handleDetachmentChange}
             />
           </section>
         </div>

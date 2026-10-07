@@ -38,6 +38,13 @@ export interface CatalogUnit {
   attachableTo?: string[];
 }
 
+export interface DetachmentOption {
+  id: string;
+  name: string;
+  rules: string[];
+  enhancements: EnhancementOption[];
+}
+
 export interface EnhancementOption {
   id: string;
   name: string;
@@ -80,6 +87,7 @@ export interface RosterBuilderProps {
   dpLimit?: number;
   initialUnits?: RosterUnit[];
   onRosterChange?: (units: RosterUnit[]) => void;
+  onDetachmentChange?: (newDetachmentName: string) => void;
 }
 
 export const RosterBuilder: React.FC<RosterBuilderProps> = ({
@@ -90,6 +98,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
   dpLimit = 3,
   initialUnits,
   onRosterChange,
+  onDetachmentChange,
 }) => {
   const [rosterUnits, setRosterUnits] = useState<RosterUnit[]>(initialUnits || []);
   const [showCatalog, setShowCatalog] = useState(false);
@@ -99,15 +108,30 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
 
   // Catalog and Detachment data
   const [catalog, setCatalog] = useState<CatalogUnit[]>([]);
+  const [detachments, setDetachments] = useState<DetachmentOption[]>([]);
+  const [activeDetachmentName, setActiveDetachmentName] = useState<string>(detachmentPrimary || '');
+  const [selectedDetachmentName, setSelectedDetachmentName] = useState<string>(detachmentPrimary || '');
   const [availableEnhancements, setAvailableEnhancements] = useState<EnhancementOption[]>([]);
   const [isLoadingCatalog, setIsLoadingCatalog] = useState<boolean>(true);
   const [catalogError, setCatalogError] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (initialUnits) {
       setRosterUnits(initialUnits);
     }
   }, [initialUnits]);
+
+  useEffect(() => {
+    if (detachmentPrimary) {
+      setActiveDetachmentName(detachmentPrimary);
+      setSelectedDetachmentName(detachmentPrimary);
+      const det = detachments.find(d => d.name.toLowerCase() === detachmentPrimary.toLowerCase());
+      if (det?.enhancements) {
+        setAvailableEnhancements(det.enhancements);
+      }
+    }
+  }, [detachmentPrimary, detachments]);
 
   // Load faction catalogue dynamically
   const loadCatalog = useCallback(async () => {
@@ -177,12 +201,20 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
 
       setCatalog(unitsList);
 
-      // Extract available Enhancements from active detachment
+      // Extract available Detachments and active Enhancements
       if (data.detachments && Array.isArray(data.detachments)) {
-        let activeDet = data.detachments.find((d: any) => d.name.toLowerCase() === detachmentPrimary?.toLowerCase());
+        setDetachments(data.detachments);
+        let activeDet = data.detachments.find(
+          (d: any) => d.name.toLowerCase() === (detachmentPrimary || '').toLowerCase()
+        );
         if (!activeDet && data.detachments.length > 0) activeDet = data.detachments[0];
-        if (activeDet && activeDet.enhancements) {
-          setAvailableEnhancements(activeDet.enhancements);
+        if (activeDet) {
+          const detName = activeDet.name;
+          setActiveDetachmentName(detName);
+          setSelectedDetachmentName(detName);
+          if (activeDet.enhancements) {
+            setAvailableEnhancements(activeDet.enhancements);
+          }
         }
       }
     } catch (err: any) {
@@ -290,13 +322,44 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     });
   }, [onRosterChange]);
 
-  // Compile wargear AST for expanded unit
-  const wargearAST = useMemo(() => {
-    if (!expandedUnit) return [];
-    const unit = rosterUnits.find(u => u.instanceId === expandedUnit);
-    if (!unit || !unit.catalogUnit.wargearRulesRaw) return [];
-    return compileWahapediaWargear(unit.catalogUnit.wargearRulesRaw);
-  }, [expandedUnit, rosterUnits]);
+  // Handle Detachment Switch & Enhancement Reset (Q6)
+  const handleApplyDetachment = useCallback(() => {
+    if (!selectedDetachmentName || selectedDetachmentName === activeDetachmentName) return;
+
+    const newDet = detachments.find(d => d.name === selectedDetachmentName);
+    if (!newDet) return;
+
+    setActiveDetachmentName(selectedDetachmentName);
+    setAvailableEnhancements(newDet.enhancements || []);
+
+    // Q6: always remove enhancements with no prompt
+    const hadEnhancements = rosterUnits.some(u => !!u.enhancement);
+    const updatedUnits = rosterUnits.map(u => {
+      if (u.enhancement) {
+        return {
+          ...u,
+          enhancement: undefined,
+          pointsCost: u.catalogUnit.basePoints,
+        };
+      }
+      return u;
+    });
+
+    setRosterUnits(updatedUnits);
+    onRosterChange?.(updatedUnits);
+    onDetachmentChange?.(selectedDetachmentName);
+
+    setToastMessage(
+      hadEnhancements
+        ? `✓ Detachment changed to ${selectedDetachmentName}. Previous enhancements unequipped.`
+        : `✓ Detachment changed to ${selectedDetachmentName}.`
+    );
+    setTimeout(() => setToastMessage(null), 3500);
+  }, [selectedDetachmentName, activeDetachmentName, detachments, rosterUnits, onRosterChange, onDetachmentChange]);
+
+  const previewDetachment = useMemo(() => {
+    return detachments.find(d => d.name === selectedDetachmentName) || detachments.find(d => d.name === activeDetachmentName) || null;
+  }, [detachments, selectedDetachmentName, activeDetachmentName]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -365,6 +428,183 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
         >
           {showCatalog ? '✕ Close Catalog' : '+ Add Unit to Force'}
         </button>
+      </div>
+
+      {/* ── DEDICATED DETACHMENT RULES & ENHANCEMENTS BAR ────────────────── */}
+      <div style={{
+        background: 'rgba(15, 23, 42, 0.95)',
+        border: '1px solid rgba(200, 157, 60, 0.3)',
+        borderRadius: '8px',
+        padding: '1rem 1.25rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.85rem',
+        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4)',
+      }}>
+        {/* Header row: Active Detachment badge + Dropdown + Apply button */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '0.75rem',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <div style={{
+              padding: '0.4rem 0.85rem',
+              background: 'rgba(200, 157, 60, 0.15)',
+              border: '1px solid #C89D3C',
+              borderRadius: '6px',
+              color: '#C89D3C',
+              fontSize: '0.8rem',
+              fontWeight: 800,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+            }}>
+              <span>⚡ Active Detachment:</span>
+              <strong style={{ color: '#F8FAFC' }}>{activeDetachmentName || 'Standard Detachment'}</strong>
+            </div>
+
+            {/* Detachment dropdown selector (Q5=B) */}
+            {detachments.length > 0 && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <label htmlFor="detachment-select" style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 600 }}>
+                  Switch Detachment:
+                </label>
+                <select
+                  id="detachment-select"
+                  value={selectedDetachmentName}
+                  onChange={(e) => setSelectedDetachmentName(e.target.value)}
+                  style={{
+                    padding: '0.45rem 0.85rem',
+                    background: '#0F172A',
+                    border: selectedDetachmentName !== activeDetachmentName ? '1px solid #38BDF8' : '1px solid rgba(255, 255, 255, 0.15)',
+                    borderRadius: '6px',
+                    color: '#F8FAFC',
+                    fontSize: '0.8rem',
+                    fontWeight: 700,
+                    outline: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {detachments.map(d => (
+                    <option key={d.id} value={d.name}>
+                      {d.name} {d.name === activeDetachmentName ? '(Current)' : ''}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+
+          {/* Apply Changes button (Q7=B: disabled when current, active & pulsating when changed) */}
+          <button
+            onClick={handleApplyDetachment}
+            disabled={selectedDetachmentName === activeDetachmentName}
+            style={{
+              padding: '0.5rem 1.25rem',
+              fontSize: '0.8rem',
+              fontWeight: 800,
+              borderRadius: '6px',
+              cursor: selectedDetachmentName === activeDetachmentName ? 'not-allowed' : 'pointer',
+              opacity: selectedDetachmentName === activeDetachmentName ? 0.45 : 1,
+              background: selectedDetachmentName === activeDetachmentName
+                ? '#1E293B'
+                : 'linear-gradient(135deg, #C89D3C 0%, #F59E0B 100%)',
+              border: selectedDetachmentName === activeDetachmentName
+                ? '1px solid rgba(255,255,255,0.1)'
+                : '1px solid #FCD34D',
+              color: selectedDetachmentName === activeDetachmentName ? '#94A3B8' : '#070B12',
+              boxShadow: selectedDetachmentName !== activeDetachmentName
+                ? '0 0 16px rgba(200, 157, 60, 0.5), 0 0 6px rgba(245, 158, 11, 0.8)'
+                : 'none',
+              transition: 'all 200ms ease',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+            }}
+          >
+            <span>{selectedDetachmentName !== activeDetachmentName ? '⚡' : '✓'}</span>
+            <span>Apply Changes</span>
+          </button>
+        </div>
+
+        {/* Selected Detachment Rules & 4 Enhancements Preview */}
+        {previewDetachment && (
+          <div style={{
+            padding: '0.85rem 1rem',
+            background: 'rgba(0, 0, 0, 0.35)',
+            borderRadius: '6px',
+            border: '1px solid rgba(255, 255, 255, 0.06)',
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem', flexWrap: 'wrap', gap: '0.4rem' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                {previewDetachment.name} — Detachment Rules & Enhancements:
+              </div>
+              {selectedDetachmentName !== activeDetachmentName && (
+                <span style={{ fontSize: '0.7rem', color: '#F59E0B', fontWeight: 700 }}>
+                  ⚠️ Previewing new detachment (Click &quot;Apply Changes&quot; to activate)
+                </span>
+              )}
+            </div>
+
+            {previewDetachment.rules && previewDetachment.rules.length > 0 && (
+              <div style={{ fontSize: '0.75rem', color: '#CBD5E1', marginBottom: '0.6rem' }}>
+                <strong style={{ color: '#E2E8F0' }}>Detachment Rules:</strong> {previewDetachment.rules.join(', ')}
+              </div>
+            )}
+
+            {/* 4 Enhancements preview */}
+            {previewDetachment.enhancements && previewDetachment.enhancements.length > 0 && (
+              <div>
+                <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#94A3B8', marginBottom: '0.35rem', textTransform: 'uppercase' }}>
+                  Available Enhancements ({previewDetachment.enhancements.length}):
+                </div>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                  gap: '0.5rem',
+                }}>
+                  {previewDetachment.enhancements.map((enh, i) => (
+                    <div
+                      key={enh.id || i}
+                      style={{
+                        padding: '0.5rem 0.65rem',
+                        background: '#0F172A',
+                        border: '1px solid rgba(255, 255, 255, 0.08)',
+                        borderRadius: '4px',
+                      }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
+                        <strong style={{ fontSize: '0.75rem', color: '#F8FAFC' }}>{enh.name}</strong>
+                        <span style={{ fontSize: '0.7rem', color: '#C89D3C', fontWeight: 800 }}>+{enh.points} pts</span>
+                      </div>
+                      <div style={{ fontSize: '0.65rem', color: '#94A3B8', lineHeight: 1.3 }}>
+                        {enh.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Toast Notification */}
+        {toastMessage && (
+          <div style={{
+            padding: '0.5rem 0.85rem',
+            background: 'rgba(34, 197, 94, 0.15)',
+            border: '1px solid #22C55E',
+            borderRadius: '4px',
+            color: '#4ADE80',
+            fontSize: '0.75rem',
+            fontWeight: 700,
+          }}>
+            {toastMessage}
+          </div>
+        )}
       </div>
 
       {/* ── Catalog Browser (Q11=A) ───────────────────────────────────────── */}
