@@ -3,39 +3,6 @@ type: Scheduled ETL Job
 title: Wahapedia ETL Sync Worker
 description: The one-shot `apps/sync-worker` job that polls four placeholder Wahapedia endpoints with ETag conditional requests and SHA-256 content-hash delta detection, appends one SyncMetadata row per endpoint, and optionally posts a Discord/Slack summary alert. It writes only sync metadata — it never upserts datasheets, weapons, stratagems, or abilities into the rules tables.
 tags: [sync, etl, wahapedia, scheduled-job, delta-detection, sync-metadata, alerting]
-sources:
-  - id: openwiki-source-6766b7a0c14857435d2077c9
-    resource: repo://.github/workflows/deploy.yml
-  - id: openwiki-source-2cc467a7153c940033aff087
-    resource: repo://.github/workflows/wahapedia-sync.yml
-  - id: openwiki-source-01ca116d0fae7d08da52b7bf
-    resource: repo://.gitlab-ci.yml
-  - id: openwiki-source-0bedcd950ff3ba614fb7573a
-    resource: repo://apps/api/src/routes/changelog.ts
-  - id: openwiki-source-638b3b28782767604998908a
-    resource: repo://apps/sync-worker/package.json
-  - id: openwiki-source-8021f92c131cd25cf2625fe6
-    resource: repo://apps/sync-worker/src/checksum.ts
-  - id: openwiki-source-8fcbd2bf2ef5a91a017d1d0f
-    resource: repo://apps/sync-worker/src/diff-analyzer.ts
-  - id: openwiki-source-382a579224dddb3a1b328920
-    resource: repo://apps/sync-worker/src/etl-pipeline.ts
-  - id: openwiki-source-56c34c7bbdb5edca0cd529b7
-    resource: repo://apps/sync-worker/src/index.ts
-  - id: openwiki-source-11ef2d56dffda152beeb9f84
-    resource: repo://docker-compose.prod.yml
-  - id: openwiki-source-b79fbbd921df689b4bbdc82f
-    resource: repo://docker-compose.yml
-  - id: openwiki-source-d38cf8e8fb2922d36ed611a3
-    resource: repo://Dockerfile.sync-worker
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T03:00:05.375Z" }
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T03:00:05.375Z
 ---
 
 `apps/sync-worker` (`@forceorg/sync-worker`) is the repository's scheduled ingestion job for Wahapedia
@@ -76,7 +43,12 @@ Required configuration:
 
 - `DATABASE_URL` and `DIRECT_URL` — the Prisma datasource for the `SyncMetadata` model
   (`url = env("DATABASE_URL")`, `directUrl = env("DIRECT_URL")`). Both compose files inject both variables
-  explicitly and gate the service on `postgres` being healthy; the workflow supplies them from secrets. In the
+  explicitly and gate the service on `postgres` being healthy; the workflow supplies them from secrets.
+  `runETLPipeline()` now exits early with a warning when `DATABASE_URL` is unset or blank — fetches are
+  skipped entirely rather than crashing — and `processEndpoint` likewise tolerates a failed `SyncMetadata`
+  lookup by continuing with `lastSync = null`
+  ([`apps/sync-worker/src/etl-pipeline.ts#L77-L85, L201-L205`](../../apps/sync-worker/src/etl-pipeline.ts#L77-L85)).
+  A run that logs "Skipping database sync operations gracefully" persisted nothing. In the
   prod composition the worker's URLs are interpolated from the same public Postgres placeholders the API
   service uses (`${POSTGRES_USER:-postgres}`, `${POSTGRES_DB:-forceorg_dev}`), unlike the API service in the
   same file, which sets no `DIRECT_URL` and relies on its entrypoint default. One asymmetry is worth knowing:

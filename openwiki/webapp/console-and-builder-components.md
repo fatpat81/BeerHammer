@@ -1,85 +1,51 @@
 ---
 type: component-inventory
-title: 'Roster Builder, Composite Unit Card & Console Components'
-description: 'Component inventory and responsibilities for the two force-facing modes of apps/web: the Roster Studio edit route (RosterBuilder, auto-save, ComplianceDashboard) and the Tabletop Console view route (CompositeUnitCard, StratagemPanel, PhotoUploadModal), including exactly where local demo fixtures stand in for missing API data.'
-tags: [webapp, roster-builder, composite-unit-card, stratagem-panel, compliance-dashboard, tabletop-console, demo-fixtures, fallback]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-973a89dfdc01de87c1363a79
-    resource: repo://apps/web/src/app/army/%5Bid%5D/edit/page.tsx
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-52389a633001e0df1ac96558
-    resource: repo://apps/web/src/app/globals.css
-  - id: openwiki-source-b23522a72e7c020fb273ab0d
-    resource: repo://apps/web/src/app/layout.tsx
-  - id: openwiki-source-deba80bf5b4e6fbdad344120
-    resource: repo://apps/web/src/app/page.tsx
-  - id: openwiki-source-f0179952914103ae1537bfb7
-    resource: repo://apps/web/src/components/ComplianceDashboard.tsx
-  - id: openwiki-source-b015a85e8b792e07e3ebf1fe
-    resource: repo://apps/web/src/components/CompositeUnitCard.tsx
-  - id: openwiki-source-7a98c8bc72c5ba3b6ab2ce9a
-    resource: repo://apps/web/src/components/CreateArmyModal.tsx
-  - id: openwiki-source-282f4fa2b29c8a9f5da341f6
-    resource: repo://apps/web/src/components/ErrorBoundary.tsx
-  - id: openwiki-source-a64970594d3150c3d151c650
-    resource: repo://apps/web/src/components/PhotoUploadModal.tsx
-  - id: openwiki-source-cfdf9fce7384346438e2d5b1
-    resource: repo://apps/web/src/components/RosterBuilder.tsx
-  - id: openwiki-source-a395cee6efedbed531411ee5
-    resource: repo://apps/web/src/components/Skeleton.tsx
-  - id: openwiki-source-c7bd92940e609573e5ecf574
-    resource: repo://apps/web/src/components/StratagemPanel.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
+title: 'Roster Builder, Battle Mode Console & Force Components'
+description: 'Component inventory for the two force-facing modes of apps/web: the Roster Studio edit route (RosterBuilder with static faction-catalog loading, detachment switcher, enhancements, leader attachment, auto-save) and the Battle Mode console route (/army/[id]: phase bar, CP generator, single-accordion force org, in-card stratagems), plus ComplianceDashboard, CreateArmyModal and the orphaned CompositeUnitCard/StratagemPanel/PhotoUploadModal trio.'
+tags: [webapp, roster-builder, battle-mode, detachment-enhancements, compliance-dashboard, phase-bar, cp-generator, demo-fixtures, fallback]
+resource: repo://apps/web/src/components/RosterBuilder.tsx
 ---
 
 `apps/web` splits force construction and force play into two sibling client routes that share
-components but never share state: `/army/[id]/edit` (the **Roster Studio**, edit mode) and
-`/army/[id]` (the **Tabletop Console**, view mode). Both mount their own `ThemeProvider` and
-`FactionSelector`, both mount a `ComplianceDashboard` modal, and both lean on hard-coded demo
-fixtures so that a missing API, an empty roster or an unmapped datasheet still renders a
-"working" screen. That last property is the single most important thing to know before changing
-anything here: **several components cannot distinguish real data from fixture data at the UI
-level**, and only two of them (RosterBuilder's catalog and StratagemPanel) admit it in the
-interface at all.
-
-Routing and the guest session that makes these pages reachable anonymously are covered by
-[Web App Shell, Routing & Guest Session](./app-shell-and-guest-session.md); every fetch these
-components perform goes through [`apps/web/src/lib/api.ts`](../../apps/web/src/lib/api.ts),
-whose swallow-everything fallbacks are documented in
-[API Client & Fallback Layer](./api-client-fallback-layer.md). The canonical rules these
-components imitate (leader attachment, wound allocation, stratagem gating, wargear parsing)
+components but never share state: `/army/[id]/edit` (the **Roster Studio**, "Edit Mode") and
+`/army/[id]` (the **Battle Mode console**, "Battle Mode"). Both mount their own `ThemeProvider`
+and `FactionSelector`, both mount a `ComplianceDashboard` modal, and both fall back to demo
+fixtures (the dashboard's `STARTER_DEMO_ARMY`, the catalog page's `FALLBACK_CATALOG_DATASHEETS`)
+so a missing API still renders a "working" screen. The Battle Mode route itself no longer
+substitutes a demo army: an empty roster renders an explicit "No units in this battle force"
+empty state linking to Edit Mode
+([`apps/web/src/app/army/[id]/page.tsx#L650`](../../apps/web/src/app/army/[id]/page.tsx#L650)).
+Routing and the guest session that make these pages reachable anonymously are covered by
+[Web App Shell, Routing & Guest Session](./app-shell-and-guest-session.md); API fetches go
+through [`apps/web/src/lib/api.ts`](../../apps/web/src/lib/api.ts), whose swallow-everything
+fallbacks are documented in [API Client & Fallback Layer](./api-client-fallback-layer.md),
+while faction-catalog data is fetched directly from
+[`apps/web/public/data/factions/`](../data/catalog-data-pipeline.md). The canonical rules these
+components imitate (leader attachment, wound allocation, stratagem gating)
 live in `@forceorg/rules-engine-11e` — see
-[Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md),
-[Wargear AST Compiler](../rules-engine/wargear-ast-compiler.md) and
+[Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md) and
 [Roster Validation](../rules-engine/roster-validation.md).
 
 ## Component map
 
 | Component | Hosted by | Owns | Data source of truth |
 | --- | --- | --- | --- |
-| `RosterBuilder` | `/army/[id]/edit` | roster unit list, catalog drawer, client-side validation, wargear AST preview | local `DEMO_CATALOG` unless `fetchDatasheets` returns rows |
+| `RosterBuilder` | `/army/[id]/edit` | roster unit list, catalog drawer, detachment switcher + enhancement reset, leader attachment, client-side totals | `apps/web/public/data/factions/<id>.json` fetched directly (see [Catalog Data Pipeline](../data/catalog-data-pipeline.md)) |
 | `ComplianceDashboard` | `/`, `/army/[id]`, `/army/[id]/edit` | rules-audit modal, verdict banner, discrepancy filtering | `auditRoster` result, else arithmetic over props |
-| `CompositeUnitCard` | `/army/[id]` (twice) | datasheet display, wound-allocation matrix, miniature photo | `initialModels` / props only; nothing persists |
-| `StratagemPanel` | `/army/[id]` (twice) | phase-filtered stratagem directory | `fetchStratagems`, else built-in `CORE_STRATAGEMS` |
-| `PhotoUploadModal` | inside `CompositeUnitCard` | camera/file capture, upload, revert | `uploadMiniaturePhoto` / `deleteMiniaturePhoto` |
 | `FactionSelector` | every page header | heraldry palette switch | `ALL_FACTION_PALETTES` (static) |
-| `CreateArmyModal` | `/` | faction/detachment/name/size form → `createRoster` | hard-coded `FACTIONS` list |
+| `CreateArmyModal` | `/` | faction/detachment/name/size form → `createRoster` | `/data/factions/index.json` + per-faction JSON, with a fallback list on failure |
 | `Skeleton`, `ErrorBoundary`/`InlineError` | app-wide | loading and render-failure presentation | n/a |
+| `CompositeUnitCard`, `StratagemPanel`, `PhotoUploadModal` | **orphaned** — no route imports them | (wound tracking, phase stratagem directory, photo upload) | n/a — see "Orphaned components" below |
 
-The two pages also define the shapes that flow between them: `CatalogUnit` / `RosterUnit` are
-exported from [`RosterBuilder.tsx`](../../apps/web/src/components/RosterBuilder.tsx#L17-L36)
-and imported by the console for typing, so the builder's payload shape is effectively the
-roster persistence contract even though `lib/api.ts` also accepts a leaner offline shape.
+Battle Mode (`/army/[id]`) is implemented inline in its route file rather than through shared
+components: the phase bar, CP counter, accordion unit cards and in-card stratagem lists all live
+in [`apps/web/src/app/army/[id]/page.tsx`](../../apps/web/src/app/army/[id]/page.tsx).
+
+The two pages also define the shapes that flow between them: `CatalogUnit` / `RosterUnit` /
+`DetachmentOption` / `EnhancementOption` are exported from
+[`RosterBuilder.tsx`](../../apps/web/src/components/RosterBuilder.tsx#L17-L60) and imported by
+the console for typing, so the builder's payload shape is effectively the roster persistence
+contract even though `lib/api.ts` also accepts a leaner offline shape.
 
 ## Edit mode: the Roster Studio route
 
@@ -120,6 +86,11 @@ and the "Save Now" button are therefore progress indicators, not durability guar
 
 Two details matter when editing this page:
 
+- `handleDetachmentChange` is a second writer alongside the debounced auto-save: when
+  RosterBuilder's detachment switcher fires `onDetachmentChange`, the page PUTs the new
+  `detachmentPrimary` plus the recomputed payload immediately, and its `catch` likewise marks
+  the save as saved
+  ([#L135-L158](../../apps/web/src/app/army/[id]/edit/page.tsx#L135-L158)).
 - `currentUnitsRef` mirrors the latest unit array so manual save and theme-save can reach it,
   but the `ComplianceDashboard` is handed
   `currentPoints={currentUnitsRef.current.reduce(...)}`
@@ -134,53 +105,59 @@ The edit route's `<main>` uses `className="layout-edit"`, which has no rule in
 [`globals.css`](../../apps/web/src/app/globals.css#L318-L333); the full-width single-column look
 comes from the inner `gridColumn: '1 / -1'` section, not from that class.
 
-## RosterBuilder: catalog, validation, wargear preview
+## RosterBuilder: faction catalog, detachments, enhancements
 
-[`RosterBuilder.tsx`](../../apps/web/src/components/RosterBuilder.tsx) is a single component plus
-a private `WargearRuleCard`.
+[`RosterBuilder.tsx`](../../apps/web/src/components/RosterBuilder.tsx) is a single component.
+Its header comment calls it the "Full 11th Edition builder supporting all 27 canonical factions,
+subfaction catalogue inheritance, detachment enhancements, and leader attachment"
+([#L1-L6](../../apps/web/src/components/RosterBuilder.tsx#L1-L6)) — that is now accurate.
 
-**Catalog is local first.** `catalog` initialises to `DEMO_CATALOG`, six Adeptus Astartes entries
-with hand-written Wahapedia-style `wargearRulesRaw` prose
-([#L40-L107](../../apps/web/src/components/RosterBuilder.tsx#L40-L107)), and `catalogSource`
-starts as `'demo'`. `loadCatalog` calls `fetchDatasheets(factionId)` and only replaces the list
-when the call returns a non-empty array; the mapping joins `wargearRules[].rawText` into a single
-raw string and **falls back to the demo entry's prose, matched by name, whenever the API rows
-carry none** ([#L158-L206](../../apps/web/src/components/RosterBuilder.tsx#L158-L206)). The
-"● Live API Data" vs "○ Standby Catalog" badge
-([#L389-L399](../../apps/web/src/components/RosterBuilder.tsx#L389-L399)) plus an `InlineError`
-with a Retry button are the only degraded-data indicators of this kind in the app. While a
-refresh is in flight the drawer renders six `Skeleton` rows instead of an empty grid.
-
-**RosterBuilder is the only frontend consumer of the rules engine.** It imports
-`compileWahapediaWargear` from `@forceorg/rules-engine-11e` and runs it over the *currently
-expanded* unit's `catalogUnit.wargearRulesRaw`
-([#L273-L278](../../apps/web/src/components/RosterBuilder.tsx#L273-L278)). Because the compiler is
-pure and the memo keys on `expandedUnit`, ASTs are transient view state — nothing compiled is
-persisted, and the compile happens against whatever prose the catalog happens to hold (API text
-or demo text). The rules engine has no other frontend consumer:
+**Catalog comes from static faction JSON, not the API.** `loadCatalog` fetches
+`${basePath}/data/factions/<normalizedId>.json` directly
+([#L139-L152](../../apps/web/src/components/RosterBuilder.tsx#L139-L152)) — the committed
+extractor output documented in
+[Static Catalog Data Pipeline](../data/catalog-data-pipeline.md) — after normalising legacy
+faction ids (`adeptus_astartes` → `imperium-space-marines`, `necrons_szarekhan` → `necrons`,
+`tau_empire` → `t-au-empire`, `chaos_space_marines` → `chaos-chaos-space-marines`). Subfaction
+datasheets (e.g. Blood Angels under Space Marines) are appended from `data.subfactions[]` when
+the `subfactionId` prop matches
+([#L171-L200](../../apps/web/src/components/RosterBuilder.tsx#L171-L200)). `dpCost` per unit
+comes from `ds.detachmentPointsCost`, and `totalDP` is the sum over the roster
+([#L248](../../apps/web/src/components/RosterBuilder.tsx#L248)). On fetch failure the drawer
+shows "Loading faction armory..."/"No units found" — there is **no `DEMO_CATALOG` anymore**, so
+an unreachable `/data/factions/` file yields an empty builder rather than demo units. The
+`compileWahapediaWargear` import at [#L10](../../apps/web/src/components/RosterBuilder.tsx#L10)
+is now unused; the wargear AST preview card (`WargearRuleCard`), the "Live API Data" badge and
+the `DEMO_CATALOG` name-join are gone, and `wargearRulesRaw` is set to `''` for every unit.
+With that, **no frontend component consumes `@forceorg/rules-engine-11e` any more** —
 [Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md) and
 [Roster Validation](../rules-engine/roster-validation.md) execute server-side only.
 
-**Wargear choices are decorative.** `WargearRuleCard` keeps `selectedOption` in its own state and
-toggles it on click ([#L657-L726](../../apps/web/src/components/RosterBuilder.tsx#L657-L726)).
-Nothing writes back to `RosterUnit.wargearSelections`, `pointsCost`, or `validationErrors`, and
-the card unmounts as soon as the row is collapsed, so a selection:
+**Detachment switcher with mandatory enhancement reset.** A dedicated bar shows the active
+detachment, a dropdown of the faction file's `detachments[]`, and an "Apply Changes" button;
+choosing a different detachment previews its rules and enhancements
+([#L430-L560](../../apps/web/src/components/RosterBuilder.tsx#L430-L560)). Applying it
+(`handleApplyDetachment`, [#L326-L356](../../apps/web/src/components/RosterBuilder.tsx#L326-L356))
+always unequips every assigned enhancement without a prompt and resets those units'
+`pointsCost` to `catalogUnit.basePoints`, then fires `onRosterChange` and `onDetachmentChange`
+so the edit page persists the new `detachmentPrimary` (see above).
 
-- never changes the displayed or saved point cost (`pointsCost` stays at `catalogUnit.basePoints`,
-  set once in `addUnit`, [#L246-L260](../../apps/web/src/components/RosterBuilder.tsx#L246-L260)),
-- is never included in the PUT body even though `RosterUnit` declares the field,
-- is silently discarded on collapse or re-render.
+**Characters get enhancement and attachment selectors.** For units with role `CHARACTER`, each
+expanded card renders a detachment-enhancement dropdown (choosing one reprices the unit to
+`basePoints + enh.points`, [#L287-L309](../../apps/web/src/components/RosterBuilder.tsx#L287-L309))
+and a "Attach to Bodyguard Unit" selector writing `attachedToInstanceId`
+([#L814-L875](../../apps/web/src/components/RosterBuilder.tsx#L814-L875)). Removing a unit
+unbinds anything attached to it ([#L275-L285](../../apps/web/src/components/RosterBuilder.tsx#L275-L285)).
 
-**Validation is advisory.** The builder computes three conditions — points over limit, DP over
-limit, and a Rule-of-Three check that flags more than three copies of any unit whose role is
-neither `BATTLELINE` nor `DEDICATED_TRANSPORT`
-([#L228-L243](../../apps/web/src/components/RosterBuilder.tsx#L228-L243)) — and renders them as a
-red warning block that blocks nothing ([#L356-L372](../../apps/web/src/components/RosterBuilder.tsx#L356-L372)).
-Adding, saving and navigating remain possible at any point total. Server-side validation is a
-separate, stricter path ([Roster Validation](../rules-engine/roster-validation.md)).
+**Client-side checks are display-only.** The summary bar turns the Points tile red over limit
+and the Enhancements tile red above the 11e max of 3
+([#L380-L399](../../apps/web/src/components/RosterBuilder.tsx#L380-L399)), but there is no
+blocking and no Rule-of-Three warning block any more; `validationErrors` remains a field set to
+`[]` in `addUnit`. Server-side validation is a separate, stricter path
+([Roster Validation](../rules-engine/roster-validation.md)).
 
 `initialUnits` is re-seeded into local state through an effect keyed on the prop
-([#L146-L150](../../apps/web/src/components/RosterBuilder.tsx#L146-L150)). The edit page supplies
+([#L120-L124](../../apps/web/src/components/RosterBuilder.tsx#L120-L124)). The edit page supplies
 `(army?.rosterPayload as any)?.units || []`, so any roster whose payload lacks a `units` array
 hands the builder a fresh array identity on every render and the effect overwrites in-component
 edits back to that empty list.
@@ -207,153 +184,74 @@ Two structural limits are visible in the source and shape user expectations:
   ([#L546-L552](../../apps/web/src/app/catalog/page.tsx#L546-L552)) — the catalog cannot add a
   unit to a roster; unit acquisition happens only inside `RosterBuilder`.
 
-## View mode: the Tabletop Console route
+## Battle mode: the Tabletop Console route
 
-[`apps/web/src/app/army/[id]/page.tsx`](../../apps/web/src/app/army/[id]/page.tsx) resolves a
-display list from three possible sources, with fixtures winning whenever real data is absent:
+[`apps/web/src/app/army/[id]/page.tsx`](../../apps/web/src/app/army/[id]/page.tsx) is a
+self-contained Battle Mode HUD (its header comment lists the spec: "interactive Phase Bar, CP
+Generator, Single-Accordion Force Org, Phase-Specific Datacards, and In-Card Phase Stratagems
+(NO wound counters or health bars on cards)"
+([#L1-L7](../../apps/web/src/app/army/[id]/page.tsx#L1-L7))). Data flow:
 
-```mermaid
-flowchart TD
-  A["fetchRoster(armyId)"] -->|throws| B["fallback army object, rosterPayload.units = empty"]
-  A -->|ok| C["army from API or localStorage mirror"]
-  B --> D{"rosterPayload.units empty"}
-  C --> D
-  D -->|yes| E["DEMO_FALLBACK_UNITS, three hand-built units"]
-  D -->|no| F["normalize each persisted unit"]
-  G["fetchDatasheets(factionId)"] --> F
-  F --> H{"datasheet matched by id or name"}
-  H -->|yes| I["stats, weapons and abilities from datasheet"]
-  H -->|no| J["stats defaulted, weapons and abilities copied from DEMO_FALLBACK_UNITS[0]"]
-```
+- `fetchRoster(armyId)` → `fetchDatasheets(factionId)`, plus a direct fetch of
+  `/data/factions/<normalizedId>.json` to read the active detachment's `rules[]`, and
+  `fetchStratagems({ detachmentId })` for detachment stratagems
+  ([#L63-L115](../../apps/web/src/app/army/[id]/page.tsx#L63-L115)). Legacy faction ids are
+  normalised the same way RosterBuilder does.
+- `unitsList` returns `[]` for an empty payload — no demo-army substitution any more — and
+  otherwise maps each persisted unit to a display unit, pairing leaders into composites
+  client-side (`attachedToInstanceId` → merged weapons/abilities/keywords with Leader/Bodyguard
+  origin tags) in the same spirit as
+  [Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md),
+  but implemented inline in the route, not by calling the engine
+  ([#L127-L254](../../apps/web/src/app/army/[id]/page.tsx#L127-L254)). An empty roster renders
+  an explicit "No units in this battle force → Go to Edit Mode" state
+  ([#L650](../../apps/web/src/app/army/[id]/page.tsx#L650)).
+- Detachment context is banner-only: the active detachment rules render as a banner with a
+  "Switch Detachment in Edit Mode →" link ([#L642](../../apps/web/src/app/army/[id]/page.tsx#L642))
+  — switching is an Edit Mode action (see the RosterBuilder section above).
 
-The console's data-resolution cascade, showing both places demo fixtures mask missing data.
-Caption: `DEMO_FALLBACK_UNITS` supplies complete stats, models, weapons and abilities
-([#L24-L103](../../apps/web/src/app/army/[id]/page.tsx#L24-L103)).
+Battle state is all local `useState` and disappears on navigation like everything else here:
+battle round (capped at 5, advancing grants +1 CP and resets to the Command phase,
+[#L278-L286](../../apps/web/src/app/army/[id]/page.tsx#L278-L286)), command points with +/−
+buttons and a "+ Generate CP" action
+([#L264-L276](../../apps/web/src/app/army/[id]/page.tsx#L264-L276),
+[#L467-L508](../../apps/web/src/app/army/[id]/page.tsx#L467-L508)), the active phase chosen from
+a COMMAND/MOVEMENT/SHOOTING/CHARGE/FIGHT bar
+([#L524-L560](../../apps/web/src/app/army/[id]/page.tsx#L524-L560)), and one expanded unit
+accordion at a time. The active phase drives the datacards — an "Active <phase> Statline",
+phase-focused weapon sections — and the in-card stratagem list
+([#L720-L965](../../apps/web/src/app/army/[id]/page.tsx#L720-L965)). The stratagem pool is the
+route's own 10-entry `CORE_STRATAGEMS` constant plus API detachment stratagems de-duplicated by
+id ([#L23-L34](../../apps/web/src/app/army/[id]/page.tsx#L23-L34),
+[#L257-L262](../../apps/web/src/app/army/[id]/page.tsx#L257-L262)); spending CP on one is a
+local counter decrement with an insufficient-CP toast, not engine validation — the server-side
+gate lives in `stratagem-filter.ts`
+([Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md)).
+The ComplianceDashboard mounted here now receives real DP
+(`currentDp = rosterPayload.detachmentPointsUsed`,
+[#L990-L999](../../apps/web/src/app/army/[id]/page.tsx#L990-L999)).
 
-The two fixture entry points are:
+## Orphaned components: CompositeUnitCard, StratagemPanel, PhotoUploadModal
 
-1. **Empty payload ⇒ demo army.** `unitsList` returns `DEMO_FALLBACK_UNITS` whenever
-   `rosterPayload.units` has length 0
-   ([#L196-L200](../../apps/web/src/app/army/[id]/page.tsx#L196-L200)) — which is exactly what the
-   route's own fetch-failure branch produces (a hard-coded army with `units: []` and
-   `totalPoints: 355`, [#L164-L183](../../apps/web/src/app/army/[id]/page.tsx#L164-L183)). A real
-   army that a user has emptied shows a Captain, a Terminator Squad and an Intercessor Squad.
-2. **Unmatched datasheet ⇒ demo weapon and ability tables.** In the normalisation map, a unit
-   with no matching datasheet keeps `weapons` and `abilities` from
-   `DEMO_FALLBACK_UNITS[0]` ([#L263-L279](../../apps/web/src/app/army/[id]/page.tsx#L263-L279)),
-   so an arbitrary unit renders the Captain's Relic Weapon and *Rites of Battle*.
+No route imports
+[`CompositeUnitCard.tsx`](../../apps/web/src/components/CompositeUnitCard.tsx),
+[`StratagemPanel.tsx`](../../apps/web/src/components/StratagemPanel.tsx) or
+[`PhotoUploadModal.tsx`](../../apps/web/src/components/PhotoUploadModal.tsx) any more — the
+Battle Mode rewrite removed the wound-tracker cards and the phase-tab stratagem overlay they
+provided. `CompositeUnitCard` still imports `PhotoUploadModal` internally, so the trio forms a
+dead subgraph. Consequences for change planning:
 
-Normalisation itself accepts both persisted unit shapes — the rich `catalogUnit` written by
-`RosterBuilder` and the lean `{datasheetId, datasheetName, modelCount}` shape written by
-`lib/api.ts` in guest mode — and derives `ModelHealth` from the composition
-([#L219-L262](../../apps/web/src/app/army/[id]/page.tsx#L219-L262)). Two heuristics there are
-load-bearing and wrong for many datasheets: `isLeader` is a substring test for
-"sergeant"/"captain"/"leader" in the model name, and `maxWounds` is
-`(dsStats.wounds || dsStats.toughness || 4) > 5 ? 3 : 2`, so a 12-wound vehicle is tracked as a
-3-wound model. Wound allocation in play is specified canonically in
-[Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md); the
-console does not use that code.
+- **Wound tracking has no UI.** The per-model wound-allocation matrix (and the haptics, the
+  `DESTROYED` rendering and the persistence caveats previously documented here) is unreachable
+  code. Canonical allocation semantics remain specified in
+  [Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md).
+- **Photo upload has no UI entry point** even though the API path is live end-to-end
+  ([Media Upload & Object Storage](../api/media-upload-and-object-storage.md));
+  `uploadMiniaturePhoto`/`deleteMiniaturePhoto` in `lib/api.ts` have no caller.
+- `StratagemPanel`'s `CORE_STRATAGEMS` (seven entries) is a **third copy** of core stratagems
+  alongside the Battle Mode route's ten-entry constant and the fixtures in `lib/api.ts`;
+  do not assume edits to one propagate.
 
-The console also requests a **screen wake lock** on mount and releases it on unmount, with a
-header toggle; a denied or unsupported request is ignored
-([#L119-L144](../../apps/web/src/app/army/[id]/page.tsx#L119-L144)).
-
-Finally, the console renders exactly two layout containers, `layout-desktop` and `layout-mobile`,
-while [`globals.css`](../../apps/web/src/app/globals.css#L318-L333) hides `.layout-desktop` below
-1280px **and** hides `.layout-mobile` in the 768–1279px band (where `.layout-tablet` is the
-visible class). The route never renders a `.layout-tablet` element, so on tablet-width
-viewports the console's main content is `display: none`.
-
-## CompositeUnitCard: wounds, abilities, photos
-
-[`CompositeUnitCard.tsx`](../../apps/web/src/components/CompositeUnitCard.tsx) is presentation
-plus local gameplay state.
-
-**Wound tracking.** The card is seeded from `initialModels: ModelHealth[]`
-([#L35-L41](../../apps/web/src/components/CompositeUnitCard.tsx#L35-L41)) into `useState`
-([#L87](../../apps/web/src/components/CompositeUnitCard.tsx#L87)) with **no sync effect**, so
-recomputing the list upstream (changing unit selection, refetching datasheets) will not reset an
-already-mounted card. `handleWoundDelta` clamps each model to `0..maxWounds`, disables the `−`
-button at 0 and the `+` button at max, renders a destroyed row as `DESTROYED` instead of a bar,
-and colours the bar by remaining fraction (>50% glow, >25% amber, else red)
-([#L102-L113](../../apps/web/src/components/CompositeUnitCard.tsx#L102-L113),
-[#L217-L269](../../apps/web/src/components/CompositeUnitCard.tsx#L217-L269)). Leader models are
-distinguished only by the `isLeader` flag (star glyph plus a CSS variant), not by separate logic.
-Haptics come from `navigator.vibrate` — a 12 ms pulse for a wound, a `[25, 40, 25]` pattern when a
-model reaches 0 — and both the haptic call and the `onModelWoundChange` callback fire *inside the
-`setModels` updater*, so they run as part of state computation and can double-fire under
-double-invoked renders.
-
-**Nothing is persisted.** The console does not pass `onModelWoundChange`, and it mounts the card
-twice (desktop and mobile containers), each with independent state
-([#L494-L507](../../apps/web/src/app/army/[id]/page.tsx#L494-L507),
-[#L543-L582](../../apps/web/src/app/army/[id]/page.tsx#L543-L582)). Wound state is therefore
-per-copy, per-visit: switching unit, resizing the viewport or navigating away discards it, and
-damage applied in one layout copy is invisible in the other. The footer's stratagem count is a
-literal `availableStratagemsCount={6}` at both call sites, not a computed value.
-
-**Two photo paths exist; only one is wired.** The rendered flow is lightbox →
-`PhotoUploadModal` → `uploadMiniaturePhoto`/`deleteMiniaturePhoto` from `lib/api`
-([#L354-L412](../../apps/web/src/components/CompositeUnitCard.tsx#L354-L412)); the media endpoint
-and storage side are described in
-[Media Upload & Object Storage](../api/media-upload-and-object-storage.md). The component also
-contains an unused `handleCustomPhotoUpload` / `handleRevertToDefault` pair that `fetch`es the
-relative path `/api/rosters/:id/units/:instanceId/media`
-([#L115-L140](../../apps/web/src/components/CompositeUnitCard.tsx#L115-L140)) — a URL that
-bypasses `API_BASE` and would hit the Next.js origin, where no such route handler exists. Its
-`fileInputRef` is never attached to a rendered input, confirming it is dead code; do not treat it
-as the integration point.
-
-The card's `canonicalImageUrl` at both console call sites is
-`/assets/models/default_placeholder.webp`, and `apps/web/public/` contains no such asset, so the
-`<img>` renders a broken frame — the `ChapterIcon` placeholder branch is only reached when the
-prop is empty, and the `onError` handler clears `customImage`, which is already null.
-
-[`PhotoUploadModal.tsx`](../../apps/web/src/components/PhotoUploadModal.tsx) validates client-side
-(`image/*` MIME prefix and a 10 MB ceiling, [#L45-L59](../../apps/web/src/components/PhotoUploadModal.tsx#L45-L59)),
-supports drag-and-drop, a gallery picker and a `capture="environment"` camera input. On upload
-failure it does not surface the error: it keeps the `URL.createObjectURL` preview, shows the
-success banner and calls `onPhotoUpdated(previewUrl)`
-([#L70-L98](../../apps/web/src/components/PhotoUploadModal.tsx#L70-L98)). The card then displays a
-blob URL that cannot survive a reload, while the console's `onCustomPhotoChange` records it only
-in local `army` state (mobile copy only). The revert path is more honest —
-`deleteMiniaturePhoto` failures are logged, and the UI resets regardless
-([#L100-L112](../../apps/web/src/components/PhotoUploadModal.tsx#L100-L112)).
-
-## StratagemPanel: phase tabs and the CORE fallback
-
-[`StratagemPanel.tsx`](../../apps/web/src/components/StratagemPanel.tsx) begins with a **duplicated
-`'use client'` directive** (lines 6 and 8) — harmless but a real artifact of the file, and a hint
-that the module was pasted rather than derived.
-
-It renders a phase dock of `ANY / COMMAND / MOVEMENT / SHOOTING / CHARGE / FIGHT`
-([#L16-L23](../../apps/web/src/components/StratagemPanel.tsx#L16-L23)) and loads only when
-`isOpen` flips true ([#L96-L100](../../apps/web/src/components/StratagemPanel.tsx#L96-L100));
-the console passes `isOpen={true}` unconditionally, so each mounted panel fetches on mount.
-Loading renders four `Skeleton` rows.
-
-The fallback ladder is the important part:
-
-- `loadStratagems` calls `fetchStratagems({ detachmentId })`; a non-empty array becomes
-  `source = 'api'`, anything else installs `CORE_STRATAGEMS` (seven hard-coded core stratagems,
-  [#L36-L44](../../apps/web/src/components/StratagemPanel.tsx#L36-L44)) with `source = 'default'`
-  ([#L65-L94](../../apps/web/src/components/StratagemPanel.tsx#L65-L94)).
-- [`fetchStratagems` in `lib/api.ts`](../../apps/web/src/lib/api.ts#L224-L239) already catches its
-  own errors and returns `[]`, so an unreachable API normally lands in the *empty-array* branch —
-  the demo set is installed with no `error` set, and the `InlineError` notice (rendered only when
-  `error && source === 'default'`) rarely appears. The visible signal that you are reading built-in
-  data is the amber "○ Core Rules" badge.
-- Filtering: a stratagem passes the phase test if `activePhase === 'ANY'` or its phase is `ANY` or
-  matches; a stratagem with `requiredKeywords` passes only if the unit carries **at least one** of
-  them, case-insensitively
-  ([#L110-L125](../../apps/web/src/components/StratagemPanel.tsx#L110-L125)). Detachment
-  stratagems supplied via `detachmentStratagems` are appended with id-based de-duplication
-  ([#L102-L108](../../apps/web/src/components/StratagemPanel.tsx#L102-L108)) — but no caller in
-  `apps/web` passes that prop, so detachment stratagems can only arrive through the API, and the
-  desktop panel and the mobile overlay each maintain their own copy of everything.
-
-The server-side phase/keyword/detachment gate that this UI approximates lives in
-`stratagem-filter.ts` ([Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md)).
 
 ## ComplianceDashboard: server audit first, arithmetic second
 
@@ -388,10 +286,9 @@ Presentation logic:
   the app passes that prop, so the fix button is unreachable today, `handleApplyFix` never runs,
   and the `updateRoster` import at the top of the file
   ([#L9](../../apps/web/src/components/ComplianceDashboard.tsx#L9)) is unused.
-- Callers differ in what they feed it: the dashboard passes payload totals
-  (`totalPoints`, `detachmentPointsUsed`), the console passes its computed `totalPoints` and omits
-  DP entirely (so `currentDp` defaults to 0 and the DP tile shows `0 / 3`), and the studio passes
-  a ref-derived total.
+- Callers differ in what they feed it: the dashboard and the Battle Mode console pass payload
+  totals (`totalPoints`/`rosterPayload.totalPoints`, `detachmentPointsUsed`), and the studio
+  passes a ref-derived total.
 
 ## Loading and failure conventions
 
@@ -400,44 +297,50 @@ The app has no route-level `loading.tsx`/`error.tsx`/`not-found.tsx` files
 
 - [`Skeleton.tsx`](../../apps/web/src/components/Skeleton.tsx) exports the primitive plus three
   presets. `FullPageSkeleton` is the route-level loading state used by the dashboard (during auth),
-  the studio and the console; RosterBuilder and StratagemPanel instead render grids/lists of the
-  primitive sized to their real rows. `UnitCardSkeleton` and `RosterListSkeleton` are exported but
-  have no call sites.
+  the studio and the Battle Mode console; the dashboard also renders raw `Skeleton` rows while
+  armies load. `UnitCardSkeleton` and `RosterListSkeleton` are exported but have no call sites.
 - [`ErrorBoundary.tsx`](../../apps/web/src/components/ErrorBoundary.tsx) is mounted once in the
   root layout; its "Try Again" button only clears the stored error, and it catches render errors,
-  not fetch errors. `InlineError` is the fetch-degradation primitive and is used in exactly two
-  places: RosterBuilder's catalog notice and StratagemPanel's core-rules notice — both alongside a
-  working fallback, never instead of it.
-- Consequently **no page in this surface has a failure state**: every fetch failure is converted
-  into fixture data plus a `console.warn`, which is why the Playwright suite can assert on Captain
-  in Terminator Armour and a "Battle-Ready"-class audit verdict with the API offline
-  ([`e2e/critical-flows.spec.ts#L56-L89`](../../apps/web/e2e/critical-flows.spec.ts#L56-L89)).
+  not fetch errors. `InlineError` now has exactly one remaining call site — the orphaned
+  StratagemPanel's core-rules notice — so no live page surfaces fetch degradation in the UI.
+- Consequently **no live page in this surface has a failure state**: every fetch failure is
+  converted into fixture data or an empty list plus a `console.warn`. The Playwright suite still
+  passes with the API offline because its journey goes dashboard (`STARTER_DEMO_ARMY`) → Battle
+  Mode accordion, where "Captain in Terminator Armour" comes from the dashboard fixture's roster
+  payload and the audit verdict from `auditRoster`'s synthesised result
+  ([`e2e/critical-flows.spec.ts#L56-L95`](../../apps/web/e2e/critical-flows.spec.ts#L56-L95)).
 
 ## Force creation entry point
 
 [`CreateArmyModal.tsx`](../../apps/web/src/components/CreateArmyModal.tsx) is the only writer of
-roster metadata before the studio exists. Its `FACTIONS` constant
-([#L28-L108](../../apps/web/src/components/CreateArmyModal.tsx#L28-L108)) hard-codes four
-factions with their detachment lists and subfaction theme keys — none of it is fetched — and
-changing faction resets the subfaction, detachment and generated army name
-([#L128-L142](../../apps/web/src/components/CreateArmyModal.tsx#L128-L142)). Submission always
-sends `detachmentPointsLimit: 3` and one of 1000/2000/3000 points; if `createRoster` throws (it
-rarely can — it synthesises a local army itself), the modal builds its own `army_<timestamp>`
-object and navigates to `/army/<id>/edit` anyway
-([#L144-L190](../../apps/web/src/components/CreateArmyModal.tsx#L144-L190)). The result is that a
-"created" army may exist only in one browser's localStorage while the UI behaves as if it is a
-server resource; the studio and console then load it through the same localStorage path.
+roster metadata before the studio exists. It now **fetches the faction list from
+`/data/factions/index.json` and per-faction detachments/subfactions from
+`/data/factions/<id>.json`** ([#L73-L130](../../apps/web/src/components/CreateArmyModal.tsx#L73-L130)),
+falling back to a hard-coded short list on failure, and selecting a faction auto-picks its first
+detachment, subfaction and a generated army name. Submission sends the chosen
+`detachmentPrimary`, `pointsLimit` and `detachmentPointsLimit: 3` through `createRoster` and
+navigates to `/army/<id>` — Battle Mode, not the studio
+([#L174-L198](../../apps/web/src/components/CreateArmyModal.tsx#L174-L198)); unlike the earlier
+version it shows an error banner instead of synthesising a local army when `createRoster`
+rejects (though `createRoster` itself rarely can — it writes localStorage first). The result is
+that a "created" army may still exist only in one browser's localStorage while the UI behaves as
+if it is a server resource; the studio and console then load it through the same localStorage
+path.
 
 ## Working rules for changes here
 
-- Treat `DEMO_CATALOG`, `FALLBACK_CATALOG_DATASHEETS`, `DEMO_FALLBACK_UNITS`, `CORE_STRATAGEMS`,
-  `FACTIONS` and the fixtures inside `lib/api.ts` as **six separate sources of the same facts**.
-  Any change to points, stats or wargear prose must be made in all of them or the UI will show
-  contradictory values with no error.
-- To make wargear selections real, `WargearRuleCard` must lift state into `RosterUnit` and reprice
-  `pointsCost` — the AST it renders is already correct
+- Catalog facts now have **one generated source** — `apps/web/public/data/factions/` (see
+  [Catalog Data Pipeline](../data/catalog-data-pipeline.md)) — consumed directly by
+  RosterBuilder, Battle Mode and CreateArmyModal. The remaining hand-written duplicates are
+  `STARTER_DEMO_ARMY` (dashboard), `FALLBACK_CATALOG_DATASHEETS` (catalog page), the Battle Mode
+  route's `CORE_STRATAGEMS`, and the fixtures inside `lib/api.ts`; changes to canonical units or
+  stratagems must be reconciled against those too or the offline UI will contradict the catalog.
+- The Battle Mode rewrite deleted the wargear AST preview and wound-tracking UIs; the old
+  "make wargear/wounds real" follow-ups no longer apply. The engine's wargear compiler and
+  attachment resolver now have **no frontend consumer**
   ([Wargear AST Compiler](../rules-engine/wargear-ast-compiler.md)).
-- To make wound tracking real, the console must own the model list, pass `onModelWoundChange`,
-  derive `maxWounds` from the datasheet's actual `wounds`, and mount one card instead of two.
 - To make the audit fix actionable, pass `onAutoFixPoints` from each host page; the component is
   otherwise a read-only report with an unused import.
+- Renaming Battle Mode chrome (`BATTLE MODE` badge, `Command Points`, `Legal <phase>
+  Stratagems`, Edit Mode/Battle Mode links) breaks the rewritten Playwright journey — test 04
+  asserts on exactly those strings ([Testing Strategy](../testing/testing-strategy.md)).

@@ -1,31 +1,8 @@
 ---
 type: subsystem-deep-dive
 title: Wargear AST Compiler
-description: How packages/rules-engine-11e/src/wargear-parser.ts compiles natural-language Wahapedia wargear prose into WargearRuleAST nodes, the five regex line patterns and helper semantics, and where the resulting ASTs live (transient UI state in RosterBuilder, never the conditionTree JSON column).
+description: How packages/rules-engine-11e/src/wargear-parser.ts compiles natural-language Wahapedia wargear prose into WargearRuleAST nodes, the five regex line patterns and helper semantics, and where the resulting ASTs live (the Battle Mode rewrite removed the RosterBuilder UI consumer, so today only Vitest exercises the compiler; the conditionTree JSON column remains a dead end).
 tags: [rules-engine, wargear-parser, regex, ast, roster-builder, fragility, wahapedia]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-d44f470410a902c3b78ae626
-    resource: repo://apps/api/src/routes/datasheets.ts
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-cfdf9fce7384346438e2d5b1
-    resource: repo://apps/web/src/components/RosterBuilder.tsx
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-69dbe70ee74c69369962a252
-    resource: repo://packages/db-client/prisma/seed.ts
-  - id: openwiki-source-a5048684b08815c9dd173e76
-    resource: repo://packages/rules-engine-11e/src/__tests__/wargear-parser.test.ts
-  - id: openwiki-source-38f0e53b42f368b02b471563
-    resource: repo://packages/rules-engine-11e/src/index.ts
-  - id: openwiki-source-d712d9dec87d00e83df43a05
-    resource: repo://packages/rules-engine-11e/src/wargear-parser.ts
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 `packages/rules-engine-11e/src/wargear-parser.ts` (labelled §7.1 in the source header) is the
@@ -165,7 +142,7 @@ clearest statement of the pattern set's reach:
 | --- | --- | --- |
 | `For every 5 models, 1 model can replace with 1 Assault Cannon and 1 Power Fist` | [`catalog/page.tsx#L39`](../../apps/web/src/app/catalog/page.tsx#L39-L39) | **dropped.** Pattern 1 needs `replace <X> with <Y>` with a non-empty `<X>`, but here the single ` with ` follows `replace` immediately, so `(.*?)\s+with\s+` can never settle; patterns 3–5 cannot match the `For every …` prefix either. |
 | `All models can replace 2 Assault Bolters with 2 Plasma Exterminators` | [`catalog/page.tsx#L99`](../../apps/web/src/app/catalog/page.tsx#L99-L99) | matches pattern 5 with subject `All models` → scoped `TROOPER` with `modelLimit: 1` and `maxSelections: 1`, losing the "all models" quantity. |
-| `Any model can be equipped with 1 Multi-melta instead of 1 Melta Rifle` | [`RosterBuilder.tsx#L104`](../../apps/web/src/components/RosterBuilder.tsx#L104-L104) | matches pattern 2, but `instead of` is not a grammar the parser knows: the option name becomes `Multi-melta instead of 1 Melta Rifle` and `replaces` stays `undefined`. |
+| `Any model can be equipped with 1 Multi-melta instead of 1 Melta Rifle` | [`catalog/page.tsx#L75`](../../apps/web/src/app/catalog/page.tsx#L75-L75) | matches pattern 2, but `instead of` is not a grammar the parser knows: the option name becomes `Multi-melta instead of 1 Melta Rifle` and `replaces` stays `undefined`. |
 | `Can be equipped with 1 Storm Bolter, 1 Multi-melta, and 1 Hunter-killer Missile` | [`catalog/page.tsx#L111`](../../apps/web/src/app/catalog/page.tsx#L111-L111) | **dropped.** Pattern 2 requires an `any`/`all`/`each` + `model` subject, and no other pattern admits `can be equipped`. |
 
 The general rule for anyone touching the parser: widen a pattern or add a new one *before* the
@@ -175,7 +152,11 @@ datasheet's prose stopped compiling.
 
 ## Where the ASTs land
 
-The compiler has exactly one production caller, and the AST never leaves the browser.
+**Status note:** the compiler no longer has any production caller. The Battle Mode rewrite
+removed `WargearRuleCard` and the AST-preview `useMemo` from `RosterBuilder.tsx`; only the
+`compileWahapediaWargear` import remains, unused
+([Console & Builder Components](../webapp/console-and-builder-components.md)). The Vitest suite
+is the only live consumer. The flow below describes the removed browser path.
 
 ```mermaid
 flowchart LR

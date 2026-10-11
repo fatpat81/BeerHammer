@@ -3,63 +3,6 @@ type: testing-strategy
 title: Testing Strategy & Validation Gates
 description: Where automated test coverage actually exists (Vitest in packages/rules-engine-11e, Playwright in apps/web) and where it does not (API, DB client, schema, web unit level), plus the cheapest honest validation gate for each kind of change.
 tags: [testing, vitest, playwright, e2e, coverage, validation-gates, turbo, ci]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-6766b7a0c14857435d2077c9
-    resource: repo://.github/workflows/deploy.yml
-  - id: openwiki-source-ca04911f6e4b45f5834a6f2e
-    resource: repo://.github/workflows/e2e.yml
-  - id: openwiki-source-01ca116d0fae7d08da52b7bf
-    resource: repo://.gitlab-ci.yml
-  - id: openwiki-source-80276df55c8da3940ca5955f
-    resource: repo://apps/api/package.json
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-638b3b28782767604998908a
-    resource: repo://apps/sync-worker/package.json
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-e87dc7089a58ee1d5730dbe0
-    resource: repo://apps/web/next.config.js
-  - id: openwiki-source-99de51df25f29bfc72caf823
-    resource: repo://apps/web/package.json
-  - id: openwiki-source-b718d27c389d0cfab47c5b2a
-    resource: repo://apps/web/playwright.config.ts
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-b276156fb9e6cd5e7c74223f
-    resource: repo://apps/web/src/app/changelog/page.tsx
-  - id: openwiki-source-178f8e5ada4b92d1a9407498
-    resource: repo://apps/web/src/components/AuthProvider.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-0c106052b3286e779bed85e7
-    resource: repo://docker-compose.dev.yml
-  - id: openwiki-source-5b54a58d1b51cd490b0e7162
-    resource: repo://package.json
-  - id: openwiki-source-a699e19209b75587b5407f25
-    resource: repo://packages/db-client/package.json
-  - id: openwiki-source-3449d796d6223ab052178a09
-    resource: repo://packages/rules-engine-11e/package.json
-  - id: openwiki-source-356f9781fda9368ef83c0098
-    resource: repo://packages/rules-engine-11e/src/__tests__/attachment-resolver.test.ts
-  - id: openwiki-source-ba15cc157fc87330b0abef48
-    resource: repo://packages/rules-engine-11e/src/__tests__/detachment-validator.test.ts
-  - id: openwiki-source-f25bebddce12ce3f3616ca3d
-    resource: repo://packages/rules-engine-11e/src/__tests__/stratagem-filter.test.ts
-  - id: openwiki-source-a5048684b08815c9dd173e76
-    resource: repo://packages/rules-engine-11e/src/__tests__/wargear-parser.test.ts
-  - id: openwiki-source-95dbaa524148e1f6db8bc258
-    resource: repo://packages/rules-engine-11e/vitest.config.ts
-  - id: openwiki-source-6e99f4666c859afe6295dbff
-    resource: repo://packages/types/package.json
-  - id: openwiki-source-c4b4b1976ea7e795b35c75f4
-    resource: repo://scripts/dev-container.sh
-  - id: openwiki-source-440ae1e215cb02721dda855c
-    resource: repo://turbo.json
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 ## Overview
@@ -157,7 +100,7 @@ flowchart TD
 | Kind of change | Minimal gate | Why that is the honest floor |
 | --- | --- | --- |
 | Rules engine (validation, wargear AST, stratagem filtering, attachments) | `cd packages/rules-engine-11e && npx vitest run` | The only layer with real assertions; add a case in the matching suite for new rule branches. |
-| Web UI markup/labels that E2E asserts on | `npm run build` in `apps/web`, then `npx playwright test --project="Desktop Chrome"` | The specs match on literal strings (`Unit Composition`, `Close Stratagems`, `Points Reductions`); renaming UI text is an E2E-breaking change with no other signal. |
+| Web UI markup/labels that E2E asserts on | `npm run build` in `apps/web`, then `npx playwright test --project="Desktop Chrome"` | The specs match on literal strings (`Unit Composition`, `Points Reductions`, `BATTLE MODE`, `Command Points`, `Legal COMMAND Stratagems`); renaming UI text is an E2E-breaking change with no other signal. |
 | API/UI contract change (new field, renamed route) | `npm run lint` (tsc + next lint) + `npm run build` + Playwright | There is no API test and no contract test; TypeScript catches shape drift, Playwright only catches regressions on the five guest journeys. |
 | Prisma schema / migration / seed | `npm run db:migrate` + `npm run db:seed` (or `./scripts/dev.sh up`, whose `db-init` runs `prisma migrate deploy` then the idempotent seed), then smoke-test `GET /api/health` and one datasheet/roster route | Nothing automated — including E2E — ever connects to a database, so a broken migration is invisible to CI. |
 | Shared `@forceorg/types` change | `npm run build` from the root | No tests consume it; the full Turbo build graph is the only consumer check. |
@@ -175,3 +118,4 @@ flowchart TD
 **Extension points.** To give the API its first real gate, add a `test` script (e.g. Vitest + supertest against the Express `app`) to `apps/api` — `turbo run test`, `dev.sh verify`, and the GitLab test stage pick it up with no other wiring. To cover the fallback-vs-API divide instead of hiding it, run `dev.sh up` and set `PLAYWRIGHT_TEST_BASE_URL` plus a seed-backed roster, or add Playwright `dependencies` that start the compose stack. To gate schema changes, add a CI job that runs `prisma migrate deploy` and `prisma seed` against a service container — today that only happens inside the dev loop.
 
 Related: [CI/CD Workflows](../operations/ci-cd-pipelines.md), [Development Environment & Scripts](../operations/dev-environment.md), [Rules Engine Overview](../rules-engine/rules-engine-overview.md), [Roster Validation](../rules-engine/roster-validation.md).
+ [Roster Validation](../rules-engine/roster-validation.md).

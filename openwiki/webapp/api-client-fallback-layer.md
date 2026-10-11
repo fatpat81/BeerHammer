@@ -1,46 +1,6 @@
 ---
 type: "Reference"
 title: "Api client fallback layer"
-openwiki_generated: true
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-f2ba73b3ac1644e51e95ca55
-    resource: repo://apps/api/src/middleware/auth.ts
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-e47271466c9cede2b6fd9e77
-    resource: repo://apps/api/src/routes/rosters.ts
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-973a89dfdc01de87c1363a79
-    resource: repo://apps/web/src/app/army/%5Bid%5D/edit/page.tsx
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-b276156fb9e6cd5e7c74223f
-    resource: repo://apps/web/src/app/changelog/page.tsx
-  - id: openwiki-source-178f8e5ada4b92d1a9407498
-    resource: repo://apps/web/src/components/AuthProvider.tsx
-  - id: openwiki-source-f0179952914103ae1537bfb7
-    resource: repo://apps/web/src/components/ComplianceDashboard.tsx
-  - id: openwiki-source-a64970594d3150c3d151c650
-    resource: repo://apps/web/src/components/PhotoUploadModal.tsx
-  - id: openwiki-source-cfdf9fce7384346438e2d5b1
-    resource: repo://apps/web/src/components/RosterBuilder.tsx
-  - id: openwiki-source-c7bd92940e609573e5ecf574
-    resource: repo://apps/web/src/components/StratagemPanel.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-35ae9a73c6a4b227aa0323b7
-    resource: repo://apps/web/src/lib/supabase.ts
-  - id: openwiki-source-cd191afb9f44a1a29c78d716
-    resource: repo://Dockerfile.web
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 
@@ -192,26 +152,28 @@ same file, plus `rosterId`/`unitInstanceId`), sets only `Authorization` — deli
 browser can add the multipart boundary — and re-implements the envelope check with `UPLOAD_FAILED` as the default
 code. It then unwraps `body.data.media` when present, tolerating both response shapes the API exposes
 (see [Media Upload & Object Storage](../api/media-upload-and-object-storage.md)). It does **not** fall back: the
-graceful path lives in `PhotoUploadModal.tsx#L70-L98`, which on error keeps the `URL.createObjectURL` preview as
+graceful path lives in `PhotoUploadModal.tsx#L70-L98` — an orphaned component with no route
+call site since the Battle Mode rewrite
+([Console & Builder Components](./console-and-builder-components.md)) — which on error keeps the `URL.createObjectURL` preview as
 if the upload had succeeded. The preview is a blob URL, so the "successful" photo disappears on reload.
 
 ## Fixture duplication
 
-The same three Astartes units (Captain in Terminator Armour 95 pts, Terminator Squad 185 pts, Intercessor Squad
-75 pts) are hardcoded independently in `api.ts` (`fetchDatasheets` fallback), `RosterBuilder.tsx#L40-L107`
-(`DEMO_CATALOG`), `army/[id]/page.tsx#L24-L103` (`DEMO_FALLBACK_UNITS`), and `catalog/page.tsx#L17`
-(`FALLBACK_CATALOG_DATASHEETS`), while the dashboard and changelog carry their own `STARTER_DEMO_ARMY` /
-`FALLBACK_CHANGELOG`. Adding a datasheet or changing a canonical `ds-*` id requires coordinated edits in all of
-them, and `RosterBuilder` explicitly joins live API rows back to `DEMO_CATALOG` **by name** to recover wargear
-text the API omits (`RosterBuilder.tsx#L176-L186`).
+The same three Astartes units (Captain in Terminator Armour 95 pts, Terminator Squad 185 pts,
+Intercessor Squad 75 pts) are hardcoded independently in `api.ts` (`fetchDatasheets` fallback)
+and `catalog/page.tsx` (`FALLBACK_CATALOG_DATASHEETS`), while the dashboard carries its own
+`STARTER_DEMO_ARMY` / `FALLBACK_CHANGELOG`. Adding a datasheet or changing a canonical `ds-*` id
+requires coordinated edits in all of them. (The Battle Mode rewrite removed the `DEMO_CATALOG`
+and `DEMO_FALLBACK_UNITS` copies from `RosterBuilder.tsx` and `army/[id]/page.tsx`, which now
+load units from the static `/data/factions/` catalog — see
+[Static Catalog Data Pipeline](../data/catalog-data-pipeline.md).)
 
-A second, subtler consequence: the console page substitutes `DEMO_FALLBACK_UNITS` whenever
-`rosterPayload.units` is empty (`army/[id]/page.tsx#L196-L200`), so a freshly created roster renders the demo
-Ultramarines force rather than an empty list — the behaviour Playwright test 04 relies on when it asserts the
-"Captain in Terminator Armour" heading after entering a guest session
-([`apps/web/e2e/critical-flows.spec.ts#L56-L64`](../../apps/web/e2e/critical-flows.spec.ts#L56-L64)). E2E suites
-that run against the real API therefore cannot distinguish fixture rendering from server rendering; see
-[Testing Strategy](../testing/testing-strategy.md).
+The Battle Mode console no longer substitutes a demo army: an empty `rosterPayload.units`
+renders an explicit "No units in this battle force" empty state. Playwright test 04 therefore
+reaches the unit accordion through the dashboard's `STARTER_DEMO_ARMY` roster payload rather
+than a page-level fixture ([`apps/web/e2e/critical-flows.spec.ts#L56-L68`](../../apps/web/e2e/critical-flows.spec.ts#L56-L68)).
+E2E suites that run against the real API still cannot easily distinguish fixture rendering from
+server rendering at the dashboard level; see [Testing Strategy](../testing/testing-strategy.md).
 
 ## Extension guidance
 

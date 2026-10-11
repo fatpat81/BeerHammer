@@ -3,49 +3,6 @@ type: "Architecture"
 title: "Web App Shell, Routing & Guest Session"
 description: "How the Next.js 14 App Router frontend in apps/web is wired: the root shell that wraps every route in ErrorBoundary + AuthProvider, the client-only route table, and the callsign guest session that persists in localStorage under forceorg_local_user while Supabase remains an optional legacy path."
 tags: [webapp, nextjs, app-router, auth, guest-session, supabase, localstorage, pwa]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-e87dc7089a58ee1d5730dbe0
-    resource: repo://apps/web/next.config.js
-  - id: openwiki-source-b718d27c389d0cfab47c5b2a
-    resource: repo://apps/web/playwright.config.ts
-  - id: openwiki-source-afa69bc50d97832c338f8e19
-    resource: repo://apps/web/public/manifest.json
-  - id: openwiki-source-ef6a421851aa41f6877d2014
-    resource: repo://apps/web/public/sw.js
-  - id: openwiki-source-973a89dfdc01de87c1363a79
-    resource: repo://apps/web/src/app/army/%5Bid%5D/edit/page.tsx
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-b276156fb9e6cd5e7c74223f
-    resource: repo://apps/web/src/app/changelog/page.tsx
-  - id: openwiki-source-b23522a72e7c020fb273ab0d
-    resource: repo://apps/web/src/app/layout.tsx
-  - id: openwiki-source-79ea389a2c325b0fef4a1bcf
-    resource: repo://apps/web/src/app/login/page.tsx
-  - id: openwiki-source-deba80bf5b4e6fbdad344120
-    resource: repo://apps/web/src/app/page.tsx
-  - id: openwiki-source-178f8e5ada4b92d1a9407498
-    resource: repo://apps/web/src/components/AuthProvider.tsx
-  - id: openwiki-source-282f4fa2b29c8a9f5da341f6
-    resource: repo://apps/web/src/components/ErrorBoundary.tsx
-  - id: openwiki-source-fdaa95579d4745e8507584ac
-    resource: repo://apps/web/src/components/LoginPage.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-35ae9a73c6a4b227aa0323b7
-    resource: repo://apps/web/src/lib/supabase.ts
-  - id: openwiki-source-bbd53ba6601341ffa125390c
-    resource: repo://apps/web/tsconfig.json
-  - id: openwiki-source-cd191afb9f44a1a29c78d716
-    resource: repo://Dockerfile.web
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 ## Responsibility
@@ -220,7 +177,7 @@ display stays awake during tournament play.
 `beforeEach` for every journey: load `/`, expect "Instant Commander Access", fill
 `input[placeholder*="Callsign"]`, click "Enter ForceOrg", then assert the dashboard header. Test
 01 asserts the guest dashboard, tests 02–03 hit `/catalog` and `/changelog`, and test 04 follows a
-Console link to `/army/<id>`. The config (`playwright.config.ts`) runs against
+Battle Mode link to `/army/<id>`. The config (`playwright.config.ts`) runs against
 `npx next start -p 3456` with `reuseExistingServer: false` and `NEXT_PUBLIC_API_URL` defaulting to
 `http://localhost:4000/api`, so the suite exercises the **fallback** behaviour (no Supabase env is
 provided at all) rather than cloud auth.

@@ -3,55 +3,6 @@ type: cicd-pipeline-reference
 title: CI/CD Workflows
 description: What the GitHub Actions workflows and the GitLab CI pipeline run on push, PR/MR, and cron; which checks gate a merge to main; and which container images get published where.
 tags: [ci, cd, github-actions, gitlab-ci, docker, ghcr, playwright, cron, openwiki]
-sources:
-  - id: openwiki-source-6766b7a0c14857435d2077c9
-    resource: repo://.github/workflows/deploy.yml
-  - id: openwiki-source-ca04911f6e4b45f5834a6f2e
-    resource: repo://.github/workflows/e2e.yml
-  - id: openwiki-source-6d4b4e707b8d60b6ccfa3425
-    resource: repo://.github/workflows/openwiki-update.yml
-  - id: openwiki-source-2cc467a7153c940033aff087
-    resource: repo://.github/workflows/wahapedia-sync.yml
-  - id: openwiki-source-01ca116d0fae7d08da52b7bf
-    resource: repo://.gitlab-ci.yml
-  - id: openwiki-source-8037e2358a2c4f9b2c722a11
-    resource: repo://AGENTS.md
-  - id: openwiki-source-748fb42527dd114ba460af4f
-    resource: repo://apps/api/entrypoint.sh
-  - id: openwiki-source-638b3b28782767604998908a
-    resource: repo://apps/sync-worker/package.json
-  - id: openwiki-source-382a579224dddb3a1b328920
-    resource: repo://apps/sync-worker/src/etl-pipeline.ts
-  - id: openwiki-source-56c34c7bbdb5edca0cd529b7
-    resource: repo://apps/sync-worker/src/index.ts
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-b718d27c389d0cfab47c5b2a
-    resource: repo://apps/web/playwright.config.ts
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-92c908e84484167addf7ec1a
-    resource: repo://apps/web/src/app/catalog/page.tsx
-  - id: openwiki-source-b276156fb9e6cd5e7c74223f
-    resource: repo://apps/web/src/app/changelog/page.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-11ef2d56dffda152beeb9f84
-    resource: repo://docker-compose.prod.yml
-  - id: openwiki-source-67def8e94ced51980fc09459
-    resource: repo://Dockerfile.api
-  - id: openwiki-source-5b54a58d1b51cd490b0e7162
-    resource: repo://package.json
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-3449d796d6223ab052178a09
-    resource: repo://packages/rules-engine-11e/package.json
-  - id: openwiki-source-440ae1e215cb02721dda855c
-    resource: repo://turbo.json
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T03:00:05.375Z" }
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T03:00:05.375Z
 ---
 
 ## Overview
@@ -158,10 +109,10 @@ The config declares two projects, `Desktop Chrome` and `Mobile Safari` (iPhone 1
 **There is no API container, database, or object store in this job** — no `services:` and no compose step. The
 single started process is the Next.js server, so every `fetch` to `http://localhost:4000/api` in
 `e2e/critical-flows.spec.ts` fails and the pages fall back to their in-file demo datasets
-(`FALLBACK_CATALOG_DATASHEETS` in the catalog, `FALLBACK_CHANGELOG` on `/changelog`, the fallback army and
-`DEMO_FALLBACK_UNITS` in the tabletop console). The five specs therefore assert against curated fallback
+(`FALLBACK_CATALOG_DATASHEETS` in the catalog, `FALLBACK_CHANGELOG` on `/changelog`, the fallback
+army on the dashboard). The five specs therefore assert against curated fallback
 content: guest "Instant Commander Access" login, catalog search for "Terminator Squad", changelog "Points
-Reductions", the console stratagems overlay, and the audit modal. Adding a spec that needs real persistence —
+Reductions", the Battle Mode accordion + in-card stratagems, and the audit modal. Adding a spec that needs real persistence —
 or removing fallback data from a page — will pass locally against a full stack and fail (or silently test
 nothing) in CI. See [Testing Strategy](../testing/testing-strategy.md).
 

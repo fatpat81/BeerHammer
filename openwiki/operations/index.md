@@ -1,3 +1,9 @@
+---
+type: Documentation Index
+title: "Operations"
+description: "Files and subdirectories in Operations."
+---
+
 # Files
 
 - [CI/CD Workflows](ci-cd-pipelines.md) - What the GitHub Actions workflows and the GitLab CI pipeline run on push, PR/MR, and cron; which checks gate a merge to main; and which container images get published where.

@@ -1,3 +1,9 @@
+---
+type: Documentation Index
+title: "Workflows"
+description: "Files and subdirectories in Workflows."
+---
+
 # Files
 
 - [Workflow: Roster Persistence & Offline Sync](roster-persistence-and-offline-sync.md) - End-to-end control flow for creating, editing and deleting a roster across browser localStorage, the best-effort API mirror, JWT ownership scoping and the user_armies table, including the guest path, the offline fallbacks and the identifier divergence that makes local rosters unreconcilable.

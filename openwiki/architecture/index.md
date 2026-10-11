@@ -1,3 +1,9 @@
+---
+type: Documentation Index
+title: "Architecture"
+description: "Files and subdirectories in Architecture."
+---
+
 # Files
 
 - [Shared Contracts: Types, Envelope, Ruleset Versions](shared-contracts.md) - The cross-package vocabulary every layer of ForceOrg-40k depends on: the @forceorg/types shape catalog, the success/data/error/meta API response envelope, the duplicated Prisma-vs-TypeScript enums, the ruleset version id convention, and the unvalidated RosterPayload JSON contract.

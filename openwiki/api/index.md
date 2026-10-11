@@ -1,3 +1,9 @@
+---
+type: Documentation Index
+title: "Api"
+description: "Files and subdirectories in Api."
+---
+
 # Files
 
 - [Express API Server, Middleware Chain & Error Contract](api-server-and-middleware.md) - Bootstrap of the Express API in apps/api, the security and rate-limit middleware chain in mount order, public catalog read endpoints, the per-module PrismaClient/try/catch convention, and the uniform success/error envelope ending in a 500 INTERNAL_ERROR handler, checked against the docs/API.md transport rules, error-code table, and JWT `sub` provisioning requirements.

@@ -3,63 +3,6 @@ type: architecture-contract
 title: 'Shared Contracts: Types, Envelope, Ruleset Versions'
 description: 'The cross-package vocabulary every layer of ForceOrg-40k depends on: the @forceorg/types shape catalog, the success/data/error/meta API response envelope, the duplicated Prisma-vs-TypeScript enums, the ruleset version id convention, and the unvalidated RosterPayload JSON contract.'
 tags: [shared-types, api-envelope, ruleset-version, prisma-enums, roster-payload, contracts]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-80276df55c8da3940ca5955f
-    resource: repo://apps/api/package.json
-  - id: openwiki-source-d04d22ac02c0c45a07baad16
-    resource: repo://apps/api/src/index.ts
-  - id: openwiki-source-f2ba73b3ac1644e51e95ca55
-    resource: repo://apps/api/src/middleware/auth.ts
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-0bedcd950ff3ba614fb7573a
-    resource: repo://apps/api/src/routes/changelog.ts
-  - id: openwiki-source-d44f470410a902c3b78ae626
-    resource: repo://apps/api/src/routes/datasheets.ts
-  - id: openwiki-source-6802ff3f6b510e0b7e7c8c1f
-    resource: repo://apps/api/src/routes/media.ts
-  - id: openwiki-source-e47271466c9cede2b6fd9e77
-    resource: repo://apps/api/src/routes/rosters.ts
-  - id: openwiki-source-8fcbd2bf2ef5a91a017d1d0f
-    resource: repo://apps/sync-worker/src/diff-analyzer.ts
-  - id: openwiki-source-382a579224dddb3a1b328920
-    resource: repo://apps/sync-worker/src/etl-pipeline.ts
-  - id: openwiki-source-973a89dfdc01de87c1363a79
-    resource: repo://apps/web/src/app/army/%5Bid%5D/edit/page.tsx
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-b276156fb9e6cd5e7c74223f
-    resource: repo://apps/web/src/app/changelog/page.tsx
-  - id: openwiki-source-f0179952914103ae1537bfb7
-    resource: repo://apps/web/src/components/ComplianceDashboard.tsx
-  - id: openwiki-source-cfdf9fce7384346438e2d5b1
-    resource: repo://apps/web/src/components/RosterBuilder.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-300fb4970560b7d85786e41b
-    resource: repo://docs/API.md
-  - id: openwiki-source-88e9822d53d4ed7952466156
-    resource: repo://docs/OPENAPI.yaml
-  - id: openwiki-source-eaf205a807699f924ff8c6ef
-    resource: repo://packages/db-client/prisma/migrations/20261005170232_init/migration.sql
-  - id: openwiki-source-98cd5d7971988e94da86ec8b
-    resource: repo://packages/db-client/prisma/rls-policies.sql
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-69dbe70ee74c69369962a252
-    resource: repo://packages/db-client/prisma/seed.ts
-  - id: openwiki-source-fa45397ed66a72cddfd95651
-    resource: repo://packages/db-client/src/index.ts
-  - id: openwiki-source-4551c05eb6f54e79c200e78e
-    resource: repo://packages/rules-engine-11e/src/detachment-validator.ts
-  - id: openwiki-source-6e99f4666c859afe6295dbff
-    resource: repo://packages/types/package.json
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 ForceOrg-40k has no runtime contract layer. Four artifacts together *are* the contract between `apps/api`, `apps/web`, `apps/sync-worker` and `packages/rules-engine-11e`:
@@ -188,7 +131,7 @@ Because the union and the enum are structurally identical, code type-checks whet
 
 The same collision applies to the **model** names: `Datasheet`, `UserArmy`, `Ability`, `Stratagem`, `LeaderCompatibility`, `UserUnitMedia`, `SyncMetadata` are exported by both packages with materially different fields — Prisma `UserArmy.createdAt` is a `Date`, `@forceorg/types` `UserArmy.createdAt` is a `string` (ISO, because it crosses JSON); Prisma `Datasheet.unitComposition`/`stats` are `JsonValue`, the types version is `UnitComposition`/`DatasheetStats`. Audit and catalog routes bridge the gap with `as unknown as DatasheetType` casts, so a field-name change on either side is invisible to `tsc`.
 
-**Adding, renaming or removing a label requires all of:** `schema.prisma`, a new migration (`ALTER TYPE … ADD VALUE` — the union edit alone will type-check and then fail at insert), `packages/types/src/index.ts`, the mirrored literals in `docs/OPENAPI.yaml`, `prisma/seed.ts`, and the `Record<string, …>` role-metadata maps in the web UI (`RosterBuilder.tsx`, `StratagemPanel.tsx`). Drift can only enter through the schema/seed path: the enum-bearing catalog tables (`datasheets_11e`, `weapons_11e`, `abilities_11e`, `stratagems_11e`, `wargear_rules_11e`, `leader_compatibility_11e`) have **no RLS** and are public-read with writes reserved for the sync-worker service role, while `user_armies`, `user_unit_media` and `user_color_schemes` are RLS-isolated by `auth.uid() = user_id` and never hold enum columns (`packages/db-client/prisma/rls-policies.sql`).
+**Adding, renaming or removing a label requires all of:** `schema.prisma`, a new migration (`ALTER TYPE … ADD VALUE` — the union edit alone will type-check and then fail at insert), `packages/types/src/index.ts`, the mirrored literals in `docs/OPENAPI.yaml`, `prisma/seed.ts`, and the `Record<string, …>` role-metadata maps in the web UI (`RosterBuilder.tsx`, and the orphaned `StratagemPanel.tsx`). Drift can only enter through the schema/seed path: the enum-bearing catalog tables (`datasheets_11e`, `weapons_11e`, `abilities_11e`, `stratagems_11e`, `wargear_rules_11e`, `leader_compatibility_11e`) have **no RLS** and are public-read with writes reserved for the sync-worker service role, while `user_armies`, `user_unit_media` and `user_color_schemes` are RLS-isolated by `auth.uid() = user_id` and never hold enum columns (`packages/db-client/prisma/rls-policies.sql`).
 
 ## `RosterPayload`: unvalidated JSON with TypeScript as schema of record
 

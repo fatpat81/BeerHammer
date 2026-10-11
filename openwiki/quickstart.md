@@ -3,43 +3,6 @@ type: quickstart
 title: Quickstart & Task Routing
 description: Entry point for ForceOrg-40k / BeerHammer, a self-hosted Warhammer 40,000 11th Edition army builder and tabletop console. Covers the three supported boot paths — host-native npm, the containerized scripts/dev.sh workbench, and a zero-config pull-based full-stack test environment from published GHCR images with placeholder credentials — the guest/offline mode that needs no external services, the lint/build/test/Playwright verification gate, and which wiki page answers which kind of change.
 tags: [quickstart, onboarding, task-routing, dev-loop, verification-gate, guest-mode, monorepo, docker-compose, ghcr]
-sources:
-  - id: openwiki-source-5f5b95b3d6a215fa02ceb945
-    resource: repo://.env.example
-  - id: openwiki-source-748fb42527dd114ba460af4f
-    resource: repo://apps/api/entrypoint.sh
-  - id: openwiki-source-99de51df25f29bfc72caf823
-    resource: repo://apps/web/package.json
-  - id: openwiki-source-b718d27c389d0cfab47c5b2a
-    resource: repo://apps/web/playwright.config.ts
-  - id: openwiki-source-178f8e5ada4b92d1a9407498
-    resource: repo://apps/web/src/components/AuthProvider.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-11ef2d56dffda152beeb9f84
-    resource: repo://docker-compose.prod.yml
-  - id: openwiki-source-1f2994ce2c818471371d726c
-    resource: repo://docs/DEPLOYMENT.md
-  - id: openwiki-source-dabca6fc8f10fe81d1bcf708
-    resource: repo://docs/DEV_ENVIRONMENT.md
-  - id: openwiki-source-ffaaadfe6c4f3a21a9bb5f54
-    resource: repo://docs/DEV_NOTES.md
-  - id: openwiki-source-5b54a58d1b51cd490b0e7162
-    resource: repo://package.json
-  - id: openwiki-source-3449d796d6223ab052178a09
-    resource: repo://packages/rules-engine-11e/package.json
-  - id: openwiki-source-23775c3de52f3ab95a13cb8b
-    resource: repo://README.md
-  - id: openwiki-source-c4b4b1976ea7e795b35c75f4
-    resource: repo://scripts/dev-container.sh
-  - id: openwiki-source-a5928e7ee39885995efdc170
-    resource: repo://scripts/dev.sh
-  - id: openwiki-source-440ae1e215cb02721dda855c
-    resource: repo://turbo.json
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T03:00:05.375Z" }
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T03:00:05.375Z
 ---
 
 ## What this system is
@@ -148,7 +111,7 @@ Sign in at the `/` login gate by typing any callsign and pressing **"Enter Force
 
 Every API call in `lib/api.ts` is wrapped in a try/catch that degrades to browser-local fixtures, so the UI is fully usable offline: an empty or down API yields the starter Ultramarines roster and an offline catalog instead of an error screen ([apps/web/src/lib/api.ts](../apps/web/src/lib/api.ts#L154-L175)). See [API Client & Offline Fallback Layer](webapp/api-client-fallback-layer.md).
 
-A useful first click-through (documented and mirrored by the E2E suite) is: login gate → Command Nexus dashboard → ⚔ Console → 📚 Catalog search → 📡 Changelog → Assemble New Force → Audit ([docs/DEV_NOTES.md](../docs/DEV_NOTES.md), §2 "Load the software and click through the UI").
+A useful first click-through (documented and mirrored by the E2E suite) is: login gate → Command Nexus dashboard → ⚔ Battle Mode (and ✎ Edit Mode) → 📚 Catalog search → 📡 Changelog → Assemble New Force → Audit ([docs/DEV_NOTES.md](../docs/DEV_NOTES.md), §2 "Load the software and click through the UI").
 
 ## Verification gate
 
@@ -209,3 +172,4 @@ Know what the gate can actually observe: behavioural coverage exists only in `pa
 - [docs/API.md](../docs/API.md) and [docs/OPENAPI.yaml](../docs/OPENAPI.yaml) — the API contract third-party clients integrate against; read endpoints are public, writes require a JWT signed with the instance's `JWT_SECRET`.
 
 Source code and tests remain authoritative; treat this wiki and the docs as just-in-time orientation, per [AGENTS.md](../AGENTS.md).
+urce code and tests remain authoritative; treat this wiki and the docs as just-in-time orientation, per [AGENTS.md](../AGENTS.md).

@@ -3,47 +3,6 @@ type: rules-subsystem
 title: 'Composite Units & Stratagem Filtering'
 description: 'How packages/rules-engine-11e merges a leader datasheet into a bodyguard datasheet (attachment validity, effective toughness, keyword/weapon/ability merge, wound allocation) and how stratagems are gated by battle phase, unit keywords and detachment identity — plus how the Tabletop Console mirrors (and currently diverges from) those canonical rules.'
 tags: [rules-engine, composite-unit, leader-attachment, wound-allocation, stratagems, phase-filter, detachment, tabletop-console]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-d44f470410a902c3b78ae626
-    resource: repo://apps/api/src/routes/datasheets.ts
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-b015a85e8b792e07e3ebf1fe
-    resource: repo://apps/web/src/components/CompositeUnitCard.tsx
-  - id: openwiki-source-cfdf9fce7384346438e2d5b1
-    resource: repo://apps/web/src/components/RosterBuilder.tsx
-  - id: openwiki-source-c7bd92940e609573e5ecf574
-    resource: repo://apps/web/src/components/StratagemPanel.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-bbd53ba6601341ffa125390c
-    resource: repo://apps/web/tsconfig.json
-  - id: openwiki-source-98cd5d7971988e94da86ec8b
-    resource: repo://packages/db-client/prisma/rls-policies.sql
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-69dbe70ee74c69369962a252
-    resource: repo://packages/db-client/prisma/seed.ts
-  - id: openwiki-source-3449d796d6223ab052178a09
-    resource: repo://packages/rules-engine-11e/package.json
-  - id: openwiki-source-356f9781fda9368ef83c0098
-    resource: repo://packages/rules-engine-11e/src/__tests__/attachment-resolver.test.ts
-  - id: openwiki-source-f25bebddce12ce3f3616ca3d
-    resource: repo://packages/rules-engine-11e/src/__tests__/stratagem-filter.test.ts
-  - id: openwiki-source-7dce2a6220757c38d6192399
-    resource: repo://packages/rules-engine-11e/src/attachment-resolver.ts
-  - id: openwiki-source-38f0e53b42f368b02b471563
-    resource: repo://packages/rules-engine-11e/src/index.ts
-  - id: openwiki-source-2419a14d19810dd717d269db
-    resource: repo://packages/rules-engine-11e/src/stratagem-filter.ts
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
 ---
 
 Two sibling modules inside `@forceorg/rules-engine-11e` own the "unit in play" rules:
@@ -242,15 +201,17 @@ different accent borders and badges.
 
 ## How the console actually filters
 
-`StratagemPanel.tsx` loads catalog rows through `fetchStratagems({ detachmentId })` and then
-applies its **own** inline copy of the phase and keyword predicates inside a `useMemo` —
-upper-casing `unitKeywords` and passing on `requiredKeywords.some(...)`, and treating a
+Since the Battle Mode rewrite, the **live** inline filter is in the route itself:
+[`apps/web/src/app/army/[id]/page.tsx`](../../apps/web/src/app/army/[id]/page.tsx) filters its
+`CORE_STRATAGEMS` constant plus API detachment stratagems by `phase` and `requiredKeywords.some(...)`
+for the active phase — again without calling `filterStratagems`
+([#L657-L664](../../apps/web/src/app/army/[id]/page.tsx#L657-L664)). The older inline copy,
+`StratagemPanel.tsx`, is now **orphaned** (no route imports it) but behaved the same way: upper-casing
+`unitKeywords` and passing on `requiredKeywords.some(...)`, and treating a
 selected phase tab as "this phase plus all `ANY` stratagems", which mirrors `isPhaseActive`
-without calling it. It performs **no** client-side detachment gate; detachment scoping is
-delegated to the server via the `detachmentId` query parameter. An extra
-`detachmentStratagems` prop is appended to the working set, deduplicated by `id`, though no
-page currently passes it. `availableStratagemsCount` on the unit card is a hardcoded `6`, so
-the badge is not derived from any filter.
+without calling it. It performed **no** client-side detachment gate; detachment scoping was
+delegated to the server via the `detachmentId` query parameter. `availableStratagemsCount` on the unit card was a hardcoded `6`, so
+the badge was not derived from any filter.
 
 The server-side filter is a plain Prisma `findMany` over `stratagems_11e` with
 `where.phase` / `where.category` / `where.detachmentId` set from the query string
@@ -268,8 +229,8 @@ panel's live/API path is rarely exercised, and demo fixtures do the filtering.
 - Adding or removing an attachment possibility is a data change (`leader_compatibility_11e`
   row, plus the seed/migration that owns it); no resolver edit is needed because
   `isAttachmentValid` reads whatever table it is handed.
-- A new keyword-matching rule belongs in `unitSatisfiesKeywords` only — but the console's
-  inline duplicate in `StratagemPanel.tsx` must be changed in the same commit or the UI and
+- A new keyword-matching rule belongs in `unitSatisfiesKeywords` only — but the Battle Mode
+  route's inline duplicate in `army/[id]/page.tsx` must be changed in the same commit or the UI and
   the engine will disagree about what a unit can buy.
 - Any new model-state rule (multi-wound models, `[PRECISION]` detection from weapon keywords,
   `Epic Hero` handling) belongs in `attachment-resolver.ts`, since that module already owns
@@ -297,4 +258,6 @@ repo's only real unit coverage for these rules:
 Because these resolvers have no production caller, the tests are the only guardrail; the web
 app aliases `@forceorg/rules-engine-11e` straight to `packages/rules-engine-11e/src`
 (`apps/web/tsconfig.json`) for type resolution, and only `RosterBuilder.tsx` (wargear parser)
+and the audit route (`validateRoster`) import from the package today.
+onfig.json`) for type resolution, and only `RosterBuilder.tsx` (wargear parser)
 and the audit route (`validateRoster`) import from the package today.
