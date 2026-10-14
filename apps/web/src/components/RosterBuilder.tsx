@@ -135,7 +135,19 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
       const verified = initialUnits.map(u => {
         const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
         const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
-        const currentCount = u.modelCount || baseModels;
+        let currentCount = u.modelCount || baseModels;
+        // Auto-heal old corrupted model counts from BattleScribe fragments (e.g. 4 or 8 on a 5-man squad, 2 on a 3-man or 5-man squad, or 1 on non-character)
+        if (!isChar) {
+          if (baseModels === 5 && (currentCount === 4 || currentCount === 2 || currentCount === 1)) {
+            currentCount = 5;
+          } else if (baseModels === 5 && currentCount === 8) {
+            currentCount = 10;
+          } else if (baseModels === 3 && (currentCount === 2 || currentCount === 1)) {
+            currentCount = 3;
+          } else if (baseModels === 10 && (currentCount === 2 || currentCount === 1 || currentCount === 4)) {
+            currentCount = 10;
+          }
+        }
         const squadPoints = calculateUnitSquadPoints({
           basePoints: u.catalogUnit.basePoints,
           modelCount: currentCount,
@@ -187,49 +199,77 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
       }
       const data = await res.json();
 
-      let unitsList: CatalogUnit[] = (data.datasheets || []).map((ds: any) => ({
-        id: ds.id,
-        name: ds.name,
-        factionId: ds.factionId || normalizedId,
-        battlefieldRole: ds.battlefieldRole || 'OTHER',
-        basePoints: ds.basePoints || 0,
-        dpCost: ds.detachmentPointsCost || 0,
-        keywords: ds.keywords || [],
-        wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
-        modelComposition: (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
+      let unitsList: CatalogUnit[] = (data.datasheets || []).map((ds: any) => {
+        const baseThreshold = getUnitBaseModelThreshold({
+          name: ds.name,
+          battlefieldRole: ds.battlefieldRole,
+          keywords: ds.keywords,
+          basePoints: ds.basePoints,
+        });
+        const compModels = (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
           name: m.name || ds.name,
           count: m.count || 1,
-        })),
-        stats: ds.stats,
-        weapons: ds.weapons || [],
-        abilities: ds.abilities || [],
-        isLeader: !!ds.isLeader,
-        attachableTo: ds.attachableTo || [],
-      }));
+        }));
+        const compSum = compModels.reduce((s: number, m: any) => s + m.count, 0);
+        if (compSum < baseThreshold && compModels.length > 0) {
+          compModels[compModels.length - 1]!.count += (baseThreshold - compSum);
+        }
+
+        return {
+          id: ds.id,
+          name: ds.name,
+          factionId: ds.factionId || normalizedId,
+          battlefieldRole: ds.battlefieldRole || 'OTHER',
+          basePoints: ds.basePoints || 0,
+          dpCost: ds.detachmentPointsCost || 0,
+          keywords: ds.keywords || [],
+          wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
+          modelComposition: compModels,
+          stats: ds.stats,
+          weapons: ds.weapons || [],
+          abilities: ds.abilities || [],
+          isLeader: !!ds.isLeader,
+          attachableTo: ds.attachableTo || [],
+        };
+      });
 
       // If a subfaction is specified (e.g. Blood Angels under Space Marines), merge subfaction units
       if (data.subfactions && Array.isArray(data.subfactions)) {
         const sub = data.subfactions.find((s: any) => s.id === subfactionId);
         if (sub && Array.isArray(sub.datasheets) && sub.datasheets.length > 0) {
-          const subUnits: CatalogUnit[] = sub.datasheets.map((ds: any) => ({
-            id: ds.id,
-            name: ds.name,
-            factionId: ds.factionId || sub.id,
-            battlefieldRole: ds.battlefieldRole || 'OTHER',
-            basePoints: ds.basePoints || 0,
-            dpCost: 0,
-            keywords: ds.keywords || [],
-            wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
-            modelComposition: (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
+          const subUnits: CatalogUnit[] = sub.datasheets.map((ds: any) => {
+            const baseThreshold = getUnitBaseModelThreshold({
+              name: ds.name,
+              battlefieldRole: ds.battlefieldRole,
+              keywords: ds.keywords,
+              basePoints: ds.basePoints,
+            });
+            const compModels = (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
               name: m.name || ds.name,
               count: m.count || 1,
-            })),
-            stats: ds.stats,
-            weapons: ds.weapons || [],
-            abilities: ds.abilities || [],
-            isLeader: !!ds.isLeader,
-            attachableTo: ds.attachableTo || [],
-          }));
+            }));
+            const compSum = compModels.reduce((s: number, m: any) => s + m.count, 0);
+            if (compSum < baseThreshold && compModels.length > 0) {
+              compModels[compModels.length - 1]!.count += (baseThreshold - compSum);
+            }
+
+            return {
+              id: ds.id,
+              name: ds.name,
+              factionId: ds.factionId || sub.id,
+              battlefieldRole: ds.battlefieldRole || 'OTHER',
+              basePoints: ds.basePoints || 0,
+              dpCost: 0,
+              keywords: ds.keywords || [],
+              wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
+              modelComposition: compModels,
+              stats: ds.stats,
+              weapons: ds.weapons || [],
+              abilities: ds.abilities || [],
+              isLeader: !!ds.isLeader,
+              attachableTo: ds.attachableTo || [],
+            };
+          });
           unitsList = [...unitsList, ...subUnits];
         }
       }

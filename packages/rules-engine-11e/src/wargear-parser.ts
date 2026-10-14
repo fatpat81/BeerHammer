@@ -246,50 +246,91 @@ export function getUnitBaseModelThreshold(unit: {
   basePoints?: number;
   modelComposition?: { name: string; count: number }[];
 }): number {
-  const isChar =
-    unit.battlefieldRole === 'CHARACTER' ||
-    (unit.keywords || []).includes('CHARACTER') ||
-    (unit.keywords || []).includes('EPIC HERO');
+  const lowerName = (unit.name || '').toLowerCase();
+  const rawKeywords = (unit.keywords || []).map(k => (k || '').toLowerCase());
+  const role = (unit.battlefieldRole || '').toUpperCase();
 
+  // 1. Explicit multi-model character retinues & fixed unique squads
+  if (/company heroes/i.test(lowerName)) return 4;
+  if (/grimaldus/i.test(lowerName)) return 4;
+  if (/calgar/i.test(lowerName)) return 3;
+  if (/celestine/i.test(lowerName)) return 3;
+  if (/gaunt.*ghost/i.test(lowerName)) return 6;
+  if (/kill team cassius/i.test(lowerName)) return 11;
+  if (/rogue trader entourage/i.test(lowerName)) return 4;
+  if (/accursed cultist/i.test(lowerName)) return 8;
+  if (/neurogaunt/i.test(lowerName)) return 11;
+  if (/crusader squad/i.test(lowerName) && !/legends/i.test(lowerName)) return 10;
+  if (/aestred thurga/i.test(lowerName)) return 2;
+  if (/daemonifuge/i.test(lowerName)) return 2;
+  if (/rein and raus/i.test(lowerName)) return 2;
+  if (/deathwatch.*kill team|indomitor kill team|fortis kill team|spectrus kill team|proteus kill team/i.test(lowerName)) return 5;
+
+  // 2. Single-model units: Characters, Epic Heroes, Vehicles, Monsters, Walkers, Fortifications
+  const isChar =
+    role === 'CHARACTER' ||
+    rawKeywords.some(k => k.includes('character') || k.includes('epic hero'));
   if (isChar) return 1;
 
-  // Check modelComposition if it explicitly defines a multi-model squad
-  const compCount = (unit.modelComposition || []).reduce((sum, m) => sum + (m.count || 0), 0);
-  if (compCount > 1) return compCount;
+  const isVehicleOrMonster =
+    role === 'VEHICLE' ||
+    role === 'MONSTER' ||
+    role === 'FORTIFICATION' ||
+    rawKeywords.some(
+      k =>
+        k.includes('vehicle') ||
+        k.includes('monster') ||
+        k.includes('walker') ||
+        k.includes('fortification') ||
+        k.includes('titanic') ||
+        k.includes('aircraft')
+    );
 
-  const lowerName = (unit.name || '').toLowerCase();
-  const keywords = (unit.keywords || []).map(k => k.toLowerCase());
+  // Some walkers / vehicles are taken in multi-model squadrons (e.g. Broadside, Armigers, War Dogs, Tarantula)
+  const isSquadron = /broadside|armiger|war dog|tarantula|land speeder/i.test(lowerName);
+  if (isVehicleOrMonster && !isSquadron) return 1;
 
-  // Horde squads (10 models baseline)
+  // 3. Horde / Swarm units (10 models baseline, scale to 20)
   if (
-    /cultist|boyz|guardsm|shock troop|infantry squad|poxwalker|termagant|hormagaunt|kroot carnivore|gretchin|bloodletter|daemonette|plaguebearer|pink horror/i.test(
+    /cultist mob|cultist|boyz|beast snagga|gretchin|grots|shock troop|infantry squad|catachan|krieg|jungle fighter|poxwalker|termagant|hormagaunt|gargoyle|bloodletter|daemonette|plaguebearer|pink horror|blue horror|kroot carnivore|skitarii|kabalite|wyche|fire warrior|breacher|strike team|necron warrior|jakhal|tzaangor|hearthkyn/i.test(
       lowerName
     )
   ) {
     return 10;
   }
 
-  // Elite 3-model squads
+  // 4. Elite 3-model squads (3 models baseline, scale to 6)
   if (
-    /aggressor|eradicator|bladeguard|inceptor|eightbound|crisis|allarus|wraithguard|wraithblade|squighog/i.test(
+    /aggressor|eradicator|bladeguard|inceptor|suppressor|eliminator|centurion|eightbound|deathshroud|allarus|crisis|broadside|stealth|wraithguard|wraithblade|squighog|meganob|paragon warsuit|tyranid warrior|zoanthrope|venomthrope|hive guard|tyrant guard|ravener|von ryan|skorpekh|ophydian|tomb blade|lokhust|windrider|shining spear|skyweaver|biker|outrider|ogryn|bullgryn|kataphron/i.test(
       lowerName
     )
   ) {
     return 3;
   }
 
-  // Standard infantry/squads (5 models baseline: Legionaries, Terminators, Intercessors, Chosen, Havocs, etc.)
+  // 5. Terminators (5 models baseline, scale to 10)
+  // All Terminator squads (Space Marines, Chaos, Grey Knights, Death Guard, Thousand Sons, Dark Angels, Space Wolves)
+  if (/terminator/i.test(lowerName)) {
+    return 5;
+  }
+
+  // 6. Standard Infantry & Battleline squads (5 models baseline, scale to 10)
   if (
-    /terminator|legionar|intercessor|chosen|havoc|scout|infiltrator|incursor|sister|marine|immortal|warrior|dire avenger|fire warrior/i.test(
+    /intercessor|infernus|infiltrator|incursor|tactical|scout|legionar|chosen|havoc|retributor|sister|dominion|celestian|seraphim|zephyrim|repentia|raptor|warp talon|rubric|plague marine|immortal|deathmark|lychguard|praetorian|sternguard|vanguard|hellblaster|desolation|reiver|hearthguard|pteraxii|ruststalker|sicarian|avenger|scorpion|banshee|dragon|hawk|spider|reaper|wrack|mandrake|incubi|aberrant|genestealer|metamorph|hybrid/i.test(
       lowerName
     ) ||
-    keywords.includes('infantry') ||
-    keywords.includes('battleline')
+    rawKeywords.some(
+      k =>
+        k.includes('infantry') ||
+        k.includes('battleline') ||
+        k.includes('mounted') ||
+        k.includes('jump pack')
+    )
   ) {
     return 5;
   }
 
-  return Math.max(1, compCount);
+  return 1;
 }
 
 /**
@@ -330,7 +371,7 @@ export function calculateUnitSquadPoints(params: {
   const threshold = Math.max(1, baseModelCount);
   const tierMultiplier = Math.max(1, Math.ceil(modelCount / threshold));
   const tierMaxModels = tierMultiplier * threshold;
-  const isUnderstrength = modelCount > threshold && modelCount < tierMaxModels;
+  const isUnderstrength = modelCount % threshold !== 0;
   const totalPoints = (basePoints * tierMultiplier) + enhancementPoints;
 
   return {

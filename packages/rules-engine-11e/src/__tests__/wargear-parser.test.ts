@@ -8,6 +8,7 @@ import {
   resolveEquippedWeapons,
   buildUnitWargearSlots,
   calculateUnitSquadPoints,
+  getUnitBaseModelThreshold,
   normalizeBaseWeaponName,
   cleanDisplayName,
 } from '../wargear-parser';
@@ -506,3 +507,93 @@ describe('buildUnitWargearSlots with support gear and melee', () => {
     expect(homer).toBeDefined();
   });
 });
+
+describe('getUnitBaseModelThreshold', () => {
+  it('correctly sets Terminator Squads to 5 models baseline (scaling to 10), even when raw JSON lists 4 models', () => {
+    // BattleScribe raw JSON previously had 4 entries in modelComposition (1 Sergeant + 3 Troopers)
+    const spaceMarineTerminators = {
+      name: 'Terminator Squad',
+      battlefieldRole: 'INFANTRY',
+      keywords: ['INFANTRY', 'TERMINATOR'],
+      modelComposition: [
+        { name: 'Terminator Sergeant', count: 1 },
+        { name: 'Terminator Squad', count: 1 },
+        { name: 'Terminator Squad', count: 1 },
+        { name: 'Terminator Squad', count: 1 },
+      ],
+    };
+
+    const threshold = getUnitBaseModelThreshold(spaceMarineTerminators);
+    expect(threshold).toBe(5);
+
+    // Verify 5 models costs 1x base points, 6 models costs 2x (10-man squad tier)
+    const points5 = calculateUnitSquadPoints({
+      basePoints: 185,
+      modelCount: 5,
+      baseModelCount: threshold,
+    });
+    expect(points5.totalPoints).toBe(185);
+    expect(points5.tierMaxModels).toBe(5);
+    expect(points5.isUnderstrength).toBe(false);
+
+    const points6 = calculateUnitSquadPoints({
+      basePoints: 185,
+      modelCount: 6,
+      baseModelCount: threshold,
+    });
+    expect(points6.totalPoints).toBe(370);
+    expect(points6.tierMaxModels).toBe(10);
+    expect(points6.isUnderstrength).toBe(true);
+
+    const points10 = calculateUnitSquadPoints({
+      basePoints: 185,
+      modelCount: 10,
+      baseModelCount: threshold,
+    });
+    expect(points10.totalPoints).toBe(370);
+    expect(points10.tierMaxModels).toBe(10);
+    expect(points10.isUnderstrength).toBe(false);
+  });
+
+  it('correctly categorizes Terminator variants across all factions', () => {
+    expect(getUnitBaseModelThreshold({ name: 'Terminator Assault Squad', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Deathwing Terminator Squad', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Wolf Guard Terminators', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Chaos Terminator Squad', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Blightlord Terminators', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Scarab Occult Terminators', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+    expect(getUnitBaseModelThreshold({ name: 'Grey Knights Terminator Squad', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(5);
+  });
+
+  it('correctly sets elite 3-model fireteams (Aggressors, Eradicators, Crisis, Deathshroud)', () => {
+    expect(getUnitBaseModelThreshold({ name: 'Aggressor Squad', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Eradicator Squad', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Bladeguard Veteran Squad', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Inceptor Squad', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Deathshroud Terminators', battlefieldRole: 'INFANTRY', keywords: ['TERMINATOR'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Crisis Fireknife Battlesuits', battlefieldRole: 'INFANTRY', keywords: ['BATTLESUIT'] })).toBe(3);
+  });
+
+  it('correctly sets horde / 10-model squads (Boyz, Cultists, Shock Troops, Breachers)', () => {
+    expect(getUnitBaseModelThreshold({ name: 'Boyz', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Cultist Mob', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Cadian Shock Troops', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Breacher Team', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Necron Warriors', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+  });
+
+  it('correctly identifies single-model characters and vehicles', () => {
+    expect(getUnitBaseModelThreshold({ name: 'Captain in Terminator Armour', battlefieldRole: 'CHARACTER', keywords: ['CHARACTER', 'TERMINATOR'] })).toBe(1);
+    expect(getUnitBaseModelThreshold({ name: 'Chaos Lord', battlefieldRole: 'CHARACTER', keywords: ['CHARACTER'] })).toBe(1);
+    expect(getUnitBaseModelThreshold({ name: 'Predator Tank', battlefieldRole: 'VEHICLE', keywords: ['VEHICLE'] })).toBe(1);
+    expect(getUnitBaseModelThreshold({ name: 'Redemptor Dreadnought', battlefieldRole: 'VEHICLE', keywords: ['VEHICLE', 'WALKER'] })).toBe(1);
+  });
+
+  it('correctly identifies unique character retinues and fixed squads', () => {
+    expect(getUnitBaseModelThreshold({ name: 'Company Heroes', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(4);
+    expect(getUnitBaseModelThreshold({ name: 'Chaplain Grimaldus', battlefieldRole: 'CHARACTER', keywords: ['CHARACTER', 'EPIC HERO'] })).toBe(4);
+    expect(getUnitBaseModelThreshold({ name: 'Marneus Calgar', battlefieldRole: 'CHARACTER', keywords: ['CHARACTER', 'EPIC HERO'] })).toBe(3);
+    expect(getUnitBaseModelThreshold({ name: 'Accursed Cultists', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(8);
+  });
+});
+

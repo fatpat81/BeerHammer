@@ -16,7 +16,7 @@ import { FactionSelector } from '@/components/FactionSelector';
 import { ComplianceDashboard } from '@/components/ComplianceDashboard';
 import { FullPageSkeleton } from '@/components/Skeleton';
 import { fetchRoster, fetchDatasheets, fetchStratagems } from '@/lib/api';
-import { resolveEquippedWeapons } from '@forceorg/rules-engine-11e';
+import { resolveEquippedWeapons, getUnitBaseModelThreshold } from '@forceorg/rules-engine-11e';
 import type { UserArmy, Datasheet, BattlePhase, Stratagem, WeaponProfile } from '@forceorg/types';
 import type { RosterUnit } from '@/components/RosterBuilder';
 
@@ -159,7 +159,7 @@ export default function BattleModeConsolePage() {
           leadership: dsStats?.leadership || '6+',
           objectiveControl: dsStats?.objectiveControl || 1,
         },
-        modelCount: pu.modelCount || (catalogUnit.modelComposition || []).reduce((acc: number, m: any) => acc + (m.count || 1), 0),
+        modelCount: pu.modelCount || getUnitBaseModelThreshold(catalogUnit),
         needsVerification: (pu as any).needsVerification !== undefined
           ? (pu as any).needsVerification
           : (!(pu as any).wargearSelections || (pu as any).wargearSelections.length === 0),
@@ -183,7 +183,7 @@ export default function BattleModeConsolePage() {
           });
 
           const isChar = catalogUnit.battlefieldRole === 'CHARACTER' || (catalogUnit.keywords || []).includes('CHARACTER');
-          const mCount = pu.modelCount || (catalogUnit.modelComposition || []).reduce((acc: number, m: any) => acc + (m.count || 1), 0);
+          const mCount = pu.modelCount || getUnitBaseModelThreshold(catalogUnit);
 
           return resolveEquippedWeapons(
             normalizedCatalogWeapons,
