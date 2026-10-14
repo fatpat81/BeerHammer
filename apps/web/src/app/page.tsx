@@ -195,7 +195,7 @@ export default function MyArmiesDashboard() {
       });
 
       setArmies(prev => [newArmy, ...prev]);
-      router.push(`/army/${newArmy.id}`);
+      router.push(`/army/${newArmy.id}/edit`);
     } catch (err) {
       console.error('Failed to deploy combat patrol:', err);
     } finally {

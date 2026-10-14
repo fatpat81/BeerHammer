@@ -261,6 +261,17 @@
             "Devastating wounds",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -702,6 +713,17 @@
           "keywords": [
             "Rapid Fire 2"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -762,6 +784,17 @@
           "strength": 9,
           "armorPenetration": -2,
           "damage": "D3",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ]
@@ -1726,6 +1759,17 @@
           "skill": "2+",
           "strength": 4,
           "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
           "damage": "1",
           "keywords": []
         }

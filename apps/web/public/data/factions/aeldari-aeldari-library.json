@@ -2122,7 +2122,104 @@
           "description": "When the last Guardian Defender model in this unit is destroyed, any remaining Heavy Weapon Platform models in this unit are also destroyed."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        }
+      ]
     },
     {
       "id": "551b-900c-3681-8f11",
@@ -2871,6 +2968,17 @@
             "Heavy",
             "Precision"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -3219,6 +3327,17 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -3545,7 +3664,73 @@
           "description": "Models in the bearer’s unit have a 5+ invulnerable save."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Fusion gun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Power sword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "c90f-a8e5-6afa-eb91",
@@ -3769,6 +3954,17 @@
             "Devastating Wounds",
             "Indirect Fire"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -9220,6 +9416,17 @@
             "Blast",
             "Indirect Fire"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -9272,6 +9479,17 @@
           "strength": 9,
           "armorPenetration": -1,
           "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ]
@@ -10269,7 +10487,251 @@
           "description": "This model can be attached to the following units:\n- **^^Wyches^^**"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Heat Lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Shardcarbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Splinter Pods",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Blast Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Splinter Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stinger Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Archite glaive and agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "➤ Demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Hellglaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Huskblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stunclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Lance",
+            "Precision"
+          ]
+        }
+      ]
     },
     {
       "id": "b5a1-7e2b-7a1d-bbda",
@@ -10319,7 +10781,251 @@
           "description": "This model can be attached to the following units:\n- **^^Wracks^^**"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Blaster",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -4,
+          "damage": "D6+1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Heat Lance",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Shardcarbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Splinter Pods",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Splinter Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault"
+          ]
+        },
+        {
+          "name": "Blast Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "D3",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Splinter Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Stinger Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 2,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Pistol",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Archite glaive and agoniser",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Bladevanes",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "➤ Demiklaives - Dual Blades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Demiklaives - Single Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Haemonculus tools and scissorhands",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Precision"
+          ]
+        },
+        {
+          "name": "Hellglaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lance",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Huskblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Stunclaw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Lance",
+            "Precision"
+          ]
+        }
+      ]
     },
     {
       "id": "8e2c-2234-8595-f191",
@@ -10364,7 +11070,398 @@
           "description": "This model can be attached to the following units:\n- **^^Guardian Defenders^^**\n- **^^Storm Guardian^^**\n- **^^Warlock Conclave^^**"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Dragon Fusion Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Banshee Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon Sabre",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Scorpion Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Wraithbone Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Singing Spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Star Glaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Star Lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Witch Staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Witchblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Destructor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Death Spinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Dragon Fusion Gun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Eldritch Storm",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Long Rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starswarm",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Twin Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "915f-4ee6-3358-31ca",
@@ -10410,7 +11507,398 @@
           "description": "This model can be attached to the following units:\n- **^^Windriders**^^"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Dragon Fusion Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Banshee Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon Sabre",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Scorpion Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Wraithbone Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Singing Spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Star Glaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Star Lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Witch Staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Witchblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Destructor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Death Spinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Dragon Fusion Gun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Eldritch Storm",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Long Rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starswarm",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Twin Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "5578-f918-6e88-3d0e",
@@ -10452,7 +11940,398 @@
           "description": "Each time this model makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Dragon Fusion Pistol",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Banshee Blade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 3+"
+          ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -3,
+          "damage": "D6+1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Ghostglaive - Sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Paragon Sabre",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Scorpion Chainsword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "7",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Wraithbone Fists",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Singing Spear",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Star Glaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Star Lance",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -3,
+          "damage": "3",
+          "keywords": [
+            "Anti-Monster 3+",
+            "Anti-Vehicle 3+",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Witch Staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "D3",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Witchblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "2",
+          "keywords": [
+            "Anti-Infantry 2+",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Destructor",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Death Spinner",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Dragon Fusion Gun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Assault",
+            "Melta 3"
+          ]
+        },
+        {
+          "name": "Eldritch Storm",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Blast",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Long Rifle",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Heavy",
+            "Precision"
+          ]
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "➤ Reaper Launcher - Starswarm",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Heavy",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Assault",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Twin Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Twin-Linked"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "f66d-451d-f4ae-c2e9",

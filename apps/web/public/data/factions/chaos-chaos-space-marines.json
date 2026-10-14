@@ -1402,6 +1402,17 @@
             "Pistol",
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -1763,6 +1774,34 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Reaper autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Sustained Hits 1"
+          ]
         }
       ],
       "isLeader": true,
@@ -1996,6 +2035,58 @@
           "damage": "D3",
           "keywords": [
             "Psychic"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Reaper autocannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
           ]
         }
       ],
@@ -4393,6 +4484,17 @@
           "strength": 8,
           "armorPenetration": -1,
           "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ],

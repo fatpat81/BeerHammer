@@ -429,7 +429,19 @@
           "description": "Each time this model’s unit Consolidates, it can move up to 6\" instead of up to 3\"."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "dd30-ba4c-34a4-e788",
@@ -483,7 +495,33 @@
           "description": "This model can be attached to the following units:\n■ BLOODCRUSHERS"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        }
+      ]
     },
     {
       "id": "d1cc-e17a-f1a1-4349",
@@ -677,7 +715,19 @@
           "description": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "2f31-9132-b703-5fd8",
@@ -720,7 +770,33 @@
           "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Hellblade",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        }
+      ]
     },
     {
       "id": "fd31-64a2-b20f-f0bc",
@@ -777,6 +853,17 @@
             "Ignores Cover",
             "Torrent"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1612,7 +1699,49 @@
           "description": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Herald combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
     },
     {
       "id": "caf1-8818-9e65-7154",
@@ -1731,7 +1860,49 @@
           "description": "This model can be attached to the following units:\n■ PINK HORRORS\n■ BLUE HORRORS"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Herald combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        }
+      ]
     },
     {
       "id": "b795-b936-ad61-e407",
@@ -5346,7 +5517,312 @@
           "description": "This model can be attached to the following units: ^^**Infantry Daemon**^^ units (excluding ^^**Possessed**^^ units) which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ]
     },
     {
       "id": "8597-d6dd-511e-80ae",
@@ -5393,7 +5869,312 @@
           "description": "This model can be attached to the following unit: ^^**Mounted Daemon**^^ units which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ]
     },
     {
       "id": "3594-bf68-4a46-fbf8",
@@ -5439,7 +6220,312 @@
           "description": "Each time an attack is allocated to a friendly ^^**Daemon**^^ unit within 3\" of this model, subtract 1 from the Hit roll."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Juggernaut's bladed horn",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lance"
+          ]
+        },
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Attendant's hellblades",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Blade of blood",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "16",
+          "skill": "2+",
+          "strength": 8,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Death's heads",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Disgusting sneezes",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Acidic maw",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 7,
+          "armorPenetration": -4,
+          "damage": "3",
+          "keywords": [
+            "Devastating Wounds",
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Diseased claws and teeth",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Foul mouthparts",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny balesword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 2,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Tiny corrupted staff",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Lashes of torment",
+          "type": "Ranged",
+          "range": "6\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Anti-Infantry 3+",
+            "Assault",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Bladed axle",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Lashing tongue",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "Ravaging claws",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Seeker tongues",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks",
+            "Lethal Hits"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "D3",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "➤ Arcane Fireball - focused witchfire",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "D3",
+          "keywords": [
+            "Devastating Wounds",
+            "Hazardous",
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Psychic"
+          ]
+        },
+        {
+          "name": "Screamer bites",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -742,6 +742,17 @@
           "keywords": [
             "Heavy"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -811,6 +822,17 @@
             "Devastating Wounds",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -866,6 +888,17 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -935,6 +968,17 @@
             "Anti-Fly 4+",
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -992,6 +1036,17 @@
           "strength": 10,
           "armorPenetration": -3,
           "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ]
@@ -1064,6 +1119,17 @@
           "keywords": [
             "Heavy"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1424,7 +1490,86 @@
           "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and a re-roll a Wound roll of 1"
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Hurricane bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 6",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin assault cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured Tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "a499-86fa-4d0c-b06d",
@@ -1575,6 +1720,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "Power Fist",
           "type": "Melee",
           "range": "Melee",
@@ -1583,6 +1741,81 @@
           "strength": 8,
           "armorPenetration": -2,
           "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
           "keywords": []
         }
       ]

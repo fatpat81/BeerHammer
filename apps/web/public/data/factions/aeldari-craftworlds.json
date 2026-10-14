@@ -3583,6 +3583,17 @@
             "Devastating wounds",
             "Ignores cover"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -6692,6 +6703,17 @@
           "strength": 8,
           "armorPenetration": -2,
           "damage": "4",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ],

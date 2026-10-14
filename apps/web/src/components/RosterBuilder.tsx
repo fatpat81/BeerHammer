@@ -1440,6 +1440,49 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                             </div>
                           )}
 
+                          {/* Standard Squad Baseline Armament */}
+                          {!isCharacter && (wargearSlots.primaryRangedWeapon || wargearSlots.baseTroopMeleeWeapon) && (() => {
+                            const specialRangedTotal = unit.wargearSelections
+                              .filter(s => s.ruleId === 'slot_squad_special' || s.ruleId === 'slot_squad_trooper_ranged')
+                              .reduce((sum, s) => sum + s.count, 0);
+                            const standardRangedCount = Math.max(0, unit.modelCount - specialRangedTotal);
+
+                            const specialMeleeTotal = unit.wargearSelections
+                              .filter(s => s.ruleId === 'slot_squad_melee')
+                              .reduce((sum, s) => sum + s.count, 0);
+                            const standardMeleeCount = Math.max(0, unit.modelCount - specialMeleeTotal);
+
+                            return (
+                              <div style={{ padding: '0.65rem 0.75rem', background: 'rgba(30, 41, 59, 0.4)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+                                <div style={{ fontSize: '0.68rem', fontWeight: 800, color: '#94A3B8', textTransform: 'uppercase', marginBottom: '0.4rem', letterSpacing: '0.05em' }}>
+                                  🛡️ Standard Squad Armament
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                  {wargearSlots.primaryRangedWeapon && (
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem' }}>
+                                      <span style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                                        <span>🔫</span> <strong>{wargearSlots.primaryRangedWeapon.name}</strong> <span style={{ color: '#64748B', fontSize: '0.7rem' }}>(Default Ranged)</span>
+                                      </span>
+                                      <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.12)', padding: '1px 6px', borderRadius: '4px', border: '1px solid rgba(56, 189, 248, 0.25)' }}>
+                                        {standardRangedCount} / {unit.modelCount} equipped
+                                      </span>
+                                    </div>
+                                  )}
+                                  {wargearSlots.baseTroopMeleeWeapon && (
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem' }}>
+                                      <span style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                                        <span>⚔️</span> <strong>{wargearSlots.baseTroopMeleeWeapon.name}</strong> <span style={{ color: '#64748B', fontSize: '0.7rem' }}>(Default Melee)</span>
+                                      </span>
+                                      <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#C89D3C', background: 'rgba(200, 157, 60, 0.12)', padding: '1px 6px', borderRadius: '4px', border: '1px solid rgba(200, 157, 60, 0.25)' }}>
+                                        {standardMeleeCount} / {unit.modelCount} equipped
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })()}
+
                           {/* Squad Special & Heavy Weapons (Q7=A, Q6=A+B) */}
                           {wargearSlots.squadSpecialSlots.length > 0 && (
                             <div style={{ padding: '0.75rem', background: '#0F172A', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>

@@ -456,6 +456,76 @@ export function validateWargearLoadout(params: {
 }
 
 /**
+ * Helper to determine if a weapon is a melee weapon.
+ */
+export function isMeleeWeapon(w: WeaponProfile): boolean {
+  return w.type?.toLowerCase() === 'melee' || w.range?.toLowerCase() === 'melee';
+}
+
+/**
+ * Helper to determine if a weapon is a pistol / sidearm.
+ */
+export function isPistolWeapon(w: WeaponProfile): boolean {
+  return (
+    w.keywords?.some(k => k.toLowerCase() === 'pistol') ||
+    w.name.toLowerCase().includes('pistol') ||
+    w.name.toLowerCase().includes('hand flamer')
+  );
+}
+
+/**
+ * Identifies the canonical primary ranged weapon for a unit or squad.
+ * Prioritizes standard baseline infantry weapons (bolters, storm bolters, combi-bolters, lasguns, etc.)
+ * over heavy or special weapons.
+ */
+export function getBaseTroopRangedWeapon(weapons: WeaponProfile[]): WeaponProfile | undefined {
+  const nonMelee = (weapons || []).filter(w => !isMeleeWeapon(w) && !isPistolWeapon(w));
+  if (nonMelee.length === 0) return undefined;
+
+  // 1. Exact match on standard battleline / infantry weapon names
+  const standardBolter = nonMelee.find(w =>
+    /^(storm bolter|combi-bolter|inferno combi-bolter|boltgun|bolt rifle|auto bolt rifle|stalker bolt rifle|lasgun|autogun|pulse rifle|fleshborer|gauss flayer|shoota|splinter rifle)$/i.test(
+      w.name.trim()
+    )
+  );
+  if (standardBolter) return standardBolter;
+
+  // 2. Partial match on bolter / rifle / gun without heavy keywords
+  const partialBolter = nonMelee.find(w =>
+    /(?:storm bolter|combi-bolter|bolter|boltgun|bolt rifle|lasgun|rifle|gun|slugga|fleshborer)/i.test(w.name) &&
+    !/(?:heavy|cannon|launcher|missile|lascannon|meltagun|plasma|blaster)/i.test(w.name)
+  );
+  if (partialBolter) return partialBolter;
+
+  // 3. Fallback to any non-heavy ranged weapon, or first ranged weapon
+  return nonMelee.find(w => !/(?:heavy|cannon|launcher|missile|lascannon)/i.test(w.name)) || nonMelee[0];
+}
+
+/**
+ * Identifies the canonical base melee weapon for standard troopers in a unit or squad.
+ * Prioritizes standard melee weapons (Power fist for Terminators, Close combat weapon, etc.)
+ */
+export function getBaseTroopMeleeWeapon(weapons: WeaponProfile[]): WeaponProfile | undefined {
+  const melees = (weapons || []).filter(w => isMeleeWeapon(w));
+  if (melees.length === 0) return undefined;
+
+  // Prioritize standard trooper melee: Power fist (Terminators), Close combat weapon, Astartes chainsword, etc.
+  const standard = melees.find(w =>
+    /^(power fist|close combat weapon|astartes chainsword|chainsword|bayonet|accursed weapon|bubotic blade|nemesis force weapon)$/i.test(
+      w.name.trim()
+    )
+  );
+  if (standard) return standard;
+
+  const partial = melees.find(w =>
+    /(?:close combat|fist|bayonet|chainsword|claws|knife)/i.test(w.name)
+  );
+  if (partial) return partial;
+
+  return melees[0];
+}
+
+/**
  * Builds interactive wargear slot options for Edit Mode.
  * Ensures complete ranged, melee, and support equipment / add-on options are available.
  */
@@ -471,6 +541,8 @@ export function buildUnitWargearSlots(params: {
   leaderSlots: WargearSlot[];
   squadSpecialSlots: WargearSlot[];
   addOnSlots: WargearSlot[];
+  primaryRangedWeapon?: WeaponProfile;
+  baseTroopMeleeWeapon?: WeaponProfile;
 } {
   const {
     catalogWeapons = [],
@@ -486,13 +558,49 @@ export function buildUnitWargearSlots(params: {
   const squadSpecialSlots: WargearSlot[] = [];
   const addOnSlots: WargearSlot[] = [];
 
-  // Helper classification functions
-  const isMelee = (w: WeaponProfile) =>
-    w.type?.toLowerCase() === 'melee' || w.range?.toLowerCase() === 'melee';
-  const isPistol = (w: WeaponProfile) =>
-    w.keywords?.some(k => k.toLowerCase() === 'pistol') ||
-    w.name.toLowerCase().includes('pistol') ||
-    w.name.toLowerCase().includes('hand flamer');
+  const lowerUnitName = (unitName || '').toLowerCase();
+  const kwList = (keywords || []).map(k => (k || '').toLowerCase());
+  const isTerminator = lowerUnitName.includes('terminator') || kwList.some(k => k === 'terminator');
+  const isChaos = lowerUnitName.includes('chaos') || kwList.some(k => k.includes('chaos') || k.includes('heretic'));
+
+  // Ensure full Terminator weapons if catalog is missing them
+  const effectiveWeapons = [...catalogWeapons];
+  if (isTerminator) {
+    const existingNames = new Set(effectiveWeapons.map(w => w.name.toLowerCase().trim()));
+    const primaryTermBolter = isChaos ? 'Combi-bolter' : 'Storm bolter';
+    if (!existingNames.has(primaryTermBolter.toLowerCase())) {
+      effectiveWeapons.unshift({
+        id: slugify(primaryTermBolter),
+        slug: slugify(primaryTermBolter),
+        name: primaryTermBolter,
+        type: 'Ranged',
+        range: '24"',
+        attacks: '2',
+        skill: '3+',
+        strength: isChaos ? 5 : 4,
+        armorPenetration: isChaos ? -1 : 0,
+        damage: '1',
+        keywords: ['Rapid Fire 2'],
+      });
+      existingNames.add(primaryTermBolter.toLowerCase());
+    }
+    if (!existingNames.has('power fist')) {
+      effectiveWeapons.push({
+        id: slugify('Power fist'),
+        slug: slugify('Power fist'),
+        name: 'Power fist',
+        type: 'Melee',
+        range: 'Melee',
+        attacks: '3',
+        skill: '3+',
+        strength: 8,
+        armorPenetration: -2,
+        damage: '2',
+        keywords: [],
+      });
+      existingNames.add('power fist');
+    }
+  }
 
   if (wargearRules.length > 0) {
     for (const rule of wargearRules) {
@@ -539,7 +647,7 @@ export function buildUnitWargearSlots(params: {
   // ── Fallback & Supplemental Generation from Catalog Weapons & Abilities ──
   // Group weapons by normalized base name to eliminate firing mode duplicates (e.g. frag/krak, standard/supercharge)
   const uniqueWeaponBaseMap = new Map<string, WeaponProfile>();
-  for (const w of catalogWeapons) {
+  for (const w of effectiveWeapons) {
     const baseName = normalizeBaseWeaponName(w.name);
     if (!uniqueWeaponBaseMap.has(baseName)) {
       uniqueWeaponBaseMap.set(baseName, { ...w, name: baseName });
@@ -547,15 +655,18 @@ export function buildUnitWargearSlots(params: {
   }
   const distinctWeapons = Array.from(uniqueWeaponBaseMap.values());
 
-  const rangedWeapons = distinctWeapons.filter(w => !isMelee(w) && !isPistol(w));
-  const pistolWeapons = distinctWeapons.filter(w => isPistol(w));
-  const meleeWeapons = distinctWeapons.filter(w => isMelee(w));
+  const rangedWeapons = distinctWeapons.filter(w => !isMeleeWeapon(w) && !isPistolWeapon(w));
+  const pistolWeapons = distinctWeapons.filter(w => isPistolWeapon(w));
+  const meleeWeapons = distinctWeapons.filter(w => isMeleeWeapon(w));
+
+  const primaryRanged = getBaseTroopRangedWeapon(distinctWeapons);
+  const baseTroopMelee = getBaseTroopMeleeWeapon(distinctWeapons);
 
   if (isLeader) {
     // ── Leader / Character Armament ─────────────────────────────────────────
     // Primary Ranged Options
     if (rangedWeapons.length > 1 && !leaderSlots.some(s => s.id === 'slot_leader_ranged')) {
-      const baseRanged = rangedWeapons[0]!;
+      const baseRanged = primaryRanged || rangedWeapons[0]!;
       leaderSlots.push({
         id: 'slot_leader_ranged',
         ruleId: 'rule_fallback_leader_ranged',
@@ -563,7 +674,7 @@ export function buildUnitWargearSlots(params: {
         title: `Primary Ranged Weapon`,
         replacesName: baseRanged.name,
         maxAllowed: 1,
-        options: rangedWeapons.slice(1).map(w => ({
+        options: rangedWeapons.filter(w => w.name !== baseRanged.name).map(w => ({
           id: slugify(w.name),
           name: w.name,
           count: 1,
@@ -582,7 +693,7 @@ export function buildUnitWargearSlots(params: {
         title: `Sidearm / Pistol Upgrade`,
         replacesName: basePistol.name,
         maxAllowed: 1,
-        options: pistolWeapons.slice(1).map(w => ({
+        options: pistolWeapons.filter(w => w.name !== basePistol.name).map(w => ({
           id: slugify(w.name),
           name: w.name,
           count: 1,
@@ -593,7 +704,7 @@ export function buildUnitWargearSlots(params: {
 
     // Melee Weapon Options
     if (meleeWeapons.length > 1 && !leaderSlots.some(s => s.id === 'slot_leader_melee')) {
-      const baseMelee = meleeWeapons[0]!;
+      const baseMelee = baseTroopMelee || meleeWeapons[0]!;
       leaderSlots.push({
         id: 'slot_leader_melee',
         ruleId: 'rule_fallback_leader_melee',
@@ -601,7 +712,7 @@ export function buildUnitWargearSlots(params: {
         title: `Melee Weapon Selection`,
         replacesName: baseMelee.name,
         maxAllowed: 1,
-        options: meleeWeapons.slice(1).map(w => ({
+        options: meleeWeapons.filter(w => w.name !== baseMelee.name).map(w => ({
           id: slugify(w.name),
           name: w.name,
           count: 1,
@@ -612,10 +723,7 @@ export function buildUnitWargearSlots(params: {
   } else {
     // ── Squad Loadout ───────────────────────────────────────────────────────
     // 1. Leader / Sergeant Melee Upgrades
-    const baseTroopMelee = meleeWeapons.find(w =>
-      /close combat|fist|bayonet|claws|knife/i.test(w.name)
-    ) || meleeWeapons[0];
-    const sergeantMeleeOptions = meleeWeapons.filter(w => w !== baseTroopMelee);
+    const sergeantMeleeOptions = meleeWeapons.filter(w => w.name !== baseTroopMelee?.name);
 
     if (sergeantMeleeOptions.length > 0 && baseTroopMelee && !leaderSlots.some(s => s.id === 'slot_sergeant_melee')) {
       leaderSlots.push({
@@ -634,7 +742,28 @@ export function buildUnitWargearSlots(params: {
       });
     }
 
-    // 2. Leader / Sergeant Pistol Upgrades
+    // 2. Leader / Sergeant Ranged Options (e.g. Terminator Sergeant Storm bolter / Combi-weapon)
+    if (rangedWeapons.length > 1 && primaryRanged && !leaderSlots.some(s => s.id === 'slot_sergeant_ranged')) {
+      const sergeantRangedOptions = rangedWeapons.filter(w => w.name !== primaryRanged.name);
+      if (sergeantRangedOptions.length > 0) {
+        leaderSlots.push({
+          id: 'slot_sergeant_ranged',
+          ruleId: 'rule_fallback_sergeant_ranged',
+          category: 'LEADER',
+          title: 'Sergeant Ranged Weapon',
+          replacesName: primaryRanged.name,
+          maxAllowed: 1,
+          options: sergeantRangedOptions.map(w => ({
+            id: slugify(w.name),
+            name: w.name,
+            count: 1,
+            pointsDelta: 0,
+          })),
+        });
+      }
+    }
+
+    // 3. Leader / Sergeant Pistol Upgrades
     if (pistolWeapons.length > 1 && !leaderSlots.some(s => s.id === 'slot_sergeant_pistol')) {
       const baseTroopPistol = pistolWeapons[0]!;
       const sergeantPistolOptions = pistolWeapons.filter(w => w !== baseTroopPistol);
@@ -656,15 +785,20 @@ export function buildUnitWargearSlots(params: {
       }
     }
 
-    // 3. Squad Special & Heavy Ranged Weapons
-    const primaryRanged = rangedWeapons.find(w =>
-      /bolt|rifle|gun|lasgun|slugga|fleshborer/i.test(w.name)
-    ) || rangedWeapons[0];
+    // 4. Squad Special & Heavy Ranged Weapons
+    // Heavy weapons (Cyclone, Assault Cannon, Heavy Flamer, Reaper autocannon, etc.)
+    const isHeavySquad = /devastator|havoc|retributor|eradicator|inceptor/i.test(unitName);
+    const heavyWeapons = rangedWeapons.filter(w =>
+      w.name !== primaryRanged?.name &&
+      /(?:heavy|cannon|launcher|missile|lascannon|meltagun|multi-melta|reaper|autocannon|warpflamer|psycannon|psilencer|incinerator)/i.test(w.name)
+    );
 
-    const specialHeavyRanged = rangedWeapons.filter(w => w !== primaryRanged);
+    // Alternative trooper ranged weapons (e.g. Combi-weapon, bolter variants)
+    const trooperRangedAlternatives = rangedWeapons.filter(w =>
+      w.name !== primaryRanged?.name && !heavyWeapons.some(hw => hw.name === w.name)
+    );
 
-    if (specialHeavyRanged.length > 0 && primaryRanged && !squadSpecialSlots.some(s => s.id === 'slot_squad_special')) {
-      const isHeavySquad = /devastator|havoc|retributor|eradicator|inceptor/i.test(unitName);
+    if (heavyWeapons.length > 0 && primaryRanged && !squadSpecialSlots.some(s => s.id === 'slot_squad_special')) {
       const scaleFactor = isHeavySquad ? 1 : 5;
       const maxSpecial = isHeavySquad
         ? Math.min(4, Math.max(1, modelCount - 1))
@@ -680,7 +814,7 @@ export function buildUnitWargearSlots(params: {
         replacesName: primaryRanged.name,
         scaleFactor,
         maxAllowed: maxSpecial,
-        options: specialHeavyRanged.map(w => ({
+        options: heavyWeapons.map(w => ({
           id: slugify(w.name),
           name: w.name,
           count: 1,
@@ -689,9 +823,28 @@ export function buildUnitWargearSlots(params: {
       });
     }
 
-    // 4. Squad Melee Upgrades (e.g. Terminators taking Chainfists instead of Power fists, or Legionaries melee options)
+    // 5. Squad Trooper Ranged Alternatives (e.g. Combi-weapons in Terminators, Sternguard, etc.)
+    if (trooperRangedAlternatives.length > 0 && primaryRanged && !squadSpecialSlots.some(s => s.id === 'slot_squad_trooper_ranged')) {
+      squadSpecialSlots.push({
+        id: 'slot_squad_trooper_ranged',
+        ruleId: 'rule_fallback_squad_trooper_ranged',
+        category: 'SPECIAL',
+        title: `Trooper Ranged Upgrades (${primaryRanged.name} Swaps)`,
+        replacesName: primaryRanged.name,
+        scaleFactor: 1,
+        maxAllowed: modelCount,
+        options: trooperRangedAlternatives.map(w => ({
+          id: slugify(w.name),
+          name: w.name,
+          count: 1,
+          pointsDelta: 0,
+        })),
+      });
+    }
+
+    // 6. Squad Melee Upgrades (e.g. Terminators taking Chainfists instead of Power fists, or Legionaries melee options)
     if (meleeWeapons.length > 1 && baseTroopMelee && !squadSpecialSlots.some(s => s.id === 'slot_squad_melee')) {
-      const squadMeleeOptions = meleeWeapons.filter(w => w !== baseTroopMelee);
+      const squadMeleeOptions = meleeWeapons.filter(w => w.name !== baseTroopMelee.name);
 
       if (squadMeleeOptions.length > 0) {
         squadSpecialSlots.push({
@@ -741,9 +894,6 @@ export function buildUnitWargearSlots(params: {
   }
 
   // Canonical tabletop 40k support equipment derived from unit keywords & name
-  const lowerUnitName = (unitName || '').toLowerCase();
-  const kwList = (keywords || []).map(k => k.toLowerCase());
-
   // Chaos infantry: Chaos Icon
   if (
     /legionar|chosen|terminator|havoc|raptor|biker|possessed/i.test(lowerUnitName) &&
@@ -826,7 +976,13 @@ export function buildUnitWargearSlots(params: {
     });
   }
 
-  return { leaderSlots, squadSpecialSlots, addOnSlots };
+  return {
+    leaderSlots,
+    squadSpecialSlots,
+    addOnSlots,
+    primaryRangedWeapon: primaryRanged,
+    baseTroopMeleeWeapon: baseTroopMelee,
+  };
 }
 
 /**
@@ -843,25 +999,22 @@ export function resolveEquippedWeapons(
   if (!catalogWeapons || catalogWeapons.length === 0) return [];
 
   const norm = (s: string) => s.trim().toLowerCase();
-  const isMelee = (w: WeaponProfile) =>
-    w.type?.toLowerCase() === 'melee' || w.range?.toLowerCase() === 'melee';
-  const isPistol = (w: WeaponProfile) =>
-    w.keywords?.some(k => k.toLowerCase() === 'pistol') ||
-    w.name.toLowerCase().includes('pistol') ||
-    w.name.toLowerCase().includes('hand flamer');
 
   // Baseline weapons map: key is normalized exact profile name
   const weaponCounts = new Map<string, { profile: WeaponProfile; count: number; role?: string }>();
 
+  const primaryRanged = getBaseTroopRangedWeapon(catalogWeapons);
+  const melee = getBaseTroopMeleeWeapon(catalogWeapons);
+  const pistol = catalogWeapons.find(w => isPistolWeapon(w));
+
   if (isLeader) {
     // For a single character, base loadout is 1 of each default weapon
-    const primaryRanged = catalogWeapons.find(w => !isMelee(w) && !isPistol(w)) || catalogWeapons[0];
-    const melee = catalogWeapons.find(w => isMelee(w));
-    const pistol = catalogWeapons.find(w => isPistol(w));
+    const baseRanged = primaryRanged || catalogWeapons.find(w => !isMeleeWeapon(w) && !isPistolWeapon(w)) || catalogWeapons[0];
+    const baseMelee = melee || catalogWeapons.find(w => isMeleeWeapon(w));
 
-    if (primaryRanged) weaponCounts.set(norm(primaryRanged.name), { profile: primaryRanged, count: 1, role: 'Leader' });
-    if (melee && melee !== primaryRanged) weaponCounts.set(norm(melee.name), { profile: melee, count: 1, role: 'Leader' });
-    if (pistol && pistol !== primaryRanged && pistol !== melee) weaponCounts.set(norm(pistol.name), { profile: pistol, count: 1, role: 'Leader' });
+    if (baseRanged) weaponCounts.set(norm(baseRanged.name), { profile: baseRanged, count: 1, role: 'Leader' });
+    if (baseMelee && baseMelee !== baseRanged) weaponCounts.set(norm(baseMelee.name), { profile: baseMelee, count: 1, role: 'Leader' });
+    if (pistol && pistol !== baseRanged && pistol !== baseMelee) weaponCounts.set(norm(pistol.name), { profile: pistol, count: 1, role: 'Leader' });
 
     if (weaponCounts.size === 0) {
       for (const w of catalogWeapons) {
@@ -870,10 +1023,6 @@ export function resolveEquippedWeapons(
     }
   } else {
     // Squad: standard distribution
-    const primaryRanged = catalogWeapons.find(w => !isMelee(w) && !isPistol(w));
-    const melee = catalogWeapons.find(w => isMelee(w));
-    const pistol = catalogWeapons.find(w => isPistol(w));
-
     if (primaryRanged) {
       weaponCounts.set(norm(primaryRanged.name), { profile: primaryRanged, count: modelCount, role: 'Trooper' });
     }
@@ -917,9 +1066,9 @@ export function resolveEquippedWeapons(
       }
       if (!matched && !isLeader) {
         // Fallback: deduct from primary ranged if replacement didn't match
-        const primaryRanged = catalogWeapons.find(w => !isMelee(w) && !isPistol(w));
-        if (primaryRanged) {
-          const val = weaponCounts.get(norm(primaryRanged.name));
+        const fallbackRanged = getBaseTroopRangedWeapon(catalogWeapons);
+        if (fallbackRanged) {
+          const val = weaponCounts.get(norm(fallbackRanged.name));
           if (val) val.count = Math.max(0, val.count - sel.count);
         }
       }

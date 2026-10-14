@@ -190,7 +190,7 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
         onArmyCreated(newArmy);
       }
       onClose();
-      router.push(`/army/${newArmy.id}`);
+      router.push(`/army/${newArmy.id}/edit`);
     } catch (err: any) {
       console.error('Failed to create army:', err);
       setError(err?.message || 'Could not create force. Please verify connection.');

@@ -595,5 +595,73 @@ describe('getUnitBaseModelThreshold', () => {
     expect(getUnitBaseModelThreshold({ name: 'Marneus Calgar', battlefieldRole: 'CHARACTER', keywords: ['CHARACTER', 'EPIC HERO'] })).toBe(3);
     expect(getUnitBaseModelThreshold({ name: 'Accursed Cultists', battlefieldRole: 'INFANTRY', keywords: ['INFANTRY'] })).toBe(8);
   });
+
+  it('guarantees Storm bolter and Power fist are available and identified for Terminator Squads', () => {
+    const termWeapons: WeaponProfile[] = [
+      { id: 'sb', slug: 'sb', name: 'Storm bolter', type: 'Ranged', range: '24"', attacks: '2', skill: '3+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] },
+      { id: 'ac', slug: 'ac', name: 'Assault Cannon', type: 'Ranged', range: '24"', attacks: '6', skill: '3+', strength: 6, armorPenetration: 0, damage: '1', keywords: [] },
+      { id: 'hf', slug: 'hf', name: 'Heavy Flamer', type: 'Ranged', range: '12"', attacks: 'D6', skill: 'N/A', strength: 5, armorPenetration: -1, damage: '1', keywords: [] },
+      { id: 'pf', slug: 'pf', name: 'Power fist', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 8, armorPenetration: -2, damage: '2', keywords: [] },
+      { id: 'cf', slug: 'cf', name: 'Chainfist', type: 'Melee', range: 'Melee', attacks: '3', skill: '4+', strength: 8, armorPenetration: -2, damage: '2', keywords: [] },
+      { id: 'pw', slug: 'pw', name: 'Power weapon', type: 'Melee', range: 'Melee', attacks: '4', skill: '3+', strength: 5, armorPenetration: -2, damage: '1', keywords: [] },
+    ];
+
+    const slots = buildUnitWargearSlots({
+      catalogWeapons: termWeapons,
+      isLeader: false,
+      modelCount: 5,
+      unitName: 'Terminator Squad',
+      keywords: ['INFANTRY', 'TERMINATOR'],
+    });
+
+    // Primary ranged should be Storm bolter
+    expect(slots.primaryRangedWeapon?.name).toBe('Storm bolter');
+    // Base melee should be Power fist
+    expect(slots.baseTroopMeleeWeapon?.name).toBe('Power fist');
+    // Leader slots must include Sergeant Ranged Weapon
+    const sgtRanged = slots.leaderSlots.find(s => s.id === 'slot_sergeant_ranged');
+    expect(sgtRanged).toBeDefined();
+    expect(sgtRanged?.replacesName).toBe('Storm bolter');
+    // Special slots must include Heavy weapons
+    const specialSlot = slots.squadSpecialSlots.find(s => s.id === 'slot_squad_special');
+    expect(specialSlot).toBeDefined();
+    expect(specialSlot?.replacesName).toBe('Storm bolter');
+    expect(specialSlot?.options.some(o => o.name === 'Assault Cannon')).toBe(true);
+  });
+
+  it('resolves correct counts of Storm bolters and heavy weapons in Battle Mode', () => {
+    const termWeapons: WeaponProfile[] = [
+      { id: 'sb', slug: 'sb', name: 'Storm bolter', type: 'Ranged', range: '24"', attacks: '2', skill: '3+', strength: 4, armorPenetration: 0, damage: '1', keywords: [] },
+      { id: 'ac', slug: 'ac', name: 'Assault Cannon', type: 'Ranged', range: '24"', attacks: '6', skill: '3+', strength: 6, armorPenetration: 0, damage: '1', keywords: [] },
+      { id: 'pf', slug: 'pf', name: 'Power fist', type: 'Melee', range: 'Melee', attacks: '3', skill: '3+', strength: 8, armorPenetration: -2, damage: '2', keywords: [] },
+    ];
+
+    // 5-model squad with 1 Assault Cannon replacing 1 Storm bolter
+    const equipped = resolveEquippedWeapons(
+      termWeapons,
+      5,
+      [
+        {
+          ruleId: 'slot_squad_special',
+          selectedOptionId: 'wep_assault_cannon',
+          weaponName: 'Assault Cannon',
+          replacesWeaponName: 'Storm bolter',
+          count: 1,
+        },
+      ],
+      false
+    );
+
+    const sbBadge = equipped.find(w => w.name === 'Storm bolter');
+    const acBadge = equipped.find(w => w.name === 'Assault Cannon');
+    const pfBadge = equipped.find(w => w.name === 'Power fist');
+
+    expect(sbBadge).toBeDefined();
+    expect(sbBadge?.count).toBe(4); // 4 remaining Storm bolters
+    expect(acBadge).toBeDefined();
+    expect(acBadge?.count).toBe(1); // 1 Assault Cannon
+    expect(pfBadge).toBeDefined();
+    expect(pfBadge?.count).toBe(5); // 5 Power fists
+  });
 });
 

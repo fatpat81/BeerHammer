@@ -38121,6 +38121,92 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -40632,6 +40718,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "Thunder Hammer",
           "type": "Melee",
           "range": "Melee",
@@ -40656,6 +40755,92 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -40890,6 +41075,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "Volkite Charger",
           "type": "Ranged",
           "range": "18\"",
@@ -41014,6 +41212,43 @@
             "Ignores Cover",
             "Torrent"
           ]
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -46403,7 +46638,86 @@
           "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Hurricane bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 6",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Twin assault cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 14,
+          "armorPenetration": -3,
+          "damage": "D6",
+          "keywords": [
+            "One Shot"
+          ]
+        },
+        {
+          "name": "Armoured Tracks",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -47914,6 +48228,17 @@
             "Torrent",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": false,
@@ -48810,6 +49135,92 @@
             "Hazardous",
             "Psychic"
           ]
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
         }
       ],
       "isLeader": true,
@@ -49168,6 +49579,92 @@
           "strength": 6,
           "armorPenetration": -1,
           "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
           "keywords": []
         }
       ],
@@ -50334,6 +50831,57 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
         }
       ],
       "isLeader": false,

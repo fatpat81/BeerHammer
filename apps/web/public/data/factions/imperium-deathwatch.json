@@ -709,6 +709,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "Power Weapon",
           "type": "Melee",
           "range": "Melee",
@@ -785,6 +798,68 @@
           "keywords": [
             "Anti-Vehicle 3+"
           ]
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ]
     },
@@ -872,6 +947,17 @@
           "keywords": [
             "Heavy"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1377,6 +1463,17 @@
             "Pistol",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1408,7 +1505,48 @@
         "TACTICUS"
       ],
       "abilities": [],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "➤ Plasma pistol - Standard",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "➤ Plasma pistol - Supercharge",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": [
+            "Hazardous",
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        }
+      ]
     },
     {
       "id": "9ae9-4f7e-a148-cbfa",
@@ -1453,6 +1591,17 @@
             "Lethal Hits",
             "Precision"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1673,6 +1822,17 @@
             "Ignores Cover",
             "Torrent"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     }

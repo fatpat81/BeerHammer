@@ -955,6 +955,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "Chainfist",
           "type": "Melee",
           "range": "Melee",
@@ -988,6 +1001,79 @@
           "skill": "3+",
           "strength": 4,
           "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
           "damage": "1",
           "keywords": []
         }
@@ -1240,6 +1326,17 @@
           "keywords": [
             "Rapid Fire 1"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -1537,6 +1634,79 @@
           "strength": 5,
           "armorPenetration": -2,
           "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - frag",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "➤ Cyclone missile launcher - krak",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
           "keywords": []
         }
       ]
@@ -2280,6 +2450,17 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -2350,6 +2531,17 @@
           "keywords": [
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -2497,6 +2689,19 @@
       ],
       "weapons": [
         {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        },
+        {
           "name": "➤ Cyclone missile launcher - frag",
           "type": "Ranged",
           "range": "36\"",
@@ -2518,6 +2723,68 @@
           "strength": 9,
           "armorPenetration": -2,
           "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Assault Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Heavy Flamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Ignores Cover",
+            "Torrent"
+          ]
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Chainfist",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "4+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": [
+            "Anti-Vehicle 3+"
+          ]
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "1",
           "keywords": []
         }
       ]
@@ -2841,6 +3108,17 @@
           "strength": 10,
           "armorPenetration": -3,
           "damage": "5",
+          "keywords": []
+        },
+        {
+          "name": "Close combat weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ]
