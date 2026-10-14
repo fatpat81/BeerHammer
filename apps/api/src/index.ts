@@ -38,6 +38,45 @@ const apiLimiter = rateLimit({
   },
 });
 
+// ── Root Landing / Guide ───────────────────────────────────────────────────
+app.get('/', (req, res) => {
+  if (req.accepts('html')) {
+    return res.send(`
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>ForceOrg-40k API</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+        <body style="font-family: system-ui, -apple-system, sans-serif; background: #0b0f19; color: #f3f4f6; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; padding: 1rem; box-sizing: border-box;">
+          <div style="background: #111827; border: 1px solid #1f2937; padding: 2.5rem; border-radius: 12px; text-align: center; max-width: 480px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚔️</div>
+            <h1 style="color: #60a5fa; margin: 0 0 0.75rem 0; font-size: 1.5rem;">ForceOrg-40k Backend API</h1>
+            <p style="color: #9ca3af; margin: 0 0 1.5rem 0; font-size: 0.95rem; line-height: 1.5;">
+              You are connected to the backend REST API on <strong>Port 4000</strong>.
+            </p>
+            <p style="color: #d1d5db; margin: 0 0 1.75rem 0; font-size: 0.95rem;">
+              To use the interactive <strong>Army Builder & Tabletop Web App</strong>, open Port 3000:
+            </p>
+            <a href="http://localhost:3000" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem;">Open Web App (Port 3000) &rarr;</a>
+          </div>
+        </body>
+      </html>
+    `);
+  }
+  res.json({
+    service: 'ForceOrg-40k API',
+    status: 'operational',
+    webAppUrl: 'http://localhost:3000',
+    endpoints: {
+      health: '/api/health',
+      datasheets: '/api/datasheets',
+      rosters: '/api/rosters',
+    },
+  });
+});
+
 app.use('/api', apiLimiter);
 
 // ── Health Check ──────────────────────────────────────────────────────────────
