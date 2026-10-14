@@ -4,6 +4,12 @@ import {
   slugify,
   parseCountAndName,
   parseOptionList,
+  validateWargearLoadout,
+  resolveEquippedWeapons,
+  buildUnitWargearSlots,
+  calculateUnitSquadPoints,
+  normalizeBaseWeaponName,
+  cleanDisplayName,
 } from '../wargear-parser';
 
 describe('slugify', () => {
@@ -108,5 +114,395 @@ describe('compileWahapediaWargear', () => {
   it('returns empty array for unrecognized text', () => {
     const ast = compileWahapediaWargear('This unit has the Oath of Moment ability.');
     expect(ast).toHaveLength(0);
+  });
+});
+
+describe('validateWargearLoadout', () => {
+  it('flags scale factor excess as RED tournament error', () => {
+    const ast = compileWahapediaWargear(
+      'For every 5 models in this unit, 1 model can replace its boltgun with 1 Plasma Gun'
+    );
+    // Squad of 5 allows 1 Plasma Gun. Testing with 2 Plasma Guns.
+    const result = validateWargearLoadout({
+      modelCount: 5,
+      rules: ast,
+      wargearSelections: [
+        {
+          ruleId: ast[0]!.id,
+          selectedOptionId: 'wep_plasma_gun',
+          weaponName: 'Plasma Gun',
+          replacesWeaponName: 'boltgun',
+          count: 2,
+        },
+      ],
+    });
+
+    expect(result.isValid).toBe(false);
+    expect(result.errors).toHaveLength(1);
+    expect(result.errors[0]!.severity).toBe('RED');
+    expect(result.errors[0]!.message).toContain('Tournament limit exceeded');
+    expect(result.errors[0]!.message).toContain('Plasma Gun');
+  });
+
+  it('passes when wargear selections are within legal limits', () => {
+    const ast = compileWahapediaWargear(
+      'For every 5 models in this unit, 1 model can replace its boltgun with 1 Plasma Gun'
+    );
+    const result = validateWargearLoadout({
+      modelCount: 10, // allows 2
+      rules: ast,
+      wargearSelections: [
+        {
+          ruleId: ast[0]!.id,
+          selectedOptionId: 'wep_plasma_gun',
+          weaponName: 'Plasma Gun',
+          replacesWeaponName: 'boltgun',
+          count: 2,
+        },
+      ],
+    });
+
+    expect(result.isValid).toBe(true);
+    expect(result.errors).toHaveLength(0);
+  });
+});
+
+describe('resolveEquippedWeapons', () => {
+  const catalogWeapons = [
+    {
+      id: 'wep_bolt_rifle',
+      slug: 'wep_bolt_rifle',
+      name: 'Bolt Rifle',
+      type: 'Ranged',
+      range: '24"',
+      attacks: '2',
+      skill: '3+',
+      strength: 4,
+      armorPenetration: -1,
+      damage: '1',
+      keywords: ['Assault', 'Heavy'],
+    },
+    {
+      id: 'wep_bolt_pistol',
+      slug: 'wep_bolt_pistol',
+      name: 'Bolt Pistol',
+      type: 'Ranged',
+      range: '12"',
+      attacks: '1',
+      skill: '3+',
+      strength: 4,
+      armorPenetration: 0,
+      damage: '1',
+      keywords: ['Pistol'],
+    },
+    {
+      id: 'wep_ccw',
+      slug: 'wep_ccw',
+      name: 'Close Combat Weapon',
+      type: 'Melee',
+      range: 'Melee',
+      attacks: '3',
+      skill: '3+',
+      strength: 4,
+      armorPenetration: 0,
+      damage: '1',
+      keywords: [],
+    },
+    {
+      id: 'wep_plasma_gun',
+      slug: 'wep_plasma_gun',
+      name: 'Plasma Gun',
+      type: 'Ranged',
+      range: '24"',
+      attacks: '1',
+      skill: '3+',
+      strength: 7,
+      armorPenetration: -2,
+      damage: '1',
+      keywords: ['Rapid Fire 1'],
+    },
+  ];
+
+  it('renders default baseline loadout with model counts when no selections made', () => {
+    const equipped = resolveEquippedWeapons(catalogWeapons, 5, [], false);
+    expect(equipped.length).toBeGreaterThanOrEqual(3);
+    const boltRifle = equipped.find(w => w.name === 'Bolt Rifle');
+    expect(boltRifle).toBeDefined();
+    expect(boltRifle?.count).toBe(5);
+    expect(boltRifle?.displayName).toBe('5x Bolt Rifle');
+  });
+
+  it('deducts replaced weapon count and adds selected weapon in Battle Mode', () => {
+    const selections = [
+      {
+        ruleId: 'r1',
+        selectedOptionId: 'wep_plasma_gun',
+        weaponName: 'Plasma Gun',
+        replacesWeaponName: 'Bolt Rifle',
+        count: 1,
+      },
+    ];
+    const equipped = resolveEquippedWeapons(catalogWeapons, 5, selections, false);
+
+    const boltRifle = equipped.find(w => w.name === 'Bolt Rifle');
+    const plasmaGun = equipped.find(w => w.name === 'Plasma Gun');
+    const boltPistol = equipped.find(w => w.name === 'Bolt Pistol');
+    const ccw = equipped.find(w => w.name === 'Close Combat Weapon');
+
+    expect(boltRifle?.count).toBe(4);
+    expect(boltRifle?.displayName).toBe('4x Bolt Rifle');
+    expect(plasmaGun?.count).toBe(1);
+    expect(plasmaGun?.displayName).toBe('1x Plasma Gun');
+    // Sidearm & Melee retained per Q12=A
+    expect(boltPistol?.count).toBe(5);
+    expect(ccw?.count).toBe(5);
+  });
+
+  it('resolves multi-profile firing modes (frag & krak) together', () => {
+    const multiProfileWeapons = [
+      {
+        id: 'w1',
+        slug: 'w1',
+        name: 'Storm bolter',
+        type: 'Ranged',
+        range: '24"',
+        attacks: '2',
+        skill: '3+',
+        strength: 4,
+        armorPenetration: 0,
+        damage: '1',
+        keywords: [],
+      },
+      {
+        id: 'w2',
+        slug: 'w2',
+        name: '➤ Cyclone missile launcher - frag',
+        type: 'Ranged',
+        range: '36"',
+        attacks: '2D6',
+        skill: '3+',
+        strength: 4,
+        armorPenetration: 0,
+        damage: '1',
+        keywords: ['Blast'],
+      },
+      {
+        id: 'w3',
+        slug: 'w3',
+        name: '➤ Cyclone missile launcher - krak',
+        type: 'Ranged',
+        range: '36"',
+        attacks: '2',
+        skill: '3+',
+        strength: 9,
+        armorPenetration: -2,
+        damage: 'D6',
+        keywords: [],
+      },
+      {
+        id: 'w4',
+        slug: 'w4',
+        name: 'Power fist',
+        type: 'Melee',
+        range: 'Melee',
+        attacks: '3',
+        skill: '3+',
+        strength: 8,
+        armorPenetration: -2,
+        damage: '2',
+        keywords: [],
+      },
+    ];
+
+    const selections = [
+      {
+        ruleId: 'r_cyclone',
+        selectedOptionId: 'wep_cyclone_missile_launcher',
+        weaponName: 'Cyclone missile launcher',
+        count: 1,
+        role: 'SPECIAL',
+      },
+    ];
+
+    const equipped = resolveEquippedWeapons(multiProfileWeapons, 5, selections, false);
+    const frag = equipped.find(w => w.name.includes('Cyclone missile launcher - frag'));
+    const krak = equipped.find(w => w.name.includes('Cyclone missile launcher - krak'));
+
+    expect(frag).toBeDefined();
+    expect(frag?.count).toBe(1);
+    expect(krak).toBeDefined();
+    expect(krak?.count).toBe(1);
+  });
+
+  it('handles squad melee weapon swaps (Terminator Power fist -> Chainfist)', () => {
+    const terminatorWeapons = [
+      {
+        id: 'w_sb',
+        slug: 'w_sb',
+        name: 'Storm bolter',
+        type: 'Ranged',
+        range: '24"',
+        attacks: '2',
+        skill: '3+',
+        strength: 4,
+        armorPenetration: 0,
+        damage: '1',
+        keywords: [],
+      },
+      {
+        id: 'w_pf',
+        slug: 'w_pf',
+        name: 'Power fist',
+        type: 'Melee',
+        range: 'Melee',
+        attacks: '3',
+        skill: '3+',
+        strength: 8,
+        armorPenetration: -2,
+        damage: '2',
+        keywords: [],
+      },
+      {
+        id: 'w_cf',
+        slug: 'w_cf',
+        name: 'Chainfist',
+        type: 'Melee',
+        range: 'Melee',
+        attacks: '3',
+        skill: '4+',
+        strength: 8,
+        armorPenetration: -2,
+        damage: '2',
+        keywords: ['Anti-Vehicle 3+'],
+      },
+    ];
+
+    const selections = [
+      {
+        ruleId: 'r_chainfist',
+        selectedOptionId: 'wep_chainfist',
+        weaponName: 'Chainfist',
+        replacesWeaponName: 'Power fist',
+        count: 2,
+        role: 'SPECIAL',
+      },
+    ];
+
+    const equipped = resolveEquippedWeapons(terminatorWeapons, 5, selections, false);
+    const powerFist = equipped.find(w => w.name === 'Power fist');
+    const chainfist = equipped.find(w => w.name === 'Chainfist');
+
+    expect(powerFist?.count).toBe(3); // 5 - 2 = 3
+    expect(chainfist?.count).toBe(2);
+  });
+});
+
+describe('calculateUnitSquadPoints', () => {
+  it('charges 10-man squad points for 6 models on a 5-man base squad (e.g. Terminators)', () => {
+    // 5 Terminators = 160 pts
+    const result5 = calculateUnitSquadPoints({
+      basePoints: 160,
+      modelCount: 5,
+      baseModelCount: 5,
+      isCharacter: false,
+    });
+    expect(result5.totalPoints).toBe(160);
+    expect(result5.tierMultiplier).toBe(1);
+    expect(result5.tierMaxModels).toBe(5);
+    expect(result5.isUnderstrength).toBe(false);
+
+    // 6 Terminators costs 10-man squad points (320 pts)
+    const result6 = calculateUnitSquadPoints({
+      basePoints: 160,
+      modelCount: 6,
+      baseModelCount: 5,
+      isCharacter: false,
+    });
+    expect(result6.totalPoints).toBe(320);
+    expect(result6.tierMultiplier).toBe(2);
+    expect(result6.tierMaxModels).toBe(10);
+    expect(result6.isUnderstrength).toBe(true);
+
+    // 10 Terminators costs 320 pts
+    const result10 = calculateUnitSquadPoints({
+      basePoints: 160,
+      modelCount: 10,
+      baseModelCount: 5,
+      isCharacter: false,
+    });
+    expect(result10.totalPoints).toBe(320);
+    expect(result10.tierMultiplier).toBe(2);
+    expect(result10.tierMaxModels).toBe(10);
+    expect(result10.isUnderstrength).toBe(false);
+  });
+
+  it('charges 6-man squad points for 4 models on a 3-man base squad (e.g. Aggressors)', () => {
+    const result4 = calculateUnitSquadPoints({
+      basePoints: 110,
+      modelCount: 4,
+      baseModelCount: 3,
+      isCharacter: false,
+    });
+    expect(result4.totalPoints).toBe(220);
+    expect(result4.tierMultiplier).toBe(2);
+    expect(result4.tierMaxModels).toBe(6);
+    expect(result4.isUnderstrength).toBe(true);
+  });
+
+  it('includes enhancement points on top of unit points', () => {
+    const result = calculateUnitSquadPoints({
+      basePoints: 95,
+      modelCount: 1,
+      baseModelCount: 1,
+      isCharacter: true,
+      enhancementPoints: 15,
+    });
+    expect(result.totalPoints).toBe(110);
+  });
+});
+
+describe('normalizeBaseWeaponName and cleanDisplayName', () => {
+  it('strips arrow prefixes and firing modes', () => {
+    expect(normalizeBaseWeaponName('➤ Cyclone missile launcher - frag')).toBe('Cyclone missile launcher');
+    expect(normalizeBaseWeaponName('➤ Plasma pistol - supercharge')).toBe('Plasma pistol');
+    expect(normalizeBaseWeaponName('• Boltgun')).toBe('Boltgun');
+  });
+
+  it('cleans display names without stripping weapon identity', () => {
+    expect(cleanDisplayName('➤ Heavy Bolter')).toBe('Heavy Bolter');
+    expect(cleanDisplayName('➤ Astartes grenade launcher - frag')).toBe('Astartes grenade launcher - frag');
+  });
+});
+
+describe('buildUnitWargearSlots with support gear and melee', () => {
+  it('creates support wargear add-on slots from unit abilities (e.g. Teleport Homer, Chaos Icon)', () => {
+    const slots = buildUnitWargearSlots({
+      catalogWeapons: [
+        {
+          id: 'w1',
+          slug: 'w1',
+          name: 'Storm bolter',
+          type: 'Ranged',
+          range: '24"',
+          attacks: '2',
+          skill: '3+',
+          strength: 4,
+          armorPenetration: 0,
+          damage: '1',
+          keywords: [],
+        },
+      ],
+      abilities: [
+        {
+          name: 'Teleport Homer',
+          description: 'Set up one Teleport Homer token for this unit.',
+        },
+      ],
+      modelCount: 5,
+    });
+
+    expect(slots.addOnSlots.length).toBeGreaterThanOrEqual(1);
+    const homer = slots.addOnSlots[0]!.options.find(o => o.name.toLowerCase().includes('teleport homer'));
+    expect(homer).toBeDefined();
   });
 });

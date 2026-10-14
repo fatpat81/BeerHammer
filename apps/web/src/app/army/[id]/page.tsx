@@ -16,7 +16,8 @@ import { FactionSelector } from '@/components/FactionSelector';
 import { ComplianceDashboard } from '@/components/ComplianceDashboard';
 import { FullPageSkeleton } from '@/components/Skeleton';
 import { fetchRoster, fetchDatasheets, fetchStratagems } from '@/lib/api';
-import type { UserArmy, Datasheet, BattlePhase, Stratagem } from '@forceorg/types';
+import { resolveEquippedWeapons } from '@forceorg/rules-engine-11e';
+import type { UserArmy, Datasheet, BattlePhase, Stratagem, WeaponProfile } from '@forceorg/types';
 import type { RosterUnit } from '@/components/RosterBuilder';
 
 // Core 11th Edition Stratagems
@@ -159,17 +160,41 @@ export default function BattleModeConsolePage() {
           objectiveControl: dsStats?.objectiveControl || 1,
         },
         modelCount: pu.modelCount || (catalogUnit.modelComposition || []).reduce((acc: number, m: any) => acc + (m.count || 1), 0),
-        weapons: (ds as any)?.weapons?.map((w: any) => ({
-          name: w.weapon?.name || 'Default Weapon',
-          type: (w.weapon?.range && w.weapon.range.toLowerCase() === 'melee') ? 'Melee' : 'Ranged',
-          range: w.weapon?.range || '24"',
-          attacks: w.weapon?.attacks || '2',
-          skill: w.weapon?.skill || '3+',
-          strength: w.weapon?.strength || 4,
-          armorPenetration: w.weapon?.armorPenetration || 0,
-          damage: w.weapon?.damage || '1',
-          keywords: w.weapon?.keywords || [],
-        })) || [],
+        needsVerification: (pu as any).needsVerification !== undefined
+          ? (pu as any).needsVerification
+          : (!(pu as any).wargearSelections || (pu as any).wargearSelections.length === 0),
+        weapons: (() => {
+          const rawWeapons = (ds as any)?.weapons || [];
+          const normalizedCatalogWeapons: WeaponProfile[] = rawWeapons.map((w: any) => {
+            const inner = w.weapon || w;
+            return {
+              id: inner.id || inner.name || 'Weapon',
+              slug: inner.slug || inner.name || 'Weapon',
+              name: inner.name || 'Default Weapon',
+              type: inner.type || ((inner.range && inner.range.toLowerCase() === 'melee') ? 'Melee' : 'Ranged'),
+              range: inner.range || '24"',
+              attacks: inner.attacks || '2',
+              skill: inner.skill || '3+',
+              strength: inner.strength || 4,
+              armorPenetration: inner.armorPenetration || 0,
+              damage: inner.damage || '1',
+              keywords: inner.keywords || [],
+            };
+          });
+
+          const isChar = catalogUnit.battlefieldRole === 'CHARACTER' || (catalogUnit.keywords || []).includes('CHARACTER');
+          const mCount = pu.modelCount || (catalogUnit.modelComposition || []).reduce((acc: number, m: any) => acc + (m.count || 1), 0);
+
+          return resolveEquippedWeapons(
+            normalizedCatalogWeapons,
+            mCount,
+            (pu as any).wargearSelections || [],
+            isChar
+          );
+        })(),
+        supportGear: ((pu as any).wargearSelections || [])
+          .filter((s: any) => (s.role === 'ADD_ON' || s.ruleId === 'rule_addon' || s.ruleId === 'rule_support_wargear' || s.ruleId?.includes('support')) && s.count > 0)
+          .map((s: any) => s.weaponName),
         abilities: (ds as any)?.abilities?.map((a: any) => ({
           id: a.id,
           name: a.name,
@@ -217,9 +242,16 @@ export default function BattleModeConsolePage() {
             leadership: u.stats.leadership,
             objectiveControl: u.stats.objectiveControl,
           },
+          needsVerification: attachedLeader.needsVerification || u.needsVerification,
+          leaderWeapons: attachedLeader.weapons,
+          bodyguardWeapons: u.weapons,
           weapons: [
-            ...attachedLeader.weapons.map((w: any) => ({ ...w, origin: 'Leader', displayName: `[Leader] ${w.name}` })),
-            ...u.weapons.map((w: any) => ({ ...w, origin: 'Bodyguard', displayName: `[Bodyguard] ${w.name}` })),
+            ...attachedLeader.weapons.map((w: any) => ({ ...w, origin: 'Leader', displayName: `[Leader] ${w.displayName || w.name}` })),
+            ...u.weapons.map((w: any) => ({ ...w, origin: 'Bodyguard', displayName: `[Bodyguard] ${w.displayName || w.name}` })),
+          ],
+          supportGear: [
+            ...(attachedLeader.supportGear || []).map((g: string) => `[Leader] ${g}`),
+            ...(u.supportGear || []),
           ],
           abilities: [
             ...attachedLeader.abilities.map((a: any) => ({ ...a, source: 'Leader' })),
@@ -237,7 +269,9 @@ export default function BattleModeConsolePage() {
           totalModels: u.modelCount,
           keywords: u.keywords,
           stats: u.stats,
-          weapons: u.weapons.map((w: any) => ({ ...w, origin: 'Unit', displayName: w.name })),
+          needsVerification: u.needsVerification,
+          supportGear: u.supportGear || [],
+          weapons: u.weapons.map((w: any) => ({ ...w, origin: 'Unit', displayName: w.displayName || w.name })),
           abilities: u.abilities,
         });
       }
@@ -764,74 +798,185 @@ export default function BattleModeConsolePage() {
                         </div>
                       </div>
 
-                      {/* Weapon Profiles (Characteristics displayed in EACH phase) */}
+                      {/* Needs Verification Banner (Q11=B) */}
+                      {unit.needsVerification && (
+                        <div style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          padding: '0.55rem 0.85rem',
+                          background: 'rgba(234, 179, 8, 0.12)',
+                          border: '1px solid #EAB308',
+                          borderRadius: '6px',
+                          marginBottom: '1rem',
+                          flexWrap: 'wrap',
+                          gap: '0.4rem',
+                        }}>
+                          <span style={{ fontSize: '0.75rem', color: '#FEF08A', fontWeight: 600 }}>
+                            ⚠️ Needs Verification: Wargear loadout has not been confirmed for this unit following rules updates.
+                          </span>
+                          <Link href={`/army/${armyId}/edit`} style={{ fontSize: '0.75rem', color: '#38BDF8', fontWeight: 700, textDecoration: 'underline' }}>
+                            Verify in Edit Mode →
+                          </Link>
+                        </div>
+                      )}
+
+                      {/* Support Equipment & Add-ons */}
+                      {unit.supportGear && unit.supportGear.length > 0 && (
+                        <div style={{ marginBottom: '1rem' }}>
+                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#A855F7', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.35rem' }}>
+                            Equipped Support Equipment & Add-ons:
+                          </div>
+                          <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+                            {unit.supportGear.map((item: string, idx: number) => (
+                              <span key={idx} style={{
+                                padding: '2px 8px',
+                                borderRadius: '4px',
+                                background: 'rgba(168, 85, 247, 0.15)',
+                                border: '1px solid #A855F7',
+                                color: '#E9D5FF',
+                                fontSize: '0.75rem',
+                                fontWeight: 700,
+                              }}>
+                                🛡 {item}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Weapon Profiles (Characteristics displayed in EACH phase - ONLY SELECTED WARGEAR per Q4=B & Q9=A) */}
                       {unit.weapons && unit.weapons.length > 0 && (
                         <div style={{ marginBottom: '1.25rem' }}>
-                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span>Weapons & Profiles ({unit.weapons.length}):</span>
+                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span>Selected Wargear & Weapon Profiles ({unit.weapons.length}):</span>
                             <span style={{ fontSize: '0.65rem', color: '#94A3B8' }}>
-                              {activePhase === 'SHOOTING' ? '🎯 Shooting Phase Focus' : activePhase === 'FIGHT' || activePhase === 'CHARGE' ? '⚔ Melee Phase Focus' : 'Full Armament'}
+                              {activePhase === 'SHOOTING' ? '🎯 Shooting Phase Focus' : activePhase === 'FIGHT' || activePhase === 'CHARGE' ? '⚔ Melee Phase Focus' : 'Selected Armament'}
                             </span>
                           </div>
 
-                          {/* Ranged Weapons */}
-                          {unit.weapons.filter((w: any) => w.type === 'Ranged').length > 0 && (
-                            <div style={{ marginBottom: '0.6rem' }}>
-                              <div style={{ fontSize: '0.65rem', fontWeight: 800, color: activePhase === 'SHOOTING' ? '#38BDF8' : '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>
-                                🎯 Ranged Weapons {activePhase === 'SHOOTING' && <span style={{ color: '#38BDF8' }}>● Active</span>}
-                              </div>
-                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                                {unit.weapons.filter((w: any) => w.type === 'Ranged').map((w: any, idx: number) => (
-                                  <div
-                                    key={idx}
-                                    style={{
-                                      padding: '0.55rem 0.85rem',
-                                      background: activePhase === 'SHOOTING' ? 'rgba(56, 189, 248, 0.08)' : '#0F172A',
-                                      border: activePhase === 'SHOOTING' ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
-                                      borderRadius: '6px',
-                                      display: 'flex',
-                                      justifyContent: 'space-between',
-                                      alignItems: 'center',
-                                      flexWrap: 'wrap',
-                                      gap: '0.5rem',
-                                    }}
-                                  >
-                                    <div>
-                                      <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.displayName}</span>
-                                      {w.keywords && w.keywords.length > 0 && (
-                                        <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
-                                          {w.keywords.join(', ')}
-                                        </div>
-                                      )}
-                                    </div>
-                                    <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
-                                      <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
-                                      <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
-                                      <span>BS: <strong style={{ color: '#38BDF8' }}>{w.skill}</strong></span>
-                                      <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
-                                      <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
-                                      <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
-                                    </div>
+                          {/* Composite Unit Presentation: Distinct Leader and Bodyguard Sub-Headers (Q9=A) */}
+                          {unit.isComposite ? (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                              {/* Leader Weapons */}
+                              {unit.leaderWeapons && unit.leaderWeapons.length > 0 && (
+                                <div style={{ padding: '0.75rem', background: 'rgba(200, 157, 60, 0.05)', border: '1px solid rgba(200, 157, 60, 0.25)', borderRadius: '6px' }}>
+                                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#C89D3C', textTransform: 'uppercase', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                    <span>👑 [Leader] {unit.leaderName} Armament</span>
                                   </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
+                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                    {unit.leaderWeapons.map((w: any, idx: number) => {
+                                      const isShootingActive = activePhase === 'SHOOTING' && w.type === 'Ranged';
+                                      const isMeleeActive = (activePhase === 'FIGHT' || activePhase === 'CHARGE') && w.type === 'Melee';
+                                      return (
+                                        <div
+                                          key={idx}
+                                          style={{
+                                            padding: '0.55rem 0.85rem',
+                                            background: isShootingActive ? 'rgba(56, 189, 248, 0.08)' : isMeleeActive ? 'rgba(249, 115, 22, 0.08)' : '#0F172A',
+                                            border: isShootingActive ? '1px solid rgba(56, 189, 248, 0.3)' : isMeleeActive ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                                            borderRadius: '6px',
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                            flexWrap: 'wrap',
+                                            gap: '0.5rem',
+                                          }}
+                                        >
+                                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                            <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(200, 157, 60, 0.2)', border: '1px solid #C89D3C', color: '#C89D3C', fontWeight: 800, fontSize: '0.75rem' }}>
+                                              {w.count || 1}x
+                                            </span>
+                                            <div>
+                                              <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.name} ({w.type})</span>
+                                              {w.keywords && w.keywords.length > 0 && (
+                                                <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
+                                                  {w.keywords.join(', ')}
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                          <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
+                                            <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
+                                            <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
+                                            <span>{w.type === 'Melee' ? 'WS' : 'BS'}: <strong style={{ color: w.type === 'Melee' ? '#F97316' : '#38BDF8' }}>{w.skill}</strong></span>
+                                            <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
+                                            <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
+                                            <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                </div>
+                              )}
 
-                          {/* Melee Weapons */}
-                          {unit.weapons.filter((w: any) => w.type === 'Melee').length > 0 && (
-                            <div>
-                              <div style={{ fontSize: '0.65rem', fontWeight: 800, color: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? '#F97316' : '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>
-                                ⚔ Melee Weapons {(activePhase === 'FIGHT' || activePhase === 'CHARGE') && <span style={{ color: '#F97316' }}>● Active</span>}
-                              </div>
-                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                                {unit.weapons.filter((w: any) => w.type === 'Melee').map((w: any, idx: number) => (
+                              {/* Bodyguard Weapons */}
+                              {unit.bodyguardWeapons && unit.bodyguardWeapons.length > 0 && (
+                                <div style={{ padding: '0.75rem', background: 'rgba(56, 189, 248, 0.05)', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: '6px' }}>
+                                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                    <span>🛡 [Bodyguard] {unit.bodyguardName} Armament</span>
+                                  </div>
+                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                    {unit.bodyguardWeapons.map((w: any, idx: number) => {
+                                      const isShootingActive = activePhase === 'SHOOTING' && w.type === 'Ranged';
+                                      const isMeleeActive = (activePhase === 'FIGHT' || activePhase === 'CHARGE') && w.type === 'Melee';
+                                      return (
+                                        <div
+                                          key={idx}
+                                          style={{
+                                            padding: '0.55rem 0.85rem',
+                                            background: isShootingActive ? 'rgba(56, 189, 248, 0.08)' : isMeleeActive ? 'rgba(249, 115, 22, 0.08)' : '#0F172A',
+                                            border: isShootingActive ? '1px solid rgba(56, 189, 248, 0.3)' : isMeleeActive ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                                            borderRadius: '6px',
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                            flexWrap: 'wrap',
+                                            gap: '0.5rem',
+                                          }}
+                                        >
+                                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                            <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(56, 189, 248, 0.2)', border: '1px solid #38BDF8', color: '#38BDF8', fontWeight: 800, fontSize: '0.75rem' }}>
+                                              {w.count || 1}x
+                                            </span>
+                                            <div>
+                                              <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.name} ({w.type})</span>
+                                              {w.keywords && w.keywords.length > 0 && (
+                                                <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
+                                                  {w.keywords.join(', ')}
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                          <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
+                                            <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
+                                            <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
+                                            <span>{w.type === 'Melee' ? 'WS' : 'BS'}: <strong style={{ color: w.type === 'Melee' ? '#F97316' : '#38BDF8' }}>{w.skill}</strong></span>
+                                            <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
+                                            <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
+                                            <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            /* Standalone Unit Presentation with Model Count Badges (Q4=B) */
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                              {unit.weapons.map((w: any, idx: number) => {
+                                const isShootingActive = activePhase === 'SHOOTING' && w.type === 'Ranged';
+                                const isMeleeActive = (activePhase === 'FIGHT' || activePhase === 'CHARGE') && w.type === 'Melee';
+                                return (
                                   <div
                                     key={idx}
                                     style={{
                                       padding: '0.55rem 0.85rem',
-                                      background: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? 'rgba(249, 115, 22, 0.08)' : '#0F172A',
-                                      border: (activePhase === 'FIGHT' || activePhase === 'CHARGE') ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                                      background: isShootingActive ? 'rgba(56, 189, 248, 0.08)' : isMeleeActive ? 'rgba(249, 115, 22, 0.08)' : '#0F172A',
+                                      border: isShootingActive ? '1px solid rgba(56, 189, 248, 0.3)' : isMeleeActive ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
                                       borderRadius: '6px',
                                       display: 'flex',
                                       justifyContent: 'space-between',
@@ -840,25 +985,30 @@ export default function BattleModeConsolePage() {
                                       gap: '0.5rem',
                                     }}
                                   >
-                                    <div>
-                                      <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.displayName}</span>
-                                      {w.keywords && w.keywords.length > 0 && (
-                                        <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
-                                          {w.keywords.join(', ')}
-                                        </div>
-                                      )}
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                      <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(56, 189, 248, 0.2)', border: '1px solid #38BDF8', color: '#38BDF8', fontWeight: 800, fontSize: '0.75rem' }}>
+                                        {w.count || 1}x
+                                      </span>
+                                      <div>
+                                        <span style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.85rem' }}>{w.name} ({w.type})</span>
+                                        {w.keywords && w.keywords.length > 0 && (
+                                          <div style={{ fontSize: '0.65rem', color: '#C89D3C', marginTop: '0.1rem' }}>
+                                            {w.keywords.join(', ')}
+                                          </div>
+                                        )}
+                                      </div>
                                     </div>
                                     <div style={{ fontSize: '0.75rem', color: '#CBD5E1', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
                                       <span>Range: <strong style={{ color: '#F8FAFC' }}>{w.range}</strong></span>
                                       <span>A: <strong style={{ color: '#F8FAFC' }}>{w.attacks}</strong></span>
-                                      <span>WS: <strong style={{ color: '#F97316' }}>{w.skill}</strong></span>
+                                      <span>{w.type === 'Melee' ? 'WS' : 'BS'}: <strong style={{ color: w.type === 'Melee' ? '#F97316' : '#38BDF8' }}>{w.skill}</strong></span>
                                       <span>S: <strong style={{ color: '#F8FAFC' }}>{w.strength}</strong></span>
                                       <span>AP: <strong style={{ color: '#F8FAFC' }}>{w.armorPenetration}</strong></span>
                                       <span>D: <strong style={{ color: '#F8FAFC' }}>{w.damage}</strong></span>
                                     </div>
                                   </div>
-                                ))}
-                              </div>
+                                );
+                              })}
                             </div>
                           )}
                         </div>
@@ -996,6 +1146,7 @@ export default function BattleModeConsolePage() {
         currentPoints={army?.rosterPayload?.totalPoints || 0}
         dpLimit={army?.detachmentPointsLimit || 3}
         currentDp={army?.rosterPayload?.detachmentPointsUsed || 0}
+        units={(army?.rosterPayload as any)?.units || []}
       />
     </ThemeProvider>
   );

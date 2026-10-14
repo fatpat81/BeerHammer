@@ -7,6 +7,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { auditRoster, updateRoster } from '../lib/api';
+import { validateWargearLoadout, compileWahapediaWargear } from '@forceorg/rules-engine-11e';
 import type { AuditResult, RosterDiscrepancy } from '@forceorg/types';
 
 export interface ComplianceDashboardProps {
@@ -19,6 +20,8 @@ export interface ComplianceDashboardProps {
   dpLimit?: number;
   currentDp?: number;
   onAutoFixPoints?: () => void;
+  units?: any[];
+  onResetWargearToLegal?: () => void;
 }
 
 export const ComplianceDashboard: React.FC<ComplianceDashboardProps> = ({
@@ -31,6 +34,8 @@ export const ComplianceDashboard: React.FC<ComplianceDashboardProps> = ({
   dpLimit = 3,
   currentDp = 0,
   onAutoFixPoints,
+  units = [],
+  onResetWargearToLegal,
 }) => {
   const [auditResult, setAuditResult] = useState<AuditResult | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -42,48 +47,100 @@ export const ComplianceDashboard: React.FC<ComplianceDashboardProps> = ({
     setIsLoading(true);
     setFixSuccess(null);
     try {
-      const result = await auditRoster(rosterId);
-      setAuditResult(result);
-    } catch (err: any) {
-      console.warn('[Compliance] Audit API unavailable, computing local client audit:', err);
-      // Graceful client-side audit calculation
-      const clientDiscrepancies: RosterDiscrepancy[] = [];
+      let discrepancies: RosterDiscrepancy[] = [];
 
-      if (currentPoints > pointsLimit) {
-        clientDiscrepancies.push({
-          unitInstanceId: '',
-          unitName: 'Army Total Points',
-          severity: 'RED',
-          category: 'POINTS_SHIFT',
-          message: `Army total (${currentPoints}pts) exceeds the match limit (${pointsLimit}pts) by ${currentPoints - pointsLimit}pts.`,
-          oldValue: `${pointsLimit}`,
-          newValue: `${currentPoints}`,
-        });
+      try {
+        const result = await auditRoster(rosterId);
+        if (result && Array.isArray(result.discrepancies)) {
+          discrepancies = [...result.discrepancies];
+        }
+      } catch (err) {
+        console.warn('[Compliance] Audit API unavailable, computing local client audit:', err);
+        // Fallback point and DP checks
+        if (currentPoints > pointsLimit) {
+          discrepancies.push({
+            unitInstanceId: '',
+            unitName: 'Army Total Points',
+            severity: 'RED',
+            category: 'POINTS_SHIFT',
+            message: `Army total (${currentPoints}pts) exceeds the match limit (${pointsLimit}pts) by ${currentPoints - pointsLimit}pts.`,
+            oldValue: `${pointsLimit}`,
+            newValue: `${currentPoints}`,
+          });
+        }
+
+        if (currentDp > dpLimit) {
+          discrepancies.push({
+            unitInstanceId: '',
+            unitName: 'Detachment Points',
+            severity: 'RED',
+            category: 'DP_VIOLATION',
+            message: `Detachment points used (${currentDp} DP) exceeds the primary detachment allowance (${dpLimit} DP).`,
+            oldValue: `${dpLimit} DP`,
+            newValue: `${currentDp} DP`,
+          });
+        }
       }
 
-      if (currentDp > dpLimit) {
-        clientDiscrepancies.push({
-          unitInstanceId: '',
-          unitName: 'Detachment Points',
-          severity: 'RED',
-          category: 'DP_VIOLATION',
-          message: `Detachment points used (${currentDp} DP) exceeds the primary detachment allowance (${dpLimit} DP).`,
-          oldValue: `${dpLimit} DP`,
-          newValue: `${currentDp} DP`,
-        });
+      // ── Wargear Loadout Tournament Legality Audit (Q13=A, Q11=B) ────────────
+      if (units && Array.isArray(units)) {
+        for (const u of units) {
+          const uName = u.catalogUnit?.name || u.datasheetName || 'Unit';
+
+          // Legacy / rules update verification check (Q11=B)
+          if (u.needsVerification) {
+            discrepancies.push({
+              unitInstanceId: u.instanceId,
+              unitName: uName,
+              severity: 'AMBER',
+              category: 'INVALID_LOADOUT',
+              message: `Wargear loadout has not been confirmed for ${uName}. Open Edit Mode to verify tournament legality.`,
+            });
+          }
+
+          // Active loadout error check
+          if (u.validationErrors && u.validationErrors.length > 0) {
+            for (const err of u.validationErrors) {
+              discrepancies.push({
+                unitInstanceId: u.instanceId,
+                unitName: uName,
+                severity: 'RED',
+                category: 'INVALID_LOADOUT',
+                message: err,
+              });
+            }
+          } else if (u.wargearSelections && u.wargearSelections.length > 0) {
+            const rules = u.catalogUnit?.wargearRulesRaw ? compileWahapediaWargear(u.catalogUnit.wargearRulesRaw) : [];
+            const validation = validateWargearLoadout({
+              modelCount: u.modelCount || 1,
+              wargearSelections: u.wargearSelections,
+              rules,
+              catalogWeapons: u.catalogUnit?.weapons,
+            });
+            for (const err of validation.errors) {
+              discrepancies.push({
+                unitInstanceId: u.instanceId,
+                unitName: uName,
+                severity: 'RED',
+                category: 'INVALID_LOADOUT',
+                message: err.message,
+              });
+            }
+          }
+        }
       }
 
       setAuditResult({
         rosterId,
         rulesetVersionCompared: '11.1.0-2026-Q3-MFM',
-        discrepancies: clientDiscrepancies,
-        isCompliant: clientDiscrepancies.filter(d => d.severity === 'RED').length === 0,
+        discrepancies,
+        isCompliant: discrepancies.filter(d => d.severity === 'RED').length === 0,
         auditedAt: new Date().toISOString(),
       });
     } finally {
       setIsLoading(false);
     }
-  }, [rosterId, currentPoints, pointsLimit, currentDp, dpLimit]);
+  }, [rosterId, currentPoints, pointsLimit, currentDp, dpLimit, units]);
 
   useEffect(() => {
     if (isOpen) {
@@ -111,7 +168,8 @@ export const ComplianceDashboard: React.FC<ComplianceDashboardProps> = ({
     setFixSuccess(null);
     try {
       onAutoFixPoints?.();
-      setFixSuccess('Points successfully aligned with active MFM datasheets.');
+      onResetWargearToLegal?.();
+      setFixSuccess('Loadouts and points successfully aligned with tournament rules.');
       setTimeout(() => {
         runAudit();
       }, 500);

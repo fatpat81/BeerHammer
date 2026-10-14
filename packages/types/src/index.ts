@@ -172,12 +172,39 @@ export interface RosterUnitInstance {
   wargearSelections: WargearSelection[];
   pointsCost: number;
   customImageUrl?: string | null;
+  needsVerification?: boolean;
 }
 
 export interface WargearSelection {
   ruleId: string;
   selectedOptionId: string;
   count: number;
+  weaponName?: string;
+  replacesWeaponName?: string;
+  role?: 'SERGEANT' | 'TROOPER' | 'CHASSIS' | 'ADD_ON' | 'ANY';
+}
+
+export interface WargearValidationError {
+  wargearName: string;
+  message: string;
+  ruleId?: string;
+  severity?: 'RED' | 'AMBER';
+}
+
+export interface EquippedWeaponBadge {
+  name: string;
+  displayName: string;
+  count: number;
+  type: string;
+  range: string;
+  attacks: string;
+  skill: string;
+  strength: number;
+  armorPenetration: number;
+  damage: string;
+  keywords: string[];
+  origin?: 'Leader' | 'Bodyguard' | 'Unit';
+  role?: string;
 }
 
 export interface RosterPayload {

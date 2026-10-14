@@ -157,6 +157,17 @@ export default function RosterEditPage() {
     }
   }, [army, armyId]);
 
+  const handleResetWargearToLegal = useCallback(() => {
+    const updated = currentUnitsRef.current.map(u => ({
+      ...u,
+      wargearSelections: [],
+      validationErrors: [],
+      needsVerification: false,
+    }));
+    currentUnitsRef.current = updated;
+    performSave(updated);
+  }, [performSave]);
+
   if (loading) {
     return <FullPageSkeleton />;
   }
@@ -335,6 +346,8 @@ export default function RosterEditPage() {
         armyName={army?.name || 'Roster Studio'}
         pointsLimit={army?.pointsLimit || 2000}
         currentPoints={currentUnitsRef.current.reduce((sum, u) => sum + (u.pointsCost || 0), 0)}
+        units={currentUnitsRef.current}
+        onResetWargearToLegal={handleResetWargearToLegal}
       />
     </ThemeProvider>
   );

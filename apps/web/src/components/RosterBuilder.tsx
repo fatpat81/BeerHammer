@@ -7,9 +7,22 @@
 'use client';
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
-import { compileWahapediaWargear } from '@forceorg/rules-engine-11e';
+import {
+  compileWahapediaWargear,
+  validateWargearLoadout,
+  resolveEquippedWeapons,
+  buildUnitWargearSlots,
+  calculateUnitSquadPoints,
+  getUnitBaseModelThreshold,
+  WargearSlot,
+} from '@forceorg/rules-engine-11e';
 import { Skeleton } from '@/components/Skeleton';
-import type { WargearRuleAST, BattlefieldRole } from '@forceorg/types';
+import type {
+  WargearRuleAST,
+  BattlefieldRole,
+  WargearSelection,
+  EquippedWeaponBadge,
+} from '@forceorg/types';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -56,11 +69,12 @@ export interface RosterUnit {
   instanceId: string;
   catalogUnit: CatalogUnit;
   modelCount: number;
-  wargearSelections: { ruleId: string; optionId: string; count: number }[];
+  wargearSelections: WargearSelection[];
   pointsCost: number;
   enhancement?: EnhancementOption;
   attachedToInstanceId?: string;
   validationErrors: string[];
+  needsVerification?: boolean;
 }
 
 // ── Role Icons & Metadata ───────────────────────────────────────────────────
@@ -118,7 +132,28 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
 
   useEffect(() => {
     if (initialUnits) {
-      setRosterUnits(initialUnits);
+      const verified = initialUnits.map(u => {
+        const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
+        const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
+        const currentCount = u.modelCount || baseModels;
+        const squadPoints = calculateUnitSquadPoints({
+          basePoints: u.catalogUnit.basePoints,
+          modelCount: currentCount,
+          baseModelCount: baseModels,
+          isCharacter: isChar,
+          enhancementPoints: u.enhancement?.points || 0,
+        });
+
+        return {
+          ...u,
+          modelCount: currentCount,
+          pointsCost: squadPoints.totalPoints,
+          wargearSelections: u.wargearSelections || [],
+          validationErrors: u.validationErrors || [],
+          needsVerification: u.needsVerification !== undefined ? u.needsVerification : (u.wargearSelections?.length === 0),
+        };
+      });
+      setRosterUnits(verified);
     }
   }, [initialUnits]);
 
@@ -160,7 +195,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
         basePoints: ds.basePoints || 0,
         dpCost: ds.detachmentPointsCost || 0,
         keywords: ds.keywords || [],
-        wargearRulesRaw: '',
+        wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
         modelComposition: (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
           name: m.name || ds.name,
           count: m.count || 1,
@@ -184,7 +219,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
             basePoints: ds.basePoints || 0,
             dpCost: 0,
             keywords: ds.keywords || [],
-            wargearRulesRaw: '',
+            wargearRulesRaw: ds.wargearRules || ds.wargear || ds.wargearOptions || '',
             modelComposition: (ds.unitComposition?.models || [{ name: ds.name, count: 1 }]).map((m: any) => ({
               name: m.name || ds.name,
               count: m.count || 1,
@@ -255,10 +290,11 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
 
   // Add unit to roster
   const addUnit = useCallback((catalogUnit: CatalogUnit) => {
+    const baseModels = getUnitBaseModelThreshold(catalogUnit);
     const newUnit: RosterUnit = {
       instanceId: `inst_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
       catalogUnit,
-      modelCount: catalogUnit.modelComposition.reduce((sum, m) => sum + m.count, 0),
+      modelCount: baseModels,
       wargearSelections: [],
       pointsCost: catalogUnit.basePoints,
       validationErrors: [],
@@ -288,19 +324,36 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     setRosterUnits(prev => {
       const next = prev.map(u => {
         if (u.instanceId !== instanceId) return u;
+        const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
+        const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
+
         if (!enhancementId) {
+          const squadPoints = calculateUnitSquadPoints({
+            basePoints: u.catalogUnit.basePoints,
+            modelCount: u.modelCount,
+            baseModelCount: baseModels,
+            isCharacter: isChar,
+            enhancementPoints: 0,
+          });
           return {
             ...u,
             enhancement: undefined,
-            pointsCost: u.catalogUnit.basePoints,
+            pointsCost: squadPoints.totalPoints,
           };
         }
         const enh = availableEnhancements.find(e => e.id === enhancementId || e.name === enhancementId);
         if (!enh) return u;
+        const squadPoints = calculateUnitSquadPoints({
+          basePoints: u.catalogUnit.basePoints,
+          modelCount: u.modelCount,
+          baseModelCount: baseModels,
+          isCharacter: isChar,
+          enhancementPoints: enh.points,
+        });
         return {
           ...u,
           enhancement: enh,
-          pointsCost: u.catalogUnit.basePoints + enh.points,
+          pointsCost: squadPoints.totalPoints,
         };
       });
       onRosterChange?.(next);
@@ -322,6 +375,197 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     });
   }, [onRosterChange]);
 
+  // Squad Special/Heavy weapon stepper with hard clamping & instant alert (Q3=B, Q6=A+B)
+  const handleWargearCountChange = useCallback((
+    instanceId: string,
+    ruleId: string,
+    optionId: string,
+    weaponName: string,
+    replacesName: string | undefined,
+    delta: number,
+    maxAllowed: number,
+    scaleFactor?: number
+  ) => {
+    setRosterUnits(prev => {
+      const unit = prev.find(u => u.instanceId === instanceId);
+      if (!unit) return prev;
+
+      // Current count for this rule across all options
+      const currentRuleSelections = unit.wargearSelections.filter(s => s.ruleId === ruleId);
+      const currentTotalForRule = currentRuleSelections.reduce((sum, s) => sum + s.count, 0);
+
+      if (delta > 0 && currentTotalForRule >= maxAllowed) {
+        // Q6=A: Instant explanatory red alert on attempt
+        setToastMessage(`⚠️ Tournament Legality Notice: Cannot equip [${weaponName}]. Tournament limit is ${maxAllowed} for this unit (${scaleFactor ? `1 per ${scaleFactor} models` : `max ${maxAllowed}`}).`);
+        setTimeout(() => setToastMessage(null), 4000);
+        return prev;
+      }
+
+      // Compute new selections
+      const existingIdx = unit.wargearSelections.findIndex(s => s.ruleId === ruleId && s.selectedOptionId === optionId);
+      let updatedSelections = [...unit.wargearSelections];
+
+      if (existingIdx >= 0) {
+        const existing = updatedSelections[existingIdx]!;
+        const newCount = existing.count + delta;
+        if (newCount <= 0) {
+          updatedSelections.splice(existingIdx, 1);
+        } else {
+          updatedSelections[existingIdx] = {
+            ...existing,
+            count: newCount,
+          };
+        }
+      } else if (delta > 0) {
+        const isAddon = ruleId === 'rule_addon' || ruleId === 'rule_support_wargear' || ruleId.includes('addon') || ruleId.includes('support');
+        updatedSelections.push({
+          ruleId,
+          selectedOptionId: optionId,
+          weaponName,
+          replacesWeaponName: replacesName,
+          count: delta,
+          role: isAddon ? 'ADD_ON' : 'TROOPER',
+        });
+      }
+
+      const rules = unit.catalogUnit.wargearRulesRaw ? compileWahapediaWargear(unit.catalogUnit.wargearRulesRaw) : [];
+      const validation = validateWargearLoadout({
+        modelCount: unit.modelCount,
+        wargearSelections: updatedSelections,
+        rules,
+        catalogWeapons: unit.catalogUnit.weapons,
+      });
+
+      const next = prev.map(u => {
+        if (u.instanceId !== instanceId) return u;
+        return {
+          ...u,
+          wargearSelections: updatedSelections,
+          validationErrors: validation.errors.map(e => e.message),
+          needsVerification: false,
+        };
+      });
+
+      onRosterChange?.(next);
+      return next;
+    });
+  }, [onRosterChange]);
+
+  // Leader / Sergeant weapon swap handler (Q7=A)
+  const handleLeaderOptionChange = useCallback((
+    instanceId: string,
+    ruleId: string,
+    optionId: string,
+    weaponName: string,
+    replacesName: string | undefined
+  ) => {
+    setRosterUnits(prev => {
+      const unit = prev.find(u => u.instanceId === instanceId);
+      if (!unit) return prev;
+
+      let updatedSelections = unit.wargearSelections.filter(s => s.ruleId !== ruleId);
+      if (optionId && optionId !== 'default') {
+        updatedSelections.push({
+          ruleId,
+          selectedOptionId: optionId,
+          weaponName,
+          replacesWeaponName: replacesName,
+          count: 1,
+          role: 'SERGEANT',
+        });
+      }
+
+      const rules = unit.catalogUnit.wargearRulesRaw ? compileWahapediaWargear(unit.catalogUnit.wargearRulesRaw) : [];
+      const validation = validateWargearLoadout({
+        modelCount: unit.modelCount,
+        wargearSelections: updatedSelections,
+        rules,
+        catalogWeapons: unit.catalogUnit.weapons,
+      });
+
+      const next = prev.map(u => {
+        if (u.instanceId !== instanceId) return u;
+        return {
+          ...u,
+          wargearSelections: updatedSelections,
+          validationErrors: validation.errors.map(e => e.message),
+          needsVerification: false,
+        };
+      });
+
+      onRosterChange?.(next);
+      return next;
+    });
+  }, [onRosterChange]);
+
+  // Model Count Change & Squad Down-sizing (Q5=B, Q8=C)
+  const handleModelCountChange = useCallback((instanceId: string, deltaOrTarget: number, isAbsolute: boolean = false) => {
+    setRosterUnits(prev => {
+      const next = prev.map(u => {
+        if (u.instanceId !== instanceId) return u;
+        const minModels = 1;
+        const maxModels = 30;
+        const newCount = isAbsolute
+          ? Math.max(minModels, Math.min(maxModels, deltaOrTarget))
+          : Math.max(minModels, Math.min(maxModels, u.modelCount + deltaOrTarget));
+        if (newCount === u.modelCount) return u;
+
+        // Q5=B, Q8=C: If squad size drops, reset special weapons to baseline legal loadout
+        let newSelections = [...u.wargearSelections];
+        if (newCount < u.modelCount) {
+          newSelections = newSelections.filter(s => s.role === 'SERGEANT' || s.role === 'ADD_ON');
+          setToastMessage(`✓ Squad reduced to ${newCount} models. Special weapons reset to tournament-legal baseline.`);
+          setTimeout(() => setToastMessage(null), 3500);
+        }
+
+        const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
+        const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
+        const squadPoints = calculateUnitSquadPoints({
+          basePoints: u.catalogUnit.basePoints,
+          modelCount: newCount,
+          baseModelCount: baseModels,
+          isCharacter: isChar,
+          enhancementPoints: u.enhancement?.points || 0,
+        });
+
+        if (squadPoints.isUnderstrength) {
+          setToastMessage(`⚠️ ${newCount} models selected (${squadPoints.tierMaxModels}-model squad tier: ${squadPoints.totalPoints} pts).`);
+          setTimeout(() => setToastMessage(null), 3500);
+        }
+
+        const rules = u.catalogUnit.wargearRulesRaw ? compileWahapediaWargear(u.catalogUnit.wargearRulesRaw) : [];
+        const validation = validateWargearLoadout({
+          modelCount: newCount,
+          wargearSelections: newSelections,
+          rules,
+          catalogWeapons: u.catalogUnit.weapons,
+        });
+
+        return {
+          ...u,
+          modelCount: newCount,
+          pointsCost: squadPoints.totalPoints,
+          wargearSelections: newSelections,
+          validationErrors: validation.errors.map(e => e.message),
+          needsVerification: false,
+        };
+      });
+      onRosterChange?.(next);
+      return next;
+    });
+  }, [onRosterChange]);
+
+  // Confirm unit loadout as tournament-legal (Q11=B)
+  const handleConfirmUnitLoadout = useCallback((instanceId: string) => {
+    setRosterUnits(prev => {
+      const next = prev.map(u => u.instanceId === instanceId ? { ...u, needsVerification: false } : u);
+      onRosterChange?.(next);
+      return next;
+    });
+    setToastMessage('✓ Wargear loadout verified as tournament-legal.');
+    setTimeout(() => setToastMessage(null), 3000);
+  }, [onRosterChange]);
+
   // Handle Detachment Switch & Enhancement Reset (Q6)
   const handleApplyDetachment = useCallback(() => {
     if (!selectedDetachmentName || selectedDetachmentName === activeDetachmentName) return;
@@ -336,10 +580,19 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     const hadEnhancements = rosterUnits.some(u => !!u.enhancement);
     const updatedUnits = rosterUnits.map(u => {
       if (u.enhancement) {
+        const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
+        const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
+        const squadPoints = calculateUnitSquadPoints({
+          basePoints: u.catalogUnit.basePoints,
+          modelCount: u.modelCount,
+          baseModelCount: baseModels,
+          isCharacter: isChar,
+          enhancementPoints: 0,
+        });
         return {
           ...u,
           enhancement: undefined,
-          pointsCost: u.catalogUnit.basePoints,
+          pointsCost: squadPoints.totalPoints,
         };
       }
       return u;
@@ -757,11 +1010,21 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <span style={{ fontSize: '1.15rem' }}>{role.icon}</span>
                     <div>
-                      <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#F8FAFC' }}>
-                        {unit.catalogUnit.name}
+                      <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#F8FAFC', display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
+                        <span>{unit.catalogUnit.name}</span>
                         {unit.enhancement && (
-                          <span style={{ marginLeft: '0.5rem', fontSize: '0.7rem', padding: '1px 6px', background: 'rgba(200, 157, 60, 0.2)', border: '1px solid #C89D3C', borderRadius: '3px', color: '#C89D3C' }}>
+                          <span style={{ fontSize: '0.7rem', padding: '1px 6px', background: 'rgba(200, 157, 60, 0.2)', border: '1px solid #C89D3C', borderRadius: '3px', color: '#C89D3C' }}>
                             ★ {unit.enhancement.name} (+{unit.enhancement.points}pts)
+                          </span>
+                        )}
+                        {unit.needsVerification && (
+                          <span style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'rgba(234, 179, 8, 0.2)', border: '1px solid #EAB308', borderRadius: '3px', color: '#FACC15', fontWeight: 700 }}>
+                            ⚠️ Needs Verification
+                          </span>
+                        )}
+                        {unit.validationErrors && unit.validationErrors.length > 0 && (
+                          <span style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid #EF4444', borderRadius: '3px', color: '#F87171', fontWeight: 700 }}>
+                            🚫 Illegal Loadout
                           </span>
                         )}
                       </div>
@@ -880,20 +1143,488 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                       </div>
                     )}
 
-                    {/* Weapons Profile Summary */}
+                    {/* ── Needs Verification Alert Banner (Q11=B) ──────── */}
+                    {unit.needsVerification && (
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '0.6rem 0.85rem',
+                        background: 'rgba(234, 179, 8, 0.12)',
+                        border: '1px solid #EAB308',
+                        borderRadius: '6px',
+                        marginBottom: '0.85rem',
+                        flexWrap: 'wrap',
+                        gap: '0.5rem',
+                      }}>
+                        <div style={{ fontSize: '0.75rem', color: '#FEF08A', fontWeight: 600 }}>
+                          ⚠️ <strong>Needs Verification:</strong> Review wargear selections following rules or roster updates to confirm tournament legality.
+                        </div>
+                        <button
+                          onClick={() => handleConfirmUnitLoadout(unit.instanceId)}
+                          style={{
+                            padding: '0.25rem 0.65rem',
+                            fontSize: '0.7rem',
+                            fontWeight: 800,
+                            background: '#EAB308',
+                            color: '#070B12',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                          }}
+                        >
+                          ✓ Confirm Legal
+                        </button>
+                      </div>
+                    )}
+
+                    {/* ── Model Count Scaling Control (Q5=B, Q8=C) ──────── */}
+                    {!isCharacter && (() => {
+                      const baseModels = getUnitBaseModelThreshold(unit.catalogUnit);
+                        const pointsInfo = calculateUnitSquadPoints({
+                          basePoints: unit.catalogUnit.basePoints,
+                          modelCount: unit.modelCount,
+                          baseModelCount: baseModels,
+                          isCharacter: isCharacter,
+                          enhancementPoints: unit.enhancement?.points || 0,
+                        });
+
+                        return (
+                          <div style={{
+                            padding: '0.65rem 0.85rem',
+                            background: '#0F172A',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            borderRadius: '6px',
+                            marginBottom: '0.85rem',
+                          }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+                              <div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E2E8F0' }}>
+                                  Squad Model Count & Point Tier
+                                </div>
+                                <div style={{ fontSize: '0.65rem', color: '#94A3B8' }}>
+                                  Baseline: {baseModels} models ({unit.catalogUnit.basePoints} pts) • Current: {pointsInfo.tierMaxModels}-model tier ({pointsInfo.totalPoints} pts)
+                                </div>
+                              </div>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <button
+                                  onClick={() => handleModelCountChange(unit.instanceId, -1)}
+                                  disabled={unit.modelCount <= 1}
+                                  style={{
+                                    width: '26px',
+                                    height: '26px',
+                                    borderRadius: '4px',
+                                    background: 'rgba(239, 68, 68, 0.2)',
+                                    border: '1px solid #EF4444',
+                                    color: '#F87171',
+                                    fontWeight: 800,
+                                    cursor: unit.modelCount <= 1 ? 'not-allowed' : 'pointer',
+                                  }}
+                                  title="Reduce squad size"
+                                >
+                                  -
+                                </button>
+                                <span style={{ fontWeight: 800, fontSize: '0.85rem', color: '#F8FAFC', minWidth: '85px', textAlign: 'center' }}>
+                                  {unit.modelCount} models
+                                </span>
+                                <button
+                                  onClick={() => handleModelCountChange(unit.instanceId, 1)}
+                                  disabled={unit.modelCount >= 30}
+                                  style={{
+                                    width: '26px',
+                                    height: '26px',
+                                    borderRadius: '4px',
+                                    background: 'rgba(34, 197, 94, 0.2)',
+                                    border: '1px solid #22C55E',
+                                    color: '#4ADE80',
+                                    fontWeight: 800,
+                                    cursor: unit.modelCount >= 30 ? 'not-allowed' : 'pointer',
+                                  }}
+                                  title="Increase squad size"
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </div>
+
+                            {/* Quick Squad Tier Buttons */}
+                            {baseModels > 1 && (
+                              <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                                <span style={{ fontSize: '0.65rem', color: '#94A3B8' }}>Quick Tiers:</span>
+                                <button
+                                  onClick={() => handleModelCountChange(unit.instanceId, baseModels, true)}
+                                  style={{
+                                    padding: '0.2rem 0.55rem',
+                                    fontSize: '0.65rem',
+                                    fontWeight: 700,
+                                    borderRadius: '3px',
+                                    border: unit.modelCount === baseModels ? '1px solid #38BDF8' : '1px solid rgba(255,255,255,0.15)',
+                                    background: unit.modelCount === baseModels ? 'rgba(56, 189, 248, 0.2)' : '#1E293B',
+                                    color: unit.modelCount === baseModels ? '#38BDF8' : '#94A3B8',
+                                    cursor: 'pointer',
+                                  }}
+                                >
+                                  {baseModels} Models ({unit.catalogUnit.basePoints} pts)
+                                </button>
+                                <button
+                                  onClick={() => handleModelCountChange(unit.instanceId, baseModels * 2, true)}
+                                  style={{
+                                    padding: '0.2rem 0.55rem',
+                                    fontSize: '0.65rem',
+                                    fontWeight: 700,
+                                    borderRadius: '3px',
+                                    border: unit.modelCount === baseModels * 2 ? '1px solid #38BDF8' : '1px solid rgba(255,255,255,0.15)',
+                                    background: unit.modelCount === baseModels * 2 ? 'rgba(56, 189, 248, 0.2)' : '#1E293B',
+                                    color: unit.modelCount === baseModels * 2 ? '#38BDF8' : '#94A3B8',
+                                    cursor: 'pointer',
+                                  }}
+                                >
+                                  {baseModels * 2} Models ({unit.catalogUnit.basePoints * 2} pts)
+                                </button>
+                              </div>
+                            )}
+
+                            {/* Understrength Notification Banner */}
+                            {pointsInfo.isUnderstrength && (
+                              <div style={{
+                                marginTop: '0.45rem',
+                                padding: '0.35rem 0.6rem',
+                                background: 'rgba(245, 158, 11, 0.15)',
+                                border: '1px solid #F59E0B',
+                                borderRadius: '4px',
+                                fontSize: '0.7rem',
+                                color: '#FCD34D',
+                                fontWeight: 600,
+                              }}>
+                                ⚠️ Understrength squad: {unit.modelCount} models incurs the full points value of a {pointsInfo.tierMaxModels}-man squad ({pointsInfo.totalPoints} pts).
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })()}
+
+                    {/* ── Active Tournament Legality Errors ─────────────── */}
+                    {unit.validationErrors && unit.validationErrors.length > 0 && (
+                      <div style={{
+                        padding: '0.65rem 0.85rem',
+                        background: 'rgba(239, 68, 68, 0.15)',
+                        border: '1px solid #EF4444',
+                        borderRadius: '6px',
+                        marginBottom: '0.85rem',
+                      }}>
+                        <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#F87171', marginBottom: '0.25rem' }}>
+                          🚫 Tournament Legality Violations:
+                        </div>
+                        {unit.validationErrors.map((err, idx) => (
+                          <div key={idx} style={{ fontSize: '0.7rem', color: '#FCA5A5' }}>
+                            • {err}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* ── Role-Grouped Wargear Options (Q7=A) ───────────── */}
+                    {(() => {
+                      const wargearSlots = buildUnitWargearSlots({
+                        catalogWeapons: unit.catalogUnit.weapons || [],
+                        wargearRules: unit.catalogUnit.wargearRulesRaw
+                          ? compileWahapediaWargear(unit.catalogUnit.wargearRulesRaw)
+                          : [],
+                        isLeader: isCharacter,
+                        modelCount: unit.modelCount,
+                        abilities: unit.catalogUnit.abilities || [],
+                        unitName: unit.catalogUnit.name,
+                        keywords: unit.catalogUnit.keywords || [],
+                      });
+
+                      const hasAnySlots =
+                        wargearSlots.leaderSlots.length > 0 ||
+                        wargearSlots.squadSpecialSlots.length > 0 ||
+                        wargearSlots.addOnSlots.length > 0;
+
+                      return (
+                        <div style={{ marginBottom: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            ⚙️ Wargear Configuration & Tournament Quotas
+                          </div>
+
+                          {/* Leader / Sergeant Equipment (Q7=A) */}
+                          {wargearSlots.leaderSlots.length > 0 && (
+                            <div style={{ padding: '0.75rem', background: '#0F172A', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 800, color: '#C89D3C', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+                                👑 {isCharacter ? 'Character Armament' : 'Unit Leader / Sergeant Loadout'}
+                              </div>
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                {wargearSlots.leaderSlots.map(slot => {
+                                  const currentSel = unit.wargearSelections.find(s => s.ruleId === slot.ruleId);
+                                  const selectedVal = currentSel ? currentSel.selectedOptionId : 'default';
+
+                                  return (
+                                    <div key={slot.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                      <span style={{ fontSize: '0.75rem', color: '#E2E8F0', fontWeight: 600 }}>
+                                        {slot.title}:
+                                      </span>
+                                      <select
+                                        value={selectedVal}
+                                        onChange={(e) => {
+                                          const optId = e.target.value;
+                                          if (optId === 'default') {
+                                            handleLeaderOptionChange(unit.instanceId, slot.ruleId, '', '', slot.replacesName);
+                                          } else {
+                                            const opt = slot.options.find(o => o.id === optId);
+                                            handleLeaderOptionChange(unit.instanceId, slot.ruleId, optId, opt?.name || optId, slot.replacesName);
+                                          }
+                                        }}
+                                        style={{
+                                          padding: '0.35rem 0.65rem',
+                                          fontSize: '0.75rem',
+                                          backgroundColor: '#1E293B',
+                                          border: '1px solid rgba(255,255,255,0.15)',
+                                          borderRadius: '4px',
+                                          color: '#F8FAFC',
+                                          cursor: 'pointer',
+                                          maxWidth: '240px',
+                                        }}
+                                      >
+                                        <option value="default">Standard ({slot.replacesName || 'Default'})</option>
+                                        {slot.options.map(opt => (
+                                          <option key={opt.id} value={opt.id}>
+                                            {opt.name}
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Squad Special & Heavy Weapons (Q7=A, Q6=A+B) */}
+                          {wargearSlots.squadSpecialSlots.length > 0 && (
+                            <div style={{ padding: '0.75rem', background: '#0F172A', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+                              {wargearSlots.squadSpecialSlots.map(slot => {
+                                const currentTotal = unit.wargearSelections
+                                  .filter(s => s.ruleId === slot.ruleId)
+                                  .reduce((sum, s) => sum + s.count, 0);
+                                const isAtLimit = currentTotal >= slot.maxAllowed;
+
+                                return (
+                                  <div key={slot.id} style={{ marginBottom: '0.5rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                                      <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase' }}>
+                                        🎯 {slot.title}
+                                      </span>
+                                      <span style={{
+                                        fontSize: '0.65rem',
+                                        padding: '1px 6px',
+                                        borderRadius: '3px',
+                                        background: isAtLimit ? 'rgba(239, 68, 68, 0.2)' : 'rgba(56, 189, 248, 0.15)',
+                                        border: isAtLimit ? '1px solid #EF4444' : '1px solid rgba(56, 189, 248, 0.3)',
+                                        color: isAtLimit ? '#F87171' : '#38BDF8',
+                                        fontWeight: 700,
+                                      }}>
+                                        {currentTotal} / {slot.maxAllowed} equipped {isAtLimit ? '(Max)' : ''}
+                                      </span>
+                                    </div>
+
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                      {slot.options.map(opt => {
+                                        const sel = unit.wargearSelections.find(s => s.ruleId === slot.ruleId && s.selectedOptionId === opt.id);
+                                        const count = sel?.count || 0;
+                                        const canAddMore = currentTotal < slot.maxAllowed;
+
+                                        return (
+                                          <div
+                                            key={opt.id}
+                                            style={{
+                                              display: 'flex',
+                                              justifyContent: 'space-between',
+                                              alignItems: 'center',
+                                              padding: '0.35rem 0.65rem',
+                                              background: 'rgba(15, 23, 42, 0.6)',
+                                              border: '1px solid rgba(255, 255, 255, 0.06)',
+                                              borderRadius: '4px',
+                                            }}
+                                          >
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#F8FAFC' }}>
+                                                {opt.name}
+                                              </span>
+                                              {isAtLimit && count === 0 && (
+                                                <span style={{ fontSize: '0.6rem', color: '#94A3B8' }}>
+                                                  🔒 Locked (Quota full)
+                                                </span>
+                                              )}
+                                            </div>
+
+                                            {/* Stepper with Hard Clamping & Alert on Click (Q6=A+B) */}
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                              <button
+                                                onClick={() => handleWargearCountChange(unit.instanceId, slot.ruleId, opt.id, opt.name, slot.replacesName, -1, slot.maxAllowed, slot.scaleFactor)}
+                                                disabled={count <= 0}
+                                                style={{
+                                                  width: '22px',
+                                                  height: '22px',
+                                                  borderRadius: '3px',
+                                                  background: count > 0 ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255,255,255,0.05)',
+                                                  border: '1px solid',
+                                                  borderColor: count > 0 ? '#EF4444' : 'rgba(255,255,255,0.1)',
+                                                  color: count > 0 ? '#F87171' : '#64748B',
+                                                  fontWeight: 800,
+                                                  fontSize: '0.75rem',
+                                                  cursor: count > 0 ? 'pointer' : 'not-allowed',
+                                                }}
+                                              >
+                                                -
+                                              </button>
+                                              <span style={{ fontSize: '0.75rem', fontWeight: 800, minWidth: '18px', textAlign: 'center', color: count > 0 ? '#38BDF8' : '#94A3B8' }}>
+                                                {count}
+                                              </span>
+                                              <button
+                                                onClick={() => handleWargearCountChange(unit.instanceId, slot.ruleId, opt.id, opt.name, slot.replacesName, 1, slot.maxAllowed, slot.scaleFactor)}
+                                                style={{
+                                                  width: '22px',
+                                                  height: '22px',
+                                                  borderRadius: '3px',
+                                                  background: canAddMore ? 'rgba(56, 189, 248, 0.2)' : 'rgba(239, 68, 68, 0.1)',
+                                                  border: '1px solid',
+                                                  borderColor: canAddMore ? '#38BDF8' : 'rgba(239, 68, 68, 0.3)',
+                                                  color: canAddMore ? '#38BDF8' : '#F87171',
+                                                  fontWeight: 800,
+                                                  fontSize: '0.75rem',
+                                                  cursor: 'pointer',
+                                                }}
+                                                title={canAddMore ? `Equip ${opt.name}` : `Quota full (${slot.maxAllowed}/${slot.maxAllowed})`}
+                                              >
+                                                +
+                                              </button>
+                                            </div>
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+
+                          {/* Optional Squad Add-ons (Q7=A) */}
+                          {wargearSlots.addOnSlots.length > 0 && (
+                            <div style={{ padding: '0.75rem', background: '#0F172A', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 800, color: '#A855F7', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+                                🛡 Optional Squad Equipment
+                              </div>
+                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                                {wargearSlots.addOnSlots.flatMap(slot => slot.options).map(opt => {
+                                  const isEquipped = unit.wargearSelections.some(s => s.selectedOptionId === opt.id && s.count > 0);
+                                  return (
+                                    <button
+                                      key={opt.id}
+                                      onClick={() => {
+                                        handleWargearCountChange(
+                                          unit.instanceId,
+                                          'rule_addon',
+                                          opt.id,
+                                          opt.name,
+                                          undefined,
+                                          isEquipped ? -1 : 1,
+                                          unit.modelCount
+                                        );
+                                      }}
+                                      style={{
+                                        padding: '0.3rem 0.65rem',
+                                        fontSize: '0.75rem',
+                                        fontWeight: 600,
+                                        borderRadius: '4px',
+                                        border: '1px solid',
+                                        borderColor: isEquipped ? '#A855F7' : 'rgba(255, 255, 255, 0.1)',
+                                        background: isEquipped ? 'rgba(168, 85, 247, 0.2)' : 'rgba(15, 23, 42, 0.5)',
+                                        color: isEquipped ? '#F8FAFC' : '#94A3B8',
+                                        cursor: 'pointer',
+                                      }}
+                                    >
+                                      {isEquipped ? '✓ ' : '+ '}{opt.name}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+
+                          {!hasAnySlots && (
+                            <div style={{ fontSize: '0.75rem', color: '#94A3B8', fontStyle: 'italic' }}>
+                              Fixed factory armament. No alternate wargear options available for this unit.
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+
+                    {/* ── Live Active Tabletop Armament (Filtered Preview) ── */}
                     {unit.catalogUnit.weapons && unit.catalogUnit.weapons.length > 0 && (
                       <div style={{ marginBottom: '0.85rem' }}>
-                        <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                          Weapons Loadout
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                          <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#22C55E', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            ⚡ Active Tabletop Armament (Deployable in Battle Mode)
+                          </span>
+                          <span style={{ fontSize: '0.65rem', color: '#94A3B8' }}>
+                            Only selected weapons will be active
+                          </span>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                          {unit.catalogUnit.weapons.map((w: any, idx: number) => (
-                            <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '0.3rem 0.5rem', background: '#0F172A', borderRadius: '4px' }}>
-                              <span style={{ fontWeight: 600, color: '#F8FAFC' }}>{w.name} ({w.type})</span>
-                              <span style={{ color: '#CBD5E1' }}>Range: {w.range} • A: {w.attacks} • BS/WS: {w.skill} • S: {w.strength} • AP: {w.armorPenetration} • D: {w.damage}</span>
+
+                        {/* Resolved equipped weapons with model count badges */}
+                        {(() => {
+                          const equipped = resolveEquippedWeapons(
+                            unit.catalogUnit.weapons,
+                            unit.modelCount,
+                            unit.wargearSelections,
+                            isCharacter
+                          );
+
+                          return (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                              {equipped.map((w, idx) => (
+                                <div
+                                  key={idx}
+                                  style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    fontSize: '0.75rem',
+                                    padding: '0.35rem 0.55rem',
+                                    background: '#0F172A',
+                                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                                    borderRadius: '4px',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap',
+                                    gap: '0.4rem',
+                                  }}
+                                >
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                    <span style={{
+                                      padding: '1px 6px',
+                                      borderRadius: '3px',
+                                      background: 'rgba(34, 197, 94, 0.2)',
+                                      border: '1px solid #22C55E',
+                                      color: '#4ADE80',
+                                      fontWeight: 800,
+                                      fontSize: '0.7rem',
+                                    }}>
+                                      {w.count}x
+                                    </span>
+                                    <span style={{ fontWeight: 700, color: '#F8FAFC' }}>
+                                      {w.name} ({w.type})
+                                    </span>
+                                  </div>
+                                  <span style={{ color: '#CBD5E1', fontSize: '0.7rem' }}>
+                                    Range: {w.range} • A: {w.attacks} • BS/WS: {w.skill} • S: {w.strength} • AP: {w.armorPenetration} • D: {w.damage}
+                                  </span>
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
+                          );
+                        })()}
                       </div>
                     )}
 

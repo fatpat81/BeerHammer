@@ -4,7 +4,15 @@ export {
   slugify,
   parseCountAndName,
   parseOptionList,
+  validateWargearLoadout,
+  resolveEquippedWeapons,
+  buildUnitWargearSlots,
+  normalizeBaseWeaponName,
+  cleanDisplayName,
+  calculateUnitSquadPoints,
+  getUnitBaseModelThreshold,
 } from './wargear-parser';
+export type { WargearSlot } from './wargear-parser';
 
 export {
   isAttachmentValid,
