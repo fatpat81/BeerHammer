@@ -54,6 +54,7 @@ export interface CatalogUnit {
 export interface DetachmentOption {
   id: string;
   name: string;
+  dpCost?: number;
   rules: string[];
   enhancements: EnhancementOption[];
 }
@@ -63,6 +64,7 @@ export interface EnhancementOption {
   name: string;
   points: number;
   description: string;
+  detachmentName?: string;
 }
 
 export interface RosterUnit {
@@ -97,17 +99,21 @@ export interface RosterBuilderProps {
   factionId?: string;
   subfactionId?: string | null;
   detachmentPrimary?: string | null;
+  detachmentSecondary?: string | null;
+  selectedDetachments?: string[];
   pointsLimit?: number;
   dpLimit?: number;
   initialUnits?: RosterUnit[];
   onRosterChange?: (units: RosterUnit[]) => void;
-  onDetachmentChange?: (newDetachmentName: string) => void;
+  onDetachmentChange?: (newPrimary: string, allSelectedDetachments?: string[], totalDp?: number) => void;
 }
 
 export const RosterBuilder: React.FC<RosterBuilderProps> = ({
   factionId = 'imperium-space-marines',
   subfactionId,
   detachmentPrimary,
+  detachmentSecondary,
+  selectedDetachments,
   pointsLimit = 2000,
   dpLimit = 3,
   initialUnits,
@@ -120,12 +126,23 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
   const [catalogRoleFilter, setCatalogRoleFilter] = useState<string>('ALL');
   const [expandedUnit, setExpandedUnit] = useState<string | null>(null);
 
+  // Detachment management state
+  const initialDets = useMemo(() => {
+    if (selectedDetachments && selectedDetachments.length > 0) return selectedDetachments;
+    return [detachmentPrimary, detachmentSecondary].filter(Boolean) as string[];
+  }, [selectedDetachments, detachmentPrimary, detachmentSecondary]);
+
+  const [activeDetachmentNames, setActiveDetachmentNames] = useState<string[]>(
+    initialDets.length > 0 ? initialDets : (detachmentPrimary ? [detachmentPrimary] : [])
+  );
+  const [stagedDetachmentNames, setStagedDetachmentNames] = useState<string[]>(
+    initialDets.length > 0 ? initialDets : (detachmentPrimary ? [detachmentPrimary] : [])
+  );
+  const [isDetachmentTrayOpen, setIsDetachmentTrayOpen] = useState<boolean>(false);
+
   // Catalog and Detachment data
   const [catalog, setCatalog] = useState<CatalogUnit[]>([]);
   const [detachments, setDetachments] = useState<DetachmentOption[]>([]);
-  const [activeDetachmentName, setActiveDetachmentName] = useState<string>(detachmentPrimary || '');
-  const [selectedDetachmentName, setSelectedDetachmentName] = useState<string>(detachmentPrimary || '');
-  const [availableEnhancements, setAvailableEnhancements] = useState<EnhancementOption[]>([]);
   const [isLoadingCatalog, setIsLoadingCatalog] = useState<boolean>(true);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -170,15 +187,15 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
   }, [initialUnits]);
 
   useEffect(() => {
-    if (detachmentPrimary) {
-      setActiveDetachmentName(detachmentPrimary);
-      setSelectedDetachmentName(detachmentPrimary);
-      const det = detachments.find(d => d.name.toLowerCase() === detachmentPrimary.toLowerCase());
-      if (det?.enhancements) {
-        setAvailableEnhancements(det.enhancements);
-      }
+    if (selectedDetachments && selectedDetachments.length > 0) {
+      setActiveDetachmentNames(selectedDetachments);
+      setStagedDetachmentNames(selectedDetachments);
+    } else if (detachmentPrimary) {
+      const list = [detachmentPrimary, detachmentSecondary].filter(Boolean) as string[];
+      setActiveDetachmentNames(list);
+      setStagedDetachmentNames(list);
     }
-  }, [detachmentPrimary, detachments]);
+  }, [selectedDetachments, detachmentPrimary, detachmentSecondary]);
 
   // Load faction catalogue dynamically
   const loadCatalog = useCallback(async () => {
@@ -276,20 +293,13 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
 
       setCatalog(unitsList);
 
-      // Extract available Detachments and active Enhancements
+      // Extract available Detachments
       if (data.detachments && Array.isArray(data.detachments)) {
         setDetachments(data.detachments);
-        let activeDet = data.detachments.find(
-          (d: any) => d.name.toLowerCase() === (detachmentPrimary || '').toLowerCase()
-        );
-        if (!activeDet && data.detachments.length > 0) activeDet = data.detachments[0];
-        if (activeDet) {
-          const detName = activeDet.name;
-          setActiveDetachmentName(detName);
-          setSelectedDetachmentName(detName);
-          if (activeDet.enhancements) {
-            setAvailableEnhancements(activeDet.enhancements);
-          }
+        if (activeDetachmentNames.length === 0 && data.detachments.length > 0) {
+          const first = data.detachments[0]!.name;
+          setActiveDetachmentNames([first]);
+          setStagedDetachmentNames([first]);
         }
       }
     } catch (err: any) {
@@ -298,7 +308,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     } finally {
       setIsLoadingCatalog(false);
     }
-  }, [factionId, subfactionId, detachmentPrimary]);
+  }, [factionId, subfactionId, activeDetachmentNames.length]);
 
   useEffect(() => {
     loadCatalog();
@@ -317,6 +327,37 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
       return true;
     });
   }, [catalog, catalogRoleFilter, catalogSearch]);
+
+  // Active Detachments and live DP budget
+  const activeDetachments = useMemo(() => {
+    return detachments.filter(d => activeDetachmentNames.includes(d.name));
+  }, [detachments, activeDetachmentNames]);
+
+  const activeTotalDp = useMemo(() => {
+    return activeDetachments.reduce((sum, d) => sum + (d.dpCost || 1), 0);
+  }, [activeDetachments]);
+
+  const stagedDetachments = useMemo(() => {
+    return detachments.filter(d => stagedDetachmentNames.includes(d.name));
+  }, [detachments, stagedDetachmentNames]);
+
+  const stagedTotalDp = useMemo(() => {
+    return stagedDetachments.reduce((sum, d) => sum + (d.dpCost || 1), 0);
+  }, [stagedDetachments]);
+
+  // Combined pool of enhancements from all active detachments, tagged with detachmentName
+  const availableEnhancements = useMemo(() => {
+    const list: EnhancementOption[] = [];
+    activeDetachments.forEach(d => {
+      (d.enhancements || []).forEach(enh => {
+        list.push({
+          ...enh,
+          detachmentName: d.name,
+        });
+      });
+    });
+    return list;
+  }, [activeDetachments]);
 
   // Roster stats
   const totalPoints = useMemo(() => rosterUnits.reduce((sum, u) => sum + u.pointsCost, 0), [rosterUnits]);
@@ -606,20 +647,47 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
     setTimeout(() => setToastMessage(null), 3000);
   }, [onRosterChange]);
 
-  // Handle Detachment Switch & Enhancement Reset (Q6)
-  const handleApplyDetachment = useCallback(() => {
-    if (!selectedDetachmentName || selectedDetachmentName === activeDetachmentName) return;
+  // Handle Staged Detachment Toggling & Apply (3 DP Budget System)
+  const handleToggleStagedDetachment = (det: DetachmentOption) => {
+    const cost = det.dpCost || 1;
+    const isSelected = stagedDetachmentNames.includes(det.name);
 
-    const newDet = detachments.find(d => d.name === selectedDetachmentName);
-    if (!newDet) return;
+    if (isSelected) {
+      setStagedDetachmentNames(prev => prev.filter(n => n !== det.name));
+    } else {
+      if (stagedTotalDp + cost > dpLimit) {
+        setToastMessage(`⚠️ Cannot add "${det.name}" (${cost} DP). Total would exceed the ${dpLimit} DP budget (${stagedTotalDp + cost} / ${dpLimit} DP).`);
+        setTimeout(() => setToastMessage(null), 3500);
+        return;
+      }
+      setStagedDetachmentNames(prev => [...prev, det.name]);
+    }
+  };
 
-    setActiveDetachmentName(selectedDetachmentName);
-    setAvailableEnhancements(newDet.enhancements || []);
+  const handleApplyDetachments = useCallback(() => {
+    if (stagedDetachmentNames.length === 0) {
+      setToastMessage('⚠️ Please select at least one detachment before applying.');
+      setTimeout(() => setToastMessage(null), 3000);
+      return;
+    }
+    if (stagedTotalDp > dpLimit) return;
 
-    // Q6: always remove enhancements with no prompt
-    const hadEnhancements = rosterUnits.some(u => !!u.enhancement);
+    const changed = stagedDetachmentNames.length !== activeDetachmentNames.length ||
+      stagedDetachmentNames.some(n => !activeDetachmentNames.includes(n));
+    if (!changed) {
+      setIsDetachmentTrayOpen(false);
+      return;
+    }
+
+    setActiveDetachmentNames(stagedDetachmentNames);
+    setIsDetachmentTrayOpen(false);
+
+    // Unequip enhancements that belong to detachments no longer active
+    const remainingDetNames = new Set(stagedDetachmentNames);
+    let unequippedCount = 0;
     const updatedUnits = rosterUnits.map(u => {
-      if (u.enhancement) {
+      if (u.enhancement && u.enhancement.detachmentName && !remainingDetNames.has(u.enhancement.detachmentName)) {
+        unequippedCount++;
         const baseModels = getUnitBaseModelThreshold(u.catalogUnit);
         const isChar = u.catalogUnit.battlefieldRole === 'CHARACTER' || (u.catalogUnit.keywords || []).includes('EPIC HERO') || baseModels === 1;
         const squadPoints = calculateUnitSquadPoints({
@@ -638,21 +706,21 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
       return u;
     });
 
-    setRosterUnits(updatedUnits);
-    onRosterChange?.(updatedUnits);
-    onDetachmentChange?.(selectedDetachmentName);
+    if (unequippedCount > 0) {
+      setRosterUnits(updatedUnits);
+      onRosterChange?.(updatedUnits);
+    }
+
+    const primary = stagedDetachmentNames[0] || 'Standard Detachment';
+    onDetachmentChange?.(primary, stagedDetachmentNames, stagedTotalDp);
 
     setToastMessage(
-      hadEnhancements
-        ? `✓ Detachment changed to ${selectedDetachmentName}. Previous enhancements unequipped.`
-        : `✓ Detachment changed to ${selectedDetachmentName}.`
+      unequippedCount > 0
+        ? `✓ Detachments updated (${stagedTotalDp}/${dpLimit} DP). ${unequippedCount} incompatible enhancement(s) unequipped.`
+        : `✓ Detachments updated (${stagedTotalDp}/${dpLimit} DP).`
     );
     setTimeout(() => setToastMessage(null), 3500);
-  }, [selectedDetachmentName, activeDetachmentName, detachments, rosterUnits, onRosterChange, onDetachmentChange]);
-
-  const previewDetachment = useMemo(() => {
-    return detachments.find(d => d.name === selectedDetachmentName) || detachments.find(d => d.name === activeDetachmentName) || null;
-  }, [detachments, selectedDetachmentName, activeDetachmentName]);
+  }, [stagedDetachmentNames, stagedTotalDp, dpLimit, activeDetachmentNames, rosterUnits, onRosterChange, onDetachmentChange]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -690,6 +758,12 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
               {assignedEnhancementsCount} / 3
             </div>
           </div>
+          <div>
+            <div style={{ fontSize: '0.65rem', color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Detachment Points</div>
+            <div style={{ fontSize: '1.25rem', fontWeight: 800, color: activeTotalDp > dpLimit ? '#EF4444' : '#FCD34D' }}>
+              {activeTotalDp} / {dpLimit} DP
+            </div>
+          </div>
         </div>
 
         {/* Points Progress Bar */}
@@ -723,7 +797,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
         </button>
       </div>
 
-      {/* ── DEDICATED DETACHMENT RULES & ENHANCEMENTS BAR ────────────────── */}
+      {/* ── UNIFIED MULTI-DETACHMENT CONSOLE & 3 DP BUDGET TRAY ─────────── */}
       <div style={{
         background: 'rgba(15, 23, 42, 0.95)',
         border: '1px solid rgba(200, 157, 60, 0.3)',
@@ -734,7 +808,7 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
         gap: '0.85rem',
         boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4)',
       }}>
-        {/* Header row: Active Detachment badge + Dropdown + Apply button */}
+        {/* Header Row: Active Detachments Chips + DP Budget Meter + Manage Tray Toggle */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -742,145 +816,328 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
           flexWrap: 'wrap',
           gap: '0.75rem',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <div style={{
-              padding: '0.4rem 0.85rem',
-              background: 'rgba(200, 157, 60, 0.15)',
-              border: '1px solid #C89D3C',
-              borderRadius: '6px',
-              color: '#C89D3C',
-              fontSize: '0.8rem',
-              fontWeight: 800,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-            }}>
-              <span>⚡ Active Detachment:</span>
-              <strong style={{ color: '#F8FAFC' }}>{activeDetachmentName || 'Standard Detachment'}</strong>
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#C89D3C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              ⚡ Active Detachments:
+            </span>
 
-            {/* Detachment dropdown selector (Q5=B) */}
-            {detachments.length > 0 && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <label htmlFor="detachment-select" style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 600 }}>
-                  Switch Detachment:
-                </label>
-                <select
-                  id="detachment-select"
-                  value={selectedDetachmentName}
-                  onChange={(e) => setSelectedDetachmentName(e.target.value)}
-                  style={{
-                    padding: '0.45rem 0.85rem',
-                    background: '#0F172A',
-                    border: selectedDetachmentName !== activeDetachmentName ? '1px solid #38BDF8' : '1px solid rgba(255, 255, 255, 0.15)',
-                    borderRadius: '6px',
-                    color: '#F8FAFC',
-                    fontSize: '0.8rem',
-                    fontWeight: 700,
-                    outline: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {detachments.map(d => (
-                    <option key={d.id} value={d.name}>
-                      {d.name} {d.name === activeDetachmentName ? '(Current)' : ''}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            {activeDetachments.length === 0 ? (
+              <span style={{ fontSize: '0.8rem', color: '#94A3B8' }}>Standard Detachment (1 DP)</span>
+            ) : (
+              activeDetachments.map(d => {
+                const cost = d.dpCost || 1;
+                return (
+                  <span
+                    key={d.id}
+                    style={{
+                      padding: '0.35rem 0.65rem',
+                      background: 'rgba(200, 157, 60, 0.15)',
+                      border: '1px solid #C89D3C',
+                      borderRadius: '6px',
+                      color: '#F8FAFC',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                    }}
+                  >
+                    <span>{d.name}</span>
+                    <span style={{
+                      padding: '1px 5px',
+                      background: cost === 1 ? 'rgba(56, 189, 248, 0.25)' : cost === 2 ? 'rgba(200, 157, 60, 0.3)' : 'rgba(168, 85, 247, 0.3)',
+                      border: cost === 1 ? '1px solid #38BDF8' : cost === 2 ? '1px solid #C89D3C' : '1px solid #A855F7',
+                      color: cost === 1 ? '#38BDF8' : cost === 2 ? '#FCD34D' : '#C084FC',
+                      borderRadius: '3px',
+                      fontSize: '0.68rem',
+                      fontWeight: 800,
+                    }}>
+                      {cost} DP
+                    </span>
+                  </span>
+                );
+              })
             )}
           </div>
 
-          {/* Apply Changes button (Q7=B: disabled when current, active & pulsating when changed) */}
-          <button
-            onClick={handleApplyDetachment}
-            disabled={selectedDetachmentName === activeDetachmentName}
-            style={{
-              padding: '0.5rem 1.25rem',
-              fontSize: '0.8rem',
-              fontWeight: 800,
-              borderRadius: '6px',
-              cursor: selectedDetachmentName === activeDetachmentName ? 'not-allowed' : 'pointer',
-              opacity: selectedDetachmentName === activeDetachmentName ? 0.45 : 1,
-              background: selectedDetachmentName === activeDetachmentName
-                ? '#1E293B'
-                : 'linear-gradient(135deg, #C89D3C 0%, #F59E0B 100%)',
-              border: selectedDetachmentName === activeDetachmentName
-                ? '1px solid rgba(255,255,255,0.1)'
-                : '1px solid #FCD34D',
-              color: selectedDetachmentName === activeDetachmentName ? '#94A3B8' : '#070B12',
-              boxShadow: selectedDetachmentName !== activeDetachmentName
-                ? '0 0 16px rgba(200, 157, 60, 0.5), 0 0 6px rgba(245, 158, 11, 0.8)'
-                : 'none',
-              transition: 'all 200ms ease',
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            {/* Live DP Budget Meter */}
+            <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '0.4rem',
-            }}
-          >
-            <span>{selectedDetachmentName !== activeDetachmentName ? '⚡' : '✓'}</span>
-            <span>Apply Changes</span>
-          </button>
-        </div>
-
-        {/* Selected Detachment Rules & 4 Enhancements Preview */}
-        {previewDetachment && (
-          <div style={{
-            padding: '0.85rem 1rem',
-            background: 'rgba(0, 0, 0, 0.35)',
-            borderRadius: '6px',
-            border: '1px solid rgba(255, 255, 255, 0.06)',
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem', flexWrap: 'wrap', gap: '0.4rem' }}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                {previewDetachment.name} — Detachment Rules & Enhancements:
-              </div>
-              {selectedDetachmentName !== activeDetachmentName && (
-                <span style={{ fontSize: '0.7rem', color: '#F59E0B', fontWeight: 700 }}>
-                  ⚠️ Previewing new detachment (Click &quot;Apply Changes&quot; to activate)
-                </span>
-              )}
+              gap: '0.5rem',
+              padding: '0.35rem 0.75rem',
+              background: '#0F172A',
+              border: activeTotalDp > dpLimit ? '1px solid #EF4444' : activeTotalDp === dpLimit ? '1px solid #C89D3C' : '1px solid #38BDF8',
+              borderRadius: '6px',
+            }}>
+              <span style={{ fontSize: '0.78rem', fontWeight: 800, color: activeTotalDp > dpLimit ? '#EF4444' : activeTotalDp === dpLimit ? '#FCD34D' : '#38BDF8' }}>
+                ⚡ {activeTotalDp} / {dpLimit} DP
+              </span>
+              <span style={{ fontSize: '0.68rem', color: '#94A3B8' }}>
+                {activeTotalDp === dpLimit ? '• Budget Maxed' : `• ${dpLimit - activeTotalDp} DP left`}
+              </span>
             </div>
 
-            {previewDetachment.rules && previewDetachment.rules.length > 0 && (
-              <div style={{ fontSize: '0.75rem', color: '#CBD5E1', marginBottom: '0.6rem' }}>
-                <strong style={{ color: '#E2E8F0' }}>Detachment Rules:</strong> {previewDetachment.rules.join(', ')}
-              </div>
-            )}
+            {/* Toggle Tray Button */}
+            <button
+              onClick={() => {
+                if (!isDetachmentTrayOpen) {
+                  setStagedDetachmentNames(activeDetachmentNames);
+                }
+                setIsDetachmentTrayOpen(!isDetachmentTrayOpen);
+              }}
+              style={{
+                padding: '0.45rem 1rem',
+                fontSize: '0.8rem',
+                fontWeight: 800,
+                borderRadius: '6px',
+                cursor: 'pointer',
+                background: isDetachmentTrayOpen
+                  ? 'rgba(239, 68, 68, 0.2)'
+                  : 'linear-gradient(135deg, rgba(200, 157, 60, 0.25) 0%, rgba(200, 157, 60, 0.1) 100%)',
+                border: isDetachmentTrayOpen ? '1px solid #EF4444' : '1px solid #C89D3C',
+                color: isDetachmentTrayOpen ? '#F87171' : '#FCD34D',
+                transition: 'all 150ms ease',
+              }}
+            >
+              {isDetachmentTrayOpen ? '✕ Close Tray' : '🔧 Manage Detachments (Up to 3 DP)'}
+            </button>
+          </div>
+        </div>
 
-            {/* 4 Enhancements preview */}
-            {previewDetachment.enhancements && previewDetachment.enhancements.length > 0 && (
+        {/* ── INTERACTIVE MULTI-DETACHMENT TRAY (EXPANDABLE) ─────────────── */}
+        {isDetachmentTrayOpen && (
+          <div style={{
+            padding: '1rem',
+            background: 'rgba(11, 17, 26, 0.95)',
+            border: '1px solid rgba(200, 157, 60, 0.35)',
+            borderRadius: '6px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.85rem',
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
               <div>
-                <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#94A3B8', marginBottom: '0.35rem', textTransform: 'uppercase' }}>
-                  Available Enhancements ({previewDetachment.enhancements.length}):
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#F8FAFC' }}>
+                  Select Detachments for Force (3 DP Budget)
                 </div>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-                  gap: '0.5rem',
-                }}>
-                  {previewDetachment.enhancements.map((enh, i) => (
-                    <div
-                      key={enh.id || i}
-                      style={{
-                        padding: '0.5rem 0.65rem',
-                        background: '#0F172A',
-                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                        borderRadius: '4px',
-                      }}
-                    >
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
-                        <strong style={{ fontSize: '0.75rem', color: '#F8FAFC' }}>{enh.name}</strong>
-                        <span style={{ fontSize: '0.7rem', color: '#C89D3C', fontWeight: 800 }}>+{enh.points} pts</span>
-                      </div>
-                      <div style={{ fontSize: '0.65rem', color: '#94A3B8', lineHeight: 1.3 }}>
-                        {enh.description}
-                      </div>
-                    </div>
-                  ))}
+                <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>
+                  Pick combinations of 1 DP, 2 DP, or 3 DP detachments. Total cannot exceed 3 DP.
                 </div>
               </div>
-            )}
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div style={{
+                  padding: '0.35rem 0.65rem',
+                  background: '#0F172A',
+                  border: stagedTotalDp > dpLimit ? '1px solid #EF4444' : '1px solid #C89D3C',
+                  borderRadius: '4px',
+                  fontSize: '0.75rem',
+                  fontWeight: 800,
+                  color: stagedTotalDp > dpLimit ? '#EF4444' : '#FCD34D',
+                }}>
+                  Staged: {stagedTotalDp} / {dpLimit} DP ({dpLimit - stagedTotalDp} DP remaining)
+                </div>
+
+                <button
+                  onClick={handleApplyDetachments}
+                  disabled={stagedTotalDp === 0 || stagedTotalDp > dpLimit}
+                  style={{
+                    padding: '0.45rem 1.15rem',
+                    fontSize: '0.78rem',
+                    fontWeight: 800,
+                    borderRadius: '5px',
+                    cursor: stagedTotalDp === 0 || stagedTotalDp > dpLimit ? 'not-allowed' : 'pointer',
+                    background: stagedTotalDp === 0 || stagedTotalDp > dpLimit
+                      ? '#1E293B'
+                      : 'linear-gradient(135deg, #C89D3C 0%, #F59E0B 100%)',
+                    border: stagedTotalDp === 0 || stagedTotalDp > dpLimit
+                      ? '1px solid rgba(255,255,255,0.1)'
+                      : '1px solid #FCD34D',
+                    color: stagedTotalDp === 0 || stagedTotalDp > dpLimit ? '#94A3B8' : '#070B12',
+                    boxShadow: stagedTotalDp > 0 && stagedTotalDp <= dpLimit ? '0 0 14px rgba(200, 157, 60, 0.4)' : 'none',
+                  }}
+                >
+                  ⚡ Apply Detachment Selection
+                </button>
+              </div>
+            </div>
+
+            {/* Staged Budget Progress Bar */}
+            <div style={{ width: '100%', height: '5px', background: '#1E293B', borderRadius: '3px', overflow: 'hidden' }}>
+              <div
+                style={{
+                  width: `${Math.min(100, (stagedTotalDp / dpLimit) * 100)}%`,
+                  height: '100%',
+                  background: stagedTotalDp > dpLimit ? '#EF4444' : stagedTotalDp === dpLimit ? 'linear-gradient(90deg, #F59E0B, #C89D3C)' : 'linear-gradient(90deg, #0284C7, #38BDF8)',
+                  transition: 'width 0.3s ease',
+                }}
+              />
+            </div>
+
+            {/* Detachments Grid */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+              gap: '0.65rem',
+              maxHeight: '260px',
+              overflowY: 'auto',
+              paddingRight: '0.25rem',
+            }}>
+              {detachments.map(d => {
+                const cost = d.dpCost || 1;
+                const isSelected = stagedDetachmentNames.includes(d.name);
+                const canAdd = isSelected || (stagedTotalDp + cost <= dpLimit);
+
+                return (
+                  <div
+                    key={d.id}
+                    onClick={() => canAdd && handleToggleStagedDetachment(d)}
+                    style={{
+                      padding: '0.65rem 0.75rem',
+                      borderRadius: '6px',
+                      border: '1px solid',
+                      borderColor: isSelected ? '#C89D3C' : canAdd ? 'rgba(255, 255, 255, 0.12)' : 'rgba(255, 255, 255, 0.05)',
+                      background: isSelected
+                        ? 'linear-gradient(135deg, rgba(200, 157, 60, 0.25) 0%, rgba(20, 28, 42, 0.85) 100%)'
+                        : canAdd
+                        ? 'rgba(15, 23, 42, 0.6)'
+                        : 'rgba(15, 23, 42, 0.3)',
+                      cursor: canAdd ? 'pointer' : 'not-allowed',
+                      opacity: canAdd ? 1 : 0.45,
+                      transition: 'all 150ms ease',
+                      boxShadow: isSelected ? '0 0 10px rgba(200, 157, 60, 0.25)' : 'none',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                      gap: '0.4rem',
+                    }}
+                  >
+                    <div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.35rem', marginBottom: '0.25rem' }}>
+                        <strong style={{ fontSize: '0.8rem', color: isSelected ? '#F8FAFC' : '#CBD5E1', lineHeight: 1.25 }}>
+                          {d.name}
+                        </strong>
+                        <span style={{
+                          padding: '1px 6px',
+                          borderRadius: '4px',
+                          fontSize: '0.68rem',
+                          fontWeight: 800,
+                          background: cost === 1 ? 'rgba(56, 189, 248, 0.2)' : cost === 2 ? 'rgba(200, 157, 60, 0.2)' : 'rgba(168, 85, 247, 0.2)',
+                          border: cost === 1 ? '1px solid #38BDF8' : cost === 2 ? '1px solid #C89D3C' : '1px solid #A855F7',
+                          color: cost === 1 ? '#38BDF8' : cost === 2 ? '#C89D3C' : '#C084FC',
+                          whiteSpace: 'nowrap',
+                        }}>
+                          {cost} DP
+                        </span>
+                      </div>
+
+                      {d.rules && d.rules.length > 0 && (
+                        <div style={{ fontSize: '0.65rem', color: '#94A3B8', marginBottom: '0.2rem' }}>
+                          Rule: <span style={{ color: '#E2E8F0' }}>{d.rules.join(', ')}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.3rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                      <span style={{ fontSize: '0.62rem', color: '#64748B' }}>
+                        {d.enhancements?.length || 0} Enhancements
+                      </span>
+
+                      <span style={{
+                        fontSize: '0.68rem',
+                        fontWeight: 700,
+                        color: isSelected ? '#FCD34D' : canAdd ? '#38BDF8' : '#64748B',
+                      }}>
+                        {isSelected ? '✓ Selected' : canAdd ? `+ Add (${cost} DP)` : '🔒 Exceeds DP'}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ── ACTIVE DETACHMENTS SIDE-BY-SIDE RULES & ENHANCEMENTS CONSOLE ── */}
+        {activeDetachments.length > 0 && (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: activeDetachments.length > 1 ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
+            gap: '0.85rem',
+          }}>
+            {activeDetachments.map(d => (
+              <div
+                key={d.id}
+                style={{
+                  padding: '0.85rem 1rem',
+                  background: 'rgba(0, 0, 0, 0.35)',
+                  borderRadius: '6px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.6rem',
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <span>⚡ {d.name}</span>
+                  </div>
+                  <span style={{
+                    padding: '2px 7px',
+                    borderRadius: '4px',
+                    fontSize: '0.68rem',
+                    fontWeight: 800,
+                    background: (d.dpCost || 1) === 1 ? 'rgba(56, 189, 248, 0.2)' : (d.dpCost || 1) === 2 ? 'rgba(200, 157, 60, 0.2)' : 'rgba(168, 85, 247, 0.2)',
+                    border: (d.dpCost || 1) === 1 ? '1px solid #38BDF8' : (d.dpCost || 1) === 2 ? '1px solid #C89D3C' : '1px solid #A855F7',
+                    color: (d.dpCost || 1) === 1 ? '#38BDF8' : (d.dpCost || 1) === 2 ? '#C89D3C' : '#C084FC',
+                  }}>
+                    {d.dpCost || 1} DP
+                  </span>
+                </div>
+
+                {d.rules && d.rules.length > 0 && (
+                  <div style={{ fontSize: '0.72rem', color: '#CBD5E1' }}>
+                    <strong style={{ color: '#E2E8F0' }}>Detachment Rules: </strong>
+                    {d.rules.join(', ')}
+                  </div>
+                )}
+
+                {d.enhancements && d.enhancements.length > 0 && (
+                  <div>
+                    <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#94A3B8', marginBottom: '0.35rem', textTransform: 'uppercase' }}>
+                      Detachment Enhancements ({d.enhancements.length}):
+                    </div>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                      gap: '0.45rem',
+                    }}>
+                      {d.enhancements.map(enh => (
+                        <div
+                          key={enh.id}
+                          style={{
+                            padding: '0.45rem 0.6rem',
+                            background: '#0F172A',
+                            border: '1px solid rgba(255, 255, 255, 0.08)',
+                            borderRadius: '4px',
+                          }}
+                        >
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.15rem' }}>
+                            <strong style={{ fontSize: '0.72rem', color: '#F8FAFC' }}>{enh.name}</strong>
+                            <span style={{ fontSize: '0.68rem', color: '#C89D3C', fontWeight: 800 }}>+{enh.points} pts</span>
+                          </div>
+                          <div style={{ fontSize: '0.62rem', color: '#94A3B8', lineHeight: 1.3 }}>
+                            {enh.description}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         )}
 
@@ -1120,11 +1377,19 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                         {/* Enhancement Dropdown (Q12=A) */}
                         <div>
                           <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: '#C89D3C', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
-                            Detachment Enhancement:
+                            Detachment Enhancement (Army Limit: {assignedEnhancementsCount}/3):
                           </label>
                           <select
                             value={unit.enhancement?.id || ''}
-                            onChange={(e) => setUnitEnhancement(unit.instanceId, e.target.value || null)}
+                            onChange={(e) => {
+                              const val = e.target.value || null;
+                              if (val && !unit.enhancement && assignedEnhancementsCount >= 3) {
+                                setToastMessage('⚠️ Maximum 3 enhancements per army reached (Warhammer 40,000 11th Edition rule).');
+                                setTimeout(() => setToastMessage(null), 3500);
+                                return;
+                              }
+                              setUnitEnhancement(unit.instanceId, val);
+                            }}
                             style={{
                               width: '100%',
                               padding: '0.45rem',
@@ -1136,14 +1401,24 @@ export const RosterBuilder: React.FC<RosterBuilderProps> = ({
                             }}
                           >
                             <option value="">No Enhancement</option>
-                            {availableEnhancements.map(enh => (
-                              <option key={enh.id} value={enh.id}>
-                                {enh.name} (+{enh.points} pts)
-                              </option>
-                            ))}
+                            {availableEnhancements.map(enh => {
+                              const isEquippedElsewhere = rosterUnits.some(
+                                u => u.instanceId !== unit.instanceId && u.enhancement?.id === enh.id
+                              );
+                              return (
+                                <option key={`${enh.detachmentName || ''}_${enh.id}`} value={enh.id} disabled={isEquippedElsewhere}>
+                                  {enh.detachmentName ? `[${enh.detachmentName}] ` : ''}{enh.name} (+{enh.points} pts) {isEquippedElsewhere ? '(Equipped Elsewhere)' : ''}
+                                </option>
+                              );
+                            })}
                           </select>
                           {unit.enhancement && (
                             <div style={{ fontSize: '0.7rem', color: '#94A3B8', marginTop: '0.35rem', lineHeight: 1.3 }}>
+                              {unit.enhancement.detachmentName && (
+                                <span style={{ color: '#38BDF8', fontWeight: 700, marginRight: '0.35rem' }}>
+                                  [{unit.enhancement.detachmentName}]
+                                </span>
+                              )}
                               {unit.enhancement.description}
                             </div>
                           )}

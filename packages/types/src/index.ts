@@ -211,6 +211,7 @@ export interface RosterPayload {
   units: RosterUnitInstance[];
   totalPoints: number;
   detachmentPointsUsed: number;
+  selectedDetachments?: string[];
 }
 
 export interface UserArmy {

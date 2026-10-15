@@ -17,7 +17,8 @@
         "Unholy Avalanche",
         "Loci of Power",
         "Shudderblink"
-      ]
+      ],
+      "dpCost": 1
     }
   ],
   "stratagems": [

@@ -32,6 +32,7 @@ interface FactionSummary {
 interface DetachmentDetail {
   id: string;
   name: string;
+  dpCost?: number;
   rules: string[];
   enhancements?: { id: string; name: string; points: number; description: string }[];
 }
@@ -62,7 +63,7 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
   const [factionDetails, setFactionDetails] = useState<DetailedFaction | null>(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
 
-  const [selectedDetachment, setSelectedDetachment] = useState<string>('Gladius Task Force');
+  const [selectedDetachments, setSelectedDetachments] = useState<string[]>(['Gladius Task Force']);
   const [pointsLimit, setPointsLimit] = useState<number>(2000);
   const [customPointsInput, setCustomPointsInput] = useState<string>('2000');
   const [isCustomPoints, setIsCustomPoints] = useState<boolean>(false);
@@ -112,9 +113,9 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
           if (isMounted) {
             setFactionDetails(data);
             if (data.detachments && data.detachments.length > 0) {
-              setSelectedDetachment(data.detachments[0]!.name);
+              setSelectedDetachments([data.detachments[0]!.name]);
             } else {
-              setSelectedDetachment('Standard Detachment');
+              setSelectedDetachments(['Standard Detachment']);
             }
             if (data.subfactions && data.subfactions.length > 0) {
               setSelectedSubfactionId(data.subfactions[0]!.id);
@@ -150,10 +151,31 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
     });
   }, [factions, activeAlliance, searchQuery, includeLegends]);
 
-  const activeDetachmentObj = useMemo(() => {
-    if (!factionDetails?.detachments) return null;
-    return factionDetails.detachments.find(d => d.name === selectedDetachment) || factionDetails.detachments[0] || null;
-  }, [factionDetails, selectedDetachment]);
+  const selectedDetachmentObjs = useMemo(() => {
+    if (!factionDetails?.detachments) return [];
+    return factionDetails.detachments.filter(d => selectedDetachments.includes(d.name));
+  }, [factionDetails, selectedDetachments]);
+
+  const totalSelectedDp = useMemo(() => {
+    return selectedDetachmentObjs.reduce((sum, d) => sum + (d.dpCost || 1), 0);
+  }, [selectedDetachmentObjs]);
+
+  const handleToggleDetachment = (det: DetachmentDetail) => {
+    const cost = det.dpCost || 1;
+    const isSelected = selectedDetachments.includes(det.name);
+
+    if (isSelected) {
+      setError(null);
+      setSelectedDetachments(selectedDetachments.filter(n => n !== det.name));
+    } else {
+      if (totalSelectedDp + cost > 3) {
+        setError(`Cannot select "${det.name}" (${cost} DP). Total Detachment Points would exceed the 3 DP budget (${totalSelectedDp + cost} / 3 DP).`);
+        return;
+      }
+      setError(null);
+      setSelectedDetachments([...selectedDetachments, det.name]);
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -173,6 +195,14 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (selectedDetachments.length === 0) {
+      setError('Please select at least one detachment.');
+      return;
+    }
+    if (totalSelectedDp > 3) {
+      setError('Total Detachment Points cannot exceed 3 DP.');
+      return;
+    }
     setError(null);
     setSubmitting(true);
 
@@ -180,10 +210,17 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
       const newArmy = await createRoster({
         name: armyName.trim() || 'Untitled Roster',
         factionId: selectedFactionId,
-        detachmentPrimary: selectedDetachment,
+        detachmentPrimary: selectedDetachments[0] || 'Standard Detachment',
+        detachmentSecondary: selectedDetachments[1] || undefined,
         pointsLimit: pointsLimit || 2000,
         detachmentPointsLimit: 3,
         factionThemeOverride: selectedSubfactionId || selectedFactionId,
+        rosterPayload: {
+          units: [],
+          totalPoints: 0,
+          detachmentPointsUsed: totalSelectedDp,
+          selectedDetachments,
+        },
       });
 
       if (onArmyCreated) {
@@ -423,49 +460,165 @@ export const CreateArmyModal: React.FC<CreateArmyModalProps> = ({
             </div>
           )}
 
-          {/* Step 2: Detachment Selection & Preview (Q5=A, Q7=A) */}
+          {/* Step 2: Multi-Detachment Selection & DP Budget Meter */}
           <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#E2E8F0', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              2. Detachment Rules & Enhancements
-            </label>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <label style={{ fontSize: '0.85rem', fontWeight: 700, color: '#E2E8F0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                2. Detachments & Detachment Points (DP)
+              </label>
+
+              {/* Live DP Budget Meter */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                background: 'rgba(15, 23, 42, 0.9)',
+                padding: '0.35rem 0.75rem',
+                borderRadius: '6px',
+                border: totalSelectedDp > 3 ? '1px solid #EF4444' : totalSelectedDp === 3 ? '1px solid #C89D3C' : '1px solid #38BDF8',
+              }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 800, color: totalSelectedDp > 3 ? '#EF4444' : totalSelectedDp === 3 ? '#FCD34D' : '#38BDF8' }}>
+                  ⚡ {totalSelectedDp} / 3 DP Used
+                </span>
+                <span style={{ fontSize: '0.7rem', color: '#94A3B8' }}>
+                  {totalSelectedDp === 3 ? '• Budget Maxed (3/3 DP)' : `• ${3 - totalSelectedDp} DP remaining`}
+                </span>
+              </div>
+            </div>
+
+            {/* Visual Budget Progress Bar */}
+            <div style={{ width: '100%', height: '6px', background: '#1E293B', borderRadius: '3px', marginBottom: '0.85rem', overflow: 'hidden' }}>
+              <div
+                style={{
+                  width: `${Math.min(100, (totalSelectedDp / 3) * 100)}%`,
+                  height: '100%',
+                  background: totalSelectedDp > 3 ? '#EF4444' : totalSelectedDp === 3 ? 'linear-gradient(90deg, #F59E0B, #C89D3C)' : 'linear-gradient(90deg, #0284C7, #38BDF8)',
+                  transition: 'width 0.3s ease',
+                }}
+              />
+            </div>
 
             {loadingDetails ? (
               <div style={{ padding: '0.75rem', color: '#94A3B8', fontSize: '0.85rem' }}>Loading detachments...</div>
             ) : factionDetails?.detachments && factionDetails.detachments.length > 0 ? (
               <div>
-                <select
-                  value={selectedDetachment}
-                  onChange={(e) => setSelectedDetachment(e.target.value)}
+                {/* Detachment Cards Grid */}
+                <div
                   style={{
-                    width: '100%',
-                    padding: '0.6rem',
-                    fontSize: '0.85rem',
-                    backgroundColor: 'rgba(15, 23, 42, 0.7)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    borderRadius: '6px',
-                    color: '#F8FAFC',
-                    marginBottom: '0.75rem',
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                    gap: '0.65rem',
+                    maxHeight: '260px',
+                    overflowY: 'auto',
+                    paddingRight: '0.25rem',
+                    marginBottom: '0.85rem',
                   }}
                 >
-                  {factionDetails.detachments.map(d => (
-                    <option key={d.id} value={d.name}>
-                      {d.name} {d.enhancements && d.enhancements.length > 0 ? `(${d.enhancements.length} Enhancements)` : ''}
-                    </option>
-                  ))}
-                </select>
+                  {factionDetails.detachments.map(d => {
+                    const cost = d.dpCost || 1;
+                    const isSelected = selectedDetachments.includes(d.name);
+                    const canAdd = isSelected || (totalSelectedDp + cost <= 3);
 
-                {/* Detachment Preview Banner */}
-                {activeDetachmentObj && (
-                  <div style={{ padding: '0.75rem', background: 'rgba(15, 23, 42, 0.6)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#38BDF8', marginBottom: '0.25rem' }}>
-                      Detachment Rule: {activeDetachmentObj.rules.join(', ') || 'Standard Battle Formation'}
-                    </div>
-                    {activeDetachmentObj.enhancements && activeDetachmentObj.enhancements.length > 0 && (
-                      <div style={{ fontSize: '0.7rem', color: '#94A3B8' }}>
-                        <span style={{ color: '#C89D3C', fontWeight: 600 }}>Enhancements Available: </span>
-                        {activeDetachmentObj.enhancements.map(e => `${e.name} (${e.points} pts)`).join(' • ')}
+                    return (
+                      <div
+                        key={d.id}
+                        onClick={() => canAdd && handleToggleDetachment(d)}
+                        style={{
+                          padding: '0.75rem',
+                          borderRadius: '6px',
+                          border: '1px solid',
+                          borderColor: isSelected ? '#C89D3C' : canAdd ? 'rgba(255, 255, 255, 0.12)' : 'rgba(255, 255, 255, 0.05)',
+                          background: isSelected
+                            ? 'linear-gradient(135deg, rgba(200, 157, 60, 0.25) 0%, rgba(20, 28, 42, 0.85) 100%)'
+                            : canAdd
+                            ? 'rgba(15, 23, 42, 0.6)'
+                            : 'rgba(15, 23, 42, 0.3)',
+                          cursor: canAdd ? 'pointer' : 'not-allowed',
+                          opacity: canAdd ? 1 : 0.45,
+                          transition: 'all 150ms ease',
+                          boxShadow: isSelected ? '0 0 12px rgba(200, 157, 60, 0.25)' : 'none',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          gap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.4rem', marginBottom: '0.35rem' }}>
+                            <strong style={{ fontSize: '0.82rem', color: isSelected ? '#F8FAFC' : '#CBD5E1', lineHeight: 1.25 }}>
+                              {d.name}
+                            </strong>
+                            <span style={{
+                              padding: '2px 7px',
+                              borderRadius: '4px',
+                              fontSize: '0.7rem',
+                              fontWeight: 800,
+                              background: cost === 1 ? 'rgba(56, 189, 248, 0.2)' : cost === 2 ? 'rgba(200, 157, 60, 0.2)' : 'rgba(168, 85, 247, 0.2)',
+                              border: cost === 1 ? '1px solid #38BDF8' : cost === 2 ? '1px solid #C89D3C' : '1px solid #A855F7',
+                              color: cost === 1 ? '#38BDF8' : cost === 2 ? '#C89D3C' : '#C084FC',
+                              whiteSpace: 'nowrap',
+                            }}>
+                              {cost} DP
+                            </span>
+                          </div>
+
+                          {d.rules && d.rules.length > 0 && (
+                            <div style={{ fontSize: '0.68rem', color: '#94A3B8', marginBottom: '0.25rem' }}>
+                              Rule: <span style={{ color: '#E2E8F0' }}>{d.rules.join(', ')}</span>
+                            </div>
+                          )}
+                        </div>
+
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.35rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                          <span style={{ fontSize: '0.65rem', color: '#64748B' }}>
+                            {d.enhancements?.length || 0} Enhancements
+                          </span>
+
+                          <span style={{
+                            fontSize: '0.7rem',
+                            fontWeight: 700,
+                            color: isSelected ? '#FCD34D' : canAdd ? '#38BDF8' : '#64748B',
+                          }}>
+                            {isSelected ? '✓ Selected' : canAdd ? `+ Add (${cost} DP)` : '🔒 Exceeds DP'}
+                          </span>
+                        </div>
                       </div>
-                    )}
+                    );
+                  })}
+                </div>
+
+                {/* Selected Detachments Summary & Combined Rules */}
+                {selectedDetachmentObjs.length > 0 && (
+                  <div style={{ padding: '0.85rem', background: 'rgba(15, 23, 42, 0.75)', borderRadius: '6px', border: '1px solid rgba(200, 157, 60, 0.25)' }}>
+                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#C89D3C', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.04em' }}>
+                      Active Force Detachments ({selectedDetachmentObjs.length}) — Combined DP: {totalSelectedDp} / 3 DP
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                      {selectedDetachmentObjs.map(d => (
+                        <div key={d.id} style={{ padding: '0.5rem 0.65rem', background: 'rgba(0, 0, 0, 0.3)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.06)' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
+                            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#38BDF8' }}>
+                              ⚡ {d.name}
+                            </span>
+                            <span style={{ fontSize: '0.68rem', fontWeight: 800, color: '#FCD34D' }}>
+                              {d.dpCost || 1} DP
+                            </span>
+                          </div>
+
+                          <div style={{ fontSize: '0.7rem', color: '#CBD5E1', marginBottom: '0.25rem' }}>
+                            <strong style={{ color: '#94A3B8' }}>Rules: </strong>{d.rules.join(', ') || 'Standard Battle Formation'}
+                          </div>
+
+                          {d.enhancements && d.enhancements.length > 0 && (
+                            <div style={{ fontSize: '0.65rem', color: '#94A3B8' }}>
+                              <strong style={{ color: '#C89D3C' }}>Enhancements: </strong>
+                              {d.enhancements.map(e => `${e.name} (${e.points} pts)`).join(' • ')}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

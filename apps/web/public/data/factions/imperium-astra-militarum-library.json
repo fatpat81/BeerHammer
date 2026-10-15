@@ -7,7 +7,8 @@
     {
       "name": "Detachment",
       "id": "406d-8707-c597-abd6",
-      "rules": []
+      "rules": [],
+      "dpCost": 1
     }
   ],
   "stratagems": [

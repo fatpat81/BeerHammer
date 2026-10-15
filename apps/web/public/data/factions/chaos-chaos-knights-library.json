@@ -16,7 +16,8 @@
         "Masters of the Pack",
         "Annihilate the Unworthy",
         "Scenting Fear"
-      ]
+      ],
+      "dpCost": 1
     }
   ],
   "stratagems": [

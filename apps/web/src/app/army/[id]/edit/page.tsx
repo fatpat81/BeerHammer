@@ -87,13 +87,15 @@ export default function RosterEditPage() {
     setSaveState('saving');
     try {
       const totalPoints = units.reduce((sum, u) => sum + u.pointsCost, 0);
-      const detachmentPointsUsed = units.reduce((sum, u) => sum + (u.catalogUnit?.dpCost || 0), 0);
+      const activeDets = (army?.rosterPayload as any)?.selectedDetachments || [army?.detachmentPrimary, army?.detachmentSecondary].filter(Boolean);
+      const detachmentPointsUsed = (army?.rosterPayload as any)?.detachmentPointsUsed || 0;
 
       await updateRoster(armyId, {
         rosterPayload: {
           units,
           totalPoints,
           detachmentPointsUsed,
+          selectedDetachments: activeDets,
         },
         factionThemeOverride: activeTheme,
       });
@@ -106,7 +108,7 @@ export default function RosterEditPage() {
       setSaveState('saved');
       setLastSavedTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
     }
-  }, [armyId, activeTheme]);
+  }, [armyId, activeTheme, army]);
 
   const handleRosterChange = useCallback((units: RosterUnit[]) => {
     currentUnitsRef.current = units;
@@ -132,21 +134,36 @@ export default function RosterEditPage() {
     performSave(currentUnitsRef.current);
   };
 
-  const handleDetachmentChange = useCallback(async (newDetachmentName: string) => {
+  const handleDetachmentChange = useCallback(async (newPrimary: string, allSelectedDetachments?: string[], totalDp?: number) => {
     if (!army) return;
-    const updatedArmy = { ...army, detachmentPrimary: newDetachmentName };
+    const dets = allSelectedDetachments && allSelectedDetachments.length > 0 ? allSelectedDetachments : [newPrimary];
+    const primary = dets[0] || newPrimary;
+    const secondary = dets[1] || null;
+    const dpUsed = totalDp !== undefined ? totalDp : ((army.rosterPayload as any)?.detachmentPointsUsed || 0);
+
+    const updatedArmy: UserArmy = {
+      ...army,
+      detachmentPrimary: primary,
+      detachmentSecondary: secondary,
+      rosterPayload: {
+        ...army.rosterPayload,
+        selectedDetachments: dets,
+        detachmentPointsUsed: dpUsed,
+      },
+    };
     setArmy(updatedArmy);
     setSaveState('saving');
     try {
       const units = currentUnitsRef.current;
       const totalPoints = units.reduce((sum, u) => sum + (u.pointsCost || 0), 0);
-      const detachmentPointsUsed = units.reduce((sum, u) => sum + (u.catalogUnit?.dpCost || 0), 0);
       await updateRoster(armyId, {
-        detachmentPrimary: newDetachmentName,
+        detachmentPrimary: primary,
+        detachmentSecondary: secondary,
         rosterPayload: {
           units,
           totalPoints,
-          detachmentPointsUsed,
+          detachmentPointsUsed: dpUsed,
+          selectedDetachments: dets,
         },
       });
       setSaveState('saved');
@@ -216,7 +233,7 @@ export default function RosterEditPage() {
               </span>
             </div>
             <div className="app-subtitle">
-              {army?.detachmentPrimary} • Limit: {army?.pointsLimit || 2000} pts
+              {((army?.rosterPayload as any)?.selectedDetachments || [army?.detachmentPrimary, army?.detachmentSecondary].filter(Boolean)).join(' + ') || 'Standard Detachment'} • Limit: {army?.pointsLimit || 2000} pts • DP: {(army?.rosterPayload as any)?.detachmentPointsUsed || 0} / 3 DP
             </div>
           </div>
         </div>
@@ -328,6 +345,8 @@ export default function RosterEditPage() {
               factionId={army?.factionId || 'imperium-space-marines'}
               subfactionId={army?.factionThemeOverride}
               detachmentPrimary={army?.detachmentPrimary}
+              detachmentSecondary={army?.detachmentSecondary}
+              selectedDetachments={(army?.rosterPayload as any)?.selectedDetachments}
               pointsLimit={army?.pointsLimit || 2000}
               dpLimit={army?.detachmentPointsLimit || 3}
               initialUnits={initialUnits}
