@@ -4540,7 +4540,7 @@
       "factionId": "chaos-chaos-daemons-library",
       "factionName": "Daemons Library",
       "battlefieldRole": "MOUNTED",
-      "basePoints": 0,
+      "basePoints": 80,
       "stats": {
         "movement": "14\"",
         "toughness": 6,
@@ -4640,7 +4640,7 @@
       "factionId": "chaos-chaos-daemons-library",
       "factionName": "Daemons Library",
       "battlefieldRole": "MOUNTED",
-      "basePoints": 0,
+      "basePoints": 65,
       "stats": {
         "movement": "14\"",
         "toughness": 6,

@@ -672,3 +672,45 @@ describe('getUnitBaseModelThreshold', () => {
   });
 });
 
+describe('Munitorum Field Manual points checking & tier calculation', () => {
+  it('correctly calculates points for MFM base tiers and understrength/overstrength scaling', () => {
+    // 5-man Terminator Squad at 175 base points
+    const res5 = calculateUnitSquadPoints({ basePoints: 175, modelCount: 5, baseModelCount: 5 });
+    expect(res5.totalPoints).toBe(175);
+    expect(res5.tierMultiplier).toBe(1);
+    expect(res5.tierMaxModels).toBe(5);
+    expect(res5.isUnderstrength).toBe(false);
+
+    // 6-man squad pays for 10-man tier (2x 175 = 350 pts)
+    const res6 = calculateUnitSquadPoints({ basePoints: 175, modelCount: 6, baseModelCount: 5 });
+    expect(res6.totalPoints).toBe(350);
+    expect(res6.tierMultiplier).toBe(2);
+    expect(res6.tierMaxModels).toBe(10);
+    expect(res6.isUnderstrength).toBe(true);
+
+    // 10-man squad pays full tier (350 pts)
+    const res10 = calculateUnitSquadPoints({ basePoints: 175, modelCount: 10, baseModelCount: 5 });
+    expect(res10.totalPoints).toBe(350);
+    expect(res10.tierMultiplier).toBe(2);
+    expect(res10.tierMaxModels).toBe(10);
+    expect(res10.isUnderstrength).toBe(false);
+
+    // Single model character ignores squad scaling
+    const char = calculateUnitSquadPoints({ basePoints: 90, modelCount: 1, baseModelCount: 1, isCharacter: true });
+    expect(char.totalPoints).toBe(90);
+    expect(char.tierMultiplier).toBe(1);
+    expect(char.tierMaxModels).toBe(1);
+  });
+
+  it('correctly includes MFM enhancement points in unit total points', () => {
+    const res = calculateUnitSquadPoints({
+      basePoints: 90,
+      modelCount: 1,
+      baseModelCount: 1,
+      isCharacter: true,
+      enhancementPoints: 20,
+    });
+    expect(res.totalPoints).toBe(110);
+  });
+});
+

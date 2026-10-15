@@ -10997,7 +10997,7 @@
       "factionId": "aeldari-aeldari-library",
       "factionName": "Aeldari - Aeldari Library",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 70,
       "stats": {
         "movement": "14\"",
         "toughness": 6,

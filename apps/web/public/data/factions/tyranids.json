@@ -1765,7 +1765,7 @@
       "factionId": "tyranids",
       "factionName": "Tyranids",
       "battlefieldRole": "MONSTER",
-      "basePoints": 0,
+      "basePoints": 90,
       "stats": {
         "movement": "8\"",
         "toughness": 9,

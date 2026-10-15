@@ -43139,7 +43139,7 @@
       "factionId": "imperium-space-marines",
       "factionName": "Adeptus Astartes (Space Marines)",
       "battlefieldRole": "MOUNTED",
-      "basePoints": 0,
+      "basePoints": 55,
       "stats": {
         "movement": "12\"",
         "toughness": 5,
@@ -45462,7 +45462,7 @@
       "factionId": "imperium-space-marines",
       "factionName": "Adeptus Astartes (Space Marines)",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 75,
       "stats": {
         "movement": "3\"",
         "toughness": 6,
@@ -47591,7 +47591,7 @@
       "factionId": "imperium-space-marines",
       "factionName": "Adeptus Astartes (Space Marines)",
       "battlefieldRole": "DEDICATED_TRANSPORT",
-      "basePoints": 0,
+      "basePoints": 15,
       "stats": {
         "movement": "14\"",
         "toughness": 7,

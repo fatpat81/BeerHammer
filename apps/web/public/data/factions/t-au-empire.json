@@ -6358,7 +6358,7 @@
       "factionId": "t-au-empire",
       "factionName": "T'au Empire",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 55,
       "stats": {
         "movement": "8\"",
         "toughness": 6,

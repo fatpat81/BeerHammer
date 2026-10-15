@@ -4461,7 +4461,7 @@
       "factionId": "necrons",
       "factionName": "Necrons",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 60,
       "stats": {
         "movement": "-",
         "toughness": 9,

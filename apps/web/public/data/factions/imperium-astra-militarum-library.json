@@ -7646,7 +7646,7 @@
       "factionId": "imperium-astra-militarum-library",
       "factionName": "Astra Militarum - Library",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 40,
       "stats": {
         "movement": "-",
         "toughness": 5,
@@ -7728,7 +7728,7 @@
       "factionId": "imperium-astra-militarum-library",
       "factionName": "Astra Militarum - Library",
       "battlefieldRole": "INFANTRY",
-      "basePoints": 0,
+      "basePoints": 35,
       "stats": {
         "movement": "6\"",
         "toughness": 4,
@@ -9295,7 +9295,7 @@
       "factionId": "imperium-astra-militarum-library",
       "factionName": "Astra Militarum - Library",
       "battlefieldRole": "OTHER",
-      "basePoints": 0,
+      "basePoints": 45,
       "stats": {
         "movement": "-",
         "toughness": 4,
@@ -14472,7 +14472,7 @@
       "factionId": "imperium-astra-militarum-library",
       "factionName": "Astra Militarum - Library",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 70,
       "stats": {
         "movement": "12\"",
         "toughness": 8,

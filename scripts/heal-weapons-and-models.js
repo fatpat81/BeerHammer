@@ -220,10 +220,30 @@ const CANONICAL_FALLBACKS = {
   }
 };
 
+function findPoints(node, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 5) return 0;
+  if (node.costs && Array.isArray(node.costs)) {
+    const p = node.costs.find(c => c.name === 'pts');
+    if (p && typeof p.value === 'number' && p.value > 0) return p.value;
+  }
+  for (const k of ['selectionEntries', 'selectionEntryGroups', 'entryLinks']) {
+    if (Array.isArray(node[k])) {
+      for (const child of node[k]) {
+        let target = child;
+        if (child.targetId) target = globalEntryMap.get(child.targetId) || child;
+        const res = findPoints(target, depth + 1);
+        if (res > 0) return res;
+      }
+    }
+  }
+  return 0;
+}
+
 const dirs = [factionsDir, webFactionsDir];
 let totalWeaponsAdded = 0;
 let totalUnitsHealed = 0;
 let totalModelsFixed = 0;
+let totalPointsHealed = 0;
 
 dirs.forEach(dir => {
   if (!fs.existsSync(dir)) return;
@@ -287,6 +307,18 @@ dirs.forEach(dir => {
         }
       }
 
+      // 3. Heal MFM basePoints if currently 0
+      if (!ds.basePoints || ds.basePoints === 0) {
+        if (entry) {
+          const mfmPoints = findPoints(entry);
+          if (mfmPoints > 0) {
+            ds.basePoints = mfmPoints;
+            modified = true;
+            totalPointsHealed++;
+          }
+        }
+      }
+
       if (modified) totalUnitsHealed++;
     });
 
@@ -299,3 +331,4 @@ dirs.forEach(dir => {
 console.log(`\nSuccessfully healed datasheets!`);
 console.log(`- Total weapons added: ${totalWeaponsAdded}`);
 console.log(`- Total model compositions updated: ${totalModelsFixed}`);
+console.log(`- Total MFM points values healed: ${totalPointsHealed}`);

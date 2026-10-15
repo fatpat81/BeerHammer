@@ -9648,7 +9648,7 @@
       "factionId": "aeldari-craftworlds",
       "factionName": "Aeldari (Craftworlds)",
       "battlefieldRole": "VEHICLE",
-      "basePoints": 0,
+      "basePoints": 70,
       "stats": {
         "movement": "14\"",
         "toughness": 6,
