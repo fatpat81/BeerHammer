@@ -29,7 +29,7 @@ Automated behavioural coverage in this monorepo sits in exactly two places: **pu
 ## The unit-test layer: `packages/rules-engine-11e`
 
 <!-- openwiki: broken internal link [../../packages/rules-engine-11e/src/__tests__] file "../../packages/rules-engine-11e/src/__tests__" does not exist. Fix the href or restore the target, then delete this comment. -->
-Four suites under [src/__tests__/](../../packages/rules-engine-11e/src/__tests__) contain 53 `it` cases, one suite per engine module, all pure functions over literal fixtures — no database, no network, no DOM:
+Four suites under [src/__tests__/](../../packages/rules-engine-11e/src/__tests__) contain 73 `it` cases, one suite per engine module, all pure functions over literal fixtures — no database, no network, no DOM:
 
 - [detachment-validator.test.ts](../../packages/rules-engine-11e/src/__tests__/detachment-validator.test.ts) — points limit (`POINTS_EXCEEDED`, exact-limit is legal), detachment-point budget (`DP_EXCEEDED`), Rule of Three including the `BATTLELINE` and `DEDICATED_TRANSPORT` exemptions, orphan `attachedLeaderId` detection, and `validateRoster` aggregating several violations at once.
 - [attachment-resolver.test.ts](../../packages/rules-engine-11e/src/__tests__/attachment-resolver.test.ts) — leader/bodyguard compatibility pairs, effective Toughness while bodyguards live, keyword merge/dedup/sort, wound allocation order including the `PRECISION` override, and unit-destroyed/alive-bodyguard counting.
@@ -118,4 +118,6 @@ flowchart TD
 **Extension points.** To give the API its first real gate, add a `test` script (e.g. Vitest + supertest against the Express `app`) to `apps/api` — `turbo run test`, `dev.sh verify`, and the GitLab test stage pick it up with no other wiring. To cover the fallback-vs-API divide instead of hiding it, run `dev.sh up` and set `PLAYWRIGHT_TEST_BASE_URL` plus a seed-backed roster, or add Playwright `dependencies` that start the compose stack. To gate schema changes, add a CI job that runs `prisma migrate deploy` and `prisma seed` against a service container — today that only happens inside the dev loop.
 
 Related: [CI/CD Workflows](../operations/ci-cd-pipelines.md), [Development Environment & Scripts](../operations/dev-environment.md), [Rules Engine Overview](../rules-engine/rules-engine-overview.md), [Roster Validation](../rules-engine/roster-validation.md).
+ [Roster Validation](../rules-engine/roster-validation.md).
+/operations/ci-cd-pipelines.md), [Development Environment & Scripts](../operations/dev-environment.md), [Rules Engine Overview](../rules-engine/rules-engine-overview.md), [Roster Validation](../rules-engine/roster-validation.md).
  [Roster Validation](../rules-engine/roster-validation.md).

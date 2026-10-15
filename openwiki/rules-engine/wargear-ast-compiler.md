@@ -1,8 +1,8 @@
 ---
 type: subsystem-deep-dive
-title: Wargear AST Compiler
-description: How packages/rules-engine-11e/src/wargear-parser.ts compiles natural-language Wahapedia wargear prose into WargearRuleAST nodes, the five regex line patterns and helper semantics, and where the resulting ASTs live (the Battle Mode rewrite removed the RosterBuilder UI consumer, so today only Vitest exercises the compiler; the conditionTree JSON column remains a dead end).
-tags: [rules-engine, wargear-parser, regex, ast, roster-builder, fragility, wahapedia]
+title: Wargear AST Compiler & Squad Wargear Engine
+description: 'How packages/rules-engine-11e/src/wargear-parser.ts works: the regex compiler that turns Wahapedia wargear prose into WargearRuleAST nodes, plus the production squad-wargear layer built on top — getUnitBaseModelThreshold, calculateUnitSquadPoints, buildUnitWargearSlots, validateWargearLoadout and resolveEquippedWeapons — which RosterBuilder, Battle Mode and ComplianceDashboard now call live for wargear slots, tournament-limit validation and squad-tier point pricing.'
+tags: [rules-engine, wargear-parser, regex, ast, roster-builder, squad-points, wargear-validation, fragility, wahapedia]
 ---
 
 `packages/rules-engine-11e/src/wargear-parser.ts` (labelled §7.1 in the source header) is the
@@ -13,6 +13,17 @@ in, at most one AST node out, and the whole rule model is whatever the five rege
 capture. See [Rules Engine Overview](rules-engine-overview.md) for where this module sits among the
 package's four, and [Data Model & Migrations](../data/data-model-and-migrations.md) for the catalog
 tables the prose comes from.
+
+Since the compiler landed it has grown a second, much larger responsibility: a **squad wargear
+engine** (`buildUnitWargearSlots`, `validateWargearLoadout`, `resolveEquippedWeapons`,
+`getUnitBaseModelThreshold`, `calculateUnitSquadPoints`) that models real 10e/11e squad model
+thresholds, tier point pricing and tournament wargear limits. Unlike the regex compiler — which the
+Battle Mode rewrite had stripped of all production callers — this squad layer is wired straight into
+the browser: `RosterBuilder.tsx`, the Battle Mode route (`app/army/[id]/page.tsx`) and
+`ComplianceDashboard.tsx` all import it, so changes here move what the console shows. The prose
+compiler still feeds the pipeline (its ASTs seed the option lists the slot builder consumes); the
+two halves are documented below.
+
 
 ## Entry point and input normalisation
 
@@ -120,12 +131,12 @@ Three generated properties are load-bearing for consumers and are not enforced b
 
 - **`id` is `rule_gen_<Date.now()>_<lineIndex>`.** Structure is deterministic; identity is not.
   Recompiling the same text yields new ids, so any `wargearSelections` entry keyed by `ruleId` is
-  invalidated by the next recompile. `RosterBuilder` already works around this by keying rule cards
-  on `rule.id + '-' + idx` instead of the id alone
-  ([`RosterBuilder.tsx#L623-L625`](../../apps/web/src/components/RosterBuilder.tsx#L623-L625)).
-- **`pointsDelta` is always `0`.** Pricing is never derived from prose, which makes the "+Npts" badge
-  in `WargearRuleCard` unreachable in practice and leaves `RosterUnit.pointsCost` pinned to
-  `catalogUnit.basePoints` regardless of what is selected.
+  invalidated by the next recompile — and selections are now persisted, which makes this a live
+  hazard rather than a theoretical one (see "Where the ASTs land").
+- **`pointsDelta` is always `0`.** Pricing is never derived from prose. The UI now prices units
+  through `calculateUnitSquadPoints` (baseline × squad-tier multiplier) plus the caller's enhancement
+  points instead of trusting option deltas, so a non-zero `pointsDelta` from a compile would still
+  be ignored by point math.
 - **Unmatched lines are dropped silently.** There is no error, warning, log, or "unknown" node type;
   a line that matches none of the five patterns simply produces no AST entry, and fully unrecognised
   input compiles to `[]` (asserted by
@@ -150,60 +161,97 @@ existing ones only if you have checked that no currently-matching corpus line is
 add the offending corpus line as a test — there is no diagnostic that would otherwise tell you a
 datasheet's prose stopped compiling.
 
-## Where the ASTs land
+## The squad wargear engine (production layer)
 
-**Status note:** the compiler no longer has any production caller. The Battle Mode rewrite
-removed `WargearRuleCard` and the AST-preview `useMemo` from `RosterBuilder.tsx`; only the
-`compileWahapediaWargear` import remains, unused
-([Console & Builder Components](../webapp/console-and-builder-components.md)). The Vitest suite
-is the only live consumer. The flow below describes the removed browser path.
+The functions below now do the real work in the browser; the prose compiler only seeds their
+option lists. All are exported from the package barrel
+([`src/index.ts`](../../packages/rules-engine-11e/src/index.ts)) and are pure functions over data
+the caller supplies, in the package's "push data in" convention.
+
+- **`getUnitBaseModelThreshold(unit)`** — infers the canonical tabletop baseline squad size from
+  the unit *name*, battlefield role and keywords via ordered regex tiers, because raw BSData
+  `modelComposition` often lists 1 model even for squads. Tiers, first-match-wins: explicit unique
+  retinues (e.g. Calgar → 3, Gaunt's Ghosts → 6), single-model characters/vehicles/monsters,
+  10-model hordes (cultists, Boyz, Tactical squads…), 4-model Custodes guards, 3-model elite
+  fireteams (Aggressors, Crisis, Deathshroud…), **Terminators → 5 (scale to 10)**, then standard
+  5-model infantry/battleline. Name-regex over keywords means a renamed datasheet silently falls to
+  the next tier — the biggest fragility in this layer.
+- **`calculateUnitSquadPoints({ basePoints, modelCount, baseModelCount, isCharacter, enhancementPoints })`** —
+  tier pricing: `tierMultiplier = ceil(modelCount / threshold)`, so 6 models on a 5-man base pay
+  the full 10-man price, and `isUnderstrength` flags off-tier counts. Characters and
+  single-model units always pay `basePoints + enhancementPoints`. `RosterBuilder` stores the result
+  in `RosterUnit.pointsCost`, which is what the API-side `POINTS_SHIFT` audit compares against
+  `basePoints` ([Roster Validation](roster-validation.md)) — a mismatch between the engine's
+  threshold table and the audit's expectation surfaces as AMBER discrepancies.
+- **`buildUnitWargearSlots({ catalogWeapons, wargearRules, isLeader, modelCount, abilities, unitName, keywords })`** —
+  produces the editable `WargearSlot[]` UI (categories `LEADER` / `SPECIAL` / `HEAVY` / `ADD_ON`):
+  leader/bodyguard split, squad special & heavy slots (max 1 per 5 models, or per-model for heavy
+  squads), trooper ranged swaps, melee alternatives, and support add-ons sniffed from unit
+  abilities (e.g. Teleport Homer). It merges the compiled AST options with fallback slots derived
+  from the catalog weapon list, so units with no parseable prose still get editable slots.
+- **`validateWargearLoadout({ modelCount, wargearSelections, rules, catalogWeapons })`** — enforces
+  the scale-factor and `maxSelections` constraints the old compiler only *displayed*: excess emits
+  `WargearValidationError { severity: 'RED' }` tournament-limit messages. `RosterBuilder` runs it
+  on every add/selection change, and `ComplianceDashboard` runs it per unit during the audit
+  ([Console & Builder Components](../webapp/console-and-builder-components.md)).
+- **`resolveEquippedWeapons(catalogWeapons, modelCount, selections, isLeader)`** — computes the
+  `EquippedWeaponBadge[]` Battle Mode renders per unit: default baseline loadout scaled by model
+  count, replaced-weapon deduction, and multi-profile firing modes (frag & krak) resolved together.
+  The Battle Mode route (`app/army/[id]/page.tsx`) calls it with selections loaded from the persisted
+  roster, falling back to `getUnitBaseModelThreshold` when `modelCount` is absent.
+- **`normalizeBaseWeaponName` / `cleanDisplayName`** — strip firing-mode prefixes (`➤`, `•`) and
+  suffixes (`- frag`, `- krak`, …) so slot construction and badges can group weapon variants.
+
+## Where the ASTs land
 
 ```mermaid
 flowchart LR
-  W["Wahapedia prose"] --> T["wargear_rules_11e.raw_text"]
-  T -->|"include wargearRules"| API["GET /api/datasheets"]
-  API --> RAW["CatalogUnit.wargearRulesRaw"]
-  RAW -->|"useMemo per expanded unit"| C["compileWahapediaWargear"]
-  C --> CARD["WargearRuleCard selection state"]
-  CARD -.->|"never written back"| SEL["RosterUnit.wargearSelections always empty"]
-  T -.->|"column exists, no reader or writer"| CT["wargear_rules_11e.condition_tree JSON"]
+  W["Wahapedia / faction JSON prose"] --> RAW["CatalogUnit.wargearRulesRaw"]
+  RAW -->|"per unit, at selection and audit time"| C["compileWahapediaWargear"]
+  C --> SLOTS["buildUnitWargearSlots option lists"]
+  SLOTS --> UI["RosterBuilder wargear slot UI"]
+  UI --> SEL["RosterUnit.wargearSelections (persisted in rosterPayload)"]
+  SEL --> V["validateWargearLoadout (RosterBuilder + ComplianceDashboard)"]
+  SEL --> B["resolveEquippedWeapons (Battle Mode badges)"]
+  C --> V
 ```
 
-*Prose travels from Postgres `raw_text` to a freshly compiled AST at render time; the `conditionTree` JSON column is a dead end.*
+*Prose is recompiled at selection/audit time; selections are now real state — persisted with the roster, validated client-side, and rendered as equipped-weapon badges.*
 
-- `RosterBuilder` recompiles on demand inside a `useMemo` keyed on the expanded unit instance
-  ([`RosterBuilder.tsx#L272-L278`](../../apps/web/src/components/RosterBuilder.tsx#L272-L278));
-  the result is render-only, one `WargearRuleCard` per node.
-- `WargearRuleCard` keeps the chosen option in **local `useState`**
-  ([`RosterBuilder.tsx#L657-L726`](../../apps/web/src/components/RosterBuilder.tsx#L657-L726)) and
-  never calls back into the roster. `RosterUnit.wargearSelections` is initialised to `[]` when a unit
-  is added and mutated nowhere, so the "client-side selection validation" the file header promises is
-  a toggle highlight: `maxSelections` is displayed (numbers verbatim, anything else as `∞`, which is
-  how both `'ALL'` and the scale-factor string `floor(unit.modelCount / N)` render), and
-  `consumedSlots` / `isMutuallyExclusive` are never read by any consumer in the repository. Because
-  the max is only printed and never enforced, no client code evaluates the scale expression either —
-  it is a display string, not a constraint language.
+- `RosterBuilder` compiles per unit when a unit's wargear UI renders, when selections change, and
+  during its batch revalidation pass, then feeds the AST to `buildUnitWargearSlots` and
+  `validateWargearLoadout` ([`RosterBuilder.tsx`](../../apps/web/src/components/RosterBuilder.tsx)).
+  Selections are stored on `RosterUnit.wargearSelections` using the typed
+  `WargearSelection` shape (`ruleId` / `selectedOptionId` / `count`, plus the new optional
+  `weaponName` / `replacesWeaponName` / `role` fields), and reach Postgres through the edit page's
+  auto-save ([Roster Persistence workflow](../workflows/roster-persistence-and-offline-sync.md)).
+  The `optionId` vs `selectedOptionId` shape split documented in earlier revisions of this page is
+  gone: the local interface imports `WargearSelection` from `@forceorg/types` directly.
+- `ComplianceDashboard` recompiles `catalogUnit.wargearRulesRaw` per unit and runs
+  `validateWargearLoadout`, so RED tournament-limit errors show up in the audit modal client-side.
+- The edit page offers a **"reset wargear to legal"** action (`onResetWargearToLegal`) that clears
+  every unit's `wargearSelections` and `validationErrors`, sets `needsVerification: false`, and
+  saves — the recovery path when persisted selections stop validating against a recompiled AST.
+- `WargearSelection` is keyed by `ruleId = rule_gen_<timestamp>_<index>`, which changes on every
+  recompile — yet selections now persist across sessions. Nothing yet rewrites old `ruleId`s on
+  load, so replayed rosters validate against rules whose ids may not match the freshly compiled
+  set; `validateWargearLoadout` tolerates this (unknown rule ids simply skip the AST checks), but
+  the fallback slots built from catalog weapons are what make reloaded rosters still editable.
 - Nothing persists ASTs. `WargearRule.conditionTree Json` in
-  [`schema.prisma#L164-L177`](../../packages/db-client/prisma/schema.prisma#L164-L177) is *named* as
-  the AST home, but no application code reads or writes it; it exists only as part of the row JSON
-  serialised out by `include: { wargearRules: true }`. The live shape is therefore
-  "store prose, recompile at read time", and the AST and the column can drift apart with no test
-  failing. Note also that `prisma/seed.ts` inserts no `wargear_rules_11e` rows, so against a freshly
-  seeded database the live path yields an empty rule list and the demo prose takes over.
-- The two selection shapes in the codebase disagree: `@forceorg/types` declares
-  `WargearSelection { ruleId, selectedOptionId, count }`
-  ([`types/src/index.ts#L177-L181`](../../packages/types/src/index.ts#L177-L181)) while
-  `RosterBuilder`'s local `RosterUnit` uses `{ ruleId, optionId, count }`. Anything that eventually
-  wires selections to persistence must pick one deliberately rather than casting between them.
+  [`schema.prisma#L164-L177`](../../packages/db-client/prisma/schema.prisma#L164-L177) remains
+  unread and unwritten; the live shape is still "store prose, recompile at read time."
 
 ## Test guardrails
 
 [`__tests__/wargear-parser.test.ts`](../../packages/rules-engine-11e/src/__tests__/wargear-parser.test.ts)
-(14 vitest cases, part of the suite the CI coverage gate runs — see
+(34 vitest cases, part of the suite the CI coverage gate runs — see
 [CI/CD Pipelines](../operations/ci-cd-pipelines.md)) pins `slugify` output shape,
 `parseCountAndName` count-defaulting and bullet stripping, `parseOptionList` comma/`or` splitting
-with `1 of the following` filtering, each of the five prose patterns, multi-`<li>` HTML input, and
-the empty-array case for unrecognised text. It asserts nothing about `consumedSlots` inference,
-`pointsDelta`, or `rule_gen_` id instability, and the mis-parsing cases above are untested — so
+with `1 of the following` filtering, each of the five prose patterns, multi-`<li>` HTML input, the
+empty-array case for unrecognised text, and the squad layer: scale-factor excess as a RED error,
+`resolveEquippedWeapons` baseline/replacement/firing-mode cases, `calculateUnitSquadPoints` tier
+charging (6-on-5 pays 10-man), `getUnitBaseModelThreshold` across Terminator/elite/horde/character
+categories, and support-gear slot derivation from abilities. It still asserts nothing about
+`consumedSlots` inference, `pointsDelta`, or `rule_gen_` id instability, and the mis-parsing cases above are untested — so
 those behaviours can change silently, while any change to the five patterns' captured
 `scope`/`replaces`/`options`/`maxSelections` values will fail loudly.

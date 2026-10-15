@@ -3,43 +3,7 @@ type: service
 title: Express API Server, Middleware Chain & Error Contract
 description: Bootstrap of the Express API in apps/api, the security and rate-limit middleware chain in mount order, public catalog read endpoints, the per-module PrismaClient/try/catch convention, and the uniform success/error envelope ending in a 500 INTERNAL_ERROR handler, checked against the docs/API.md transport rules, error-code table, and JWT `sub` provisioning requirements.
 tags: [api, express, middleware, rate-limiting, error-handling, health-check, cors]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T03:00:05.375Z
-sources:
-  - id: openwiki-source-ca04911f6e4b45f5834a6f2e
-    resource: repo://.github/workflows/e2e.yml
-  - id: openwiki-source-01ca116d0fae7d08da52b7bf
-    resource: repo://.gitlab-ci.yml
-  - id: openwiki-source-748fb42527dd114ba460af4f
-    resource: repo://apps/api/entrypoint.sh
-  - id: openwiki-source-80276df55c8da3940ca5955f
-    resource: repo://apps/api/package.json
-  - id: openwiki-source-d04d22ac02c0c45a07baad16
-    resource: repo://apps/api/src/index.ts
-  - id: openwiki-source-f2ba73b3ac1644e51e95ca55
-    resource: repo://apps/api/src/middleware/auth.ts
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-0bedcd950ff3ba614fb7573a
-    resource: repo://apps/api/src/routes/changelog.ts
-  - id: openwiki-source-d44f470410a902c3b78ae626
-    resource: repo://apps/api/src/routes/datasheets.ts
-  - id: openwiki-source-6802ff3f6b510e0b7e7c8c1f
-    resource: repo://apps/api/src/routes/media.ts
-  - id: openwiki-source-e47271466c9cede2b6fd9e77
-    resource: repo://apps/api/src/routes/rosters.ts
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-11ef2d56dffda152beeb9f84
-    resource: repo://docker-compose.prod.yml
-  - id: openwiki-source-67def8e94ced51980fc09459
-    resource: repo://Dockerfile.api
-  - id: openwiki-source-300fb4970560b7d85786e41b
-    resource: repo://docs/API.md
-  - id: openwiki-source-88e9822d53d4ed7952466156
-    resource: repo://docs/OPENAPI.yaml
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T03:00:05.375Z" }
+resource: repo://apps/api/src/index.ts
 ---
 
 The ForceOrg-40k HTTP API is a single Express application bootstrapped in `apps/api/src/index.ts`. It listens on `process.env.PORT || 4000` and is the sole integration surface of the self-hosted stack: PostgreSQL and S3-compatible object storage are the only backing services, and the API itself holds no session state. Route handlers live in five router modules (`datasheets`, `rosters`, `media`, `audit`, `changelog`) that are all mounted flat on `/api`.
@@ -81,10 +45,11 @@ In order, all registered as app-level `app.use`:
 2. **`cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:3000', credentials: true })`** — browser callers are restricted to the configured web origin; server-to-server calls are unaffected (the same rule `docs/API.md` states under "Transport rules"). Compose files inject `CORS_ORIGIN` (e.g. `http://localhost:3000` in `docker-compose.yml`, `${CORS_ORIGIN:-http://localhost:3000}` in `docker-compose.prod.yml`). See [Configuration & Env Vars](../operations/configuration-and-env-vars.md).
 3. **`express.json({ limit: '2mb' })`** — caps JSON body size (media uploads arrive as `multipart/form-data` handled by multer, not this parser).
 4. **Rate limiter** — `express-rate-limit` with `windowMs: 15 * 60 * 1000`, `limit: 300`, `standardHeaders: 'draft-7'`, `legacyHeaders: false`, mounted with `app.use('/api', apiLimiter)`. This matches the documented transport rule in `docs/API.md` (300 requests per 15-minute window per IP on all `/api` routes) and the `docs/OPENAPI.yaml` description. Because the limiter is mounted on `/api` *before* the health route, the health probe is rate-limited too. On excess it returns the envelope-shaped 429 body `{ success: false, error: { code: 'RATE_LIMIT_EXCEEDED', message: ... } }`.
-5. **`GET /api/health`** — liveness probe returning `{ success: true, data: { status: 'operational', version: '1.0.0', timestamp: <ISO now> } }`.
-6. **Router mounts**, all on `/api`: `datasheetRoutes`, `rosterRoutes`, `mediaRoutes`, `auditRoutes`, `changelogRoutes`. Routers do not nest under path prefixes; each declares its full paths (`/datasheets`, `/rosters`, `/media/upload`, etc.), so mount order only matters for overlapping paths.
-7. **404 handler** — any unmatched request gets `{ success: false, error: { code: 'NOT_FOUND', message: 'The requested endpoint does not exist.' } }` with HTTP 404.
-8. **Global error handler** — the terminal 4-argument Express middleware: logs `[API Error]` plus message and stack to stdout, then responds 500 with `{ success: false, error: { code: 'INTERNAL_ERROR', message: 'An unexpected error occurred.' } }`. Internal error details never reach clients.
+5. **`GET /`** — root landing page registered *before* the `/api` rate limiter: HTML browsers get a styled guide card pointing to the web app on port 3000, other clients get `{ service, status: 'operational', webAppUrl, endpoints }` JSON.
+6. **`GET /api/health`** — liveness probe returning `{ success: true, data: { status: 'operational', version: '1.0.0', timestamp: <ISO now> } }`.
+7. **Router mounts**, all on `/api`: `datasheetRoutes`, `rosterRoutes`, `mediaRoutes`, `auditRoutes`, `changelogRoutes`. Routers do not nest under path prefixes; each declares its full paths (`/datasheets`, `/rosters`, `/media/upload`, etc.), so mount order only matters for overlapping paths.
+8. **404 handler** — any unmatched request gets `{ success: false, error: { code: 'NOT_FOUND', message: 'The requested endpoint does not exist.' } }` with HTTP 404.
+9. **Global error handler** — the terminal 4-argument Express middleware: logs `[API Error]` plus message and stack to stdout, then responds 500 with `{ success: false, error: { code: 'INTERNAL_ERROR', message: 'An unexpected error occurred.' } }`. Internal error details never reach clients.
 
 ## The uniform error envelope
 

@@ -1,39 +1,9 @@
 ---
 type: workflow
 title: "Workflow: Rules Compliance Audit"
-description: The audit round trip from the ComplianceDashboard modal through POST /api/rosters/:id/audit, JWT ownership scoping, a live datasheet batch fetch and validateRoster, how severity and category map into the UI buckets, the degraded client-side fallback, and why results are never persisted or writable from the modal.
-tags: [workflows, audit, compliance-dashboard, rules-engine, point-shift, offline-fallback, playwright]
-verified:
-  - by: openwiki/0.7.0
-    at: 2026-10-06T01:03:35.924Z
-sources:
-  - id: openwiki-source-d04d22ac02c0c45a07baad16
-    resource: repo://apps/api/src/index.ts
-  - id: openwiki-source-f2ba73b3ac1644e51e95ca55
-    resource: repo://apps/api/src/middleware/auth.ts
-  - id: openwiki-source-7f984ab32407572f4e4595a5
-    resource: repo://apps/api/src/routes/audit.ts
-  - id: openwiki-source-96e69a4a0af2803d89545b57
-    resource: repo://apps/web/e2e/critical-flows.spec.ts
-  - id: openwiki-source-b718d27c389d0cfab47c5b2a
-    resource: repo://apps/web/playwright.config.ts
-  - id: openwiki-source-973a89dfdc01de87c1363a79
-    resource: repo://apps/web/src/app/army/%5Bid%5D/edit/page.tsx
-  - id: openwiki-source-5a9d21a26f28f14b4078de1c
-    resource: repo://apps/web/src/app/army/%5Bid%5D/page.tsx
-  - id: openwiki-source-deba80bf5b4e6fbdad344120
-    resource: repo://apps/web/src/app/page.tsx
-  - id: openwiki-source-f0179952914103ae1537bfb7
-    resource: repo://apps/web/src/components/ComplianceDashboard.tsx
-  - id: openwiki-source-ac9b852a2fa621958d429bb8
-    resource: repo://apps/web/src/lib/api.ts
-  - id: openwiki-source-7718415b6dc908c52c6e5e63
-    resource: repo://packages/db-client/prisma/schema.prisma
-  - id: openwiki-source-4551c05eb6f54e79c200e78e
-    resource: repo://packages/rules-engine-11e/src/detachment-validator.ts
-  - id: openwiki-source-25015e271858d4d00a7f7d15
-    resource: repo://packages/types/src/index.ts
-generated: { by: "openwiki/0.7.0", at: "2026-10-06T01:03:35.924Z" }
+description: The audit round trip from the ComplianceDashboard modal through POST /api/rosters/:id/audit, JWT ownership scoping, a live datasheet batch fetch and validateRoster, how severity and category map into the UI buckets, the client-side wargear legality pass the modal appends over server results, the degraded offline fallback, and why results are never persisted.
+tags: [workflows, audit, compliance-dashboard, rules-engine, point-shift, wargear-validation, offline-fallback, playwright]
+resource: repo://apps/web/src/components/ComplianceDashboard.tsx
 ---
 
 The rules compliance audit is a **stateless, on-demand round trip**. Nothing about
@@ -61,8 +31,8 @@ Three hosts mount `<ComplianceDashboard>` and each keeps its own open flag:
 | Host | Trigger | Props passed |
 | --- | --- | --- |
 | `apps/web/src/app/page.tsx` (dashboard army card) | `⚖️ Audit` button → `setAuditingArmy(army)` | `rosterId`, `armyName`, `pointsLimit`, `currentPoints`, `dpLimit`, `currentDp` — the only host that supplies the DP pair |
-| `apps/web/src/app/army/[id]/page.tsx` (Tabletop Console) | `⚖️ Rules Audit` button → `setIsComplianceOpen(true)` | no `dpLimit`/`currentDp`, so they default to `3` / `0` |
-| `apps/web/src/app/army/[id]/edit/page.tsx` (Roster Studio) | `⚖️ Rules Audit` button → `setIsComplianceOpen(true)` | `currentPoints` derived from the in-memory `currentUnitsRef` |
+| `apps/web/src/app/army/[id]/page.tsx` (Tabletop Console) | `⚖️ Rules Audit` button → `setIsComplianceOpen(true)` | no `dpLimit`/`currentDp`, so they default to `3` / `0`; passes `units` from `rosterPayload.units` |
+| `apps/web/src/app/army/[id]/edit/page.tsx` (Roster Studio) | `⚖️ Rules Audit` button → `setIsComplianceOpen(true)` | `currentPoints` derived from the in-memory `currentUnitsRef`; also passes `units` and `onResetWargearToLegal` (clears all wargear selections and re-saves) |
 
 None of them passes `onAutoFixPoints`. The component returns `null` while closed but
 stays mounted, and `useEffect` fires `runAudit()` whenever `isOpen` flips true — or
@@ -168,23 +138,28 @@ hardcoded one, and the modal's header fallback string is `'11.1.0-2026-Q3-MFM'`,
 third variant. Any unexpected throw is collapsed to
 `500 { code: 'AUDIT_ERROR' }`.
 
-## Degraded client audits
+## The client-side wargear pass and degraded audits
 
 `auditRoster` in [`api.ts#L390-L419`](../../apps/web/src/lib/api.ts#L390-L419)
 never rejects: on any `ApiError` it falls back to `fetchRoster(id)` (localStorage
 mirror, or the starter army) and emits **at most one** discrepancy — an `army-total`
 `RED` / `POINTS_SHIFT` row when `totalPoints > pointsLimit`. Detachment points,
-quotas, loadouts, Rule of Three and cost drift are simply absent, so an offline audit
-is a points-limit check wearing an audit's clothes.
+quotas, Rule of Three and cost drift are absent from that fixture.
 
-`ComplianceDashboard`'s own `catch`
-([`ComplianceDashboard.tsx#L47-L82`](../../apps/web/src/components/ComplianceDashboard.tsx#L47-L82))
-would build a second, slightly wider client audit from props — army total over the
-match limit **and** `currentDp > dpLimit` as a `RED` / `DP_VIOLATION` row. It is
-effectively dead: `auditRoster` swallows its errors internally, so the modal almost
-never sees a rejection. This is the practical reason the dashboard is the only host
-that bothers passing `dpLimit`/`currentDp` — those props matter for the summary tiles
-and the dead branch, not for the reported result.
+`runAudit` now treats the server (or fixture) discrepancies as a **base list**, not
+the whole verdict. Only if `auditRoster` throws — effectively dead for the same
+reason as before — does the component add its own `POINTS_SHIFT` and `DP_VIOLATION`
+RED fallbacks from props. Regardless of the server outcome it then appends a
+**client-side wargear audit** over the new `units` prop
+([`ComplianceDashboard.tsx#L91-L131`](../../apps/web/src/components/ComplianceDashboard.tsx#L91-L131)):
+per unit, `needsVerification` becomes an AMBER `INVALID_LOADOUT` advisory; stored
+`validationErrors` strings become RED rows; otherwise, when the unit has
+`wargearSelections`, the modal recompiles `wargearRulesRaw` with
+`compileWahapediaWargear` and runs `validateWargearLoadout` from
+`@forceorg/rules-engine-11e`, pushing each tournament-limit violation as RED
+`INVALID_LOADOUT`. So an offline audit is no longer *only* a points check — loadout
+legality is genuinely evaluated in the browser whenever a host passes `units`
+(today only the two army routes; the dashboard does not).
 
 ## Result rendering
 
@@ -206,12 +181,13 @@ all read the same recomputed values, and `Re-Audit` just calls `runAudit` again.
 
 The footer's `⚡ Sync Active Points (1-Click)` button renders only when
 `pointShiftDiscrepancies.length > 0 && onAutoFixPoints`
-([`ComplianceDashboard.tsx#L369-L381`](../../apps/web/src/components/ComplianceDashboard.tsx#L369-L381)),
-and `handleApplyFix` does nothing but invoke the optional callback, show a success
-banner, and re-run the audit after 500 ms
-([`ComplianceDashboard.tsx#L109-L123`](../../apps/web/src/components/ComplianceDashboard.tsx#L109-L123)).
-No host passes `onAutoFixPoints`, so the button never appears and the callback never
-runs; `updateRoster` is imported by the component but never called. There is
+([`ComplianceDashboard.tsx#L427-L439`](../../apps/web/src/components/ComplianceDashboard.tsx#L427-L439)),
+and `handleApplyFix` invokes the optional `onAutoFixPoints` and `onResetWargearToLegal`
+callbacks, shows a success banner, and re-runs the audit after 500 ms. The studio passes
+`onResetWargearToLegal` — clearing every unit's `wargearSelections`, `validationErrors` and
+`needsVerification` then re-saving — but **no host passes `onAutoFixPoints`**, so the button
+still never appears and neither callback runs; `updateRoster` is imported by the component but
+never called. There is
 therefore **no write-back from the audit UI at all** today: point corrections reach
 storage only through the Roster Studio's debounced `performSave` → `updateRoster`
 ([`edit/page.tsx#L86-L123`](../../apps/web/src/app/army/[id]/edit/page.tsx#L86-L123)),

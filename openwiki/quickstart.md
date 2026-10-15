@@ -172,4 +172,3 @@ Know what the gate can actually observe: behavioural coverage exists only in `pa
 - [docs/API.md](../docs/API.md) and [docs/OPENAPI.yaml](../docs/OPENAPI.yaml) — the API contract third-party clients integrate against; read endpoints are public, writes require a JWT signed with the instance's `JWT_SECRET`.
 
 Source code and tests remain authoritative; treat this wiki and the docs as just-in-time orientation, per [AGENTS.md](../AGENTS.md).
-urce code and tests remain authoritative; treat this wiki and the docs as just-in-time orientation, per [AGENTS.md](../AGENTS.md).

@@ -152,7 +152,7 @@ interface RosterUnitInstance {
   datasheetName: string;       // display + discrepancy text
   modelCount: number;          // builder/UI only
   attachedLeaderId?: string | null;  // attachment validation
-  wargearSelections: WargearSelection[]; // { ruleId, selectedOptionId, count }
+  wargearSelections: WargearSelection[]; // { ruleId, selectedOptionId, count, weaponName?, replacesWeaponName?, role? }
   pointsCost: number;          // POINTS_SHIFT comparison vs Datasheet.basePoints
   customImageUrl?: string | null;
 }
@@ -167,7 +167,7 @@ The audit route casts `army.rosterPayload as unknown as RosterPayload` and then 
 
 There is already a live shape divergence rather than a clean contract:
 
-- `RosterBuilder.tsx` persists its own local `RosterUnit` (`instanceId`, nested `catalogUnit`, `modelCount`, `pointsCost`, `validationErrors`, and `wargearSelections: { ruleId, optionId, count }[]`) straight into `rosterPayload` from the auto-save in `app/army/[id]/edit/page.tsx`. That nests the full catalog entry under a key the typed contract does not define, and uses **`optionId`** where `WargearSelection` declares **`selectedOptionId`**.
+- `RosterBuilder.tsx` persists its own local `RosterUnit` (`instanceId`, nested `catalogUnit`, `modelCount`, `pointsCost`, `validationErrors`, `needsVerification?`, and `wargearSelections: WargearSelection[]` — the typed shape, imported from `@forceorg/types`) straight into `rosterPayload` from the auto-save in `app/army/[id]/edit/page.tsx`. That nests the full catalog entry under a key the typed contract does not define. The earlier `optionId` vs `selectedOptionId` split is closed.
 - The view mode therefore has to normalise both shapes: `app/army/[id]/page.tsx` defines an `OfflineRosterUnit` type and falls back to `datasheetId`/`datasheetName`/`pointsCost` when `catalogUnit` is absent, defaulting `battlefieldRole` to `'INFANTRY'`.
 - Offline/guest mode in `lib/api.ts` writes the lean typed shape (`datasheetId`/`datasheetName`/`modelCount`/`wargearSelections: []`), so a single browser can hold rosters in either encoding.
 

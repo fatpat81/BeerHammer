@@ -1,7 +1,7 @@
 ---
 type: package-overview
 title: 'Rules Engine 11E: Public API, Consumers & Tests'
-description: 'Orientation to @forceorg/rules-engine-11e: its four pure modules and exported surface, which apps actually import them today (validateRoster in the API audit route, compileWahapediaWargear in RosterBuilder), which are test-only, and how the 53-test vitest suite plus the CI coverage gate guard the rules semantics.'
+description: 'Orientation to @forceorg/rules-engine-11e: its four pure modules and exported surface, which apps actually import them today (validateRoster in the API audit route; the wargear-parser squad layer — slots, pricing, threshold and loadout validation — in RosterBuilder, Battle Mode and ComplianceDashboard), and how the 73-test vitest suite plus the CI coverage gate guard the rules semantics.'
 tags: [rules-engine, package-overview, public-api, vitest, ci-gate, consumers, monorepo]
 ---
 
@@ -43,15 +43,16 @@ Two structural properties of the API matter to callers:
 
 ## Who actually calls it
 
-Only two imports of `@forceorg/rules-engine-11e` exist in application code. The other two
-modules are exercised exclusively by their vitest suites, and the components that render the
-same rules re-implement the logic inline.
+The web app's wargear/squad layer rewiring made `wargear-parser.ts` the engine module with real
+browser consumers; the other modules still reach production only through the API audit route, and
+the components that render the same rules re-implement the logic inline.
 
 | Consumer | Import | Notes |
 | --- | --- | --- |
 | `apps/api/src/routes/audit.ts` | `validateRoster` | `POST /api/rosters/:id/audit`; folds the four codes into `RosterDiscrepancy` |
-| `apps/web/src/components/RosterBuilder.tsx` | — | imports `compileWahapediaWargear` but no longer calls it — the Battle Mode rewrite removed the wargear AST preview card |
-| `apps/web/src/app/army/[id]/page.tsx` | — | Battle Mode re-implements phase + keyword stratagem filtering inline; does **not** call `filterStratagems` |
+| `apps/web/src/components/RosterBuilder.tsx` | `compileWahapediaWargear`, `validateWargearLoadout`, `resolveEquippedWeapons`, `buildUnitWargearSlots`, `calculateUnitSquadPoints`, `getUnitBaseModelThreshold` | wargear slots, tournament-limit errors, equipped-weapon badges and squad-tier pricing are computed live in the builder |
+| `apps/web/src/app/army/[id]/page.tsx` | `resolveEquippedWeapons`, `getUnitBaseModelThreshold` | Battle Mode weapon badges; stratagem filtering is still re-implemented inline, not via `filterStratagems` |
+| `apps/web/src/components/ComplianceDashboard.tsx` | `compileWahapediaWargear`, `validateWargearLoadout` | client-side wargear legibility pass added to the audit modal |
 | `apps/web/src/components/StratagemPanel.tsx` | — | orphaned (no route imports it); its inline filter duplicate is dead code |
 | `apps/web/src/components/CompositeUnitCard.tsx` | — | orphaned; wound deltas via a local `handleWoundDelta` clamp; does **not** call `allocateWound` |
 | `apps/sync-worker` | — | declares `"@forceorg/rules-engine-11e": "*"` in `package.json` but has no import of it |
@@ -65,7 +66,10 @@ flowchart LR
     DV["detachment-validator"]
   end
   AUD["api audit route"] -->|"validateRoster"| DV
-  BM["web Battle Mode route"] -.->|"inline duplicate"| SF
+  RB["web RosterBuilder"] -->|"slots / pricing / validation"| WP
+  BM["web Battle Mode route"] -->|"badges / thresholds"| WP
+  BM -.->|"inline duplicate"| SF
+  CD["web ComplianceDashboard"] -->|"loadout audit"| WP
   SP["web StratagemPanel (orphaned)"] -.->|"inline duplicate"| SF
   CUC["web CompositeUnitCard (orphaned)"] -.->|"inline wound deltas"| AR
   T["vitest suites"] --> WP
@@ -89,10 +93,11 @@ composite-units page documents in detail.
 `rule_gen_${Date.now()}_${index}`, so recompiling the same text yields different `id` values, and
 lines that match none of the five patterns are dropped with no diagnostic (an unrecognised line
 compiles to an empty array). `parseOptionList` always sets `pointsDelta: 0`, so option pricing is
-never derived from prose. `RosterBuilder` therefore keys each rendered rule card on
-`rule.id + '-' + idx` rather than on the id alone, and its "+pts" option badge is unreachable in
-practice because `pointsDelta` is always `0`. Any code that persists a `wargearSelections` entry
-keyed by `ruleId` across recompiles is relying on an id that changes.
+never derived from prose — squad pricing lives in `calculateUnitSquadPoints` instead. Since
+`RosterBuilder` now persists `wargearSelections` keyed by these unstable `ruleId`s, replayed
+rosters can reference ids a recompile no longer produces; validation tolerates this and the
+catalog-weapon fallback slots keep reloaded rosters editable (details on the
+[Wargear AST Compiler](wargear-ast-compiler.md) page).
 
 ## Running the suite
 
@@ -109,12 +114,15 @@ npm run test:coverage --prefix packages/rules-engine-11e
 `dist/`). Linting is `tsc --noEmit`; `build` is plain `tsc` emitting CommonJS to `dist` with
 `rootDir: ./src` and test files excluded from the emit.
 
-Four suites, 53 tests, in `src/__tests__/`:
+Four suites, 73 tests, in `src/__tests__/`:
 
-- `wargear-parser.test.ts` (14) — slug shape, count/name parsing and bullet stripping, comma and
-  `or` option lists with `1 of the following` preamble filtering, the five prose patterns
-  (scale-factor, add-on, numeric model count, passive and active role-targeted), HTML input, and
-  the empty-AST case for unrecognised text.
+- `wargear-parser.test.ts` (34) — the 14 prose-compiler cases (slug shape, count/name parsing and
+  bullet stripping, comma and `or` option lists with `1 of the following` preamble filtering, the
+  five prose patterns, HTML input, empty-AST case) plus the squad layer: `validateWargearLoadout`
+  scale-factor excess, `resolveEquippedWeapons` baseline/swap/multi-profile firing modes,
+  `calculateUnitSquadPoints` tier charges (10-man for 6 Terminators, 6-man for 4 Aggressors,
+  enhancement points on top), `normalizeBaseWeaponName`/`cleanDisplayName`, support-gear slots from
+  abilities, and `getUnitBaseModelThreshold` across Terminator/elite/horde/character/retinue shapes.
 - `attachment-resolver.test.ts` (14) — valid, invalid and **reversed** attachment pairs; bodyguard
   toughness while bodyguards live versus leader toughness at zero; keyword union with dedupe and
   sorted output; bodyguard-first allocation, leader-only-after-bodyguards, `PRECISION` bypass, and

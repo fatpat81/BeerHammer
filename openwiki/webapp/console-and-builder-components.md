@@ -126,12 +126,17 @@ comes from `ds.detachmentPointsCost`, and `totalDP` is the sum over the roster
 ([#L248](../../apps/web/src/components/RosterBuilder.tsx#L248)). On fetch failure the drawer
 shows "Loading faction armory..."/"No units found" — there is **no `DEMO_CATALOG` anymore**, so
 an unreachable `/data/factions/` file yields an empty builder rather than demo units. The
-`compileWahapediaWargear` import at [#L10](../../apps/web/src/components/RosterBuilder.tsx#L10)
-is now unused; the wargear AST preview card (`WargearRuleCard`), the "Live API Data" badge and
-the `DEMO_CATALOG` name-join are gone, and `wargearRulesRaw` is set to `''` for every unit.
-With that, **no frontend component consumes `@forceorg/rules-engine-11e` any more** —
-[Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md) and
-[Roster Validation](../rules-engine/roster-validation.md) execute server-side only.
+wargear AST preview card (`WargearRuleCard`) and the `DEMO_CATALOG` name-join are gone, and
+`wargearRulesRaw` is now populated from the faction JSON (`ds.wargearRules || ds.wargear ||
+ds.wargearOptions`). The old "no frontend consumes the engine" state no longer holds:
+**RosterBuilder imports the wargear/squad layer of `@forceorg/rules-engine-11e` directly** —
+`compileWahapediaWargear`, `buildUnitWargearSlots`, `validateWargearLoadout`,
+`resolveEquippedWeapons`, `calculateUnitSquadPoints`, `getUnitBaseModelThreshold` — so unit
+model-count thresholds, squad-tier point costs and wargear limit errors are computed by the
+engine in the browser ([Wargear AST Compiler & Squad Wargear Engine](../rules-engine/wargear-ast-compiler.md)).
+`filterStratagems`, `allocateWound` and `validateRoster` remain server-side / inline-duplicated
+([Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md),
+[Roster Validation](../rules-engine/roster-validation.md)).
 
 **Detachment switcher with mandatory enhancement reset.** A dedicated bar shows the active
 detachment, a dropdown of the faction file's `detachments[]`, and an "Apply Changes" button;
@@ -143,18 +148,20 @@ always unequips every assigned enhancement without a prompt and resets those uni
 so the edit page persists the new `detachmentPrimary` (see above).
 
 **Characters get enhancement and attachment selectors.** For units with role `CHARACTER`, each
-expanded card renders a detachment-enhancement dropdown (choosing one reprices the unit to
-`basePoints + enh.points`, [#L287-L309](../../apps/web/src/components/RosterBuilder.tsx#L287-L309))
+expanded card renders a detachment-enhancement dropdown (choosing one reprices the unit via
+`calculateUnitSquadPoints` with the enhancement's points,
+[#L362-L400](../../apps/web/src/components/RosterBuilder.tsx#L362-L400))
 and a "Attach to Bodyguard Unit" selector writing `attachedToInstanceId`
 ([#L814-L875](../../apps/web/src/components/RosterBuilder.tsx#L814-L875)). Removing a unit
 unbinds anything attached to it ([#L275-L285](../../apps/web/src/components/RosterBuilder.tsx#L275-L285)).
 
 **Client-side checks are display-only.** The summary bar turns the Points tile red over limit
-and the Enhancements tile red above the 11e max of 3
-([#L380-L399](../../apps/web/src/components/RosterBuilder.tsx#L380-L399)), but there is no
-blocking and no Rule-of-Three warning block any more; `validationErrors` remains a field set to
-`[]` in `addUnit`. Server-side validation is a separate, stricter path
-([Roster Validation](../rules-engine/roster-validation.md)).
+and the Enhancements tile red above the 11e max of 3, but nothing blocks saving and there is no
+Rule-of-Three warning block. `validationErrors` is now **populated**: model-count and wargear
+selection changes re-run `validateWargearLoadout` and store the error messages on the unit
+([#L471-L591](../../apps/web/src/components/RosterBuilder.tsx#L471-L591)), rendered inline on the
+unit card and surfaced as RED discrepancies by the audit modal. Server-side roster validation
+remains a separate path ([Roster Validation](../rules-engine/roster-validation.md)).
 
 `initialUnits` is re-seeded into local state through an effect keyed on the prop
 ([#L120-L124](../../apps/web/src/components/RosterBuilder.tsx#L120-L124)). The edit page supplies
@@ -259,24 +266,29 @@ dead subgraph. Consequences for change planning:
 "Rules Audit" modal mounted by the dashboard, the console and the studio.
 
 `runAudit` fires whenever `isOpen` becomes true and on every Re-Audit click. It calls
-`auditRoster(rosterId)`; only if that **throws** does it compute a client-side audit from props,
-emitting a `POINTS_SHIFT` RED discrepancy when `currentPoints > pointsLimit` and a `DP_VIOLATION`
-RED discrepancy when `currentDp > dpLimit`, stamped with a hard-coded
-`rulesetVersionCompared: '11.1.0-2026-Q3-MFM'`
-([#L41-L86](../../apps/web/src/components/ComplianceDashboard.tsx#L41-L86)). In practice this
-fallback is rarely reached for the same reason as the stratagems:
+`auditRoster(rosterId)` and takes the server discrepancies as the base list; only if that
+**throws** does it add its own `POINTS_SHIFT`/`DP_VIOLATION` RED fallbacks from props. The result
+is stamped with a hard-coded `rulesetVersionCompared: '11.1.0-2026-Q3-MFM'`
+([#L44-L141](../../apps/web/src/components/ComplianceDashboard.tsx#L44-L141)). Regardless of
+whether the server audit succeeded, it then **appends a client-side wargear audit over the new
+`units` prop**: per unit it flags `needsVerification` as an AMBER `INVALID_LOADOUT` advisory,
+surfaces each stored `validationErrors` string as RED, and otherwise — when the unit has
+`wargearSelections` — re-runs `compileWahapediaWargear` + `validateWargearLoadout` from
+`@forceorg/rules-engine-11e` and pushes each tournament-limit violation as RED
+([#L91-L131](../../apps/web/src/components/ComplianceDashboard.tsx#L91-L131)). The Battle Mode
+console feeds it `rosterPayload.units`; only the studio passes `units` + `onResetWargearToLegal`
+(the latter clears every unit's selections and re-saves). Note
 [`auditRoster`](../../apps/web/src/lib/api.ts#L390-L419) catches its own failure and returns a
-synthesised result computed from the localStorage roster, so the component normally displays
-*some* verdict even with no server at all — and the ruleset label it shows then comes from the
-API client's fixture, not from a comparison the component performed.
+synthesised result, so the component displays *some* verdict even with no server at all.
 
 Presentation logic:
 
 - `isFullyCompliant = discrepancies.length === 0`; `isBattleLegal = redViolations.length === 0`.
   Three banners follow — "Battle-Ready (100% Compliant)", "Legal With Advisory Warnings",
   "Illegal Roster — Action Required" — driven by `RED` vs `AMBER` severity
-  ([#L160-L226](../../apps/web/src/components/ComplianceDashboard.tsx#L160-L226)). Only the
-  component's own fallback produces RED; advisory AMBER items can only come from the server.
+  ([#L160-L226](../../apps/web/src/components/ComplianceDashboard.tsx#L160-L226)). The client-side
+  wargear audit now produces both RED (loadout violations) and AMBER (`needsVerification`), so the
+  banner verdict is no longer purely server-driven.
 - Summary tiles (Violations, Advisories, Points Limit, DP Quota) and category tabs
   `ALL / POINTS_SHIFT / DP_VIOLATION / INVALID_LOADOUT`
   ([#L256-L283](../../apps/web/src/components/ComplianceDashboard.tsx#L256-L283)) filter locally.
@@ -319,7 +331,7 @@ roster metadata before the studio exists. It now **fetches the faction list from
 falling back to a hard-coded short list on failure, and selecting a faction auto-picks its first
 detachment, subfaction and a generated army name. Submission sends the chosen
 `detachmentPrimary`, `pointsLimit` and `detachmentPointsLimit: 3` through `createRoster` and
-navigates to `/army/<id>` — Battle Mode, not the studio
+navigates to `/army/<id>/edit` — the studio, so a new force opens in edit mode
 ([#L174-L198](../../apps/web/src/components/CreateArmyModal.tsx#L174-L198)); unlike the earlier
 version it shows an error banner instead of synthesising a local army when `createRoster`
 rejects (though `createRoster` itself rarely can — it writes localStorage first). The result is
@@ -335,12 +347,10 @@ path.
   `STARTER_DEMO_ARMY` (dashboard), `FALLBACK_CATALOG_DATASHEETS` (catalog page), the Battle Mode
   route's `CORE_STRATAGEMS`, and the fixtures inside `lib/api.ts`; changes to canonical units or
   stratagems must be reconciled against those too or the offline UI will contradict the catalog.
-- The Battle Mode rewrite deleted the wargear AST preview and wound-tracking UIs; the old
-  "make wargear/wounds real" follow-ups no longer apply. The engine's wargear compiler and
-  attachment resolver now have **no frontend consumer**
-  ([Wargear AST Compiler](../rules-engine/wargear-ast-compiler.md)).
-- To make the audit fix actionable, pass `onAutoFixPoints` from each host page; the component is
-  otherwise a read-only report with an unused import.
+- The Battle Mode rewrite deleted the wargear AST preview and wound-tracking UIs, but the engine's
+  wargear/squad layer is live in the browser again: RosterBuilder, Battle Mode and
+  ComplianceDashboard import it for slots, validation, equipped-weapon badges and squad pricing
+  ([Wargear AST Compiler & Squad Wargear Engine](../rules-engine/wargear-ast-compiler.md)).
 - Renaming Battle Mode chrome (`BATTLE MODE` badge, `Command Points`, `Legal <phase>
   Stratagems`, Edit Mode/Battle Mode links) breaks the rewritten Playwright journey — test 04
   asserts on exactly those strings ([Testing Strategy](../testing/testing-strategy.md)).

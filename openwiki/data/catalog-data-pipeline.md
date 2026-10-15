@@ -114,7 +114,13 @@ warnings only. Two caveats:
 - Regenerate, don't hand-edit: `apps/web/public/data/**` is generated output; edit
   `FACTION_DEFINITIONS`/extractors in `scripts/extract-factions.js` and re-run `npm run
   data:extract`, then `npm run data:verify` (after ensuring `data/factions/` exists), and commit
-  the web copy.
+  the web copy. Exception: one-off repair scripts mutate the committed faction JSON in place —
+  `scripts/audit-weapons-and-models.js` (reports missing weapon options/model counts against the
+  BSData profile map), `scripts/heal-weapons-and-models.js` and `scripts/heal-unit-weapons.js`
+  (write canonical weapon profiles and fixes back to `data/factions/` and
+  `apps/web/public/data/factions/`; also not npm-scripted). If a heal script fixes something the
+  extractor should produce, port the fix into `extract-factions.js` or the next
+  `data:extract` re-breaks it.
 - Legacy faction ids (`adeptus_astartes`, `tau_empire`, `necrons_szarekhan`,
   `chaos_space_marines`) are normalised to canonical file names by several client call sites; adding
   a faction means checking that normalisation in `lib/api.ts`, `RosterBuilder.tsx` and the console

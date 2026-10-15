@@ -159,19 +159,16 @@ See [Wahapedia ETL Sync Worker](../sync/wahapedia-etl-sync-worker.md) for the pi
 ## GitHub Actions: `openwiki-update.yml` (documentation regeneration)
 
 Runs `cron: "0 8 * * *"` and on demand. This is the producer of the `openwiki/` pages, including this one:
-it clones with `fetch-depth: 0` (a shallow clone hides the commit last documented and turns the update into an
-empty diff) and sets up Node 22 — the application pipelines all pin Node 20 — then installs
-`openwiki@0.7.0` plus optional `mermaid`/`jsdom` for diagram validation, and runs
-`openwiki code --update --print` against an OpenAI-compatible endpoint configured by
-`OPENAI_COMPATIBLE_API_KEY` (secret), `OPENAI_COMPATIBLE_BASE_URL` (repo variable) and
-`OPENWIKI_MODEL_ID: "qwen38-flash-fp8"`, with optional LangSmith tracing credentials.
+it sets up Node 22 — the application pipelines all pin Node 20 — installs the `openwiki` package globally
+(`npm install --global openwiki`, unpinned), and runs `openwiki code --update --print` with
+`OPENWIKI_PROVIDER: openrouter` against an OpenRouter endpoint configured by `OPENROUTER_API_KEY` (secret)
+and `OPENWIKI_MODEL_ID`, with optional LangSmith tracing (`LANGSMITH_API_KEY`, `LANGCHAIN_PROJECT`,
+`LANGCHAIN_TRACING_V2`). It checks out with the default `actions/checkout@v4` depth.
 
-The `openwiki` step is `continue-on-error: true`, and the run-state file `openwiki/.run.json` is deleted before
-committing. The job then opens (and reuses) a pull request from branch `openwiki/update` adding exactly
-`openwiki`, `AGENTS.md`, `.github/workflows/openwiki-update.yml`, and `CLAUDE.md` when present — `git add` is
-given no missing path. Only changes inside those paths survive the run. Finally the job re-raises the failure
-with `exit 1` **after** the PR exists, so a partially completed run still yields a reviewable PR containing the
-pages finished before the failure, which is meant to become the baseline for the next scheduled run.
+The job then uses `peter-evans/create-pull-request` (pinned by SHA) to open and reuse a pull request from
+branch `openwiki/update` adding exactly `openwiki`, `AGENTS.md`, `CLAUDE.md`, and
+`.github/workflows/openwiki-update.yml`. Only changes inside those paths survive the run, and every doc
+update arrives as a reviewable PR rather than a direct push to `main`.
 
 Consequence for editors: do not hand-edit generated pages under `openwiki/`; change the source code or the
 authored docs and let this workflow regenerate them.
