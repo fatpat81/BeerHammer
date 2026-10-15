@@ -949,7 +949,7 @@
           {
             "name": "Dark Reaper Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1194,7 +1194,7 @@
           {
             "name": "Dire Avenger Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1261,6 +1261,41 @@
           "skill": "3+",
           "strength": 3,
           "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Avenger shuriken catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
+        },
+        {
+          "name": "Diresword",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power Glaive",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -3,
           "damage": "1",
           "keywords": []
         }
@@ -1454,6 +1489,65 @@
           "strength": 6,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
           "keywords": []
         }
       ]
@@ -1742,7 +1836,7 @@
           {
             "name": "Fire Dragon Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -2098,7 +2192,7 @@
           {
             "name": "Heavy Weapon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 9
           }
         ]
       },
@@ -2319,7 +2413,7 @@
           {
             "name": "Howling Banshee Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -2937,7 +3031,7 @@
           {
             "name": "Rangers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2979,6 +3073,20 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
         }
       ]
     },
@@ -3104,7 +3212,7 @@
           {
             "name": "Shining Spear Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -3283,7 +3391,7 @@
           {
             "name": "Shroud Runner",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3338,6 +3446,20 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
         }
       ]
     },
@@ -3362,7 +3484,7 @@
           {
             "name": "Skyweaver",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3429,6 +3551,19 @@
           "armorPenetration": -2,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
         }
       ]
     },
@@ -3555,6 +3690,20 @@
             "Anti-infantry 2+",
             "Psychic"
           ]
+        },
+        {
+          "name": "Shuriken Pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Pistol"
+          ]
         }
       ]
     },
@@ -3613,6 +3762,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
         }
       ]
     },
@@ -3636,7 +3798,7 @@
           {
             "name": "Serpent's Scale Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -3758,7 +3920,7 @@
           {
             "name": "Striking Scorpion Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -3920,7 +4082,7 @@
           {
             "name": "D-Cannon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3965,6 +4127,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
         }
       ]
     },
@@ -3994,7 +4169,7 @@
           {
             "name": "Swooping Hawk Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -4519,6 +4694,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
         }
       ]
     },
@@ -4548,7 +4736,7 @@
           {
             "name": "Warp Spider Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -4668,6 +4856,17 @@
             "Lethal Hits",
             "Twin-Linked"
           ]
+        },
+        {
+          "name": "Close Combat Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 3,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -4996,6 +5195,19 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Heavy Wraithcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D3",
+          "skill": "3+",
+          "strength": 20,
+          "armorPenetration": -4,
+          "damage": "2D6",
+          "keywords": [
+            "Devastating Wounds"
+          ]
         }
       ]
     },
@@ -5198,7 +5410,7 @@
           {
             "name": "Wraithguard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -5362,7 +5574,7 @@
           {
             "name": "Wraithblade",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -5946,7 +6158,7 @@
           {
             "name": "Klaivex",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -7017,6 +7229,76 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ]
     },
@@ -7087,6 +7369,76 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ]
     },
@@ -7364,6 +7716,76 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ]
     },
@@ -7660,7 +8082,7 @@
           {
             "name": "Shadow Spectre",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -7876,6 +8298,50 @@
           "strength": 12,
           "armorPenetration": -2,
           "damage": "4",
+          "keywords": []
+        },
+        {
+          "name": "Phantom starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Wraith glaive - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 18,
+          "armorPenetration": -4,
+          "damage": "12",
+          "keywords": []
+        },
+        {
+          "name": "➤ Wraith glaive - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "4",
+          "keywords": []
+        },
+        {
+          "name": "Pulse laser",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -2,
+          "damage": "D6",
           "keywords": []
         }
       ]
@@ -8934,6 +9400,76 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Aeldari missile launcher - sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
         }
       ]
     },
@@ -9360,6 +9896,78 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Starshot",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Missile Launcher - Sunburst",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Blast"
+          ]
+        },
+        {
+          "name": "Bright Lance",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -3,
+          "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Scatter Laser",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Starcannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Shuriken Cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Lethal Hits"
+          ]
         }
       ]
     },
@@ -9383,7 +9991,7 @@
           {
             "name": "Shadow Weaver Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -9427,6 +10035,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
         }
       ]
     },
@@ -9450,7 +10071,7 @@
           {
             "name": "Vibro Cannon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -9491,6 +10112,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Shuriken Catapult",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault"
+          ]
         }
       ]
     },
@@ -9855,7 +10489,7 @@
           {
             "name": "Klaivex",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -12398,6 +13032,19 @@
           "armorPenetration": -1,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Drakesteed Fangs and Talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
         }
       ]
     },
@@ -12490,6 +13137,32 @@
             "ANTI-non‑MONSTER/VEHICLE 2+",
             "PSYCHIC"
           ]
+        },
+        {
+          "name": "Drakesteed Fangs and Talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Solar Carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
         }
       ]
     },
@@ -12555,6 +13228,32 @@
           "keywords": [
             "Lethal Hits",
             "Twin-linked"
+          ]
+        },
+        {
+          "name": "Drakesteed Fangs and Talons",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Extra Attacks"
+          ]
+        },
+        {
+          "name": "Solar Carbine",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
           ]
         }
       ]

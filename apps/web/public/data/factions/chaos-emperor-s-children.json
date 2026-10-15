@@ -1175,7 +1175,7 @@
           {
             "name": "Tormentors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1352,7 +1352,7 @@
           {
             "name": "Infractors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1476,7 +1476,7 @@
           {
             "name": "Flawless Blades",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1552,7 +1552,7 @@
           {
             "name": "Chaos Terminators",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1892,7 +1892,7 @@
           {
             "name": "Noise Marines",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -2533,7 +2533,7 @@
           {
             "name": "Daemonettes",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -2668,7 +2668,7 @@
           {
             "name": "Heartseeker",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },

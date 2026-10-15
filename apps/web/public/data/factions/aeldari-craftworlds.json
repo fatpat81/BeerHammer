@@ -1767,7 +1767,7 @@
           {
             "name": "Dark Reaper Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1979,7 +1979,7 @@
           {
             "name": "Dire Avenger Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -2588,7 +2588,7 @@
           {
             "name": "Fire Dragon Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -2941,7 +2941,7 @@
           {
             "name": "Heavy Weapon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 9
           }
         ]
       },
@@ -3166,7 +3166,7 @@
           {
             "name": "Howling Banshee Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -3722,7 +3722,7 @@
           {
             "name": "Rangers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3909,7 +3909,7 @@
           {
             "name": "Shining Spear Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -4018,7 +4018,7 @@
           {
             "name": "Shroud Runner",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4113,7 +4113,7 @@
           {
             "name": "Skyweaver",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -4435,7 +4435,7 @@
           {
             "name": "Serpent's Scale Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -4559,7 +4559,7 @@
           {
             "name": "Striking Scorpion Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -4667,7 +4667,7 @@
           {
             "name": "D-Cannon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4756,7 +4756,7 @@
           {
             "name": "Swooping Hawk Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -5324,7 +5324,7 @@
           {
             "name": "Warp Spider Exarch",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -5993,7 +5993,7 @@
           {
             "name": "Wraithguard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -6170,7 +6170,7 @@
           {
             "name": "Wraithblade",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -7119,7 +7119,7 @@
           {
             "name": "Shadow Spectre",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -8721,7 +8721,7 @@
           {
             "name": "Shadow Weaver Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -8803,7 +8803,7 @@
           {
             "name": "Vibro Cannon Platform",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -9231,7 +9231,7 @@
           {
             "name": "Klaivex",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },

@@ -341,6 +341,19 @@
           "keywords": [
             "Psychic"
           ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ]
     },
@@ -369,7 +382,7 @@
           {
             "name": "Victrix Honour Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -586,6 +599,19 @@
           "armorPenetration": -2,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ]
     },
@@ -661,6 +687,19 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ]
     },
@@ -689,7 +728,7 @@
           {
             "name": "Veteran Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -865,6 +904,19 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ]
     },
@@ -898,7 +950,7 @@
           {
             "name": "Ultramarines Honor Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -928,7 +980,43 @@
           "description": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic  Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase."
         }
       ],
-      "weapons": []
+      "weapons": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Close-Quarters"
+          ]
+        },
+        {
+          "name": "Boltgun",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "b07a-c1e9-24e5-09ee",
@@ -993,6 +1081,19 @@
           "keywords": [
             "Anti-Infantry 2+"
           ]
+        },
+        {
+          "name": "Heavy Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
         }
       ]
     },
@@ -1017,7 +1118,7 @@
           {
             "name": "Marneus Calgar in Armour of Antilochus",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1204,7 +1305,7 @@
           {
             "name": "Victrix Honour Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1259,6 +1360,17 @@
             "Precision",
             "Twin-linked"
           ]
+        },
+        {
+          "name": "Master-crafted power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
         }
       ]
     },
@@ -1340,6 +1452,19 @@
           "damage": "2",
           "keywords": [
             "Anti-Infantry 2+"
+          ]
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
           ]
         }
       ]
@@ -1453,6 +1578,68 @@
           "skill": "2+",
           "strength": 4,
           "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Bolt Rifle",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Assault",
+            "Heavy"
+          ]
+        },
+        {
+          "name": "Heavy Bolt Pistol",
+          "type": "Ranged",
+          "range": "18\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Master-crafted power weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "5",
+          "skill": "2+",
+          "strength": 5,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Archeotech Laspistol",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Pistol"
+          ]
+        },
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "2+",
+          "strength": 4,
+          "armorPenetration": -2,
           "damage": "1",
           "keywords": []
         }

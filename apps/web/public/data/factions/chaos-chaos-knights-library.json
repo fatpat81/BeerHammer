@@ -173,6 +173,43 @@
           "armorPenetration": 0,
           "damage": "1",
           "keywords": []
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Daemonbreath meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
+        },
+        {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": []
         }
       ]
     },
@@ -366,6 +403,33 @@
           "damage": "D6+2",
           "keywords": [
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "Havoc multi-launcher",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
           ]
         }
       ]
@@ -639,6 +703,168 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Havoc missile pod",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "D6+1",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Indirect Fire"
+          ]
+        },
+        {
+          "name": "Ruinspear rocket pod",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 8,
+          "armorPenetration": -2,
+          "damage": "D6",
+          "keywords": []
+        },
+        {
+          "name": "Hellstorm autocannons",
+          "type": "Ranged",
+          "range": "48\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 7,
+          "armorPenetration": -1,
+          "damage": "2",
+          "keywords": [
+            "Anti-FLY 2",
+            "Twin-linked"
+          ]
+        },
+        {
+          "name": "Despoiler gatling cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "18",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Heavy darkflamer",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "D6",
+          "skill": "N/A",
+          "strength": 5,
+          "armorPenetration": -1,
+          "damage": "1",
+          "keywords": [
+            "Torrent",
+            "Ignores Cover"
+          ]
+        },
+        {
+          "name": "Despoiler battle cannon",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "D6+3",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "3",
+          "keywords": [
+            "Blast",
+            "Rapid Fire D6+3"
+          ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath thermal cannon",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2D3",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Blast",
+            "Melta 6"
+          ]
+        },
+        {
+          "name": "➤ Warpstrike claw - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "Daemonbreath meltagun",
+          "type": "Ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -4,
+          "damage": "D6",
+          "keywords": [
+            "Melta 2"
+          ]
         }
       ]
     },
@@ -725,6 +951,50 @@
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 20,
+          "armorPenetration": -3,
+          "damage": "8",
+          "keywords": []
+        },
+        {
+          "name": "➤ Warpstrike claw - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "8",
+          "skill": "3+",
+          "strength": 10,
+          "armorPenetration": -2,
+          "damage": "3",
           "keywords": []
         }
       ]
@@ -828,6 +1098,19 @@
           "keywords": [
             "Sustained Hits 1"
           ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
+          ]
         }
       ]
     },
@@ -918,6 +1201,19 @@
           "damage": "3",
           "keywords": [
             "Sustained Hits 1"
+          ]
+        },
+        {
+          "name": "Diabolus heavy stubber",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 5,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 3"
           ]
         }
       ]
@@ -1061,6 +1357,34 @@
           "armorPenetration": -1,
           "damage": "2",
           "keywords": []
+        },
+        {
+          "name": "Gheiststrike missile launcher",
+          "type": "Ranged",
+          "range": "72\"",
+          "attacks": "1",
+          "skill": "3+",
+          "strength": 12,
+          "armorPenetration": -6,
+          "damage": "D6+1",
+          "keywords": [
+            "Anti-TITANIC 4+",
+            "Devastating Wounds"
+          ]
+        },
+        {
+          "name": "Twin desecrator cannon",
+          "type": "Ranged",
+          "range": "36\"",
+          "attacks": "D6",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Blast",
+            "Twin-linked"
+          ]
         }
       ]
     },
@@ -1160,6 +1484,17 @@
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ]
@@ -1281,6 +1616,17 @@
           "strength": 4,
           "armorPenetration": 0,
           "damage": "1",
+          "keywords": []
+        },
+        {
+          "name": "Titanic feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "6",
+          "skill": "4+",
+          "strength": 10,
+          "armorPenetration": -1,
+          "damage": "2",
           "keywords": []
         }
       ]
@@ -1794,6 +2140,28 @@
           "armorPenetration": -2,
           "damage": "3",
           "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
+          "keywords": []
         }
       ]
     },
@@ -1909,6 +2277,28 @@
           "strength": 10,
           "armorPenetration": -2,
           "damage": "3",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - strike",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 14,
+          "armorPenetration": -4,
+          "damage": "6",
+          "keywords": []
+        },
+        {
+          "name": "➤ Reaper chainsword - sweep",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "12",
+          "skill": "3+",
+          "strength": 9,
+          "armorPenetration": -3,
+          "damage": "2",
           "keywords": []
         }
       ]
@@ -2031,6 +2421,17 @@
           "strength": 12,
           "armorPenetration": -3,
           "damage": "D6+2",
+          "keywords": []
+        },
+        {
+          "name": "Armoured feet",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "4",
+          "skill": "3+",
+          "strength": 6,
+          "armorPenetration": 0,
+          "damage": "1",
           "keywords": []
         }
       ]

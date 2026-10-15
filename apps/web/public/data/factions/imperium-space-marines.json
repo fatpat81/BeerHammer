@@ -38395,7 +38395,7 @@
           {
             "name": "Intercessor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -38598,7 +38598,7 @@
           {
             "name": "Infernus Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -38684,7 +38684,7 @@
           {
             "name": "Assault Intercessor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -38839,7 +38839,7 @@
           {
             "name": "Heavy intercessor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -38941,7 +38941,7 @@
           {
             "name": "Infiltrator Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -39035,7 +39035,7 @@
           {
             "name": "Incursor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -39138,7 +39138,7 @@
           {
             "name": "Tactical Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 7
           }
         ]
       },
@@ -39725,7 +39725,7 @@
           {
             "name": "Scout Sniper Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -39839,7 +39839,7 @@
           {
             "name": "Bladeguard Veteran Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -39952,7 +39952,7 @@
           {
             "name": "Vanguard Veteran Sergeant with Jump Pack",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -40128,7 +40128,7 @@
           {
             "name": "Vanguard Veteran Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -40302,7 +40302,7 @@
           {
             "name": "Sternguard Veteran Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -40468,7 +40468,7 @@
           {
             "name": "Reiver Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -40580,7 +40580,7 @@
           {
             "name": "Aggressor Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -40687,7 +40687,7 @@
           {
             "name": "Assault Terminator Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -40882,7 +40882,7 @@
           {
             "name": "Terminator Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -41279,7 +41279,7 @@
           {
             "name": "Assault Centurion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -41390,7 +41390,7 @@
           {
             "name": "Devastator Centurion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -42381,7 +42381,7 @@
           {
             "name": "Assault Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -42651,7 +42651,7 @@
           {
             "name": "Assault Squad with Jump Packs",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -42908,7 +42908,7 @@
           {
             "name": "Invader ATV",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -43153,7 +43153,7 @@
           {
             "name": "Attack Bike",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -43615,7 +43615,7 @@
           {
             "name": "Scout Biker Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -43892,7 +43892,7 @@
           {
             "name": "Suppressor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -43979,7 +43979,7 @@
           {
             "name": "Inceptor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -44568,7 +44568,7 @@
           {
             "name": "Hellblaster Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -44700,7 +44700,7 @@
           {
             "name": "Eliminator Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -44926,7 +44926,7 @@
           {
             "name": "Devastator Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -45225,7 +45225,7 @@
           {
             "name": "Desolation Sergeant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -47567,7 +47567,21 @@
           "description": "Once this unit is set up on the battlefield and all units within it have disembarked, until the end of the battle, units cannot embark within this TRANSPORT"
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Storm bolter",
+          "type": "Ranged",
+          "range": "24\"",
+          "attacks": "2",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": 0,
+          "damage": "1",
+          "keywords": [
+            "Rapid Fire 2"
+          ]
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -50096,7 +50110,7 @@
           {
             "name": "Astartes Servitors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -50922,7 +50936,7 @@
           {
             "name": "Command Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -53835,7 +53849,7 @@
           {
             "name": "Company Veterans on Bikes",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -55104,7 +55118,7 @@
           {
             "name": "Assault Intercessors with Jump Packs",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -57132,7 +57146,7 @@
           {
             "name": "Eradicator Squad with Heavy Bolters",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },

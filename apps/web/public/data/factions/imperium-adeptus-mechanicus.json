@@ -970,7 +970,7 @@
           {
             "name": "Corpuscarii Electro-Priests",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1039,7 +1039,7 @@
           {
             "name": "Fulgurite Electro-Priests",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1237,7 +1237,7 @@
           {
             "name": "Kataphron Breachers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1333,7 +1333,7 @@
           {
             "name": "Kataphron Destroyers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1622,7 +1622,7 @@
           {
             "name": "Pteraxii Skystalker Alpha",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1723,7 +1723,7 @@
           {
             "name": "Pteraxii Skystalker Alpha",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1821,7 +1821,7 @@
           {
             "name": "Serberys Raiders",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1911,7 +1911,7 @@
           {
             "name": "Serberys Sulphurhounds",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2038,7 +2038,7 @@
           {
             "name": "Sicarian Infiltrators",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2133,7 +2133,7 @@
           {
             "name": "Sicarian Ruststalkers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2297,7 +2297,7 @@
           {
             "name": "Skitarii Rangers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -2446,7 +2446,7 @@
           {
             "name": "Skitarii Vanguard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -3337,7 +3337,7 @@
           {
             "name": "Secutarii Hoplites",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3428,7 +3428,7 @@
           {
             "name": "Secutarii Peltasts",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3933,7 +3933,7 @@
           {
             "name": "Servitors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4064,7 +4064,7 @@
           {
             "name": "Servitor Underseer",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -5834,7 +5834,7 @@
           {
             "name": "Hastarii Exterminators",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -6037,7 +6037,7 @@
           {
             "name": "Hastarii Fusilier",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },

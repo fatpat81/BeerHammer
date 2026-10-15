@@ -528,7 +528,7 @@
           {
             "name": "Arco-Flagellants",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2347,7 +2347,7 @@
           {
             "name": "Retributor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -2582,7 +2582,7 @@
           {
             "name": "Saint Celestine",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3151,7 +3151,7 @@
           {
             "name": "Crusader",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3171,7 +3171,19 @@
           "description": "If a model from your army with the Leader ability can be attached to a BATTLE SISTERS SQUAD, it can be attached to this unit instead."
         }
       ],
-      "weapons": [],
+      "weapons": [
+        {
+          "name": "Power Weapon",
+          "type": "Melee",
+          "range": "Melee",
+          "attacks": "3",
+          "skill": "3+",
+          "strength": 4,
+          "armorPenetration": -2,
+          "damage": "2",
+          "keywords": []
+        }
+      ],
       "isLeader": false,
       "attachableTo": []
     },
@@ -3318,7 +3330,7 @@
           {
             "name": "Sanctifiers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3514,7 +3526,7 @@
           {
             "name": "Celestian Insidiant Superior",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },

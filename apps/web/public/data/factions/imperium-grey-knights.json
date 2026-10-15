@@ -2691,7 +2691,7 @@
           {
             "name": "Interceptor Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3055,7 +3055,7 @@
           {
             "name": "Purgation Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3177,7 +3177,7 @@
           {
             "name": "Purifier Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3314,7 +3314,7 @@
           {
             "name": "Strike Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },

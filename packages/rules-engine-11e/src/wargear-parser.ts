@@ -272,34 +272,45 @@ export function getUnitBaseModelThreshold(unit: {
     rawKeywords.some(k => k.includes('character') || k.includes('epic hero'));
   if (isChar) return 1;
 
+  const isInfantry =
+    role === 'INFANTRY' ||
+    role === 'BATTLELINE' ||
+    rawKeywords.some(k => k.includes('infantry') || k.includes('battleline'));
+
   const isVehicleOrMonster =
-    role === 'VEHICLE' ||
-    role === 'MONSTER' ||
-    role === 'FORTIFICATION' ||
-    rawKeywords.some(
-      k =>
-        k.includes('vehicle') ||
-        k.includes('monster') ||
-        k.includes('walker') ||
-        k.includes('fortification') ||
-        k.includes('titanic') ||
-        k.includes('aircraft')
-    );
+    !isInfantry &&
+    (role === 'VEHICLE' ||
+      role === 'MONSTER' ||
+      role === 'FORTIFICATION' ||
+      rawKeywords.some(
+        k =>
+          k.includes('vehicle') ||
+          k.includes('monster') ||
+          (k.includes('walker') && !k.includes('poxwalker')) ||
+          k.includes('fortification') ||
+          k.includes('titanic') ||
+          k.includes('aircraft')
+      ));
 
   // Some walkers / vehicles are taken in multi-model squadrons (e.g. Broadside, Armigers, War Dogs, Tarantula)
   const isSquadron = /broadside|armiger|war dog|tarantula|land speeder/i.test(lowerName);
   if (isVehicleOrMonster && !isSquadron) return 1;
 
-  // 3. Horde / Swarm units (10 models baseline, scale to 20)
+  // 3. Horde / Swarm / 10-man units (10 models baseline, scale to 20)
   if (
-    /cultist mob|cultist|boyz|beast snagga|gretchin|grots|shock troop|infantry squad|catachan|krieg|jungle fighter|poxwalker|termagant|hormagaunt|gargoyle|bloodletter|daemonette|plaguebearer|pink horror|blue horror|kroot carnivore|skitarii|kabalite|wyche|fire warrior|breacher|strike team|necron warrior|jakhal|tzaangor|hearthkyn/i.test(
+    /cultist mob|cultist|boyz|beast snagga|gretchin|grots|shock troop|infantry squad|catachan|krieg|jungle fighter|poxwalker|termagant|hormagaunt|gargoyle|bloodletter|daemonette|plaguebearer|pink horror|blue horror|kroot carnivore|skitarii|kabalite|wyche|fire warrior|breacher|strike team|necron warrior|jakhal|tzaangor|hearthkyn|battle sister|guardian defender|storm guardian|tactical squad|blood claw|grey hunter/i.test(
       lowerName
     )
   ) {
     return 10;
   }
 
-  // 4. Elite 3-model squads (3 models baseline, scale to 6)
+  // 4. Custodes Guard / Wardens (4 models baseline)
+  if (/custodian guard|custodian warden/i.test(lowerName)) {
+    return 4;
+  }
+
+  // 5. Elite 3-model squads (3 models baseline, scale to 6)
   if (
     /aggressor|eradicator|bladeguard|inceptor|suppressor|eliminator|centurion|eightbound|deathshroud|allarus|crisis|broadside|stealth|wraithguard|wraithblade|squighog|meganob|paragon warsuit|tyranid warrior|zoanthrope|venomthrope|hive guard|tyrant guard|ravener|von ryan|skorpekh|ophydian|tomb blade|lokhust|windrider|shining spear|skyweaver|biker|outrider|ogryn|bullgryn|kataphron/i.test(
       lowerName
@@ -308,15 +319,15 @@ export function getUnitBaseModelThreshold(unit: {
     return 3;
   }
 
-  // 5. Terminators (5 models baseline, scale to 10)
+  // 6. Terminators (5 models baseline, scale to 10)
   // All Terminator squads (Space Marines, Chaos, Grey Knights, Death Guard, Thousand Sons, Dark Angels, Space Wolves)
   if (/terminator/i.test(lowerName)) {
     return 5;
   }
 
-  // 6. Standard Infantry & Battleline squads (5 models baseline, scale to 10)
+  // 7. Standard Infantry & Battleline squads (5 models baseline, scale to 10)
   if (
-    /intercessor|infernus|infiltrator|incursor|tactical|scout|legionar|chosen|havoc|retributor|sister|dominion|celestian|seraphim|zephyrim|repentia|raptor|warp talon|rubric|plague marine|immortal|deathmark|lychguard|praetorian|sternguard|vanguard|hellblaster|desolation|reiver|hearthguard|pteraxii|ruststalker|sicarian|avenger|scorpion|banshee|dragon|hawk|spider|reaper|wrack|mandrake|incubi|aberrant|genestealer|metamorph|hybrid/i.test(
+    /intercessor|infernus|infiltrator|incursor|scout|legionar|chosen|havoc|retributor|sister|dominion|celestian|seraphim|zephyrim|repentia|raptor|warp talon|rubric|plague marine|immortal|deathmark|lychguard|praetorian|sternguard|vanguard|hellblaster|desolation|reiver|hearthguard|pteraxii|ruststalker|sicarian|avenger|scorpion|banshee|dragon|hawk|spider|reaper|wrack|mandrake|incubi|aberrant|genestealer|metamorph|hybrid/i.test(
       lowerName
     ) ||
     rawKeywords.some(

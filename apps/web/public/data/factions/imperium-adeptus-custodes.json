@@ -459,7 +459,7 @@
           {
             "name": "Allarus Custodian",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -736,7 +736,7 @@
           {
             "name": "Custodian Guard (Vexilla)",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -816,7 +816,7 @@
           {
             "name": "Custodian Warden",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1001,7 +1001,7 @@
           {
             "name": "Prosecutor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1697,7 +1697,7 @@
           {
             "name": "Vertus Praetors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1788,7 +1788,7 @@
           {
             "name": "Vigilator",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1849,7 +1849,7 @@
           {
             "name": "Witchseeker",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -1922,7 +1922,7 @@
           {
             "name": "Custodian Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1990,7 +1990,7 @@
           {
             "name": "Sagittarum Custodian",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2060,7 +2060,7 @@
           {
             "name": "Aquilon Custodian",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2169,7 +2169,7 @@
           {
             "name": "Agamatus Custodians",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2272,7 +2272,7 @@
           {
             "name": "Venatari Custodian (Tarsis Buckler)",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },

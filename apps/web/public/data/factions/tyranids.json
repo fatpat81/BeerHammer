@@ -851,7 +851,7 @@
           {
             "name": "Tyranid Warrior",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -972,7 +972,7 @@
           {
             "name": "Tyranid Warrior",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -1028,7 +1028,7 @@
           {
             "name": "Hormagaunts",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1140,7 +1140,7 @@
           {
             "name": "Tyrant Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1385,7 +1385,7 @@
           {
             "name": "Pyrovores",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1532,7 +1532,7 @@
           {
             "name": "Venomthropes",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1592,7 +1592,7 @@
           {
             "name": "Neurogaunt",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1711,7 +1711,7 @@
           {
             "name": "Biovore",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2012,7 +2012,7 @@
           {
             "name": "Hive Guard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -2540,7 +2540,7 @@
           {
             "name": "Barbgaunt",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2916,7 +2916,7 @@
           {
             "name": "Genestealers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3769,7 +3769,7 @@
           {
             "name": "Gargoyles",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -3948,7 +3948,7 @@
           {
             "name": "Lictor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4072,7 +4072,7 @@
           {
             "name": "Neurolictor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4210,7 +4210,7 @@
           {
             "name": "Raveners",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -4400,7 +4400,7 @@
           {
             "name": "Von Ryan's Leaper",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },

@@ -2142,7 +2142,7 @@
           {
             "name": "Ibram Gaunt",
             "baseSize": "32mm",
-            "count": 1
+            "count": 6
           }
         ]
       },
@@ -6187,7 +6187,7 @@
           {
             "name": "Medusa Carriage Battery",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -6258,7 +6258,7 @@
           {
             "name": "Earthshaker Carriage Battery",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -7978,7 +7978,7 @@
           {
             "name": "Rapier Laser Destroyer Battery",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -8671,7 +8671,7 @@
           {
             "name": "Heavy Weapons Team",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -9758,7 +9758,7 @@
           {
             "name": "Elysian Sniper Team",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -9843,7 +9843,7 @@
           {
             "name": "Heavy Mortar Team",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -10049,7 +10049,7 @@
           {
             "name": "Heavy Quad Launcher Team",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -11053,7 +11053,7 @@
           {
             "name": "Tauros Venator",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -12491,7 +12491,7 @@
           {
             "name": "Fire Coordinator",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -12604,7 +12604,7 @@
           {
             "name": "Artillery Team",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },

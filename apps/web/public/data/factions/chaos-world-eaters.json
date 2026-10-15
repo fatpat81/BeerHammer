@@ -976,7 +976,7 @@
           {
             "name": "Chaos Terminators",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1132,7 +1132,7 @@
           {
             "name": "Jakhal",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1233,7 +1233,7 @@
           {
             "name": "Eightbound",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1289,7 +1289,7 @@
           {
             "name": "Exalted Eightbound",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -2904,7 +2904,7 @@
           {
             "name": "Goremongers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3295,7 +3295,7 @@
           {
             "name": "Bloodletters",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -3351,7 +3351,7 @@
           {
             "name": "Bloodcrushers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },

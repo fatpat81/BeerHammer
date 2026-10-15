@@ -1502,7 +1502,7 @@
           {
             "name": "Bloodletters",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1560,7 +1560,7 @@
           {
             "name": "Bloodcrushers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1631,7 +1631,7 @@
           {
             "name": "Flesh Hounds",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1702,7 +1702,7 @@
           {
             "name": "Skull Cannon",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1784,7 +1784,7 @@
           {
             "name": "Skull Altar",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2812,7 +2812,7 @@
           {
             "name": "Blue Horror",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -2921,7 +2921,7 @@
           {
             "name": "Pink Horror",
             "baseSize": "32mm",
-            "count": 1
+            "count": 9
           }
         ]
       },
@@ -3046,7 +3046,7 @@
           {
             "name": "Flamers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3223,7 +3223,7 @@
           {
             "name": "Screamer",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3284,7 +3284,7 @@
           {
             "name": "Burning Chariot",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4001,7 +4001,7 @@
           {
             "name": "Plaguebearers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -4061,7 +4061,7 @@
           {
             "name": "Nurglings",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4121,7 +4121,7 @@
           {
             "name": "Beast of Nurgle",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4180,7 +4180,7 @@
           {
             "name": "Plague Drones",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4267,7 +4267,7 @@
           {
             "name": "Feculent Gnarlmaw",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5115,7 +5115,7 @@
           {
             "name": "Daemonettes",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -5175,7 +5175,7 @@
           {
             "name": "Fiends",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5239,7 +5239,7 @@
           {
             "name": "Heartseeker",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -5312,7 +5312,7 @@
           {
             "name": "Hellflayer",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5400,7 +5400,7 @@
           {
             "name": "Seeker Chariot",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5488,7 +5488,7 @@
           {
             "name": "Exalted Seeker Chariot",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5684,7 +5684,7 @@
           {
             "name": "Pox Riders",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -5774,7 +5774,7 @@
           {
             "name": "Plague Toads",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -6328,7 +6328,7 @@
           {
             "name": "Furies",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },

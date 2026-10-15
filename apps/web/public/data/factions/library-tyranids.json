@@ -1059,7 +1059,7 @@
           {
             "name": "Gargoyles",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -1238,7 +1238,7 @@
           {
             "name": "Lictor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1362,7 +1362,7 @@
           {
             "name": "Neurolictor",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -1500,7 +1500,7 @@
           {
             "name": "Raveners",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -1690,7 +1690,7 @@
           {
             "name": "Von Ryan's Leaper",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },

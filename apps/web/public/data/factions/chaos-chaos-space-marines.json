@@ -2707,7 +2707,7 @@
           {
             "name": "Aspiring Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2995,7 +2995,7 @@
           {
             "name": "Cultist Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 9
           }
         ]
       },
@@ -3081,7 +3081,7 @@
           {
             "name": "Mutant",
             "baseSize": "32mm",
-            "count": 1
+            "count": 7
           }
         ]
       },
@@ -3146,7 +3146,7 @@
           {
             "name": "Terminator Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3372,7 +3372,7 @@
           {
             "name": "Possessed",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3425,7 +3425,7 @@
           {
             "name": "Chosen Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3639,7 +3639,7 @@
           {
             "name": "Biker Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -3852,7 +3852,7 @@
           {
             "name": "Raptor Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -4055,7 +4055,7 @@
           {
             "name": "Warp Talons",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -4113,7 +4113,7 @@
           {
             "name": "Havoc Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4361,7 +4361,7 @@
           {
             "name": "Obliterators",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4617,7 +4617,7 @@
           {
             "name": "Traitor Guardsmen Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -4824,7 +4824,7 @@
           {
             "name": "Fellgor Beastmen",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -6434,7 +6434,7 @@
           {
             "name": "Aspiring Sorcerer",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -6587,7 +6587,7 @@
           {
             "name": "Plague Marine",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -8368,7 +8368,7 @@
           {
             "name": "Nightmare Hulk",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -8642,7 +8642,7 @@
           {
             "name": "Renegade Heavy Weapons Squad",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -8805,7 +8805,7 @@
           {
             "name": "Renegade Plague Ogryns",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -8862,7 +8862,7 @@
           {
             "name": "Mutilator",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -8937,7 +8937,7 @@
           {
             "name": "Renegade Ogryn Brutes",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -9112,7 +9112,7 @@
           {
             "name": "Negavolt Cultists",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -9371,7 +9371,7 @@
           {
             "name": "Chaos Mauler Hound",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -9998,7 +9998,7 @@
           {
             "name": "Cultist Mob",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -10155,7 +10155,7 @@
           {
             "name": "Nemesis Claw",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -10445,7 +10445,7 @@
           {
             "name": "Noise Marines",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -10766,7 +10766,7 @@
           {
             "name": "Red Corsairs Raider Champion",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },

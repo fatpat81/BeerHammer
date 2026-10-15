@@ -574,12 +574,19 @@ describe('getUnitBaseModelThreshold', () => {
     expect(getUnitBaseModelThreshold({ name: 'Crisis Fireknife Battlesuits', battlefieldRole: 'INFANTRY', keywords: ['BATTLESUIT'] })).toBe(3);
   });
 
-  it('correctly sets horde / 10-model squads (Boyz, Cultists, Shock Troops, Breachers)', () => {
+  it('correctly sets horde / 10-model squads (Boyz, Cultists, Shock Troops, Breachers, Poxwalkers, Guardians, Blood Claws)', () => {
     expect(getUnitBaseModelThreshold({ name: 'Boyz', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
     expect(getUnitBaseModelThreshold({ name: 'Cultist Mob', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
     expect(getUnitBaseModelThreshold({ name: 'Cadian Shock Troops', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
     expect(getUnitBaseModelThreshold({ name: 'Breacher Team', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
     expect(getUnitBaseModelThreshold({ name: 'Necron Warriors', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Poxwalkers', battlefieldRole: 'INFANTRY', keywords: ['FACTION: DEATH GUARD', 'INFANTRY', 'CHAOS', 'NURGLE', 'POXWALKERS'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Guardian Defenders', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Storm Guardians', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Battle Sisters Squad', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Blood Claws', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Tactical Squad', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(10);
+    expect(getUnitBaseModelThreshold({ name: 'Custodian Guard', battlefieldRole: 'BATTLELINE', keywords: ['BATTLELINE', 'INFANTRY'] })).toBe(4);
   });
 
   it('correctly identifies single-model characters and vehicles', () => {

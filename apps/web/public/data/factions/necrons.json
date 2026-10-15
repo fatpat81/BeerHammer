@@ -1932,7 +1932,7 @@
           {
             "name": "Necron Warriors",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -2015,7 +2015,7 @@
           {
             "name": "Immortals",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2233,7 +2233,7 @@
           {
             "name": "Lychguard",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2303,7 +2303,7 @@
           {
             "name": "Deathmarks",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2368,7 +2368,7 @@
           {
             "name": "Flayed Ones",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2422,7 +2422,7 @@
           {
             "name": "Cryptothralls",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -2493,7 +2493,7 @@
           {
             "name": "Skorpekh Destroyers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3131,7 +3131,7 @@
           {
             "name": "Ophydian Destroyers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3183,7 +3183,7 @@
           {
             "name": "Tomb Blade",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3294,7 +3294,7 @@
           {
             "name": "Triarch Praetorians",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3641,7 +3641,7 @@
           {
             "name": "Lokhust Destroyers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -3707,7 +3707,7 @@
           {
             "name": "Lokhust Heavy Destroyers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 3
           }
         ]
       },

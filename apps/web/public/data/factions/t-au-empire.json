@@ -1740,7 +1740,7 @@
           {
             "name": "Fire Warrior Shas'ui",
             "baseSize": "32mm",
-            "count": 1
+            "count": 8
           }
         ]
       },
@@ -1881,7 +1881,7 @@
           {
             "name": "Breacher Fire Warrior Shas'ui",
             "baseSize": "32mm",
-            "count": 1
+            "count": 9
           }
         ]
       },
@@ -2006,7 +2006,7 @@
           {
             "name": "Kroot Carnivores",
             "baseSize": "32mm",
-            "count": 1
+            "count": 10
           }
         ]
       },
@@ -2113,7 +2113,7 @@
           {
             "name": "Krootox Riders",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3047,7 +3047,7 @@
           {
             "name": "Vespid Stingwings",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -3219,7 +3219,7 @@
           {
             "name": "Broadside Shas’vre",
             "baseSize": "32mm",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -4541,7 +4541,7 @@
           {
             "name": "Kroot Hounds",
             "baseSize": "32mm",
-            "count": 1
+            "count": 4
           }
         ]
       },
@@ -6198,7 +6198,7 @@
           {
             "name": "Knarloc Riders [Legends]",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
@@ -7235,7 +7235,7 @@
           {
             "name": "Krootox Rampagers",
             "baseSize": "32mm",
-            "count": 1
+            "count": 5
           }
         ]
       },
