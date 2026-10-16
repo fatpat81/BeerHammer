@@ -160,6 +160,7 @@ interface RosterPayload {
   units: RosterUnitInstance[];
   totalPoints: number;             // validatePointsLimit
   detachmentPointsUsed: number;    // validateDetachmentPoints
+  selectedDetachments?: string[];  // builder/console multi-detachment display only
 }
 ```
 

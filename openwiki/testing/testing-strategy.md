@@ -29,12 +29,12 @@ Automated behavioural coverage in this monorepo sits in exactly two places: **pu
 ## The unit-test layer: `packages/rules-engine-11e`
 
 <!-- openwiki: broken internal link [../../packages/rules-engine-11e/src/__tests__] file "../../packages/rules-engine-11e/src/__tests__" does not exist. Fix the href or restore the target, then delete this comment. -->
-Four suites under [src/__tests__/](../../packages/rules-engine-11e/src/__tests__) contain 73 `it` cases, one suite per engine module, all pure functions over literal fixtures — no database, no network, no DOM:
+Four suites under [src/__tests__/](../../packages/rules-engine-11e/src/__tests__) contain 75 `it` cases, one suite per engine module, all pure functions over literal fixtures — no database, no network, no DOM:
 
 - [detachment-validator.test.ts](../../packages/rules-engine-11e/src/__tests__/detachment-validator.test.ts) — points limit (`POINTS_EXCEEDED`, exact-limit is legal), detachment-point budget (`DP_EXCEEDED`), Rule of Three including the `BATTLELINE` and `DEDICATED_TRANSPORT` exemptions, orphan `attachedLeaderId` detection, and `validateRoster` aggregating several violations at once.
 - [attachment-resolver.test.ts](../../packages/rules-engine-11e/src/__tests__/attachment-resolver.test.ts) — leader/bodyguard compatibility pairs, effective Toughness while bodyguards live, keyword merge/dedup/sort, wound allocation order including the `PRECISION` override, and unit-destroyed/alive-bodyguard counting.
 - [stratagem-filter.test.ts](../../packages/rules-engine-11e/src/__tests__/stratagem-filter.test.ts) — keyword satisfaction (case-insensitive), phase activation (`ANY` always active), `filterStratagems` phase/keyword/detachment pruning, category grouping.
-- [wargear-parser.test.ts](../../packages/rules-engine-11e/src/__tests__/wargear-parser.test.ts) — slug generation, `N Name` and option-list parsing, and `compileWahapediaWargear` producing `REPLACE`/`ADD_ON` AST nodes with scale factors, role targets, `maxSelections`, HTML input, and an empty array for unrecognized text.
+- [wargear-parser.test.ts](../../packages/rules-engine-11e/src/__tests__/wargear-parser.test.ts) — slug generation, `N Name` and option-list parsing, and `compileWahapediaWargear` producing `REPLACE`/`ADD_ON` AST nodes with scale factors, role targets, `maxSelections`, HTML input, and an empty array for unrecognized text; plus Munitorum Field Manual cases covering base-tier/squad-scaling point arithmetic and enhancement-point inclusion in unit totals.
 
 [vitest.config.ts](../../packages/rules-engine-11e/vitest.config.ts#L3-L12) enables `globals: true` and v8 coverage (`text`, `json`, `html`) over `src/**/*.ts` with test files excluded. Coverage output is what [turbo.json](../../turbo.json#L19-L22) caches under `outputs: ["coverage/**"]`.
 

@@ -1,7 +1,7 @@
 ---
 type: Data Pipeline
 title: Static Catalog Data Pipeline (BSData → faction JSON → web public data)
-description: 'How the pinned data/bsdata snapshot becomes the static catalog the web app actually renders. extract-factions.js dual-writes 27 canonical faction JSONs with detachments, DP costs, enhancements and leader links into data/factions (gitignored) and apps/web/public/data/factions (committed); build-combat-patrols.js emits the Combat Patrol lists; verify-data.js checks the schema (data:verify) but is not wired into CI. Includes the Docker/image policy and the known docs/DEPLOYMENT.md staleness about public/data.'
+description: 'How the pinned data/bsdata snapshot becomes the static catalog the web app actually renders. extract-factions.js dual-writes 27 canonical faction JSONs with detachments, DP costs, enhancements and leader links into data/factions (gitignored) and apps/web/public/data/factions (committed); build-combat-patrols.js emits the Combat Patrol lists; verify-data.js checks the schema plus Munitorum Field Manual points/enhancement/balance-updates rules (data:verify) but is not wired into CI. Includes the Docker/image policy and the known docs/DEPLOYMENT.md staleness about public/data.'
 tags: [data, catalog, bsdata, wahapedia, etl, factions, combat-patrol, dockerignore, verification]
 resource: repo://scripts/extract-factions.js
 ---
@@ -14,9 +14,11 @@ Postgres in the default dev/test experience. It comes from static JSON under
 that JSON is produced and validated.
 
 The governing policy, stated in the header of
-[`scripts/verify-data.js`](../../scripts/verify-data.js#L1-L13) and
+[`scripts/verify-data.js`](../../scripts/verify-data.js) and
 [docs/DEPLOYMENT.md](../../docs/DEPLOYMENT.md) §2 ("Catalog data: pinned snapshot (dev/test) vs
-live source (release)"): **BSData is the primary authority; Wahapedia is an advisory
+live source (release)"): **BSData is the primary authority for datasheets, characteristics,
+weapons, abilities and rules; the Munitorum Field Manual (MFM) is the authoritative source for
+unit base points, enhancement costs and squad size tiers; Wahapedia is an advisory
 cross-reference.** The snapshot is refreshed deliberately, as a reviewed commit — not scraped at
 runtime.
 
@@ -87,7 +89,19 @@ Schema verification against the **gitignored** `data/factions/` copy as authorit
 only advisory ([`scripts/verify-data.js`](../../scripts/verify-data.js#L16-L17),
 [#L47-L51](../../scripts/verify-data.js#L47-L51)). It exits 1 on a missing index or any error
 (missing faction file, bad schema, non-positive toughness/wounds); incomplete weapon profiles are
-warnings only. Two caveats:
+warnings only. Since the MFM commit it also runs a **Munitorum Field Manual pass**: it validates
+`basePoints` (non-negative number) on every datasheet, `points` on every detachment enhancement,
+and `unitComposition.models[].count` on every unit; and it loads
+`data/mfm/balance-updates.json` — the curated quarterly balance-dataslate record
+(`rulesetVersionId` in `11.1.0-YYYY-QN-MFM` form, plus `changes[]` items categorised
+`POINTS_CUT` / `POINTS_HIKE` / `KEYWORD_UPDATE` / `NEW_DATASHEET` / `ERRATA`, dual-written to
+`apps/web/public/data/mfm/`) — erroring on incomplete or unknown-category change items and
+warning if the version id breaks the format. It finishes by requiring `@forceorg/rules-engine-11e`
+from `dist/` and asserting squad-point scaling arithmetic (e.g. a 5-model 175 pts squad = 1x tier,
+6-10 models = 2x tier), so `data:verify` silently downgrades to a warning if the engine package
+has not been built. Missing `basePoints` are repaired by the companion
+`scripts/heal-weapons-and-models.js`, which walks BSData `costs`/`entryLinks` to recover points.
+Two caveats:
 
 - On a fresh clone `data/factions/` does not exist, so **`data:verify` fails until
   `data:extract` has been run** in that working tree.

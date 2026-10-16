@@ -1,7 +1,7 @@
 ---
 type: component-inventory
 title: 'Roster Builder, Battle Mode Console & Force Components'
-description: 'Component inventory for the two force-facing modes of apps/web: the Roster Studio edit route (RosterBuilder with static faction-catalog loading, detachment switcher, enhancements, leader attachment, auto-save) and the Battle Mode console route (/army/[id]: phase bar, CP generator, single-accordion force org, in-card stratagems), plus ComplianceDashboard, CreateArmyModal and the orphaned CompositeUnitCard/StratagemPanel/PhotoUploadModal trio.'
+description: 'Component inventory for the two force-facing modes of apps/web: the Roster Studio edit route (RosterBuilder with static faction-catalog loading, staged multi-detachment 3 DP budget tray, enhancements, leader attachment, auto-save) and the Battle Mode console route (/army/[id]: phase bar, CP generator, single-accordion force org, in-card stratagems), plus ComplianceDashboard, CreateArmyModal (multi-detachment DP selection) and the orphaned CompositeUnitCard/StratagemPanel/PhotoUploadModal trio.'
 tags: [webapp, roster-builder, battle-mode, detachment-enhancements, compliance-dashboard, phase-bar, cp-generator, demo-fixtures, fallback]
 resource: repo://apps/web/src/components/RosterBuilder.tsx
 ---
@@ -30,7 +30,7 @@ live in `@forceorg/rules-engine-11e` — see
 
 | Component | Hosted by | Owns | Data source of truth |
 | --- | --- | --- | --- |
-| `RosterBuilder` | `/army/[id]/edit` | roster unit list, catalog drawer, detachment switcher + enhancement reset, leader attachment, client-side totals | `apps/web/public/data/factions/<id>.json` fetched directly (see [Catalog Data Pipeline](../data/catalog-data-pipeline.md)) |
+| `RosterBuilder` | `/army/[id]/edit` | roster unit list, catalog drawer, multi-detachment 3 DP tray + enhancement reset, leader attachment, client-side totals | `apps/web/public/data/factions/<id>.json` fetched directly (see [Catalog Data Pipeline](../data/catalog-data-pipeline.md)) |
 | `ComplianceDashboard` | `/`, `/army/[id]`, `/army/[id]/edit` | rules-audit modal, verdict banner, discrepancy filtering | `auditRoster` result, else arithmetic over props |
 | `FactionSelector` | every page header | heraldry palette switch | `ALL_FACTION_PALETTES` (static) |
 | `CreateArmyModal` | `/` | faction/detachment/name/size form → `createRoster` | `/data/factions/index.json` + per-faction JSON, with a fallback list on failure |
@@ -76,8 +76,9 @@ The edit route's debounced auto-save, including the branch where a failed PUT is
 reported as saved. Caption: `performSave` is also invoked directly by the "Save Now" button and
 by `handleThemeChange`.
 
-`performSave` recomputes `totalPoints` from `pointsCost` and `detachmentPointsUsed` from
-`catalogUnit.dpCost`, then calls `updateRoster`
+`performSave` recomputes `totalPoints` from `pointsCost` but takes `detachmentPointsUsed` and
+`selectedDetachments` straight from the existing `rosterPayload` (the DP total is owned by the
+detachment tray, not derived from units), then calls `updateRoster`
 ([#L86-L109](../../apps/web/src/app/army/[id]/edit/page.tsx#L86-L109)). Because
 [`updateRoster`](../../apps/web/src/lib/api.ts#L327-L370) writes localStorage *before* the PUT
 and swallows the PUT failure, and the page's own `catch` also sets `saveState = 'saved'`,
@@ -86,11 +87,13 @@ and the "Save Now" button are therefore progress indicators, not durability guar
 
 Two details matter when editing this page:
 
-- `handleDetachmentChange` is a second writer alongside the debounced auto-save: when
-  RosterBuilder's detachment switcher fires `onDetachmentChange`, the page PUTs the new
-  `detachmentPrimary` plus the recomputed payload immediately, and its `catch` likewise marks
-  the save as saved
-  ([#L135-L158](../../apps/web/src/app/army/[id]/edit/page.tsx#L135-L158)).
+- `handleDetachmentChange` is a second writer alongside the debounced auto-save: when the
+  RosterBuilder tray applies its staged detachments it fires
+  `onDetachmentChange(primary, allSelectedDetachments, totalDp)`, and the page PUTs the new
+  `detachmentPrimary`/`detachmentSecondary` plus the recomputed payload (including
+  `rosterPayload.selectedDetachments` and the tray-supplied DP total) immediately; its `catch`
+  likewise marks the save as saved
+  ([#L137-L175](../../apps/web/src/app/army/[id]/edit/page.tsx#L137-L175)).
 - `currentUnitsRef` mirrors the latest unit array so manual save and theme-save can reach it,
   but the `ComplianceDashboard` is handed
   `currentPoints={currentUnitsRef.current.reduce(...)}`
@@ -138,14 +141,20 @@ engine in the browser ([Wargear AST Compiler & Squad Wargear Engine](../rules-en
 ([Composite Units & Stratagem Filtering](../rules-engine/composite-units-and-stratagems.md),
 [Roster Validation](../rules-engine/roster-validation.md)).
 
-**Detachment switcher with mandatory enhancement reset.** A dedicated bar shows the active
-detachment, a dropdown of the faction file's `detachments[]`, and an "Apply Changes" button;
-choosing a different detachment previews its rules and enhancements
-([#L430-L560](../../apps/web/src/components/RosterBuilder.tsx#L430-L560)). Applying it
-(`handleApplyDetachment`, [#L326-L356](../../apps/web/src/components/RosterBuilder.tsx#L326-L356))
-always unequips every assigned enhancement without a prompt and resets those units'
-`pointsCost` to `catalogUnit.basePoints`, then fires `onRosterChange` and `onDetachmentChange`
-so the edit page persists the new `detachmentPrimary` (see above).
+**Multi-detachment console with a 3 DP budget tray.** A single-detachment dropdown was replaced
+by a staged multi-select tray
+([#L800+](../../apps/web/src/components/RosterBuilder.tsx#L800)). The header shows the active
+detachment chips with their `dpCost` (defaulting to 1 when the catalog omits it) and a live
+`activeTotalDp / dpLimit` meter; "Manage Detachments" opens a tray where
+`handleToggleStagedDetachment` adds/removes detachments but refuses any toggle that would push
+the staged total over `dpLimit` (default 3). Applying (`handleApplyDetachments`,
+[#L667-L723](../../apps/web/src/components/RosterBuilder.tsx#L667-L723)) refuses an over-budget
+staged set, unequips enhancements belonging to detachments that dropped out, resets those units'
+`pointsCost` to `catalogUnit.basePoints`, then fires `onRosterChange` and
+`onDetachmentChange(primary, stagedNames, stagedTotalDp)` so the edit page persists
+`detachmentPrimary`/`detachmentSecondary` plus `rosterPayload.selectedDetachments` /
+`detachmentPointsUsed` (see above). Enhancement options come from the combined pool of all active
+detachments.
 
 **Characters get enhancement and attachment selectors.** For units with role `CHARACTER`, each
 expanded card renders a detachment-enhancement dropdown (choosing one reprices the unit via
@@ -329,10 +338,13 @@ roster metadata before the studio exists. It now **fetches the faction list from
 `/data/factions/index.json` and per-faction detachments/subfactions from
 `/data/factions/<id>.json`** ([#L73-L130](../../apps/web/src/components/CreateArmyModal.tsx#L73-L130)),
 falling back to a hard-coded short list on failure, and selecting a faction auto-picks its first
-detachment, subfaction and a generated army name. Submission sends the chosen
-`detachmentPrimary`, `pointsLimit` and `detachmentPointsLimit: 3` through `createRoster` and
-navigates to `/army/<id>/edit` — the studio, so a new force opens in edit mode
-([#L174-L198](../../apps/web/src/components/CreateArmyModal.tsx#L174-L198)); unlike the earlier
+detachment, subfaction and a generated army name. Detachment step 2 is now a **multi-select card
+grid with a live DP budget meter**: `handleToggleDetachment` blocks adding a detachment whose
+`dpCost || 1` would push the selection over 3 DP, and submit re-validates non-empty selection and
+the 3 DP ceiling. Submission sends `detachmentPrimary` (first pick), `detachmentSecondary`
+(second pick), `pointsLimit`, `detachmentPointsLimit: 3`, and a seed `rosterPayload` carrying
+`detachmentPointsUsed` and `selectedDetachments`, then navigates to `/army/<id>/edit` — the
+studio, so a new force opens in edit mode; unlike the earlier
 version it shows an error banner instead of synthesising a local army when `createRoster`
 rejects (though `createRoster` itself rarely can — it writes localStorage first). The result is
 that a "created" army may still exist only in one browser's localStorage while the UI behaves as
